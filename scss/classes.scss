@@ -1,0 +1,19 @@
+/*.flex{
+  display: flex;
+  padding: $padding-common-10;
+}
+.bg-lightgreen{
+  background-color: lightgreen;
+}
+.bg-lightskyblue{
+  background-color: lightskyblue;
+}
+.bg-lightyellow{
+  background-color: lightyellow;
+}
+.pad{
+  &>div{
+    margin: auto 10px;
+  }
+}
+*/

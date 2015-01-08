@@ -1,0 +1,10 @@
+// start mixins
+/*@mixin padding($padding:10px){
+  padding:$padding;
+}*/
+@mixin centered-vertical{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// end mixins
