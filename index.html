@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Home Moscow</title>
-  </head>
+	<script src="static/tinymce/js/tinymce/tinymce.min.js"></script>
+	</head>
   <body>
     <header>
       <nav>
@@ -26,9 +27,32 @@
       </menu>
       <div id="gallery" class="header-slim-big">Галерея</div>
       <div id="slider-bottom"></div>
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+	plugins: [
+        "advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste moxiemanager"
+    ],
+    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"/*,
+    valid_elements : '+*[*]'*/
+ });
+</script>
+
+<!-- Place this in the body of the page content -->
+<form method="post" action="http://<?php
+    echo $_SERVER['HTTP_HOST'];
+?>/projects/moscow-home/scripts/edit.php" style="margin:40px 20px; max-width: 800px;">
+    <textarea name="content"></textarea>
+    <br>
+    <input type="hidden" name="action" value="save"/>
+    <input type="submit" value="Send!"/>
+</form>	  
     </main>
     <footer>
       <div class="float-left">Строительство элитной недвижимости с 2004 г.</div><a href="index.html" class="logo"></a><span class="phone_number">+7 (495) 890-90-90</span>
     </footer>
+<?php echo "root: " . $_SERVER['DOCUMENT_ROOT'];?>
   </body>
 </html>
