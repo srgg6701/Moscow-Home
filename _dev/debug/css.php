@@ -3,7 +3,7 @@
 $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1) inset';
 ?>
 <style>
-    #controls {
+    <?php echo CONTROLS_ID;?>{
     <?php
     $box_shadow_controls="0 -10px 0 10px rgba(0,0,0,0.5)";?>
         background-color: #A1A1A1;
@@ -17,10 +17,10 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
         padding-top: 0;
         white-space: nowrap;
     }
-    #controls:hover {
+    <?php echo CONTROLS_ID;?>:hover {
         opacity: 1;
     }
-    #<?php echo DEBUG_LINKS;?>{
+    <?php echo DEBUG_LINKS_ID;?>{
 		color: navy;
 		cursor:default;
 		font-family: verdana;
@@ -40,7 +40,7 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
     .<?php echo DEBUG_MENU;?> a:hover{
         background-color:lightblue;
     }
-    #opacity-range {
+    <?php echo OPACITY_RANGE_ID;?>{
         margin-left: 16px;
     }
     .sbstr {
@@ -53,7 +53,7 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
         width: 100%;
         z-index: -1
     }
-    #substrate-wrapper {
+    <?php echo SUBSTRATE_WRAPPER_ID;?> {
         bottom: 0;
         margin: auto;
         position: absolute;
@@ -66,42 +66,46 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
                 $sPath = $substrate_path . $substrate;
                 if(!file_exists($filePath)) $wrongPaths[]=$sPath;
                 ?>
-    #substrate.<?php echo $class;?> {
+    <?php echo SUBSTRATE_ID;?>.<?php echo $class;?> {
         background: url(<?php echo $sPath;?>) no-repeat;
         background-position-x: -242px;
     }
     <?php   endforeach;?>
-    #substrate {
-        height: 2000px;
+    <?php echo SUBSTRATE_ID;?>{
+        /*height: 2000px;*/
         margin: 0 auto;
-        max-width: 1366px;
-        overflow: hidden;
+        max-width: 1400px;
+        /*overflow: hidden;*/
     }
-    #substrate-ranges{
+    <?php echo SUBSTRATE_RANGES_ID;?>{
         display: inline-block;
     }
     .error_warning{
         color:red;
     }
-    #lbl-sbstr,#substrate-ranges,#<?php echo DEBUG_LINKS;?>{
+    <?php echo LBL_SBSTR_ID;?>,
+    <?php echo SUBSTRATE_RANGES_ID;?>,
+    <?php echo DEBUG_LINKS_ID;?>{
         float: left;
     }
-    #lbl-sbstr,#<?php echo DEBUG_LINKS;?>{
+    <?php echo LBL_SBSTR_ID;?>,
+    <?php echo DEBUG_LINKS_ID;?>{
         margin-top: 5px;
     }
-    #substrate-ranges{
+    <?php echo SUBSTRATE_RANGES_ID;?>{
         margin-top: 4px;
         margin-bottom: -22px;
     }
-    #opacity-range,
-    #opacity-range-content{
+    <?php echo OPACITY_RANGE_ID;?>,
+    <?php echo OPACITY_RANGE_CONTENT_ID;?>{
         width: 60px;
     }
-    #substrate img{
+    <?php echo SUBSTRATE_ID;?> img{
         margin-top: -20px;
     }
     body {
         position: relative;
+        overflow-x: hidden;
     }
 <?php
 if (isset($_GET['rulers'])):?>

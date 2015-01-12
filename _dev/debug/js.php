@@ -3,15 +3,16 @@
         var body=$('body'),
             page = $('<?php echo MAIN_BLOCK;?>'),
             checkbox =$('#sbstr'),
-            substrate = $('#substrate'),
-            range = $('#opacity-range'),
-            tested_content = $('#opacity-range-content'),
-            w = $(body).width(),// вычислить отступ слева для подложки
-            sbOffset=((w-$(page).width())/ 2)/w * 100 + '%',
+            substrate = $('<?php echo SUBSTRATE_ID;?>'),
+            range = $('<?php echo OPACITY_RANGE_ID;?>'),
+            tested_content = $('<?php echo OPACITY_RANGE_CONTENT_ID;?>'),
+            wrapper=$('<?php echo SUBSTRATE_WRAPPER_ID;?>'),
+            w = screen.width,// вычислить отступ слева для подложки
+            sbOffset=((w-$(wrapper)[0].scrollWidth)/ 2)/w * 100 + '%',
             changeOpacity = function(input){
                 return parseInt(input.value)/100
-            }; //console.log('sbOffset: '+sbOffset);
-        $('#substrate-wrapper').css({
+            }; console.log('wrapper.scrollWidth: '+$(wrapper)[0].scrollWidth+', w: '+w+', sbOffset: '+sbOffset);
+        $(wrapper).css({
             left:sbOffset,
             right:sbOffset
         });
@@ -49,7 +50,7 @@
         $(tested_content).on('input', function(){
             $(page).css('opacity', changeOpacity(this));
         });
-        $('#<?php echo DEBUG_LINKS?>').on('click', function(){
+        $('<?php echo DEBUG_LINKS_ID?>').on('click', function(){
             $('.<?php echo DEBUG_MENU;?>').toggle();
         });
         <?php
