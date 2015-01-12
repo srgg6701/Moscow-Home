@@ -2,9 +2,9 @@
 //
 $section = $_GET['section'];
 if (!$section) $section = 'default';
+$site_name = 'moscow-home';
 /**
  * Настройки подложки: */
-$site_name = 'visavi';
 define("HTTP_BASE_PATH", 'http://' . $_SERVER['HTTP_HOST'] . "/projects/" . $site_name . '/');
 // Идентификатор главного тестируемого блока:
 define("MAIN_BLOCK", "#page");

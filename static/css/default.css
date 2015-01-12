@@ -1,1 +1,21 @@
 /* default sass file */
+/* line 10, ../../scss/common.scss */
+body,
+header,
+div,
+li,
+menu,
+nav,
+p,
+span,
+ul {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 13, ../../scss/common.scss */
+body, html {
+  margin: 0;
+  padding: 0;
+}
