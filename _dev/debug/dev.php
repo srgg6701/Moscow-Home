@@ -6,7 +6,6 @@ include_once '[path]/dev.php'; -->
 2. Подключить jQuery, jQueryUI
 -->
 <?php
-ob_start();
 // Установки проекта тестирования
 require_once 'config.php';
 // Изображения для страниц:
@@ -18,6 +17,8 @@ $substrates = array(    // класс => имя файла изображени�
     'construction-finishing-work' => '3.construction-finishing-work.jpg',
     'engineering-systems' => '4.engineering-systems.jpg',
 );
+
+ob_start();
 // Стили
 require_once 'css.php';
 // Вывод ошибок

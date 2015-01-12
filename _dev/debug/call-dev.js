@@ -19,18 +19,18 @@ $(function () {
             function (data) {
                 //console.log('data: '+data);
                 $('body').prepend(data);
-                loadTemplate();
+                //loadTemplate();
             });
     } else {
         console.log('No url params...');
-        loadTemplate();
+        //loadTemplate();
     }
 });
 // info: удалить (если используются серверные сценарии) или модифицировать (если используется JS-framework).
-// Разобраться с загружаемым шаблоном
+// Разобраться с загружаемым шаблоном (если потребуется)
 function loadTemplate() {
     var segment_pos,
-        section = 'home'; // шаблон, загружаемый по умолчанию
+        section; // шаблон, загружаемый по умолчанию
     if ((segment_pos = location.href.indexOf('=')) != -1) { // если найдено, возвращает позицию, с которой будем начинать извлекать section (после сдвига на 1)
         segment_pos += 1; // скорректировать позицию
         section = (location.href.indexOf('&') != -1) ?
