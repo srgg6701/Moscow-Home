@@ -41,5 +41,5 @@ if ($test_rulers) {
         $_SESSION[$test_rulers] = ($_GET[$test_rulers] == '-1') ? NULL : 1;
 }
 $content = ob_get_contents();
-ob_clean();
+ob_end_clean();
 echo $content;

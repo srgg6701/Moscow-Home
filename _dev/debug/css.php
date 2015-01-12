@@ -103,6 +103,8 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
     body {
         position: relative;
     }
+<?php
+if (isset($_GET['rulers'])):?>
     /* Параметры линеек */
     #<?=$rh?>,
     #<?=$rv?>{
@@ -123,4 +125,6 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
         top:0;
         width: 35px;
     }
+<?php
+endif;?>
 </style>

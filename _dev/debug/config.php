@@ -16,3 +16,7 @@ define("DEBUG_LINKS", "debug-links");
 define("IMGS_DIR", "pixel-perfect");
 // Путь расположения изображений относительно документа:
 $substrate_path = HTTP_BASE_PATH . '_dev/debug/' . IMGS_DIR . '/';
+// показывать(?) подложку
+$show_substrate = true;
+// Отобразить линейку
+$test_rulers = 'test_css';

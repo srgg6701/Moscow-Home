@@ -1,6 +1,5 @@
 <div id="controls">
     <?php
-    $show_substrate = true; // показывать(?) подложку
     //
     if (isset($_GET['sbstr']) && $_GET['sbstr'] == 'false')
         $show_substrate = false;

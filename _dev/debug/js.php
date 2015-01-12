@@ -55,7 +55,6 @@
         <?php
         //------------------------------------------------
         // ЛИНЕЙКА
-        $test_rulers = 'test_css';
         if($test_rulers) {
             if (isset($_GET['rulers'])):?>
         <?php
@@ -114,9 +113,9 @@
         $(vertical).on('mousedown', function (event) {
             moveRulers(event);
         });
-    });
 <?php       endif;
         }?>
+    });
     // установить значение ползунка и прозрачность блока (макет или подложка)
     function triggerRanges(rang,value){
         $(rang).val(value) // синхронизировать ползунок
