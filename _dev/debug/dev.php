@@ -24,27 +24,11 @@ define("IMGS_DIR","pixel-perfect");
 // Изображения для страниц:
 $substrates = array(    // класс => имя файла изображения
     // 320
-    'mobile_default'=>'mobile_default.gif',
-    'mobile_left'=>'mobile_left.gif',
-    'mobile_right'=>'mobile_right.gif',
-    'mobile_actions'=>'mobile_actions.gif',
-    'mobile_epilation'=>'mobile_epilation.gif',
-    'mobile_bikini'=>'mobile_bikini.gif',
-    // 768
-    '768_default'=>'768_default.gif',
-    '768_action'=>'768_action.gif',
-    '768_epilation'=>'768_epilation.gif',
-    // 1024
-    '1024_default'=>'1024_default.gif',
-    '1024_action'=>'1024_action.gif',
-    '1024_epilation'=>'1024_epilation.gif',
-    // 1280
-    '1280_default'=>'1280_default.gif',
-    '1280_action'=>'1280_action.gif',
-    '1280_actions'=>'1280_actions.gif',
-    '1280_epilation'=>'1280_epilation.gif',
-    '1280_contacts'=>'1280_contacts.gif',
-    '1280_care'=>'1280_care.gif',
+    'home'=>'0.home.png',
+    'buildings-premises-design'=>'1.buildings-premises-design.jpg',
+    'roofing-facade-work'=>'2.roofing-facade-work.jpg',
+    'construction-finishing-work'=>'3.construction-finishing-work.jpg',
+    'engineering-systems'=>'4.engineering-systems.jpg',
 );
 // Путь расположения изображений относительно документа:
 $substrate_path = HTTP_BASE_PATH .'_dev/debug/'.IMGS_DIR.'/';
@@ -53,11 +37,6 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
 <style>
     /* test block */
 
-    @media (max-width:768px){
-        body {
-            /*overflow-y:hidden;*/
-        }
-    }
     main{
         overflow: auto;
         /*background-color: coral;*/
@@ -67,17 +46,17 @@ if(isset($_GET['height'])):
         /*height: <?php echo $_GET['height'];?>px;*/
 <?php
 else:
-    switch($section):
-        case 'mobile_default':?>
+    /*switch($section):
+        case 'mobile_default':*/?>/*
         height:375px;
         overflow: hidden;
     <?php
-        break;
-        default:?>
+/*        break;
+        default:*/?>
         /*height: 1137px;*/
-<?php
-        break;
-    endswitch;
+*/<?php
+/*        break;
+    endswitch;*/
 endif;?>
     }
     /*#img_1024_default{
@@ -86,19 +65,6 @@ endif;?>
     /* end of test block*/
     #controls {
     <?php
-        /**
-        -webkit-box-shadow: <?php echo $box_shadow;?>;
-        -moz-box-shadow: <?php echo $box_shadow;?>;
-        box-shadow: <?php echo $box_shadow;?>;
-        right: 50%;
-        position: fixed;
-        -webkit-transform: translateX(50%);
-        -moz-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-        -o-transform: translateX(50%);
-        opacity: 0;
-        transform: translateX(50%);
-        z-index: 2;*/
     $box_shadow_controls="0 -10px 0 10px rgba(0,0,0,0.5)";?>
         background-color: #A1A1A1;
         box-shadow: <?php echo $box_shadow_controls;?>;
@@ -192,10 +158,6 @@ endif;?>
         margin-top: 4px;
         margin-bottom: -22px;
     }
-<?php
-    echo "/* section: $section */";
-    if(strstr($section,'320')||strstr($section,'mobile')):
-        echo "/* section mobile: $section */";?>
     #opacity-range,
     #opacity-range-content{
         width: 60px;
@@ -203,9 +165,6 @@ endif;?>
     #substrate img{
         margin-top: -20px;
     }
-<?php
-    endif;
-?>
 </style>
 <?php
 if(isset($wrongPaths)):
