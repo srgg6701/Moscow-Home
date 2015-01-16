@@ -1,0 +1,11 @@
+header{
+  display: table;
+}
+li{
+  menu &{
+    display: table-cell;
+  }
+}
+menu{
+  display: inline-block;
+}

@@ -3,11 +3,11 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 sass_dir = "scss"
-css_dir = "static/css"
-images_dir = "static/images"
-javascripts_dir = "static/js"
-#output_style = :compressed
+css_dir = "../static/css"
+images_dir = "../static/images"
+javascripts_dir = "../static/js"
 sourcemap = true
+#output_style = :compressed
 #cache = false
 
 # You can select your preferred output style here (can be overridden via the command line):

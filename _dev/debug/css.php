@@ -100,9 +100,9 @@ $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1)
     <?php echo OPACITY_RANGE_CONTENT_ID;?>{
         width: 60px;
     }
-    <?php echo SUBSTRATE_ID;?> img{
+    <?php /*echo SUBSTRATE_ID;?> img{
         margin-top: -20px;
-    }
+    }<?php  */?>
     body {
         position: relative;
         overflow-x: hidden;

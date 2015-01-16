@@ -1,0 +1,34 @@
+/* default sass file */
+@import "compass";
+@import "common";
+@import "variables";
+@import "mixins";
+@import "tags";
+@import "classes";
+@import "layout";
+@import "header/header";
+@import "main/main";
+@import "footer/footer";
+// FONTS ----------------------------
+@font-face {
+  font-family: 'PlumbLight';
+  src: url('../fonts/PlumbLightC.eot');
+  src: url('../fonts/PlumbLightC.eot') format('embedded-opentype'),
+  url('../fonts/PlumbLightC.woff2') format('woff2'),
+  url('../fonts/PlumbLightC.woff') format('woff'),
+  url('../fonts/PlumbLightC.ttf') format('truetype'),
+  url('../fonts/PlumbLightC.svg#PlumbLightC') format('svg');
+}
+@font-face {
+  font-family: 'PlumbMedium';
+  src: url('../fonts/PlumbMediumC.eot');
+  src: url('../fonts/PlumbMediumC.eot') format('embedded-opentype'),
+  url('../fonts/PlumbMediumC.woff2') format('woff2'),
+  url('../fonts/PlumbMediumC.woff') format('woff'),
+  url('../fonts/PlumbMediumC.ttf') format('truetype'),
+  url('../fonts/PlumbMediumC.svg#PlumbMediumC') format('svg');
+}
+// END FONTS ------------------------
+#page{
+
+}
