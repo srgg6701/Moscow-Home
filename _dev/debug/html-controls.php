@@ -22,7 +22,7 @@
                 <input type="range" id="opacity-range-content" min="0" max="100" value="100"/>
             </label>
         </div>
-        <span id="<?php echo DEBUG_LINKS_ID; ?>">Ссылки</span>
+        <span id="<?php echo DEBUG_LINKS; ?>">Ссылки</span>
     <?php
     endif;?>
     <div class="<?php echo DEBUG_MENU; ?>">

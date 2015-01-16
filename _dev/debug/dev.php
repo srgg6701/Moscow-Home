@@ -23,22 +23,21 @@ require_once 'css.php';
 require_once 'html-errors.php';
 // Элементы управления
 require_once 'html-controls.php';
-//
-if ($show_substrate):
-    // Обёртка подложки
+// Обёртка подложки
+if ($show_substrate)
     require_once 'html-substrate-wrapper.php';
-endif;
 // Клиентские обработчики
 require_once 'js.php';
-// Показать линейки
-if ($test_rulers) {
-    // Вывести линейки
-    if (isset($_GET['rulers']))
-        require_once 'html-rulers.php';
-    // Включение/отключение отображения линейки (через сессию):
-    if (isset($_GET[$test_rulers]))
-        $_SESSION[$test_rulers] = ($_GET[$test_rulers] == '-1') ? NULL : 1;
-}
+// разобраться с подключением линеек
+if (isset($_GET['rulers'])):
+    ($_GET['rulers'] == '-1') ?
+        $_SESSION['rulers']=NULL
+        : $_SESSION['rulers']= 1;
+endif;
+// линейки
+if (isset($_SESSION['rulers'])&&$_SESSION['rulers'])
+    require_once 'rulers.php';
+
 $content = ob_get_contents();
 ob_end_clean();
 echo $content;

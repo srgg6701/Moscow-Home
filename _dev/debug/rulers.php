@@ -1,4 +1,3 @@
-<?php   if(JRequest::getVar('rulers')):?>
 <?php   $rh = 'rulers-horizontal'; $rv = 'rulers-vertical';
 ?>
 <style>
@@ -24,9 +23,8 @@
         width: 35px;
     }
 </style>
-<!--<script src="http://code.jquery.com/jquery.min.js"></script>-->
 <script>
-    jQuery(function(){
+    jQuery(function($){
         var rh = '<?=$rh?>',
             rv = '<?=$rv?>',
             diff= 0,
@@ -83,4 +81,3 @@
 </script>
 <div id="<?=$rh?>"></div>
 <div id="<?=$rv?>"></div>
-<?php   endif;?>

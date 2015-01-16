@@ -1,14 +1,4 @@
 /* default sass file */
-@import "compass";
-@import "common";
-@import "variables";
-@import "mixins";
-@import "tags";
-@import "classes";
-@import "layout";
-@import "header/header";
-@import "main/main";
-@import "footer/footer";
 // FONTS ----------------------------
 @font-face {
   font-family: 'PlumbLight';
@@ -29,6 +19,22 @@
   url('../fonts/PlumbMediumC.svg#PlumbMediumC') format('svg');
 }
 // END FONTS ------------------------
+@import "compass";
+@import "common";
+@import "variables";
+@import "mixins";
+@import "tags";
+@import "classes";
+@import "layout";
+@import "header/header";
+@import "main/main";
+@import "footer/footer";
+
+#logo{
+  background: url($images_dir + 'logo.png');
+  height: 68px;
+  width: 114px;
+}
 #page{
 
 }

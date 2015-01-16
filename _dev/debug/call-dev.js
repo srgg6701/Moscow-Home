@@ -4,26 +4,26 @@ $(function () {
     // ----------------------------------------------------
     // Загрузить тестовый компонент
     if (( location.href.indexOf('localhost') != -1
-        || location.href.indexOf('127.0.0.1') != -1)
-        && location.href.indexOf('?') != -1) {
+        || location.href.indexOf('127.0.0.1') != -1)) {
         document.title = window.outerWidth;
         window.onresize = function () {
             document.title = window.outerWidth;
         };
-        //
-        var tail = location.href.lastIndexOf('/') + 1,
-            urlBase = location.href.substring(0, tail),
-            params = location.href.substr(tail);
-        //console.log('params: ' + params);
-        $.get(urlBase + '_dev/debug/dev.php' + params,
-            function (data) {
-                //console.log('data: '+data);
-                $('body').prepend(data);
-                //loadTemplate();
-            });
-    } else {
-        console.log('No url params...');
-        //loadTemplate();
+        if(location.href.indexOf('?') != -1){
+            var tail = location.href.lastIndexOf('/') + 1,
+                urlBase = location.href.substring(0, tail),
+                params = location.href.substr(tail);
+            //console.log('params: ' + params);
+            $.get(urlBase + '_dev/debug/dev.php' + params,
+                function (data) {
+                    //console.log('data: '+data);
+                    $('body').prepend(data);
+                    //loadTemplate();
+                });
+        } else {
+            console.log('No url params...');
+            //loadTemplate();
+        }
     }
 });
 // info: удалить (если используются серверные сценарии) или модифицировать (если используется JS-framework).

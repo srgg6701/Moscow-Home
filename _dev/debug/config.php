@@ -25,7 +25,8 @@ define("OPACITY_RANGE_CONTENT_ID", "#opacity-range-content");
 // Идентификатор блока с меню тестовых разделов
 define("DEBUG_MENU", "debug-menu");
 // Идентификатор ссылки для управления видимостью меню тестовых разделов
-define("DEBUG_LINKS_ID", "#debug-links");
+define("DEBUG_LINKS", "debug-links");
+define("DEBUG_LINKS_ID", "#" . DEBUG_LINKS);
 // Имя директори с изображениями
 define("IMGS_DIR", "pixel-perfect");
 // Путь расположения изображений относительно документа:

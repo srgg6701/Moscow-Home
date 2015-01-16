@@ -1,5 +1,17 @@
 /* default sass file */
-/* line 16, ../../scss/common.scss */
+@font-face {
+  font-family: 'PlumbLight';
+  src: url("../fonts/PlumbLightC.eot");
+  src: url("../fonts/PlumbLightC.eot") format("embedded-opentype"), url("../fonts/PlumbLightC.woff2") format("woff2"), url("../fonts/PlumbLightC.woff") format("woff"), url("../fonts/PlumbLightC.ttf") format("truetype"), url("../fonts/PlumbLightC.svg#PlumbLightC") format("svg");
+}
+
+@font-face {
+  font-family: 'PlumbMedium';
+  src: url("../fonts/PlumbMediumC.eot");
+  src: url("../fonts/PlumbMediumC.eot") format("embedded-opentype"), url("../fonts/PlumbMediumC.woff2") format("woff2"), url("../fonts/PlumbMediumC.woff") format("woff"), url("../fonts/PlumbMediumC.ttf") format("truetype"), url("../fonts/PlumbMediumC.svg#PlumbMediumC") format("svg");
+}
+
+/* line 16, ../../_dev/scss/common.scss */
 a,
 article,
 aside,
@@ -20,41 +32,46 @@ ul {
   box-sizing: border-box;
 }
 
-/* line 19, ../../scss/common.scss */
+/* line 19, ../../_dev/scss/common.scss */
 body, html {
   margin: 0;
   padding: 0;
 }
 
-/* line 1, ../../scss/tags.scss */
+/* line 2, ../../_dev/scss/tags.scss */
+header menu li a {
+  display: block;
+  font-family: PlumbMedium;
+  height: 100%;
+  padding: 10px;
+}
+
+/* line 9, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 5, ../../scss/tags.scss */
+/* line 13, ../../_dev/scss/tags.scss */
 menu li {
   display: table-cell;
 }
 
-/* line 9, ../../scss/tags.scss */
+/* line 17, ../../_dev/scss/tags.scss */
 menu {
   display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
-/* line 1, ../../scss/layout.scss */
+/* line 1, ../../_dev/scss/layout.scss */
 header, main, footer {
   margin: auto;
   max-width: 1400px;
 }
 
-@font-face {
-  font-family: 'PlumbLight';
-  src: url("../fonts/PlumbLightC.eot");
-  src: url("../fonts/PlumbLightC.eot") format("embedded-opentype"), url("../fonts/PlumbLightC.woff2") format("woff2"), url("../fonts/PlumbLightC.woff") format("woff"), url("../fonts/PlumbLightC.ttf") format("truetype"), url("../fonts/PlumbLightC.svg#PlumbLightC") format("svg");
-}
-
-@font-face {
-  font-family: 'PlumbMedium';
-  src: url("../fonts/PlumbMediumC.eot");
-  src: url("../fonts/PlumbMediumC.eot") format("embedded-opentype"), url("../fonts/PlumbMediumC.woff2") format("woff2"), url("../fonts/PlumbMediumC.woff") format("woff"), url("../fonts/PlumbMediumC.ttf") format("truetype"), url("../fonts/PlumbMediumC.svg#PlumbMediumC") format("svg");
+/* line 33, ../../_dev/scss/default.scss */
+#logo {
+  background: url("../images_temp/logo.png");
+  height: 68px;
+  width: 114px;
 }
