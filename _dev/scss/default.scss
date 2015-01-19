@@ -20,21 +20,25 @@
 }
 // END FONTS ------------------------
 @import "compass";
-@import "common";
+@import "common-elements";
 @import "variables";
 @import "mixins";
-@import "tags";
+@import "common-tags";
 @import "classes";
 @import "layout";
 @import "header/header";
 @import "main/main";
 @import "footer/footer";
 
-#logo{
-  background: url($images_dir + 'logo.png');
-  height: 68px;
-  width: 114px;
+#showcase{
+  background-color: #811d00;
+  height: 112px;
+  margin: auto;
+  @include opacity(0.7);
+  @include transform(translateY(300px));
+  width: 948px;
 }
-#page{
-
+#slider{
+  background: url($images_dir + 'slider-main.jpg') no-repeat;
+  height: 430px;
 }

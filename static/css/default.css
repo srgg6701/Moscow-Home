@@ -11,7 +11,7 @@
   src: url("../fonts/PlumbMediumC.eot") format("embedded-opentype"), url("../fonts/PlumbMediumC.woff2") format("woff2"), url("../fonts/PlumbMediumC.woff") format("woff"), url("../fonts/PlumbMediumC.ttf") format("truetype"), url("../fonts/PlumbMediumC.svg#PlumbMediumC") format("svg");
 }
 
-/* line 16, ../../_dev/scss/common.scss */
+/* line 16, ../../_dev/scss/common-elements.scss */
 a,
 article,
 aside,
@@ -32,35 +32,71 @@ ul {
   box-sizing: border-box;
 }
 
-/* line 19, ../../_dev/scss/common.scss */
+/* line 19, ../../_dev/scss/common-elements.scss */
 body, html {
   margin: 0;
   padding: 0;
 }
 
-/* line 2, ../../_dev/scss/tags.scss */
-header menu li a {
-  display: block;
-  font-family: PlumbMedium;
-  height: 100%;
-  padding: 10px;
+/* line 24, ../../_dev/scss/common-elements.scss */
+#top-menu,
+#consulting {
+  text-transform: uppercase;
 }
 
-/* line 9, ../../_dev/scss/tags.scss */
+/* line 2, ../../_dev/scss/common-tags.scss */
+#slider aside {
+  background-color: black;
+  background-position: center;
+  background-position-y: 16px;
+  background-repeat: no-repeat;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  margin-top: 173px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 14, ../../_dev/scss/common-tags.scss */
+#slider aside:nth-child(1) {
+  background-image: url("../images_temp/pointer-left.png");
+  float: left;
+  margin-left: 19.3%;
+}
+/* line 19, ../../_dev/scss/common-tags.scss */
+#slider aside:nth-child(2) {
+  background-image: url("../images_temp/pointer-right.png");
+  float: right;
+  margin-right: 19.3%;
+}
+
+/* line 26, ../../_dev/scss/common-tags.scss */
 header {
   display: table;
 }
 
-/* line 13, ../../_dev/scss/tags.scss */
+/* line 30, ../../_dev/scss/common-tags.scss */
 menu li {
   display: table-cell;
+  white-space: nowrap;
 }
 
-/* line 17, ../../_dev/scss/tags.scss */
+/* line 35, ../../_dev/scss/common-tags.scss */
 menu {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+/* line 1, ../../_dev/scss/classes.scss */
+.centered-vertical {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* line 1, ../../_dev/scss/layout.scss */
@@ -69,9 +105,127 @@ header, main, footer {
   max-width: 1400px;
 }
 
-/* line 33, ../../_dev/scss/default.scss */
+/* line 2, ../../_dev/scss/header/nav/menu.scss */
+header menu li a {
+  display: block;
+  color: #5d534e;
+  font-family: PlumbMedium;
+  padding: 6px;
+  vertical-align: middle;
+}
+
+/* line 3, ../../_dev/scss/header/nav/nav.scss */
+#consulting a {
+  background-color: #bf451e;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+  border-radius: 16px;
+  color: white;
+  display: inline-block;
+  font-family: PlumbMedium;
+  font-size: 0.85rem;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 45px;
+  text-decoration: none;
+  width: 168px;
+}
+
+/* line 19, ../../_dev/scss/header/nav/nav.scss */
+aside nav {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 21, ../../_dev/scss/header/nav/nav.scss */
+nav > div:nth-child(3) aside nav {
+  float: left;
+}
+
+/* line 27, ../../_dev/scss/header/nav/nav.scss */
+nav > div {
+  height: 100%;
+}
+/* line 29, ../../_dev/scss/header/nav/nav.scss */
+nav > div:nth-child(1) {
+  position: absolute;
+}
+/* line 32, ../../_dev/scss/header/nav/nav.scss */
+nav > div:nth-child(2) {
+  display: table;
+  margin: auto;
+}
+/* line 36, ../../_dev/scss/header/nav/nav.scss */
+nav > div:nth-child(3) {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* line 44, ../../_dev/scss/header/nav/nav.scss */
+nav menu {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -8px;
+}
+
+/* line 49, ../../_dev/scss/header/nav/nav.scss */
+#consulting {
+  /*margin-left: 8px;
+  margin-right: -8px;*/
+}
+
+/* line 53, ../../_dev/scss/header/nav/nav.scss */
 #logo {
   background: url("../images_temp/logo.png");
+  display: block;
   height: 68px;
   width: 114px;
+}
+
+/* line 59, ../../_dev/scss/header/nav/nav.scss */
+#phone-number {
+  font-family: PlumbLight;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  padding: 0 12px;
+}
+
+/* line 2, ../../_dev/scss/header/nav/menu.scss */
+header menu li a {
+  display: block;
+  color: #5d534e;
+  font-family: PlumbMedium;
+  padding: 6px;
+  vertical-align: middle;
+}
+
+/* line 3, ../../_dev/scss/header/header.scss */
+nav {
+  position: relative;
+  width: 958px;
+}
+
+/* line 33, ../../_dev/scss/default.scss */
+#showcase {
+  background-color: #811d00;
+  height: 112px;
+  margin: auto;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transform: translateY(300px);
+  -moz-transform: translateY(300px);
+  -ms-transform: translateY(300px);
+  -o-transform: translateY(300px);
+  transform: translateY(300px);
+  width: 948px;
+}
+
+/* line 41, ../../_dev/scss/default.scss */
+#slider {
+  background: url("../images_temp/slider-main.jpg") no-repeat;
+  height: 430px;
 }

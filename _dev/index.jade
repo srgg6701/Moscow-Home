@@ -9,20 +9,34 @@ html(lang="en")
       #page
           header
               nav
-                  menu
-                      -var menuItems=["О компании", "Услуги", "Галерея", "Контакты"]
-                      each item in menuItems
-                          li
-                              a(href="#")=item
-                  a#logo(href="index.html")
-                  -var phone_number="+7 (495) 890-90-90"
-                  span.phone_number=phone_number
-                  a#consulting(href="")="Консультация"
+                  div
+                      menu#top-menu
+                          -var menuItems=["О компании", "Услуги", "Галерея", "Контакты"]
+                          each item in menuItems
+                              li
+                                  a(href="#")=item
+                  div
+                      a#logo(href="index.html")
+                  div
+                      -var phone_number="+7 (495) 890-90-90"
+                      aside#phone-number=phone_number
+                      aside#consulting
+                          a(href="#")="Консультация"
           main
               #slider
-                  #go-left
-                  #go-right
+                  aside
+                  aside
                   #showcase
+                      ul
+                          li="10 лет на рынке"
+                          li="сотни реализованных проектов"
+                          li="высокое качество работ"
+                      ul
+                          li="малые и крупные проекты"
+                          li="от умеренных пожеланий до масштабных идей"
+                          li="от локальных работ до строительства дома"
+                      ul
+                          li="рекомендации от бизнесменов, политиков, деятелей культуры"
               #you-need.header-slim-big="Вам необходимо"
               menu.you-need
                   each text,link in {'#':"Проектирование и дизайн",'#':"Кровельные и фасадные работы",'#':"Общестроительные и отделочные работы",'#':"Инженерные системы"}

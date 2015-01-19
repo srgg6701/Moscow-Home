@@ -1,1 +1,64 @@
 @import "menu";
+a{
+  #consulting &{
+    $height:38px;
+    background-color: $background-carrot-dark;
+    @include border-radius(16px);
+    color: white;
+    display: inline-block;
+    font-family: PlumbMedium;
+    font-size: 0.85rem;
+    height: $height;
+    line-height: $height;
+    padding-left: 45px;
+    text-decoration: none;
+    width: 168px;
+  }
+}
+aside{
+  nav{
+    @include centered-vertical;
+    nav >div:nth-child(3) &{
+      float: left;
+    }
+  }
+}
+div{
+  nav >&{
+    height: 100%;
+    &:nth-child(1){
+      position: absolute;
+    }
+    &:nth-child(2){
+      display: table;
+      margin: auto;
+    }
+    &:nth-child(3){
+      position: absolute;
+      right: 0;
+      top:0;
+    }
+  }
+}
+menu{
+  nav &{
+    @include centered-vertical;
+    margin-left: -8px;
+  }
+}
+#consulting{
+  /*margin-left: 8px;
+  margin-right: -8px;*/
+}
+#logo{
+  background: url($images_dir + 'logo.png');
+  display: block;
+  height: 68px;
+  width: 114px;
+}
+#phone-number{
+  font-family: PlumbLight;
+  font-size: 1.3rem;
+  margin-right: 10px;
+  padding: 0 12px;
+}

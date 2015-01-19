@@ -1,0 +1,39 @@
+aside{
+  #slider &{
+    $offset:19.3%;
+    $space:80px;
+    background-color: black;
+    background-position: center;
+    background-position-y: 16px;
+    background-repeat: no-repeat;
+    @include border-radius(50%);
+    height: $space;
+    width: $space;
+    margin-top: 173px;
+    @include opacity(0.5);
+    &:nth-child(1){
+      background-image: url($images_dir + "pointer-left.png");
+      float: left;
+      margin-left: $offset;
+    }
+    &:nth-child(2){
+      background-image: url($images_dir + "pointer-right.png");
+      float: right;
+      margin-right: $offset;
+    }
+  }
+}
+header{
+  display: table;
+}
+li{
+  menu &{
+    display: table-cell;
+    white-space: nowrap;
+  }
+}
+menu{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
