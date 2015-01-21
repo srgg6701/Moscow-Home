@@ -1,3 +1,6 @@
 .centered-vertical{
   @include centered-vertical;
 }
+.no-scroll{
+  overflow: hidden;
+}

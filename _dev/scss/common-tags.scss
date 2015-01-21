@@ -1,6 +1,6 @@
 aside{
   #slider &{
-    $offset:19.3%;
+    $offset:14.4%;
     $space:80px;
     background-color: black;
     background-position: center;
@@ -11,20 +11,23 @@ aside{
     width: $space;
     margin-top: 173px;
     @include opacity(0.5);
+    $url:$images_dir + "pointer.png";
     &:nth-child(1){
-      background-image: url($images_dir + "pointer-left.png");
+      background-image: url($url);
       float: left;
       margin-left: $offset;
     }
     &:nth-child(2){
-      background-image: url($images_dir + "pointer-right.png");
+      background-image: url($url);
       float: right;
       margin-right: $offset;
+      @include transform(scaleX(-1));
     }
   }
 }
 header{
   display: table;
+  margin-bottom: -16px !important;
 }
 li{
   menu &{

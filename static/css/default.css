@@ -61,31 +61,37 @@ body, html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 14, ../../_dev/scss/common-tags.scss */
+/* line 15, ../../_dev/scss/common-tags.scss */
 #slider aside:nth-child(1) {
-  background-image: url("../images_temp/pointer-left.png");
+  background-image: url("../images_temp/pointer.png");
   float: left;
-  margin-left: 19.3%;
+  margin-left: 14.4%;
 }
-/* line 19, ../../_dev/scss/common-tags.scss */
+/* line 20, ../../_dev/scss/common-tags.scss */
 #slider aside:nth-child(2) {
-  background-image: url("../images_temp/pointer-right.png");
+  background-image: url("../images_temp/pointer.png");
   float: right;
-  margin-right: 19.3%;
+  margin-right: 14.4%;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
-/* line 26, ../../_dev/scss/common-tags.scss */
+/* line 28, ../../_dev/scss/common-tags.scss */
 header {
   display: table;
+  margin-bottom: -16px !important;
 }
 
-/* line 30, ../../_dev/scss/common-tags.scss */
+/* line 33, ../../_dev/scss/common-tags.scss */
 menu li {
   display: table-cell;
   white-space: nowrap;
 }
 
-/* line 35, ../../_dev/scss/common-tags.scss */
+/* line 38, ../../_dev/scss/common-tags.scss */
 menu {
   display: inline-block;
   margin: 0;
@@ -97,6 +103,11 @@ menu {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* line 4, ../../_dev/scss/classes.scss */
+.no-scroll {
+  overflow: hidden;
 }
 
 /* line 1, ../../_dev/scss/layout.scss */
@@ -134,13 +145,13 @@ header menu li a {
 }
 
 /* line 19, ../../_dev/scss/header/nav/nav.scss */
-aside nav {
+nav aside {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 21, ../../_dev/scss/header/nav/nav.scss */
-nav > div:nth-child(3) aside nav {
+/* line 22, ../../_dev/scss/header/nav/nav.scss */
+nav > div:nth-child(3) aside {
   float: left;
 }
 
@@ -226,6 +237,6 @@ nav {
 
 /* line 41, ../../_dev/scss/default.scss */
 #slider {
-  background: url("../images_temp/slider-main.jpg") no-repeat;
+  background: url("../images_temp/slider-main.jpg") no-repeat center;
   height: 430px;
 }

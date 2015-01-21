@@ -16,11 +16,11 @@ a{
   }
 }
 aside{
-  nav{
+  nav &{
     @include centered-vertical;
-    nav >div:nth-child(3) &{
-      float: left;
-    }
+  }
+  nav >div:nth-child(3) &{
+    float: left;
   }
 }
 div{
