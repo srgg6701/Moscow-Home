@@ -44,7 +44,7 @@ body, html {
   text-transform: uppercase;
 }
 
-/* line 2, ../../_dev/scss/common-tags.scss */
+/* line 2, ../../_dev/scss/tags.scss */
 #slider aside {
   background-color: black;
   background-position: center;
@@ -61,13 +61,13 @@ body, html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 15, ../../_dev/scss/common-tags.scss */
+/* line 15, ../../_dev/scss/tags.scss */
 #slider aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 14.4%;
 }
-/* line 20, ../../_dev/scss/common-tags.scss */
+/* line 20, ../../_dev/scss/tags.scss */
 #slider aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -79,23 +79,56 @@ body, html {
   transform: scaleX(-1);
 }
 
-/* line 28, ../../_dev/scss/common-tags.scss */
+/* line 28, ../../_dev/scss/tags.scss */
 header {
   display: table;
-  margin-bottom: -16px !important;
 }
 
-/* line 33, ../../_dev/scss/common-tags.scss */
+/* line 32, ../../_dev/scss/tags.scss */
 menu li {
   display: table-cell;
   white-space: nowrap;
 }
+/* line 36, ../../_dev/scss/tags.scss */
+#showcase li {
+  color: white;
+  font-family: PlumbMedium;
+  font-size: 13px;
+  line-height: 18px;
+  list-style-image: url("../images_temp/checked.png");
+  min-height: 29px;
+  padding-left: 3px;
+  text-transform: uppercase;
+}
 
-/* line 38, ../../_dev/scss/common-tags.scss */
+/* line 47, ../../_dev/scss/tags.scss */
 menu {
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+
+/* line 53, ../../_dev/scss/tags.scss */
+#showcase ul {
+  float: left;
+  margin-top: 16px;
+  padding: 0;
+}
+/* line 57, ../../_dev/scss/tags.scss */
+#showcase ul:nth-child(1) {
+  margin-left: -60px;
+  width: 260px;
+}
+/* line 61, ../../_dev/scss/tags.scss */
+#showcase ul:nth-child(2) {
+  margin-left: 36px;
+  width: 350px;
+}
+/* line 65, ../../_dev/scss/tags.scss */
+#showcase ul:nth-child(3) {
+  margin-right: -90px;
+  margin-left: 54px;
+  width: 200px;
 }
 
 /* line 1, ../../_dev/scss/classes.scss */
@@ -223,6 +256,11 @@ nav {
 /* line 33, ../../_dev/scss/default.scss */
 #showcase {
   background-color: #811d00;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
   height: 112px;
   margin: auto;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -235,8 +273,20 @@ nav {
   width: 948px;
 }
 
-/* line 41, ../../_dev/scss/default.scss */
+/* line 42, ../../_dev/scss/default.scss */
 #slider {
   background: url("../images_temp/slider-main.jpg") no-repeat center;
   height: 430px;
+}
+
+/* line 46, ../../_dev/scss/default.scss */
+#you-need {
+  color: #5d534e;
+  font-family: PlumbLight;
+  font-size: 36px;
+  height: 98px;
+  line-height: 96px;
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
 }

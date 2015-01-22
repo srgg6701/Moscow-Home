@@ -27,16 +27,45 @@ aside{
 }
 header{
   display: table;
-  margin-bottom: -16px !important;
 }
 li{
   menu &{
     display: table-cell;
     white-space: nowrap;
   }
+  #showcase &{
+    color: white;
+    font-family: PlumbMedium;
+    font-size: 13px;
+    line-height: 18px;
+    list-style-image: url($images_dir + "checked.png");
+    min-height: 29px;
+    padding-left: 3px;
+    text-transform: uppercase;
+  }
 }
 menu{
   display: inline-block;
   margin: 0;
   padding: 0;
+}
+ul{
+  #showcase &{
+    float:left;
+    margin-top: 16px;
+    padding: 0;
+    &:nth-child(1){
+      margin-left: -60px;
+      width: 260px;
+    }
+    &:nth-child(2){
+      margin-left: 36px;
+      width: 350px;
+    }
+    &:nth-child(3){
+      margin-right: -90px;
+      margin-left: 54px;
+      width: 200px;
+    }
+  }
 }

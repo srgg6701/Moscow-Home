@@ -23,7 +23,7 @@
 @import "common-elements";
 @import "variables";
 @import "mixins";
-@import "common-tags";
+@import "tags";
 @import "classes";
 @import "layout";
 @import "header/header";
@@ -32,6 +32,7 @@
 
 #showcase{
   background-color: #811d00;
+  @include border-radius(8px);
   height: 112px;
   margin: auto;
   @include opacity(0.7);
@@ -41,4 +42,14 @@
 #slider{
   background: url($images_dir + 'slider-main.jpg') no-repeat center;
   height: 430px;
+}
+#you-need {
+  color: $color-dark-common;
+  font-family: PlumbLight;
+  font-size: 36px;
+  height: 98px;
+  line-height: 96px;
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
 }
