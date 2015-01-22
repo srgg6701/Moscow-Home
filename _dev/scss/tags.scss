@@ -1,3 +1,25 @@
+a{
+  #you-need menu &{
+    color: $color-brown;
+    display: block;
+    font-family: Arial, Helvetica, Sans Serif;
+    font-size: 14px;
+    padding-left: 66px;
+    white-space: normal;
+    &:nth-child(1){
+      background: url($images_dir + 'need-design.png') no-repeat;
+    }
+    &:nth-child(2){
+      background: url($images_dir + 'need-building.png') no-repeat;
+    }
+    &:nth-child(3){
+      background: url($images_dir + 'need-facade.png') no-repeat;
+    }
+    &:nth-child(4){
+      background: url($images_dir + 'need-engineering.png') no-repeat;
+    }
+  }
+}
 aside{
   #slider &{
     $offset:14.4%;
@@ -43,11 +65,28 @@ li{
     padding-left: 3px;
     text-transform: uppercase;
   }
+  #you-need &{
+    height: 52px;
+    padding: 0px 7px;
+  }
 }
 menu{
   display: inline-block;
   margin: 0;
   padding: 0;
+  #you-need &{
+    display: table;
+    margin: auto;
+    margin-top: -2px;
+  }
+}
+p{
+  #you-need & {
+    color: $color-dark-common;
+    font-family: PlumbLight;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
 }
 ul{
   #showcase &{

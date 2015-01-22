@@ -37,11 +37,13 @@ html(lang="en")
                           li="от локальных работ до строительства дома"
                       ul
                           li="рекомендации от бизнесменов, политиков, деятелей культуры"
-              #you-need.header-slim-big="Вам необходимо"
-              menu.you-need
-                  each text,link in {'#':"Проектирование и дизайн",'#':"Кровельные и фасадные работы",'#':"Общестроительные и отделочные работы",'#':"Инженерные системы"}
-                      li(title=text)
-                          a(href=link)=text
+              #you-need
+                  p.header-slim-big="Вам необходимо"
+                  menu.you-need
+                      each text,link in {'design':"Проектирование и дизайн",'facade':"Кровельные и фасадные работы",'decoration':"Общестроительные и отделочные работы",'engineering':"Инженерные системы"}
+                          li(title=text)
+                              div
+                                  a(href=link)=text
               #gallery.header-slim-big="Галерея"
               #slider-bottom
           footer
