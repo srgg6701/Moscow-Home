@@ -3,9 +3,9 @@
 $box_shadow = '0 4px 8px rgba(0, 0, 0, 0.5), 0 -14px 20px 2px rgba(0, 0, 0, 0.1) inset';
 ?>
 <style>
-    header{
+    /*header{
         background-color: lightgoldenrodyellow;
-    }
+    }*/
     main{
         background-color: lightcyan;
     }
