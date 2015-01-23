@@ -21,33 +21,51 @@ html(lang="en")
                       -var phone_number="+7 (495) 890-90-90"
                       aside#phone-number=phone_number
                       aside#consulting
-                          a(href="#")="Консультация"
+                          a.btn(href="#")="Консультация"
           main
-              #slider
-                  aside
-                  aside
-                  #showcase
-                      ul
-                          li="10 лет на рынке"
-                          li="сотни реализованных проектов"
-                          li="высокое качество работ"
-                      ul
-                          li="малые и крупные проекты"
-                          li="от умеренных пожеланий до масштабных идей"
-                          li="от локальных работ до строительства дома"
-                      ul
-                          li="рекомендации от бизнесменов, политиков, деятелей культуры"
-              #you-need
-                  p.header-slim-big="Вам необходимо"
-                  menu.you-need
-                      each text,link in {'design':"Проектирование и дизайн",'facade':"Кровельные и фасадные работы",'decoration':"Общестроительные и отделочные работы",'engineering':"Инженерные системы"}
-                          li(title=text)
+              #slider.fit
+                  div#pointers-box
+                      div#pointers-aside
+                          aside
+                          aside
+                  div.img-box
+                  #achievements
+                      div
+
+
+                          #showcase
                               div
-                                  a(href=link)=text
-              #gallery.header-slim-big="Галерея"
-              #slider-bottom
+                                  ul
+                                      li="10 лет на рынке"
+                                      li="сотни реализованных проектов"
+                                      li="высокое качество работ"
+                                  ul
+                                      li="малые и крупные проекты"
+                                      li="от умеренных пожеланий до масштабных идей"
+                                      li="от локальных работ до строительства дома"
+                                  ul
+                                      li="рекомендации от бизнесменов, политиков, деятелей культуры"
+              div#level1
+                  #you-need
+                      p.header-slim-big="Вам необходимо"
+                      menu.you-need
+                          each text,link in {'design':"Проектирование и дизайн",'decoration':"Общестроительные и отделочные работы",'facade':"Кровельные и фасадные работы",'engineering':"Инженерные системы"}
+                              li(title=text)
+                                  div
+                                      div
+                                          a(href=link)=text
+                  #gallery.header-slim-big="Галерея"
+                  #slider-bottom
+                      #slides
+                          each src in [1,2,3,4,5,6]
+                              a(href="#")
+                                  img(src="static/images_temp/gallery/"+src+'.jpg')
+                          aside
+                              a.btn(href="#")="Просмотреть"
           footer
-            .float-left="Строительство элитной недвижимости с 2004 г."
-            a.logo(href="index.html")
-            span.phone_number=phone_number
+              section
+                  div="Строительство элитной недвижимости с 2004 года"
+                  div
+                      a#logo-bottom.logo(href="index.html")
+                  #phone-number_bottom=phone_number
       script(type='text/javascript', src='_dev/debug/call-dev.js')

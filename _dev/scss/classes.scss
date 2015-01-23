@@ -1,6 +1,12 @@
 .centered-vertical{
   @include centered-vertical;
 }
+.header-slim-big{
+  color: $color-dark-common;
+  font-family: PlumbLight;
+  font-size: 36px;
+  text-transform: uppercase;
+}
 .no-scroll{
   overflow: hidden;
 }

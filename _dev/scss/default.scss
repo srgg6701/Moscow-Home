@@ -30,23 +30,52 @@
 @import "main/main";
 @import "footer/footer";
 
-$max-with-showcase: 948px;
-#showcase{
-  background-color: #811d00;
-  @include border-radius(8px);
-  height: 112px;
+#achievements{
   margin: auto;
-  @include opacity(0.7);
-  @include transform(translateY(300px));
-  width: $max-with-showcase;
 }
-#slider{
-  background: url($images_dir + 'slider-main.jpg') no-repeat center;
-  height: 430px;
+#gallery{
+  $h:94px;
+  height: $h;
+  line-height: $h;
+  text-align: center;
+}
+#pointers-box{
+  bottom:175px;
+  position: absolute;
+  width: 100%;
+}
+#pointers-aside{
+  margin: auto;
+  width: $max-with-content;
+}
+#showcase{
+  bottom: 17px;
+  height: 112px;
+  position: absolute;
+  width: 100%;
+}
+#slider{ // Высота будет изменяться динамически
+  bottom: $level1Height;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  width: 100%;
+}
+#slides{
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: $img-slide-single-width*6 + $img-slide-offset*5;
+}
+#slider-bottom{
+  background: url($images_dir + "backgrounds/tile-gallery.png");
+  height: 184px;
+  margin: -13px auto -12px;
+  padding: 20px 0;
 }
 #you-need {
   margin: auto;
   margin-top: -4px;
+  max-width: $max-with-content;
   text-align: center;
-  max-width: $max-with-showcase;
 }

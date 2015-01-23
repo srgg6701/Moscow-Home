@@ -1,17 +1,10 @@
 @import "menu";
 a{
   #consulting &{
-    $height:38px;
-    background: url($images_dir + 'call-consulting.png') no-repeat 14px $background-carrot-dark;
-    @include border-radius(16px);
-    color: white;
-    display: inline-block;
-    font-family: PlumbMedium;
-    font-size: 0.85rem;
-    height: $height;
-    line-height: $height;
+    background-image: url($images_dir + 'call-consulting.png');
+    background-position: 14px;
+    background-repeat: no-repeat;
     padding-left: 45px;
-    text-decoration: none;
     width: 168px;
   }
 }
@@ -25,19 +18,7 @@ aside{
 }
 div{
   nav >&{
-    height: 100%;
-    &:nth-child(1){
-      position: absolute;
-    }
-    &:nth-child(2){
-      display: table;
-      margin: auto;
-    }
-    &:nth-child(3){
-      position: absolute;
-      right: 0;
-      top:0;
-    }
+    @include nav-footer;
   }
 }
 menu{
@@ -48,8 +29,7 @@ menu{
   }
 }
 #consulting{
-  /*margin-left: 8px;
-  margin-right: -8px;*/
+  text-transform: uppercase;
 }
 #logo{
   background: url($images_dir + 'logo.png');
@@ -58,8 +38,10 @@ menu{
   width: 114px;
 }
 #phone-number{
-  font-family: PlumbLight;
-  font-size: 1.3rem;
+  @include phone-number;
   margin-right: 10px;
   padding: 0 12px;
+}
+#top-menu{
+  text-transform: uppercase;
 }

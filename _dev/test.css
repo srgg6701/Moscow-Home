@@ -1,0 +1,55 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+body *{
+    box-sizing: border-box;
+}
+header, main, footer, #controls, #slider{
+    width:100%;
+}
+#controls{
+    bottom: 10px;
+    /*height: 80px;*/
+    position: absolute;
+}
+#page{
+    background-color: #A1A1A1;
+    height: 500px;
+    max-height: 100%;
+    position: relative;
+}
+#pointers{
+    background-color: brown;
+    height: 60px;
+    margin: auto;
+    width: 600px;
+}
+#slider{
+    background-color: antiquewhite;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+header{
+    background-color: blueviolet;
+    position: absolute;
+    height: 40px;
+    top:0
+}
+main{
+    background-color: orange;
+    position: absolute;
+    top:40px;
+    bottom:80px;
+}
+footer{
+    background-color: cornflowerblue;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+}

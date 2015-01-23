@@ -1,0 +1,34 @@
+div{
+  footer section >&{
+    @include nav-footer;
+    &:first-child{
+      color: $color-dark-common;
+      font-family: PlumbLight;
+      font-size: 16px;
+      line-height: 18px;
+      margin-top: 6px;
+      text-align: center;
+      width: 193px;
+    }
+  }
+}
+section{
+  footer &{
+    margin: auto;
+    width: 698px;
+  }
+}
+#logo-bottom{
+  background: url($images_dir + "logo-bottom.png");
+  display: block;
+  height: 47px;
+  width: 109px;
+}
+#phone-number_bottom {
+  @include phone-number;
+  float: right;
+  font-size: 1.5rem;
+  margin-top: -37px;
+  margin-right: 7px;
+  position: static;
+}

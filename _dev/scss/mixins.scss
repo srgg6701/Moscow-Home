@@ -1,5 +1,30 @@
+@mixin centered{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+}
 @mixin centered-vertical{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+@mixin nav-footer{
+  height: 100%;
+  &:nth-child(1){
+    position: absolute;
+  }
+  &:nth-child(2){
+    display: table;
+    margin: auto;
+  }
+  &:nth-child(3){
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+}
+@mixin phone-number{
+  font-family: PlumbLight;
+  font-size: 1.3rem;
 }

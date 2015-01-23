@@ -1,4 +1,62 @@
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+//---------------------------------------------
+$headerHeight: 68px;
+$level1Height: 423px;
+$footerHeight: 47px;
+
+#page{
+  //height: 980px;
+  //max-height: 100%;
+  height: 100%;
+  position: relative;
+}
+  header,
+  main,
+  footer,
+  main >div{
+    position: absolute;
+  }
+  //--------------------------------
+  header{
+    height: $headerHeight;
+    top: 0;
+  }
+    nav{
+      margin: auto;
+      width: $max-with-content;
+    }
+  //--------------------------------
+  main{
+    bottom: $footerHeight;
+    top: $headerHeight;
+  }
+
+    #level1{
+      bottom: 0;
+      height: $level1Height;
+      position: absolute;
+      width: 100%;
+    }
+
+footer{
+    bottom: 0;
+    height: $footerHeight - 10px;
+  }
+//---------------------------------------------
+// заполнить по ширине
 header,main,footer{
+  width: 100%;
+}
+// следующий уровень, ширина ограничена
+/*
+nav,
+main >div:not(.fit),
+footer >section{
   margin: auto;
   max-width: 1400px;
-}
+  width: $max-with-content;
+}*/
