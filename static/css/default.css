@@ -53,24 +53,8 @@ body, html {
   padding-left: 66px;
   white-space: normal;
 }
-/* line 9, ../../_dev/scss/tags.scss */
-#you-need menu a:nth-child(1) {
-  background: url("../images_temp/need-design.png") no-repeat;
-}
-/* line 12, ../../_dev/scss/tags.scss */
-#you-need menu a:nth-child(2) {
-  background: url("../images_temp/need-building.png") no-repeat;
-}
-/* line 15, ../../_dev/scss/tags.scss */
-#you-need menu a:nth-child(3) {
-  background: url("../images_temp/need-facade.png") no-repeat;
-}
-/* line 18, ../../_dev/scss/tags.scss */
-#you-need menu a:nth-child(4) {
-  background: url("../images_temp/need-engineering.png") no-repeat;
-}
 
-/* line 24, ../../_dev/scss/tags.scss */
+/* line 12, ../../_dev/scss/tags.scss */
 #slider aside {
   background-color: black;
   background-position: center;
@@ -87,13 +71,13 @@ body, html {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 37, ../../_dev/scss/tags.scss */
+/* line 25, ../../_dev/scss/tags.scss */
 #slider aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 14.4%;
 }
-/* line 42, ../../_dev/scss/tags.scss */
+/* line 30, ../../_dev/scss/tags.scss */
 #slider aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -105,17 +89,17 @@ body, html {
   transform: scaleX(-1);
 }
 
-/* line 50, ../../_dev/scss/tags.scss */
+/* line 38, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 54, ../../_dev/scss/tags.scss */
+/* line 42, ../../_dev/scss/tags.scss */
 menu li {
   display: table-cell;
   white-space: nowrap;
 }
-/* line 58, ../../_dev/scss/tags.scss */
+/* line 46, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   font-family: PlumbMedium;
@@ -126,50 +110,67 @@ menu li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 68, ../../_dev/scss/tags.scss */
+/* line 56, ../../_dev/scss/tags.scss */
 #you-need li {
-  height: 52px;
+  height: 66px;
   padding: 0px 7px;
 }
+/* line 61, ../../_dev/scss/tags.scss */
+#you-need menu > li:nth-child(1) {
+  background: url("../images_temp/need-design.png") no-repeat;
+}
+/* line 64, ../../_dev/scss/tags.scss */
+#you-need menu > li:nth-child(2) {
+  background: url("../images_temp/need-building.png") no-repeat;
+}
+/* line 67, ../../_dev/scss/tags.scss */
+#you-need menu > li:nth-child(3) {
+  background: url("../images_temp/need-facade.png") no-repeat;
+}
+/* line 70, ../../_dev/scss/tags.scss */
+#you-need menu > li:nth-child(4) {
+  background: url("../images_temp/need-engineering.png") no-repeat;
+}
 
-/* line 73, ../../_dev/scss/tags.scss */
+/* line 75, ../../_dev/scss/tags.scss */
 menu {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 77, ../../_dev/scss/tags.scss */
+/* line 79, ../../_dev/scss/tags.scss */
 #you-need menu {
   display: table;
   margin: auto;
   margin-top: -2px;
 }
 
-/* line 84, ../../_dev/scss/tags.scss */
-#you-need p {
+/* line 87, ../../_dev/scss/tags.scss */
+#you-need p.header-slim-big {
   color: #5d534e;
   font-family: PlumbLight;
   font-size: 36px;
+  margin-bottom: 32px;
   text-transform: uppercase;
 }
 
-/* line 92, ../../_dev/scss/tags.scss */
+/* line 97, ../../_dev/scss/tags.scss */
 #showcase ul {
   float: left;
   margin-top: 16px;
   padding: 0;
 }
-/* line 96, ../../_dev/scss/tags.scss */
+/* line 101, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   margin-left: -60px;
   width: 260px;
 }
-/* line 100, ../../_dev/scss/tags.scss */
+/* line 105, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   margin-left: 36px;
   width: 350px;
 }
-/* line 104, ../../_dev/scss/tags.scss */
+/* line 109, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   margin-right: -90px;
   margin-left: 54px;
@@ -205,7 +206,7 @@ header menu li a {
 
 /* line 3, ../../_dev/scss/header/nav/nav.scss */
 #consulting a {
-  background-color: #bf451e;
+  background: url("../images_temp/call-consulting.png") no-repeat 14px #bf451e;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   -ms-border-radius: 16px;
@@ -258,16 +259,17 @@ nav menu {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: -8px;
+  margin-left: -7px;
+  margin-top: -2px;
 }
 
-/* line 49, ../../_dev/scss/header/nav/nav.scss */
+/* line 50, ../../_dev/scss/header/nav/nav.scss */
 #consulting {
   /*margin-left: 8px;
   margin-right: -8px;*/
 }
 
-/* line 53, ../../_dev/scss/header/nav/nav.scss */
+/* line 54, ../../_dev/scss/header/nav/nav.scss */
 #logo {
   background: url("../images_temp/logo.png");
   display: block;
@@ -275,7 +277,7 @@ nav menu {
   width: 114px;
 }
 
-/* line 59, ../../_dev/scss/header/nav/nav.scss */
+/* line 60, ../../_dev/scss/header/nav/nav.scss */
 #phone-number {
   font-family: PlumbLight;
   font-size: 1.3rem;
@@ -326,9 +328,8 @@ nav {
 
 /* line 47, ../../_dev/scss/default.scss */
 #you-need {
-  line-height: 33px;
   margin: auto;
-  margin-top: 5px;
+  margin-top: -4px;
   text-align: center;
   max-width: 948px;
 }

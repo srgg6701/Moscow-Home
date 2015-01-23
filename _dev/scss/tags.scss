@@ -6,18 +6,6 @@ a{
     font-size: 14px;
     padding-left: 66px;
     white-space: normal;
-    &:nth-child(1){
-      background: url($images_dir + 'need-design.png') no-repeat;
-    }
-    &:nth-child(2){
-      background: url($images_dir + 'need-building.png') no-repeat;
-    }
-    &:nth-child(3){
-      background: url($images_dir + 'need-facade.png') no-repeat;
-    }
-    &:nth-child(4){
-      background: url($images_dir + 'need-engineering.png') no-repeat;
-    }
   }
 }
 aside{
@@ -66,8 +54,22 @@ li{
     text-transform: uppercase;
   }
   #you-need &{
-    height: 52px;
+    height: 66px;
     padding: 0px 7px;
+  }
+  #you-need menu >&{
+    &:nth-child(1){
+      background: url($images_dir + 'need-design.png') no-repeat;
+    }
+    &:nth-child(2){
+      background: url($images_dir + 'need-building.png') no-repeat;
+    }
+    &:nth-child(3){
+      background: url($images_dir + 'need-facade.png') no-repeat;
+    }
+    &:nth-child(4){
+      background: url($images_dir + 'need-engineering.png') no-repeat;
+    }
   }
 }
 menu{
@@ -82,10 +84,13 @@ menu{
 }
 p{
   #you-need & {
-    color: $color-dark-common;
-    font-family: PlumbLight;
-    font-size: 36px;
-    text-transform: uppercase;
+    &.header-slim-big{
+      color: $color-dark-common;
+      font-family: PlumbLight;
+      font-size: 36px;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
   }
 }
 ul{
