@@ -7,3 +7,15 @@ a{
     vertical-align: middle;
   }
 }
+div{
+  section.menu >&{
+    position: absolute;
+    display: none;
+    top:$nav-height;
+  }
+}
+section{
+  &.menu{
+
+  }
+}

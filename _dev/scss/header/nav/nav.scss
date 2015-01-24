@@ -1,4 +1,4 @@
-@import "menu";
+@import "menus";
 a{
   #consulting &{
     background-image: url($images_dir + 'call-consulting.png');
@@ -34,7 +34,7 @@ menu{
 #logo{
   background: url($images_dir + 'logo.png');
   display: block;
-  height: 68px;
+  height: $nav-height;
   width: 114px;
 }
 #phone-number{

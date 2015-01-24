@@ -61,15 +61,7 @@ menu.social a {
   height: 37px;
   width: 35px;
 }
-/* line 19, ../../_dev/scss/tags.scss */
-menu li > a {
-  position: relative;
-}
-/* line 22, ../../_dev/scss/tags.scss */
-menu li > a:hover menu li > div {
-  display: block;
-}
-/* line 28, ../../_dev/scss/tags.scss */
+/* line 20, ../../_dev/scss/tags.scss */
 #slides aside a.btn {
   display: block;
   position: relative;
@@ -79,7 +71,7 @@ menu li > a:hover menu li > div {
   text-align: center;
   width: 128px;
 }
-/* line 37, ../../_dev/scss/tags.scss */
+/* line 29, ../../_dev/scss/tags.scss */
 #you-need menu a {
   color: #a64726;
   display: block;
@@ -90,7 +82,7 @@ menu li > a:hover menu li > div {
   white-space: normal;
 }
 
-/* line 48, ../../_dev/scss/tags.scss */
+/* line 40, ../../_dev/scss/tags.scss */
 #pointers-aside > aside {
   background-color: black;
   background-position: center;
@@ -106,13 +98,13 @@ menu li > a:hover menu li > div {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 61, ../../_dev/scss/tags.scss */
+/* line 52, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 18px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 57, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -123,7 +115,7 @@ menu li > a:hover menu li > div {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-/* line 73, ../../_dev/scss/tags.scss */
+/* line 64, ../../_dev/scss/tags.scss */
 #slides aside {
   background: url("../images_temp/backgrounds/tile-microsquare.png");
   height: 135px;
@@ -133,12 +125,11 @@ menu li > a:hover menu li > div {
   width: 153px;
 }
 
-/* line 83, ../../_dev/scss/tags.scss */
-menu li > div {
-  display: none;
-  position: absolute;
+/* line 74, ../../_dev/scss/tags.scss */
+menu.parent_menu li:hover div {
+  display: block;
 }
-/* line 87, ../../_dev/scss/tags.scss */
+/* line 77, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -153,7 +144,7 @@ menu li > div {
   position: relative;
   width: 948px;
 }
-/* line 97, ../../_dev/scss/tags.scss */
+/* line 87, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -162,7 +153,7 @@ menu li > div {
   width: 100%;
   margin: auto;
 }
-/* line 106, ../../_dev/scss/tags.scss */
+/* line 96, ../../_dev/scss/tags.scss */
 #slider menu.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -179,45 +170,45 @@ menu li > div {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 113, ../../_dev/scss/tags.scss */
+/* line 103, ../../_dev/scss/tags.scss */
 #you-need menu li > div {
   height: 100%;
 }
-/* line 116, ../../_dev/scss/tags.scss */
+/* line 106, ../../_dev/scss/tags.scss */
 #you-need menu li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 120, ../../_dev/scss/tags.scss */
+/* line 110, ../../_dev/scss/tags.scss */
 footer {
   margin-top: 12px !important;
   overflow: hidden;
   position: relative;
 }
 
-/* line 125, ../../_dev/scss/tags.scss */
+/* line 115, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 129, ../../_dev/scss/tags.scss */
+/* line 119, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 134, ../../_dev/scss/tags.scss */
+/* line 124, ../../_dev/scss/tags.scss */
 menu li {
   display: table-cell;
   white-space: nowrap;
 }
-/* line 138, ../../_dev/scss/tags.scss */
+/* line 128, ../../_dev/scss/tags.scss */
 menu.social li {
   display: block;
   padding: 4px;
 }
-/* line 142, ../../_dev/scss/tags.scss */
+/* line 132, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   font-family: PlumbMedium;
@@ -228,42 +219,42 @@ menu.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 152, ../../_dev/scss/tags.scss */
+/* line 142, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 161, ../../_dev/scss/tags.scss */
+/* line 151, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 165, ../../_dev/scss/tags.scss */
+/* line 155, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 169, ../../_dev/scss/tags.scss */
+/* line 159, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 173, ../../_dev/scss/tags.scss */
+/* line 163, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 180, ../../_dev/scss/tags.scss */
+/* line 170, ../../_dev/scss/tags.scss */
 menu {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 184, ../../_dev/scss/tags.scss */
+/* line 174, ../../_dev/scss/tags.scss */
 menu.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -274,33 +265,33 @@ menu.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 180, ../../_dev/scss/tags.scss */
 #you-need menu {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 197, ../../_dev/scss/tags.scss */
+/* line 187, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 203, ../../_dev/scss/tags.scss */
+/* line 193, ../../_dev/scss/tags.scss */
 #showcase ul {
   padding: 0;
   position: absolute;
 }
-/* line 206, ../../_dev/scss/tags.scss */
+/* line 196, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 210, ../../_dev/scss/tags.scss */
+/* line 200, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 214, ../../_dev/scss/tags.scss */
+/* line 204, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -392,13 +383,20 @@ footer >section{
   max-width: 1400px;
   width: $max-with-content;
 }*/
-/* line 2, ../../_dev/scss/header/nav/menu.scss */
+/* line 2, ../../_dev/scss/header/nav/menus.scss */
 header menu li a {
   display: block;
   color: #5d534e;
   font-family: PlumbMedium;
   padding: 6px;
   vertical-align: middle;
+}
+
+/* line 11, ../../_dev/scss/header/nav/menus.scss */
+section.menu > div {
+  position: absolute;
+  display: none;
+  top: 68px;
 }
 
 /* line 3, ../../_dev/scss/header/nav/nav.scss */
@@ -476,13 +474,20 @@ nav menu {
   text-transform: uppercase;
 }
 
-/* line 2, ../../_dev/scss/header/nav/menu.scss */
+/* line 2, ../../_dev/scss/header/nav/menus.scss */
 header menu li a {
   display: block;
   color: #5d534e;
   font-family: PlumbMedium;
   padding: 6px;
   vertical-align: middle;
+}
+
+/* line 11, ../../_dev/scss/header/nav/menus.scss */
+section.menu > div {
+  position: absolute;
+  display: none;
+  top: 68px;
 }
 
 /* line 3, ../../_dev/scss/header/header.scss */

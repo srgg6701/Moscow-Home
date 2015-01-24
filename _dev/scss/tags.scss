@@ -16,14 +16,6 @@ a{
     height: 37px;
     width: 35px;
   }
-  menu li >&{
-    position: relative;
-    &:hover{
-      menu li > div{
-        display: block;
-      }
-    }
-  }
   #slides aside &{
     &.btn{
       $w:128px;
@@ -54,7 +46,6 @@ aside{
     @include border-radius(50%);
     height: $space;
     width: $space;
-    //margin-top: 173px;
     @include opacity(0.5);
     $url:$images_dir + "pointer.png";
     $offset:18px;
@@ -80,9 +71,8 @@ aside{
   }
 }
 div{
-  menu.parent_menu li >&{
-    display: none;
-    position:absolute;
+  menu.parent_menu li:hover &{
+    display: block;
   }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
