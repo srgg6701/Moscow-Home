@@ -10,11 +10,12 @@ html(lang="en")
           header
               nav
                   div
-                      menu#top-menu
+                      menu#top-menu.parent_menu
                           -var menuItems=["О компании", "Услуги", "Галерея", "Контакты"]
                           each item in menuItems
                               li
                                   a(href="#")=item
+                                  div="Content"
                   div
                       a#logo(href="index.html")
                   div

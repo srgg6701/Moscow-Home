@@ -61,7 +61,15 @@ menu.social a {
   height: 37px;
   width: 35px;
 }
-/* line 20, ../../_dev/scss/tags.scss */
+/* line 19, ../../_dev/scss/tags.scss */
+menu li > a {
+  position: relative;
+}
+/* line 22, ../../_dev/scss/tags.scss */
+menu li > a:hover menu li > div {
+  display: block;
+}
+/* line 28, ../../_dev/scss/tags.scss */
 #slides aside a.btn {
   display: block;
   position: relative;
@@ -71,7 +79,7 @@ menu.social a {
   text-align: center;
   width: 128px;
 }
-/* line 29, ../../_dev/scss/tags.scss */
+/* line 37, ../../_dev/scss/tags.scss */
 #you-need menu a {
   color: #a64726;
   display: block;
@@ -82,7 +90,7 @@ menu.social a {
   white-space: normal;
 }
 
-/* line 40, ../../_dev/scss/tags.scss */
+/* line 48, ../../_dev/scss/tags.scss */
 #pointers-aside > aside {
   background-color: black;
   background-position: center;
@@ -98,13 +106,13 @@ menu.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 53, ../../_dev/scss/tags.scss */
+/* line 61, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 18px;
 }
-/* line 58, ../../_dev/scss/tags.scss */
+/* line 66, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -115,7 +123,7 @@ menu.social a {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-/* line 65, ../../_dev/scss/tags.scss */
+/* line 73, ../../_dev/scss/tags.scss */
 #slides aside {
   background: url("../images_temp/backgrounds/tile-microsquare.png");
   height: 135px;
@@ -125,7 +133,12 @@ menu.social a {
   width: 153px;
 }
 
-/* line 75, ../../_dev/scss/tags.scss */
+/* line 83, ../../_dev/scss/tags.scss */
+menu li > div {
+  display: none;
+  position: absolute;
+}
+/* line 87, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -140,7 +153,7 @@ menu.social a {
   position: relative;
   width: 948px;
 }
-/* line 85, ../../_dev/scss/tags.scss */
+/* line 97, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -149,7 +162,7 @@ menu.social a {
   width: 100%;
   margin: auto;
 }
-/* line 94, ../../_dev/scss/tags.scss */
+/* line 106, ../../_dev/scss/tags.scss */
 #slider menu.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -166,45 +179,45 @@ menu.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 101, ../../_dev/scss/tags.scss */
+/* line 113, ../../_dev/scss/tags.scss */
 #you-need menu li > div {
   height: 100%;
 }
-/* line 104, ../../_dev/scss/tags.scss */
+/* line 116, ../../_dev/scss/tags.scss */
 #you-need menu li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 108, ../../_dev/scss/tags.scss */
+/* line 120, ../../_dev/scss/tags.scss */
 footer {
   margin-top: 12px !important;
   overflow: hidden;
   position: relative;
 }
 
-/* line 113, ../../_dev/scss/tags.scss */
+/* line 125, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 117, ../../_dev/scss/tags.scss */
+/* line 129, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 122, ../../_dev/scss/tags.scss */
+/* line 134, ../../_dev/scss/tags.scss */
 menu li {
   display: table-cell;
   white-space: nowrap;
 }
-/* line 126, ../../_dev/scss/tags.scss */
+/* line 138, ../../_dev/scss/tags.scss */
 menu.social li {
   display: block;
   padding: 4px;
 }
-/* line 130, ../../_dev/scss/tags.scss */
+/* line 142, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   font-family: PlumbMedium;
@@ -215,42 +228,42 @@ menu.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 140, ../../_dev/scss/tags.scss */
+/* line 152, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 149, ../../_dev/scss/tags.scss */
+/* line 161, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 153, ../../_dev/scss/tags.scss */
+/* line 165, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 157, ../../_dev/scss/tags.scss */
+/* line 169, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 161, ../../_dev/scss/tags.scss */
+/* line 173, ../../_dev/scss/tags.scss */
 #you-need menu > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 168, ../../_dev/scss/tags.scss */
+/* line 180, ../../_dev/scss/tags.scss */
 menu {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 172, ../../_dev/scss/tags.scss */
+/* line 184, ../../_dev/scss/tags.scss */
 menu.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -261,33 +274,33 @@ menu.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 178, ../../_dev/scss/tags.scss */
+/* line 190, ../../_dev/scss/tags.scss */
 #you-need menu {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 185, ../../_dev/scss/tags.scss */
+/* line 197, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 191, ../../_dev/scss/tags.scss */
+/* line 203, ../../_dev/scss/tags.scss */
 #showcase ul {
   padding: 0;
   position: absolute;
 }
-/* line 194, ../../_dev/scss/tags.scss */
+/* line 206, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 198, ../../_dev/scss/tags.scss */
+/* line 210, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 202, ../../_dev/scss/tags.scss */
+/* line 214, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
