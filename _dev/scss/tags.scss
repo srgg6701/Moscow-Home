@@ -11,6 +11,11 @@ a{
     text-decoration: none;
     text-transform: uppercase;
   }
+  menu.social &{
+    display: block;
+    height: 37px;
+    width: 35px;
+  }
   #slides aside &{
     &.btn{
       $w:128px;
@@ -86,6 +91,13 @@ div{
       margin: auto;
     }
   }
+  #slider menu.social +&{
+    background-color: white;
+    @include border-top-right-radius(11px);
+    @include border-bottom-right-radius(11px);
+    @include menu-social-right();
+    @include opacity(.65);
+  }
   #you-need menu li >&{
     height: 100%;
   }
@@ -110,6 +122,10 @@ li{
   menu &{
     display: table-cell;
     white-space: nowrap;
+  }
+  menu.social &{
+    display: block;
+    padding:4px;
   }
   #showcase &{
     color: white;
@@ -153,14 +169,15 @@ menu{
   display: inline-block;
   margin: 0;
   padding: 0;
+  &.social{
+    background: url($images_dir + "social-left-vertical.png") no-repeat;
+    @include menu-social-right(43px, 8px);
+    margin-top: 9px;
+    z-index: 1;
+  }
   #you-need &{
-
-    //background: #7CFC00;
-
     display: table;
     margin: -12px auto 9px auto;
-    //margin-top: -8px;
-    //margin-bottom: 4px;
   }
 }
 p{

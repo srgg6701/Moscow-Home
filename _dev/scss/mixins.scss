@@ -9,6 +9,13 @@
   top: 50%;
   transform: translateY(-50%);
 }
+@mixin menu-social-right($width:60px, $left:0){
+  height: 162px;
+  left:$left;
+  position: absolute;
+  top:12%;
+  width: $width;
+}
 @mixin nav-footer{
   height: 100%;
   &:nth-child(1){
