@@ -71,9 +71,6 @@ aside{
   }
 }
 div{
-  menu.parent_menu li:hover &{
-    display: block;
-  }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);

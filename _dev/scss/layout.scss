@@ -1,13 +1,14 @@
+$headerHeight: 68px;
+$level1Height: 423px;
+$footerHeight: 47px;
+$bottom-footer:14px;
+
 body, html{
   height: 100%;
   margin: 0;
   padding: 0;
 }
 //---------------------------------------------
-$headerHeight: 68px;
-$level1Height: 423px;
-$footerHeight: 47px;
-
 #page{
   //height: 980px;
   //max-height: 100%;
@@ -31,7 +32,7 @@ $footerHeight: 47px;
     }
   //--------------------------------
   main{
-    bottom: $footerHeight;
+    bottom: $footerHeight + $bottom-footer;
     top: $headerHeight;
   }
 
@@ -43,8 +44,8 @@ $footerHeight: 47px;
     }
 
 footer{
-    bottom: 0;
-    height: $footerHeight - 10px;
+    bottom: $bottom-footer;
+    //height: $footerHeight - 10px;
   }
 //---------------------------------------------
 // заполнить по ширине

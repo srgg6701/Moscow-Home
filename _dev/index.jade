@@ -10,12 +10,6 @@ html(lang="en")
           header
               nav
                   -var menuItems={'about':"О компании", 'services':"Услуги", 'gallery':"Галерея", 'contacts':"Контакты"}
-                  section.menu
-                      each item,key in menuItems
-                          div='"'+key+'"'
-                      //-div='"'++'"'
-                      //-div='"'++'"'
-                      //-div='"'++'"'
                   div
                       menu#top-menu.parent_menu
                           each item in menuItems
@@ -28,6 +22,9 @@ html(lang="en")
                       aside#phone-number=phone_number
                       aside#consulting
                           a.btn(href="#")="Консультация"
+              section.menu
+                  each item,key in menuItems
+                      div=key
           main
               #slider.fit
                   menu.social

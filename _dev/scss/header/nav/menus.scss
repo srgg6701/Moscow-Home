@@ -9,13 +9,17 @@ a{
 }
 div{
   section.menu >&{
-    position: absolute;
     display: none;
-    top:$nav-height;
   }
 }
 section{
   &.menu{
-
+    background-color: #F5F5F5;
+    left: 0;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top:$nav-height;
+    z-index: 1;
   }
 }
