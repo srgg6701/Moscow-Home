@@ -120,7 +120,7 @@ img{
 li{
   ul &{
     display: table-cell;
-    white-space: nowrap;
+    //white-space: nowrap;
   }
   ul.social &{
     display: block;
@@ -128,6 +128,7 @@ li{
   }
   #showcase &{
     color: white;
+    display: list-item;
     font-family: PlumbMedium;
     font-size: 13px;
     line-height: 18px;
@@ -188,6 +189,8 @@ p{
 }
 ul{
   #showcase &{
+    // вернуть на место отступ сверху и сниху по умолчанию
+    margin: 1em auto;
     padding: 0;
     position: absolute;
     &:nth-child(1){
