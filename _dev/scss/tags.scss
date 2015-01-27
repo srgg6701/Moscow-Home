@@ -11,7 +11,7 @@ a{
     text-decoration: none;
     text-transform: uppercase;
   }
-  menu.social &{
+  ul.social &{
     display: block;
     height: 37px;
     width: 35px;
@@ -26,7 +26,7 @@ a{
       width: $w;
     }
   }
-  #you-need menu &{
+  #you-need ul &{
     color: $color-brown;
     display: block;
     font-family: Arial, Helvetica, Sans Serif;
@@ -90,17 +90,17 @@ div{
       margin: auto;
     }
   }
-  #slider menu.social +&{
+  #slider ul.social +&{
     background-color: white;
     @include border-top-right-radius(11px);
     @include border-bottom-right-radius(11px);
     @include menu-social-right();
     @include opacity(.65);
   }
-  #you-need menu li >&{
+  #you-need ul li >&{
     height: 100%;
   }
-  #you-need menu li >div >&{
+  #you-need ul li >div >&{
     @include centered-vertical;
   }
 }
@@ -118,11 +118,11 @@ img{
   }
 }
 li{
-  menu &{
+  ul &{
     display: table-cell;
     white-space: nowrap;
   }
-  menu.social &{
+  ul.social &{
     display: block;
     padding:4px;
   }
@@ -144,7 +144,7 @@ li{
   }
   $bg-pos-edges: 0 9px;
   $pad-left: 13px;
-  #you-need menu >&{
+  #you-need ul >&{
     &:nth-child(1){
       background: url($images_dir + 'need-design.png') no-repeat;
       background-position: $bg-pos-edges;
@@ -164,7 +164,7 @@ li{
     }
   }
 }
-menu{
+ul{
   display: inline-block;
   margin: 0;
   padding: 0;

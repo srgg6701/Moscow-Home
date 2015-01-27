@@ -21,7 +21,7 @@ div{
     @include nav-footer;
   }
 }
-menu{
+ul{
   nav &{
     @include centered-vertical;
     margin-left: -7px;

@@ -1,5 +1,5 @@
 a{
-  header menu li &{
+  header ul li &{
     display: block;
     color: $color-dark-common;
     font-family: PlumbMedium;
@@ -15,6 +15,7 @@ div{
 section{
   &.menu{
     background-color: #F5F5F5;
+    display: none;
     left: 0;
     padding: 20px;
     position: absolute;

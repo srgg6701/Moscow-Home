@@ -56,7 +56,7 @@ a.btn {
   text-transform: uppercase;
 }
 /* line 14, ../../_dev/scss/tags.scss */
-menu.social a {
+ul.social a {
   display: block;
   height: 37px;
   width: 35px;
@@ -72,7 +72,7 @@ menu.social a {
   width: 128px;
 }
 /* line 29, ../../_dev/scss/tags.scss */
-#you-need menu a {
+#you-need ul a {
   color: #a64726;
   display: block;
   font-family: Arial, Helvetica, Sans Serif;
@@ -150,7 +150,7 @@ menu.social a {
   margin: auto;
 }
 /* line 93, ../../_dev/scss/tags.scss */
-#slider menu.social + div {
+#slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
   -webkit-border-top-right-radius: 11px;
@@ -167,11 +167,11 @@ menu.social a {
   opacity: 0.65;
 }
 /* line 100, ../../_dev/scss/tags.scss */
-#you-need menu li > div {
+#you-need ul li > div {
   height: 100%;
 }
 /* line 103, ../../_dev/scss/tags.scss */
-#you-need menu li > div > div {
+#you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -195,12 +195,12 @@ header {
 }
 
 /* line 121, ../../_dev/scss/tags.scss */
-menu li {
+ul li {
   display: table-cell;
   white-space: nowrap;
 }
 /* line 125, ../../_dev/scss/tags.scss */
-menu.social li {
+ul.social li {
   display: block;
   padding: 4px;
 }
@@ -223,35 +223,35 @@ menu.social li {
   text-align: left;
 }
 /* line 148, ../../_dev/scss/tags.scss */
-#you-need menu > li:nth-child(1) {
+#you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
 /* line 152, ../../_dev/scss/tags.scss */
-#you-need menu > li:nth-child(2) {
+#you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
 /* line 156, ../../_dev/scss/tags.scss */
-#you-need menu > li:nth-child(3) {
+#you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
 /* line 160, ../../_dev/scss/tags.scss */
-#you-need menu > li:nth-child(4) {
+#you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
 /* line 167, ../../_dev/scss/tags.scss */
-menu {
+ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
 /* line 171, ../../_dev/scss/tags.scss */
-menu.social {
+ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
   left: 8px;
@@ -262,7 +262,7 @@ menu.social {
   z-index: 1;
 }
 /* line 177, ../../_dev/scss/tags.scss */
-#you-need menu {
+#you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
@@ -379,7 +379,7 @@ footer >section{
   width: $max-with-content;
 }*/
 /* line 2, ../../_dev/scss/header/nav/menus.scss */
-header menu li a {
+header ul li a {
   display: block;
   color: #5d534e;
   font-family: PlumbMedium;
@@ -395,6 +395,7 @@ section.menu > div {
 /* line 16, ../../_dev/scss/header/nav/menus.scss */
 section.menu {
   background-color: #F5F5F5;
+  display: none;
   left: 0;
   padding: 20px;
   position: absolute;
@@ -444,7 +445,7 @@ nav > div:nth-child(3) {
 }
 
 /* line 25, ../../_dev/scss/header/nav/nav.scss */
-nav menu {
+nav ul {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -479,7 +480,7 @@ nav menu {
 }
 
 /* line 2, ../../_dev/scss/header/nav/menus.scss */
-header menu li a {
+header ul li a {
   display: block;
   color: #5d534e;
   font-family: PlumbMedium;
@@ -495,6 +496,7 @@ section.menu > div {
 /* line 16, ../../_dev/scss/header/nav/menus.scss */
 section.menu {
   background-color: #F5F5F5;
+  display: none;
   left: 0;
   padding: 20px;
   position: absolute;
