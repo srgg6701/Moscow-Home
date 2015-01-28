@@ -1,18 +1,14 @@
 $(function(){
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
-        menus_container=getMenusContainer(),       // контейнер с блоками меню
-        block_index;                                // индекс активной псевдоссылки/target-блока
+        menus_container=getMenusContainer();       // контейнер с блоками меню
     $(menus_container).on('mouseenter mouseleave', function(event){
-        //console.log('%cthis is '+event.currentTarget.tagName,'color: green');
         setVisibilityState(event);
     });
     $(dd_menus).on('mouseenter mouseleave', function(event){
-        //console.log('%cthis is '+event.currentTarget.tagName,'color: navy');
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
             menu_to_show_index=$(dd_menus).index(this);
-            console.log('%cmenu_to_show_index: '+menu_to_show_index,'color: purple');
         }
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
@@ -27,7 +23,6 @@ function setVisibilityState(event,menu_to_show_index){
         visibility_container,   // Состояние видимсти "контейнера меню"
         menu_index;             // Индекс таргет-меню
     setVisibilityState=function (event,menu_to_show_index) {
-        //console.log('menu_to_show_index = '+parseInt(menu_to_show_index));
         if(!isNaN(parseInt(menu_to_show_index)))
             menu_index=menu_to_show_index;
         var target_obj=event.currentTarget.tagName.toLowerCase(),
@@ -46,11 +41,11 @@ function setVisibilityState(event,menu_to_show_index){
         }
         var visibility_stat=(active_link || visibility_container);
 
-        console.group('%cvisibility_stat: '+visibility_stat,'font-weight:bold');
+        /*console.group('%cvisibility_stat: '+visibility_stat,'font-weight:bold');
             console.log('%cactive_link: '+active_link,'color: darkgoldenrod');
             console.log('%cvisibility_container: '+visibility_container,'color: orange');
             console.log('%cmenu_index: '+menu_index,'color: red');
-        console.groupEnd();
+        console.groupEnd();*/
 
         $(getInnerMenus()).hide();
         if(visibility_stat){

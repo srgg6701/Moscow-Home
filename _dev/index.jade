@@ -19,7 +19,7 @@ html(lang="en")
                         ul#top-menu.parent_menu
                             each data,data_section in menuItems
                                 li
-                                    a(href=data[0],data-section=data_section)=data[1]
+                                    a(href=data[0], id='link_'+data_section)=data[1]
                     div
                         a#logo(href="index.html")
                     div
