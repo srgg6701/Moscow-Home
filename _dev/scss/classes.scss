@@ -1,6 +1,9 @@
 .centered-vertical{
   @include centered-vertical;
 }
+.float-left{
+  float: left;
+}
 .header-slim-big{
   color: $color-dark-common;
   font-family: PlumbLight;

@@ -75,10 +75,9 @@ div{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);
     height: 100%;
-    margin: auto;
     @include opacity(0.9);
     position: relative;
-    width: $max-with-content;
+    @include centred-margins;
   }
   #slider &{
     &.img-box{

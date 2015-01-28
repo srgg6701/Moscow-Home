@@ -4,6 +4,10 @@
   top: 50%;
   transform: translate(-50%);
 }
+@mixin centred-margins{
+  margin: auto;
+  width: $max-with-content;
+}
 @mixin centered-vertical{
   position: relative;
   top: 50%;

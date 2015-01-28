@@ -27,8 +27,7 @@ body, html{
     top: 0;
   }
     nav{
-      margin: auto;
-      width: $max-with-content;
+      @include centred-margins;
     }
   //--------------------------------
   main{

@@ -45,8 +45,7 @@
   width: 100%;
 }
 #pointers-aside{
-  margin: auto;
-  width: $max-with-content;
+  @include centred-margins;
 }
 #showcase{
   bottom: 17px;
@@ -74,8 +73,7 @@
   padding: 20px 0;
 }
 #you-need {
-  margin: auto;
+  @include centred-margins;
   margin-top: -4px;
-  max-width: $max-with-content;
   text-align: center;
 }

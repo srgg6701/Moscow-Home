@@ -1,0 +1,61 @@
+$section1-padding-left:264px;
+aside{ // вертикальное "внутреннее меню" в первом выпадающем меню
+  header >section >section:nth-child(1) >div >&{
+    margin-left: -($section1-padding-left);
+    width: 236px;
+  }
+}
+
+div{
+  // выпадающее меню 1
+  header >section >section:nth-child(1) >&{ // О компании
+    padding-left: $section1-padding-left;
+  }
+    // "пункты меню"
+    header >section >section:nth-child(1) >div >aside >&{
+      color: #933;
+      cursor: pointer;
+      font-family: PlumbMedium;
+      font-size: 1.1rem;
+      padding: 15px 18px 12px 19px;
+    }
+
+  header >section >section:nth-child(2) >&{ // Услуги
+
+  }
+  header >section >section:nth-child(3) >&{ // Контакты
+
+  }
+  header >section >section:nth-child(4) >&{ // Консультация
+
+  }
+}
+section{
+  header >&{
+    background-color: #F5F5F5;
+    display: none;
+    left: 0;
+    padding-top: 26px;
+    position: absolute;
+    top:46px;
+    right: 0;
+    z-index: 1;
+  }
+  header >section >&{
+    @include centred-margins;
+    margin-top: -14px;
+    padding: 0 24px;
+    /*&:nth-child(1){ // О компании
+
+    }
+    &:nth-child(2){ // Услуги
+
+    }
+    &:nth-child(3){ // Контакты
+
+    }
+    &:nth-child(4){ // Консультация
+
+    }*/
+  }
+}
