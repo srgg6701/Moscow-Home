@@ -198,12 +198,12 @@ header {
 ul li {
   display: table-cell;
 }
-/* line 125, ../../_dev/scss/tags.scss */
+/* line 124, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 129, ../../_dev/scss/tags.scss */
+/* line 128, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -215,42 +215,42 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 140, ../../_dev/scss/tags.scss */
+/* line 139, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 149, ../../_dev/scss/tags.scss */
+/* line 148, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 153, ../../_dev/scss/tags.scss */
+/* line 152, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 157, ../../_dev/scss/tags.scss */
+/* line 156, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 161, ../../_dev/scss/tags.scss */
+/* line 160, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 168, ../../_dev/scss/tags.scss */
+/* line 167, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 172, ../../_dev/scss/tags.scss */
+/* line 171, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -261,34 +261,34 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 178, ../../_dev/scss/tags.scss */
+/* line 177, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 185, ../../_dev/scss/tags.scss */
+/* line 184, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 191, ../../_dev/scss/tags.scss */
+/* line 190, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 196, ../../_dev/scss/tags.scss */
+/* line 195, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 200, ../../_dev/scss/tags.scss */
+/* line 199, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 204, ../../_dev/scss/tags.scss */
+/* line 203, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -379,7 +379,7 @@ footer >section{
   max-width: 1400px;
   width: $max-with-content;
 }*/
-/* line 2, ../../_dev/scss/header/nav/menus.scss */
+/* line 3, ../../_dev/scss/header/nav/menus.scss */
 header ul li a {
   display: block;
   color: #5d534e;
@@ -388,21 +388,20 @@ header ul li a {
   vertical-align: middle;
 }
 
-/* line 11, ../../_dev/scss/header/nav/menus.scss */
-section.menu > div {
-  display: none;
-}
-
-/* line 16, ../../_dev/scss/header/nav/menus.scss */
-section.menu {
+/* line 14, ../../_dev/scss/header/nav/menus.scss */
+header > section {
   background-color: #F5F5F5;
   display: none;
   left: 0;
   padding: 20px;
+  padding-top: 42px;
   position: absolute;
   right: 0;
-  top: 68px;
+  top: 46px;
   z-index: 1;
+  /*&:hover{
+    display: block;
+  }*/
 }
 
 /* line 3, ../../_dev/scss/header/nav/nav.scss */
@@ -480,7 +479,7 @@ nav ul {
   text-transform: uppercase;
 }
 
-/* line 2, ../../_dev/scss/header/nav/menus.scss */
+/* line 3, ../../_dev/scss/header/nav/menus.scss */
 header ul li a {
   display: block;
   color: #5d534e;
@@ -489,21 +488,20 @@ header ul li a {
   vertical-align: middle;
 }
 
-/* line 11, ../../_dev/scss/header/nav/menus.scss */
-section.menu > div {
-  display: none;
-}
-
-/* line 16, ../../_dev/scss/header/nav/menus.scss */
-section.menu {
+/* line 14, ../../_dev/scss/header/nav/menus.scss */
+header > section {
   background-color: #F5F5F5;
   display: none;
   left: 0;
   padding: 20px;
+  padding-top: 42px;
   position: absolute;
   right: 0;
-  top: 68px;
+  top: 46px;
   z-index: 1;
+  /*&:hover{
+    display: block;
+  }*/
 }
 
 /* line 3, ../../_dev/scss/header/header.scss */

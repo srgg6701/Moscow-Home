@@ -5,16 +5,21 @@ html(lang="en")
         title= pageTitle
         link(href="static/css/default.css",rel="stylesheet")
         script(src="static/js/min/jquery.min.js")
+        script(src="static/js/common.js")
     body.no-scroll
         #page
+            // ВНИМАНИЕ!
+            // Выбор и последовательность размещения/вложения элементов
+            // header > section > section и nav a
+            // должна быть соблюдена для правильной работы обработчика выпадающего меню!
             header
                 nav
-                    -var menuItems={'about':"О компании", 'services':"Услуги", 'gallery':"Галерея", 'contacts':"Контакты"}
+                    -var menuItems={'about':["#","О компании"], 'services':["#","Услуги"], 'gallery':["gallery.html","Галерея"], 'contacts':["#","Контакты"]}
                     div
                         ul#top-menu.parent_menu
-                            each text,item in menuItems
+                            each data,data_section in menuItems
                                 li
-                                    a(href="#",data-section=item)=text
+                                    a(href=data[0],data-section=data_section)=data[1]
                     div
                         a#logo(href="index.html")
                     div
@@ -22,9 +27,7 @@ html(lang="en")
                         aside#phone-number=phone_number
                         aside#consulting
                             a.btn(href="#",data-section="ask")="Консультация"
-                section#drop-down-menu-main.menu
-                    each item,key in menuItems
-                        div=key
+                section.menu
                     section
                         include  jade/drop-down-menu/about
                     section

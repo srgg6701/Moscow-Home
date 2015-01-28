@@ -1,3 +1,4 @@
+$menus-container-offset:22px; // припуск "накладывания" контейнера с меню на псевдоссылок для сохранения его видимости по событию mouseleave
 a{
   header ul li &{
     display: block;
@@ -8,19 +9,21 @@ a{
   }
 }
 div{
-  section.menu >&{
-    display: none;
-  }
 }
 section{
-  &.menu{
+  header >&{
     background-color: #F5F5F5;
     display: none;
     left: 0;
-    padding: 20px;
+    $padding: 20px;
+    padding: $padding;
+    padding-top: $padding + $menus-container-offset;
     position: absolute;
     right: 0;
-    top:$nav-height;
+    top:$nav-height - $menus-container-offset;
     z-index: 1;
+    /*&:hover{
+      display: block;
+    }*/
   }
 }

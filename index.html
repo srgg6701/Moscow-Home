@@ -4,16 +4,21 @@
     <title>Home Moscow</title>
     <link href="static/css/default.css" rel="stylesheet">
     <script src="static/js/min/jquery.min.js"></script>
+    <script src="static/js/common.js"></script>
   </head>
   <body class="no-scroll">
     <div id="page">
+      <!-- ВНИМАНИЕ!-->
+      <!-- Выбор и последовательность размещения/вложения элементов-->
+      <!-- header > section > section и nav a-->
+      <!-- должна быть соблюдена для правильной работы обработчика выпадающего меню!-->
       <header>
         <nav>
           <div>
             <ul id="top-menu" class="parent_menu">
               <li><a href="#" data-section="about">О компании</a></li>
               <li><a href="#" data-section="services">Услуги</a></li>
-              <li><a href="#" data-section="gallery">Галерея</a></li>
+              <li><a href="gallery.html" data-section="gallery">Галерея</a></li>
               <li><a href="#" data-section="contacts">Контакты</a></li>
             </ul>
           </div>
@@ -23,11 +28,7 @@
             <aside id="consulting"><a href="#" data-section="ask" class="btn">Консультация</a></aside>
           </div>
         </nav>
-        <section id="drop-down-menu-main" class="menu">
-          <div>about</div>
-          <div>services</div>
-          <div>gallery</div>
-          <div>contacts</div>
+        <section class="menu">
           <section>
             <div id="menu-about">
               <div>Почему мы?</div>
