@@ -9,6 +9,7 @@ $(function () {
         window.onresize = function () {
             document.title = window.outerWidth;
         };
+        $('[id^="diigo"]').remove();
         if(location.href.indexOf('?') != -1){
             var tail = location.href.lastIndexOf('/') + 1,
                 urlBase = location.href.substring(0, tail),
