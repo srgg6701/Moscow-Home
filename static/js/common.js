@@ -1,10 +1,10 @@
 $(function(){
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         menus_container=getMenusContainer();       // контейнер с блоками меню
-    $(menus_container).on('mouseenter mouseleave', function(event){
+    $(menus_container).on('mouseenter',/* mouseleave*/ function(event){
         setVisibilityState(event);
     });
-    $(dd_menus).on('mouseenter mouseleave', function(event){
+    $(dd_menus).on('mouseenter'/* mouseleave*/, function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){

@@ -29,7 +29,7 @@ a{
   #you-need ul &{
     color: $color-brown;
     display: block;
-    font-family: Arial, Helvetica, Sans Serif;
+    font-family: $font-second;
     font-size: 14px;
     margin-right: 15px;
     padding-left: 66px;
@@ -179,6 +179,8 @@ ul{
   }
 }
 p{
+  font-family: $font-second;
+  font-size: 14px;
   #you-need & {
     &.header-slim-big{
       margin-bottom: 32px;

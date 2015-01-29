@@ -1,25 +1,29 @@
 $section1-padding-left:264px;
 aside{ // вертикальное "внутреннее меню" в первом выпадающем меню
+  header >section >section >div >&{
+    margin-top: 3px;
+  }
   header >section >section:nth-child(1) >div >&{
     margin-left: -($section1-padding-left);
     width: 236px;
   }
 }
-
 div{
+  header >section >section > div >aside >&{
+    color: #933;
+    cursor: pointer;
+    font-family: PlumbMedium;
+    font-size: 1.1rem;
+    padding: 14px 18px 13px 18px;
+    text-decoration: underline;
+  }
   // выпадающее меню 1
   header >section >section:nth-child(1) >&{ // О компании
     padding-left: $section1-padding-left;
   }
     // "пункты меню"
-    header >section >section:nth-child(1) >div >aside >&{
-      color: #933;
-      cursor: pointer;
-      font-family: PlumbMedium;
-      font-size: 1.1rem;
-      padding: 15px 18px 12px 19px;
-    }
-
+    /*header >section >section:nth-child(1) >div >aside >&{
+    }*/
   header >section >section:nth-child(2) >&{ // Услуги
 
   }
@@ -30,20 +34,31 @@ div{
 
   }
 }
+h3{
+  header >section >section >div >&{
+    color: $color-brown;
+    font-family: PlumbMedium;
+  }
+}
+p{
+  header >section >section >div >&{
+    width: 450px;
+  }
+}
 section{
   header >&{
     background-color: #F5F5F5;
     display: none;
     left: 0;
-    padding-top: 26px;
+    padding-top: 5px;
     position: absolute;
-    top:46px;
+    top:40px;
     right: 0;
     z-index: 1;
   }
   header >section >&{
     @include centred-margins;
-    margin-top: -14px;
+    margin-top: 46px;
     padding: 0 24px;
     /*&:nth-child(1){ // О компании
 
