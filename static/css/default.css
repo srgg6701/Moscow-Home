@@ -74,7 +74,7 @@ ul.social a {
 }
 /* line 29, ../../_dev/scss/tags.scss */
 #you-need ul a {
-  color: #a64726;
+  color: #bf451e;
   display: block;
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
@@ -126,7 +126,12 @@ ul.social a {
   width: 153px;
 }
 
-/* line 74, ../../_dev/scss/tags.scss */
+/* line 73, ../../_dev/scss/tags.scss */
+body {
+  color: #5d534e;
+}
+
+/* line 77, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -141,7 +146,7 @@ ul.social a {
   margin: auto;
   width: 948px;
 }
-/* line 83, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -150,7 +155,7 @@ ul.social a {
   width: 100%;
   margin: auto;
 }
-/* line 92, ../../_dev/scss/tags.scss */
+/* line 95, ../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -167,44 +172,44 @@ ul.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 99, ../../_dev/scss/tags.scss */
+/* line 102, ../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 102, ../../_dev/scss/tags.scss */
+/* line 105, ../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 106, ../../_dev/scss/tags.scss */
+/* line 109, ../../_dev/scss/tags.scss */
 footer {
   margin-top: 12px !important;
   overflow: hidden;
   position: relative;
 }
 
-/* line 111, ../../_dev/scss/tags.scss */
+/* line 114, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 115, ../../_dev/scss/tags.scss */
+/* line 118, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 120, ../../_dev/scss/tags.scss */
+/* line 123, ../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 123, ../../_dev/scss/tags.scss */
+/* line 126, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 127, ../../_dev/scss/tags.scss */
+/* line 130, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -216,42 +221,42 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 138, ../../_dev/scss/tags.scss */
+/* line 141, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 147, ../../_dev/scss/tags.scss */
+/* line 150, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 151, ../../_dev/scss/tags.scss */
+/* line 154, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 155, ../../_dev/scss/tags.scss */
+/* line 158, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 159, ../../_dev/scss/tags.scss */
+/* line 162, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 166, ../../_dev/scss/tags.scss */
+/* line 169, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 170, ../../_dev/scss/tags.scss */
+/* line 173, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -262,65 +267,79 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 176, ../../_dev/scss/tags.scss */
+/* line 179, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 181, ../../_dev/scss/tags.scss */
+/* line 184, ../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
 }
-/* line 185, ../../_dev/scss/tags.scss */
+/* line 188, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 191, ../../_dev/scss/tags.scss */
+/* line 194, ../../_dev/scss/tags.scss */
+.container section {
+  display: none;
+}
+/* line 196, ../../_dev/scss/tags.scss */
+.container section.visible {
+  display: block;
+}
+
+/* line 202, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 196, ../../_dev/scss/tags.scss */
+/* line 207, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 200, ../../_dev/scss/tags.scss */
+/* line 211, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 204, ../../_dev/scss/tags.scss */
+/* line 215, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
 }
 
-/* line 1, ../../_dev/scss/classes.scss */
+/* line 4, ../../_dev/scss/classes.scss */
 .centered-vertical {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 4, ../../_dev/scss/classes.scss */
+/* line 7, ../../_dev/scss/classes.scss */
+.email::after {
+  color: #a64726;
+  content: " doma@domalux.ru";
+}
+
+/* line 11, ../../_dev/scss/classes.scss */
 .float-left {
   float: left;
 }
 
-/* line 7, ../../_dev/scss/classes.scss */
+/* line 14, ../../_dev/scss/classes.scss */
 .header-slim-big {
-  color: #5d534e;
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
 }
 
-/* line 13, ../../_dev/scss/classes.scss */
+/* line 20, ../../_dev/scss/classes.scss */
 .no-scroll {
   overflow: hidden;
 }
@@ -391,48 +410,187 @@ footer >section{
   width: $max-with-content;
 }*/
 /* line 3, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li a {
+  color: #a64726;
+}
+
+/* line 8, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div > aside {
   margin-top: 3px;
 }
-/* line 6, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 11, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(1) > div > aside {
   margin-left: -264px;
   width: 236px;
 }
 
-/* line 11, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 16, ../../_dev/scss/header/section/drop-down-menus.scss */
 div {
   /*header >section >section:nth-child(1) >div >aside >&{
   }*/
 }
-/* line 12, ../../_dev/scss/header/section/drop-down-menus.scss */
-header > section > section > div > aside > div {
+/* line 17, ../../_dev/scss/header/section/drop-down-menus.scss */
+header aside > div {
   color: #933;
   cursor: pointer;
   font-family: PlumbMedium;
   font-size: 1.1rem;
-  padding: 15px 18px 13px 18px;
+  padding: 14px 18px 13px 18px;
   text-decoration: underline;
 }
-/* line 21, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 25, ../../_dev/scss/header/section/drop-down-menus.scss */
+header aside > div:hover, header aside > div.bgActiveCarrot {
+  background-color: #bf451e;
+  color: white;
+}
+/* line 31, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section > div {
+  margin: auto;
+  width: 948px;
+  overflow: auto;
+}
+/* line 34, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section > div:not(.centered) {
+  width: 899px;
+}
+/* line 38, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(1) > div {
   padding-left: 264px;
 }
+/* line 47, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(3) > div > div {
+  margin-bottom: 31px;
+  margin-top: 21px;
+}
+/* line 51, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(4) > div {
+  width: 370px;
+}
+/* line 53, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(4) > div.bottom-bg {
+  background: url("../images_temp/backgrounds/tile-contacts-dark.png");
+  height: 70px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
 
-/* line 38, ../../_dev/scss/header/section/drop-down-menus.scss */
-header > section > section > div > h3 {
-  color: #a64726;
+/* line 63, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form {
+  margin: 20px 6px;
+}
+
+/* line 68, ../../_dev/scss/header/section/drop-down-menus.scss */
+header div.container h3 {
+  color: #bf451e;
   font-family: PlumbMedium;
 }
 
-/* line 44, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 74, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section h4 {
+  font-family: PlumbLight;
+  font-size: 36px;
+  margin-bottom: 13px;
+  margin-top: -2px;
+  text-transform: uppercase;
+}
+/* line 81, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(4) h4 {
+  color: white;
+  text-align: center;
+}
+
+/* line 87, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section input {
+  color: #5d534e;
+}
+/* line 91, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section input[type="tel"], header > section input[type="email"], header > section input[type="text"] {
+  display: block;
+  height: 36px;
+  margin-top: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  border: solid 1px #CCC;
+}
+/* line 98, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section input[type=""] {
+  border-radius: 20px;
+  display: block;
+  float: left;
+  height: 39px;
+  left: 50%;
+  margin: 27px auto auto;
+  position: relative;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  width: 150px;
+}
+
+/* line 113, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li {
+  padding-left: 50px;
+}
+/* line 117, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li:nth-child(1) {
+  background: url("../images_temp/service-design.png") no-repeat 0 7px;
+}
+/* line 117, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li:nth-child(2) {
+  background: url("../images_temp/service-building.png") no-repeat 0 7px;
+}
+/* line 117, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li:nth-child(3) {
+  background: url("../images_temp/service-facade.png") no-repeat 0 7px;
+}
+/* line 117, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) li:nth-child(4) {
+  background: url("../images_temp/service-engineering.png") no-repeat 0 7px;
+}
+
+/* line 125, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form p {
+  color: white;
+  text-transform: uppercase;
+}
+/* line 129, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form p:nth-child(2), header > section form p:nth-child(3) {
+  float: left;
+  margin-top: 14px;
+  width: 50%;
+}
+/* line 134, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form p:nth-child(2) {
+  padding-right: 11px;
+}
+/* line 137, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form p:nth-child(3) {
+  padding-right: 12px;
+}
+/* line 140, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section form p:nth-child(4) {
+  float: left;
+  margin-top: 12px;
+  width: 100%;
+}
+/* line 146, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div > p {
   width: 450px;
 }
+/* line 149, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(3) p {
+  font-size: 14px;
+  line-height: 13px;
+}
 
-/* line 49, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 155, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section {
-  background-color: #F5F5F5;
   display: none;
   left: 0;
   padding-top: 5px;
@@ -441,12 +599,13 @@ header > section {
   right: 0;
   z-index: 1;
 }
-/* line 59, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 164, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section {
+  background-color: white;
+  border-top: solid 1px #CACACA;
   margin: auto;
-  width: 948px;
-  margin-top: 46px;
-  padding: 0 24px;
+  margin-top: 23px;
+  padding: 22px 24px 26px;
     /*&:nth-child(1){ // О компании
 
     }
@@ -459,6 +618,32 @@ header > section > section {
     &:nth-child(4){ // Консультация
 
     }*/
+}
+/* line 170, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(4) {
+  background: url("../images_temp/backgrounds/tile-contacts.png");
+}
+
+/* line 188, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section textarea {
+  display: block;
+  height: 106px;
+  margin-top: 16px;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+  border: solid 1px #CCC;
+}
+
+/* line 197, ../../_dev/scss/header/section/drop-down-menus.scss */
+header > section > section:nth-child(2) ul {
+  width: 90%;
 }
 
 /* line 2, ../../_dev/scss/header/nav/menus.scss */
@@ -494,16 +679,16 @@ nav > div:nth-child(3) aside {
 nav > div {
   height: 100%;
 }
-/* line 25, ../../_dev/scss/mixins.scss */
+/* line 30, ../../_dev/scss/mixins.scss */
 nav > div:nth-child(1) {
   position: absolute;
 }
-/* line 28, ../../_dev/scss/mixins.scss */
+/* line 33, ../../_dev/scss/mixins.scss */
 nav > div:nth-child(2) {
   display: table;
   margin: auto;
 }
-/* line 32, ../../_dev/scss/mixins.scss */
+/* line 37, ../../_dev/scss/mixins.scss */
 nav > div:nth-child(3) {
   position: absolute;
   right: 0;
@@ -563,16 +748,16 @@ nav {
 footer section > div {
   height: 100%;
 }
-/* line 25, ../../_dev/scss/mixins.scss */
+/* line 30, ../../_dev/scss/mixins.scss */
 footer section > div:nth-child(1) {
   position: absolute;
 }
-/* line 28, ../../_dev/scss/mixins.scss */
+/* line 33, ../../_dev/scss/mixins.scss */
 footer section > div:nth-child(2) {
   display: table;
   margin: auto;
 }
-/* line 32, ../../_dev/scss/mixins.scss */
+/* line 37, ../../_dev/scss/mixins.scss */
 footer section > div:nth-child(3) {
   position: absolute;
   right: 0;
@@ -580,7 +765,6 @@ footer section > div:nth-child(3) {
 }
 /* line 4, ../../_dev/scss/footer/footer.scss */
 footer section > div:first-child {
-  color: #5d534e;
   font-family: PlumbLight;
   font-size: 16px;
   line-height: 18px;
@@ -619,27 +803,37 @@ footer section {
   margin: auto;
 }
 
-/* line 36, ../../_dev/scss/default.scss */
+/*#drop-down-substrate{
+  background-color: #FFF;
+  border-top: solid 1px #CACACA;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 28px;
+  z-index: -1;
+}*/
+/* line 46, ../../_dev/scss/default.scss */
 #gallery {
   height: 94px;
   line-height: 94px;
   text-align: center;
 }
 
-/* line 42, ../../_dev/scss/default.scss */
+/* line 52, ../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
   width: 100%;
 }
 
-/* line 47, ../../_dev/scss/default.scss */
+/* line 57, ../../_dev/scss/default.scss */
 #pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 50, ../../_dev/scss/default.scss */
+/* line 60, ../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -647,7 +841,7 @@ footer section {
   width: 100%;
 }
 
-/* line 56, ../../_dev/scss/default.scss */
+/* line 66, ../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -656,7 +850,7 @@ footer section {
   width: 100%;
 }
 
-/* line 63, ../../_dev/scss/default.scss */
+/* line 73, ../../_dev/scss/default.scss */
 #slides {
   height: 100%;
   margin: auto;
@@ -664,7 +858,7 @@ footer section {
   width: 963px;
 }
 
-/* line 69, ../../_dev/scss/default.scss */
+/* line 79, ../../_dev/scss/default.scss */
 #slider-bottom {
   background: url("../images_temp/backgrounds/tile-gallery.png");
   height: 184px;
@@ -672,7 +866,7 @@ footer section {
   padding: 20px 0;
 }
 
-/* line 75, ../../_dev/scss/default.scss */
+/* line 85, ../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;

@@ -13,6 +13,11 @@
   top: 50%;
   transform: translateY(-50%);
 }
+@mixin inputs-shadow {
+  @include border-radius(3px);
+  @include box-shadow(1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset);
+  border: solid 1px #CCC;
+}
 @mixin menu-social-right($width:60px, $left:0){
   height: 162px;
   left:$left;

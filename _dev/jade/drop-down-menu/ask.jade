@@ -1,12 +1,14 @@
-h4="Задать вопрос"
-form(method="post")
-    p="Как вас зовут?"
-        input(type="text", name="name")
-    p="Контактный телефон"
-        input(type="telephone", name="telephone")
-    p="Email"
-        input(type="email", name="email")
-    p="Текст сообщения"
-        textarea
-    div
-        input(type="submit")
+div.centered
+    h4="Задать вопрос"
+    form(method="post")
+        p="Как вас зовут?"
+            input(type="text", name="name")
+        p="Контактный телефон"
+            input(type="text", name="telephone")
+        p="Email"
+            input(type="email", name="email")
+        p="Текст сообщения"
+            textarea
+        div
+            input(type="submit", value="отправить")
+div.bottom-bg

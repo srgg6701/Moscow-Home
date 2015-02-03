@@ -2,7 +2,7 @@ div{
   footer section >&{
     @include nav-footer;
     &:first-child{
-      color: $color-dark-common;
+      //color: $color-dark-common;
       font-family: PlumbLight;
       font-size: 16px;
       line-height: 18px;

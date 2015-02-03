@@ -1,9 +1,23 @@
 $(function(){
+    // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
+    //---------------------------------
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
-        menus_container=getMenusContainer();       // контейнер с блоками меню
+        submenu_items=$('header aside >div'),       // внутренние "пункты меню"
+        menus_container=getMenusContainer();        // контейнер с блоками меню
     $(menus_container).on('mouseenter',/* mouseleave*/ function(event){
         setVisibilityState(event);
     });
+
+    //-----------------------------------------
+    // todo: удалить после тестирования
+    $(dd_menus).on('click', function(){
+        $(getInnerMenus()).hide();
+    });
+
+    //-----------------------------------------
+    // Скрыть все выпадающие меню
+    $('nav a:not([href="#"])').on('mouseenter',hideAll);
+    // Управлять выпадающими меню
     $(dd_menus).on('mouseenter'/* mouseleave*/, function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
@@ -12,7 +26,27 @@ $(function(){
         }
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
-        // todo: а нужен ли data-section?
+    });
+    // Обработать блоки выпадающего меню
+    $(submenu_items).on('click mouseenter mouseleave', function(event){
+        var container=$(this).parent().next('.container'),
+            sections=$('section',container),
+            index=$(this).index(),
+            bgClass='bgActiveCarrot',
+            visibleClass ='visible',
+            setVisible=function(){
+                $(sections).removeClass(visibleClass)
+                    .eq(index).addClass(visibleClass);
+            };
+        setVisible();
+        if(event.type=='click'){
+            $(submenu_items).removeClass(bgClass);
+            $(this).addClass(bgClass);
+        }
+        if(event.type=='mouseleave'){
+            index=$(this).parent().find('div.'+bgClass).index();
+            setVisible();
+        }
     });
 });
 /**
@@ -52,11 +86,17 @@ function setVisibilityState(event,menu_to_show_index){
             $(getMenusContainer()).show(); // отобразить контейнер с меню
             $(getInnerMenus()).eq(menu_index).show();
         }else{
-            $(getInnerMenus()).hide();
-            $(getMenusContainer()).hide(); // скрыть контейнер с меню
+            hideAll();
         }
     };
     setVisibilityState(event,menu_to_show_index);
+}
+/**
+ * Скрыть все меню
+ */
+function hideAll(){
+    $(getInnerMenus()).hide();
+    $(getMenusContainer()).hide(); // скрыть контейнер с меню
 }
 /**
  * Получить контейнер с меню

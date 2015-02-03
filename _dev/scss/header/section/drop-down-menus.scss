@@ -1,4 +1,9 @@
 $section1-padding-left:264px;
+a{
+  header >section >section:nth-child(2) li &{
+    color: $color-carrot;
+  }
+}
 aside{ // вертикальное "внутреннее меню" в первом выпадающем меню
   header >section >section >div >&{
     margin-top: 3px;
@@ -9,15 +14,27 @@ aside{ // вертикальное "внутреннее меню" в перво
   }
 }
 div{
-  header >section >section > div >aside >&{
+  header aside >&{
     color: #933;
     cursor: pointer;
     font-family: PlumbMedium;
     font-size: 1.1rem;
     padding: 14px 18px 13px 18px;
     text-decoration: underline;
+    &:hover,
+    &.bgActiveCarrot{
+      background-color: $background-carrot-dark;
+      color: white;
+    }
   }
-  // выпадающее меню 1
+  // выпадающие меню
+  header >section >section >&{
+    @include centred-margins;
+    overflow: auto;
+    &:not(.centered){
+      width: 899px;
+    }
+  }
   header >section >section:nth-child(1) >&{ // О компании
     padding-left: $section1-padding-left;
   }
@@ -27,27 +44,115 @@ div{
   header >section >section:nth-child(2) >&{ // Услуги
 
   }
-  header >section >section:nth-child(3) >&{ // Контакты
-
+  header >section >section:nth-child(3) >div >&{ // Контакты
+    margin-bottom: 31px;
+    margin-top: 21px;
   }
   header >section >section:nth-child(4) >&{ // Консультация
-
+    width: 370px;
+    &.bottom-bg{
+      background: url($images_dir + "backgrounds/tile-contacts-dark.png");
+      height: 70px;
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+form{
+  header >section &{
+    margin: 20px 6px;
   }
 }
 h3{
-  header >section >section >div >&{
-    color: $color-brown;
+  header div.container &{
+    color: $background-carrot-dark;
     font-family: PlumbMedium;
   }
 }
+h4{
+  header >section >section &{
+    font-family: PlumbLight;
+    font-size: 36px;
+    margin-bottom: 13px;
+    margin-top: -2px;
+    text-transform: uppercase;
+  }
+  header >section >section:nth-child(4) &{ // Консультация
+    color: white;
+    text-align: center;
+  }
+}
+input{
+  header >section &{
+    color: $color-dark-common;
+    &[type="tel"],
+    &[type="email"],
+    &[type="text"]{
+      display: block;
+      height: 36px;
+      //margin-bottom: 27px;
+      margin-top: 4px;
+      @include inputs-shadow;
+    }
+    &[type=""]{
+      border-radius: 20px;
+      display: block;
+      float: left;
+      height: 39px;
+      left: 50%;
+      margin: 27px auto auto;
+      position: relative;
+      text-transform: uppercase;
+      transform: translateX(-50%);
+      width: 150px;
+    }
+  }
+}
+li{
+  header >section >section:nth-child(2) &{
+    padding-left: 50px;
+    $i:1;
+    @each $img in "design","building","facade","engineering" {
+      &:nth-child(#{$i}){
+        background: url($images_dir + 'service-' + $img + '.png') no-repeat 0 7px;
+      }
+      $i:$i+1;
+    }
+  }
+}
 p{
+  header >section form &{
+    color:white;
+    text-transform: uppercase;
+    &:nth-child(2),
+    &:nth-child(3){
+      float: left;
+      margin-top: 14px;
+      width: 50%;
+    }
+    &:nth-child(2){
+      padding-right: 11px;
+    }
+    &:nth-child(3){
+      padding-right: 12px;
+    }
+    &:nth-child(4){
+      float:left;
+      margin-top: 12px;
+      width: 100%;
+    }
+  }
   header >section >section >div >&{
     width: 450px;
+  }
+  header >section >section:nth-child(3) &{
+    font-size: 14px;
+    line-height: 13px;
   }
 }
 section{
   header >&{
-    background-color: #F5F5F5;
     display: none;
     left: 0;
     padding-top: 5px;
@@ -57,9 +162,14 @@ section{
     z-index: 1;
   }
   header >section >&{
-    @include centred-margins;
-    margin-top: 46px;
-    padding: 0 24px;
+    background-color: white;
+    border-top: solid 1px #CACACA;
+    margin: auto;
+    margin-top: 23px;//46px;
+    padding: 22px 24px 26px;
+    &:nth-child(4){
+      background: url($images_dir + "backgrounds/tile-contacts.png");
+    }
     /*&:nth-child(1){ // О компании
 
     }
@@ -72,5 +182,19 @@ section{
     &:nth-child(4){ // Консультация
 
     }*/
+  }
+}
+textarea{
+  header >section &{
+    display: block;
+    height: 106px;
+    margin-top: 16px;
+    width: 100%;
+    @include inputs-shadow;
+  }
+}
+ul{
+  header >section >section:nth-child(2) &{
+    width:90%;
   }
 }

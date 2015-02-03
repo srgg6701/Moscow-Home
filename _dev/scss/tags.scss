@@ -27,7 +27,7 @@ a{
     }
   }
   #you-need ul &{
-    color: $color-brown;
+    color: $background-carrot-dark;
     display: block;
     font-family: $font-second;
     font-size: 14px;
@@ -69,6 +69,9 @@ aside{
     top:0;
     width: $img-slide-single-width;
   }
+}
+body{
+  color: $color-dark-common;
 }
 div{
   #showcase >&{
@@ -184,6 +187,14 @@ p{
   #you-need & {
     &.header-slim-big{
       margin-bottom: 32px;
+    }
+  }
+}
+section{
+  .container &{
+    display: none;
+    &.visible{
+      display: block;
     }
   }
 }
