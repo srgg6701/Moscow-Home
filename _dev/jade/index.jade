@@ -1,0 +1,100 @@
+doctype html
+html(lang="en")
+    head
+        -var pageTitle = "Home Moscow"
+        title= pageTitle
+        link(href="static/css/default.css",rel="stylesheet")
+        script(src="static/js/min/jquery.min.js")
+        script(src="static/js/common.js")
+        script(src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU")
+    body.no-scroll
+        #page
+            // ВНИМАНИЕ!
+            // Выбор и последовательность размещения/вложения элементов
+            // header > section > section и nav a
+            // должна быть соблюдена для правильной работы обработчика выпадающего меню!
+            header
+                nav
+                    -var menuItems={'about':["#","О компании"], 'services':["#","Услуги"], 'gallery':["gallery.html","Галерея"], 'contacts':["#","Контакты"]}
+                    div
+                        ul#top-menu.parent_menu
+                            each data,data_section in menuItems
+                                li
+                                    a(href=data[0], id='link_'+data_section)=data[1]
+                    div
+                        a#logo(href="index.html")
+                    div
+                        -var phone_number="+7 (495) 890-90-90"
+                        aside#phone-number=phone_number
+                        aside#consulting
+                            a.btn(href="#",data-section="ask")="Консультация"
+                section.menu
+                    section
+                        include  drop-down-menu/about
+                    section
+                        include  drop-down-menu/services
+                    section
+                        include  drop-down-menu/contacts
+                    section
+                        include  drop-down-menu/ask
+            main
+                #slider.fit
+                    ul.social
+                        li
+                            a(href="#", title="Facebook")
+                        li
+                            a(href="#", title="Одноклассники")
+                        li
+                            a(href="#", title="ВКонтакте")
+                    div
+                    div#pointers-box
+                        div#pointers-aside
+                            aside
+                            aside
+                    div.img-box
+                    #achievements
+                        div
+                            #showcase
+                                div
+                                    ul
+                                        li="10 лет на рынке"
+                                        li="сотни реализованных проектов"
+                                        li="высокое качество работ"
+                                    ul
+                                        li="малые и крупные проекты"
+                                        li="от умеренных пожеланий до масштабных идей"
+                                        li="от локальных работ до строительства дома"
+                                    ul
+                                        li="рекомендации от бизнесменов, политиков, деятелей культуры"
+                div#level1
+                    #you-need
+                        p.header-slim-big="Вам необходимо"
+                        include you-need
+                    #gallery.header-slim-big="Галерея"
+                    #slider-bottom
+                        #slides
+                            each src in [1,2,3,4,5,6]
+                                a(href="#")
+                                    img(src="static/images_temp/gallery/" + src + '.jpg')
+                            aside
+                                a.btn(href="#")="Просмотреть"
+            footer
+                section
+                    div="Строительство элитной недвижимости с 2004 года"
+                    div
+                        a#logo-bottom.logo(href="index.html")
+                    #phone-number_bottom=phone_number
+        script.
+            ymaps.ready(init);
+            var myMap;
+            function init(){
+                myMap = new ymaps.Map ("map", {
+                    center: [55.7128,37.0681], zoom: 11
+                });
+                myPlacemark = new ymaps.Placemark([55.7128,37.0681], {
+                    hintContent: 'Тут',
+                    balloonContent: 'Столица России'
+                });
+                myMap.geoObjects.add(myPlacemark);
+            }
+        script(type='text/javascript', src='_dev/debug/call-dev.js')
