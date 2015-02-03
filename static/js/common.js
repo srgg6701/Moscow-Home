@@ -4,7 +4,7 @@ $(function(){
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
-    $(menus_container).on('mouseenter',/* mouseleave*/ function(event){
+    $(menus_container).on('mouseenter mouseleave',/**/ function(event){
         setVisibilityState(event);
     });
 
@@ -18,7 +18,7 @@ $(function(){
     // Скрыть все выпадающие меню
     $('nav a:not([href="#"])').on('mouseenter',hideAll);
     // Управлять выпадающими меню
-    $(dd_menus).on('mouseenter'/* mouseleave*/, function(event){
+    $(dd_menus).on('mouseenter mouseleave'/**/, function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){

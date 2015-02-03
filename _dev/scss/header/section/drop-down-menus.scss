@@ -49,19 +49,24 @@ div{
     margin-top: 21px;
   }
   header >section >section:nth-child(4) >&{ // Консультация
+    margin-bottom: -9px;
     width: 370px;
     &.bottom-bg{
       background: url($images_dir + "backgrounds/tile-contacts-dark.png");
+      bottom: 0px;
       height: 70px;
       left: 0;
+      margin-bottom: 0;
       position: absolute;
       width: 100%;
+      z-index: 0;
     }
   }
 }
 form{
   header >section &{
-    margin: 20px 6px;
+    overflow: hidden;
+    margin: 0 6px 0;
   }
 }
 h3{
@@ -74,7 +79,7 @@ h4{
   header >section >section &{
     font-family: PlumbLight;
     font-size: 36px;
-    margin-bottom: 13px;
+    margin-bottom: 7px;
     margin-top: -2px;
     text-transform: uppercase;
   }
@@ -94,6 +99,7 @@ input{
       //margin-bottom: 27px;
       margin-top: 4px;
       @include inputs-shadow;
+      width: 100%;
     }
     &[type=""]{
       border-radius: 20px;
@@ -107,6 +113,26 @@ input{
       transform: translateX(-50%);
       width: 150px;
     }
+  }
+  header >section >section:nth-child(4) &{
+    &[type="submit"]{
+      background-color: #FFF;
+      border: none;
+      border-radius: 20px;
+      color: $color-carrot;
+      font-size: 17px;
+      height: 40px;
+      left: 50%;
+      margin-top: 27px;
+      position: relative;
+      transform: translateX(-50%);
+      width: 150px;
+      z-index: 2;
+    }
+  }
+  form p:nth-child(2) &,
+  form p:nth-child(3) &{
+    margin-top: 6px;
   }
 }
 li{
@@ -135,11 +161,11 @@ p{
       padding-right: 11px;
     }
     &:nth-child(3){
-      padding-right: 12px;
+      padding-left: 10px;
     }
     &:nth-child(4){
       float:left;
-      margin-top: 12px;
+      margin-top: 15px;
       width: 100%;
     }
   }
@@ -188,7 +214,7 @@ textarea{
   header >section &{
     display: block;
     height: 106px;
-    margin-top: 16px;
+    margin-top: 6px;
     width: 100%;
     @include inputs-shadow;
   }
