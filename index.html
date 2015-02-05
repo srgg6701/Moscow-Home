@@ -102,7 +102,9 @@
                 <p><strong>Телефон:</strong>+7 495 890-0909</p>
                 <p><strong>Email:</strong><span class="email">&nbsp;</span></p>
               </div>
-              <div id="map" style="height:230px;width:auto;"></div>
+              <div id="map" style="height:230px;width:auto;">
+                <div id="waiting-map">...загрузка карты...</div>
+              </div>
             </div>
           </section>
           <section>
@@ -209,6 +211,7 @@
       ymaps.ready(init);
       var myMap;
       function init(){
+          document.getElementById('waiting-map').remove();
           myMap = new ymaps.Map ("map", {
               center: [55.7128,37.0681], zoom: 11
           });

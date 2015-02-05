@@ -671,6 +671,16 @@ header > section > section:nth-child(2) ul {
   width: 90%;
 }
 
+/* line 227, ../../_dev/scss/header/section/drop-down-menus.scss */
+#waiting-map {
+  background-color: #999;
+  border-radius: 20px;
+  color: #FFF;
+  display: table;
+  font-family: Arial;
+  padding: 10px 20px;
+}
+
 /* line 2, ../../_dev/scss/header/nav/menus.scss */
 header ul li a {
   display: block;
