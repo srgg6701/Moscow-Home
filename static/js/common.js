@@ -18,7 +18,8 @@ $(function(){
     // Скрыть все выпадающие меню
     $('nav a:not([href="#"])').on('mouseenter',hideAll);
     // Управлять выпадающими меню
-    $(dd_menus).on('mouseenter mouseleave'/**/, function(event){
+    // todo: добавить mouseleave
+    $(dd_menus).on('mouseenter'/* mouseleave*/, function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
