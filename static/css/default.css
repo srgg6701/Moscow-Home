@@ -348,16 +348,17 @@ p {
 body, html {
   height: 100%;
   margin: 0;
+  overflow: hidden;
   padding: 0;
 }
 
-/* line 12, ../../_dev/scss/layout.scss */
+/* line 13, ../../_dev/scss/layout.scss */
 #page {
   height: 100%;
   position: relative;
 }
 
-/* line 21, ../../_dev/scss/layout.scss */
+/* line 22, ../../_dev/scss/layout.scss */
 header,
 main,
 footer,
@@ -365,25 +366,25 @@ main > div {
   position: absolute;
 }
 
-/* line 25, ../../_dev/scss/layout.scss */
+/* line 26, ../../_dev/scss/layout.scss */
 header {
   height: 68px;
   top: 0;
 }
 
-/* line 29, ../../_dev/scss/layout.scss */
+/* line 30, ../../_dev/scss/layout.scss */
 nav {
   margin: auto;
   width: 948px;
 }
 
-/* line 33, ../../_dev/scss/layout.scss */
+/* line 34, ../../_dev/scss/layout.scss */
 main {
   bottom: 61px;
   top: 68px;
 }
 
-/* line 38, ../../_dev/scss/layout.scss */
+/* line 39, ../../_dev/scss/layout.scss */
 #level1 {
   bottom: 0;
   height: 423px;
@@ -391,12 +392,12 @@ main {
   width: 100%;
 }
 
-/* line 45, ../../_dev/scss/layout.scss */
+/* line 46, ../../_dev/scss/layout.scss */
 footer {
   bottom: 14px;
 }
 
-/* line 51, ../../_dev/scss/layout.scss */
+/* line 52, ../../_dev/scss/layout.scss */
 header, main, footer {
   width: 100%;
 }
@@ -668,10 +669,12 @@ header > section textarea {
 
 /* line 223, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) ul {
+  margin-bottom: 4px;
+  margin-top: 6px;
   width: 90%;
 }
 
-/* line 227, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 229, ../../_dev/scss/header/section/drop-down-menus.scss */
 #waiting-map {
   background-color: #999;
   border-radius: 20px;

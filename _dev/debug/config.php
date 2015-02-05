@@ -1,6 +1,6 @@
 <?php
 //
-$section = $_GET['section'];
+$section = isset($_GET['section'])? $_GET['section'] : NULL;
 if (!$section) $section = 'default';
 $site_name = 'moscow-home';
 /**

@@ -221,6 +221,8 @@ textarea{
 }
 ul{
   header >section >section:nth-child(2) &{
+    margin-bottom: 4px;
+    margin-top: 6px;
     width:90%;
   }
 }

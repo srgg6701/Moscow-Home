@@ -15,7 +15,7 @@ $substrates = array(    // класс => имя файла изображени�
     'construction-finishing-work' => '3.construction-finishing-work.jpg',
     'engineering-systems' => '4.engineering-systems.jpg',
 );
-
+/*
 ob_start();
 // Стили
 require_once 'css.php';
@@ -27,7 +27,7 @@ require_once 'html-controls.php';
 if ($show_substrate)
     require_once 'html-substrate-wrapper.php';
 // Клиентские обработчики
-require_once 'js.php';
+require_once 'js.php';  */
 // разобраться с подключением линеек
 if (isset($_GET['rulers'])):
     ($_GET['rulers'] == '-1') ?
