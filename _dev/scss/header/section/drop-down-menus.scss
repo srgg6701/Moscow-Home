@@ -14,7 +14,13 @@ aside{ // вертикальное "внутреннее меню" в перво
   }
 }
 button{
-  header >section >section:nth-child(4) &{
+  header >section >section:nth-child(3) & { // контакты
+    &.print {
+      float: right;
+      margin-top: -27px;
+    }
+  }
+  header >section >section:nth-child(4) &{  // задать вопрос
     &.attach-file{
       margin-top: -6px;
       margin-bottom: -3px;

@@ -6,7 +6,6 @@ $bottom-footer:14px;
 body, html{
   height: 100%;
   margin: 0;
-  overflow: hidden;
   padding: 0;
 }
 //---------------------------------------------
@@ -61,3 +60,34 @@ footer >section{
   max-width: 1400px;
   width: $max-with-content;
 }*/
+
+// inner layouts
+.container{
+
+}
+.top{
+  background-color: $background-brown-dark;
+  height: 583px;
+}
+.contact{
+  background-color: $background-brown-dark;
+  height: 147px;
+}
+.content{
+
+}
+.footer{
+  background-color: #feda62;
+  height: 600px;
+}
+
+.top, .contact, .content, .footer{
+  >div{
+    //background-color: antiquewhite;
+    height: 100%;
+    margin: auto;
+    max-width: 960px;
+    overflow: hidden;
+    position: static;
+  }
+}

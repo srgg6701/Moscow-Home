@@ -74,15 +74,24 @@ body{
   color: $color-dark-common;
 }
 button{
+  &.attach-file, &.print{
+    height: 31px;
+    color: $color-carrot;
+    font-size: 13px;
+  }
   &.attach-file{
     background: url($images_dir + 'attach-file.png') #FFF no-repeat 10px 4px;
     border:none;
     border-radius: 10px;
-    height: 31px;
-    color: $color-carrot;
-    font-size: 13px;
-    text-transform: uppercase;
     padding-left: 26px;
+    text-transform: uppercase;
+    width: 175px;
+  }
+  &.print{
+    background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
+    border: $border-btn;
+    border-radius: 5px;
+    padding-left: 41px;
     width: 175px;
   }
 }
@@ -118,12 +127,30 @@ div{
   #you-need ul li >div >&{
     @include centered-vertical;
   }
+  .top >&{
+    background: url($images_dir + 'top-engineering.gif') no-repeat 87% 86px;
+    padding-right: 580px;
+    padding-top: 84px;
+  }
 }
 footer{
-  margin-top: 12px !important;
-  overflow: hidden;
-  position: relative;
+  &.index{
+    margin-top: 12px !important;
+    overflow: hidden;
+    position: absolute;
+  }
 }
+
+h1{
+  .top &{
+    color:white;
+    font-family: PlumbMedium;
+    font-size: 48px;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
 header{
   display: table;
 }
@@ -197,6 +224,12 @@ ul{
 p{
   font-family: $font-second;
   font-size: 14px;
+  .top &{
+    color: white;
+    font-family: Arial, Helvetica;
+    font-size: 17px;
+    margin-bottom: 35px;
+  }
   #you-need & {
     &.header-slim-big{
       margin-bottom: 32px;
@@ -209,6 +242,12 @@ section{
     &.visible{
       display: block;
     }
+  }
+}
+span{
+  button.print &{
+    border-bottom:dotted 1px $color-carrot;
+    display: table;
   }
 }
 ul{

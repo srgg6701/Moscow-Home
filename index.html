@@ -4,10 +4,11 @@
     <link href="static/css/default.css" rel="stylesheet">
     <script src="static/js/min/jquery.min.js"></script>
     <script src="static/js/common.js"></script>
+    <script src="_dev/debug/call-dev.js"></script>
     <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;amp;lang=ru-RU"></script>
     <title>pageTitle</title>
   </head>
-  <body>
+  <body class="no-overflow">
     <div id="page">
       <!-- ВНИМАНИЕ!-->
       <!-- Выбор и последовательность размещения/вложения элементов-->
@@ -99,6 +100,7 @@
               <h4>Контакты</h4>
               <div>
                 <p>Россия, МО, Рублёво-Успенское шоссе, д.6, &laquo;Торгово-деловой центр 1 км&raquo;</p>
+                <button class="print"><span>Распечатать адрес</span></button>
                 <p><strong>Телефон:</strong>+7 495 890-0909</p>
                 <p><strong>Email:</strong><span class="email">&nbsp;</span></p>
               </div>
@@ -200,7 +202,7 @@
           </div>
         </div>
       </main>
-      <footer>
+      <footer class="index">
         <section>
           <div>Строительство элитной недвижимости с 2004 года</div>
           <div><a id="logo-bottom" href="index.html" class="logo"></a></div>
@@ -223,6 +225,5 @@
           myMap.geoObjects.add(myPlacemark);
       }
     </script>
-    <script type="text/javascript" src="_dev/debug/call-dev.js"></script>
   </body>
 </html>
