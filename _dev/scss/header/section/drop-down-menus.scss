@@ -13,6 +13,14 @@ aside{ // вертикальное "внутреннее меню" в перво
     width: 236px;
   }
 }
+button{
+  header >section >section:nth-child(4) &{
+    &.attach-file{
+      margin-top: -6px;
+      margin-bottom: -3px;
+    }
+  }
+}
 div{
   header aside >&{
     color: #933;
@@ -213,7 +221,7 @@ section{
 textarea{
   header >section &{
     display: block;
-    height: 106px;
+    height: 85px;
     margin-top: 6px;
     width: 100%;
     @include inputs-shadow;

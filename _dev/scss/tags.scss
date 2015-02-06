@@ -73,6 +73,19 @@ aside{
 body{
   color: $color-dark-common;
 }
+button{
+  &.attach-file{
+    background: url($images_dir + 'attach-file.png') #FFF no-repeat 10px 4px;
+    border:none;
+    border-radius: 10px;
+    height: 31px;
+    color: $color-carrot;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-left: 26px;
+    width: 175px;
+  }
+}
 div{
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
