@@ -90,7 +90,7 @@ button{
   &.bg-recall{ // связан со следующим
     background-position: 14px 11px;
   }
-  .recall-me &{ // связан с предыдущим
+  .do-it &{ // связан с предыдущим
     border: none;
     @include border-radius(20px);
     color: #FFF;
@@ -98,7 +98,8 @@ button{
     font-family: PlumbMedium;
     font-size: 14px;
     height: 38px;
-    padding-left: 36px;
+    margin-left: 16px;
+    padding-left: 29px;
     text-transform: uppercase;
     width: 180px;
   }
@@ -111,13 +112,13 @@ button{
   }
 }
 div{
-  .recall-me &{
+  .do-it &{
     &.phone-number{
       float: left;
       font-family: PlumbMedium;
       font-size: 36px;
-      margin-right: 20px;
-      margin-left: -20px;
+      margin-right: 2px;
+      margin-left: 32px;
     }
   }
   #showcase >&{
@@ -152,8 +153,9 @@ div{
     @include centered-vertical;
   }
   .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 87.8% 89px;
-    padding-right: 580px;
+    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
+    padding-left: 50px;
+    padding-right: 485px;
     padding-top: 84px;
   }
 }
@@ -247,12 +249,9 @@ ul{
 p{
   font-family: $font-second;
   font-size: 14px;
-  .recall-me &{
-    font-family: PlumbLight;
-    font-size: 38px;
+  .do-it &{
     display: table;
     margin: 27px auto 6px;
-    text-transform: uppercase;
   }
   .top &{
     color: white;
@@ -273,7 +272,7 @@ section{
       display: block;
     }
   }
-  .recall-me >&{
+  .do-it &{
     display: table;
     margin: auto;
   }

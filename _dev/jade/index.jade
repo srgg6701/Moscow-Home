@@ -69,13 +69,9 @@ block content
                         p.header-slim-big="Вам необходимо"
                         include you-need
                     #gallery.header-slim-big="Галерея"
-                    #slider-bottom
-                        #slides
-                            each src in [1,2,3,4,5,6]
-                                a(href="#")
-                                    img(src="static/images_temp/gallery/" + src + '.jpg')
-                            aside
-                                a.btn(href="#")="Просмотреть"
+                    include modules/slider-bottom
+                    aside
+                        a.btn(href="#")="Просмотреть"
             footer.index
                 section
                     div="Строительство элитной недвижимости с 2004 года"

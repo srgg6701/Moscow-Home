@@ -5,12 +5,13 @@
   background-color: $background-orange;
 }
 .bg-recall{
-  background: url($images_dir + 'recall-me.png') no-repeat;
+  background-image: url($images_dir + 'recall-me.png');
+  background-repeat:  no-repeat;
 }
 .centered-vertical{
   @include centered-vertical;
 }
-.contact{
+.do-it{
   background-color: $background-brown-dark;
 }
 .email::after{
@@ -27,6 +28,13 @@
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
+  @include transform(scaleX(0.945));
+  .do-it &{
+    color: white;
+  }
+  .container &{
+    text-align: center;
+  }
 }
 .no-overflow{
   overflow: hidden;
@@ -34,7 +42,7 @@
 .no-scroll{
   overflow: hidden;
 }
-.recall-me{
+.do-it {
   color: white !important;
 }
 .top{

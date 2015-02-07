@@ -55,14 +55,17 @@ header,main,footer{
   height: 583px;
 }
 .contact{
-  height: 147px;
+
 }
+  .do-it{
+    height: 147px;
+  }
 .content{
 }
 .footer{
   height: 600px;
 }
-body:not(.no-overflow) >div >* >div{
+body:not(.no-overflow) >div >* >*{
   height: 100%;
   margin: auto;
   max-width: 960px;
