@@ -128,7 +128,7 @@ div{
     @include centered-vertical;
   }
   .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 87% 86px;
+    background: url($images_dir + 'top-engineering.gif') no-repeat 87.8% 89px;
     padding-right: 580px;
     padding-top: 84px;
   }
@@ -147,6 +147,7 @@ h1{
     font-family: PlumbMedium;
     font-size: 48px;
     font-weight: normal;
+    margin-bottom: 36px;
     text-transform: uppercase;
   }
 }

@@ -4,6 +4,9 @@
 .centered-vertical{
   @include centered-vertical;
 }
+.contact{
+  background-color: $background-brown-dark;
+}
 .email::after{
   color: $color-carrot;
   content:" doma@domalux.ru";
@@ -11,8 +14,10 @@
 .float-left{
   float: left;
 }
+.footer{
+  background-color: $background-sand;
+}
 .header-slim-big{
-  //color: $color-dark-common;
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
@@ -22,4 +27,7 @@
 }
 .no-scroll{
   overflow: hidden;
+}
+.top{
+  background-color: $background-brown-dark;
 }
