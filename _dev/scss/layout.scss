@@ -52,7 +52,12 @@ header,main,footer{
 .container{
 }
 .top{
-  height: 583px;
+  #engineering-systems &{
+    height: 583px;
+  }
+  #decoration &{
+    height: 724px;
+  }
 }
 .contact{
 

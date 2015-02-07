@@ -1,6 +1,9 @@
 .bgActiveCarrot{
   //background-color: $background-carrot-dark;
 }
+.bg-chess{
+  background-image: url($images_dir + 'backgrounds/tile-chess.png') !important;
+}
 .bg-orange{
   background-color: $background-orange;
 }
@@ -13,7 +16,13 @@
 }
 .do-it{
   background-color: $background-brown-dark;
-  background-image: url($images_dir + 'backgrounds/tile-engineering-bottom.png');
+  #decoration &{
+    background-image: url($images_dir + 'backgrounds/tile-100.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
+  }
+  color: white !important;
 }
 .email::after{
   color: $color-carrot;
@@ -50,10 +59,15 @@
 .no-scroll{
   overflow: hidden;
 }
-.do-it {
-  color: white !important;
+.relative{
+  position: relative !important;
 }
 .top{
-  background-image: url($images_dir + 'backgrounds/tile-engineering.png');
+  #decoration &{
+    background-image: url($images_dir + 'backgrounds/tile-top-ultra-blood.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top.png');
+  }
   background-color: $background-brown-dark;
 }

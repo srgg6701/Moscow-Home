@@ -16,7 +16,7 @@ a{
     height: 37px;
     width: 35px;
   }
-  #engineering-systems .footer div.float-left:first-child &{
+  .footer.why-moscow-home div.float-left:first-child &{
     border-right: solid 1px;
     display: inline-block;
     margin-bottom: 6px;
@@ -54,7 +54,7 @@ aside{
   #engineering-systems .content &{
       margin-bottom: 67px;
   }
-  #engineering-systems .footer >section >&{
+  .footer.why-moscow-home >section >&{
     margin: 21px auto auto;
     overflow: hidden;
     width: 94%;
@@ -143,6 +143,22 @@ div{
       margin-left: 32px;
     }
   }
+  #decoration .top &.relative{
+    background-image: url($images_dir + 'decoration/decoration-top.png');
+    background-repeat: no-repeat;
+    background-position: 85px 232px;
+  }
+  #decoration #slides &.float-left{
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 50%;
+    &:nth-child(1){
+      background-image: url($images_dir + 'decoration/exmpl-big.jpg');
+    }
+    &:nth-child(2){
+      background-image: url($images_dir + 'decoration/exmpls-right.jpg');
+    }
+  }
   #engineering-systems .content >section >&{
     position: absolute;
   }
@@ -155,13 +171,19 @@ div{
   #engineering-systems .content >section:nth-child(3) >&{
     top: 55px;
   }
-  #engineering-systems .footer >section >aside >&{
+  .footer.why-moscow-home >section >aside >&{
     &:first-child{
       padding-right: 30px;
     }
     &:last-child{
       padding-left: 59px;
     }
+  }
+  #engineering-systems .top >&{
+    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
+    padding-left: 50px;
+    padding-right: 485px;
+    padding-top: 84px;
   }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
@@ -194,12 +216,6 @@ div{
   #you-need ul li >div >&{
     @include centered-vertical;
   }
-  .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
-    padding-left: 50px;
-    padding-right: 485px;
-    padding-top: 84px;
-  }
 }
 footer{
   &.index{
@@ -216,6 +232,15 @@ h1{
     font-weight: normal;
     margin-bottom: 36px;
     text-transform: uppercase;
+  }
+  #decoration .top &{
+    display: table;
+    margin: auto;
+    text-align: center;
+    &:first-child{
+      margin-bottom: 7px;
+      margin-top: 72px;
+    }
   }
 }
 h2{
@@ -259,7 +284,7 @@ li{
     @include paragraph-dark;
     margin-bottom: 16px;
   }
-  #engineering-systems .footer ul &{
+  .footer.why-moscow-home ul &{
     background-repeat: no-repeat;
     background-position: center 0;
     display: table-cell;
@@ -325,7 +350,7 @@ ul{
     margin-top: 9px;
     z-index: 1;
   }
-  #engineering-systems .footer >section >&{
+  .footer.why-moscow-home >section >&{
     display: table;
     margin: auto;
   }
@@ -353,7 +378,7 @@ p{
       margin-bottom: 41px;
     }
   }
-  #engineering-systems .footer &{
+  .footer.why-moscow-home &{
     @include paragraph-dark;
     &.header-big{
       color:$color-dark-deep;
@@ -364,7 +389,7 @@ p{
       width: 500px;
     }
   }
-  #engineering-systems .footer div.float-left:first-child &{
+  .footer.why-moscow-home div.float-left:first-child &{
     margin-bottom: 6px;
   }
   #you-need & {
@@ -383,6 +408,12 @@ section{
   .do-it &{
     display: table;
     margin: auto;
+  }
+  #decoration .top &{
+    left: 133px;
+    position: absolute;
+    top: 510px;
+    width: 75%;
   }
   #engineering-systems .content &{
     background-repeat: no-repeat;
@@ -413,7 +444,7 @@ span{
     border-bottom:dotted 1px $color-carrot;
     display: table;
   }
-  #engineering-systems .footer ul &{
+  .footer.why-moscow-home ul &{
     background-color: $background-red-darkest;
     color: white;
     display: table;
