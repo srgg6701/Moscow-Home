@@ -13,6 +13,7 @@
 }
 .do-it{
   background-color: $background-brown-dark;
+  background-image: url($images_dir + 'backgrounds/tile-engineering-bottom.png');
 }
 .email::after{
   color: $color-carrot;
@@ -53,5 +54,6 @@
   color: white !important;
 }
 .top{
+  background-image: url($images_dir + 'backgrounds/tile-engineering.png');
   background-color: $background-brown-dark;
 }

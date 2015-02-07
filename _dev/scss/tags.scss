@@ -16,6 +16,20 @@ a{
     height: 37px;
     width: 35px;
   }
+  #engineering-systems .footer div.float-left:first-child &{
+    border-right: solid 1px;
+    display: inline-block;
+    margin-bottom: 6px;
+    @include paragraph-dark;
+    padding: 0 5px;
+    text-decoration: none;
+    &.start{
+      padding-left: 0;
+    }
+    &.finish{
+      border-right: none;
+    }
+  }
   #slides aside &{
     &.btn{
       $w:128px;
@@ -41,7 +55,7 @@ aside{
       margin-bottom: 67px;
   }
   #engineering-systems .footer >section >&{
-    margin: 12px auto;
+    margin: 21px auto auto;
     overflow: hidden;
     width: 94%;
   }
@@ -337,7 +351,6 @@ p{
     &.header-slim-big{
       line-height: 46px;
       margin-bottom: 41px;
-      @include transform(scale(1));
     }
   }
   #engineering-systems .footer &{
@@ -350,6 +363,9 @@ p{
       text-align: center;
       width: 500px;
     }
+  }
+  #engineering-systems .footer div.float-left:first-child &{
+    margin-bottom: 6px;
   }
   #you-need & {
     &.header-slim-big{
@@ -402,7 +418,12 @@ span{
     color: white;
     display: table;
     margin: auto;
-    padding: 1px 4px;
+    padding: 0 4px;
+  }
+  .arrows &{
+    color: #FF6447;
+    display: inline-block;
+    padding: 0 4px;
   }
 }
 ul{

@@ -62,7 +62,26 @@ ul.social a {
   height: 37px;
   width: 35px;
 }
-/* line 20, ../../_dev/scss/tags.scss */
+/* line 19, ../../_dev/scss/tags.scss */
+#engineering-systems .footer div.float-left:first-child a {
+  border-right: solid 1px;
+  display: inline-block;
+  margin-bottom: 6px;
+  font-family: Arial, Helvetica, Sans Serif;
+  font-size: 14px;
+  color: #3f3f3f;
+  padding: 0 5px;
+  text-decoration: none;
+}
+/* line 26, ../../_dev/scss/tags.scss */
+#engineering-systems .footer div.float-left:first-child a.start {
+  padding-left: 0;
+}
+/* line 29, ../../_dev/scss/tags.scss */
+#engineering-systems .footer div.float-left:first-child a.finish {
+  border-right: none;
+}
+/* line 34, ../../_dev/scss/tags.scss */
 #slides aside a.btn {
   display: block;
   position: relative;
@@ -72,7 +91,7 @@ ul.social a {
   text-align: center;
   width: 128px;
 }
-/* line 29, ../../_dev/scss/tags.scss */
+/* line 43, ../../_dev/scss/tags.scss */
 #you-need ul a {
   color: #bf451e;
   display: block;
@@ -83,17 +102,17 @@ ul.social a {
   white-space: normal;
 }
 
-/* line 40, ../../_dev/scss/tags.scss */
+/* line 54, ../../_dev/scss/tags.scss */
 #engineering-systems .content aside {
   margin-bottom: 67px;
 }
-/* line 43, ../../_dev/scss/tags.scss */
+/* line 57, ../../_dev/scss/tags.scss */
 #engineering-systems .footer > section > aside {
-  margin: 12px auto;
+  margin: 21px auto auto;
   overflow: hidden;
   width: 94%;
 }
-/* line 48, ../../_dev/scss/tags.scss */
+/* line 62, ../../_dev/scss/tags.scss */
 #pointers-aside > aside {
   background-color: black;
   background-position: center;
@@ -109,13 +128,13 @@ ul.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 60, ../../_dev/scss/tags.scss */
+/* line 74, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 18px;
 }
-/* line 65, ../../_dev/scss/tags.scss */
+/* line 79, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -126,7 +145,7 @@ ul.social a {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-/* line 72, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #slides aside {
   background: url("../images_temp/backgrounds/tile-microsquare.png");
   height: 135px;
@@ -136,18 +155,18 @@ ul.social a {
   width: 153px;
 }
 
-/* line 81, ../../_dev/scss/tags.scss */
+/* line 95, ../../_dev/scss/tags.scss */
 body {
   color: #5d534e;
 }
 
-/* line 85, ../../_dev/scss/tags.scss */
+/* line 99, ../../_dev/scss/tags.scss */
 button.attach-file, button.print {
   height: 31px;
   color: #a64726;
   font-size: 13px;
 }
-/* line 90, ../../_dev/scss/tags.scss */
+/* line 104, ../../_dev/scss/tags.scss */
 button.attach-file {
   background: url("../images_temp/attach-file.png") white no-repeat 10px 4px;
   border: none;
@@ -156,11 +175,11 @@ button.attach-file {
   text-transform: uppercase;
   width: 175px;
 }
-/* line 98, ../../_dev/scss/tags.scss */
+/* line 112, ../../_dev/scss/tags.scss */
 button.bg-recall {
   background-position: 14px 11px;
 }
-/* line 101, ../../_dev/scss/tags.scss */
+/* line 115, ../../_dev/scss/tags.scss */
 .do-it button {
   border: none;
   -webkit-border-radius: 20px;
@@ -178,7 +197,7 @@ button.bg-recall {
   text-transform: uppercase;
   width: 180px;
 }
-/* line 114, ../../_dev/scss/tags.scss */
+/* line 128, ../../_dev/scss/tags.scss */
 button.print {
   background: url("../images_temp/print.png") white no-repeat 13px 9px;
   border: solid 1px #c9c9c9;
@@ -187,7 +206,7 @@ button.print {
   width: 175px;
 }
 
-/* line 124, ../../_dev/scss/tags.scss */
+/* line 138, ../../_dev/scss/tags.scss */
 .do-it div.phone-number {
   float: left;
   font-family: PlumbMedium;
@@ -195,31 +214,31 @@ button.print {
   margin-right: 2px;
   margin-left: 32px;
 }
-/* line 132, ../../_dev/scss/tags.scss */
+/* line 146, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section > div {
   position: absolute;
 }
-/* line 135, ../../_dev/scss/tags.scss */
+/* line 149, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(1) > div {
   top: 84px;
 }
-/* line 138, ../../_dev/scss/tags.scss */
+/* line 152, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(2) > div {
   top: 84px;
 }
-/* line 141, ../../_dev/scss/tags.scss */
+/* line 155, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(3) > div {
   top: 55px;
 }
-/* line 145, ../../_dev/scss/tags.scss */
+/* line 159, ../../_dev/scss/tags.scss */
 #engineering-systems .footer > section > aside > div:first-child {
   padding-right: 30px;
 }
-/* line 148, ../../_dev/scss/tags.scss */
+/* line 162, ../../_dev/scss/tags.scss */
 #engineering-systems .footer > section > aside > div:last-child {
   padding-left: 59px;
 }
-/* line 152, ../../_dev/scss/tags.scss */
+/* line 166, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -234,7 +253,7 @@ button.print {
   margin: auto;
   width: 948px;
 }
-/* line 161, ../../_dev/scss/tags.scss */
+/* line 175, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -243,7 +262,7 @@ button.print {
   width: 100%;
   margin: auto;
 }
-/* line 170, ../../_dev/scss/tags.scss */
+/* line 184, ../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -260,17 +279,17 @@ button.print {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 177, ../../_dev/scss/tags.scss */
+/* line 191, ../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 180, ../../_dev/scss/tags.scss */
+/* line 194, ../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 183, ../../_dev/scss/tags.scss */
+/* line 197, ../../_dev/scss/tags.scss */
 .top > div {
   background: url("../images_temp/top-engineering.gif") no-repeat 97.1% 89px;
   padding-left: 50px;
@@ -278,14 +297,14 @@ button.print {
   padding-top: 84px;
 }
 
-/* line 191, ../../_dev/scss/tags.scss */
+/* line 205, ../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 198, ../../_dev/scss/tags.scss */
+/* line 212, ../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-family: PlumbMedium;
@@ -295,7 +314,7 @@ footer.index {
   text-transform: uppercase;
 }
 
-/* line 208, ../../_dev/scss/tags.scss */
+/* line 222, ../../_dev/scss/tags.scss */
 #engineering-systems .content h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, Sans Serif;
@@ -306,7 +325,7 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 219, ../../_dev/scss/tags.scss */
+/* line 233, ../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -315,26 +334,26 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 227, ../../_dev/scss/tags.scss */
+/* line 241, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 231, ../../_dev/scss/tags.scss */
+/* line 245, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 236, ../../_dev/scss/tags.scss */
+/* line 250, ../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 239, ../../_dev/scss/tags.scss */
+/* line 253, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 243, ../../_dev/scss/tags.scss */
+/* line 257, ../../_dev/scss/tags.scss */
 #engineering-systems .content li {
   display: block;
   font-family: Arial, Helvetica, Sans Serif;
@@ -342,7 +361,7 @@ ul.social li {
   color: #3f3f3f;
   margin-bottom: 16px;
 }
-/* line 248, ../../_dev/scss/tags.scss */
+/* line 262, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -354,27 +373,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 259, ../../_dev/scss/tags.scss */
+/* line 273, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li:nth-child(1) {
   background-image: url("../images_temp/engineering/footer1.png");
 }
-/* line 259, ../../_dev/scss/tags.scss */
+/* line 273, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li:nth-child(2) {
   background-image: url("../images_temp/engineering/footer2.png");
 }
-/* line 259, ../../_dev/scss/tags.scss */
+/* line 273, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li:nth-child(3) {
   background-image: url("../images_temp/engineering/footer3.png");
 }
-/* line 259, ../../_dev/scss/tags.scss */
+/* line 273, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li:nth-child(4) {
   background-image: url("../images_temp/engineering/footer4.png");
 }
-/* line 259, ../../_dev/scss/tags.scss */
+/* line 273, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul li:nth-child(5) {
   background-image: url("../images_temp/engineering/footer5.png");
 }
-/* line 265, ../../_dev/scss/tags.scss */
+/* line 279, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -386,42 +405,42 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 276, ../../_dev/scss/tags.scss */
+/* line 290, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 285, ../../_dev/scss/tags.scss */
+/* line 299, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 289, ../../_dev/scss/tags.scss */
+/* line 303, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 293, ../../_dev/scss/tags.scss */
+/* line 307, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 297, ../../_dev/scss/tags.scss */
+/* line 311, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 304, ../../_dev/scss/tags.scss */
+/* line 318, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 308, ../../_dev/scss/tags.scss */
+/* line 322, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -432,51 +451,46 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 314, ../../_dev/scss/tags.scss */
+/* line 328, ../../_dev/scss/tags.scss */
 #engineering-systems .footer > section > ul {
   display: table;
   margin: auto;
 }
-/* line 318, ../../_dev/scss/tags.scss */
+/* line 332, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 323, ../../_dev/scss/tags.scss */
+/* line 337, ../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
 }
-/* line 326, ../../_dev/scss/tags.scss */
+/* line 340, ../../_dev/scss/tags.scss */
 .do-it p {
   display: table;
   margin: 27px auto 6px;
 }
-/* line 330, ../../_dev/scss/tags.scss */
+/* line 344, ../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica;
   font-size: 17px;
   margin-bottom: 32px;
 }
-/* line 337, ../../_dev/scss/tags.scss */
+/* line 351, ../../_dev/scss/tags.scss */
 #engineering-systems .content p.header-slim-big {
   line-height: 46px;
   margin-bottom: 41px;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
 }
-/* line 343, ../../_dev/scss/tags.scss */
+/* line 356, ../../_dev/scss/tags.scss */
 #engineering-systems .footer p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
   color: #3f3f3f;
 }
-/* line 345, ../../_dev/scss/tags.scss */
+/* line 358, ../../_dev/scss/tags.scss */
 #engineering-systems .footer p.header-big {
   color: #404040;
   display: table;
@@ -485,25 +499,29 @@ p {
   text-align: center;
   width: 500px;
 }
-/* line 355, ../../_dev/scss/tags.scss */
+/* line 367, ../../_dev/scss/tags.scss */
+#engineering-systems .footer div.float-left:first-child p {
+  margin-bottom: 6px;
+}
+/* line 371, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 361, ../../_dev/scss/tags.scss */
+/* line 377, ../../_dev/scss/tags.scss */
 .menu-container section {
   display: none;
 }
-/* line 363, ../../_dev/scss/tags.scss */
+/* line 379, ../../_dev/scss/tags.scss */
 .menu-container section.visible {
   display: block;
 }
-/* line 367, ../../_dev/scss/tags.scss */
+/* line 383, ../../_dev/scss/tags.scss */
 .do-it section {
   display: table;
   margin: auto;
 }
-/* line 371, ../../_dev/scss/tags.scss */
+/* line 387, ../../_dev/scss/tags.scss */
 #engineering-systems .content section {
   background-repeat: no-repeat;
   border-bottom: dotted 2px #e3e3e3;
@@ -511,56 +529,62 @@ p {
   padding-right: 60px;
   position: relative;
 }
-/* line 378, ../../_dev/scss/tags.scss */
+/* line 394, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(1) {
   background-image: url("../images_temp/engineering/section1.jpg");
   background-position: 23px;
   height: 352px;
 }
-/* line 383, ../../_dev/scss/tags.scss */
+/* line 399, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(2) {
   background-image: url("../images_temp/engineering/section2-leaf.jpg");
   background-position: 25px 54px;
   height: 266px;
 }
-/* line 388, ../../_dev/scss/tags.scss */
+/* line 404, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(3) {
   background-image: url("../images_temp/engineering/section3.gif");
   background-position: 46px;
   height: 301px;
 }
 
-/* line 396, ../../_dev/scss/tags.scss */
+/* line 412, ../../_dev/scss/tags.scss */
 button.print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
-/* line 400, ../../_dev/scss/tags.scss */
+/* line 416, ../../_dev/scss/tags.scss */
 #engineering-systems .footer ul span {
   background-color: #7d2b12;
   color: white;
   display: table;
   margin: auto;
-  padding: 1px 4px;
+  padding: 0 4px;
+}
+/* line 423, ../../_dev/scss/tags.scss */
+.arrows span {
+  color: #FF6447;
+  display: inline-block;
+  padding: 0 4px;
 }
 
-/* line 409, ../../_dev/scss/tags.scss */
+/* line 430, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 414, ../../_dev/scss/tags.scss */
+/* line 435, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 418, ../../_dev/scss/tags.scss */
+/* line 439, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 422, ../../_dev/scss/tags.scss */
+/* line 443, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -587,68 +611,70 @@ button.print span {
 /* line 14, ../../_dev/scss/classes.scss */
 .do-it {
   background-color: #832305;
+  background-image: url("../images_temp/backgrounds/tile-engineering-bottom.png");
 }
 
-/* line 17, ../../_dev/scss/classes.scss */
+/* line 18, ../../_dev/scss/classes.scss */
 .email::after {
   color: #a64726;
   content: " doma@domalux.ru";
 }
 
-/* line 21, ../../_dev/scss/classes.scss */
+/* line 22, ../../_dev/scss/classes.scss */
 .float-left {
   float: left;
 }
 
-/* line 24, ../../_dev/scss/classes.scss */
+/* line 25, ../../_dev/scss/classes.scss */
 .footer {
   background-color: #feda62;
 }
 
-/* line 27, ../../_dev/scss/classes.scss */
+/* line 28, ../../_dev/scss/classes.scss */
 .half-wide {
   width: 50%;
 }
 
-/* line 30, ../../_dev/scss/classes.scss */
+/* line 31, ../../_dev/scss/classes.scss */
 .header-big {
   font-family: PlumbMedium !important;
   font-size: 48px !important;
   text-transform: uppercase;
 }
 
-/* line 35, ../../_dev/scss/classes.scss */
+/* line 36, ../../_dev/scss/classes.scss */
 .header-slim-big {
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
 }
-/* line 39, ../../_dev/scss/classes.scss */
+/* line 40, ../../_dev/scss/classes.scss */
 .do-it .header-slim-big {
   color: white;
 }
-/* line 42, ../../_dev/scss/classes.scss */
+/* line 43, ../../_dev/scss/classes.scss */
 .container .header-slim-big {
   text-align: center;
 }
 
-/* line 46, ../../_dev/scss/classes.scss */
+/* line 47, ../../_dev/scss/classes.scss */
 .no-overflow {
   overflow: hidden;
 }
 
-/* line 49, ../../_dev/scss/classes.scss */
+/* line 50, ../../_dev/scss/classes.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 52, ../../_dev/scss/classes.scss */
+/* line 53, ../../_dev/scss/classes.scss */
 .do-it {
   color: white !important;
 }
 
-/* line 55, ../../_dev/scss/classes.scss */
+/* line 56, ../../_dev/scss/classes.scss */
 .top {
+  background-image: url("../images_temp/backgrounds/tile-engineering.png");
   background-color: #832305;
 }
 
