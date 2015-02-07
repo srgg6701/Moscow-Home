@@ -87,6 +87,16 @@ button{
     text-transform: uppercase;
     width: 175px;
   }
+  &.bg-recall{ // связан со следующим
+    background-position: 14px 11px;
+  }
+  .recall-me &{ // связан с предыдущим
+    float: right;
+    font-family: PlumbMedium;
+    font-size: 14px;
+    padding-left: 36px;
+    text-transform: uppercase;
+  }
   &.print{
     background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
     border: $border-btn;
@@ -96,6 +106,13 @@ button{
   }
 }
 div{
+  .recall-me &{
+    &.phone-number{
+      float: left;
+      font-family: PlumbMedium;
+      font-size: 36px;
+    }
+  }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);
@@ -140,7 +157,6 @@ footer{
     position: absolute;
   }
 }
-
 h1{
   .top &{
     color:white;
@@ -151,7 +167,6 @@ h1{
     text-transform: uppercase;
   }
 }
-
 header{
   display: table;
 }
@@ -225,11 +240,19 @@ ul{
 p{
   font-family: $font-second;
   font-size: 14px;
+  .recall-me &{
+    font-family: PlumbLight;
+    font-size: 38px;
+    display: table;
+    margin: auto;
+    margin-top: 27px;
+    text-transform: uppercase;
+  }
   .top &{
     color: white;
     font-family: Arial, Helvetica;
     font-size: 17px;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
   }
   #you-need & {
     &.header-slim-big{
@@ -238,11 +261,14 @@ p{
   }
 }
 section{
-  .container &{
+  .menu-container &{
     display: none;
     &.visible{
       display: block;
     }
+  }
+  .recall-me >&{
+    margin: auto;
   }
 }
 span{

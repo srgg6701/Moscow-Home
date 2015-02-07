@@ -1,6 +1,12 @@
 .bgActiveCarrot{
   //background-color: $background-carrot-dark;
 }
+.bg-orange{
+  background-color: $background-orange;
+}
+.bg-recall{
+  background: url($images_dir + 'recall-me.png') no-repeat;
+}
 .centered-vertical{
   @include centered-vertical;
 }
@@ -27,6 +33,9 @@
 }
 .no-scroll{
   overflow: hidden;
+}
+.recall-me{
+  color: white !important;
 }
 .top{
   background-color: $background-brown-dark;

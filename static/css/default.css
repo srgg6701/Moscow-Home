@@ -147,6 +147,18 @@ button.attach-file {
   width: 175px;
 }
 /* line 90, ../../_dev/scss/tags.scss */
+button.bg-recall {
+  background-position: 14px 11px;
+}
+/* line 93, ../../_dev/scss/tags.scss */
+.recall-me button {
+  float: right;
+  font-family: PlumbMedium;
+  font-size: 14px;
+  padding-left: 36px;
+  text-transform: uppercase;
+}
+/* line 100, ../../_dev/scss/tags.scss */
 button.print {
   background: url("../images_temp/print.png") white no-repeat 13px 9px;
   border: solid 1px #c9c9c9;
@@ -155,7 +167,13 @@ button.print {
   width: 175px;
 }
 
-/* line 99, ../../_dev/scss/tags.scss */
+/* line 110, ../../_dev/scss/tags.scss */
+.recall-me div.phone-number {
+  float: left;
+  font-family: PlumbMedium;
+  font-size: 36px;
+}
+/* line 116, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -170,7 +188,7 @@ button.print {
   margin: auto;
   width: 948px;
 }
-/* line 108, ../../_dev/scss/tags.scss */
+/* line 125, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -179,7 +197,7 @@ button.print {
   width: 100%;
   margin: auto;
 }
-/* line 117, ../../_dev/scss/tags.scss */
+/* line 134, ../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -196,31 +214,31 @@ button.print {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 124, ../../_dev/scss/tags.scss */
+/* line 141, ../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 127, ../../_dev/scss/tags.scss */
+/* line 144, ../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 130, ../../_dev/scss/tags.scss */
+/* line 147, ../../_dev/scss/tags.scss */
 .top > div {
   background: url("../images_temp/top-engineering.gif") no-repeat 87.8% 89px;
   padding-right: 580px;
   padding-top: 84px;
 }
 
-/* line 137, ../../_dev/scss/tags.scss */
+/* line 154, ../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 145, ../../_dev/scss/tags.scss */
+/* line 161, ../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-family: PlumbMedium;
@@ -230,26 +248,26 @@ footer.index {
   text-transform: uppercase;
 }
 
-/* line 155, ../../_dev/scss/tags.scss */
+/* line 170, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 159, ../../_dev/scss/tags.scss */
+/* line 174, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 164, ../../_dev/scss/tags.scss */
+/* line 179, ../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 167, ../../_dev/scss/tags.scss */
+/* line 182, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 171, ../../_dev/scss/tags.scss */
+/* line 186, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -261,42 +279,42 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 182, ../../_dev/scss/tags.scss */
+/* line 197, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 191, ../../_dev/scss/tags.scss */
+/* line 206, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 195, ../../_dev/scss/tags.scss */
+/* line 210, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 199, ../../_dev/scss/tags.scss */
+/* line 214, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 203, ../../_dev/scss/tags.scss */
+/* line 218, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 210, ../../_dev/scss/tags.scss */
+/* line 225, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 214, ../../_dev/scss/tags.scss */
+/* line 229, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -307,112 +325,140 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 220, ../../_dev/scss/tags.scss */
+/* line 235, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
 
-/* line 225, ../../_dev/scss/tags.scss */
+/* line 240, ../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
 }
-/* line 228, ../../_dev/scss/tags.scss */
+/* line 243, ../../_dev/scss/tags.scss */
+.recall-me p {
+  font-family: PlumbLight;
+  font-size: 38px;
+  display: table;
+  margin: auto;
+  margin-top: 27px;
+  text-transform: uppercase;
+}
+/* line 251, ../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica;
   font-size: 17px;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
-/* line 235, ../../_dev/scss/tags.scss */
+/* line 258, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 241, ../../_dev/scss/tags.scss */
-.container section {
+/* line 264, ../../_dev/scss/tags.scss */
+.menu-container section {
   display: none;
 }
-/* line 243, ../../_dev/scss/tags.scss */
-.container section.visible {
+/* line 266, ../../_dev/scss/tags.scss */
+.menu-container section.visible {
   display: block;
 }
+/* line 270, ../../_dev/scss/tags.scss */
+.recall-me > section {
+  margin: auto;
+}
 
-/* line 249, ../../_dev/scss/tags.scss */
+/* line 275, ../../_dev/scss/tags.scss */
 button.print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
 
-/* line 255, ../../_dev/scss/tags.scss */
+/* line 281, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 260, ../../_dev/scss/tags.scss */
+/* line 286, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 264, ../../_dev/scss/tags.scss */
+/* line 290, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 268, ../../_dev/scss/tags.scss */
+/* line 294, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
 }
 
 /* line 4, ../../_dev/scss/classes.scss */
+.bg-orange {
+  background-color: #ffa31f;
+}
+
+/* line 7, ../../_dev/scss/classes.scss */
+.bg-recall {
+  background: url("../images_temp/recall-me.png") no-repeat;
+}
+
+/* line 10, ../../_dev/scss/classes.scss */
 .centered-vertical {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 7, ../../_dev/scss/classes.scss */
+/* line 13, ../../_dev/scss/classes.scss */
 .contact {
   background-color: #832305;
 }
 
-/* line 10, ../../_dev/scss/classes.scss */
+/* line 16, ../../_dev/scss/classes.scss */
 .email::after {
   color: #a64726;
   content: " doma@domalux.ru";
 }
 
-/* line 14, ../../_dev/scss/classes.scss */
+/* line 20, ../../_dev/scss/classes.scss */
 .float-left {
   float: left;
 }
 
-/* line 17, ../../_dev/scss/classes.scss */
+/* line 23, ../../_dev/scss/classes.scss */
 .footer {
   background-color: #feda62;
 }
 
-/* line 20, ../../_dev/scss/classes.scss */
+/* line 26, ../../_dev/scss/classes.scss */
 .header-slim-big {
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
 }
 
-/* line 25, ../../_dev/scss/classes.scss */
+/* line 31, ../../_dev/scss/classes.scss */
 .no-overflow {
   overflow: hidden;
 }
 
-/* line 28, ../../_dev/scss/classes.scss */
+/* line 34, ../../_dev/scss/classes.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 31, ../../_dev/scss/classes.scss */
+/* line 37, ../../_dev/scss/classes.scss */
+.recall-me {
+  color: white !important;
+}
+
+/* line 40, ../../_dev/scss/classes.scss */
 .top {
   background-color: #832305;
 }
@@ -586,7 +632,7 @@ header > section form {
 }
 
 /* line 87, ../../_dev/scss/header/section/drop-down-menus.scss */
-header div.container h3 {
+header div.menu-container h3 {
   color: #bf451e;
   font-family: PlumbMedium;
 }
