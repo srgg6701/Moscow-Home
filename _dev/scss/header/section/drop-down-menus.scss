@@ -151,11 +151,20 @@ input{
 }
 li{
   header >section >section:nth-child(2) &{
+    float: left;
     padding-left: 50px;
+    padding-right: 20px;
     $i:1;
-    @each $img in "design","building","facade","engineering" {
+    @each $img in (design, building, facade, engineering) {
       &:nth-child(#{$i}){
         background: url($images_dir + 'service-' + $img + '.png') no-repeat 0 7px;
+      }
+      $i:$i+1;
+    }
+    $i:1;
+    @each $width in (201,241,215,154){
+      &:nth-child(#{$i}) {
+        width: #{$width}px;
       }
       $i:$i+1;
     }
@@ -237,7 +246,7 @@ ul{
   header >section >section:nth-child(2) &{
     margin-bottom: 4px;
     margin-top: 6px;
-    width:90%;
+    width:100%;
   }
 }
 #waiting-map{

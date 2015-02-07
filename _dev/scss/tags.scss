@@ -91,11 +91,16 @@ button{
     background-position: 14px 11px;
   }
   .recall-me &{ // связан с предыдущим
+    border: none;
+    @include border-radius(20px);
+    color: #FFF;
     float: right;
     font-family: PlumbMedium;
     font-size: 14px;
+    height: 38px;
     padding-left: 36px;
     text-transform: uppercase;
+    width: 180px;
   }
   &.print{
     background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
@@ -111,6 +116,8 @@ div{
       float: left;
       font-family: PlumbMedium;
       font-size: 36px;
+      margin-right: 20px;
+      margin-left: -20px;
     }
   }
   #showcase >&{
@@ -244,8 +251,7 @@ p{
     font-family: PlumbLight;
     font-size: 38px;
     display: table;
-    margin: auto;
-    margin-top: 27px;
+    margin: 27px auto 6px;
     text-transform: uppercase;
   }
   .top &{
@@ -268,6 +274,7 @@ section{
     }
   }
   .recall-me >&{
+    display: table;
     margin: auto;
   }
 }
