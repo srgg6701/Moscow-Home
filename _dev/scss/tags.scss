@@ -37,6 +37,14 @@ a{
   }
 }
 aside{
+  #engineering-systems .content &{
+      margin-bottom: 67px;
+  }
+  #engineering-systems .footer >section >&{
+    margin: 12px auto;
+    overflow: hidden;
+    width: 94%;
+  }
   #pointers-aside >&{
     $space:80px;
     background-color: black;
@@ -121,6 +129,26 @@ div{
       margin-left: 32px;
     }
   }
+  #engineering-systems .content >section >&{
+    position: absolute;
+  }
+  #engineering-systems .content >section:nth-child(1) >&{
+    top: 84px;
+  }
+  #engineering-systems .content >section:nth-child(2) >&{
+    top: 84px;
+  }
+  #engineering-systems .content >section:nth-child(3) >&{
+    top: 55px;
+  }
+  #engineering-systems .footer >section >aside >&{
+    &:first-child{
+      padding-right: 30px;
+    }
+    &:last-child{
+      padding-left: 59px;
+    }
+  }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);
@@ -176,6 +204,26 @@ h1{
     text-transform: uppercase;
   }
 }
+h2{
+  #engineering-systems .content &{
+    color: $color-dark-common;
+    font-family: Arial, Helvetica, Sans Serif;
+    font-size: 21px;
+    font-weight: 100;
+    margin-bottom: 14px;
+    margin-right: -4px;
+    margin-top: 0;
+  }
+}
+h3{
+  .footer &{
+    color: $color-dark-deep2;
+    font-family: PlumbMedium;
+    font-size: 36px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}
 header{
   display: table;
 }
@@ -191,6 +239,28 @@ li{
   ul.social &{
     display: block;
     padding:4px;
+  }
+  #engineering-systems .content &{
+    display: block;
+    @include paragraph-dark;
+    margin-bottom: 16px;
+  }
+  #engineering-systems .footer ul &{
+    background-repeat: no-repeat;
+    background-position: center 0;
+    display: table-cell;
+    @include paragraph-dark(18px);
+    padding-top: 72px;
+    text-align: center;
+    width: 20%;
+    $i:1;
+    $img-subdir: $images_dir + 'engineering/';
+    @each $img in 1,2,3,4,5{
+      &:nth-child(#{$i}){
+        background-image: url($img-subdir + 'footer' + $img + '.png');
+      }
+      $i:$i+1;
+    }
   }
   #showcase &{
     color: white;
@@ -241,6 +311,10 @@ ul{
     margin-top: 9px;
     z-index: 1;
   }
+  #engineering-systems .footer >section >&{
+    display: table;
+    margin: auto;
+  }
   #you-need &{
     display: table;
     margin: -12px auto 9px auto;
@@ -259,6 +333,24 @@ p{
     font-size: 17px;
     margin-bottom: 32px;
   }
+  #engineering-systems .content &{
+    &.header-slim-big{
+      line-height: 46px;
+      margin-bottom: 41px;
+      @include transform(scale(1));
+    }
+  }
+  #engineering-systems .footer &{
+    @include paragraph-dark;
+    &.header-big{
+      color:$color-dark-deep;
+      display: table;
+      line-height: 57px;
+      margin: 66px auto 41px;
+      text-align: center;
+      width: 500px;
+    }
+  }
   #you-need & {
     &.header-slim-big{
       margin-bottom: 32px;
@@ -276,11 +368,41 @@ section{
     display: table;
     margin: auto;
   }
+  #engineering-systems .content &{
+    background-repeat: no-repeat;
+    border-bottom: dotted 2px #e3e3e3;
+    padding-left: 465px;
+    padding-right: 60px;
+    position: relative;
+    $img-subdir: $images_dir + 'engineering/';
+    &:nth-child(1){
+      background-image: url($img-subdir + 'section1.jpg');
+      background-position: 23px;
+      height: 352px;
+    }
+    &:nth-child(2){
+      background-image: url($img-subdir + 'section2-leaf.jpg');
+      background-position: 25px 54px;
+      height: 266px;
+    }
+    &:nth-child(3){
+      background-image: url($img-subdir + 'section3.gif');
+      background-position: 46px;
+      height: 301px;
+    }
+  }
 }
 span{
   button.print &{
     border-bottom:dotted 1px $color-carrot;
     display: table;
+  }
+  #engineering-systems .footer ul &{
+    background-color: $background-red-darkest;
+    color: white;
+    display: table;
+    margin: auto;
+    padding: 1px 4px;
   }
 }
 ul{

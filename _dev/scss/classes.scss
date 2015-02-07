@@ -24,11 +24,18 @@
 .footer{
   background-color: $background-sand;
 }
+.half-wide{
+  width: 50%;
+}
+.header-big{
+  font-family: PlumbMedium !important;
+  font-size: 48px !important;
+  text-transform: uppercase;
+}
 .header-slim-big{
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
-  @include transform(scaleX(0.945));
   .do-it &{
     color: white;
   }
