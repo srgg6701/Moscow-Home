@@ -51,6 +51,16 @@ a{
   }
 }
 aside{
+  #decoration .content .contents div &{
+    background-image: url($images_dir + 'backgrounds/tile-100.png');
+    @include border-radius(50%);
+    float: left;
+    $s:120px;
+    height: $s;
+    margin-left: -157px;
+    margin-top: -60px;
+    width: $s;
+  }
   #engineering-systems .content &{
       margin-bottom: 67px;
   }
@@ -148,6 +158,34 @@ div{
     background-repeat: no-repeat;
     background-position: 85px 232px;
   }
+  #decoration .content .contents >&{
+    height: 222px;
+    &:nth-child(1){
+      height: 193px;
+    }
+    &:nth-child(even){
+      background-image: url($images_dir + 'backgrounds/tile-contents-grey-light.png');
+    }
+    &:nth-child(odd):not(1){
+      background-image: url($images_dir + 'backgrounds/tile-contents-dark.png');
+    }
+  }
+  #decoration .content .contents >div >&{
+    font: 17px/20px Arial, Helvetica, Sans Serif;
+    margin: auto;
+    padding-left: 160px;
+    padding-top: 60px;
+    width: $max-width-container;
+
+  }
+$i:2;
+@each $top in 80,102,88,92,87,102,88{
+  #decoration .content .contents >div:nth-child(#{$i}) >&{
+      padding-top: #{$top}px;
+  }
+  $i:$i+1;
+}
+
   #decoration #slides &.float-left{
     background-repeat: no-repeat;
     height: 280px;
@@ -239,8 +277,13 @@ h1{
     text-align: center;
     &:first-child{
       margin-bottom: 7px;
-      margin-top: 72px;
+      margin-top: 71px;
     }
+  }
+  #decoration .content >section:first-child >&:first-child{
+    font-weight: 100;
+    margin: 58px auto 22px;
+    text-align: center;
   }
 }
 h2{
@@ -340,23 +383,9 @@ li{
     }
   }
 }
-ul{
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  &.social{
-    background: url($images_dir + "social-left-vertical.png") no-repeat;
-    @include menu-social-right(43px, 8px);
-    margin-top: 9px;
-    z-index: 1;
-  }
-  .footer.why-moscow-home >section >&{
-    display: table;
-    margin: auto;
-  }
-  #you-need &{
-    display: table;
-    margin: -12px auto 9px auto;
+main{
+  #decoration &{
+    background-image: url($images_dir + 'backgrounds/tile-contents.png');
   }
 }
 p{
@@ -371,6 +400,13 @@ p{
     font-family: Arial, Helvetica;
     font-size: 17px;
     margin-bottom: 32px;
+  }
+  #decoration .content >section:first-child >&{
+    font-size: 16px;
+    line-height: 20px;
+    margin: auto;
+    margin-bottom: 27px;
+    width: 672px;
   }
   #engineering-systems .content &{
     &.header-slim-big{
@@ -456,8 +492,39 @@ span{
     display: inline-block;
     padding: 0 4px;
   }
+  #decoration .contents aside &{
+    background-image: url($images_dir + 'decoration/pyctos.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  $i:1;
+  @each $posY in 28,233,466,699,932,1165,1398,1631{
+    #decoration .contents div:nth-child(#{$i}) &{
+      background-position: 12px #{$posY}px;
+    }
+    $i:$i+1;
+  }
 }
 ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  &.social{
+    background: url($images_dir + "social-left-vertical.png") no-repeat;
+    @include menu-social-right(43px, 8px);
+    margin-top: 9px;
+    z-index: 1;
+  }
+  .footer.why-moscow-home >section >&{
+    display: table;
+    margin: auto;
+  }
+  #you-need &{
+    display: table;
+    margin: -12px auto 9px auto;
+  }
   #showcase &{
     // вернуть на место отступ сверху и сниху по умолчанию
     margin: 1em auto;

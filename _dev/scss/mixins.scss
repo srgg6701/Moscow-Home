@@ -6,7 +6,7 @@
 }
 @mixin centred-margins{
   margin: auto;
-  width: $max-with-content;
+  width: $max-width-content;
 }
 @mixin centered-vertical{
   position: relative;

@@ -1,4 +1,3 @@
-@charset "IBM866";
 /* default sass file */
 @font-face {
   font-family: 'PlumbLight';
@@ -103,16 +102,30 @@ ul.social a {
 }
 
 /* line 54, ../../_dev/scss/tags.scss */
+#decoration .content .contents div aside {
+  background-image: url("../images_temp/backgrounds/tile-100.png");
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 120px;
+  margin-left: -157px;
+  margin-top: -60px;
+  width: 120px;
+}
+/* line 64, ../../_dev/scss/tags.scss */
 #engineering-systems .content aside {
   margin-bottom: 67px;
 }
-/* line 57, ../../_dev/scss/tags.scss */
+/* line 67, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside {
   margin: 21px auto auto;
   overflow: hidden;
   width: 94%;
 }
-/* line 62, ../../_dev/scss/tags.scss */
+/* line 72, ../../_dev/scss/tags.scss */
 #pointers-aside > aside {
   background-color: black;
   background-position: center;
@@ -128,13 +141,13 @@ ul.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 74, ../../_dev/scss/tags.scss */
+/* line 84, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 18px;
 }
-/* line 79, ../../_dev/scss/tags.scss */
+/* line 89, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -145,7 +158,7 @@ ul.social a {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-/* line 86, ../../_dev/scss/tags.scss */
+/* line 96, ../../_dev/scss/tags.scss */
 #slides aside {
   background: url("../images_temp/backgrounds/tile-microsquare.png");
   height: 135px;
@@ -155,18 +168,18 @@ ul.social a {
   width: 153px;
 }
 
-/* line 95, ../../_dev/scss/tags.scss */
+/* line 105, ../../_dev/scss/tags.scss */
 body {
   color: #5d534e;
 }
 
-/* line 99, ../../_dev/scss/tags.scss */
+/* line 109, ../../_dev/scss/tags.scss */
 button.attach-file, button.print {
   height: 31px;
   color: #a64726;
   font-size: 13px;
 }
-/* line 104, ../../_dev/scss/tags.scss */
+/* line 114, ../../_dev/scss/tags.scss */
 button.attach-file {
   background: url("../images_temp/attach-file.png") white no-repeat 10px 4px;
   border: none;
@@ -175,11 +188,11 @@ button.attach-file {
   text-transform: uppercase;
   width: 175px;
 }
-/* line 112, ../../_dev/scss/tags.scss */
+/* line 122, ../../_dev/scss/tags.scss */
 button.bg-recall {
   background-position: 14px 11px;
 }
-/* line 115, ../../_dev/scss/tags.scss */
+/* line 125, ../../_dev/scss/tags.scss */
 .do-it button {
   border: none;
   -webkit-border-radius: 20px;
@@ -197,7 +210,7 @@ button.bg-recall {
   text-transform: uppercase;
   width: 180px;
 }
-/* line 128, ../../_dev/scss/tags.scss */
+/* line 138, ../../_dev/scss/tags.scss */
 button.print {
   background: url("../images_temp/print.png") white no-repeat 13px 9px;
   border: solid 1px #c9c9c9;
@@ -206,7 +219,7 @@ button.print {
   width: 175px;
 }
 
-/* line 138, ../../_dev/scss/tags.scss */
+/* line 148, ../../_dev/scss/tags.scss */
 .do-it div.phone-number {
   float: left;
   font-family: PlumbMedium;
@@ -214,58 +227,110 @@ button.print {
   margin-right: 2px;
   margin-left: 32px;
 }
-/* line 146, ../../_dev/scss/tags.scss */
+/* line 156, ../../_dev/scss/tags.scss */
 #decoration .top div.relative {
   background-image: url("../images_temp/decoration/decoration-top.png");
   background-repeat: no-repeat;
   background-position: 85px 232px;
 }
-/* line 151, ../../_dev/scss/tags.scss */
+/* line 161, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div {
+  height: 222px;
+}
+/* line 163, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(1) {
+  height: 193px;
+}
+/* line 166, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(even) {
+  background-image: url("../images_temp/backgrounds/tile-contents-grey-light.png");
+}
+/* line 169, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(odd):not(1) {
+  background-image: url("../images_temp/backgrounds/tile-contents-dark.png");
+}
+/* line 173, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div > div {
+  font: 17px/20px Arial, Helvetica, Sans Serif;
+  margin: auto;
+  padding-left: 160px;
+  padding-top: 60px;
+  width: 960px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(2) > div {
+  padding-top: 80px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(3) > div {
+  padding-top: 102px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(4) > div {
+  padding-top: 88px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(5) > div {
+  padding-top: 92px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(6) > div {
+  padding-top: 87px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(7) > div {
+  padding-top: 102px;
+}
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration .content .contents > div:nth-child(8) > div {
+  padding-top: 88px;
+}
+/* line 189, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left {
   background-repeat: no-repeat;
   height: 280px;
   width: 50%;
 }
-/* line 155, ../../_dev/scss/tags.scss */
+/* line 193, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left:nth-child(1) {
   background-image: url("../images_temp/decoration/exmpl-big.jpg");
 }
-/* line 158, ../../_dev/scss/tags.scss */
+/* line 196, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left:nth-child(2) {
   background-image: url("../images_temp/decoration/exmpls-right.jpg");
 }
-/* line 162, ../../_dev/scss/tags.scss */
+/* line 200, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section > div {
   position: absolute;
 }
-/* line 165, ../../_dev/scss/tags.scss */
+/* line 203, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(1) > div {
   top: 84px;
 }
-/* line 168, ../../_dev/scss/tags.scss */
+/* line 206, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(2) > div {
   top: 84px;
 }
-/* line 171, ../../_dev/scss/tags.scss */
+/* line 209, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(3) > div {
   top: 55px;
 }
-/* line 175, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:first-child {
   padding-right: 30px;
 }
-/* line 178, ../../_dev/scss/tags.scss */
+/* line 216, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:last-child {
   padding-left: 59px;
 }
-/* line 182, ../../_dev/scss/tags.scss */
+/* line 220, ../../_dev/scss/tags.scss */
 #engineering-systems .top > div {
   background: url("../images_temp/top-engineering.gif") no-repeat 97.1% 89px;
   padding-left: 50px;
   padding-right: 485px;
   padding-top: 84px;
 }
-/* line 188, ../../_dev/scss/tags.scss */
+/* line 226, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -280,7 +345,7 @@ button.print {
   margin: auto;
   width: 948px;
 }
-/* line 197, ../../_dev/scss/tags.scss */
+/* line 235, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -289,7 +354,7 @@ button.print {
   width: 100%;
   margin: auto;
 }
-/* line 206, ../../_dev/scss/tags.scss */
+/* line 244, ../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -306,25 +371,25 @@ button.print {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 213, ../../_dev/scss/tags.scss */
+/* line 251, ../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 216, ../../_dev/scss/tags.scss */
+/* line 254, ../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 221, ../../_dev/scss/tags.scss */
+/* line 259, ../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 228, ../../_dev/scss/tags.scss */
+/* line 266, ../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-family: PlumbMedium;
@@ -333,19 +398,25 @@ footer.index {
   margin-bottom: 36px;
   text-transform: uppercase;
 }
-/* line 236, ../../_dev/scss/tags.scss */
+/* line 274, ../../_dev/scss/tags.scss */
 #decoration .top h1 {
   display: table;
   margin: auto;
   text-align: center;
 }
-/* line 240, ../../_dev/scss/tags.scss */
+/* line 278, ../../_dev/scss/tags.scss */
 #decoration .top h1:first-child {
   margin-bottom: 7px;
-  margin-top: 72px;
+  margin-top: 71px;
+}
+/* line 283, ../../_dev/scss/tags.scss */
+#decoration .content > section:first-child > h1:first-child {
+  font-weight: 100;
+  margin: 58px auto 22px;
+  text-align: center;
 }
 
-/* line 247, ../../_dev/scss/tags.scss */
+/* line 290, ../../_dev/scss/tags.scss */
 #engineering-systems .content h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, Sans Serif;
@@ -356,7 +427,7 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 258, ../../_dev/scss/tags.scss */
+/* line 301, ../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -365,26 +436,26 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 266, ../../_dev/scss/tags.scss */
+/* line 309, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 270, ../../_dev/scss/tags.scss */
+/* line 313, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 275, ../../_dev/scss/tags.scss */
+/* line 318, ../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 278, ../../_dev/scss/tags.scss */
+/* line 321, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 282, ../../_dev/scss/tags.scss */
+/* line 325, ../../_dev/scss/tags.scss */
 #engineering-systems .content li {
   display: block;
   font-family: Arial, Helvetica, Sans Serif;
@@ -392,7 +463,7 @@ ul.social li {
   color: #3f3f3f;
   margin-bottom: 16px;
 }
-/* line 287, ../../_dev/scss/tags.scss */
+/* line 330, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -404,27 +475,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 298, ../../_dev/scss/tags.scss */
+/* line 341, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(1) {
   background-image: url("../images_temp/engineering/footer1.png");
 }
-/* line 298, ../../_dev/scss/tags.scss */
+/* line 341, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(2) {
   background-image: url("../images_temp/engineering/footer2.png");
 }
-/* line 298, ../../_dev/scss/tags.scss */
+/* line 341, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(3) {
   background-image: url("../images_temp/engineering/footer3.png");
 }
-/* line 298, ../../_dev/scss/tags.scss */
+/* line 341, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(4) {
   background-image: url("../images_temp/engineering/footer4.png");
 }
-/* line 298, ../../_dev/scss/tags.scss */
+/* line 341, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(5) {
   background-image: url("../images_temp/engineering/footer5.png");
 }
-/* line 304, ../../_dev/scss/tags.scss */
+/* line 347, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -436,42 +507,208 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 315, ../../_dev/scss/tags.scss */
+/* line 358, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 324, ../../_dev/scss/tags.scss */
+/* line 367, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 328, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 332, ../../_dev/scss/tags.scss */
+/* line 375, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 336, ../../_dev/scss/tags.scss */
+/* line 379, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 343, ../../_dev/scss/tags.scss */
+/* line 387, ../../_dev/scss/tags.scss */
+#decoration main {
+  background-image: url("../images_temp/backgrounds/tile-contents.png");
+}
+
+/* line 391, ../../_dev/scss/tags.scss */
+p {
+  font-family: Arial, Helvetica, Sans Serif;
+  font-size: 14px;
+}
+/* line 394, ../../_dev/scss/tags.scss */
+.do-it p {
+  display: table;
+  margin: 27px auto 6px;
+}
+/* line 398, ../../_dev/scss/tags.scss */
+.top p {
+  color: white;
+  font-family: Arial, Helvetica;
+  font-size: 17px;
+  margin-bottom: 32px;
+}
+/* line 404, ../../_dev/scss/tags.scss */
+#decoration .content > section:first-child > p {
+  font-size: 16px;
+  line-height: 20px;
+  margin: auto;
+  margin-bottom: 27px;
+  width: 672px;
+}
+/* line 412, ../../_dev/scss/tags.scss */
+#engineering-systems .content p.header-slim-big {
+  line-height: 46px;
+  margin-bottom: 41px;
+}
+/* line 417, ../../_dev/scss/tags.scss */
+.footer.why-moscow-home p {
+  font-family: Arial, Helvetica, Sans Serif;
+  font-size: 14px;
+  color: #3f3f3f;
+}
+/* line 419, ../../_dev/scss/tags.scss */
+.footer.why-moscow-home p.header-big {
+  color: #404040;
+  display: table;
+  line-height: 57px;
+  margin: 66px auto 41px;
+  text-align: center;
+  width: 500px;
+}
+/* line 428, ../../_dev/scss/tags.scss */
+.footer.why-moscow-home div.float-left:first-child p {
+  margin-bottom: 6px;
+}
+/* line 432, ../../_dev/scss/tags.scss */
+#you-need p.header-slim-big {
+  margin-bottom: 32px;
+}
+
+/* line 438, ../../_dev/scss/tags.scss */
+.menu-container section {
+  display: none;
+}
+/* line 440, ../../_dev/scss/tags.scss */
+.menu-container section.visible {
+  display: block;
+}
+/* line 444, ../../_dev/scss/tags.scss */
+.do-it section {
+  display: table;
+  margin: auto;
+}
+/* line 448, ../../_dev/scss/tags.scss */
+#decoration .top section {
+  left: 133px;
+  position: absolute;
+  top: 510px;
+  width: 75%;
+}
+/* line 454, ../../_dev/scss/tags.scss */
+#engineering-systems .content section {
+  background-repeat: no-repeat;
+  border-bottom: dotted 2px #e3e3e3;
+  padding-left: 465px;
+  padding-right: 60px;
+  position: relative;
+}
+/* line 461, ../../_dev/scss/tags.scss */
+#engineering-systems .content section:nth-child(1) {
+  background-image: url("../images_temp/engineering/section1.jpg");
+  background-position: 23px;
+  height: 352px;
+}
+/* line 466, ../../_dev/scss/tags.scss */
+#engineering-systems .content section:nth-child(2) {
+  background-image: url("../images_temp/engineering/section2-leaf.jpg");
+  background-position: 25px 54px;
+  height: 266px;
+}
+/* line 471, ../../_dev/scss/tags.scss */
+#engineering-systems .content section:nth-child(3) {
+  background-image: url("../images_temp/engineering/section3.gif");
+  background-position: 46px;
+  height: 301px;
+}
+
+/* line 479, ../../_dev/scss/tags.scss */
+button.print span {
+  border-bottom: dotted 1px #a64726;
+  display: table;
+}
+/* line 483, ../../_dev/scss/tags.scss */
+.footer.why-moscow-home ul span {
+  background-color: #7d2b12;
+  color: white;
+  display: table;
+  margin: auto;
+  padding: 0 4px;
+}
+/* line 490, ../../_dev/scss/tags.scss */
+.arrows span {
+  color: #FF6447;
+  display: inline-block;
+  padding: 0 4px;
+}
+/* line 495, ../../_dev/scss/tags.scss */
+#decoration .contents aside span {
+  background-image: url("../images_temp/decoration/pyctos.png");
+  background-repeat: no-repeat;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(1) span {
+  background-position: 12px 28px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(2) span {
+  background-position: 12px 233px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(3) span {
+  background-position: 12px 466px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(4) span {
+  background-position: 12px 699px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(5) span {
+  background-position: 12px 932px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(6) span {
+  background-position: 12px 1165px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(7) span {
+  background-position: 12px 1398px;
+}
+/* line 504, ../../_dev/scss/tags.scss */
+#decoration .contents div:nth-child(8) span {
+  background-position: 12px 1631px;
+}
+
+/* line 510, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 347, ../../_dev/scss/tags.scss */
+/* line 514, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -482,147 +719,33 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 353, ../../_dev/scss/tags.scss */
+/* line 520, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > ul {
   display: table;
   margin: auto;
 }
-/* line 357, ../../_dev/scss/tags.scss */
+/* line 524, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
-
-/* line 362, ../../_dev/scss/tags.scss */
-p {
-  font-family: Arial, Helvetica, Sans Serif;
-  font-size: 14px;
-}
-/* line 365, ../../_dev/scss/tags.scss */
-.do-it p {
-  display: table;
-  margin: 27px auto 6px;
-}
-/* line 369, ../../_dev/scss/tags.scss */
-.top p {
-  color: white;
-  font-family: Arial, Helvetica;
-  font-size: 17px;
-  margin-bottom: 32px;
-}
-/* line 376, ../../_dev/scss/tags.scss */
-#engineering-systems .content p.header-slim-big {
-  line-height: 46px;
-  margin-bottom: 41px;
-}
-/* line 381, ../../_dev/scss/tags.scss */
-.footer.why-moscow-home p {
-  font-family: Arial, Helvetica, Sans Serif;
-  font-size: 14px;
-  color: #3f3f3f;
-}
-/* line 383, ../../_dev/scss/tags.scss */
-.footer.why-moscow-home p.header-big {
-  color: #404040;
-  display: table;
-  line-height: 57px;
-  margin: 66px auto 41px;
-  text-align: center;
-  width: 500px;
-}
-/* line 392, ../../_dev/scss/tags.scss */
-.footer.why-moscow-home div.float-left:first-child p {
-  margin-bottom: 6px;
-}
-/* line 396, ../../_dev/scss/tags.scss */
-#you-need p.header-slim-big {
-  margin-bottom: 32px;
-}
-
-/* line 402, ../../_dev/scss/tags.scss */
-.menu-container section {
-  display: none;
-}
-/* line 404, ../../_dev/scss/tags.scss */
-.menu-container section.visible {
-  display: block;
-}
-/* line 408, ../../_dev/scss/tags.scss */
-.do-it section {
-  display: table;
-  margin: auto;
-}
-/* line 412, ../../_dev/scss/tags.scss */
-#decoration .top section {
-  left: 133px;
-  position: absolute;
-  top: 510px;
-  width: 75%;
-}
-/* line 418, ../../_dev/scss/tags.scss */
-#engineering-systems .content section {
-  background-repeat: no-repeat;
-  border-bottom: dotted 2px #e3e3e3;
-  padding-left: 465px;
-  padding-right: 60px;
-  position: relative;
-}
-/* line 425, ../../_dev/scss/tags.scss */
-#engineering-systems .content section:nth-child(1) {
-  background-image: url("../images_temp/engineering/section1.jpg");
-  background-position: 23px;
-  height: 352px;
-}
-/* line 430, ../../_dev/scss/tags.scss */
-#engineering-systems .content section:nth-child(2) {
-  background-image: url("../images_temp/engineering/section2-leaf.jpg");
-  background-position: 25px 54px;
-  height: 266px;
-}
-/* line 435, ../../_dev/scss/tags.scss */
-#engineering-systems .content section:nth-child(3) {
-  background-image: url("../images_temp/engineering/section3.gif");
-  background-position: 46px;
-  height: 301px;
-}
-
-/* line 443, ../../_dev/scss/tags.scss */
-button.print span {
-  border-bottom: dotted 1px #a64726;
-  display: table;
-}
-/* line 447, ../../_dev/scss/tags.scss */
-.footer.why-moscow-home ul span {
-  background-color: #7d2b12;
-  color: white;
-  display: table;
-  margin: auto;
-  padding: 0 4px;
-}
-/* line 454, ../../_dev/scss/tags.scss */
-.arrows span {
-  color: #FF6447;
-  display: inline-block;
-  padding: 0 4px;
-}
-
-/* line 461, ../../_dev/scss/tags.scss */
+/* line 528, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 466, ../../_dev/scss/tags.scss */
+/* line 533, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 470, ../../_dev/scss/tags.scss */
+/* line 537, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 474, ../../_dev/scss/tags.scss */
+/* line 541, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -813,7 +936,7 @@ header, main, footer {
 }
 
 /* line 73, ../../_dev/scss/layout.scss */
-body:not(.no-overflow) > div > * > * {
+body:not(.no-overflow) > div > * > *:not(.wide) {
   height: 100%;
   margin: auto;
   max-width: 960px;
@@ -847,11 +970,6 @@ header > section > section:nth-child(4) button.attach-file {
   margin-bottom: -3px;
 }
 
-/* line 30, ../../_dev/scss/header/section/drop-down-menus.scss */
-div {
-  /*header >section >section:nth-child(1) >div >aside >&{
-  }*/
-}
 /* line 31, ../../_dev/scss/header/section/drop-down-menus.scss */
 header aside > div {
   color: #933;
@@ -880,17 +998,17 @@ header > section > section > div:not(.centered) {
 header > section > section:nth-child(1) > div {
   padding-left: 264px;
 }
-/* line 61, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 58, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) > div > div {
   margin-bottom: 31px;
   margin-top: 21px;
 }
-/* line 65, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 62, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div {
   margin-bottom: -9px;
   width: 370px;
 }
-/* line 68, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 65, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div.bottom-bg {
   background: url("../images_temp/backgrounds/tile-contacts-dark.png");
   bottom: 0px;
@@ -902,19 +1020,19 @@ header > section > section:nth-child(4) > div.bottom-bg {
   z-index: 0;
 }
 
-/* line 81, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 78, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form {
   overflow: hidden;
   margin: 0 6px 0;
 }
 
-/* line 87, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 84, ../../_dev/scss/header/section/drop-down-menus.scss */
 header div.menu-container h3 {
   color: #bf451e;
   font-family: PlumbMedium;
 }
 
-/* line 93, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 90, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section h4 {
   font-family: PlumbLight;
   font-size: 36px;
@@ -922,17 +1040,17 @@ header > section > section h4 {
   margin-top: -2px;
   text-transform: uppercase;
 }
-/* line 100, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 97, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) h4 {
   color: white;
   text-align: center;
 }
 
-/* line 106, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 103, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input {
   color: #5d534e;
 }
-/* line 110, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 107, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type="tel"], header > section input[type="email"], header > section input[type="text"] {
   display: block;
   height: 36px;
@@ -948,7 +1066,7 @@ header > section input[type="tel"], header > section input[type="email"], header
   border: solid 1px #CCC;
   width: 100%;
 }
-/* line 118, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 115, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type=""] {
   border-radius: 20px;
   display: block;
@@ -961,7 +1079,7 @@ header > section input[type=""] {
   transform: translateX(-50%);
   width: 150px;
 }
-/* line 132, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 129, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) input[type="submit"] {
   background-color: #FFF;
   border: none;
@@ -976,86 +1094,86 @@ header > section > section:nth-child(4) input[type="submit"] {
   width: 150px;
   z-index: 2;
 }
-/* line 148, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 145, ../../_dev/scss/header/section/drop-down-menus.scss */
 form p:nth-child(2) input, form p:nth-child(3) input {
   margin-top: 6px;
 }
 
-/* line 153, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 150, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li {
   float: left;
   padding-left: 50px;
   padding-right: 20px;
 }
-/* line 159, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 156, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   background: url("../images_temp/service-design.png") no-repeat 0 7px;
 }
-/* line 159, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 156, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   background: url("../images_temp/service-building.png") no-repeat 0 7px;
 }
-/* line 159, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 156, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   background: url("../images_temp/service-facade.png") no-repeat 0 7px;
 }
-/* line 159, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 156, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   background: url("../images_temp/service-engineering.png") no-repeat 0 7px;
 }
-/* line 166, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 163, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   width: 201px;
 }
-/* line 166, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 163, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   width: 241px;
 }
-/* line 166, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 163, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   width: 215px;
 }
-/* line 166, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 163, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   width: 154px;
 }
 
-/* line 174, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 171, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p {
   color: white;
   text-transform: uppercase;
 }
-/* line 178, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 175, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2), header > section form p:nth-child(3) {
   float: left;
   margin-top: 14px;
   width: 50%;
 }
-/* line 183, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 180, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2) {
   padding-right: 11px;
 }
-/* line 186, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 183, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(3) {
   padding-left: 10px;
 }
-/* line 189, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 186, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(4) {
   float: left;
   margin-top: 15px;
   width: 100%;
 }
-/* line 195, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 192, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div > p {
   width: 450px;
 }
-/* line 198, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 195, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) p {
   font-size: 14px;
   line-height: 13px;
 }
 
-/* line 204, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 201, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section {
   display: none;
   left: 0;
@@ -1065,32 +1183,20 @@ header > section {
   right: 0;
   z-index: 1;
 }
-/* line 213, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 210, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section {
   background-color: white;
   border-top: solid 1px #CACACA;
   margin: auto;
   margin-top: 23px;
   padding: 22px 24px 26px;
-    /*&:nth-child(1){ // О компании
-
-    }
-    &:nth-child(2){ // Услуги
-
-    }
-    &:nth-child(3){ // Контакты
-
-    }
-    &:nth-child(4){ // Консультация
-
-    }*/
 }
-/* line 219, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 216, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) {
   background: url("../images_temp/backgrounds/tile-contacts.png");
 }
 
-/* line 237, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 222, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section textarea {
   display: block;
   height: 85px;
@@ -1107,14 +1213,14 @@ header > section textarea {
   border: solid 1px #CCC;
 }
 
-/* line 246, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 231, ../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) ul {
   margin-bottom: 4px;
   margin-top: 6px;
   width: 100%;
 }
 
-/* line 252, ../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 237, ../../_dev/scss/header/section/drop-down-menus.scss */
 #waiting-map {
   background-color: #999;
   border-radius: 20px;
