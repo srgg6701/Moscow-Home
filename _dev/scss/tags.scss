@@ -61,6 +61,13 @@ aside{
     margin-top: -60px;
     width: $s;
   }
+$i:2;
+@each $top in 69,51,57,62,57,52,58 {
+  #decoration .content .contents >div:nth-child(#{$i}) &{
+    margin-top: #{-$top}px;
+  }
+  $i:$i+1;
+}
   #engineering-systems .content &{
       margin-bottom: 67px;
   }
@@ -500,7 +507,7 @@ span{
     width: 100%;
   }
   $i:1;
-  @each $posY in 28,233,466,699,932,1165,1398,1631{
+  @each $posY in 28,-197,-419,-641,-862,-1084,-1306,-1527 {
     #decoration .contents div:nth-child(#{$i}) &{
       background-position: 12px #{$posY}px;
     }
