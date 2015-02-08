@@ -1,4 +1,7 @@
 #slider-bottom
     #slides
         .float-left
+            a(href="work1")="work1"
         .float-left
+            each link in ['work2','work3','work4','work4','work6','work7']
+                a(href=link)=link

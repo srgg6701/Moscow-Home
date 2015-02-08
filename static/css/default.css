@@ -91,6 +91,28 @@ ul.social a {
   width: 128px;
 }
 /* line 43, ../../_dev/scss/tags.scss */
+#decoration #slides > div.float-left a {
+  display: block;
+  font-size: 0;
+}
+/* line 47, ../../_dev/scss/tags.scss */
+#decoration #slides > div.float-left:first-child a {
+  height: 100%;
+  width: 476px;
+}
+/* line 51, ../../_dev/scss/tags.scss */
+#decoration #slides > div.float-left:last-child a {
+  float: left;
+  height: 134px;
+  margin-bottom: 9px;
+  margin-right: 8.5px;
+  width: 153px;
+}
+/* line 59, ../../_dev/scss/tags.scss */
+#decoration #slides > div.float-left:last-child a:nth-child(3), #decoration #slides > div.float-left:last-child a:nth-child(6) {
+  margin-right: 0;
+}
+/* line 63, ../../_dev/scss/tags.scss */
 #you-need ul a {
   color: #bf451e;
   display: block;
@@ -101,7 +123,7 @@ ul.social a {
   white-space: normal;
 }
 
-/* line 54, ../../_dev/scss/tags.scss */
+/* line 74, ../../_dev/scss/tags.scss */
 #decoration .content .contents div aside {
   background-image: url("../images_temp/backgrounds/tile-100.png");
   -webkit-border-radius: 50%;
@@ -115,45 +137,45 @@ ul.social a {
   margin-top: -60px;
   width: 120px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(2) aside {
   margin-top: -69px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(3) aside {
   margin-top: -51px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(4) aside {
   margin-top: -57px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(5) aside {
   margin-top: -62px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(6) aside {
   margin-top: -57px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(7) aside {
   margin-top: -52px;
 }
-/* line 66, ../../_dev/scss/tags.scss */
+/* line 86, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(8) aside {
   margin-top: -58px;
 }
-/* line 71, ../../_dev/scss/tags.scss */
+/* line 91, ../../_dev/scss/tags.scss */
 #engineering-systems .content aside {
   margin-bottom: 67px;
 }
-/* line 74, ../../_dev/scss/tags.scss */
+/* line 94, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside {
   margin: 21px auto auto;
   overflow: hidden;
   width: 94%;
 }
-/* line 79, ../../_dev/scss/tags.scss */
+/* line 99, ../../_dev/scss/tags.scss */
 #pointers-aside > aside {
   background-color: black;
   background-position: center;
@@ -169,13 +191,13 @@ ul.social a {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 91, ../../_dev/scss/tags.scss */
+/* line 111, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(1) {
   background-image: url("../images_temp/pointer.png");
   float: left;
   margin-left: 18px;
 }
-/* line 96, ../../_dev/scss/tags.scss */
+/* line 116, ../../_dev/scss/tags.scss */
 #pointers-aside > aside:nth-child(2) {
   background-image: url("../images_temp/pointer.png");
   float: right;
@@ -186,7 +208,7 @@ ul.social a {
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-/* line 103, ../../_dev/scss/tags.scss */
+/* line 123, ../../_dev/scss/tags.scss */
 #slides aside {
   background: url("../images_temp/backgrounds/tile-microsquare.png");
   height: 135px;
@@ -196,18 +218,18 @@ ul.social a {
   width: 153px;
 }
 
-/* line 112, ../../_dev/scss/tags.scss */
+/* line 132, ../../_dev/scss/tags.scss */
 body {
   color: #5d534e;
 }
 
-/* line 116, ../../_dev/scss/tags.scss */
+/* line 136, ../../_dev/scss/tags.scss */
 button.attach-file, button.print {
   height: 31px;
   color: #a64726;
   font-size: 13px;
 }
-/* line 121, ../../_dev/scss/tags.scss */
+/* line 141, ../../_dev/scss/tags.scss */
 button.attach-file {
   background: url("../images_temp/attach-file.png") white no-repeat 10px 4px;
   border: none;
@@ -216,11 +238,11 @@ button.attach-file {
   text-transform: uppercase;
   width: 175px;
 }
-/* line 129, ../../_dev/scss/tags.scss */
+/* line 149, ../../_dev/scss/tags.scss */
 button.bg-recall {
   background-position: 14px 11px;
 }
-/* line 132, ../../_dev/scss/tags.scss */
+/* line 152, ../../_dev/scss/tags.scss */
 .do-it button {
   border: none;
   -webkit-border-radius: 20px;
@@ -238,7 +260,7 @@ button.bg-recall {
   text-transform: uppercase;
   width: 180px;
 }
-/* line 145, ../../_dev/scss/tags.scss */
+/* line 165, ../../_dev/scss/tags.scss */
 button.print {
   background: url("../images_temp/print.png") white no-repeat 13px 9px;
   border: solid 1px #c9c9c9;
@@ -247,7 +269,7 @@ button.print {
   width: 175px;
 }
 
-/* line 155, ../../_dev/scss/tags.scss */
+/* line 175, ../../_dev/scss/tags.scss */
 .do-it div.phone-number {
   float: left;
   font-family: PlumbMedium;
@@ -255,29 +277,33 @@ button.print {
   margin-right: 2px;
   margin-left: 32px;
 }
-/* line 163, ../../_dev/scss/tags.scss */
+/* line 183, ../../_dev/scss/tags.scss */
+#decoration div#slider-bottom {
+  height: 376px;
+}
+/* line 186, ../../_dev/scss/tags.scss */
 #decoration .top div.relative {
   background-image: url("../images_temp/decoration/decoration-top.png");
   background-repeat: no-repeat;
   background-position: 85px 232px;
 }
-/* line 168, ../../_dev/scss/tags.scss */
+/* line 191, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div {
   height: 222px;
 }
-/* line 170, ../../_dev/scss/tags.scss */
+/* line 193, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(1) {
   height: 193px;
 }
-/* line 173, ../../_dev/scss/tags.scss */
+/* line 196, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(even) {
   background-image: url("../images_temp/backgrounds/tile-contents-grey-light.png");
 }
-/* line 176, ../../_dev/scss/tags.scss */
+/* line 199, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(odd):not(1) {
   background-image: url("../images_temp/backgrounds/tile-contents-dark.png");
 }
-/* line 180, ../../_dev/scss/tags.scss */
+/* line 203, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div > div {
   font: 17px/20px Arial, Helvetica, Sans Serif;
   margin: auto;
@@ -285,80 +311,80 @@ button.print {
   padding-top: 60px;
   width: 960px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(2) > div {
   padding-top: 80px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(3) > div {
   padding-top: 102px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(4) > div {
   padding-top: 88px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(5) > div {
   padding-top: 92px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(6) > div {
   padding-top: 87px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(7) > div {
   padding-top: 102px;
 }
-/* line 190, ../../_dev/scss/tags.scss */
+/* line 213, ../../_dev/scss/tags.scss */
 #decoration .content .contents > div:nth-child(8) > div {
   padding-top: 88px;
 }
-/* line 196, ../../_dev/scss/tags.scss */
+/* line 219, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left {
   background-repeat: no-repeat;
   height: 280px;
   width: 50%;
 }
-/* line 200, ../../_dev/scss/tags.scss */
+/* line 223, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left:nth-child(1) {
   background-image: url("../images_temp/decoration/exmpl-big.jpg");
 }
-/* line 203, ../../_dev/scss/tags.scss */
+/* line 226, ../../_dev/scss/tags.scss */
 #decoration #slides div.float-left:nth-child(2) {
   background-image: url("../images_temp/decoration/exmpls-right.jpg");
 }
-/* line 207, ../../_dev/scss/tags.scss */
+/* line 230, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section > div {
   position: absolute;
 }
-/* line 210, ../../_dev/scss/tags.scss */
+/* line 233, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(1) > div {
   top: 84px;
 }
-/* line 213, ../../_dev/scss/tags.scss */
+/* line 236, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(2) > div {
   top: 84px;
 }
-/* line 216, ../../_dev/scss/tags.scss */
+/* line 239, ../../_dev/scss/tags.scss */
 #engineering-systems .content > section:nth-child(3) > div {
   top: 55px;
 }
-/* line 220, ../../_dev/scss/tags.scss */
+/* line 243, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:first-child {
   padding-right: 30px;
 }
-/* line 223, ../../_dev/scss/tags.scss */
+/* line 246, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:last-child {
   padding-left: 59px;
 }
-/* line 227, ../../_dev/scss/tags.scss */
+/* line 250, ../../_dev/scss/tags.scss */
 #engineering-systems .top > div {
   background: url("../images_temp/top-engineering.gif") no-repeat 97.1% 89px;
   padding-left: 50px;
   padding-right: 485px;
   padding-top: 84px;
 }
-/* line 233, ../../_dev/scss/tags.scss */
+/* line 256, ../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images_temp/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -373,7 +399,7 @@ button.print {
   margin: auto;
   width: 948px;
 }
-/* line 242, ../../_dev/scss/tags.scss */
+/* line 265, ../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images_temp/slider-main.jpg");
   background-position: center;
@@ -382,7 +408,7 @@ button.print {
   width: 100%;
   margin: auto;
 }
-/* line 251, ../../_dev/scss/tags.scss */
+/* line 274, ../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -399,25 +425,25 @@ button.print {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 258, ../../_dev/scss/tags.scss */
+/* line 281, ../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 261, ../../_dev/scss/tags.scss */
+/* line 284, ../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* line 266, ../../_dev/scss/tags.scss */
+/* line 289, ../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 273, ../../_dev/scss/tags.scss */
+/* line 296, ../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-family: PlumbMedium;
@@ -426,25 +452,25 @@ footer.index {
   margin-bottom: 36px;
   text-transform: uppercase;
 }
-/* line 281, ../../_dev/scss/tags.scss */
+/* line 304, ../../_dev/scss/tags.scss */
 #decoration .top h1 {
   display: table;
   margin: auto;
   text-align: center;
 }
-/* line 285, ../../_dev/scss/tags.scss */
+/* line 308, ../../_dev/scss/tags.scss */
 #decoration .top h1:first-child {
   margin-bottom: 7px;
   margin-top: 71px;
 }
-/* line 290, ../../_dev/scss/tags.scss */
+/* line 313, ../../_dev/scss/tags.scss */
 #decoration .content > section:first-child > h1:first-child {
   font-weight: 100;
   margin: 58px auto 22px;
   text-align: center;
 }
 
-/* line 297, ../../_dev/scss/tags.scss */
+/* line 320, ../../_dev/scss/tags.scss */
 #engineering-systems .content h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, Sans Serif;
@@ -455,7 +481,7 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 308, ../../_dev/scss/tags.scss */
+/* line 331, ../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -464,26 +490,26 @@ footer.index {
   margin-top: 0;
 }
 
-/* line 316, ../../_dev/scss/tags.scss */
+/* line 339, ../../_dev/scss/tags.scss */
 header {
   display: table;
 }
 
-/* line 320, ../../_dev/scss/tags.scss */
+/* line 343, ../../_dev/scss/tags.scss */
 #slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 325, ../../_dev/scss/tags.scss */
+/* line 348, ../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 328, ../../_dev/scss/tags.scss */
+/* line 351, ../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 332, ../../_dev/scss/tags.scss */
+/* line 355, ../../_dev/scss/tags.scss */
 #engineering-systems .content li {
   display: block;
   font-family: Arial, Helvetica, Sans Serif;
@@ -491,7 +517,7 @@ ul.social li {
   color: #3f3f3f;
   margin-bottom: 16px;
 }
-/* line 337, ../../_dev/scss/tags.scss */
+/* line 360, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -503,27 +529,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 348, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(1) {
   background-image: url("../images_temp/engineering/footer1.png");
 }
-/* line 348, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(2) {
   background-image: url("../images_temp/engineering/footer2.png");
 }
-/* line 348, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(3) {
   background-image: url("../images_temp/engineering/footer3.png");
 }
-/* line 348, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(4) {
   background-image: url("../images_temp/engineering/footer4.png");
 }
-/* line 348, ../../_dev/scss/tags.scss */
+/* line 371, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(5) {
   background-image: url("../images_temp/engineering/footer5.png");
 }
-/* line 354, ../../_dev/scss/tags.scss */
+/* line 377, ../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -535,58 +561,58 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 365, ../../_dev/scss/tags.scss */
+/* line 388, ../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 374, ../../_dev/scss/tags.scss */
+/* line 397, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images_temp/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 378, ../../_dev/scss/tags.scss */
+/* line 401, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images_temp/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 382, ../../_dev/scss/tags.scss */
+/* line 405, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images_temp/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 386, ../../_dev/scss/tags.scss */
+/* line 409, ../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images_temp/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 394, ../../_dev/scss/tags.scss */
+/* line 417, ../../_dev/scss/tags.scss */
 #decoration main {
   background-image: url("../images_temp/backgrounds/tile-contents.png");
 }
 
-/* line 398, ../../_dev/scss/tags.scss */
+/* line 421, ../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
 }
-/* line 401, ../../_dev/scss/tags.scss */
+/* line 424, ../../_dev/scss/tags.scss */
 .do-it p {
   display: table;
   margin: 27px auto 6px;
 }
-/* line 405, ../../_dev/scss/tags.scss */
+/* line 428, ../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica;
   font-size: 17px;
   margin-bottom: 32px;
 }
-/* line 411, ../../_dev/scss/tags.scss */
+/* line 434, ../../_dev/scss/tags.scss */
 #decoration .content > section:first-child > p {
   font-size: 16px;
   line-height: 20px;
@@ -594,18 +620,23 @@ p {
   margin-bottom: 27px;
   width: 672px;
 }
-/* line 419, ../../_dev/scss/tags.scss */
+/* line 441, ../../_dev/scss/tags.scss */
+#decoration .content > aside > p:first-child {
+  margin-top: 50px;
+  margin-bottom: 21px;
+}
+/* line 446, ../../_dev/scss/tags.scss */
 #engineering-systems .content p.header-slim-big {
   line-height: 46px;
   margin-bottom: 41px;
 }
-/* line 424, ../../_dev/scss/tags.scss */
+/* line 451, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home p {
   font-family: Arial, Helvetica, Sans Serif;
   font-size: 14px;
   color: #3f3f3f;
 }
-/* line 426, ../../_dev/scss/tags.scss */
+/* line 453, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home p.header-big {
   color: #404040;
   display: table;
@@ -614,36 +645,36 @@ p {
   text-align: center;
   width: 500px;
 }
-/* line 435, ../../_dev/scss/tags.scss */
+/* line 462, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home div.float-left:first-child p {
   margin-bottom: 6px;
 }
-/* line 439, ../../_dev/scss/tags.scss */
+/* line 466, ../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
 
-/* line 445, ../../_dev/scss/tags.scss */
+/* line 472, ../../_dev/scss/tags.scss */
 .menu-container section {
   display: none;
 }
-/* line 447, ../../_dev/scss/tags.scss */
+/* line 474, ../../_dev/scss/tags.scss */
 .menu-container section.visible {
   display: block;
 }
-/* line 451, ../../_dev/scss/tags.scss */
+/* line 478, ../../_dev/scss/tags.scss */
 .do-it section {
   display: table;
   margin: auto;
 }
-/* line 455, ../../_dev/scss/tags.scss */
+/* line 482, ../../_dev/scss/tags.scss */
 #decoration .top section {
   left: 133px;
   position: absolute;
   top: 510px;
   width: 75%;
 }
-/* line 461, ../../_dev/scss/tags.scss */
+/* line 488, ../../_dev/scss/tags.scss */
 #engineering-systems .content section {
   background-repeat: no-repeat;
   border-bottom: dotted 2px #e3e3e3;
@@ -651,31 +682,31 @@ p {
   padding-right: 60px;
   position: relative;
 }
-/* line 468, ../../_dev/scss/tags.scss */
+/* line 495, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(1) {
   background-image: url("../images_temp/engineering/section1.jpg");
   background-position: 23px;
   height: 352px;
 }
-/* line 473, ../../_dev/scss/tags.scss */
+/* line 500, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(2) {
   background-image: url("../images_temp/engineering/section2-leaf.jpg");
   background-position: 25px 54px;
   height: 266px;
 }
-/* line 478, ../../_dev/scss/tags.scss */
+/* line 505, ../../_dev/scss/tags.scss */
 #engineering-systems .content section:nth-child(3) {
   background-image: url("../images_temp/engineering/section3.gif");
   background-position: 46px;
   height: 301px;
 }
 
-/* line 486, ../../_dev/scss/tags.scss */
+/* line 513, ../../_dev/scss/tags.scss */
 button.print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
-/* line 490, ../../_dev/scss/tags.scss */
+/* line 517, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul span {
   background-color: #7d2b12;
   color: white;
@@ -683,13 +714,13 @@ button.print span {
   margin: auto;
   padding: 0 4px;
 }
-/* line 497, ../../_dev/scss/tags.scss */
+/* line 524, ../../_dev/scss/tags.scss */
 .arrows span {
   color: #FF6447;
   display: inline-block;
   padding: 0 4px;
 }
-/* line 502, ../../_dev/scss/tags.scss */
+/* line 529, ../../_dev/scss/tags.scss */
 #decoration .contents aside span {
   background-image: url("../images_temp/decoration/pyctos.png");
   background-repeat: no-repeat;
@@ -697,46 +728,46 @@ button.print span {
   height: 100%;
   width: 100%;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(1) span {
   background-position: 12px 28px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(2) span {
   background-position: 12px -197px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(3) span {
   background-position: 12px -419px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(4) span {
   background-position: 12px -641px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(5) span {
   background-position: 12px -862px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(6) span {
   background-position: 12px -1084px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(7) span {
   background-position: 12px -1306px;
 }
-/* line 511, ../../_dev/scss/tags.scss */
+/* line 538, ../../_dev/scss/tags.scss */
 #decoration .contents div:nth-child(8) span {
   background-position: 12px -1527px;
 }
 
-/* line 517, ../../_dev/scss/tags.scss */
+/* line 544, ../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 521, ../../_dev/scss/tags.scss */
+/* line 548, ../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images_temp/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -747,33 +778,33 @@ ul.social {
   margin-top: 9px;
   z-index: 1;
 }
-/* line 527, ../../_dev/scss/tags.scss */
+/* line 554, ../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > ul {
   display: table;
   margin: auto;
 }
-/* line 531, ../../_dev/scss/tags.scss */
+/* line 558, ../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
-/* line 535, ../../_dev/scss/tags.scss */
+/* line 562, ../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 540, ../../_dev/scss/tags.scss */
+/* line 567, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 544, ../../_dev/scss/tags.scss */
+/* line 571, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 548, ../../_dev/scss/tags.scss */
+/* line 575, ../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;

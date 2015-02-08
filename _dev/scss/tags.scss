@@ -40,6 +40,26 @@ a{
       width: $w;
     }
   }
+  #decoration #slides >div.float-left &{
+    display: block;
+    font-size: 0;
+  }
+  #decoration #slides >div.float-left:first-child &{
+    height: 100%;
+    width: 476px;
+  }
+  #decoration #slides >div.float-left:last-child &{
+    //background-color: orange;
+    float: left;
+    height: 134px;
+    margin-bottom: 9px;
+    margin-right: 8.5px;
+    width: 153px;
+    &:nth-child(3),
+    &:nth-child(6){
+      margin-right: 0;
+    }
+  }
   #you-need ul &{
     color: $background-carrot-dark;
     display: block;
@@ -159,6 +179,9 @@ div{
       margin-right: 2px;
       margin-left: 32px;
     }
+  }
+  #decoration &#slider-bottom{
+    height: 376px;
   }
   #decoration .top &.relative{
     background-image: url($images_dir + 'decoration/decoration-top.png');
@@ -414,6 +437,10 @@ p{
     margin: auto;
     margin-bottom: 27px;
     width: 672px;
+  }
+  #decoration .content >aside >&:first-child{
+    margin-top: 50px;
+    margin-bottom: 21px;
   }
   #engineering-systems .content &{
     &.header-slim-big{
