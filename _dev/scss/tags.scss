@@ -1,3 +1,4 @@
+@charset "UTF-8";
 a{
   &.btn{
     background-color:  $background-carrot-dark;
@@ -149,6 +150,21 @@ button{
   &.bg-recall{ // связан со следующим
     background-position: 14px 11px;
   }
+
+  #design .content &{
+    &.btn-more{
+      background-color: $background-smoke-white;
+      border: $border-btn;
+      border-radius: 5px;
+      display: table;
+      height: 28px;
+      margin-top: -17px;
+      width: 90px;
+    }
+  }
+  &.btn-more::before{
+    content: "Подробнее";
+  }
   .do-it &{ // связан с предыдущим
     border: none;
     @include border-radius(20px);
@@ -227,6 +243,21 @@ $i:2;
       background-image: url($images_dir + 'decoration/exmpls-right.jpg');
     }
   }
+  #design &{
+    &.top.relative{
+      background-image: url($images_dir + 'design/top-visual-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: 71% 0;
+      @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
+    }
+    &.top-container{
+      height: 659px;
+    }
+  }
+  // чиста для подстраховки
+  #design .top.relative +&.do-it{
+    position: relative;
+  }
   #engineering-systems .content >section >&{
     position: absolute;
   }
@@ -295,11 +326,11 @@ footer{
 h1{
   .top &{
     color:white;
-    font-family: PlumbMedium;
-    font-size: 48px;
+    //font-family: PlumbMedium;
+    //font-size: 48px;
     font-weight: normal;
     margin-bottom: 36px;
-    text-transform: uppercase;
+    //text-transform: uppercase;
   }
   #decoration .top &{
     display: table;
@@ -315,8 +346,23 @@ h1{
     margin: 58px auto 22px;
     text-align: center;
   }
+  #design .top.relative &{
+    line-height: 61px;
+    margin: 44px auto auto;
+    text-align: center;
+    width: 650px;
+  }
 }
 h2{
+  #design .content &{
+    color: $color-dark-common;
+    font: 48px/50px PlumbLight;
+    font-weight: 100;
+    margin: 63px auto 37px;
+  }
+  #design .content section:nth-child(2) &{
+    margin-bottom: 26px;
+  }
   #engineering-systems .content &{
     color: $color-dark-common;
     font-family: Arial, Helvetica, Sans Serif;
@@ -443,6 +489,22 @@ p{
     margin-top: 50px;
     margin-bottom: 21px;
   }
+  #design .top-container &{
+    font-size: 18px;
+    color: $color-dark-deep2;
+    margin-left: 118px;
+    padding-right: 370px;
+    position: relative;
+    top: 23px;
+    width: 710px;
+  }
+  #design .content &{
+    font: 18px/20px Arial, Helvetica, Sans Serif;
+    margin-bottom: 32px;
+  }
+  #design .top-container h1 +&{
+      top:27px;
+  }
   #engineering-systems .content &{
     &.header-slim-big{
       line-height: 46px;
@@ -485,6 +547,13 @@ section{
     position: absolute;
     top: 510px;
     width: 75%;
+  }
+  #design .content >&{
+    margin-bottom: 43px;
+    padding-right: 410px;
+    &:nth-child(odd):not(first-child){
+      background-color: #f6f6f6;
+    }
   }
   #engineering-systems .content &{
     background-repeat: no-repeat;

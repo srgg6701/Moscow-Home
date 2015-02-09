@@ -9,7 +9,7 @@ body, html{
   padding: 0;
 }
 //---------------------------------------------
-#page{
+#index{
   height: 100%;
   position: relative;
 }
@@ -28,8 +28,10 @@ body, html{
     }
   //--------------------------------
   main{
-    bottom: $footerHeight + $bottom-footer;
-    top: $headerHeight;
+    #index &{
+      bottom: $footerHeight + $bottom-footer;
+      top: $headerHeight;
+    }
   }
 
     #level1{
@@ -51,6 +53,9 @@ header,main,footer{
 .container{
 }
 .top{
+  header +&.relative{
+    top:$nav-height;
+  }
   #engineering-systems &{
     height: 583px;
   }

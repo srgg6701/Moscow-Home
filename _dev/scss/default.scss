@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* default sass file */
 // FONTS ----------------------------
 @font-face {
@@ -33,6 +34,10 @@
 #achievements{
   margin: auto;
 }
+#design{
+  background-image: url($images_dir + 'backgrounds/tile-design-top-visual.png');
+}
+
 /*#drop-down-substrate{
   background-color: #FFF;
   border-top: solid 1px #CACACA;

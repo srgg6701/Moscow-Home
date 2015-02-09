@@ -17,6 +17,12 @@
 .centered-vertical{
   @include centered-vertical;
 }
+.color-dark-deep{
+  color: $color-dark-deep !important;
+}
+.color-dark-middle{
+  color: $color-dark-middle !important;
+}
 .do-it{
   background-color: $background-brown-dark;
   #decoration &{
@@ -73,4 +79,7 @@
     background-image: url($images_dir + 'backgrounds/tile-top.png');
   }
   background-color: $background-brown-dark;
+  #design &{
+    background-color: transparent !important;
+  }
 }
