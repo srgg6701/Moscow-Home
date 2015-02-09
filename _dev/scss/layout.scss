@@ -13,7 +13,6 @@ body, html{
   height: 100%;
   position: relative;
 }
-  body.no-overflow header,
   body.no-overflow main,
   body.no-overflow footer,
   body.no-overflow main >div{
@@ -70,7 +69,7 @@ header,main,footer{
 .footer{
   height: 600px;
 }
-body:not(.no-overflow) >div >* >*:not(.wide){
+body:not(.no-overflow) >div >* >*:not(.wide):not(nav){
   height: 100%;
   margin: auto;
   max-width: $max-width-container;
