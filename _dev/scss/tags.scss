@@ -85,6 +85,10 @@ aside{
   #design .wide >&{
     background: white;
   }
+  #design #work-examples >&{
+    margin-bottom: 41px;
+    margin-top: 73px;
+  }
 $i:2;
 @each $top in 69,51,57,62,57,52,58 {
   #decoration .content .contents >div:nth-child(#{$i}) &{
@@ -220,7 +224,7 @@ div{
     }
   }
   #decoration .content .contents >div >&{
-    font: 17px/20px Arial, Helvetica, Sans Serif;
+    font: 17px/20px $font-second;
     margin: auto;
     padding-left: 160px;
     padding-top: 60px;
@@ -274,6 +278,31 @@ $i:2;
   }
   #design .content .wide:nth-child(5) >&{
     padding-right: 350px;
+  }
+  #design #visual-bottom >&{
+    height: 290px;
+    padding-right: 30px;
+    @include transform(translateY(83px));
+    width: 877px;
+  }
+  #design #visual-bottom div.relative > &.absolute{
+    width: 100%;
+    z-index: -1;
+    $height:115px;
+    &:nth-child(3){
+      background-color: white;
+      @include border-radius(6px 6px 0 0);
+      height: $height;
+      @include opacity(.91);
+      top:0;
+    }
+    &:nth-child(4){
+      background-color: #a64726;
+      @include border-radius(0 0 6px 6px);
+      @include opacity(.8);
+      bottom: 0;
+      top: $height;
+    }
   }
   #engineering-systems .content >section >&{
     position: absolute;
@@ -397,13 +426,22 @@ h2{
     margin-top: 52px;
     padding-right: 50px;
   }
-  #design .content section:nth-child(5) &{
+  #design .content section:nth-child(6) &{
     padding-bottom: 41px;
     padding-top: 73px;
   }
+  #design #visual-bottom &.header-big{
+    color:$color-carrot;
+    font-weight: 100;
+    height: 107px;
+    line-height: 49px;
+    margin-bottom: 0;
+    margin-top: 8px;
+    text-align: center;
+  }
   #engineering-systems .content &{
     color: $color-dark-common;
-    font-family: Arial, Helvetica, Sans Serif;
+    font-family: $font-second;
     font-size: 21px;
     font-weight: 100;
     margin-bottom: 14px;
@@ -516,7 +554,7 @@ p{
   }
   .top &{
     color: white;
-    font-family: Arial, Helvetica;
+    font-family: $font-second;
     font-size: 17px;
     margin-bottom: 32px;
   }
@@ -541,7 +579,7 @@ p{
     width: 710px;
   }
   #design .content &{
-    font: 18px/20px Arial, Helvetica, Sans Serif;
+    font: 18px/20px $font-second;
     margin-bottom: 32px;
   }
   #design .content .wide:nth-child(4) &{
@@ -552,6 +590,14 @@ p{
   }
   #design .top-container h1 +&{
       top:27px;
+  }
+  #design #visual-bottom >div &{
+    color: white;
+    font-size: 18px;
+    letter-spacing: -0.55px;
+    line-height: 20px;
+    margin: 26px;
+    margin-right: 20px;
   }
   #engineering-systems .content &{
     &.header-slim-big{

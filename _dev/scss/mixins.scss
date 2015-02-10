@@ -41,7 +41,7 @@
   }
 }
 @mixin paragraph-dark($size:14px,$color:$color-dark-deep2){
-  font-family: Arial, Helvetica, Sans Serif;
+  font-family: $font-second;
   font-size: $size;
   color: $color-dark-deep2;
 }

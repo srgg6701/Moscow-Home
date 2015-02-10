@@ -46,20 +46,38 @@ block content
                             h2="Проектирование бассейнов"
                             p="Moscow Home разработает по заказу проект бассейна, который станет настоящим украшением Вашего дома. Комфортная зона отдыха порадует близких и друзей. Правильно подготовленный проект избавит Вас от возможных сложностей с дальнейшей эксплуатацией этого объекта"
                             button.btn-more
-                section.wide
+                section#work-examples.wide
                     aside
                         #gallery.header-slim-big="Примеры наших проектов"
                         include modules/slider-bottom
             .do-it.wide
                 #order-project
-                    include modules/set-system
+                    include modules/order-project
             section#visual-bottom.wide
-                div
-                    h2="Проектирование дизайна интерьера"
+                div.relative
+                    h2.header-big="Проектирование дизайна интерьера"
                     p="Moscow Home разработает для Вас интерьер дома и внутренней отделки, включая мебель, что позволит в деталях увидеть дом своей мечты. Компания сотрудничает с ведущими архитекторами и дизайнерами. Среди наших партнеров: Творческая группа Архитектурного холдинга «Стилистика», в лице Владимира Бурмистрова, специализирующегося на классических усадьбах и Архитектурное бюро Александры Федоровой, обладательницы множества международных наград, реализовавшей проекты загородных домов, вилл, квартир."
+                    div.absolute
+                    div.absolute
                 div#lamp
                 div#sofa
+            section.wide
+                div
+                    p="Заказчикам предлагается более 40 видов наиболее популярных стилей,"
+                    p="среди которых классический и современный, ампир, ар-деко, барокко, готика, восточный, эко-стиль."
+                    ul
+                        each style,link in { ampir:'ампир', art_deco:'арт-деко', barocco:'барокко', oriental:'восточный', over40:'более 40 стилей!'}
+                            li
+                                a(href=link)=style
+                -var our_works="Наши работы: <span>стиль "
+                -var span="</span>"
+                div
+                    .gallery-next.header-slim-big!=our_works + "классика" + span
+                    include modules/slider-bottom
+                div
+                    .gallery-next.header-slim-big!=our_works + "современный" + span
+                    include modules/slider-bottom
             .do-it
                 #set-system
-                    include modules/set-system
+                    include modules/order-personal-design
             include modules/footer-why-moscow-home
