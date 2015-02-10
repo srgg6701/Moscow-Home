@@ -25,7 +25,8 @@
 }
 .do-it{
   background-color: $background-brown-dark;
-  #decoration &{
+  #decoration &,
+  #design &{
     background-image: url($images_dir + 'backgrounds/tile-100.png');
   }
   #engineering-systems &{
