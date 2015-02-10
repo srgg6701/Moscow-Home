@@ -279,30 +279,59 @@ $i:2;
   #design .content .wide:nth-child(5) >&{
     padding-right: 350px;
   }
-  #design #visual-bottom >&{
+  // контейнер для заголовка и текста
+  #design #visual-bottom >.relative >&.relative{
     height: 290px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     @include transform(translateY(83px));
-    width: 877px;
+    width: 845px;
+    //height: 100%;
   }
-  #design #visual-bottom div.relative > &.absolute{
+  // подложики под заголовок и текст
+  #design #visual-bottom >.relative >.relative >&.absolute{
     width: 100%;
     z-index: -1;
     $height:115px;
+    $offset:8px;
     &:nth-child(3){
       background-color: white;
       @include border-radius(6px 6px 0 0);
       height: $height;
       @include opacity(.91);
-      top:0;
+      top:-($offset);
     }
     &:nth-child(4){
       background-color: #a64726;
       @include border-radius(0 0 6px 6px);
       @include opacity(.8);
-      bottom: 0;
-      top: $height;
+      bottom: $offset;
+      top: $height - $offset;
     }
+  }
+  #design &#frame{
+    background: url($images_dir + 'design/frame.png') no-repeat;
+    height: 282px;
+    position: absolute;
+    top: 35px;
+    right: 1.2%;
+    width: 272px;
+  }
+  #design &#lamp{
+    background: url($images_dir + 'design/lamp.png') no-repeat;
+    height: 219px;
+    position: absolute;
+    right: 23%;
+    top: -14px;
+    width: 118px;
+  }
+  #design &#sofa{
+    background: url($images_dir + 'design/sofa.png') no-repeat;
+    height: 156px;
+    position: absolute;
+    right: 7%;
+    top: 333px;
+    width: 282px;
   }
   #engineering-systems .content >section >&{
     position: absolute;
@@ -411,7 +440,7 @@ h2{
   }
   #design .content section:nth-child(2) &{
     margin-bottom: 26px;
-    margin-top: 66px;
+    margin-top: 51px;
     padding-right: 100px;
   }
   #design .content section:nth-child(3) &{
@@ -436,8 +465,11 @@ h2{
     height: 107px;
     line-height: 49px;
     margin-bottom: 0;
+    //margin-left: 40px;
+    //margin-right: -40px;
     margin-top: 8px;
     text-align: center;
+    @include transform(translateX(40px));
   }
   #engineering-systems .content &{
     color: $color-dark-common;
@@ -593,11 +625,10 @@ p{
   }
   #design #visual-bottom >div &{
     color: white;
-    font-size: 18px;
-    letter-spacing: -0.55px;
+    font-size: 17px;
     line-height: 20px;
     margin: 26px;
-    margin-right: 20px;
+    margin-right: -60px;
   }
   #engineering-systems .content &{
     &.header-slim-big{
