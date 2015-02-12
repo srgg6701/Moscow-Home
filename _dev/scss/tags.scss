@@ -61,7 +61,8 @@ a{
       margin-right: 0;
     }
   }
-  #our-works &.btn{
+  #our-works &.btn,
+  #engineering-systems &.btn{
     @include btn-zoom;
   }
   #our-works ul.table &{
