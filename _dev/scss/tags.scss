@@ -61,6 +61,9 @@ a{
       margin-right: 0;
     }
   }
+  #our-works &.btn{
+    @include btn-zoom;
+  }
   #our-works ul.table &{
     color: $color-carrot-light;
     font-family: PlumbMedium;
@@ -216,6 +219,12 @@ div{
       margin-left: 32px;
     }
   }
+  .slider-bottom &{
+    background: url($images_dir + "backgrounds/tile-gallery.png");
+    height: 184px;
+    margin: -13px auto -12px;
+    padding: 20px 0;
+  }
   #decoration &.slider-bottom{
     height: 376px;
   }
@@ -267,12 +276,6 @@ div{
   #design #style-modern +&{
     padding-bottom: 54px;
   }
-  .slider-bottom &{
-    background: url($images_dir + "backgrounds/tile-gallery.png");
-    height: 184px;
-    margin: -13px auto -12px;
-    padding: 20px 0;
-  }
   #design .slider-bottom &{
     background: $background-smoke-white;
   }
@@ -313,8 +316,10 @@ div{
   #design .content .wide >&{
     margin: auto;
     padding-right: 410px;
+    position: relative;
     width: $max-width-container;
   }
+
   #design .content .wide:nth-child(2) >&{
     padding-right: 310px;
   }
@@ -323,6 +328,37 @@ div{
   }
   #design .content .wide:nth-child(5) >&{
     padding-right: 350px;
+  }
+  #design .content .wide >div >&{
+    &:last-child{
+      //background-color: lavender;
+      background-repeat: no-repeat;
+      height: 425px;
+      position: absolute;
+      left: 545px;
+      top:0;
+      width: 475px;
+    }
+  }
+  #design .content .wide:nth-child(1) >div >&:last-child{
+    background-image: url($images_dir + 'design/architectural-design.png');
+    background-position: 2px 70px;
+  }
+  #design .content .wide:nth-child(2) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-outer.png');
+    background-position: 113px 28px;
+  }
+  #design .content .wide:nth-child(3) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-inner.png');
+    background-position: 50px 0;
+  }
+  #design .content .wide:nth-child(4) >div >&:last-child{
+    background-image: url($images_dir + 'design/electrical-systems.png');
+    background-position: 74px 53px;
+  }
+  #design .content .wide:nth-child(5) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-bassein.png');
+    background-position: 29px 7px;
   }
   // контейнер для заголовка и текста
   #design #visual-bottom >.relative >&.relative{

@@ -1,3 +1,12 @@
+@mixin btn-zoom{
+  background: url($images_dir + 'zoom.png') no-repeat $background-carrot-dark center;
+  font-size: 0;
+  height: 38px;
+  margin-left: 0;
+  margin-top: -19px;
+  @include centered;
+  width: 49px;
+}
 @mixin centered{
   left: 50%;
   position: absolute;
