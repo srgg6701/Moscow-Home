@@ -617,7 +617,7 @@ li{
     $img-subdir: $images_dir + 'engineering/';
     @each $img in 1,2,3,4,5{
       &:nth-child(#{$i}){
-        background-image: url($img-subdir + 'footer' + $img + '.png');
+        background-image: url($images_dir + 'footer' + $img + '.png');
       }
       $i:$i+1;
     }
