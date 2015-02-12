@@ -31,7 +31,7 @@ a{
       border-right: none;
     }
   }
-  #slides aside &{
+  .slides aside &{
     &.btn{
       $w:128px;
       display: block;
@@ -41,15 +41,15 @@ a{
       width: $w;
     }
   }
-  #decoration #slides >div.float-left &{
+  #decoration .slides >div.float-left &{
     display: block;
     font-size: 0;
   }
-  #decoration #slides >div.float-left:first-child &{
+  #decoration .slides >div.float-left:first-child &{
     height: 100%;
     width: 476px;
   }
-  #decoration #slides >div.float-left:last-child &{
+  #decoration .slides >div.float-left:last-child &{
     //background-color: orange;
     float: left;
     height: 134px;
@@ -141,12 +141,12 @@ $i:2;
       @include transform(scaleX(-1));
     }
   }
-  #slides &{
+  .slides &{
     background:url($images_dir + 'backgrounds/tile-microsquare.png');
     height: 135px;
     position: absolute;
     right: 3px;
-    top:0;
+    top: 20px;
     width: $img-slide-single-width;
   }
 }
@@ -216,7 +216,7 @@ div{
       margin-left: 32px;
     }
   }
-  #decoration &#slider-bottom{
+  #decoration &.slider-bottom{
     height: 376px;
   }
   #decoration .top &.relative{
@@ -258,6 +258,24 @@ div{
       padding-top: 40px;
     }
   }
+  #our-works &.gallery-next.header-slim-big{
+    height: 52px;
+  }
+  #design #style-classic +&{
+    padding-bottom: 28px;
+  }
+  #design #style-modern +&{
+    padding-bottom: 54px;
+  }
+  .slider-bottom &{
+    background: url($images_dir + "backgrounds/tile-gallery.png");
+    height: 184px;
+    margin: -13px auto -12px;
+    padding: 20px 0;
+  }
+  #design .slider-bottom &{
+    background: $background-smoke-white;
+  }
   $i:2;
 @each $top in 80,102,88,92,87,102,88{
   #decoration .content .contents >div:nth-child(#{$i}) >&{
@@ -266,7 +284,7 @@ div{
   $i:$i+1;
 }
 
-  #decoration #slides &.float-left{
+  #decoration .slides &.float-left{
     background-repeat: no-repeat;
     height: 280px;
     width: 50%;
@@ -522,7 +540,7 @@ header{
   display: table;
 }
 img{
-  #slides a:not(:first-child) &{
+  .slides a:not(:first-child) &{
     margin-left:$img-slide-offset;
   }
 }
@@ -795,6 +813,10 @@ span{
   #our-works ul.table a &{
     display: block;
     white-space: nowrap;
+  }
+  #style-classic &,
+  #style-modern &{
+    color: $color-carrot;
   }
   $i:1;
   @each $posY in 28,-197,-419,-641,-862,-1084,-1306,-1527 {

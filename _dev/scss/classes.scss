@@ -78,6 +78,15 @@
 .relative{
   position: relative !important;
 }
+.slider-bottom{
+  overflow: hidden;
+}
+.slides{
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: $img-slide-single-width*6 + $img-slide-offset*5;
+}
 .table{
   display: table;
 }

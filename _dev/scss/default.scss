@@ -75,21 +75,6 @@
   top:0;
   width: 100%;
 }
-#slides{
-  height: 100%;
-  margin: auto;
-  position: relative;
-  width: $img-slide-single-width*6 + $img-slide-offset*5;
-}
-#slider-bottom{
-  background: url($images_dir + "backgrounds/tile-gallery.png");
-  height: 184px;
-  margin: -13px auto -12px;
-  padding: 20px 0;
-  #design &{
-    background: white;
-  }
-}
 #you-need {
   @include centred-margins;
   margin-top: -4px;

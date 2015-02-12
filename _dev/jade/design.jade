@@ -74,11 +74,11 @@ block content
                 -var our_works="Наши работы: <span>стиль "
                 -var span="</span>"
                 div.wide.no-overflow
-                    .gallery-next.header-slim-big!=our_works + "классика" + span
-                    include modules/slider-bottom-classic
-                div.wide.no-overflow
-                    .gallery-next.header-slim-big!=our_works + "современный" + span
-                    include modules/slider-bottom-modern
+                    #style-classic.gallery-next.header-slim-big!=our_works + "классика" + span
+                    include modules/slider-bottom
+                    #style-modern.gallery-next.header-slim-big!=our_works + "современный" + span
+                    //div.wide.no-overflow
+                    include modules/slider-bottom
             .do-it
                 #set-system
                     include modules/order-individual-design
