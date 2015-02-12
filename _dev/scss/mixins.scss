@@ -4,6 +4,11 @@
   top: 50%;
   transform: translate(-50%);
 }
+@mixin centered-horizontal($position:relative){
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
 @mixin centred-margins{
   margin: auto;
   width: $max-width-content;

@@ -63,23 +63,23 @@ block content
                 div#lamp
                 div#frame
                 div#sofa
-            section.wide
-                div
-                    p="Заказчикам предлагается более 40 видов наиболее популярных стилей,"
+            section#our-works.wide
+                div.bg-white.wide.no-overflow
+                    p.header="Заказчикам предлагается более 40 видов наиболее популярных стилей,"
                     p="среди которых классический и современный, ампир, ар-деко, барокко, готика, восточный, эко-стиль."
-                    ul
-                        each style,link in { ampir:'ампир', art_deco:'арт-деко', barocco:'барокко', oriental:'восточный', over40:'более 40 стилей!'}
+                    ul.table
+                        each style,link in { ampir:'ампир', art_deco:'<span>арт-деко</span>', barocco:'барокко', oriental:'восточный', over40:'<span>более 40</span>стилей!'}
                             li
-                                a(href=link)=style
+                                a(href=link)!=style
                 -var our_works="Наши работы: <span>стиль "
                 -var span="</span>"
-                div
+                div.wide.no-overflow
                     .gallery-next.header-slim-big!=our_works + "классика" + span
-                    include modules/slider-bottom
-                div
+                    include modules/slider-bottom-classic
+                div.wide.no-overflow
                     .gallery-next.header-slim-big!=our_works + "современный" + span
-                    include modules/slider-bottom
+                    include modules/slider-bottom-modern
             .do-it
                 #set-system
-                    include modules/order-personal-design
+                    include modules/order-individual-design
             include modules/footer-why-moscow-home

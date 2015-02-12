@@ -61,6 +61,19 @@ a{
       margin-right: 0;
     }
   }
+  #our-works ul.table &{
+    color: $color-carrot-light;
+    font-family: PlumbMedium;
+    font-size: 21px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    top:140px;
+    @include centered-horizontal(absolute);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
   #you-need ul &{
     color: $background-carrot-dark;
     display: block;
@@ -231,7 +244,21 @@ div{
     width: $max-width-container;
 
   }
-$i:2;
+  #design #our-works >&{
+    &:nth-child(1){
+      padding-top: 26px;
+    }
+    &:nth-child(2){
+      background: $background-smoke-white;
+      padding-top: 84px;
+    }
+    &:nth-child(3){
+      background: $background-smoke-white;
+      padding-bottom: 64px;
+      padding-top: 40px;
+    }
+  }
+  $i:2;
 @each $top in 80,102,88,92,87,102,88{
   #decoration .content .contents >div:nth-child(#{$i}) >&{
       padding-top: #{$top}px;
@@ -507,6 +534,17 @@ li{
     display: block;
     padding:4px;
   }
+  #our-works ul.table &{
+    background: url($images_dir + 'design/40specs.jpg') no-repeat;
+    position: relative;
+    $i:1;
+    @each $posX in 22,-168,-354,-538,-728{
+      &:nth-child(#{$i}){
+        background-position: #{$posX}px 0;
+      }
+      $i:$i+1;
+    }
+  }
   #engineering-systems .content &{
     display: block;
     @include paragraph-dark;
@@ -636,6 +674,24 @@ p{
       margin-bottom: 41px;
     }
   }
+  #our-works &{
+    color: $color-dark-common;
+    text-align: center;
+  }
+  #our-works &.header{
+    font-family: $font-second;
+    font-size: 25px;
+  }
+  #our-works p.header +&{
+    color: $color-dark-common;
+    font-size: 17px;
+    margin-top: -21px;
+  }
+  #you-need & {
+    &.header-slim-big{
+      margin-bottom: 32px;
+    }
+  }
   .footer.why-moscow-home &{
     @include paragraph-dark;
     &.header-big{
@@ -649,11 +705,6 @@ p{
   }
   .footer.why-moscow-home div.float-left:first-child &{
     margin-bottom: 6px;
-  }
-  #you-need & {
-    &.header-slim-big{
-      margin-bottom: 32px;
-    }
   }
 }
 section{
@@ -741,6 +792,10 @@ span{
     height: 100%;
     width: 100%;
   }
+  #our-works ul.table a &{
+    display: block;
+    white-space: nowrap;
+  }
   $i:1;
   @each $posY in 28,-197,-419,-641,-862,-1084,-1306,-1527 {
     #decoration .contents div:nth-child(#{$i}) &{
@@ -762,6 +817,13 @@ ul{
   .footer.why-moscow-home >section >&{
     display: table;
     margin: auto;
+  }
+  #our-works &{
+    &.table{
+      height: 190px;
+      margin: 42px auto;
+      width: 940px;
+    }
   }
   #you-need &{
     display: table;
