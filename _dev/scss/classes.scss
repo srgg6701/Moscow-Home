@@ -31,6 +31,8 @@
 }
 .do-it{
   background-color: $background-brown-dark;
+  color: white !important;
+  overflow: hidden;
   #decoration &,
   #design &{
     background-image: url($images_dir + 'backgrounds/tile-100.png');
@@ -38,7 +40,6 @@
   #engineering-systems &{
     background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
   }
-  color: white !important;
 }
 .email::after{
   color: $color-carrot;
@@ -91,14 +92,21 @@
   display: table;
 }
 .top{
+  #decoration &,
+  #engineering-systems &{
+    background-color: $background-brown-dark;
+  }
   #decoration &{
     background-image: url($images_dir + 'backgrounds/tile-top-ultra-blood.png');
   }
   #engineering-systems &{
     background-image: url($images_dir + 'backgrounds/tile-top.png');
   }
-  background-color: $background-brown-dark;
-  #design &{
-    background-color: transparent !important;
+  #facade &{
+    background-image: url($images_dir + 'facade/roof.jpg');
+    background-size: cover;
   }
+  /*#design &{
+    background-color: transparent !important;
+  }*/
 }

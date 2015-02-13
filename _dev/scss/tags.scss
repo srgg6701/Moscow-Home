@@ -220,11 +220,23 @@ div{
       margin-left: 32px;
     }
   }
+  .footer.why-moscow-home >section >aside >&{
+    &:first-child{
+      padding-right: 30px;
+    }
+    &:last-child{
+      padding-left: 59px;
+    }
+  }
   .slider-bottom &{
     background: url($images_dir + "backgrounds/tile-gallery.png");
     height: 184px;
     margin: -13px auto -12px;
     padding: 20px 0;
+  }
+  #after-stone >&{
+    margin: auto;
+    width: $max-width-container;
   }
   #decoration &.slider-bottom{
     height: 376px;
@@ -427,19 +439,41 @@ div{
   #engineering-systems .content >section:nth-child(3) >&{
     top: 55px;
   }
-  .footer.why-moscow-home >section >aside >&{
-    &:first-child{
-      padding-right: 30px;
-    }
-    &:last-child{
-      padding-left: 59px;
-    }
-  }
   #engineering-systems .top >&{
     background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
     padding-left: 50px;
     padding-right: 485px;
     padding-top: 84px;
+  }
+  #facade .top >&{
+    height: 530px;
+  }
+  #facade .top >div >&{
+    background-color: #FFF;
+    @include border-radius(6px);
+    box-sizing: border-box;
+    height: 170px;
+    margin: auto;
+    @include opacity(0.89);
+    padding: 20px;
+    @include transform(translateY(98px));
+    width: 714px;
+  }
+  #facade-work >&.relative{
+    height: 363px;
+    margin: auto;
+    padding: 16px;
+    top: 112px;
+    width: 512px;
+    z-index: 1;
+  }
+  #facade-work &.substrate{
+    background: #000;
+    @include border-radius(6px);
+    @include opacity(0.1);
+    position: absolute;
+    top:0; right:0; bottom: 0; left: 0;
+    z-index: -1;
   }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
@@ -483,11 +517,8 @@ footer{
 h1{
   .top &{
     color:white;
-    //font-family: PlumbMedium;
-    //font-size: 48px;
     font-weight: normal;
     margin-bottom: 36px;
-    //text-transform: uppercase;
   }
   #decoration .top &{
     display: table;
@@ -508,6 +539,22 @@ h1{
     margin: 44px auto auto;
     text-align: center;
     width: 650px;
+  }
+  #facade .top &{
+    font: 72px/77px PlumbMedium !important;
+    color: white;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    @include text-shadow(2px 2px 2px #999);
+    top: 51px;
+    width: 500px;
+  }
+  #facade-work &.header-big{
+    color: white;
+    font: 48px PlumbMedium;
+    margin: 0;
+    text-align: center;
   }
 }
 h2{
@@ -729,6 +776,25 @@ p{
       margin-bottom: 41px;
     }
   }
+  #facade .top &{
+    color: #1b1b1b;
+    margin: 0;
+    &:last-child{
+      margin-top: 30px;
+    }
+  }
+  #facade-work &{
+    color: white;
+    font: 17px $font-second;
+    padding: 7px;
+    &:nth-child(2){
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    &:nth-child(3){
+      margin-top: 0;
+    }
+  }
   #our-works &{
     color: $color-dark-common;
     text-align: center;
@@ -821,6 +887,11 @@ section{
       background-position: 46px;
       height: 301px;
     }
+  }
+  #facade &#facade-work{
+    background: url($images_dir + 'facade/facade-work.jpg') center;
+    background-size: cover;
+    height: 560px;
   }
 }
 span{
