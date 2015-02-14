@@ -41,6 +41,14 @@ a{
       width: $w;
     }
   }
+  .works-examples &{
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+    margin-right: 6px;
+    width: 91px;
+  }
+
   #decoration .slides >div.float-left &{
     display: block;
     font-size: 0;
@@ -89,6 +97,18 @@ a{
   }
 }
 aside{
+  #after-stone &{
+    position: absolute;
+  }
+  #after-stone >div:nth-child(1) &{
+    top:168px;
+  }
+  #after-stone >div:nth-child(2) &{
+    top:211px;
+  }
+  #after-stone >div:nth-child(3) &{
+    top:214px;
+  }
   #decoration .content .contents div &{
     background-image: url($images_dir + 'backgrounds/tile-100.png');
     @include border-radius(50%);
@@ -235,9 +255,42 @@ div{
     padding: 20px 0;
   }
   #after-stone >&{
+    border-bottom: solid 1px white;
+    overflow: auto;
+    padding-top: 53px;
+    position: relative;
+    $imgs-facade:$images_dir + 'backgrounds/';
+    &:nth-child(1){
+      height: 396px;
+    }
+    &:nth-child(2){
+      height: 436px;
+    }
+    &:nth-child(3){
+      height: 447px;
+    }
+    &:nth-child(even){
+      background: url($imgs-facade + 'tile-facade-light.png');
+    }
+    &:nth-child(odd){
+      background: url($imgs-facade + 'tile-facade-darker.png');
+    }
+  }
+  #after-stone >div >&{
+    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+    height: 100%;
     margin: auto;
+    min-height: 250px;
+    padding-left: 325px;
     width: $max-width-container;
   }
+$i:1;
+@each $top in 3903,4475,5064{ // 0,-5850,-1173,-1841,-2575,-3277,
+  #after-stone >div:nth-child(#{$i}) >&{
+    background-position: 28px #{-$top}px !important;
+  }
+  $i:$i+1;
+}
   #decoration &.slider-bottom{
     height: 376px;
   }
@@ -619,6 +672,15 @@ h3{
     margin-top: 0;
   }
 }
+h4{
+  #after-stone &{
+    color: $color-dark-common;
+    font-family: $font-second;
+    font-size: 21px;
+    font-weight: 100;
+    margin: 0;
+  }
+}
 header{
   background-color: white;
   display: table;
@@ -729,6 +791,9 @@ p{
     font-family: $font-second;
     font-size: 17px;
     margin-bottom: 32px;
+  }
+  #after-stone &{
+    margin-top: 14px;
   }
   #decoration .content >section:first-child >&{
     font-size: 16px;
@@ -910,6 +975,9 @@ span{
     color: #FF6447;
     display: inline-block;
     padding: 0 4px;
+  }
+  #after-stone aside &{
+    display: block;
   }
   #decoration .contents aside &{
     background-image: url($images_dir + 'decoration/pyctos.png');
