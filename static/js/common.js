@@ -36,12 +36,12 @@ $(function(){
             bgClass='bgActiveCarrot',
             visibleClass ='visible',
             setVisible=function(){
-                console.group('element index '+index);
-                    console.dir(sections);
+                //console.group('element index '+index);
+                    //console.dir(sections);
                 $(sections).removeClass(visibleClass)
                     .eq(index).addClass(visibleClass);
-                    console.dir($(sections).eq(index));
-                console.groupEnd();
+                    //console.dir($(sections).eq(index));
+                //console.groupEnd();
             };
         setVisible();
         if(event.type=='click'){

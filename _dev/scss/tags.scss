@@ -512,6 +512,11 @@ $i:1;
     @include transform(translateY(98px));
     width: 714px;
   }
+  #facade &.do-it{
+    &.first{
+      margin-top: $nav-height;
+    }
+  }
   #facade-work >&.relative{
     height: 363px;
     margin: auto;
@@ -846,6 +851,17 @@ p{
     margin: 0;
     &:last-child{
       margin-top: 30px;
+    }
+  }
+  #facade .content >&{
+    &.pseudoheader{
+      background: url($images_dir + 'facade/roofs.png') no-repeat bottom;
+      color: $color-dark-common;
+      font: 17px/18px $font-second;
+      height:160px;
+      margin-top: 46px;
+      text-align: center;
+      width: 740px;
     }
   }
   #facade-work &{
