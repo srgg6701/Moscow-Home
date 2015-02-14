@@ -30,14 +30,18 @@ $(function(){
     });
     // Обработать блоки выпадающего меню
     $(submenu_items).on('click mouseenter mouseleave', function(event){
-        var container=$(this).parent().next('.container'),
+        var container=$(this).parent().next('.menu-container'),
             sections=$('section',container),
             index=$(this).index(),
             bgClass='bgActiveCarrot',
             visibleClass ='visible',
             setVisible=function(){
+                console.group('element index '+index);
+                    console.dir(sections);
                 $(sections).removeClass(visibleClass)
                     .eq(index).addClass(visibleClass);
+                    console.dir($(sections).eq(index));
+                console.groupEnd();
             };
         setVisible();
         if(event.type=='click'){
