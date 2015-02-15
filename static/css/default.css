@@ -2057,7 +2057,7 @@ footer section {
 #after-stone > div {
   border-bottom: solid 1px white;
   overflow: auto;
-  padding-top: 53px;
+  padding-top: 51px;
   position: relative;
 }
 /* line 22, ../../_dev/scss/_facade.scss */
@@ -2095,48 +2095,49 @@ footer section {
   border-bottom: solid 1px #e3e3e3;
   margin-top: 40px;
   padding-left: 257px;
+  padding-right: 120px;
 }
-/* line 54, ../../_dev/scss/_facade.scss */
+/* line 55, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(1) > div {
   background-position: 0 -96px;
   height: 380px;
 }
-/* line 58, ../../_dev/scss/_facade.scss */
+/* line 59, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(2) > div {
   background-position: 0 -681px;
   height: 268px;
 }
-/* line 62, ../../_dev/scss/_facade.scss */
+/* line 63, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(3) > div {
   background-position: 0 -681px;
   height: 270px;
 }
-/* line 66, ../../_dev/scss/_facade.scss */
+/* line 67, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(4) > div {
   background-position: 0 -1269px;
   height: 288px;
 }
-/* line 70, ../../_dev/scss/_facade.scss */
+/* line 71, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(5) > div {
   background-position: 0 -1937px;
   height: 266px;
 }
-/* line 74, ../../_dev/scss/_facade.scss */
+/* line 75, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(6) > div {
   background-position: 0 -2673px;
   height: 262px;
 }
-/* line 78, ../../_dev/scss/_facade.scss */
+/* line 79, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(7) > div {
   background-position: 0 -3375px;
   border-bottom: none;
   height: 287px;
 }
-/* line 84, ../../_dev/scss/_facade.scss */
+/* line 85, ../../_dev/scss/_facade.scss */
 #facade .top > div {
   height: 530px;
 }
-/* line 87, ../../_dev/scss/_facade.scss */
+/* line 88, ../../_dev/scss/_facade.scss */
 #facade .top > div > div {
   background-color: #FFF;
   -webkit-border-radius: 6px;
@@ -2157,16 +2158,16 @@ footer section {
   transform: translateY(98px);
   width: 714px;
 }
-/* line 99, ../../_dev/scss/_facade.scss */
+/* line 100, ../../_dev/scss/_facade.scss */
 #facade div.do-it.first {
   margin-top: 68px;
 }
-/* line 103, ../../_dev/scss/_facade.scss */
+/* line 104, ../../_dev/scss/_facade.scss */
 #facade-beauty > div > div {
   background: url("../images_temp/facade/big-stone.jpg") no-repeat;
   padding-left: 383px;
 }
-/* line 107, ../../_dev/scss/_facade.scss */
+/* line 108, ../../_dev/scss/_facade.scss */
 #facade-work > div.relative {
   height: 363px;
   margin: auto;
@@ -2175,7 +2176,7 @@ footer section {
   width: 512px;
   z-index: 1;
 }
-/* line 115, ../../_dev/scss/_facade.scss */
+/* line 116, ../../_dev/scss/_facade.scss */
 #facade-work div.substrate {
   background: #000;
   -webkit-border-radius: 6px;
@@ -2193,7 +2194,7 @@ footer section {
   z-index: -1;
 }
 
-/* line 125, ../../_dev/scss/_facade.scss */
+/* line 126, ../../_dev/scss/_facade.scss */
 #facade .top h1 {
   font: 72px/77px PlumbMedium !important;
   color: white;
@@ -2204,7 +2205,7 @@ footer section {
   top: 51px;
   width: 500px;
 }
-/* line 135, ../../_dev/scss/_facade.scss */
+/* line 136, ../../_dev/scss/_facade.scss */
 #facade-work h1.header-big {
   color: white;
   font: 48px PlumbMedium;
@@ -2212,15 +2213,16 @@ footer section {
   text-align: center;
 }
 
-/* line 143, ../../_dev/scss/_facade.scss */
+/* line 144, ../../_dev/scss/_facade.scss */
 #facade h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 21px;
+  font-weight: normal;
   margin-bottom: 4px;
 }
 
-/* line 152, ../../_dev/scss/_facade.scss */
+/* line 154, ../../_dev/scss/_facade.scss */
 #after-stone h4, #facade-beauty h4 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -2229,31 +2231,31 @@ footer section {
   margin: 0;
 }
 
-/* line 161, ../../_dev/scss/_facade.scss */
+/* line 163, ../../_dev/scss/_facade.scss */
 #facade .content ul.block li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
 }
 
-/* line 169, ../../_dev/scss/_facade.scss */
+/* line 171, ../../_dev/scss/_facade.scss */
 #after-stone p, #facade-beauty p {
   margin-top: 14px !important;
 }
-/* line 172, ../../_dev/scss/_facade.scss */
+/* line 174, ../../_dev/scss/_facade.scss */
 #facade-beauty p {
   margin-bottom: 30px;
 }
-/* line 175, ../../_dev/scss/_facade.scss */
+/* line 177, ../../_dev/scss/_facade.scss */
 #facade .top p {
   color: #1b1b1b;
   margin: 0;
 }
-/* line 178, ../../_dev/scss/_facade.scss */
+/* line 180, ../../_dev/scss/_facade.scss */
 #facade .top p:last-child {
   margin-top: 30px;
 }
-/* line 183, ../../_dev/scss/_facade.scss */
+/* line 185, ../../_dev/scss/_facade.scss */
 #facade .content p.pseudoheader {
   background: url("../images_temp/facade/roofs.png") no-repeat 40px 93px;
   color: #5d534e;
@@ -2264,57 +2266,63 @@ footer section {
   text-align: center;
   width: 740px;
 }
-/* line 194, ../../_dev/scss/_facade.scss */
+/* line 196, ../../_dev/scss/_facade.scss */
 #facade .content section p {
   margin-top: 0;
 }
-/* line 197, ../../_dev/scss/_facade.scss */
+/* line 199, ../../_dev/scss/_facade.scss */
 #facade-work p {
   color: white;
   font: 17px Arial, Helvetica, sans-serif;
   padding: 7px;
 }
-/* line 201, ../../_dev/scss/_facade.scss */
+/* line 203, ../../_dev/scss/_facade.scss */
 #facade-work p:nth-child(2) {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 205, ../../_dev/scss/_facade.scss */
+/* line 207, ../../_dev/scss/_facade.scss */
 #facade-work p:nth-child(3) {
   margin-top: 0;
 }
 
-/* line 211, ../../_dev/scss/_facade.scss */
+/* line 213, ../../_dev/scss/_facade.scss */
 #facade section#facade-work {
   background: url("../images_temp/facade/facade-work.jpg") center;
   background-size: cover;
   height: 560px;
 }
 
-/* line 218, ../../_dev/scss/_facade.scss */
+/* line 220, ../../_dev/scss/_facade.scss */
 #after-stone aside span {
   display: block;
 }
 
-/* line 224, ../../_dev/scss/_facade.scss */
+/* line 226, ../../_dev/scss/_facade.scss */
 #facade #gallery {
   height: 88px;
 }
-/* line 228, ../../_dev/scss/_facade.scss */
+/* line 230, ../../_dev/scss/_facade.scss */
 #facade #work-examples aside {
   margin-bottom: 59px;
 }
 
-/* line 234, ../../_dev/scss/_facade.scss */
+/* line 236, ../../_dev/scss/_facade.scss */
+#facades .header-slim-big {
+  font-size: 23px;
+  margin-top: 28px;
+  text-align: left;
+}
+/* line 241, ../../_dev/scss/_facade.scss */
 #facades .works-examples {
-  margin-top: 30px;
+  margin-top: 13px;
 }
 
-/* line 238, ../../_dev/scss/_facade.scss */
+/* line 245, ../../_dev/scss/_facade.scss */
 #facade-beauty {
   padding-top: 45px;
 }
-/* line 240, ../../_dev/scss/_facade.scss */
+/* line 247, ../../_dev/scss/_facade.scss */
 #facade-beauty aside {
   -webkit-transform: translateY(12px);
   -moz-transform: translateY(12px);
@@ -2322,11 +2330,11 @@ footer section {
   -o-transform: translateY(12px);
   transform: translateY(12px);
 }
-/* line 243, ../../_dev/scss/_facade.scss */
+/* line 250, ../../_dev/scss/_facade.scss */
 #facade-beauty .header-slim-middle {
   line-height: 32px;
 }
-/* line 246, ../../_dev/scss/_facade.scss */
+/* line 253, ../../_dev/scss/_facade.scss */
 #facade-beauty .works-examples {
   margin-top: 14px;
   margin-bottom: 49px;

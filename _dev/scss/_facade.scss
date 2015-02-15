@@ -16,7 +16,7 @@ div{
   #after-stone >&{
     border-bottom: solid 1px white;
     overflow: auto;
-    padding-top: 53px;
+    padding-top: 51px;
     position: relative;
     $imgs-facade:$images_dir + 'backgrounds/';
     &:nth-child(1){
@@ -49,6 +49,7 @@ div{
     border-bottom: solid 1px #e3e3e3;
     margin-top: 40px;
     padding-left: 257px;
+    padding-right: 120px;
   }
   $bg-pos-left:0;
   #facades section:nth-child(1) >&{
@@ -144,6 +145,7 @@ h2{
     color: $color-dark-common;
     font-family: $font-second;
     font-size: 21px;
+    font-weight: normal;
     margin-bottom: 4px;
   }
 }
@@ -231,8 +233,13 @@ span{
   }
 }
 #facades{
+  .header-slim-big{
+    font-size: 23px;
+    margin-top: 28px;
+    text-align: left;
+  }
   .works-examples{
-    margin-top: 30px;
+    margin-top: 13px;
   }
 }
 #facade-beauty{
