@@ -1,0 +1,274 @@
+aside{
+  #design .wide >&{
+    background: white;
+  }
+  #design #work-examples >&{
+    margin-bottom: 41px;
+    margin-top: 73px;
+  }
+}
+button{
+  #design .content &{
+    &.btn-more{
+      background-color: $background-smoke-white;
+      border: $border-btn;
+      border-radius: 5px;
+      display: table;
+      height: 28px;
+      margin-top: -17px;
+      width: 90px;
+    }
+  }
+}
+div{
+  #design #our-works >&{
+    &:nth-child(1){
+      padding-top: 26px;
+    }
+    &:nth-child(2){
+      background: $background-smoke-white;
+      padding-top: 84px;
+    }
+    &:nth-child(3){
+      background: $background-smoke-white;
+      padding-bottom: 64px;
+      padding-top: 40px;
+    }
+  }
+  #design #style-classic +&{
+    padding-bottom: 28px;
+  }
+  #design #style-modern +&{
+    padding-bottom: 54px;
+  }
+  #design .slider-bottom &{
+    background: $background-smoke-white;
+  }
+  #design &{
+    &.top.relative{
+      background-image: url($images_dir + 'design/top-visual-bg.jpg');
+      background-repeat: no-repeat;
+      background-position: 71% 0;
+      @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
+    }
+    &.top-container{
+      height: 659px;
+    }
+  }
+  // чиста для подстраховки
+  #design .top.relative +&.do-it{
+    position: relative;
+  }
+  #design .content .wide >&{
+    margin: auto;
+    padding-right: 410px;
+    position: relative;
+    width: $max-width-container;
+  }
+
+  #design .content .wide:nth-child(2) >&{
+    padding-right: 310px;
+  }
+  #design .content .wide:nth-child(4) >&{
+    padding-right: 260px;
+  }
+  #design .content .wide:nth-child(5) >&{
+    padding-right: 350px;
+  }
+  #design .content .wide >div >&{
+    &:last-child{
+      //background-color: lavender;
+      background-repeat: no-repeat;
+      height: 425px;
+      position: absolute;
+      left: 545px;
+      top:0;
+      width: 475px;
+    }
+  }
+  #design .content .wide:nth-child(1) >div >&:last-child{
+    background-image: url($images_dir + 'design/architectural-design.png');
+    background-position: 2px 70px;
+  }
+  #design .content .wide:nth-child(2) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-outer.png');
+    background-position: 113px 28px;
+  }
+  #design .content .wide:nth-child(3) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-inner.png');
+    background-position: 50px 0;
+  }
+  #design .content .wide:nth-child(4) >div >&:last-child{
+    background-image: url($images_dir + 'design/electrical-systems.png');
+    background-position: 74px 53px;
+  }
+  #design .content .wide:nth-child(5) >div >&:last-child{
+    background-image: url($images_dir + 'design/projecting-bassein.png');
+    background-position: 29px 7px;
+  }
+  // контейнер для заголовка и текста
+  #design #visual-bottom >.relative >&.relative{
+    height: 290px;
+    padding-left: 40px;
+    padding-right: 40px;
+    @include transform(translateY(83px));
+    width: 845px;
+    //height: 100%;
+  }
+  // подложики под заголовок и текст
+  #design #visual-bottom >.relative >.relative >&.absolute{
+    width: 100%;
+    z-index: -1;
+    $height:115px;
+    $offset:8px;
+    &:nth-child(3){
+      background-color: white;
+      @include border-radius(6px 6px 0 0);
+      height: $height;
+      @include opacity(.91);
+      top:-($offset);
+    }
+    &:nth-child(4){
+      background-color: #a64726;
+      @include border-radius(0 0 6px 6px);
+      @include opacity(.8);
+      bottom: $offset;
+      top: $height - $offset;
+    }
+  }
+  #design &#frame{
+    background: url($images_dir + 'design/frame.png') no-repeat;
+    height: 282px;
+    position: absolute;
+    top: 35px;
+    right: 1.2%;
+    width: 272px;
+  }
+  #design &#lamp{
+    background: url($images_dir + 'design/lamp.png') no-repeat;
+    height: 219px;
+    position: absolute;
+    right: 23%;
+    top: -14px;
+    width: 118px;
+  }
+  #design &#sofa{
+    background: url($images_dir + 'design/sofa.png') no-repeat;
+    height: 156px;
+    position: absolute;
+    right: 7%;
+    top: 333px;
+    width: 282px;
+  }
+}
+h1{
+  #design .top.relative &{
+    line-height: 61px;
+    margin: 44px auto auto;
+    text-align: center;
+    width: 650px;
+  }
+}
+h2{
+  #design .content &{
+    color: $color-dark-common;
+    font: 48px/50px PlumbLight;
+    font-weight: 100;
+    margin: 63px auto 37px;
+  }
+  #design .content section:nth-child(1) &{
+    margin-top: 0;
+  }
+  #design .content section:nth-child(2) &{
+    margin-bottom: 26px;
+    margin-top: 51px;
+    padding-right: 100px;
+  }
+  #design .content section:nth-child(3) &{
+    margin-bottom: 26px;
+    margin-top: 53px;
+    padding-right: 80px;
+  }
+  #design .content section:nth-child(4) &{
+    margin-top: 52px;
+  }
+  #design .content section:nth-child(5) &{
+    margin-top: 52px;
+    padding-right: 50px;
+  }
+  #design .content section:nth-child(6) &{
+    padding-bottom: 41px;
+    padding-top: 73px;
+  }
+  #design #visual-bottom &.header-big{
+    color:$color-carrot;
+    font-weight: 100;
+    height: 107px;
+    line-height: 49px;
+    margin-bottom: 0;
+    //margin-left: 40px;
+    //margin-right: -40px;
+    margin-top: 8px;
+    text-align: center;
+    @include transform(translateX(40px));
+  }
+}
+main{
+  #design &{
+    background: url($images_dir + 'backgrounds/tile-design-main.png') #FFF;
+    padding-top: 63px;
+  }
+}
+p{
+  #design .top-container &{
+    font-size: 18px;
+    color: $color-dark-deep2;
+    margin-left: 118px;
+    padding-right: 370px;
+    position: relative;
+    top: 23px;
+    width: 710px;
+  }
+  #design .content &{
+    font: 18px/20px $font-second;
+    margin-bottom: 32px;
+  }
+  #design .content .wide:nth-child(4) &{
+    padding-right: 120px;
+  }
+  #design .content .wide:nth-child(5) &{
+    padding-right: 20px;
+  }
+  #design .top-container h1 +&{
+    top:27px;
+  }
+  #design #visual-bottom >div &{
+    color: white;
+    font-size: 17px;
+    line-height: 20px;
+    margin: 26px;
+    margin-right: -60px;
+  }
+}
+section{
+  #design .content >&{
+    overflow: hidden;
+    &:nth-child(odd):not(:first-child){
+      background-color: #f6f6f6;
+    }
+    $i:1;
+    @each $height in 407,444,381,340,381{
+      &:nth-child(#{$i}){
+        height: #{$height}px;
+      }
+      $i:$i+1;
+    }
+  }
+  #design &#visual-bottom{
+    background: url($images_dir + 'design/visual-bottom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 454px;
+  }
+}

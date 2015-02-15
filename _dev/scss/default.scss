@@ -30,7 +30,10 @@
 @import "header/header";
 @import "main/main";
 @import "footer/footer";
-
+//------------------------------------
+@import "_design";
+@import "_decoration";
+//------------------------------------
 #achievements{
   margin: auto;
 }
