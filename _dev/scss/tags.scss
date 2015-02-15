@@ -48,26 +48,6 @@ a{
     margin-right: 6px;
     width: 91px;
   }
-
-  #our-works &.btn,
-  #engineering-systems &.btn{
-    &:not(#btn-consult){
-      @include btn-zoom;
-    }
-  }
-  #our-works ul.table &{
-    color: $color-carrot-light;
-    font-family: PlumbMedium;
-    font-size: 21px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    top:140px;
-    @include centered-horizontal(absolute);
-    &:hover{
-      text-decoration: underline;
-    }
-  }
   #you-need ul &{
     color: $background-carrot-dark;
     display: block;
@@ -79,21 +59,6 @@ a{
   }
 }
 aside{
-  #after-stone &{
-    position: absolute;
-  }
-  #after-stone >div:nth-child(1) &{
-    top:168px;
-  }
-  #after-stone >div:nth-child(2) &{
-    top:211px;
-  }
-  #after-stone >div:nth-child(3) &{
-    top:214px;
-  }
-  #engineering-systems .content &{
-      margin-bottom: 67px;
-  }
   .footer.why-moscow-home >section >&{
     margin: 21px auto auto;
     overflow: hidden;
@@ -152,7 +117,6 @@ button{
   &.bg-recall{ // связан со следующим
     background-position: 14px 11px;
   }
-
   &.btn-more::before{
     content: "Подробнее";
   }
@@ -201,129 +165,6 @@ div{
     margin: -13px auto -12px;
     padding: 20px 0;
   }
-  #after-stone >&{
-    border-bottom: solid 1px white;
-    overflow: auto;
-    padding-top: 53px;
-    position: relative;
-    $imgs-facade:$images_dir + 'backgrounds/';
-    &:nth-child(1){
-      height: 396px;
-    }
-    &:nth-child(2){
-      height: 436px;
-    }
-    &:nth-child(3){
-      height: 447px;
-    }
-    &:nth-child(even){
-      background: url($imgs-facade + 'tile-facade-light.png');
-    }
-    &:nth-child(odd){
-      background: url($imgs-facade + 'tile-facade-darker.png');
-    }
-  }
-  #after-stone >div >&{
-    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-    height: 100%;
-    margin: auto;
-    min-height: 250px;
-    padding-left: 325px;
-    width: $max-width-container;
-  }
-  #engineering-systems .content >section >&{
-    position: absolute;
-  }
-  #engineering-systems .content >section:nth-child(1) >&{
-    top: 84px;
-  }
-  #engineering-systems .content >section:nth-child(2) >&{
-    top: 84px;
-  }
-  #engineering-systems .content >section:nth-child(3) >&{
-    top: 55px;
-  }
-  #engineering-systems .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
-    padding-left: 50px;
-    padding-right: 485px;
-    padding-top: 84px;
-  }
-
-  #facades section >&{
-    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-    border-bottom: solid 1px red;//#e3e3e3;
-    margin-top: 40px;
-    padding-left: 257px;
-  }
-  $bg-pos-left:0;
-  #facades section:nth-child(1) >&{
-    background-position: $bg-pos-left -96px;
-    height: 380px;
-  }
-  #facades section:nth-child(2) >&{
-    background-position: $bg-pos-left -681px;
-    height: 268px;
-  }
-  #facades section:nth-child(3) >&{
-    background-position: $bg-pos-left -681px;
-    height: 270px;
-  }
-  #facades section:nth-child(4) >&{
-    background-position: $bg-pos-left -1269px;
-    height: 288px;
-  }
-  #facades section:nth-child(5) >&{
-    background-position: $bg-pos-left -1937px;
-    height: 266px;
-  }
-  #facades section:nth-child(6) >&{
-    background-position: $bg-pos-left -2673px;
-    height: 262px;
-  }
-  #facades section:nth-child(7) >&{
-    background-position: $bg-pos-left -3375px;
-    height: 266px;
-  }
-
-  #facade .top >&{
-    height: 530px;
-  }
-  #facade .top >div >&{
-    background-color: #FFF;
-    @include border-radius(6px);
-    box-sizing: border-box;
-    height: 170px;
-    margin: auto;
-    @include opacity(0.89);
-    padding: 20px;
-    @include transform(translateY(98px));
-    width: 714px;
-  }
-  #facade &.do-it{
-    &.first{
-      margin-top: $nav-height;
-    }
-  }
-  #facade-work >&.relative{
-    height: 363px;
-    margin: auto;
-    padding: 16px;
-    top: 112px;
-    width: 512px;
-    z-index: 1;
-  }
-  #facade-work &.substrate{
-    background: #000;
-    @include border-radius(6px);
-    @include opacity(0.1);
-    position: absolute;
-    top:0; right:0; bottom: 0; left: 0;
-    z-index: -1;
-  }
-  #our-works &.gallery-next.header-slim-big{
-    height: 52px;
-  }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);
@@ -369,39 +210,8 @@ h1{
     font-weight: normal;
     margin-bottom: 36px;
   }
-  #facade .top &{
-    font: 72px/77px PlumbMedium !important;
-    color: white;
-    margin: auto;
-    position: relative;
-    text-align: center;
-    @include text-shadow(2px 2px 2px #999);
-    top: 51px;
-    width: 500px;
-  }
-  #facade-work &.header-big{
-    color: white;
-    font: 48px PlumbMedium;
-    margin: 0;
-    text-align: center;
-  }
 }
 h2{
-  #engineering-systems .content &{
-    color: $color-dark-common;
-    font-family: $font-second;
-    font-size: 21px;
-    font-weight: 100;
-    margin-bottom: 14px;
-    margin-right: -4px;
-    margin-top: 0;
-  }
-  #facade &{
-    color: $color-dark-common;
-    font-family: $font-second;
-    font-size: 21px;
-    margin-bottom: 4px;
-  }
 }
 h3{
   .footer &{
@@ -413,13 +223,6 @@ h3{
   }
 }
 h4{
-  #after-stone &{
-    color: $color-dark-common;
-    font-family: $font-second;
-    font-size: 21px;
-    font-weight: 100;
-    margin: 0;
-  }
 }
 header{
   background-color: white;
@@ -457,27 +260,6 @@ li{
       }
       $i:$i+1;
     }
-  }
-  #our-works ul.table &{
-    background: url($images_dir + 'design/40specs.jpg') no-repeat;
-    position: relative;
-    $i:1;
-    @each $posX in 22,-168,-354,-538,-728{
-      &:nth-child(#{$i}){
-        background-position: #{$posX}px 0;
-      }
-      $i:$i+1;
-    }
-  }
-  #engineering-systems .content &{
-    display: block;
-    @include paragraph-dark;
-    margin-bottom: 16px;
-  }
-  #facade .content ul.block &{
-    font-family: $font-second;
-    font-size: 14px;
-    margin-bottom: 7px;
   }
   #showcase &{
     color: white;
@@ -534,62 +316,6 @@ p{
     font-size: 17px;
     margin-bottom: 32px;
   }
-  #after-stone &{
-    margin-top: 14px;
-  }
-  #engineering-systems .content &{
-    &.header-slim-big{
-      line-height: 46px;
-      margin-bottom: 41px;
-    }
-  }
-  #facade .top &{
-    color: #1b1b1b;
-    margin: 0;
-    &:last-child{
-      margin-top: 30px;
-    }
-  }
-  #facade .content &{
-    &.pseudoheader{
-      background: url($images_dir + 'facade/roofs.png') no-repeat 40px 93px;
-      color: $color-dark-common;
-      font: 17px/18px $font-second;
-      height:160px;
-      margin-bottom: 86px;
-      margin-top: 46px;
-      text-align: center;
-      width: 740px;
-    }
-  }
-  #facade .content section &{
-    margin-top: 0;
-  }
-  #facade-work &{
-    color: white;
-    font: 17px $font-second;
-    padding: 7px;
-    &:nth-child(2){
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    &:nth-child(3){
-      margin-top: 0;
-    }
-  }
-  #our-works &{
-    color: $color-dark-common;
-    text-align: center;
-  }
-  #our-works &.header{
-    font-family: $font-second;
-    font-size: 25px;
-  }
-  #our-works p.header +&{
-    color: $color-dark-common;
-    font-size: 17px;
-    margin-top: -21px;
-  }
   #you-need & {
     &.header-slim-big{
       margin-bottom: 32px;
@@ -621,34 +347,6 @@ section{
     display: table;
     margin: auto;
   }
-  #engineering-systems .content &{
-    background-repeat: no-repeat;
-    border-bottom: dotted 2px #e3e3e3;
-    padding-left: 465px;
-    padding-right: 60px;
-    position: relative;
-    $img-subdir: $images_dir + 'engineering/';
-    &:nth-child(1){
-      background-image: url($img-subdir + 'section1.jpg');
-      background-position: 23px;
-      height: 352px;
-    }
-    &:nth-child(2){
-      background-image: url($img-subdir + 'section2-leaf.jpg');
-      background-position: 25px 54px;
-      height: 266px;
-    }
-    &:nth-child(3){
-      background-image: url($img-subdir + 'section3.gif');
-      background-position: 46px;
-      height: 301px;
-    }
-  }
-  #facade &#facade-work{
-    background: url($images_dir + 'facade/facade-work.jpg') center;
-    background-size: cover;
-    height: 560px;
-  }
 }
 span{
   button.print &{
@@ -666,13 +364,6 @@ span{
     color: #FF6447;
     display: inline-block;
     padding: 0 4px;
-  }
-  #after-stone aside &{
-    display: block;
-  }
-  #our-works ul.table a &{
-    display: block;
-    white-space: nowrap;
   }
   #style-classic &,
   #style-modern &{
@@ -692,13 +383,6 @@ ul{
   .footer.why-moscow-home >section >&{
     display: table;
     margin: auto;
-  }
-  #our-works &{
-    &.table{
-      height: 190px;
-      margin: 42px auto;
-      width: 940px;
-    }
   }
   #you-need &{
     display: table;

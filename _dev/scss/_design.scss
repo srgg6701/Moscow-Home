@@ -1,3 +1,23 @@
+a{
+  #our-works &.btn{
+    &:not(#btn-consult){
+      @include btn-zoom;
+    }
+  }
+  #our-works ul.table &{
+    color: $color-carrot-light;
+    font-family: PlumbMedium;
+    font-size: 21px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    top:140px;
+    @include centered-horizontal(absolute);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
 aside{
   #design .wide >&{
     background: white;
@@ -21,7 +41,10 @@ button{
   }
 }
 div{
-  #design #our-works >&{
+  #our-works &.gallery-next.header-slim-big{
+    height: 52px;
+  }
+  #our-works >&{
     &:nth-child(1){
       padding-top: 26px;
     }
@@ -35,6 +58,7 @@ div{
       padding-top: 40px;
     }
   }
+
   #design #style-classic +&{
     padding-bottom: 28px;
   }
@@ -213,6 +237,19 @@ h2{
     @include transform(translateX(40px));
   }
 }
+li{
+  #our-works ul.table &{
+    background: url($images_dir + 'design/40specs.jpg') no-repeat;
+    position: relative;
+    $i:1;
+    @each $posX in 22,-168,-354,-538,-728{
+      &:nth-child(#{$i}){
+        background-position: #{$posX}px 0;
+      }
+      $i:$i+1;
+    }
+  }
+}
 main{
   #design &{
     background: url($images_dir + 'backgrounds/tile-design-main.png') #FFF;
@@ -220,6 +257,20 @@ main{
   }
 }
 p{
+  #our-works &{
+    color: $color-dark-common;
+    text-align: center;
+  }
+  #our-works &.header{
+    font-family: $font-second;
+    font-size: 25px;
+  }
+  #our-works p.header +&{
+    color: $color-dark-common;
+    font-size: 17px;
+    margin-top: -21px;
+  }
+
   #design .top-container &{
     font-size: 18px;
     color: $color-dark-deep2;
@@ -270,5 +321,20 @@ section{
     background-position: center;
     background-repeat: no-repeat;
     height: 454px;
+  }
+}
+span{
+  #our-works ul.table a &{
+    display: block;
+    white-space: nowrap;
+  }
+}
+ul{
+  #our-works &{
+    &.table{
+      height: 190px;
+      margin: 42px auto;
+      width: 940px;
+    }
   }
 }

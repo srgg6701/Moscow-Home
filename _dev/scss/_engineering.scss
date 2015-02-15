@@ -1,0 +1,83 @@
+a{
+  #engineering-systems &.btn{
+    &:not(#btn-consult){
+      @include btn-zoom;
+    }
+  }
+}
+aside{
+  #engineering-systems .content &{
+    margin-bottom: 67px;
+  }
+}
+div{
+  #engineering-systems .content >section >&{
+    position: absolute;
+  }
+  #engineering-systems .content >section:nth-child(1) >&{
+    top: 84px;
+  }
+  #engineering-systems .content >section:nth-child(2) >&{
+    top: 84px;
+  }
+  #engineering-systems .content >section:nth-child(3) >&{
+    top: 55px;
+  }
+  #engineering-systems .top >&{
+    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
+    padding-left: 50px;
+    padding-right: 485px;
+    padding-top: 84px;
+  }
+}
+h2{
+  #engineering-systems .content &{
+    color: $color-dark-common;
+    font-family: $font-second;
+    font-size: 21px;
+    font-weight: 100;
+    margin-bottom: 14px;
+    margin-right: -4px;
+    margin-top: 0;
+  }
+}
+li{
+  #engineering-systems .content &{
+    display: block;
+    @include paragraph-dark;
+    margin-bottom: 16px;
+  }
+}
+p{
+  #engineering-systems .content &{
+    &.header-slim-big{
+      line-height: 46px;
+      margin-bottom: 41px;
+    }
+  }
+}
+section{
+  #engineering-systems .content &{
+    background-repeat: no-repeat;
+    border-bottom: dotted 2px #e3e3e3;
+    padding-left: 465px;
+    padding-right: 60px;
+    position: relative;
+    $img-subdir: $images_dir + 'engineering/';
+    &:nth-child(1){
+      background-image: url($img-subdir + 'section1.jpg');
+      background-position: 23px;
+      height: 352px;
+    }
+    &:nth-child(2){
+      background-image: url($img-subdir + 'section2-leaf.jpg');
+      background-position: 25px 54px;
+      height: 266px;
+    }
+    &:nth-child(3){
+      background-image: url($img-subdir + 'section3.gif');
+      background-position: 46px;
+      height: 301px;
+    }
+  }
+}
