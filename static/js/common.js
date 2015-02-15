@@ -71,7 +71,7 @@ function setVisibilityState(event,menu_to_show_index){
         var target_obj=event.currentTarget.tagName.toLowerCase(),
             action=event.type,
             active='active';
-        console.log('%caction: '+action,'color:red');console.log('%ctarget: '+target_obj,'color:green');
+        //console.log('%caction: '+action,'color:red');console.log('%ctarget: '+target_obj,'color:green');
         if(action=='mouseenter'){
             if(target_obj=='a') {
                 active_link=active;
@@ -80,8 +80,8 @@ function setVisibilityState(event,menu_to_show_index){
                 active_link=true;
                 visibility_container=active;
             }
-            console.log('%cvisibility_container: '+visibility_container,'color:violet');
-            console.log('%cactive_link: '+active_link,'color:blue');
+            //console.log('%cvisibility_container: '+visibility_container,'color:violet');
+            //console.log('%cactive_link: '+active_link,'color:blue');
         }else
           if(action=='mouseleave' && (visibility_container!=active||active_link!=active)){ // уходим с объекта
               visibility_container=false;

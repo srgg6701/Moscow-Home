@@ -5,7 +5,21 @@ html
         script(src="static/js/min/jquery.min.js")
         script(src="static/js/common.js")
         script(src='_dev/debug/call-dev.js')
-        block map
+        script(src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU")
+        script.
+            ymaps.ready(init);
+            var myMap;
+            function init(){
+                document.getElementById('waiting-map').remove();
+                myMap = new ymaps.Map ("map", {
+                    center: [55.7128,37.0681], zoom: 11
+                });
+                myPlacemark = new ymaps.Placemark([55.7128,37.0681], {
+                    hintContent: 'Дома класса люкс. Мы тут!',
+                    balloonContent: 'Столица России'
+                });
+                myMap.geoObjects.add(myPlacemark);
+            }
         block title
             title Default title
     block content
