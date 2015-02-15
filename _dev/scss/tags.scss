@@ -58,12 +58,29 @@ a{
     width: 476px;
   }
   #decoration .slides >div.float-left:last-child &{
-    //background-color: orange;
+    background: url($images_dir + "decoration/exmpls-right.jpg");
     float: left;
     height: 134px;
     margin-bottom: 9px;
     margin-right: 8.5px;
     width: 153px;
+    $top:0;
+    &:nth-last-child(2){
+      background-position: -161px $top;
+    }
+    &:nth-last-child(3){
+      background-position: -323px $top;
+    }
+    $top:-143px;
+    &:nth-last-child(4){
+      background-position: -476px $top;
+    }
+    &:nth-last-child(5){
+      background-position: -638px $top;
+    }
+    &:nth-last-child(6){
+      background-position:-799px $top;
+    }
     &:nth-child(3),
     &:nth-child(6){
       margin-right: 0;
@@ -250,7 +267,7 @@ div{
       padding-left: 59px;
     }
   }
-  .slider-bottom &{
+  .slider-bottom >&{
     background: url($images_dir + "backgrounds/tile-gallery.png");
     height: 184px;
     margin: -13px auto -12px;
@@ -293,9 +310,6 @@ $i:1;
   }
   $i:$i+1;
 }
-  #decoration &.slider-bottom{
-    height: 376px;
-  }
   #decoration .top &.relative{
     background-image: url($images_dir + 'decoration/decoration-top.png');
     background-repeat: no-repeat;
@@ -321,6 +335,41 @@ $i:1;
     width: $max-width-container;
 
   }
+$i:2;
+@each $top in 80,102,88,92,87,102,88{
+  #decoration .content .contents >div:nth-child(#{$i}) >&{
+    padding-top: #{$top}px;
+  }
+  $i:$i+1;
+}
+  #decoration &.slider-bottom{
+    height: 345px;
+  }
+  #decoration &.slides{
+    height: 285px;
+    margin: auto;
+    padding: 0;
+  }
+  #decoration .slides &.float-left{
+    background-repeat: no-repeat;
+    $dHeight: 280px;
+    height: $dHeight;
+    width: 50%;
+    &:nth-child(1){
+      background-image: url($images_dir + 'decoration/exmpl-big.jpg');
+      background-size: 476px $dHeight;
+    }
+    &:nth-child(2){
+      background-image: url($images_dir + 'decoration/exmpls-right.jpg');
+      // переопределить стили для .slider-bottom div и #decoration .slides div.float-left
+      height: auto;
+      margin-left: 4px;
+      margin-right: -4px;
+      padding:0;
+    }
+  }
+
+
   #design #our-works >&{
     &:nth-child(1){
       padding-top: 26px;
@@ -346,25 +395,6 @@ $i:1;
   }
   #design .slider-bottom &{
     background: $background-smoke-white;
-  }
-  $i:2;
-@each $top in 80,102,88,92,87,102,88{
-  #decoration .content .contents >div:nth-child(#{$i}) >&{
-      padding-top: #{$top}px;
-  }
-  $i:$i+1;
-}
-
-  #decoration .slides &.float-left{
-    background-repeat: no-repeat;
-    height: 280px;
-    width: 50%;
-    &:nth-child(1){
-      background-image: url($images_dir + 'decoration/exmpl-big.jpg');
-    }
-    &:nth-child(2){
-      background-image: url($images_dir + 'decoration/exmpls-right.jpg');
-    }
   }
   #design &{
     &.top.relative{
@@ -811,7 +841,7 @@ p{
   }
   #decoration .content >aside >&:first-child{
     margin-top: 50px;
-    margin-bottom: 21px;
+    margin-bottom: 30px;
   }
   #design .top-container &{
     font-size: 18px;

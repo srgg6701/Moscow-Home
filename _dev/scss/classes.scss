@@ -33,6 +33,7 @@
   background-color: $background-brown-dark;
   color: white !important;
   overflow: hidden;
+  position: relative;
   #decoration &,
   #design &{
     background-image: url($images_dir + 'backgrounds/tile-100.png');
