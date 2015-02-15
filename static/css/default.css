@@ -1332,7 +1332,7 @@ footer section {
   background: #f8f8f8;
 }
 /* line 72, ../../_dev/scss/_design.scss */
-#design div.top.relative {
+#design div.top {
   background-image: url("../images_temp/design/top-visual-bg.jpg");
   background-repeat: no-repeat;
   background-position: 71% 0;
@@ -1345,7 +1345,7 @@ footer section {
   height: 659px;
 }
 /* line 83, ../../_dev/scss/_design.scss */
-#design .top.relative + div.do-it {
+#design .top + div.do-it {
   position: relative;
 }
 /* line 86, ../../_dev/scss/_design.scss */
@@ -1473,7 +1473,7 @@ footer section {
 }
 
 /* line 189, ../../_dev/scss/_design.scss */
-#design .top.relative h1 {
+#design .top h1 {
   line-height: 61px;
   margin: 44px auto auto;
   text-align: center;
@@ -1767,7 +1767,7 @@ footer section {
   background-position: 28px -5064px !important;
 }
 /* line 67, ../../_dev/scss/_decoration.scss */
-#decoration .top div.relative {
+#decoration .top div {
   background-image: url("../images_temp/decoration/decoration-top.png");
   background-repeat: no-repeat;
   background-position: 85px 232px;

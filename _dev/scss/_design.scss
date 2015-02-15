@@ -69,7 +69,7 @@ div{
     background: $background-smoke-white;
   }
   #design &{
-    &.top.relative{
+    &.top{//.relative
       background-image: url($images_dir + 'design/top-visual-bg.jpg');
       background-repeat: no-repeat;
       background-position: 71% 0;
@@ -80,7 +80,7 @@ div{
     }
   }
   // чиста для подстраховки
-  #design .top.relative +&.do-it{
+  #design .top +&.do-it{//.relative
     position: relative;
   }
   #design .content .wide >&{
@@ -186,7 +186,7 @@ div{
   }
 }
 h1{
-  #design .top.relative &{
+  #design .top &{//.relative
     line-height: 61px;
     margin: 44px auto auto;
     text-align: center;

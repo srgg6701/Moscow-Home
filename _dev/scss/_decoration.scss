@@ -64,7 +64,7 @@ div{
     }
     $i:$i+1;
   }
-  #decoration .top &.relative{
+  #decoration .top &{//.relative
     background-image: url($images_dir + 'decoration/decoration-top.png');
     background-repeat: no-repeat;
     background-position: 85px 232px;
