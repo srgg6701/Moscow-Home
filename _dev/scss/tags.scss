@@ -71,7 +71,9 @@ a{
   }
   #our-works &.btn,
   #engineering-systems &.btn{
-    @include btn-zoom;
+    &:not(#btn-consult){
+      @include btn-zoom;
+    }
   }
   #our-works ul.table &{
     color: $color-carrot-light;

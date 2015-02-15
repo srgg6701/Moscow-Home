@@ -2,38 +2,54 @@ $headerHeight: 68px;
 $level1Height: 423px;
 $footerHeight: 47px;
 $bottom-footer:14px;
-
+/** ОБЩАЯ СХЕМА:
+    body[#index]
+      // header-nav.jade
+      header
+        nav
+      [.top] за исключением index
+      main
+      footer  */
 body, html{
   height: 100%;
   margin: 0;
   padding: 0;
 }
-//---------------------------------------------
-#index{
+body.no-overflow main,
+body.no-overflow footer,
+body.no-overflow main >div{
+  position: absolute;
+}
+#index{ // body
   height: 100%;
   position: relative;
-}
-  body.no-overflow main,
-  body.no-overflow footer,
-  body.no-overflow main >div{
-    position: absolute;
+  main{
+    bottom: $footerHeight + $bottom-footer;
+    top: $headerHeight;
   }
-  //--------------------------------
+}
+//---------------------------------------------
+.top{
+  position: relative;
+  top:$nav-height;
+  #engineering-systems &{
+    height: 583px;
+  }
+  #decoration &{
+    height: 724px;
+  }
+}
+//---------------------------------------------
   header{
     height: $headerHeight;
+    position: fixed;
     top: 0;
+    z-index: 10;
   }
     nav{
       @include centred-margins;
     }
   //--------------------------------
-  main{
-    #index &{
-      bottom: $footerHeight + $bottom-footer;
-      top: $headerHeight;
-    }
-  }
-
     #level1{
       bottom: 0;
       height: $level1Height;
@@ -50,27 +66,9 @@ header,main,footer{
   width: 100%;
 }
 // inner layouts
-.container{
-}
-.top{
-  header +&.relative{
-    top:$nav-height;
-  }
-  #engineering-systems &{
-    height: 583px;
-  }
-  #decoration &{
-    height: 724px;
-  }
-}
-.contact{
-
-}
   .do-it{
     height: 147px;
   }
-.content{
-}
 .footer{
   height: 600px;
 }

@@ -4,6 +4,8 @@ $(function(){
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
+
+    // управление меню при событии его контейнера
     $(menus_container).on('mouseenter mouseleave',/**/ function(event){
         setVisibilityState(event);
     });
@@ -12,6 +14,7 @@ $(function(){
     // todo: удалить после тестирования
     $(dd_menus).on('click', function(){
         $(getInnerMenus()).hide();
+        $(getMenusContainer()).hide();
     });
 
     //-----------------------------------------
@@ -19,7 +22,7 @@ $(function(){
     $('nav a:not([href="#"])').on('mouseenter',hideAll);
     // Управлять выпадающими меню
     // todo: добавить mouseleave
-    $(dd_menus).on('mouseenter'/* mouseleave*/, function(event){
+    $(dd_menus).on('mouseenter mouseleave'/**/, function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
@@ -61,31 +64,32 @@ function setVisibilityState(event,menu_to_show_index){
     var active_link,            // Состояние видимости "ссылок"
         visibility_container,   // Состояние видимсти "контейнера меню"
         menu_index;             // Индекс таргет-меню
+    // перегрузить функцию:
     setVisibilityState=function (event,menu_to_show_index) {
         if(!isNaN(parseInt(menu_to_show_index)))
             menu_index=menu_to_show_index;
         var target_obj=event.currentTarget.tagName.toLowerCase(),
-            action=event.type;
+            action=event.type,
+            active='active';
+        console.log('%caction: '+action,'color:red');console.log('%ctarget: '+target_obj,'color:green');
         if(action=='mouseenter'){
-            (target_obj=='a')?
-                active_link=true
-                : visibility_container=true;
-        }
-        if(action=='mouseleave'){ // уходим с объекта
-            (target_obj=='a')?
-                // Если уходим со ссылки (не обязательно на блок с меню!), отменяем её "видимость".
-                active_link=false
-                // Если уходим с блока с меню, также отменяем его видимость
-                : visibility_container=false;
+            if(target_obj=='a') {
+                active_link=active;
+                visibility_container=true;
+            }else{
+                active_link=true;
+                visibility_container=active;
+            }
+            console.log('%cvisibility_container: '+visibility_container,'color:violet');
+            console.log('%cactive_link: '+active_link,'color:blue');
+        }else
+          if(action=='mouseleave' && (visibility_container!=active||active_link!=active)){ // уходим с объекта
+              visibility_container=false;
+              active_link=false;
+            //console.log('%cvisibility_container: '+visibility_container,'color:violet');
+            //console.log('%cactive_link: '+active_link,'color:blue');
         }
         var visibility_stat=(active_link || visibility_container);
-
-        /*console.group('%cvisibility_stat: '+visibility_stat,'font-weight:bold');
-            console.log('%cactive_link: '+active_link,'color: darkgoldenrod');
-            console.log('%cvisibility_container: '+visibility_container,'color: orange');
-            console.log('%cmenu_index: '+menu_index,'color: red');
-        console.groupEnd();*/
-
         $(getInnerMenus()).hide();
         if(visibility_stat){
             $(getMenusContainer()).show(); // отобразить контейнер с меню

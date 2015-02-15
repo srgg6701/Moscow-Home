@@ -1,0 +1,24 @@
+header
+    nav
+        -var menuItems={'about':["#","О компании"], 'services':["#","Услуги"], 'gallery':["gallery.html","Галерея"], 'contacts':["#","Контакты"]}
+        div
+            ul#top-menu.parent_menu
+                each data,data_section in menuItems
+                    li
+                        a(href=data[0], id='link_' + data_section)=data[1]
+        div
+            a#logo(href="index.html")
+        div
+            -var phone_number="+7 (495) 890-90-90"
+            aside#phone-number=phone_number
+            aside#consulting
+                a#btn-consult.btn(href="#",data-section="ask")="Консультация"
+    section.menu.wide
+        section
+            include  ../drop-down-menu/about
+        section
+            include  ../drop-down-menu/services
+        section
+            include  ../drop-down-menu/contacts
+        section
+            include  ../drop-down-menu/ask
