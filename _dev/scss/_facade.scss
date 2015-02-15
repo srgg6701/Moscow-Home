@@ -46,7 +46,7 @@ div{
 
   #facades section >&{
     background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-    border-bottom: solid 1px red;//#e3e3e3;
+    border-bottom: solid 1px #e3e3e3;
     margin-top: 40px;
     padding-left: 257px;
   }
@@ -77,7 +77,8 @@ div{
   }
   #facades section:nth-child(7) >&{
     background-position: $bg-pos-left -3375px;
-    height: 266px;
+    border-bottom: none;
+    height: 287px;
   }
 
   #facade .top >&{
@@ -98,6 +99,10 @@ div{
     &.first{
       margin-top: $nav-height;
     }
+  }
+  #facade-beauty >div >&{
+    background: url($images_dir + 'facade/big-stone.jpg') no-repeat;
+    padding-left: 383px;
   }
   #facade-work >&.relative{
     height: 363px;
@@ -143,7 +148,8 @@ h2{
   }
 }
 h4{
-  #after-stone &{
+  #after-stone &,
+  #facade-beauty &{
     color: $color-dark-common;
     font-family: $font-second;
     font-size: 21px;
@@ -159,8 +165,12 @@ li{
   }
 }
 p{
-  #after-stone &{
-    margin-top: 14px;
+  #after-stone &,
+  #facade-beauty &{
+    margin-top: 14px !important;
+  }
+  #facade-beauty &{
+    margin-bottom: 30px;
   }
   #facade .top &{
     color: #1b1b1b;
@@ -207,5 +217,34 @@ section{
 span{
   #after-stone aside &{
     display: block;
+  }
+}
+
+#facade{
+  #gallery{
+    height: 88px;
+  }
+  #work-examples{
+    aside{
+      margin-bottom: 59px;
+    }
+  }
+}
+#facades{
+  .works-examples{
+    margin-top: 30px;
+  }
+}
+#facade-beauty{
+  padding-top: 45px;
+  aside{
+    @include transform(translateY(12px));
+  }
+  .header-slim-middle{
+    line-height: 32px;
+  }
+  .works-examples{
+    margin-top: 14px;
+    margin-bottom: 49px;
   }
 }

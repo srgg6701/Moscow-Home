@@ -2092,7 +2092,7 @@ footer section {
 /* line 47, ../../_dev/scss/_facade.scss */
 #facades section > div {
   background: url("../images_temp/facade/vertical1.jpg") no-repeat;
-  border-bottom: solid 1px red;
+  border-bottom: solid 1px #e3e3e3;
   margin-top: 40px;
   padding-left: 257px;
 }
@@ -2129,13 +2129,14 @@ footer section {
 /* line 78, ../../_dev/scss/_facade.scss */
 #facades section:nth-child(7) > div {
   background-position: 0 -3375px;
-  height: 266px;
+  border-bottom: none;
+  height: 287px;
 }
-/* line 83, ../../_dev/scss/_facade.scss */
+/* line 84, ../../_dev/scss/_facade.scss */
 #facade .top > div {
   height: 530px;
 }
-/* line 86, ../../_dev/scss/_facade.scss */
+/* line 87, ../../_dev/scss/_facade.scss */
 #facade .top > div > div {
   background-color: #FFF;
   -webkit-border-radius: 6px;
@@ -2156,11 +2157,16 @@ footer section {
   transform: translateY(98px);
   width: 714px;
 }
-/* line 98, ../../_dev/scss/_facade.scss */
+/* line 99, ../../_dev/scss/_facade.scss */
 #facade div.do-it.first {
   margin-top: 68px;
 }
-/* line 102, ../../_dev/scss/_facade.scss */
+/* line 103, ../../_dev/scss/_facade.scss */
+#facade-beauty > div > div {
+  background: url("../images_temp/facade/big-stone.jpg") no-repeat;
+  padding-left: 383px;
+}
+/* line 107, ../../_dev/scss/_facade.scss */
 #facade-work > div.relative {
   height: 363px;
   margin: auto;
@@ -2169,7 +2175,7 @@ footer section {
   width: 512px;
   z-index: 1;
 }
-/* line 110, ../../_dev/scss/_facade.scss */
+/* line 115, ../../_dev/scss/_facade.scss */
 #facade-work div.substrate {
   background: #000;
   -webkit-border-radius: 6px;
@@ -2187,7 +2193,7 @@ footer section {
   z-index: -1;
 }
 
-/* line 120, ../../_dev/scss/_facade.scss */
+/* line 125, ../../_dev/scss/_facade.scss */
 #facade .top h1 {
   font: 72px/77px PlumbMedium !important;
   color: white;
@@ -2198,7 +2204,7 @@ footer section {
   top: 51px;
   width: 500px;
 }
-/* line 130, ../../_dev/scss/_facade.scss */
+/* line 135, ../../_dev/scss/_facade.scss */
 #facade-work h1.header-big {
   color: white;
   font: 48px PlumbMedium;
@@ -2206,7 +2212,7 @@ footer section {
   text-align: center;
 }
 
-/* line 138, ../../_dev/scss/_facade.scss */
+/* line 143, ../../_dev/scss/_facade.scss */
 #facade h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -2214,8 +2220,8 @@ footer section {
   margin-bottom: 4px;
 }
 
-/* line 146, ../../_dev/scss/_facade.scss */
-#after-stone h4 {
+/* line 152, ../../_dev/scss/_facade.scss */
+#after-stone h4, #facade-beauty h4 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 21px;
@@ -2223,27 +2229,31 @@ footer section {
   margin: 0;
 }
 
-/* line 155, ../../_dev/scss/_facade.scss */
+/* line 161, ../../_dev/scss/_facade.scss */
 #facade .content ul.block li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
 }
 
-/* line 162, ../../_dev/scss/_facade.scss */
-#after-stone p {
-  margin-top: 14px;
+/* line 169, ../../_dev/scss/_facade.scss */
+#after-stone p, #facade-beauty p {
+  margin-top: 14px !important;
 }
-/* line 165, ../../_dev/scss/_facade.scss */
+/* line 172, ../../_dev/scss/_facade.scss */
+#facade-beauty p {
+  margin-bottom: 30px;
+}
+/* line 175, ../../_dev/scss/_facade.scss */
 #facade .top p {
   color: #1b1b1b;
   margin: 0;
 }
-/* line 168, ../../_dev/scss/_facade.scss */
+/* line 178, ../../_dev/scss/_facade.scss */
 #facade .top p:last-child {
   margin-top: 30px;
 }
-/* line 173, ../../_dev/scss/_facade.scss */
+/* line 183, ../../_dev/scss/_facade.scss */
 #facade .content p.pseudoheader {
   background: url("../images_temp/facade/roofs.png") no-repeat 40px 93px;
   color: #5d534e;
@@ -2254,36 +2264,72 @@ footer section {
   text-align: center;
   width: 740px;
 }
-/* line 184, ../../_dev/scss/_facade.scss */
+/* line 194, ../../_dev/scss/_facade.scss */
 #facade .content section p {
   margin-top: 0;
 }
-/* line 187, ../../_dev/scss/_facade.scss */
+/* line 197, ../../_dev/scss/_facade.scss */
 #facade-work p {
   color: white;
   font: 17px Arial, Helvetica, sans-serif;
   padding: 7px;
 }
-/* line 191, ../../_dev/scss/_facade.scss */
+/* line 201, ../../_dev/scss/_facade.scss */
 #facade-work p:nth-child(2) {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 195, ../../_dev/scss/_facade.scss */
+/* line 205, ../../_dev/scss/_facade.scss */
 #facade-work p:nth-child(3) {
   margin-top: 0;
 }
 
-/* line 201, ../../_dev/scss/_facade.scss */
+/* line 211, ../../_dev/scss/_facade.scss */
 #facade section#facade-work {
   background: url("../images_temp/facade/facade-work.jpg") center;
   background-size: cover;
   height: 560px;
 }
 
-/* line 208, ../../_dev/scss/_facade.scss */
+/* line 218, ../../_dev/scss/_facade.scss */
 #after-stone aside span {
   display: block;
+}
+
+/* line 224, ../../_dev/scss/_facade.scss */
+#facade #gallery {
+  height: 88px;
+}
+/* line 228, ../../_dev/scss/_facade.scss */
+#facade #work-examples aside {
+  margin-bottom: 59px;
+}
+
+/* line 234, ../../_dev/scss/_facade.scss */
+#facades .works-examples {
+  margin-top: 30px;
+}
+
+/* line 238, ../../_dev/scss/_facade.scss */
+#facade-beauty {
+  padding-top: 45px;
+}
+/* line 240, ../../_dev/scss/_facade.scss */
+#facade-beauty aside {
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  -o-transform: translateY(12px);
+  transform: translateY(12px);
+}
+/* line 243, ../../_dev/scss/_facade.scss */
+#facade-beauty .header-slim-middle {
+  line-height: 32px;
+}
+/* line 246, ../../_dev/scss/_facade.scss */
+#facade-beauty .works-examples {
+  margin-top: 14px;
+  margin-bottom: 49px;
 }
 
 /* line 39, ../../_dev/scss/default.scss */
