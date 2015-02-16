@@ -14,6 +14,7 @@ h1{
 --------------------------------------------- */
 
 .parallax {
+/*body{*/
     /* height: 500px; */ /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
@@ -194,14 +195,15 @@ body {
 
 #first{
     background-color: orange;
-    left: -15%;
+    left: -60%;
     top: 60vh;
     -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-315px) scale(2);
+    transform: translateZ(-1200px) scale(4);
 }
 #second{
     background-color: lawngreen;
-    left: 90%;
+    left: 68%;
     -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-315px) scale(2);
+    transform: translateZ(100px) scale(1.05);
+    top: 60vh;
 }

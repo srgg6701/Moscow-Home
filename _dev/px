@@ -23,11 +23,13 @@ h1{
 }
 
 .parallax__group {
+    margin: auto;
     position: relative;
     /* height: 500px; */ /* fallback for older browsers */
     /* height: 200vh; */
     /*-webkit-transform-style: preserve-3d;*/
     transform-style: preserve-3d;
+    width: 80%;
 }
 
 .parallax__layer {
@@ -193,14 +195,13 @@ body {
 #first{
     background-color: orange;
     left: -15%;
-    top: 85vh;
+    top: 60vh;
     -webkit-transform: translateZ(-300px) scale(2);
-    transform: translateZ(-315px) scale(2);
+    transform: translateZ(-600px) scale(3);
 }
 #second{
     background-color: lawngreen;
     left: 90%;
     -webkit-transform: translateZ(-300px) scale(2);
     transform: translateZ(-315px) scale(2);
-    top: 45vh;
 }
