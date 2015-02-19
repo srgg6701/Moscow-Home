@@ -1,5 +1,5 @@
 <?php $common_path=$this->baseurl . "/templates/" . $common_dir;?>
-<title><?php echo $document->title;?></title>
+<title><?php echo JFactory::getDocument()->title;?></title>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
 <script src="<?php echo $common_path;?>js/min/jquery.min.js"></script>
 <script src="<?php echo $common_path;?>js/common.js"></script>

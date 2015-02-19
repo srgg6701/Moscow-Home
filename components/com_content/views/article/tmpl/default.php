@@ -19,10 +19,11 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
-?>
+/*?>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
+	<?php   */
+        if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header">
 		<h1> <?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
@@ -106,12 +107,16 @@ JHtml::_('behavior.caption');
 	?>
 	<?php if (isset ($this->item->toc)) :
 		echo $this->item->toc;
-	endif; ?>
+	endif; /*?>
 	<div itemprop="articleBody">
 		<?php echo $this->item->text; ?>
 	</div>
+    <?php */
+        echo $this->item->text;
+        ?>
+	<?php
 
-	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+        if ($useDefList && ($info == 1 || $info == 2)) : ?>
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 	<?php endif; ?>
 
@@ -156,6 +161,6 @@ JHtml::_('behavior.caption');
 		echo $this->item->pagination;
 	?>
 	<?php endif; ?>
-	<?php echo $this->item->event->afterDisplayContent; ?>
-</div>
+	<?php echo $this->item->event->afterDisplayContent; /* ?>
+</div><?php */
 

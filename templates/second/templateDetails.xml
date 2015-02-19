@@ -16,14 +16,15 @@
 		<folder>language</folder>
 	</files>
 	<positions>
-		<position>breadcrumbs</position>
-		<position>debug</position>
-		<position>footer</position>
-		<position>left</position>
-		<position>message</position>
-		<position>main</position>
-		<position>right</position>
-		<position>top</position>
+        <position>header-nav</position>
+        <position>header-contacts</position>
+        <position>header-section</position>
+        <position>menu-contacts</position>
+        <position>menu-about</position>
+        <position>menu-services</position>
+        <position>menu-ask-question</position>
+        <position>footer</position>
+        <position>hidden</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_default.ini</language>
