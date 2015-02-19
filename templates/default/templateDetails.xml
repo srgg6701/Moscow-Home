@@ -22,10 +22,14 @@
 	</files>
 	<positions>
 		<position>header-nav</position>
+        <position>header-contacts</position>
         <position>header-section</position>
         <position>menu-contacts</position>
         <position>menu-about</position>
         <position>menu-services</position>
+        <position>menu-ask-question</position>
+        <position>footer</position>
+        <position>hidden</position>
 	</positions>
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_default.ini</language>

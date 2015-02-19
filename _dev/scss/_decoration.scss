@@ -139,7 +139,7 @@ h1{
     text-align: center;
   }
 }
-main{
+[itemprop="articleBody"]{
   #decoration &{
     background-image: url($images_dir + 'backgrounds/tile-contents.png');
   }

@@ -3,9 +3,9 @@
 # Set this to the root of your project when deployed:
 http_path = "/"
 sass_dir = "scss"
-css_dir = "../static/css"
-images_dir = "../static/images"
-javascripts_dir = "../static/js"
+css_dir = "../templates/_common/css"
+images_dir = "../templates/_common/images"
+javascripts_dir = "../templates/_common/js"
 sourcemap = true
 #output_style = :compressed
 #cache = false

@@ -8,22 +8,22 @@ $bottom-footer:14px;
       header
         nav
       [.top] за исключением index
-      main
+      [itemprop="articleBody"]
       footer  */
 body, html{
   height: 100%;
   margin: 0;
   padding: 0;
 }
-body.no-overflow main,
-body.no-overflow footer,
-body.no-overflow main >div{
+body.no-overflow [itemprop="articleBody"],
+body.no-overflow [itemprop="articleBody"] >div,
+body.no-overflow footer{
   position: absolute;
 }
 #index{ // body
   height: 100%;
   position: relative;
-  main{
+  [itemprop="articleBody"]{
     bottom: $footerHeight + $bottom-footer;
     top: $headerHeight;
   }
@@ -58,11 +58,11 @@ body.no-overflow main >div{
     }
 
 footer{
-    bottom: $bottom-footer;
-  }
+  bottom: $bottom-footer;
+}
 //---------------------------------------------
 // заполнить по ширине
-header,main,footer{
+header,[itemprop="articleBody"],footer{
   width: 100%;
 }
 // inner layouts

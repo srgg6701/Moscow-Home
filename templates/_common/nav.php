@@ -9,8 +9,8 @@
     <jdoc:include type="modules" name="header-nav" style="none" />
 <?php endif; ?>
         <div><a id="logo" href="index.html"></a></div>
-        <?php if ($this->countModules('menu-contacts')) : ?>
-            <jdoc:include type="modules" name="menu-contacts" style="none" />
+        <?php if ($this->countModules('header-contacts')) : ?>
+            <jdoc:include type="modules" name="header-contacts" style="none" />
         <?php endif; ?>
     </nav>
     <section class="menu wide">
@@ -26,20 +26,15 @@
         </section>
         <section>
             <div>
-                <h4>Контакты</h4>
-                <div>
-                    <p>Россия, МО, Рублёво-Успенское шоссе, д.6, &laquo;Торгово-деловой центр 1 км&raquo;</p>
-                    <button class="print"><span>Распечатать адрес</span></button>
-                    <p><strong>Телефон:</strong>+7 495 890-0909</p>
-                    <p><strong>Email:</strong><span class="email">&nbsp;</span></p>
-                </div>
-                <div id="map" style="height:230px;width:auto;">
-                    <div id="waiting-map">...загрузка карты...</div>
-                </div>
+                <?php if ($this->countModules('menu-contacts')) : ?>
+                    <jdoc:include type="modules" name="menu-contacts" style="none" />
+                <?php endif; ?>
             </div>
         </section>
         <section>
-            <div class="centered">
+            <?php if ($this->countModules('menu-ask-question')) : ?>
+                <jdoc:include type="modules" name="menu-ask-question" style="none" />
+            <?php endif; ?>            <!--<div class="centered">
                 <h4>Задать вопрос</h4>
                 <form method="post">
                     <p>Как вас зовут?
@@ -55,7 +50,7 @@
                         <input type="submit" value="отправить">
                     </div>
                 </form>
-            </div>
+            </div>-->
             <div class="bottom-bg"></div>
         </section>
     </section>

@@ -1,5 +1,5 @@
 div{
-  footer section >&{
+  footer .section >&{
     @include nav-footer;
     &:first-child{
       //color: $color-dark-common;
@@ -11,9 +11,7 @@ div{
       width: 193px;
     }
   }
-}
-section{
-  footer &{
+  footer &.section{
     margin: auto;
     width: 698px;
   }
