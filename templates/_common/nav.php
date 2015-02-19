@@ -9,10 +9,9 @@
     <jdoc:include type="modules" name="header-nav" style="none" />
 <?php endif; ?>
         <div><a id="logo" href="index.html"></a></div>
-        <div>
-            <aside id="phone-number">+7 (985) 762-99-66</aside>
-            <aside id="consulting"><a id="btn-consult" href="#" data-section="ask" class="btn">Консультация</a></aside>
-        </div>
+        <?php if ($this->countModules('menu-contacts')) : ?>
+            <jdoc:include type="modules" name="menu-contacts" style="none" />
+        <?php endif; ?>
     </nav>
     <section class="menu wide">
         <section>
