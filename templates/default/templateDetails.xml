@@ -23,6 +23,7 @@
 	<positions>
 		<position>header-nav</position>
         <position>header-section</position>
+        <position>menu-about</position>
         <position>menu-services</position>
 	</positions>
 	<languages folder="language">
