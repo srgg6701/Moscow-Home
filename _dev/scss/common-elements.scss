@@ -1,0 +1,22 @@
+a,
+article,
+aside,
+body,
+footer,
+header,
+div,
+li,
+main,
+menu,
+nav,
+p,
+section,
+span,
+ul
+{
+  @include box-sizing(border-box);
+}
+body,html{
+  margin: 0;
+  padding: 0;
+}

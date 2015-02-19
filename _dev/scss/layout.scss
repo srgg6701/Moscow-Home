@@ -1,0 +1,81 @@
+$headerHeight: 68px;
+$level1Height: 423px;
+$footerHeight: 47px;
+$bottom-footer:14px;
+/** ОБЩАЯ СХЕМА:
+    body[#index]
+      // header-nav.jade
+      header
+        nav
+      [.top] за исключением index
+      main
+      footer  */
+body, html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body.no-overflow main,
+body.no-overflow footer,
+body.no-overflow main >div{
+  position: absolute;
+}
+#index{ // body
+  height: 100%;
+  position: relative;
+  main{
+    bottom: $footerHeight + $bottom-footer;
+    top: $headerHeight;
+  }
+}
+//---------------------------------------------
+.top{
+  position: relative;
+  top:$nav-height;
+  #engineering-systems &{
+    height: 652px;
+  }
+  #decoration &{
+    height: 792px;
+  }
+}
+//---------------------------------------------
+  header{
+    height: $headerHeight;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+    nav{
+      @include centred-margins;
+    }
+  //--------------------------------
+    #level1{
+      bottom: 0;
+      height: $level1Height;
+      position: absolute;
+      width: 100%;
+    }
+
+footer{
+    bottom: $bottom-footer;
+  }
+//---------------------------------------------
+// заполнить по ширине
+header,main,footer{
+  width: 100%;
+}
+// inner layouts
+  .do-it{
+    height: 147px;
+  }
+.footer{
+  height: 600px;
+}
+body:not(.no-overflow) >div >* >*:not(.wide):not(nav){
+  height: 100%;
+  margin: auto;
+  max-width: $max-width-container;
+  overflow: hidden;
+  position: static;
+}

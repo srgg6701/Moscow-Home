@@ -1,0 +1,65 @@
+@mixin btn-zoom{
+  background: url($images_dir + 'zoom.png') no-repeat $background-carrot-dark center;
+  font-size: 0;
+  height: 38px;
+  margin-left: 0;
+  margin-top: -19px;
+  @include centered;
+  width: 49px;
+}
+@mixin centered{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%);
+}
+@mixin centered-horizontal($position:relative){
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin centred-margins{
+  margin: auto;
+  width: $max-width-content;
+}
+@mixin centered-vertical{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin inputs-shadow {
+  @include border-radius(3px);
+  @include box-shadow(1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset);
+  border: solid 1px #CCC;
+}
+@mixin menu-social-right($width:60px, $left:0){
+  height: 162px;
+  left:$left;
+  position: absolute;
+  top:12%;
+  width: $width;
+}
+@mixin nav-footer{
+  height: 100%;
+  &:nth-child(1){
+    position: absolute;
+  }
+  &:nth-child(2){
+    display: table;
+    margin: auto;
+  }
+  &:nth-child(3){
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+}
+@mixin paragraph-dark($size:14px,$color:$color-dark-deep2){
+  font-family: $font-second;
+  font-size: $size;
+  color: $color-dark-deep2;
+}
+@mixin phone-number{
+  font-family: PlumbLight;
+  font-size: 1.3rem;
+}

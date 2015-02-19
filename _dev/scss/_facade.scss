@@ -1,0 +1,257 @@
+aside{
+  #after-stone &{
+    position: absolute;
+  }
+  #after-stone >div:nth-child(1) &{
+    top:168px;
+  }
+  #after-stone >div:nth-child(2) &{
+    top:211px;
+  }
+  #after-stone >div:nth-child(3) &{
+    top:214px;
+  }
+}
+div{
+  #after-stone >&{
+    border-bottom: solid 1px white;
+    overflow: auto;
+    padding-top: 51px;
+    position: relative;
+    $imgs-facade:$images_dir + 'backgrounds/';
+    &:nth-child(1){
+      height: 396px;
+    }
+    &:nth-child(2){
+      height: 436px;
+    }
+    &:nth-child(3){
+      height: 447px;
+    }
+    &:nth-child(even){
+      background: url($imgs-facade + 'tile-facade-light.png');
+    }
+    &:nth-child(odd){
+      background: url($imgs-facade + 'tile-facade-darker.png');
+    }
+  }
+  #after-stone >div >&{
+    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+    height: 100%;
+    margin: auto;
+    min-height: 250px;
+    padding-left: 325px;
+    width: $max-width-container;
+  }
+
+  #facades section >&{
+    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+    border-bottom: solid 1px #e3e3e3;
+    margin-top: 40px;
+    padding-left: 257px;
+    padding-right: 120px;
+  }
+  $bg-pos-left:0;
+  #facades section:nth-child(1) >&{
+    background-position: $bg-pos-left -96px;
+    height: 380px;
+  }
+  #facades section:nth-child(2) >&{
+    background-position: $bg-pos-left -681px;
+    height: 268px;
+  }
+  #facades section:nth-child(3) >&{
+    background-position: $bg-pos-left -681px;
+    height: 270px;
+  }
+  #facades section:nth-child(4) >&{
+    background-position: $bg-pos-left -1269px;
+    height: 288px;
+  }
+  #facades section:nth-child(5) >&{
+    background-position: $bg-pos-left -1937px;
+    height: 266px;
+  }
+  #facades section:nth-child(6) >&{
+    background-position: $bg-pos-left -2673px;
+    height: 262px;
+  }
+  #facades section:nth-child(7) >&{
+    background-position: $bg-pos-left -3375px;
+    border-bottom: none;
+    height: 287px;
+  }
+
+  #facade .top >&{
+    height: 530px;
+  }
+  #facade .top >div >&{
+    background-color: #FFF;
+    @include border-radius(6px);
+    box-sizing: border-box;
+    height: 170px;
+    margin: auto;
+    @include opacity(0.89);
+    padding: 20px;
+    @include transform(translateY(98px));
+    width: 714px;
+  }
+  #facade &.do-it{
+    &.first{
+      margin-top: $nav-height;
+    }
+  }
+  #facade-beauty >div >&{
+    background: url($images_dir + 'facade/big-stone.jpg') no-repeat;
+    padding-left: 383px;
+  }
+  #facade-work >&.relative{
+    height: 363px;
+    margin: auto;
+    padding: 16px;
+    top: 112px;
+    width: 512px;
+    z-index: 1;
+  }
+  #facade-work &.substrate{
+    background: #000;
+    @include border-radius(6px);
+    @include opacity(0.1);
+    position: absolute;
+    top:0; right:0; bottom: 0; left: 0;
+    z-index: -1;
+  }
+}
+h1{
+  #facade .top &{
+    font: 72px/77px PlumbMedium !important;
+    color: white;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    @include text-shadow(2px 2px 2px #999);
+    top: 51px;
+    width: 500px;
+  }
+  #facade-work &.header-big{
+    color: white;
+    font: 48px PlumbMedium;
+    margin: 0;
+    text-align: center;
+  }
+}
+h2{
+  #facade &{
+    color: $color-dark-common;
+    font-family: $font-second;
+    font-size: 21px;
+    font-weight: normal;
+    margin-bottom: 4px;
+  }
+}
+h4{
+  #after-stone &,
+  #facade-beauty &{
+    color: $color-dark-common;
+    font-family: $font-second;
+    font-size: 21px;
+    font-weight: 100;
+    margin: 0;
+  }
+}
+li{
+  #facade .content ul.block &{
+    font-family: $font-second;
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+}
+p{
+  #after-stone &,
+  #facade-beauty &{
+    margin-top: 14px !important;
+  }
+  #facade-beauty &{
+    margin-bottom: 30px;
+  }
+  #facade .top &{
+    color: #1b1b1b;
+    margin: 0;
+    &:last-child{
+      margin-top: 30px;
+    }
+  }
+  #facade .content &{
+    &.pseudoheader{
+      background: url($images_dir + 'facade/roofs.png') no-repeat 40px 93px;
+      color: $color-dark-common;
+      font: 17px/18px $font-second;
+      height:160px;
+      margin-bottom: 86px;
+      margin-top: 46px;
+      text-align: center;
+      width: 740px;
+    }
+  }
+  #facade .content section &{
+    margin-top: 0;
+  }
+  #facade-work &{
+    color: white;
+    font: 17px $font-second;
+    padding: 7px;
+    &:nth-child(2){
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    &:nth-child(3){
+      margin-top: 0;
+    }
+  }
+}
+section{
+  #facade &#facade-work{
+    background: url($images_dir + 'facade/facade-work.jpg') center;
+    background-size: cover;
+    height: 560px;
+  }
+}
+span{
+  #after-stone aside &{
+    display: block;
+  }
+}
+
+#facade{
+  #gallery{
+    height: 88px;
+  }
+  #work-examples{
+    aside{
+      margin-bottom: 59px;
+    }
+  }
+}
+#facades{
+  .header-slim-big{
+    font-size: 23px;
+    margin-top: 28px;
+    text-align: left;
+  }
+  .works-examples{
+    margin-top: 13px;
+  }
+}
+#facade-beauty{
+  padding-top: 45px;
+  aside{
+    @include transform(translateY(12px));
+  }
+  .header-slim-middle{
+    line-height: 32px;
+  }
+  .works-examples{
+    margin-top: 14px;
+    margin-bottom: 49px;
+  }
+}

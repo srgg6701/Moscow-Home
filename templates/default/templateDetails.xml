@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>default</name>
+	<version>1.0</version>
+	<creationDate>01.01.01</creationDate>
+	<author>srgg6701</author>
+	<authorEmail>srgg67@gmail.com</authorEmail>
+	<copyright>Copyright (C) srgg6701</copyright>
+	<license>GPL</license>
+	<description>⌂ Home</description>
+	<files>
+		<!--WARNING!
+			It may tell you about the installation error something like this:
+			"joomla JInstaller: :Install: File does not exist _file/_directory"
+			Just check if those directories nave index.html
+		-->
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>params.ini</filename>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>header-nav</position>
+        <position>header-section</position>
+        <position>menu-services</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_default.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_default.sys.ini</language>
+	</languages>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="logoText" type="text" default="Default Template, see templateDetails.xml" size="50" label="Logo text" description="Default Template, see templateDetails.xml" />
+				<field name="sloganText" type="text" default="Slogan, see templateDetails.xml" size="50" label="Slogan" description="Slogan of the site, see templateDetails.xml" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

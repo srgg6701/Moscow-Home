@@ -1,0 +1,122 @@
+.absolute{
+  position: absolute;
+}
+.bgActiveCarrot{
+  //background-color: $background-carrot-dark;
+}
+.bg-chess{
+  background-image: url($images_dir + 'backgrounds/tile-chess.png') !important;
+}
+.bg-orange{
+  background-color: $background-orange;
+}
+.bg-recall{
+  background-image: url($images_dir + 'recall-me.png');
+  background-repeat:  no-repeat;
+}
+.bg-white{
+  background-color: white;
+}
+.block{
+  display: block;
+}
+.centered-vertical{
+  @include centered-vertical;
+}
+.color-dark-deep{
+  color: $color-dark-deep !important;
+}
+.color-dark-middle{
+  color: $color-dark-middle !important;
+}
+.do-it{
+  background-color: $background-brown-dark;
+  color: white !important;
+  overflow: hidden;
+  position: relative;
+  #decoration &,
+  #design &{
+    background-image: url($images_dir + 'backgrounds/tile-100.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
+  }
+}
+.email::after{
+  color: $color-carrot;
+  content:" doma@domalux.ru";
+}
+.float-left{
+  float: left;
+}
+.footer{
+  background-color: $background-sand;
+}
+.half-wide{
+  width: 50%;
+}
+.header-big{
+  font-family: PlumbMedium !important;
+  font-size: 48px !important;
+  text-transform: uppercase;
+}
+.header-slim-big{
+  font-family: PlumbLight;
+  font-size: 36px;
+  text-transform: uppercase;
+  .do-it &{
+    color: white;
+  }
+  .container &{
+    text-align: center;
+  }
+}
+.header-slim-middle{
+  font: 25px PlumbLight;
+  text-transform: uppercase;
+  #after-stone &{
+    line-height: 33px;
+  }
+}
+.no-overflow{
+  overflow: hidden;
+}
+.no-scroll{
+  overflow: hidden;
+}
+.relative{
+  position: relative !important;
+}
+.slider-bottom{
+  overflow: hidden;
+}
+.slides{
+  height: 100%;
+  margin: auto;
+  position: relative;
+  width: $img-slide-single-width*6 + $img-slide-offset*5;
+}
+.table{
+  display: table;
+}
+.top{
+  #decoration &,
+  #engineering-systems &{
+    background-color: $background-brown-dark;
+  }
+  #decoration &{
+    background-image: url($images_dir + 'backgrounds/tile-top-ultra-blood.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top.png');
+  }
+  #facade &{
+    background-image: url($images_dir + 'facade/roof.jpg');
+    background-size: cover;
+  }
+}
+.works-examples{
+  background: url($images_dir + 'gallery/works-examples.jpg') no-repeat;
+  height: 81px;
+  margin-top: 25px;
+}

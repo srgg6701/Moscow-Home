@@ -1,0 +1,409 @@
+@charset "UTF-8";
+a{
+  &.btn{
+    background-color:  $background-carrot-dark;
+    @include border-radius(16px);
+    color: white;
+    display: inline-block;
+    font-family: PlumbMedium;
+    font-size: 0.85rem;
+    height: $btn-height;
+    line-height: $btn-height;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  ul.social &{
+    display: block;
+    height: 37px;
+    width: 35px;
+  }
+  .footer.why-moscow-home div.float-left:first-child &{
+    border-right: solid 1px;
+    display: inline-block;
+    margin-bottom: 6px;
+    @include paragraph-dark;
+    padding: 0 5px;
+    text-decoration: none;
+    &.start{
+      padding-left: 0;
+    }
+    &.finish{
+      border-right: none;
+    }
+  }
+  .slides aside &{
+    &.btn{
+      $w:128px;
+      display: block;
+      @include centered-vertical;
+      margin-left: ($img-slide-single-width - $w)/2;
+      text-align: center;
+      width: $w;
+    }
+  }
+  .works-examples &{
+    display: inline-block;
+    font-size: 0;
+    height: 100%;
+    margin-right: 6px;
+    width: 91px;
+  }
+  #you-need ul &{
+    color: $background-carrot-dark;
+    display: block;
+    font-family: $font-second;
+    font-size: 14px;
+    margin-right: 15px;
+    padding-left: 66px;
+    white-space: normal;
+  }
+}
+aside{
+  .footer.why-moscow-home >section >&{
+    margin: 21px auto auto;
+    overflow: hidden;
+    width: 94%;
+  }
+  #pointers-aside >&{
+    $space:80px;
+    background-color: black;
+    background-position: center;
+    background-position-y: 16px;
+    background-repeat: no-repeat;
+    @include border-radius(50%);
+    height: $space;
+    width: $space;
+    @include opacity(0.5);
+    $url:$images_dir + "pointer.png";
+    $offset:18px;
+    &:nth-child(1){
+      background-image: url($url);
+      float: left;
+      margin-left: $offset;
+    }
+    &:nth-child(2){
+      background-image: url($url);
+      float: right;
+      margin-right: $offset;
+      @include transform(scaleX(-1));
+    }
+  }
+  .slides &{
+    background:url($images_dir + 'backgrounds/tile-microsquare.png');
+    height: 135px;
+    position: absolute;
+    right: 3px;
+    top: 20px;
+    width: $img-slide-single-width;
+  }
+}
+body{
+  color: $color-dark-common;
+}
+button{
+  &.attach-file, &.print{
+    height: 31px;
+    color: $color-carrot;
+    font-size: 13px;
+  }
+  &.attach-file{
+    background: url($images_dir + 'attach-file.png') #FFF no-repeat 10px 4px;
+    border:none;
+    border-radius: 10px;
+    padding-left: 26px;
+    text-transform: uppercase;
+    width: 175px;
+  }
+  &.bg-recall{ // связан со следующим
+    background-position: 14px 11px;
+  }
+  &.btn-more::before{
+    content: "Подробнее";
+  }
+  .do-it &{ // связан с предыдущим
+    border: none;
+    @include border-radius(20px);
+    color: #FFF;
+    float: right;
+    font-family: PlumbMedium;
+    font-size: 14px;
+    height: 38px;
+    margin-left: 16px;
+    padding-left: 29px;
+    text-transform: uppercase;
+    width: 180px;
+  }
+  &.print{
+    background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
+    border: $border-btn;
+    border-radius: 5px;
+    padding-left: 41px;
+    width: 175px;
+  }
+}
+div{
+  .do-it &{
+    &.phone-number{
+      float: left;
+      font-family: PlumbMedium;
+      font-size: 36px;
+      margin-right: 2px;
+      margin-left: 32px;
+    }
+  }
+  .footer.why-moscow-home >section >aside >&{
+    &:first-child{
+      padding-right: 30px;
+    }
+    &:last-child{
+      padding-left: 59px;
+    }
+  }
+  .slider-bottom >&{
+    background: url($images_dir + "backgrounds/tile-gallery.png");
+    height: 184px;
+    margin: -13px auto -12px;
+    padding: 20px 0;
+  }
+  #showcase >&{
+    background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
+    @include border-radius(8px);
+    height: 100%;
+    @include opacity(0.9);
+    position: relative;
+    @include centred-margins;
+  }
+  #slider &{
+    &.img-box{
+      background-image: url($images_dir + 'slider-main.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+    }
+  }
+  #slider ul.social +&{
+    background-color: white;
+    @include border-top-right-radius(11px);
+    @include border-bottom-right-radius(11px);
+    @include menu-social-right();
+    @include opacity(.65);
+  }
+  #you-need ul li >&{
+    height: 100%;
+  }
+  #you-need ul li >div >&{
+    @include centered-vertical;
+  }
+}
+footer{
+  &.index{
+    margin-top: 12px !important;
+    overflow: hidden;
+    position: absolute;
+  }
+}
+h1{
+  .top &{
+    color:white;
+    font-weight: normal;
+    margin-bottom: 36px;
+  }
+}
+h2{
+}
+h3{
+  .footer &{
+    color: $color-dark-deep2;
+    font-family: PlumbMedium;
+    font-size: 36px;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+}
+h4{
+}
+header{
+  background-color: white;
+  display: table;
+}
+img{
+  .slides a:not(:first-child) &{
+    margin-left:$img-slide-offset;
+  }
+}
+li{
+  ul &{
+    display: table-cell;
+  }
+  ul.block &{
+    display: block;
+  }
+  ul.social &{
+    display: block;
+    padding:4px;
+  }
+  .footer.why-moscow-home ul &{
+    background-repeat: no-repeat;
+    background-position: center 0;
+    display: table-cell;
+    @include paragraph-dark(18px);
+    padding-top: 72px;
+    text-align: center;
+    width: 20%;
+    $i:1;
+    $img-subdir: $images_dir + 'engineering/';
+    @each $img in 1,2,3,4,5{
+      &:nth-child(#{$i}){
+        background-image: url($images_dir + 'footer' + $img + '.png');
+      }
+      $i:$i+1;
+    }
+  }
+  #showcase &{
+    color: white;
+    display: list-item;
+    font-family: PlumbMedium;
+    font-size: 13px;
+    line-height: 18px;
+    list-style-image: url($images_dir + "checked.png");
+    min-height: 29px;
+    padding-left: 3px;
+    text-transform: uppercase;
+  }
+  #you-need &{
+    display: table-cell;
+    height: 66px;
+    max-width: 250px;
+    text-align: left;
+  }
+  $bg-pos-edges: 0 9px;
+  $pad-left: 13px;
+  #you-need ul >&{
+    &:nth-child(1){
+      background: url($images_dir + 'need-design.png') no-repeat;
+      background-position: $bg-pos-edges;
+    }
+    &:nth-child(2){
+      background: url($images_dir + 'need-facade.png') no-repeat;
+      padding-left:$pad-left;
+    }
+    &:nth-child(3){
+      background: url($images_dir + 'need-building.png') no-repeat;
+      padding-left:$pad-left;
+    }
+    &:nth-child(4){
+      background: url($images_dir + 'need-engineering.png') no-repeat;
+      background-position: $bg-pos-edges;
+      width: 167px
+    }
+  }
+}
+main{
+
+}
+p{
+  font-family: $font-second;
+  font-size: 14px;
+  .do-it &{
+    display: table;
+    margin: 27px auto 6px;
+  }
+  .top &{
+    color: white;
+    font-family: $font-second;
+    font-size: 17px;
+    margin-bottom: 32px;
+  }
+  #you-need & {
+    &.header-slim-big{
+      margin-bottom: 32px;
+    }
+  }
+  .footer.why-moscow-home &{
+    @include paragraph-dark;
+    &.header-big{
+      color:$color-dark-deep;
+      display: table;
+      line-height: 57px;
+      margin: 66px auto 41px;
+      text-align: center;
+      width: 500px;
+    }
+  }
+  .footer.why-moscow-home div.float-left:first-child &{
+    margin-bottom: 6px;
+  }
+}
+section{
+  .menu-container &{
+    display: none;
+    &.visible{
+      display: block;
+    }
+  }
+  .do-it &{
+    display: table;
+    margin: auto;
+  }
+}
+span{
+  button.print &{
+    border-bottom:dotted 1px $color-carrot;
+    display: table;
+  }
+  .footer.why-moscow-home ul &{
+    background-color: $background-red-darkest;
+    color: white;
+    display: table;
+    margin: auto;
+    padding: 0 4px;
+  }
+  .arrows &{
+    color: #FF6447;
+    display: inline-block;
+    padding: 0 4px;
+  }
+  #style-classic &,
+  #style-modern &{
+    color: $color-carrot;
+  }
+}
+ul{
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  &.social{
+    background: url($images_dir + "social-left-vertical.png") no-repeat;
+    @include menu-social-right(43px, 8px);
+    margin-top: 9px;
+    z-index: 1;
+  }
+  .footer.why-moscow-home >section >&{
+    display: table;
+    margin: auto;
+  }
+  #you-need &{
+    display: table;
+    margin: -12px auto 9px auto;
+  }
+  #showcase &{
+    // вернуть на место отступ сверху и сниху по умолчанию
+    margin: 1em auto;
+    padding: 0;
+    position: absolute;
+    &:nth-child(1){
+      left: 4%;
+      width: 260px;
+    }
+    &:nth-child(2){
+      left: 35.2%;
+      width: 350px;
+    }
+    &:nth-child(3){
+      left: 77.7%;
+      width: 200px;
+    }
+  }
+}
