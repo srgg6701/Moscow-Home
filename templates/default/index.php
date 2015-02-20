@@ -12,7 +12,9 @@ $common_dir = '_common/';
 </head>
 <body class="no-overflow">
 <div id="index">
-<?php require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
+<?php
+$header_class='absolute';
+require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <main id="content" role="main">
         <jdoc:include type="component" style="none" />
     </main>

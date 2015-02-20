@@ -11,8 +11,9 @@ $common_dir = '_common/';
     <?php require_once $tmpl_common . $common_dir . 'head.php'; ?>
 </head>
 <body>
-<div id="design" class="container">
-<jdoc:include type="component" style="none" />
+<div id="decoration" class="container">
+    <?php require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
+    <jdoc:include type="component" style="none" />
 </div>
 </body>
 </html>
