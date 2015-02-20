@@ -199,12 +199,13 @@ p{
 }
 section{
   header >&{
+    @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, 0.35));
     display: none;
     left: 0;
     padding-top: 5px;
     position: absolute;
-    top:40px;
     right: 0;
+    top:40px;
     z-index: 1;
   }
   header >section >&{

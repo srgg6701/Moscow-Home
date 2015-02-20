@@ -8,7 +8,7 @@
 <?php if ($this->countModules('header-nav')) : ?>
     <jdoc:include type="modules" name="header-nav" style="none" />
 <?php endif; ?>
-        <div><a id="logo" href="index.html"></a></div>
+        <div><a id="logo" href="<?php echo $this->baseurl;?>"></a></div>
         <?php if ($this->countModules('header-contacts')) : ?>
             <jdoc:include type="modules" name="header-contacts" style="none" />
         <?php endif; ?>
@@ -34,23 +34,7 @@
         <section>
             <?php if ($this->countModules('menu-ask-question')) : ?>
                 <jdoc:include type="modules" name="menu-ask-question" style="none" />
-            <?php endif; ?>            <!--<div class="centered">
-                <h4>Задать вопрос</h4>
-                <form method="post">
-                    <p>Как вас зовут?
-                        <input type="text" name="name"></p>
-                    <p>Контактный телефон
-                        <input type="text" name="telephone"></p>
-                    <p>Email
-                        <input type="email" name="email"></p>
-                    <p>Текст сообщения
-                        <textarea></textarea></p>
-                    <button class="attach-file">Прикрепить файл</button>
-                    <div>
-                        <input type="submit" value="отправить">
-                    </div>
-                </form>
-            </div>-->
+            <?php endif; ?>
             <div class="bottom-bg"></div>
         </section>
     </section>

@@ -1042,15 +1042,18 @@ header > section > section:nth-child(3) p {
 
 /* line 201, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section {
+  -webkit-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
   display: none;
   left: 0;
   padding-top: 5px;
   position: absolute;
-  top: 40px;
   right: 0;
+  top: 40px;
   z-index: 1;
 }
-/* line 210, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 211, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section {
   background-color: white;
   border-top: solid 1px #CACACA;
@@ -1058,12 +1061,12 @@ header > section > section {
   margin-top: 23px;
   padding: 22px 24px 26px;
 }
-/* line 216, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 217, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) {
   background: url("../images/backgrounds/tile-contacts.png");
 }
 
-/* line 222, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 223, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section textarea {
   display: block;
   height: 85px;
@@ -1080,14 +1083,14 @@ header > section textarea {
   border: solid 1px #CCC;
 }
 
-/* line 231, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 232, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) ul {
   margin-bottom: 4px;
   margin-top: 6px;
   width: 100%;
 }
 
-/* line 237, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 238, ../../../_dev/scss/header/section/drop-down-menus.scss */
 #waiting-map {
   background-color: #999;
   border-radius: 20px;
