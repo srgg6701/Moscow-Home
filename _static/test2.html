@@ -8,18 +8,21 @@
   <script>
       $(function(){
           var getMaxScroll=function(){
+                  // получить максимальную позицию прокрутки окна
                   return $('body').height()-window.outerHeight;
               },
-              fix1=$('#fixed1'), pos,
+              posRatio, // соотнощение текущей прокрутки окна к максимальной
               maxScrollTop=getMaxScroll(),
-              makeParallax=function(calcMax){
+              makeParallax=function(layer_id,calcMax){
                   if(calcMax) maxScrollTop=getMaxScroll();
-                  pos = $(window).scrollTop()/maxScrollTop;
-                  $(fix1).css('top',$('body').height()*pos);
+                  posRatio = $(window).scrollTop()/maxScrollTop;
+                  document.getElementById(layer_id).style.top=$('body').height()*posRatio+'px';
               };
-          $(document).on('scroll',makeParallax);
+          $(document).on('scroll',function(){
+              makeParallax('fixed1');
+          });
           $(window).on('resize',function(){
-              makeParallax(true);
+              makeParallax('fixed1',true);
           });//console.log('scrollTop: '+$(window).scrollTop()+', offset.top: '+$(fix1).css('top'));
       });
   </script>
