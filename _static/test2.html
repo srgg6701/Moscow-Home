@@ -7,22 +7,50 @@
   <script type="text/javascript" src="static/js/min/jquery.min.js"></script>
   <script>
       $(function(){
+          function getTop(){
+            var ids={
+                /**
+                 * @coeff   - величина перемещения слоя по вертикали
+                 * @top     - начальная позиция отступа сверху
+                 */
+                fixed1:{
+                    coeff:1,
+                    top:false
+                },
+                fixed2:{
+                    coeff:0.5,
+                    top:false
+                }
+            };
+            for(var id in ids){
+                ids[id].top=document.getElementById(id).offsetTop;
+            }
+            //console.dir(ids);
+            getTop=function(){
+                return ids;
+            };
+          }
+          getTop();
+
           var getMaxScroll=function(){
                   // получить максимальную позицию прокрутки окна
                   return $('body').height()-window.outerHeight;
               },
-              posRatio, // соотнощение текущей прокрутки окна к максимальной
+              posRatio, // соотношение текущей прокрутки окна к максимальной
               maxScrollTop=getMaxScroll(),
-              makeParallax=function(layer_id,calcMax){
-                  if(calcMax) maxScrollTop=getMaxScroll();
-                  posRatio = $(window).scrollTop()/maxScrollTop;
-                  document.getElementById(layer_id).style.top=$('body').height()*posRatio+'px';
+              prlx,
+              makeParallax=function(calcMax){
+                  prlx=getTop();
+                  //console.dir(getTop());
+                  for(var layer_id in prlx){
+                      if(calcMax) maxScrollTop=getMaxScroll();
+                      posRatio = $(window).scrollTop()/maxScrollTop*prlx[layer_id].coeff;
+                      document.getElementById(layer_id).style.top=($('body').height()+prlx[layer_id].top)*posRatio+'px';
+                  }
               };
-          $(document).on('scroll',function(){
-              makeParallax('fixed1');
-          });
+          $(document).on('scroll',makeParallax);
           $(window).on('resize',function(){
-              makeParallax('fixed1',true);
+              makeParallax(true);
           });//console.log('scrollTop: '+$(window).scrollTop()+', offset.top: '+$(fix1).css('top'));
       });
   </script>
@@ -49,7 +77,8 @@
         <!--<iframe src="http://frame.plans24.ru/s1171/" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
         <script type="text/javascript" src="iframe.js"></script>-->
         </main>
-        <div class="fixed" id="fixed1" style="background-color: orange; padding: 10px;">Hello! I am fixed.</div>
+        <div class="parallax" id="fixed1" style="background-color: orange; padding: 10px;">Hello! I am fixed.</div>
+        <div class="parallax" id="fixed2" style="background-color: pink; padding: 10px;">Hi! I am fixed too.</div>
     </div>
 </body>
 </html>

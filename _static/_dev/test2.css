@@ -1,4 +1,11 @@
-.fixed{
+.parallax {
     position: absolute/*fixed*/;
+}
+#fixed1{
+    left: 40px;
     top: 0;
+}
+#fixed2{
+    right: 20px;
+    top: 60px;
 }
