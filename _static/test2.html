@@ -7,13 +7,20 @@
   <script type="text/javascript" src="static/js/min/jquery.min.js"></script>
   <script>
       $(function(){
-          var fix1=$('#fixed1'), pos,
-              maxScrollTop=$('body').height()-window.outerHeight;//346
-          $(document).on('scroll', function(){
-              pos = $(window).scrollTop()/maxScrollTop;
-              $(fix1).css('top',$('body').height()*pos);
-              console.log('scrollTop: '+$(window).scrollTop()+', offset.top: '+$(fix1).css('top'));
-          });
+          var getMaxScroll=function(){
+                  return $('body').height()-window.outerHeight;
+              },
+              fix1=$('#fixed1'), pos,
+              maxScrollTop=getMaxScroll(),
+              makeParallax=function(calcMax){
+                  if(calcMax) maxScrollTop=getMaxScroll();
+                  pos = $(window).scrollTop()/maxScrollTop;
+                  $(fix1).css('top',$('body').height()*pos);
+              };
+          $(document).on('scroll',makeParallax);
+          $(window).on('resize',function(){
+              makeParallax(true);
+          });//console.log('scrollTop: '+$(window).scrollTop()+', offset.top: '+$(fix1).css('top'));
       });
   </script>
 </head>
