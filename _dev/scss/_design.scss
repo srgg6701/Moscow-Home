@@ -72,7 +72,7 @@ div{
     &.top{//.relative
       background-image: url($images_dir + 'design/top-visual-bg.jpg');
       background-repeat: no-repeat;
-      background-position: 71% 0;
+      background-position: center 0;
       @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
     }
     &.top-container{

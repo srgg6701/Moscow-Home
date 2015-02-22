@@ -1,33 +1,28 @@
 $(function () {
     var bodyHeight = $('body').height();
     function getTop() {
-        var ids = {
-            /**
-             * Создать набор перемещающихся слоёв.
-             * Для каждого указать собственный коэффициент перемещения
-             * @coeff   - величина перемещения слоя по вертикали
-             * @top     - начальная позиция отступа сверху
-             */
-            fixed1: {
-                coeff: 1,
-                top: false,
-                distance:0
-            },
-            fixed2: {
-                coeff: 1,
-                top: false,
-                distance:0
-            }
-        },
+        var ids = {},
         // вызывается только при инициализации и при изменении размеров окна
         setValues=function(resize){
+            var el, paras = document.querySelectorAll('.parallax');
+            //console.dir(paras);
             // сохранить значения отступов сверху для плавающих слоёв
-            for (var id in ids) {
-                if(!resize) // только при инициализации
-                    ids[id].top = document.getElementById(id).offsetTop;
-                // при инициализации и изменении размеров окна
-                ids[id].distance = window.innerHeight-ids[id].top;
-            }
+            for (var index in paras) {
+                if(typeof(paras[index])=='object'){
+                    el = 'para'+(parseInt(index)+1);
+                    ids[el]={};
+                    //console.log('el: '+el);
+                    //console.dir(paras[index]);
+                    if(!resize){ // только при инициализации
+                        // начальная позиция отступа сверху
+                        ids[el].top = paras[index].offsetTop;
+                        // коэффициент перемещения слоя по вертикали
+                        ids[el].coeff = paras[index].getAttribute('data-coeff');
+                    }
+                    // при инициализации и изменении размеров окна
+                    ids[el].distance = window.innerHeight-ids[el].top;
+                }
+            } //console.dir(paras);//console.dir(ids);
         };
         setValues();
         // перегрузить функцию. Далее будем только получать инициализированные значения.
@@ -52,6 +47,7 @@ $(function () {
             prlx = getTop();
             //console.dir(prlx);
             for (var layer_id in prlx) {
+                //console.log('layer_id: '+layer_id);
                 if (calcMax) maxScrollTop = getMaxWindowScrollTop();
                 //
                 var rest = maxScrollTop - $(window).scrollTop(),        // 3060

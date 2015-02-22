@@ -1343,7 +1343,7 @@ footer div.section {
 #design div.top {
   background-image: url("../images/design/top-visual-bg.jpg");
   background-repeat: no-repeat;
-  background-position: 71% 0;
+  background-position: center 0;
   -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12) inset;
   -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12) inset;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12) inset;
@@ -2348,45 +2348,161 @@ footer div.section {
   margin-bottom: 49px;
 }
 
-/** ╨Я╤А╨╛╨╡╨║╤В╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ ╨╖╨┤╨░╨╜╨╕╨╣ ╨╕ ╨┐╨╛╨╝╨╡╤Й╨╡╨╜╨╕╨╣
+/** ╨Я╤А╨╛╨╡╨║╤В╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ ╨╖╨┤╨░╨╜╨╕╨╣ ╨╕ ╨┐╨╛╨╝╨╡╤Й╨╡╨╜╨╕╨╣ - 3
   Design
   -╤Г╤А╨╛╨▓╨╡╨╜╤М
   -╤З╨╡╤А╤В╨╡╨╢
   -╨╗╨╕╨╜╨╡╨╣╨║╨░ */
-/** ╨Ю╨▒╤Й╨╡╤Б╤В╤А╨╛╨╕╤В╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л
+/** ╨Ю╨▒╤Й╨╡╤Б╤В╤А╨╛╨╕╤В╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л -4
   Decoration
   -╨║╨░╤Б╨║╨░
   -╨║╨╕╤А╨┐╨╕╤З
   -╨╝╨░╤Б╤В╨╡╤А╨╛╨║
   -╨║╨╕╤Б╤В╨╛╤З╨║╨░ */
-/** ╨Ъ╤А╨╛╨▓╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л
+/** ╨Ъ╤А╨╛╨▓╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л - 4
   Facade
   -╨▒╨░╨╜╨║╨░ ╨║╤А╨░╤Б╨║╨╕
   -╤А╨╛╨╗╨╕╨║
   -╨║╤Г╤Б╨╛╨║ ╤И╨╕╤Д╨╡╤А╨░
   -╨║╤Г╤Б╨╛╨║ ╨┐╨╗╨╕╤В╨║╨╕ */
-/** ╨Ш╨╜╨╢╨╡╨╜╨╡╤А╨╜╤Л╨╡ ╤Б╨╕╤Б╤В╨╡╨╝╤Л
+/** ╨Ш╨╜╨╢╨╡╨╜╨╡╤А╨╜╤Л╨╡ ╤Б╨╕╤Б╤В╨╡╨╝╤Л - 4
   Engineering
   -╨║╨░╤А╨░╨╜╨┤╨░╤И
   -╤А╨░╨╖╨▓╨╛╨┤╨╜╨╛╨╣ ╨║╨╗╤О╤З
   -╤В╤А╤Г╨▒╨░
   -╨║╨░╨▒╨╡╨╗╤М */
-/* line 24, ../../../_dev/scss/parallax.scss */
+/* line 29, ../../../_dev/scss/parallax.scss */
 .parallax {
+  background-color: orange;
+  background-repeat: no-repeat;
+  min-height: 40px;
+  min-width: 40px;
   position: absolute;
   z-index: 10;
 }
 
-/* line 28, ../../../_dev/scss/parallax.scss */
-#fixed1 {
+/* line 38, ../../../_dev/scss/parallax.scss */
+#design #para1 {
+  background: url("../images/parallax/design/sketch.png");
+  height: 313px;
+  width: 354px;
+  left: -63px;
+  top: 204px;
+}
+/* line 46, ../../../_dev/scss/parallax.scss */
+#decoration #para1 {
+  background: url("../images/parallax/decoration/helmet.png");
+  height: 339px;
+  width: 363px;
+  left: 19px;
+  top: 83px;
+}
+/* line 54, ../../../_dev/scss/parallax.scss */
+#facade #para1 {
+  background: url("../images/parallax/facadesketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+/* line 62, ../../../_dev/scss/parallax.scss */
+#engineering-systems #para1 {
+  background: url("../images/parallax/engineering-systems/sketch.png");
+  height: 313px;
+  width: 354px;
   left: 40px;
   top: 0;
 }
 
-/* line 32, ../../../_dev/scss/parallax.scss */
-#fixed2 {
-  right: 20px;
-  top: 400px;
+/* line 72, ../../../_dev/scss/parallax.scss */
+#design #para2 {
+  background: url("../images/parallax/design/shtangen.png");
+  height: 195px;
+  width: 230px;
+  right: 72px;
+  top: 210px;
+}
+/* line 80, ../../../_dev/scss/parallax.scss */
+#decoration #para2 {
+  background: url("../images/parallax/decoration/brick.png");
+  height: 155px;
+  width: 194px;
+  right: 194px;
+  top: 171px;
+}
+/* line 88, ../../../_dev/scss/parallax.scss */
+#facade #para2 {
+  background: url("../images/parallax/facadesketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+/* line 96, ../../../_dev/scss/parallax.scss */
+#engineering-systems #para2 {
+  background: url("../images/parallax/engineering-systems/sketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+
+/* line 106, ../../../_dev/scss/parallax.scss */
+#design #para3 {
+  background: url("../images/parallax/design/level.png");
+  height: 182px;
+  width: 285px;
+  left: 25px;
+  top: 551px;
+}
+/* line 114, ../../../_dev/scss/parallax.scss */
+#decoration #para3 {
+  background: url("../images/parallax/decoration/brush.png");
+  height: 108px;
+  width: 96px;
+  left: 248px;
+  top: 529px;
+}
+/* line 122, ../../../_dev/scss/parallax.scss */
+#facade #para3 {
+  background: url("../images/parallax/facadesketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+/* line 130, ../../../_dev/scss/parallax.scss */
+#engineering-systems #para3 {
+  background: url("../images/parallax/engineering-systems/sketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+
+/* line 140, ../../../_dev/scss/parallax.scss */
+#decoration #para4 {
+  background: url("../images/parallax/decoration/trowel.png");
+  height: 293px;
+  width: 244px;
+  right: 124px;
+  top: 568px;
+}
+/* line 148, ../../../_dev/scss/parallax.scss */
+#facade #para4 {
+  background: url("../images/parallax/facadesketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
+}
+/* line 156, ../../../_dev/scss/parallax.scss */
+#engineering-systems #para4 {
+  background: url("../images/parallax/engineering-systems/sketch.png");
+  height: 313px;
+  width: 354px;
+  left: 40px;
+  top: 0;
 }
 
 /* line 41, ../../../_dev/scss/default.scss */

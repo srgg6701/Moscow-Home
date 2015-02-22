@@ -21,74 +21,143 @@
   -разводной ключ
   -труба
   -кабель */
+$pix-dir:$images_dir + 'parallax/';
+$pix-dir-design:$pix-dir + 'design/';
+$pix-dir-decoration:$pix-dir + 'decoration/';
+$pix-dir-engineering-systems:$pix-dir + 'engineering-systems/';
+$pix-dir-facade:$pix-dir + 'facade';
 .parallax {
+  background-color: orange;
+  background-repeat: no-repeat;
+  min-height: 40px;
+  min-width: 40px;
   position: absolute;
   z-index: 10;
 }
 #para1{
   #design &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-design + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
+    left: -63px;
+    top: 204px;
   }
   #decoration &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-decoration + 'helmet.png');
+    height: 339px;
+    width: 363px;
+    //
+    left: 19px;
+    top: 83px;
   }
   #facade &{
+    background: url($pix-dir-facade + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
   #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
 }
 #para2{
   #design &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-design + 'shtangen.png');
+    height: 195px;
+    width: 230px;
+    //
+    right: 72px;
+    top: 210px;
   }
   #decoration &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-decoration + 'brick.png');
+    height: 155px;
+    width: 194px;
+    //
+    right: 194px;
+    top: 171px;
   }
   #facade &{
+    background: url($pix-dir-facade + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
   #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
 }
 #para3{
   #design &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-design + 'level.png');
+    height: 182px;
+    width: 285px;
+    //
+    left: 25px;
+    top: 551px;
   }
   #decoration &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-decoration + 'brush.png');
+    height: 108px;
+    width: 96px;
+    //
+    left: 248px;
+    top: 529px;
   }
   #facade &{
+    background: url($pix-dir-facade + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
   #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
 }
 #para4{
   #decoration &{
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-decoration + 'trowel.png');
+    height: 293px;
+    width: 244px;
+    //
+    right: 124px;
+    top: 568px;
   }
   #facade &{
+    background: url($pix-dir-facade + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
   #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
     left: 40px;
     top: 0;
   }
