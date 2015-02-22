@@ -1,21 +1,21 @@
-/** Проектирование зданий и помещений
+/** Проектирование зданий и помещений - 3
   Design
   -уровень
   -чертеж
   -линейка */
-/** Общестроительные работы
+/** Общестроительные работы -4
   Decoration
   -каска
   -кирпич
   -мастерок
   -кисточка */
-/** Кровельные работы
+/** Кровельные работы - 4
   Facade
   -банка краски
   -ролик
   -кусок шифера
   -кусок плитки */
-/** Инженерные системы
+/** Инженерные системы - 4
   Engineering
   -карандаш
   -разводной ключ
@@ -25,11 +25,71 @@
   position: absolute;
   z-index: 10;
 }
-#fixed1{
-  left: 40px;
-  top: 0;
+#para1{
+  #design &{
+    left: 40px;
+    top: 0;
+  }
+  #decoration &{
+    left: 40px;
+    top: 0;
+  }
+  #facade &{
+    left: 40px;
+    top: 0;
+  }
+  #engineering-systems &{
+    left: 40px;
+    top: 0;
+  }
 }
-#fixed2{
-  right: 20px;
-  top: 400px;
+#para2{
+  #design &{
+    left: 40px;
+    top: 0;
+  }
+  #decoration &{
+    left: 40px;
+    top: 0;
+  }
+  #facade &{
+    left: 40px;
+    top: 0;
+  }
+  #engineering-systems &{
+    left: 40px;
+    top: 0;
+  }
+}
+#para3{
+  #design &{
+    left: 40px;
+    top: 0;
+  }
+  #decoration &{
+    left: 40px;
+    top: 0;
+  }
+  #facade &{
+    left: 40px;
+    top: 0;
+  }
+  #engineering-systems &{
+    left: 40px;
+    top: 0;
+  }
+}
+#para4{
+  #decoration &{
+    left: 40px;
+    top: 0;
+  }
+  #facade &{
+    left: 40px;
+    top: 0;
+  }
+  #engineering-systems &{
+    left: 40px;
+    top: 0;
+  }
 }

@@ -1,2 +1,5 @@
-<div class="parallax" id="fixed1" style="background-color: orange; padding: 10px;">Hello! I am fixed.</div>
-<div class="parallax" id="fixed2" style="background-color: pink; padding: 10px;">Hi! I am fixed too.</div>
+<?php   $div_count=($pageclass=='design')? 3:4;
+        if($pageclass=='facade') $div_count=5;
+        for($i=1;$i<=$div_count;$i++):?>
+<div class="parallax" id="para<?php echo $i;?>"></div>
+<?php   endfor;?>
