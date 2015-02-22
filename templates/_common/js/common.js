@@ -1,4 +1,30 @@
 $(function(){
+    var selector='[id^="diigo"], script[src*="metabar"]',
+        i=0,        // счётчик итераций
+        r=0,        // счётчик удалений
+        m=0,        // счётчик пост-удалений
+        limit=1000, // лимит итераций
+        intv=setInterval(function(){ // процедура удаления
+            var objects=document.querySelectorAll(selector);
+            if(objects.length){
+                for(var d in objects){
+                    if(typeof(objects[d])=='object'){
+                        objects[d].remove();
+                        //console.log('Удаление: '+objects[d].id);
+                        r++; // инкременировать счётчик удалений
+                    }
+                }
+            }
+            // инкременировать счётчик пост-удалений
+            if(r) m++;
+            // если пост-удалений БОЛЬШЕ, чем реальных удалений, пора заканчивать
+            if(m>r) clearInterval(intv);
+            i++;
+            if(i>limit) {
+                clearInterval(intv);
+                console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
+            }
+        },100);
     // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
     //---------------------------------
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки

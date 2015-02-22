@@ -12,7 +12,7 @@
   src: url("../fonts/PlumbMediumC.eot") format("embedded-opentype"), url("../fonts/PlumbMediumC.woff2") format("woff2"), url("../fonts/PlumbMediumC.woff") format("woff"), url("../fonts/PlumbMediumC.ttf") format("truetype"), url("../fonts/PlumbMediumC.svg#PlumbMediumC") format("svg");
 }
 
-/* line 17, ../../../_dev/scss/common-elements.scss */
+/* line 16, ../../../_dev/scss/common-elements.scss */
 a,
 article,
 aside,
@@ -33,7 +33,7 @@ ul {
   box-sizing: border-box;
 }
 
-/* line 20, ../../../_dev/scss/common-elements.scss */
+/* line 19, ../../../_dev/scss/common-elements.scss */
 body, html {
   margin: 0;
   padding: 0;
@@ -728,7 +728,6 @@ ul.social {
       footer  */
 /* line 13, ../../../_dev/scss/layout.scss */
 body, html {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -740,32 +739,38 @@ body.no-overflow footer {
   position: absolute;
 }
 
-/* line 23, ../../../_dev/scss/layout.scss */
+/* line 24, ../../../_dev/scss/layout.scss */
+body > .container {
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 29, ../../../_dev/scss/layout.scss */
 #index {
   height: 100%;
   position: relative;
 }
-/* line 27, ../../../_dev/scss/layout.scss */
+/* line 32, ../../../_dev/scss/layout.scss */
 #index main {
   bottom: 61px;
   top: 68px;
 }
 
-/* line 33, ../../../_dev/scss/layout.scss */
+/* line 38, ../../../_dev/scss/layout.scss */
 .top {
   position: relative;
   top: 68px;
 }
-/* line 36, ../../../_dev/scss/layout.scss */
+/* line 41, ../../../_dev/scss/layout.scss */
 #engineering-systems .top {
   height: 652px;
 }
-/* line 39, ../../../_dev/scss/layout.scss */
+/* line 44, ../../../_dev/scss/layout.scss */
 #decoration .top {
   height: 792px;
 }
 
-/* line 44, ../../../_dev/scss/layout.scss */
+/* line 49, ../../../_dev/scss/layout.scss */
 header {
   height: 68px;
   position: fixed;
@@ -773,13 +778,13 @@ header {
   z-index: 10;
 }
 
-/* line 50, ../../../_dev/scss/layout.scss */
+/* line 55, ../../../_dev/scss/layout.scss */
 nav {
   margin: auto;
   width: 948px;
 }
 
-/* line 54, ../../../_dev/scss/layout.scss */
+/* line 59, ../../../_dev/scss/layout.scss */
 #level1 {
   bottom: 0;
   height: 423px;
@@ -787,22 +792,22 @@ nav {
   width: 100%;
 }
 
-/* line 61, ../../../_dev/scss/layout.scss */
+/* line 66, ../../../_dev/scss/layout.scss */
 footer {
   bottom: 14px;
 }
 
-/* line 66, ../../../_dev/scss/layout.scss */
+/* line 71, ../../../_dev/scss/layout.scss */
 header, main, footer {
   width: 100%;
 }
 
-/* line 70, ../../../_dev/scss/layout.scss */
+/* line 75, ../../../_dev/scss/layout.scss */
 .footer {
   height: 600px;
 }
 
-/* line 73, ../../../_dev/scss/layout.scss */
+/* line 78, ../../../_dev/scss/layout.scss */
 body:not(.no-overflow) > div > * > *:not(.wide):not(nav) {
   height: 100%;
   margin: auto;
@@ -1562,29 +1567,29 @@ footer div.section {
   background-position: -728px 0;
 }
 
-/* line 255, ../../../_dev/scss/_design.scss */
+/* line 254, ../../../_dev/scss/_design.scss */
 #design main {
   background: url("../images/backgrounds/tile-design-main.png") white;
   padding-top: 63px;
 }
 
-/* line 261, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works p {
   color: #5d534e;
   text-align: center;
 }
-/* line 265, ../../../_dev/scss/_design.scss */
+/* line 264, ../../../_dev/scss/_design.scss */
 #our-works p.header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
-/* line 269, ../../../_dev/scss/_design.scss */
+/* line 268, ../../../_dev/scss/_design.scss */
 #our-works p.header + p {
   color: #5d534e;
   font-size: 17px;
   margin-top: -21px;
 }
-/* line 275, ../../../_dev/scss/_design.scss */
+/* line 274, ../../../_dev/scss/_design.scss */
 #design .top-container p {
   font-size: 18px;
   color: #3f3f3f;
@@ -1594,24 +1599,24 @@ footer div.section {
   top: 23px;
   width: 710px;
 }
-/* line 284, ../../../_dev/scss/_design.scss */
+/* line 283, ../../../_dev/scss/_design.scss */
 #design .content p {
   font: 18px/20px Arial, Helvetica, sans-serif;
   margin-bottom: 32px;
 }
-/* line 288, ../../../_dev/scss/_design.scss */
+/* line 287, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(4) p {
   padding-right: 120px;
 }
-/* line 291, ../../../_dev/scss/_design.scss */
+/* line 290, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(5) p {
   padding-right: 20px;
 }
-/* line 294, ../../../_dev/scss/_design.scss */
+/* line 293, ../../../_dev/scss/_design.scss */
 #design .top-container h1 + p {
   top: 27px;
 }
-/* line 297, ../../../_dev/scss/_design.scss */
+/* line 296, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > div p {
   color: white;
   font-size: 17px;
@@ -1620,35 +1625,35 @@ footer div.section {
   margin-right: -60px;
 }
 
-/* line 306, ../../../_dev/scss/_design.scss */
+/* line 305, ../../../_dev/scss/_design.scss */
 #design .content > section {
   overflow: hidden;
 }
-/* line 308, ../../../_dev/scss/_design.scss */
+/* line 307, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(odd):not(:first-child) {
   background-color: #f6f6f6;
 }
-/* line 313, ../../../_dev/scss/_design.scss */
+/* line 312, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(1) {
   height: 407px;
 }
-/* line 313, ../../../_dev/scss/_design.scss */
+/* line 312, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(2) {
   height: 444px;
 }
-/* line 313, ../../../_dev/scss/_design.scss */
+/* line 312, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(3) {
   height: 381px;
 }
-/* line 313, ../../../_dev/scss/_design.scss */
+/* line 312, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(4) {
   height: 340px;
 }
-/* line 313, ../../../_dev/scss/_design.scss */
+/* line 312, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(5) {
   height: 381px;
 }
-/* line 319, ../../../_dev/scss/_design.scss */
+/* line 318, ../../../_dev/scss/_design.scss */
 #design section#visual-bottom {
   background: url("../images/design/visual-bottom.jpg");
   background-size: cover;
@@ -1657,13 +1662,13 @@ footer div.section {
   height: 454px;
 }
 
-/* line 328, ../../../_dev/scss/_design.scss */
+/* line 327, ../../../_dev/scss/_design.scss */
 #our-works ul.table a span {
   display: block;
   white-space: nowrap;
 }
 
-/* line 335, ../../../_dev/scss/_design.scss */
+/* line 334, ../../../_dev/scss/_design.scss */
 #our-works ul.table {
   height: 190px;
   margin: 42px auto;
@@ -1875,12 +1880,12 @@ footer div.section {
   text-align: center;
 }
 
-/* line 144, ../../../_dev/scss/_decoration.scss */
+/* line 143, ../../../_dev/scss/_decoration.scss */
 #decoration main {
   background-image: url("../images/backgrounds/tile-contents.png");
 }
 
-/* line 149, ../../../_dev/scss/_decoration.scss */
+/* line 148, ../../../_dev/scss/_decoration.scss */
 #decoration .content > section:first-child > p {
   font-size: 16px;
   line-height: 20px;
@@ -1888,13 +1893,13 @@ footer div.section {
   margin-bottom: 27px;
   width: 672px;
 }
-/* line 156, ../../../_dev/scss/_decoration.scss */
+/* line 155, ../../../_dev/scss/_decoration.scss */
 #decoration .content > aside > p:first-child {
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-/* line 162, ../../../_dev/scss/_decoration.scss */
+/* line 161, ../../../_dev/scss/_decoration.scss */
 #decoration .top section {
   left: 133px;
   position: absolute;
@@ -1902,7 +1907,7 @@ footer div.section {
   width: 75%;
 }
 
-/* line 170, ../../../_dev/scss/_decoration.scss */
+/* line 169, ../../../_dev/scss/_decoration.scss */
 #decoration .contents aside span {
   background-image: url("../images/decoration/pyctos.png");
   background-repeat: no-repeat;
@@ -1910,35 +1915,35 @@ footer div.section {
   height: 100%;
   width: 100%;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(1) span {
   background-position: 12px 28px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(2) span {
   background-position: 12px -197px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(3) span {
   background-position: 12px -419px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(4) span {
   background-position: 12px -641px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(5) span {
   background-position: 12px -862px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(6) span {
   background-position: 12px -1084px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(7) span {
   background-position: 12px -1306px;
 }
-/* line 179, ../../../_dev/scss/_decoration.scss */
+/* line 178, ../../../_dev/scss/_decoration.scss */
 #decoration .contents div:nth-child(8) span {
   background-position: 12px -1527px;
 }
@@ -2343,12 +2348,53 @@ footer div.section {
   margin-bottom: 49px;
 }
 
-/* line 39, ../../../_dev/scss/default.scss */
+/** ╨Я╤А╨╛╨╡╨║╤В╨╕╤А╨╛╨▓╨░╨╜╨╕╨╡ ╨╖╨┤╨░╨╜╨╕╨╣ ╨╕ ╨┐╨╛╨╝╨╡╤Й╨╡╨╜╨╕╨╣
+  Design
+  -╤Г╤А╨╛╨▓╨╡╨╜╤М
+  -╤З╨╡╤А╤В╨╡╨╢
+  -╨╗╨╕╨╜╨╡╨╣╨║╨░ */
+/** ╨Ю╨▒╤Й╨╡╤Б╤В╤А╨╛╨╕╤В╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л
+  Decoration
+  -╨║╨░╤Б╨║╨░
+  -╨║╨╕╤А╨┐╨╕╤З
+  -╨╝╨░╤Б╤В╨╡╤А╨╛╨║
+  -╨║╨╕╤Б╤В╨╛╤З╨║╨░ */
+/** ╨Ъ╤А╨╛╨▓╨╡╨╗╤М╨╜╤Л╨╡ ╤А╨░╨▒╨╛╤В╤Л
+  Facade
+  -╨▒╨░╨╜╨║╨░ ╨║╤А╨░╤Б╨║╨╕
+  -╤А╨╛╨╗╨╕╨║
+  -╨║╤Г╤Б╨╛╨║ ╤И╨╕╤Д╨╡╤А╨░
+  -╨║╤Г╤Б╨╛╨║ ╨┐╨╗╨╕╤В╨║╨╕ */
+/** ╨Ш╨╜╨╢╨╡╨╜╨╡╤А╨╜╤Л╨╡ ╤Б╨╕╤Б╤В╨╡╨╝╤Л
+  Engineering
+  -╨║╨░╤А╨░╨╜╨┤╨░╤И
+  -╤А╨░╨╖╨▓╨╛╨┤╨╜╨╛╨╣ ╨║╨╗╤О╤З
+  -╤В╤А╤Г╨▒╨░
+  -╨║╨░╨▒╨╡╨╗╤М */
+/* line 24, ../../../_dev/scss/parallax.scss */
+.parallax {
+  position: absolute;
+  z-index: 10;
+}
+
+/* line 28, ../../../_dev/scss/parallax.scss */
+#fixed1 {
+  left: 40px;
+  top: 0;
+}
+
+/* line 32, ../../../_dev/scss/parallax.scss */
+#fixed2 {
+  right: 20px;
+  top: 400px;
+}
+
+/* line 41, ../../../_dev/scss/default.scss */
 #achievements {
   margin: auto;
 }
 
-/* line 42, ../../../_dev/scss/default.scss */
+/* line 44, ../../../_dev/scss/default.scss */
 #design {
   background-image: url("../images/backgrounds/tile-design-top-visual.png");
 }
@@ -2363,27 +2409,27 @@ footer div.section {
   top: 28px;
   z-index: -1;
 }*/
-/* line 56, ../../../_dev/scss/default.scss */
+/* line 58, ../../../_dev/scss/default.scss */
 #gallery {
   height: 94px;
   line-height: 94px;
   text-align: center;
 }
 
-/* line 62, ../../../_dev/scss/default.scss */
+/* line 64, ../../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
   width: 100%;
 }
 
-/* line 67, ../../../_dev/scss/default.scss */
+/* line 69, ../../../_dev/scss/default.scss */
 #pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 70, ../../../_dev/scss/default.scss */
+/* line 72, ../../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -2391,7 +2437,7 @@ footer div.section {
   width: 100%;
 }
 
-/* line 76, ../../../_dev/scss/default.scss */
+/* line 78, ../../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -2400,7 +2446,7 @@ footer div.section {
   width: 100%;
 }
 
-/* line 83, ../../../_dev/scss/default.scss */
+/* line 85, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;

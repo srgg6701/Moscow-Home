@@ -11,19 +11,24 @@ $bottom-footer:14px;
       main / [itemprop="articleBody"]
       footer  */
 body, html{
-  height: 100%;
+  // height: 100%; - устанавливается ТОЛЬКО для главной страницы в templates\_common\head.php
   margin: 0;
   padding: 0;
 }
-body.no-overflow main,/*[itemprop="articleBody"],*/
-body.no-overflow main/*[itemprop="articleBody"]*/ >div,
+body.no-overflow main,
+body.no-overflow main >div,
 body.no-overflow footer{
   position: absolute;
+}
+.container{
+  body>&{
+    overflow: hidden;
+    position: relative;
+  }
 }
 #index{ // body
   height: 100%;
   position: relative;
-  //[itemprop="articleBody"]{
   main{
     bottom: $footerHeight + $bottom-footer;
     top: $headerHeight;
@@ -63,7 +68,7 @@ footer{
 }
 //---------------------------------------------
 // заполнить по ширине
-header,main,/*[itemprop="articleBody"]*/footer{
+header,main,footer{
   width: 100%;
 }
 // inner layouts

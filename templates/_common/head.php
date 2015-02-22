@@ -3,6 +3,16 @@
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
 <script src="<?php echo $common_path;?>js/min/jquery.min.js"></script>
 <script src="<?php echo $common_path;?>js/common.js"></script>
+<?php   $menu=JFactory::getApplication()->getMenu();
+        if (!($menu->getActive() == $menu->getDefault())): // НЕ страница по умолчанию?>
+<script src="<?php echo $common_path;?>js/parallax.js"></script>
+<?php   else:?>
+<style>
+    html,body{
+        height: 100%;
+    }
+</style>
+<?php   endif;?>
 <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;amp;lang=ru-RU"></script>
 <script>
 ymaps.ready(init);

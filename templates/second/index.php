@@ -19,6 +19,7 @@ $pageclass = (is_object($menu))? $menu->params->get('pageclass_sfx'):'';?>
 <div id="<?php echo $pageclass;?>" class="container">
     <?php require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <jdoc:include type="component" style="none" />
+    <?php require_once $tmpl_common . $common_dir . 'parallax.php'; ?>
 </div>
 </body>
 </html>

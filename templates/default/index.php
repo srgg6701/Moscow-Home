@@ -25,6 +25,7 @@ require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
 </footer>
 <?php if ($this->countModules('hidden')) : ?>
     <jdoc:include type="modules" name="hidden" style="none" />
-<?php endif; ?></div>
+<?php endif;?>
+</div>
 </body>
 </html>
