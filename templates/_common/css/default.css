@@ -2164,7 +2164,7 @@ footer div.section {
   -ms-transform: translateY(98px);
   -o-transform: translateY(98px);
   transform: translateY(98px);
-  width: 714px;
+  width: 720px;
 }
 /* line 100, ../../../_dev/scss/_facade.scss */
 #facade div.do-it.first {
@@ -2240,7 +2240,7 @@ footer div.section {
 }
 
 /* line 163, ../../../_dev/scss/_facade.scss */
-#facade .content ul.block li {
+#facade main ul.block li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
@@ -2264,7 +2264,7 @@ footer div.section {
   margin-top: 30px;
 }
 /* line 185, ../../../_dev/scss/_facade.scss */
-#facade .content p.pseudoheader {
+#facade main p.pseudoheader {
   background: url("../images/facade/roofs.png") no-repeat 40px 93px;
   color: #5d534e;
   font: 17px/18px Arial, Helvetica, sans-serif;
@@ -2275,7 +2275,7 @@ footer div.section {
   width: 740px;
 }
 /* line 196, ../../../_dev/scss/_facade.scss */
-#facade .content section p {
+#facade main section p {
   margin-top: 0;
 }
 /* line 199, ../../../_dev/scss/_facade.scss */
