@@ -2378,7 +2378,7 @@ footer div.section {
   min-height: 40px;
   min-width: 40px;
   position: absolute;
-  z-index: 10;
+  z-index: inherit;
 }
 
 /* line 38, ../../../_dev/scss/parallax.scss */
@@ -2407,14 +2407,14 @@ footer div.section {
 }
 /* line 62, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para1 {
-  background: url("../images/parallax/engineering-systems/sketch.png");
-  height: 313px;
-  width: 354px;
-  left: 40px;
-  top: 0;
+  background: url("../images/parallax/engineering/pen.png");
+  height: 115px;
+  width: 185px;
+  left: 4%;
+  top: 214px;
 }
 
-/* line 72, ../../../_dev/scss/parallax.scss */
+/* line 71, ../../../_dev/scss/parallax.scss */
 #design #para2 {
   background: url("../images/parallax/design/shtangen.png");
   height: 195px;
@@ -2422,7 +2422,7 @@ footer div.section {
   right: 72px;
   top: 210px;
 }
-/* line 80, ../../../_dev/scss/parallax.scss */
+/* line 79, ../../../_dev/scss/parallax.scss */
 #decoration #para2 {
   background: url("../images/parallax/decoration/brick.png");
   height: 155px;
@@ -2430,7 +2430,7 @@ footer div.section {
   right: 194px;
   top: 171px;
 }
-/* line 88, ../../../_dev/scss/parallax.scss */
+/* line 87, ../../../_dev/scss/parallax.scss */
 #facade #para2 {
   background: url("../images/parallax/facade/bar.png");
   height: 152px;
@@ -2438,16 +2438,16 @@ footer div.section {
   right: 22%;
   top: 3864px;
 }
-/* line 96, ../../../_dev/scss/parallax.scss */
+/* line 95, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para2 {
-  background: url("../images/parallax/engineering-systems/sketch.png");
-  height: 313px;
+  background: url("../images/parallax/engineering/pipe.png");
+  height: 177px;
   width: 354px;
-  left: 40px;
-  top: 0;
+  right: 0;
+  top: 115px;
 }
 
-/* line 106, ../../../_dev/scss/parallax.scss */
+/* line 104, ../../../_dev/scss/parallax.scss */
 #design #para3 {
   background: url("../images/parallax/design/level.png");
   height: 182px;
@@ -2455,7 +2455,7 @@ footer div.section {
   left: 25px;
   top: 551px;
 }
-/* line 114, ../../../_dev/scss/parallax.scss */
+/* line 112, ../../../_dev/scss/parallax.scss */
 #decoration #para3 {
   background: url("../images/parallax/decoration/brush.png");
   height: 108px;
@@ -2463,7 +2463,7 @@ footer div.section {
   left: 248px;
   top: 529px;
 }
-/* line 122, ../../../_dev/scss/parallax.scss */
+/* line 120, ../../../_dev/scss/parallax.scss */
 #facade #para3 {
   background: url("../images/parallax/facade/pot.png");
   height: 286px;
@@ -2471,16 +2471,16 @@ footer div.section {
   right: 7%;
   top: 3759px;
 }
-/* line 130, ../../../_dev/scss/parallax.scss */
+/* line 128, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para3 {
-  background: url("../images/parallax/engineering-systems/sketch.png");
-  height: 313px;
-  width: 354px;
-  left: 40px;
-  top: 0;
+  background: url("../images/parallax/engineering/cable.png");
+  height: 97px;
+  width: 250px;
+  left: 0px;
+  top: 420px;
 }
 
-/* line 140, ../../../_dev/scss/parallax.scss */
+/* line 137, ../../../_dev/scss/parallax.scss */
 #decoration #para4 {
   background: url("../images/parallax/decoration/trowel.png");
   height: 293px;
@@ -2488,7 +2488,7 @@ footer div.section {
   right: 124px;
   top: 568px;
 }
-/* line 148, ../../../_dev/scss/parallax.scss */
+/* line 145, ../../../_dev/scss/parallax.scss */
 #facade #para4 {
   background: url("../images/parallax/facade/stone.png");
   height: 177px;
@@ -2496,16 +2496,16 @@ footer div.section {
   left: 10%;
   top: 4170px;
 }
-/* line 156, ../../../_dev/scss/parallax.scss */
+/* line 153, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para4 {
-  background: url("../images/parallax/engineering-systems/sketch.png");
-  height: 313px;
-  width: 354px;
-  left: 40px;
-  top: 0;
+  background: url("../images/parallax/engineering/wrench.png");
+  height: 116px;
+  width: 159px;
+  right: 0;
+  top: 356px;
 }
 
-/* line 166, ../../../_dev/scss/parallax.scss */
+/* line 162, ../../../_dev/scss/parallax.scss */
 #facade #para5 {
   background: url("../images/parallax/facade/roll-brush.png");
   height: 319px;

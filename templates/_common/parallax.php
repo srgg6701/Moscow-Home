@@ -9,7 +9,11 @@ switch($pageclass):
         $coeffx=array(1,0.7,1,1.2);
         break;
     case 'engineering-systems':
-        $coeffx=array(1,1,1,1);
+        $coeffx=array(  1,      // карандаш
+                        1.5,    // труба
+                        1.35,   // кабель
+                        0.9     // гаечный ключ
+                    );
         break;
     case 'facade':
         $div_count=5;

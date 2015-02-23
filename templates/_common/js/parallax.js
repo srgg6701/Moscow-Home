@@ -59,6 +59,7 @@ $(function () {
                             //console.log('rest: '+(maxScrollTop - $(window).scrollTop()));
                             console.log('%cscrollTop: '+$(window).scrollTop(),'color: green');
                             console.log('%cmaxScrollTop: '+maxScrollTop,'color: violet');
+                            console.log('PLayer.offset.top: '+$(PLayer).offset().top);
                             console.log('%cPLayer.offset.top + window.scrollTop: '+sumTop,'color: blue');
                             console.log('%cdiff: '+(sumTop-maxScrollTop),'color: orange');
                             //console.log('bodyHeight: '+bodyHeight);
@@ -66,7 +67,7 @@ $(function () {
                     }
                 }
 
-                if(sumTop-maxScrollTop>0){
+                if(sumTop-maxScrollTop>0||prlx[layer_id].top<window.innerHeight){
                     if (calcMax) maxScrollTop = getMaxWindowScrollTop();
                     //
                     var rest = maxScrollTop - $(window).scrollTop(),        // 3060

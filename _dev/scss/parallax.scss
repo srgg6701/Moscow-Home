@@ -24,7 +24,7 @@
 $pix-dir:$images_dir + 'parallax/';
 $pix-dir-design:$pix-dir + 'design/';
 $pix-dir-decoration:$pix-dir + 'decoration/';
-$pix-dir-engineering-systems:$pix-dir + 'engineering-systems/';
+$pix-dir-engineering-systems:$pix-dir + 'engineering/';
 $pix-dir-facade:$pix-dir + 'facade/';
 .parallax {
   background-color: orange;
@@ -32,7 +32,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
   min-height: 40px;
   min-width: 40px;
   position: absolute;
-  z-index: 10;
+  z-index: inherit;
 }
 #para1{
   #design &{
@@ -60,12 +60,11 @@ $pix-dir-facade:$pix-dir + 'facade/';
     top: 3891px;//3774px;
   }
   #engineering-systems &{
-    background: url($pix-dir-engineering-systems + 'sketch.png');
-    height: 313px;
-    width: 354px;
-    //
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-engineering-systems + 'pen.png');
+    height: 115px;
+    width: 185px;
+    left: 4%;
+    top: 214px;
   }
 }
 #para2{
@@ -94,12 +93,11 @@ $pix-dir-facade:$pix-dir + 'facade/';
     top: 3864px;
   }
   #engineering-systems &{
-    background: url($pix-dir-engineering-systems + 'sketch.png');
-    height: 313px;
+    background: url($pix-dir-engineering-systems + 'pipe.png');
+    height: 177px;
     width: 354px;
-    //
-    left: 40px;
-    top: 0;
+    right: 0;
+    top: 115px;
   }
 }
 #para3{
@@ -128,12 +126,11 @@ $pix-dir-facade:$pix-dir + 'facade/';
     top: 3759px;
   }
   #engineering-systems &{
-    background: url($pix-dir-engineering-systems + 'sketch.png');
-    height: 313px;
-    width: 354px;
-    //
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-engineering-systems + 'cable.png');
+    height: 97px;
+    width: 250px;
+    left: 0px;
+    top:420px;
   }
 }
 #para4{
@@ -154,12 +151,11 @@ $pix-dir-facade:$pix-dir + 'facade/';
     top: 4170px;
   }
   #engineering-systems &{
-    background: url($pix-dir-engineering-systems + 'sketch.png');
-    height: 313px;
-    width: 354px;
-    //
-    left: 40px;
-    top: 0;
+    background: url($pix-dir-engineering-systems + 'wrench.png');
+    height: 116px;
+    width: 159px;
+    right: 0;
+    top: 356px;
   }
 }
 #para5{
