@@ -13,7 +13,12 @@ switch($pageclass):
         break;
     case 'facade':
         $div_count=5;
-        $coeffx=array(1,1,1,1,1);
+        $coeffx=array(  0.66,   // черепица
+                        0.66,   // плитка
+                        0.66,   // краска
+                        0.68,   // камень
+                        0.67    // валик
+                    );
         break;
 endswitch;
 for($i=0;$i<$div_count;$i++):?>

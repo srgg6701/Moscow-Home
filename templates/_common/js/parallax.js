@@ -1,6 +1,6 @@
 $(function () {
     var bodyHeight = $('body').height();
-    function getTop() {
+    function getTop(resize) {
         var ids = {},
         // вызывается только при инициализации и при изменении размеров окна
         setValues=function(resize){
@@ -43,40 +43,62 @@ $(function () {
         posRatio, // соотношение текущей прокрутки окна к максимальной
         maxScrollTop = getMaxWindowScrollTop(),
         prlx,
+        PLayer,
+        sumTop,
         makeParallax = function (event,calcMax) {
-            prlx = getTop();
+            // Если calcMax передаётся, инициализированные параметры объекта переопределяются
+            prlx = getTop(calcMax);
             //console.dir(prlx);
+            var test=true;
             for (var layer_id in prlx) {
-                //console.log('layer_id: '+layer_id);
-                if (calcMax) maxScrollTop = getMaxWindowScrollTop();
-                //
-                var rest = maxScrollTop - $(window).scrollTop(),        // 3060
-                    posRatio = 1-rest/maxScrollTop,                     // 1-3060/3280 = 0.07
-                    fixedPos = prlx[layer_id].top + $(window).scrollTop(), // "позиции фиксации слоя"  с учётом текущей прокрутки
-                    distanceGo = prlx[layer_id].distance * posRatio,    // 0.03
-                    newPosTop = (fixedPos + distanceGo) *  prlx[layer_id].coeff;
-                    /*console.log('full distance: '+prlx[layer_id].distance);
-                    console.log('maxScrollTop: '+maxScrollTop+', scrollTop: '+$(window).scrollTop()+', rest: '+rest);
-                    console.log('posRatio: '+posRatio.toFixed(4)+', distanceGo: '+distanceGo.toFixed(4));*/
-                document.getElementById(layer_id).style.top = newPosTop + 'px';
-                /*console.groupCollapsed('style.top: '+document.getElementById(layer_id).style.top);
-                    console.log('maxScrollTop: '+maxScrollTop);
-                    console.log('rest: '+rest);
-                    console.log('scrollTop: '+$(window).scrollTop());
-                    console.groupCollapsed('layer current top: '+document.getElementById(layer_id).style.top);
-                        //console.log('widow.scrollTop: '+$(window).scrollTop());
-                        console.log('maxScrollTop: '+maxScrollTop);
-                        console.log('coeff: '+prlx[layer_id].coeff);
-                        console.dir(prlx[layer_id]);
-                    console.groupEnd();
-                console.groupEnd();*/
+                PLayer =  document.getElementById(layer_id);
+                sumTop=$(PLayer).offset().top+$(window).scrollTop();
+                if(test){
+                    if(sumTop-maxScrollTop<=0){
+                        console.groupCollapsed('%c'+PLayer.id,'color: brown');
+                            //console.log('rest: '+(maxScrollTop - $(window).scrollTop()));
+                            console.log('%cscrollTop: '+$(window).scrollTop(),'color: green');
+                            console.log('%cmaxScrollTop: '+maxScrollTop,'color: violet');
+                            console.log('%cPLayer.offset.top + window.scrollTop: '+sumTop,'color: blue');
+                            console.log('%cdiff: '+(sumTop-maxScrollTop),'color: orange');
+                            //console.log('bodyHeight: '+bodyHeight);
+                        console.groupEnd();
+                    }
+                }
+
+                if(sumTop-maxScrollTop>0){
+                    if (calcMax) maxScrollTop = getMaxWindowScrollTop();
+                    //
+                    var rest = maxScrollTop - $(window).scrollTop(),        // 3060
+                        posRatio = 1-rest/maxScrollTop,                     // 1-3060/3280 = 0.07
+                        fixedPos = prlx[layer_id].top + $(window).scrollTop(), // "позиции фиксации слоя"  с учётом текущей прокрутки
+                        distanceGo = prlx[layer_id].distance * posRatio,    // 0.03
+                        newPosTop = (fixedPos + distanceGo) *  prlx[layer_id].coeff;
+
+                    PLayer.style.top = newPosTop + 'px';
+
+                    if(test){
+                        console.groupCollapsed(layer_id+', style.top: '+document.getElementById(layer_id).style.top);
+                            console.log('%cPLayer.offset.top + window.scrollTop: '+sumTop,'color: blue');
+                            console.log('posRatio: '+posRatio.toFixed(4)+', distanceGo: '+distanceGo.toFixed(4));
+                            console.log('%cdiff: '+(sumTop-maxScrollTop),'color: orange');
+                            //console.log('full distance: '+prlx[layer_id].distance);
+                                //console.log('maxScrollTop: '+maxScrollTop);
+                            console.groupCollapsed('layer current top: '+PLayer.style.top);
+                                //console.log('widow.scrollTop: '+$(window).scrollTop());
+                                console.log('maxScrollTop: '+maxScrollTop);
+                                console.log('coeff: '+prlx[layer_id].coeff);
+                                //console.dir(prlx[layer_id]);
+                            console.groupEnd();
+                        console.groupEnd();
+                    }
+                }
             } //console.log('scrollTop: '+$(window).scrollTop()+', offset.top: '+$(fix1).css('top'));
         };
     $(document).on('scroll', function(event){
         makeParallax(event);
     });
     $(window).on('resize', function (event) {
-        getTop(true);
         makeParallax(event,true);
     });
 });

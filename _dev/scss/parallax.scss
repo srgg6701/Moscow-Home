@@ -25,7 +25,7 @@ $pix-dir:$images_dir + 'parallax/';
 $pix-dir-design:$pix-dir + 'design/';
 $pix-dir-decoration:$pix-dir + 'decoration/';
 $pix-dir-engineering-systems:$pix-dir + 'engineering-systems/';
-$pix-dir-facade:$pix-dir + 'facade';
+$pix-dir-facade:$pix-dir + 'facade/';
 .parallax {
   background-color: orange;
   background-repeat: no-repeat;
@@ -52,12 +52,12 @@ $pix-dir-facade:$pix-dir + 'facade';
     top: 83px;
   }
   #facade &{
-    background: url($pix-dir-facade + 'sketch.png');
-    height: 313px;
-    width: 354px;
+    background: url($pix-dir-facade + 'tile.png');
+    height: 236px;
+    width: 185px;
     //
-    left: 40px;
-    top: 0;
+    left: 14%;
+    top: 3891px;//3774px;
   }
   #engineering-systems &{
     background: url($pix-dir-engineering-systems + 'sketch.png');
@@ -86,12 +86,12 @@ $pix-dir-facade:$pix-dir + 'facade';
     top: 171px;
   }
   #facade &{
-    background: url($pix-dir-facade + 'sketch.png');
-    height: 313px;
-    width: 354px;
+    background: url($pix-dir-facade + 'bar.png');
+    height: 152px;
+    width: 152px;
     //
-    left: 40px;
-    top: 0;
+    right: 22%;
+    top: 3864px;
   }
   #engineering-systems &{
     background: url($pix-dir-engineering-systems + 'sketch.png');
@@ -120,12 +120,12 @@ $pix-dir-facade:$pix-dir + 'facade';
     top: 529px;
   }
   #facade &{
-    background: url($pix-dir-facade + 'sketch.png');
-    height: 313px;
-    width: 354px;
+    background: url($pix-dir-facade + 'pot.png');
+    height: 286px;
+    width: 174px;
     //
-    left: 40px;
-    top: 0;
+    right: 7%;
+    top: 3759px;
   }
   #engineering-systems &{
     background: url($pix-dir-engineering-systems + 'sketch.png');
@@ -146,12 +146,12 @@ $pix-dir-facade:$pix-dir + 'facade';
     top: 568px;
   }
   #facade &{
-    background: url($pix-dir-facade + 'sketch.png');
-    height: 313px;
-    width: 354px;
+    background: url($pix-dir-facade + 'stone.png');
+    height: 177px;
+    width: 190px;
     //
-    left: 40px;
-    top: 0;
+    left: 10%;
+    top: 4170px;
   }
   #engineering-systems &{
     background: url($pix-dir-engineering-systems + 'sketch.png');
@@ -160,5 +160,15 @@ $pix-dir-facade:$pix-dir + 'facade';
     //
     left: 40px;
     top: 0;
+  }
+}
+#para5{
+  #facade &{
+    background: url($pix-dir-facade + 'roll-brush.png');
+    height: 319px;
+    width: 275px;
+    //
+    right: 11%;
+    top: 4778px;
   }
 }
