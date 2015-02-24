@@ -76,6 +76,10 @@ aside{
     @include opacity(0.5);
     $url:$images_dir + "pointer.png";
     $offset:18px;
+    transition: opacity 0.3s ease;
+    &:hover{
+      @include opacity(1);
+    }
     &:nth-child(1){
       background-image: url($url);
       float: left;

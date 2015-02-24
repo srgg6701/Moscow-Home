@@ -7,16 +7,16 @@
   @include centered;
   width: 49px;
 }
-@mixin centered{
+@mixin centered($top:50%){
   left: 50%;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%);
+  top: $top;
+  @include transform(translate(-50%));
 }
 @mixin centered-horizontal($position:relative){
   position: $position;
   left: 50%;
-  transform: translateX(-50%);
+  @include transform(translateX(-50%));
 }
 @mixin centred-margins{
   margin: auto;
@@ -25,7 +25,7 @@
 @mixin centered-vertical{
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  @include transform(translateY(-50%));
 }
 @mixin inputs-shadow {
   @include border-radius(3px);
