@@ -64,7 +64,8 @@ aside{
     overflow: hidden;
     width: 94%;
   }
-  #pointers-aside >&{
+  #pointers-aside >&,
+  .gallery-pointers-aside >&{
     $space:80px;
     background-color: black;
     background-position: center;
@@ -92,6 +93,7 @@ aside{
       @include transform(scaleX(-1));
     }
   }
+
   .slides &{
     background:url($images_dir + 'backgrounds/tile-microsquare.png');
     height: 135px;
@@ -193,6 +195,7 @@ div{
     @include border-bottom-right-radius(11px);
     @include menu-social-right();
     @include opacity(.65);
+    z-index: 1;
   }
   #you-need ul li >&{
     height: 100%;
@@ -216,6 +219,12 @@ h1{
   }
 }
 h2{
+  body.gallery &{
+    &.header-slim-big{
+      margin: 17px auto 36px;
+      text-align: center;
+    }
+  }
 }
 h3{
   .footer &{
@@ -379,7 +388,7 @@ ul{
     background: url($images_dir + "social-left-vertical.png") no-repeat;
     @include menu-social-right(43px, 8px);
     margin-top: 9px;
-    z-index: 1;
+    z-index: 2;
   }
   .footer.why-moscow-home >section >&{
     display: table;

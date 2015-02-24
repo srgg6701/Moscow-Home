@@ -45,6 +45,11 @@ body.no-overflow footer{
     height: 792px;
   }
 }
+main{
+  .gallery &{
+    position: relative;
+  }
+}
 //---------------------------------------------
   header{
     height: $headerHeight;

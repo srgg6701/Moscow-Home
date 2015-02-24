@@ -10,13 +10,20 @@ $common_dir = '_common/';
 <head>
 <?php require_once $tmpl_common . $common_dir . 'head.php'; ?>
 </head>
-<body class="no-overflow">
+<body class="<?php
+if($pageclass):
+    echo $pageclass;
+else:?>no-overflow<?php endif;?>">
 <div id="index">
 <?php
 $header_class='absolute';
 require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <main id="content" role="main">
         <jdoc:include type="component" style="none" />
+<?php
+    if($pageclass=="gallery"):
+        require_once $tmpl_common . $common_dir . 'gallery_main.php';
+    endif;?>
     </main>
 <footer class="index">
 <?php if ($this->countModules('footer')) : ?>
@@ -27,6 +34,5 @@ require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <jdoc:include type="modules" name="hidden" style="none" />
 <?php endif;?>
 </div>
-<?php require_once $tmpl_common . $common_dir . 'slider.php'; ?>
 </body>
 </html>
