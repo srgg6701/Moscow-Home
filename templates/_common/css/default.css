@@ -2594,17 +2594,16 @@ footer div.section {
   /*высота слайдера*/
                              /*
   height: 151px;
-}
-img { */
-  /*ширина изображений*/
-                              /*
-  margin: auto 1px;
-  width: 270px;
 }*/
+}
+/* line 24, ../../../_dev/scss/slider/slider.scss */
+#images-container .img {
+  /*ширина изображений*/
+  display: inline-block;
 }
 
 /*ширина блока с видео, отступ слева для сокрытия объектов с левого края */
-/* line 31, ../../../_dev/scss/slider/slider.scss */
+/* line 32, ../../../_dev/scss/slider/slider.scss */
 #pix {
   left: 0;
   right: 0;
@@ -2613,7 +2612,7 @@ img { */
   width: 100%;
 }
 
-/* line 40, ../../../_dev/scss/slider/slider.scss */
+/* line 41, ../../../_dev/scss/slider/slider.scss */
 #loader-wait {
   left: 50%;
   position: absolute;
@@ -2626,29 +2625,29 @@ img { */
   display: table;
   font: 20px Arial, Helvetica, sans-serif;
 }
-/* line 45, ../../../_dev/scss/slider/slider.scss */
+/* line 46, ../../../_dev/scss/slider/slider.scss */
 #loader-wait::before {
   content: "Загрузка галереи...";
 }
 
-/* line 49, ../../../_dev/scss/slider/slider.scss */
+/* line 50, ../../../_dev/scss/slider/slider.scss */
 #loaded-content {
   position: relative;
 }
 
-/* line 52, ../../../_dev/scss/slider/slider.scss */
+/* line 53, ../../../_dev/scss/slider/slider.scss */
 #preview-container {
   display: inherit;
   position: relative;
 }
 
-/* line 56, ../../../_dev/scss/slider/slider.scss */
+/* line 57, ../../../_dev/scss/slider/slider.scss */
 .outer_container {
   background-color: white;
   display: none;
 }
 
-/* line 60, ../../../_dev/scss/slider/slider.scss */
+/* line 61, ../../../_dev/scss/slider/slider.scss */
 .pointer {
   background-color: white !important;
   cursor: pointer;
@@ -2667,11 +2666,11 @@ img { */
   z-index: 1;
 }
 
-/* line 78, ../../../_dev/scss/slider/slider.scss */
+/* line 79, ../../../_dev/scss/slider/slider.scss */
 .pointer:hover {
   opacity: 1;
 }
-/* line 81, ../../../_dev/scss/slider/slider.scss */
+/* line 82, ../../../_dev/scss/slider/slider.scss */
 .pointer.left, .pointer.right {
   position: relative;
   top: 50%;
@@ -2681,12 +2680,12 @@ img { */
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 86, ../../../_dev/scss/slider/slider.scss */
+/* line 87, ../../../_dev/scss/slider/slider.scss */
 .pointer.left {
   background: url("../images/controls/pointer-left.png") no-repeat 12px;
   float: left;
 }
-/* line 90, ../../../_dev/scss/slider/slider.scss */
+/* line 91, ../../../_dev/scss/slider/slider.scss */
 .pointer.right {
   background: url("../images/controls/pointer-right.png") no-repeat 15px;
   float: right;
