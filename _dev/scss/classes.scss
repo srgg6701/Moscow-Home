@@ -47,6 +47,9 @@
   color: $color-carrot;
   content:" doma@domalux.ru";
 }
+.email2::after{
+  content: "info@moscowhome.ru";
+}
 .float-left{
   float: left;
 }
@@ -87,6 +90,12 @@
 }
 .no-scroll{
   overflow: hidden;
+}
+.phone{
+  &:after{
+    content:'+ 7 (985) 762-99-66';
+    white-space: nowrap;
+  }
 }
 .relative{
   position: relative !important;

@@ -15,8 +15,8 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	public $db = 'moscowhome';
-	public $dbprefix = 'msh_';
+	public $db = 'moscowho';//'moscowhome-copy';
+	public $dbprefix = 'cwm_';
 	public $live_site = '';
 	public $secret = 'cfm23pgfNQUc9fpy';
 	public $gzip = '0';

@@ -67,7 +67,7 @@ $(function () {
                     }
                 }
 
-                if(sumTop-maxScrollTop>0||prlx[layer_id].top<window.innerHeight){
+                if(sumTop-maxScrollTop>0||prlx[layer_id].top<window.innerHeight){ // 899
                     if (calcMax) maxScrollTop = getMaxWindowScrollTop();
                     //
                     var rest = maxScrollTop - $(window).scrollTop(),        // 3060

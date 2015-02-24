@@ -27,5 +27,6 @@ require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <jdoc:include type="modules" name="hidden" style="none" />
 <?php endif;?>
 </div>
+<?php require_once $tmpl_common . $common_dir . 'slider.php'; ?>
 </body>
 </html>

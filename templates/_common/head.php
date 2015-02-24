@@ -3,8 +3,13 @@
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
 <script src="<?php echo $common_path;?>js/min/jquery.min.js"></script>
 <script src="<?php echo $common_path;?>js/common.js"></script>
-<?php   $menu=JFactory::getApplication()->getMenu();
-        if (!($menu->getActive() == $menu->getDefault())): // НЕ страница по умолчанию?>
+<?php   $app = JFactory::getApplication();
+        $menu=$app->getMenu();
+        $menu_active = $menu->getActive();
+        $pageclass = (is_object($menu_active))? $menu_active->params->get('pageclass_sfx'):'';
+        $main_page = $menu_active == $menu->getDefault();
+        echo "<!--main_page: ".$main_page."-->";
+if (!$main_page && $pageclass!="gallery"): // НЕ страница по умолчанию?>
 <script src="<?php echo $common_path;?>js/parallax.js"></script>
 <?php   else:?>
 <style>
@@ -12,7 +17,7 @@
         height: 100%;
     }
 </style>
-<?php   endif;?>
+<?php   endif; ?>
 <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;amp;lang=ru-RU"></script>
 <script>
 ymaps.ready(init);

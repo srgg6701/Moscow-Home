@@ -11,12 +11,9 @@ $common_dir = '_common/';
 <head>
     <?php require_once $tmpl_common . $common_dir . 'head.php'; ?>
 </head>
-<?php
-$app = JFactory::getApplication();
-$menu = $app->getMenu()->getActive();
-$pageclass = (is_object($menu))? $menu->params->get('pageclass_sfx'):'';?>
 <body>
-<div id="<?php echo $pageclass;?>" class="container">
+<div id="<?php   // @pageclass ─ извлекается в подключаемом файле (head.php)
+    echo $pageclass;?>" class="container">
     <?php require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <jdoc:include type="component" style="none" />
     <?php require_once $tmpl_common . $common_dir . 'parallax.php'; ?>

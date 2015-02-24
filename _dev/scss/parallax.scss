@@ -50,6 +50,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
     //
     left: 19px;
     top: 83px;
+    z-index: 1;
   }
   #facade &{
     background: url($pix-dir-facade + 'tile.png');
@@ -91,6 +92,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
     //
     right: 22%;
     top: 3864px;
+    z-index: 1;
   }
   #engineering-systems &{
     background: url($pix-dir-engineering-systems + 'pipe.png');
@@ -98,6 +100,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
     width: 354px;
     right: 0;
     top: 115px;
+    z-index: 1;
   }
 }
 #para3{
@@ -131,6 +134,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
     width: 250px;
     left: 0px;
     top:420px;
+    z-index: 1;
   }
 }
 #para4{
@@ -165,6 +169,7 @@ $pix-dir-facade:$pix-dir + 'facade/';
     width: 275px;
     //
     right: 11%;
-    top: 4778px;
+    top: 3500px;
+    z-index: 1;
   }
 }
