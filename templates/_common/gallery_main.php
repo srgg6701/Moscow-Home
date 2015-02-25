@@ -25,12 +25,28 @@ if (is_dir($dir)) {
     Pix['<?php echo $sections[$i];?>']['images']=[];
 </script>
 <section>
+  <script>
+                    <?php
+                        while(($realfile = readdir($dhr)) !== false) {
+                            if ($realfile != '.' && $realfile != '..' && $realfile != '_notes') {
+                                ?>
+    Pix['<?php echo $sections[$i];?>']['images'].push('<?php echo $realfile;?>');
+        <?php                   $j++;
+                                if($j>300){?>
+                                    console.log('Превышен лимит итераций (<?php echo $j;?>)');<?php
+                                    break;
+                                }
+                            }
+                        }
+                        closedir($dhr);
+?>
+  </script>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
     <div id="slider-<?php echo $gIndex; ?>" class="fit">
         <div id="gallery-pointers-box-<?php echo $gIndex; ?>">
-            <div class="gallery-pointers-aside">
-                <aside onclick="handleSlides('left',<?php echo $gIndex; ?>);"></aside>
-                <aside onclick="handleSlides('right',<?php echo $gIndex; ?>);"></aside>
+            <div class="gallery-pointers-aside" data-pointers="<?php echo $gIndex; ?>">
+                <aside class="pointer-left" onclick="handleSlides('left',<?php echo $gIndex; ?>);"></aside>
+                <aside class="pointer-right" onclick="handleSlides('right',<?php echo $gIndex; ?>);"></aside>
             </div>
         </div>
         <div class="img-box" style="display:none;">&nbsp;</div>
@@ -40,6 +56,11 @@ if (is_dir($dir)) {
                     <div id="images-container-<?php echo $gIndex; ?>">
                         <div id="pix-<?php echo $gIndex; ?>"></div>
                         <div id="loader-wait-<?php echo $gIndex; ?>"></div>
+                        <div class="indicators" id="indicator-<?php echo $gIndex; ?>">
+                        <?php for($k=0;$k<$j;$k++):?>
+                            <div<?php if(!$k):?> class="active"<?php endif;?>></div>
+                        <?php endfor;?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,31 +78,13 @@ if (is_dir($dir)) {
                 <div id="preview-container-mini-<?php echo $gIndex; ?>">
                     <div id="loaded-content-mini-<?php echo $gIndex; ?>">
                         <div id="images-container-mini-<?php echo $gIndex; ?>">
-                            <div id="pix-mini-<?php echo $gIndex; ?>"></div>
+                            <div id="pix-mini-<?php echo $gIndex; ?>" data-turn="<?php echo $gIndex; ?>"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-  <script>
-                    <?php
-                        while(($realfile = readdir($dhr)) !== false) {
-                            if ($realfile != '.' && $realfile != '..' && $realfile != '_notes') {
-                                //if ($j) echo ", ";
-                                //echo "// file: ".$realfile."\n";?>
-    Pix['<?php echo $sections[$i];?>']['images'].push('<?php echo $realfile;?>');
-        <?php                   //echo "<div>$realfile</div>";
-                                $j++;
-                                if($j>300){?>
-                                    console.log('Превышен лимит итераций (<?php echo $j;?>)');<?php
-                                    break;
-                                }
-                            }
-                        }
-                        closedir($dhr);
-?>
-  </script>
 </section>
 <?php
                     }

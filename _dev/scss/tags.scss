@@ -388,7 +388,7 @@ ul{
     background: url($images_dir + "social-left-vertical.png") no-repeat;
     @include menu-social-right(43px, 8px);
     margin-top: 9px;
-    z-index: 2;
+    z-index: 3;
   }
   .footer.why-moscow-home >section >&{
     display: table;
