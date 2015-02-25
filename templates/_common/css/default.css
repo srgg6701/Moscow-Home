@@ -611,6 +611,31 @@ ul.social {
 }
 
 /* line 32, ../../../_dev/scss/classes.scss */
+.close {
+  background-color: #555;
+  border: solid white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  height: 40px !important;
+  line-height: 31px;
+  padding: 0;
+  position: absolute !important;
+  right: -14px;
+  text-align: center;
+  text-decoration: none;
+  top: -14px;
+  width: 40px;
+}
+
+/* line 51, ../../../_dev/scss/classes.scss */
 .do-it {
   background-color: #832305;
   color: white !important;
@@ -618,105 +643,117 @@ ul.social {
   overflow: hidden;
   position: relative;
 }
-/* line 39, ../../../_dev/scss/classes.scss */
+/* line 58, ../../../_dev/scss/classes.scss */
 #decoration .do-it, #design .do-it {
   background-image: url("../images/backgrounds/tile-100.png");
 }
-/* line 42, ../../../_dev/scss/classes.scss */
+/* line 61, ../../../_dev/scss/classes.scss */
 #engineering-systems .do-it {
   background-image: url("../images/backgrounds/tile-top-bottom.png");
 }
 
-/* line 46, ../../../_dev/scss/classes.scss */
+/* line 65, ../../../_dev/scss/classes.scss */
 .email::after {
   color: #a64726;
   content: " doma@domalux.ru";
 }
 
-/* line 50, ../../../_dev/scss/classes.scss */
+/* line 69, ../../../_dev/scss/classes.scss */
 .email2::after {
   content: "info@moscowhome.ru";
 }
 
-/* line 53, ../../../_dev/scss/classes.scss */
+/* line 72, ../../../_dev/scss/classes.scss */
+.fixed {
+  position: fixed;
+}
+/* line 74, ../../../_dev/scss/classes.scss */
+.fixed.fit {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 81, ../../../_dev/scss/classes.scss */
 .float-left {
   float: left;
 }
 
-/* line 56, ../../../_dev/scss/classes.scss */
+/* line 84, ../../../_dev/scss/classes.scss */
 .footer {
   background-color: #feda62;
 }
 
-/* line 59, ../../../_dev/scss/classes.scss */
+/* line 87, ../../../_dev/scss/classes.scss */
 .half-wide {
   width: 50%;
 }
 
-/* line 62, ../../../_dev/scss/classes.scss */
+/* line 90, ../../../_dev/scss/classes.scss */
 .header-big {
   font-family: PlumbMedium !important;
   font-size: 48px !important;
   text-transform: uppercase;
 }
 
-/* line 67, ../../../_dev/scss/classes.scss */
+/* line 95, ../../../_dev/scss/classes.scss */
 .header-slim-big {
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
 }
-/* line 71, ../../../_dev/scss/classes.scss */
+/* line 99, ../../../_dev/scss/classes.scss */
 .do-it .header-slim-big {
   color: white;
 }
-/* line 74, ../../../_dev/scss/classes.scss */
+/* line 102, ../../../_dev/scss/classes.scss */
 .container .header-slim-big {
   text-align: center;
 }
 
-/* line 78, ../../../_dev/scss/classes.scss */
+/* line 106, ../../../_dev/scss/classes.scss */
 .header-slim-middle {
   font: 25px PlumbLight;
   text-transform: uppercase;
 }
-/* line 81, ../../../_dev/scss/classes.scss */
+/* line 109, ../../../_dev/scss/classes.scss */
 #after-stone .header-slim-middle {
   line-height: 33px;
 }
 
-/* line 85, ../../../_dev/scss/classes.scss */
+/* line 113, ../../../_dev/scss/classes.scss */
 .hidden {
   display: none;
 }
 
-/* line 88, ../../../_dev/scss/classes.scss */
+/* line 116, ../../../_dev/scss/classes.scss */
 .no-overflow {
   overflow: hidden;
 }
 
-/* line 91, ../../../_dev/scss/classes.scss */
+/* line 119, ../../../_dev/scss/classes.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 95, ../../../_dev/scss/classes.scss */
+/* line 123, ../../../_dev/scss/classes.scss */
 .phone:after {
   content: '+ 7 (985) 762-99-66';
   white-space: nowrap;
 }
 
-/* line 100, ../../../_dev/scss/classes.scss */
+/* line 128, ../../../_dev/scss/classes.scss */
 .relative {
   position: relative !important;
 }
 
-/* line 103, ../../../_dev/scss/classes.scss */
+/* line 131, ../../../_dev/scss/classes.scss */
 .slider-bottom {
   overflow: hidden;
 }
 
-/* line 106, ../../../_dev/scss/classes.scss */
+/* line 134, ../../../_dev/scss/classes.scss */
 .slides {
   height: 100%;
   margin: auto;
@@ -724,30 +761,30 @@ ul.social {
   width: 963px;
 }
 
-/* line 112, ../../../_dev/scss/classes.scss */
+/* line 140, ../../../_dev/scss/classes.scss */
 .table {
   display: table;
 }
 
-/* line 117, ../../../_dev/scss/classes.scss */
+/* line 145, ../../../_dev/scss/classes.scss */
 #decoration .top, #engineering-systems .top {
   background-color: #832305;
 }
-/* line 120, ../../../_dev/scss/classes.scss */
+/* line 148, ../../../_dev/scss/classes.scss */
 #decoration .top {
   background-image: url("../images/backgrounds/tile-top-ultra-blood.png");
 }
-/* line 123, ../../../_dev/scss/classes.scss */
+/* line 151, ../../../_dev/scss/classes.scss */
 #engineering-systems .top {
   background-image: url("../images/backgrounds/tile-top.png");
 }
-/* line 126, ../../../_dev/scss/classes.scss */
+/* line 154, ../../../_dev/scss/classes.scss */
 #facade .top {
   background-image: url("../images/facade/roof.jpg");
   background-size: cover;
 }
 
-/* line 131, ../../../_dev/scss/classes.scss */
+/* line 159, ../../../_dev/scss/classes.scss */
 .works-examples {
   background: url("../images/gallery/works-examples.jpg") no-repeat;
   height: 81px;
@@ -2924,18 +2961,44 @@ body.gallery [id^="slider-mini-"] {
 }
 
 /* line 46, ../../../_dev/scss/default.scss */
+#content-box {
+  background-color: #B3B3B3;
+  display: table;
+  min-height: 80px;
+  min-width: 80px;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  transform: translate(-50%);
+  top: 45%;
+}
+
+/* line 57, ../../../_dev/scss/default.scss */
+#curtain {
+  background-color: #000000;
+  display: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  z-index: 10;
+}
+
+/* line 63, ../../../_dev/scss/default.scss */
 #design {
   background-image: url("../images/backgrounds/tile-design-top-visual.png");
 }
 
-/* line 49, ../../../_dev/scss/default.scss */
+/* line 66, ../../../_dev/scss/default.scss */
 #gallery {
   height: 94px;
   line-height: 94px;
   text-align: center;
 }
 
-/* line 55, ../../../_dev/scss/default.scss */
+/* line 72, ../../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
@@ -2943,13 +3006,18 @@ body.gallery [id^="slider-mini-"] {
   z-index: 2;
 }
 
-/* line 61, ../../../_dev/scss/default.scss */
+/* line 78, ../../../_dev/scss/default.scss */
 #pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 64, ../../../_dev/scss/default.scss */
+/* line 81, ../../../_dev/scss/default.scss */
+#shell {
+  z-index: 11;
+}
+
+/* line 84, ../../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -2957,7 +3025,7 @@ body.gallery [id^="slider-mini-"] {
   width: 100%;
 }
 
-/* line 70, ../../../_dev/scss/default.scss */
+/* line 90, ../../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -2966,7 +3034,7 @@ body.gallery [id^="slider-mini-"] {
   width: 100%;
 }
 
-/* line 77, ../../../_dev/scss/default.scss */
+/* line 97, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;

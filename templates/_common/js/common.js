@@ -158,12 +158,26 @@ function getInnerMenus(){
  * @param state
  */
 function handleInputs(state){
-    var email=document.querySelector('input[name="email"]').parentNode,
+    var email_input = document.querySelector('input[name="email"]'),
         telephone=document.querySelector('input[name="telephone"]').parentNode;
     if(state=='hide'){
         telephone.style.width='100%';
+        email_input.disabled=true;
     }else{
         telephone.style.width='50%';
+        email_input.disabled=false;
     }
-    $(email)[state]();
+    $(email_input.parentNode)[state]();
+}
+
+function closeParent(event,layers){
+    console.log(layers);
+    console.dir(event.currentTarget);
+    $(event.currentTarget).parent().fadeOut(200, function(){
+        if(layers){
+            for(var i= 0, j=layers.length; i<j; i++){
+               $('#'+layers[i]).fadeOut(200);
+            }
+        }else return;
+    });
 }
