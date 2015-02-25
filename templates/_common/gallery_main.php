@@ -1,5 +1,7 @@
+<script>
+    var Pix={};
+</script>
 <?php // 590х376
-//mb_internal_encoding("UTF-8");
 $dir = dirname(__FILE__).'/../../images/slides/gallery/';
 $sections=array('Шульгино','Никольское','Молоденово','Дом 1','Дом 2','Дом 3');
 if (is_dir($dir)) {
@@ -15,6 +17,10 @@ if (is_dir($dir)) {
                     $j=0;
                     if($dhr = opendir($inner_dir.'/')){
                         ?>
+<script>
+    Pix['<?php echo $sections[$i];?>']={} // full directory path
+    Pix['<?php echo $sections[$i];?>']['<?php echo $file;?>']:[]; // section name / images
+</script>
 <section>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
     <div id="slider-<?php echo $gIndex; ?>" class="fit">
@@ -30,6 +36,7 @@ if (is_dir($dir)) {
                 <div id="loaded-content-<?php echo $gIndex; ?>">
                     <div id="images-container-<?php echo $gIndex; ?>">
                         <div id="pix-<?php echo $gIndex; ?>"></div>
+                        <div id="loader-wait-<?php echo $gIndex; ?>"></div>
                     </div>
                 </div>
             </div>
@@ -54,20 +61,24 @@ if (is_dir($dir)) {
             </div>
         </div>
     </div>
-                        <?php
+  <script>
+                    <?php
                         while(($realfile = readdir($dhr)) !== false) {
                             if ($realfile != '.' && $realfile != '..') {
                                 //if ($j) echo ", ";
-                                //echo "<div>$realfile</div>";
+                                ?>
+    Pix['<?php echo $sections[$i];?>']['<?php echo $inner_dir;?>'].push('<?php echo $realfile;?>');
+        <?php                   //echo "<div>$realfile</div>";
                                 $j++;
-                                if($j>300){
-                                    echo "<div>Превышен лимит итераций ($j): </div>";
+                                if($j>300){?>
+                                    console.log('Превышен лимит итераций (<?php echo $j;?>)');<?php
                                     break;
                                 }
                             }
                         }
                         closedir($dhr);
-                        //echo "</blockquote></blockquote>";?>
+?>
+  </script>
 </section>
 <?php
                     }
@@ -77,4 +88,8 @@ if (is_dir($dir)) {
         }
         closedir($dh);
     }
-}
+}?>
+<script>
+    console.dir(Pix);
+</script>
+<?php   require_once 'slider-gallery.php';

@@ -38,5 +38,8 @@ ymaps.ready(init);
       myMap.geoObjects.add(myPlacemark);
   }
 </script>
-<?php   require_once $tmpl_common . $common_dir . 'slider.php';
-        require_once $tmpl_common . $common_dir . 'gallery.php';
+<?php
+if($main_page):
+    require_once $tmpl_common . $common_dir . 'slider-home.php';
+endif;
+require_once $tmpl_common . $common_dir . 'gallery.php';
