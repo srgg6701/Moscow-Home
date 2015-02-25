@@ -1,0 +1,38 @@
+.outer_container {
+    background-color: white;
+    display: none;
+    padding: 40px 0;
+}
+.pointer {
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0.65;
+    position: absolute;
+    text-align: center;
+    top: 187px;
+    transition: all 0.3s ease;
+    width: 40px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 1;
+}
+.pointer.left {
+    background: url('../images/controls/pointer-left.png') white no-repeat 15px 14px;
+    left: 105px;
+}
+.pointer.right {
+    background: url('../images/controls/pointer-right.png') white no-repeat 17px 14px;
+    right: 105px;
+}
+.slides {
+    /* background: url(../../.sources/preview-transp.jpg); */
+    height: 850px;
+    width: 788px;
+}

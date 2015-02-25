@@ -1,0 +1,22 @@
+/* файл с расчётами параметров: c:\Users\srgg6701\Documents\Projects\.commonAPIs\.docs\calculations.xlsx*/
+/*ширина слайдера (видимой части)*/
+#images-container{
+    background-color: black;
+    width: 1086px;
+}
+/*высота слайдера*/
+#images-container img, #images-container, #pix {
+    height: 151px;
+}
+/*ширина изображений*/
+#images-container img {
+    margin: auto 1px;
+    width: 270px;
+}
+/*ширина блока с видео, отступ слева для сокрытия объектов с левого края */
+#pix {
+    left: -545px; /* - ширина 1 объекта * 2 +5(?) */
+    /*  ширина контейнера с картинками (края скрыты) */
+    width: 2682px;
+}
+

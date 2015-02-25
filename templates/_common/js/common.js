@@ -32,7 +32,7 @@ $(function(){
         menus_container=getMenusContainer();        // контейнер с блоками меню
 
     // управление меню при событии его контейнера
-    $(menus_container).on('mouseenter mouseleave',/**/ function(event){
+    $(menus_container).on('mouseenter mouseleave', function(event){
         setVisibilityState(event);
     });
 
@@ -82,6 +82,11 @@ $(function(){
             setVisible();
         }
     });
+    // Открыть подменю "Консультация" кликом по кнопке "Перезвоните мне"
+    $('.bg-recall').on('click', function(){
+        $('#btn-consult').trigger('mouseenter');
+        handleInputs(true);
+    });
 });
 /**
  * Управлять видимостью контейнера с меню
@@ -130,8 +135,27 @@ function setVisibilityState(event,menu_to_show_index){
  * Скрыть все меню
  */
 function hideAll(){
+    console.log('hideAll');
+    handleInputs();
     $(getInnerMenus()).hide();
     $(getMenusContainer()).hide(); // скрыть контейнер с меню
+}
+/**
+ *
+ * @param state
+ */
+function handleInputs(state){
+    var form=$('form',getMenusContainer());
+    if(state){
+        func='hide';
+        width='100';
+    }else{
+        func='show';
+        width='50';
+    }
+    $('input[name="email"]',form).parent('p')[func]();
+    $('input[name="telephone"]',form).parent('p').width(width+'%');
+
 }
 /**
  * Получить контейнер с меню

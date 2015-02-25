@@ -49,7 +49,7 @@ $(function () {
             // Если calcMax передаётся, инициализированные параметры объекта переопределяются
             prlx = getTop(calcMax);
             //console.dir(prlx);
-            var test=true;
+            var test=false;
             for (var layer_id in prlx) {
                 PLayer =  document.getElementById(layer_id);
                 sumTop=$(PLayer).offset().top+$(window).scrollTop();
