@@ -82,6 +82,11 @@ $(function(){
             setVisible();
         }
     });
+    // Открыть подменю "Консультация" кликом по кнопке "Перезвоните мне"
+    $('.bg-recall').on('click', function(){
+        $('#btn-consult').trigger('mouseenter');
+        handleInputs('hide');
+    });
 });
 /**
  * Управлять видимостью контейнера с меню
@@ -132,6 +137,7 @@ function setVisibilityState(event,menu_to_show_index){
 function hideAll(){
     $(getInnerMenus()).hide();
     $(getMenusContainer()).hide(); // скрыть контейнер с меню
+    handleInputs('show');
 }
 /**
  * Получить контейнер с меню
@@ -146,4 +152,18 @@ function getMenusContainer(){
  */
 function getInnerMenus(){
     return $('>section',getMenusContainer()); // блоки с меню
+}
+/**
+ *
+ * @param state
+ */
+function handleInputs(state){
+    var email=document.querySelector('input[name="email"]').parentNode,
+        telephone=document.querySelector('input[name="telephone"]').parentNode;
+    if(state=='hide'){
+        telephone.style.width='100%';
+    }else{
+        telephone.style.width='50%';
+    }
+    $(email)[state]();
 }
