@@ -21,7 +21,7 @@ if (is_dir($dir)) {
 <script>
     Pix['<?php echo $sections[$i];?>']={};
     Pix['<?php echo $sections[$i];?>']['directory']='<?php echo $file;?>';
-    console.log('dir: <?php echo $file;?>');
+    //console.log('dir: <?php echo $file;?>');
     Pix['<?php echo $sections[$i];?>']['images']=[];
 </script>
 <section>
@@ -29,8 +29,8 @@ if (is_dir($dir)) {
     <div id="slider-<?php echo $gIndex; ?>" class="fit">
         <div id="gallery-pointers-box-<?php echo $gIndex; ?>">
             <div class="gallery-pointers-aside">
-                <aside onclick="handleSlides('left');"></aside>
-                <aside onclick="handleSlides('right');"></aside>
+                <aside onclick="handleSlides('left',<?php echo $gIndex; ?>);"></aside>
+                <aside onclick="handleSlides('right',<?php echo $gIndex; ?>);"></aside>
             </div>
         </div>
         <div class="img-box" style="display:none;">&nbsp;</div>
@@ -49,8 +49,8 @@ if (is_dir($dir)) {
         <div id="slider-mini-<?php echo $gIndex; ?>">
             <div id="gallery-pointers-box-mini-<?php echo $gIndex; ?>">
                 <div class="gallery-pointers-aside">
-                    <aside onclick="handleSlides('left');"></aside>
-                    <aside onclick="handleSlides('right');"></aside>
+                    <aside onclick="handleSlides('left',<?php echo $gIndex; ?>,'mini');"></aside>
+                    <aside onclick="handleSlides('right',<?php echo $gIndex; ?>,'mini');"></aside>
                 </div>
             </div>
             <div class="content-wrapper-mini">
@@ -67,9 +67,9 @@ if (is_dir($dir)) {
   <script>
                     <?php
                         while(($realfile = readdir($dhr)) !== false) {
-                            if ($realfile != '.' && $realfile != '..') {
+                            if ($realfile != '.' && $realfile != '..' && $realfile != '_notes') {
                                 //if ($j) echo ", ";
-                                ?>
+                                //echo "// file: ".$realfile."\n";?>
     Pix['<?php echo $sections[$i];?>']['images'].push('<?php echo $realfile;?>');
         <?php                   //echo "<div>$realfile</div>";
                                 $j++;
