@@ -2,24 +2,27 @@
     var Pix={};
 </script>
 <?php // 590х376
-$dir = dirname(__FILE__).'/../../images/slides/gallery/';
+$site_dir='images/slides/gallery/';
+$dir = dirname(__FILE__).'/../../' . $site_dir;
 $sections=array('Шульгино','Никольское','Молоденово','Дом 1','Дом 2','Дом 3');
 if (is_dir($dir)) {
     $i=0;
-    $gIndex=$i+1;
     if ($dh = opendir($dir)) {
         while (($file = readdir($dh)) !== false) {
-            //echo "<div>readdir: ".$file.": </div>";
             if ($file!='.'&&$file!='..'){
+                //echo "<div>file: ".$file.": </div>";
                 $inner_dir = $dir.$file.'/';
                 if(is_dir($inner_dir)){
+                    $gIndex=$i+1;
                     //echo "<div>is dir: ".$inner_dir." </div>";
                     $j=0;
                     if($dhr = opendir($inner_dir.'/')){
                         ?>
 <script>
-    Pix['<?php echo $sections[$i];?>']={} // full directory path
-    Pix['<?php echo $sections[$i];?>']['<?php echo $file;?>']:[]; // section name / images
+    Pix['<?php echo $sections[$i];?>']={};
+    Pix['<?php echo $sections[$i];?>']['directory']='<?php echo $file;?>';
+    console.log('dir: <?php echo $file;?>');
+    Pix['<?php echo $sections[$i];?>']['images']=[];
 </script>
 <section>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
@@ -67,7 +70,7 @@ if (is_dir($dir)) {
                             if ($realfile != '.' && $realfile != '..') {
                                 //if ($j) echo ", ";
                                 ?>
-    Pix['<?php echo $sections[$i];?>']['<?php echo $inner_dir;?>'].push('<?php echo $realfile;?>');
+    Pix['<?php echo $sections[$i];?>']['images'].push('<?php echo $realfile;?>');
         <?php                   //echo "<div>$realfile</div>";
                                 $j++;
                                 if($j>300){?>
@@ -90,6 +93,6 @@ if (is_dir($dir)) {
     }
 }?>
 <script>
-    console.dir(Pix);
+    //console.dir(Pix);
 </script>
 <?php   require_once 'slider-gallery.php';

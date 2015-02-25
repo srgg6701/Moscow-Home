@@ -2598,44 +2598,46 @@ footer div.section {
   zoom: 0.45;
 }
 
-/* line 27, ../../../_dev/scss/slider/slider.scss */
+/* line 28, ../../../_dev/scss/slider/slider.scss */
 body.gallery .content-wrapper-mini {
   height: 100%;
 }
 
-/* line 31, ../../../_dev/scss/slider/slider.scss */
+/* line 32, ../../../_dev/scss/slider/slider.scss */
 [id^="gallery-pointers-box-"] {
   margin: auto;
   position: relative;
   width: 790px;
 }
 
-/* line 36, ../../../_dev/scss/slider/slider.scss */
+/* line 37, ../../../_dev/scss/slider/slider.scss */
 [id^="gallery-pointers-box-mini-"] {
   width: 900px;
 }
 
-/* line 40, ../../../_dev/scss/slider/slider.scss */
+/* line 41, ../../../_dev/scss/slider/slider.scss */
 body.gallery .gallery-pointers-aside {
   position: absolute;
   overflow: hidden;
   width: 100%;
 }
 
-/* line 46, ../../../_dev/scss/slider/slider.scss */
+/* line 47, ../../../_dev/scss/slider/slider.scss */
 [id^="gallery-pointer-box"] {
   position: relative;
   width: 790px;
   margin: auto;
 }
 
-/* line 52, ../../../_dev/scss/slider/slider.scss */
+/* line 53, ../../../_dev/scss/slider/slider.scss */
 body.gallery .content-wrapper .img {
+  display: table-cell;
+  height: 375px;
   width: 590px;
 }
 
 /*ширина слайдера (видимой части)*/
-/* line 62, ../../../_dev/scss/slider/slider.scss */
+/* line 65, ../../../_dev/scss/slider/slider.scss */
 #slider .content-wrapper,
 #slider #preview-container,
 #slider #loaded-content,
@@ -2644,13 +2646,13 @@ body.gallery .content-wrapper .img {
   height: 100% !important;
 }
 
-/* line 67, ../../../_dev/scss/slider/slider.scss */
+/* line 70, ../../../_dev/scss/slider/slider.scss */
 #images-container,
 #preview-container {
   width: 100%;
 }
 
-/* line 70, ../../../_dev/scss/slider/slider.scss */
+/* line 73, ../../../_dev/scss/slider/slider.scss */
 #images-container {
   background-color: #e8e8e8;
   margin: auto;
@@ -2662,14 +2664,14 @@ body.gallery .content-wrapper .img {
   height: 151px;
 }*/
 }
-/* line 78, ../../../_dev/scss/slider/slider.scss */
+/* line 81, ../../../_dev/scss/slider/slider.scss */
 #images-container .img {
   /*ширина изображений*/
   display: inline-block;
   height: 100%;
 }
 
-/* line 84, ../../../_dev/scss/slider/slider.scss */
+/* line 87, ../../../_dev/scss/slider/slider.scss */
 #loader-wait {
   left: 50%;
   position: absolute;
@@ -2682,18 +2684,18 @@ body.gallery .content-wrapper .img {
   display: table;
   font: 20px Arial, Helvetica, sans-serif;
 }
-/* line 89, ../../../_dev/scss/slider/slider.scss */
+/* line 92, ../../../_dev/scss/slider/slider.scss */
 #loader-wait::before {
   content: "Загрузка галереи...";
 }
 
-/* line 93, ../../../_dev/scss/slider/slider.scss */
+/* line 96, ../../../_dev/scss/slider/slider.scss */
 #loaded-content {
   position: relative;
 }
 
 /*ширина блока с видео, отступ слева для сокрытия объектов с левого края */
-/* line 97, ../../../_dev/scss/slider/slider.scss */
+/* line 100, ../../../_dev/scss/slider/slider.scss */
 #pix {
   left: 0;
   right: 0;
@@ -2702,11 +2704,14 @@ body.gallery .content-wrapper .img {
   width: 100%;
 }
 
-/* line 107, ../../../_dev/scss/slider/slider.scss */
+/* line 110, ../../../_dev/scss/slider/slider.scss */
 body.gallery [id^="pix-"] {
   background-color: orange;
   min-height: 200px;
   min-width: 1770px;
+}
+/* line 114, ../../../_dev/scss/slider/slider.scss */
+body.gallery [id^="pix-"]:not([data-value]) {
   -webkit-transform: translateX(-590px);
   -moz-transform: translateX(-590px);
   -ms-transform: translateX(-590px);
@@ -2714,7 +2719,7 @@ body.gallery [id^="pix-"] {
   transform: translateX(-590px);
 }
 
-/* line 115, ../../../_dev/scss/slider/slider.scss */
+/* line 120, ../../../_dev/scss/slider/slider.scss */
 body.gallery [id^="preview-container-"] {
   background-color: #FF0;
   -webkit-border-radius: 5px;
@@ -2728,26 +2733,26 @@ body.gallery [id^="preview-container-"] {
   width: 590px;
 }
 
-/* line 125, ../../../_dev/scss/slider/slider.scss */
+/* line 130, ../../../_dev/scss/slider/slider.scss */
 body.gallery [id^="preview-container-mini-"] {
   background-color: orange;
   height: 100%;
   width: 745px;
 }
 
-/* line 131, ../../../_dev/scss/slider/slider.scss */
+/* line 136, ../../../_dev/scss/slider/slider.scss */
 #preview-container {
   display: inherit;
   position: relative;
 }
 
-/* line 135, ../../../_dev/scss/slider/slider.scss */
+/* line 140, ../../../_dev/scss/slider/slider.scss */
 .outer_container {
   background-color: white;
   display: none;
 }
 
-/* line 139, ../../../_dev/scss/slider/slider.scss */
+/* line 144, ../../../_dev/scss/slider/slider.scss */
 .pointer {
   background-color: white !important;
   cursor: pointer;
@@ -2766,11 +2771,11 @@ body.gallery [id^="preview-container-mini-"] {
   z-index: 1;
 }
 
-/* line 157, ../../../_dev/scss/slider/slider.scss */
+/* line 162, ../../../_dev/scss/slider/slider.scss */
 .pointer:hover {
   opacity: 1;
 }
-/* line 160, ../../../_dev/scss/slider/slider.scss */
+/* line 165, ../../../_dev/scss/slider/slider.scss */
 .pointer.left, .pointer.right {
   position: relative;
   top: 50%;
@@ -2780,30 +2785,30 @@ body.gallery [id^="preview-container-mini-"] {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-/* line 165, ../../../_dev/scss/slider/slider.scss */
+/* line 170, ../../../_dev/scss/slider/slider.scss */
 .pointer.left {
   background: url("../images/controls/pointer-left.png") no-repeat 12px;
   float: left;
 }
-/* line 169, ../../../_dev/scss/slider/slider.scss */
+/* line 174, ../../../_dev/scss/slider/slider.scss */
 .pointer.right {
   background: url("../images/controls/pointer-right.png") no-repeat 15px;
   float: right;
 }
 
-/* line 175, ../../../_dev/scss/slider/slider.scss */
+/* line 180, ../../../_dev/scss/slider/slider.scss */
 body.gallery main > section {
   max-width: inherit !important;
 }
 
-/* line 179, ../../../_dev/scss/slider/slider.scss */
+/* line 184, ../../../_dev/scss/slider/slider.scss */
 .slider-container {
   background: url("../images/backgrounds/tile-gallery-main.png") #893c22;
   height: 148px;
   margin: 26px auto;
 }
 
-/* line 185, ../../../_dev/scss/slider/slider.scss */
+/* line 190, ../../../_dev/scss/slider/slider.scss */
 body.gallery [id^="slider-mini-"] {
   height: 100%;
 }
