@@ -8,7 +8,10 @@
 <?php if ($this->countModules('header-nav')) : ?>
     <jdoc:include type="modules" name="header-nav" style="none" />
 <?php endif; ?>
-        <div><a id="logo" href="<?php echo $this->baseurl;?>"></a></div>
+        <div>
+            <?php if($pageclass!="print-contacts"):?>
+                <a id="logo" href="<?php echo $this->baseurl;?>"></a>
+            <?php endif;?></div>
         <?php if ($this->countModules('header-contacts')) : ?>
             <jdoc:include type="modules" name="header-contacts" style="none" />
         <?php endif; ?>

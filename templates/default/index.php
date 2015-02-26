@@ -8,6 +8,7 @@ $common_dir = '_common/';
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>">
 <head>
+    <jdoc:include type="head" />
 <?php require_once $tmpl_common . $common_dir . 'head.php'; ?>
 </head>
 <body class="<?php

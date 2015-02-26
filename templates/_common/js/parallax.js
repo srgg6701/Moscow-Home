@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
     var bodyHeight = $('body').height();
     function getTop(resize) {
         var ids = {},

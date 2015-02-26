@@ -2,8 +2,6 @@
     var Pix={};
 </script>
 <?php // 590х376
-$site_dir='images/slides/gallery/';
-$dir = dirname(__FILE__).'/../../' . $site_dir;
 $sections=array('Шульгино','Никольское','Молоденово','Дом 1','Дом 2','Дом 3');
 if (is_dir($dir)) {
     $i=0;
@@ -21,11 +19,7 @@ if (is_dir($dir)) {
 <script>
     Pix['<?php echo $sections[$i];?>']={};
     Pix['<?php echo $sections[$i];?>']['directory']='<?php echo $file;?>';
-    //console.log('dir: <?php echo $file;?>');
     Pix['<?php echo $sections[$i];?>']['images']=[];
-</script>
-<section>
-  <script>
                     <?php
                         while(($realfile = readdir($dhr)) !== false) {
                             if ($realfile != '.' && $realfile != '..' && $realfile != '_notes') {
@@ -40,7 +34,8 @@ if (is_dir($dir)) {
                         }
                         closedir($dhr);
 ?>
-  </script>
+</script>
+<section>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
     <div id="slider-<?php echo $gIndex; ?>" class="fit">
         <div id="gallery-pointers-box-<?php echo $gIndex; ?>">
@@ -94,8 +89,6 @@ if (is_dir($dir)) {
         }
         closedir($dh);
     }
-}?>
-<script>
-    //console.dir(Pix);
-</script>
-<?php   require_once 'slider-gallery.php';
+}
+
+require_once 'slider-gallery.php';

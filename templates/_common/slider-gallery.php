@@ -47,11 +47,11 @@
             }
             getPixBlock(gIndex);
         }
-        $('.img-mini').on('click', function(){
+        jQuery('.img-mini').on('click', function(){
             var element=this,
-                dataIndex=$(this).attr('data-index'),
-                dataTurn = $(this).parent().attr('data-turn'),
-                bigParallelDataIndex = $('#pix-'+dataTurn+' >div').eq(1).attr('data-index'),
+                dataIndex=jQuery(this).attr('data-index'),
+                dataTurn = jQuery(this).parent().attr('data-turn'),
+                bigParallelDataIndex = jQuery('#pix-'+dataTurn+' >div').eq(1).attr('data-index'),
                 indecesDiff = dataIndex-bigParallelDataIndex,
                 direction =(indecesDiff>0)? 'left':'right',
                 repetition = Math.abs(indecesDiff);
@@ -68,7 +68,7 @@
                 if(indecesDiff){
                     //console.log('repetition: '+repetition+', direction: '+direction+', indecesDiff: '+indecesDiff+', dataIndex: '+dataIndex+', bigParallelDataIndex: '+bigParallelDataIndex);
                     handleSlides(direction,dataTurn);
-                    //$('[data-pointers="'+dataTurn+'"] aside.pointer-'+direction).trigger('click');
+                    //jQuery('[data-pointers="'+dataTurn+'"] aside.pointer-'+direction).trigger('click');
                     repetition--;
                     if(repetition){
                         //console.log('repetition start: '+repetition);
@@ -79,18 +79,18 @@
                                     repetition--;
                                     if(repetition>=0) {
                                         handleSlides(direction,dataTurn);
-                                        //$('[data-pointers="'+dataTurn+'"] aside.pointer-'+direction).trigger('click');
+                                        //jQuery('[data-pointers="'+dataTurn+'"] aside.pointer-'+direction).trigger('click');
                                     }
                                     cnt=0;
                                 } //else console.log('left: '+sliderBox.style.left);
                                 //console.log('repetition: '+repetition);
                             }
                             if(!repetition) {
-                                //var tIndex=$(element).index(),
+                                //var tIndex=jQuery(element).index(),
                                     //indicators=getIndicator(dataTurn);
                                 //console.log('dataTurn: '+dataTurn+', tIndex: '+tIndex);
-                                //$('div',indicators).eq(tIndex).addClass('active');
-                                //console.dir($('div',indicators).eq(tIndex));
+                                //jQuery('div',indicators).eq(tIndex).addClass('active');
+                                //console.dir(jQuery('div',indicators).eq(tIndex));
                                 clearInterval(doIt);
                             }
                             if(cnt>1000){
@@ -102,6 +102,7 @@
                 }
         });
     };
+
 function getPixBlock(gIndex,mini){
     var sliderBoxId,        // id блока с картинками
         sliderBox,          // блок с картинками
@@ -145,7 +146,7 @@ function handleSlides(direction,gIndex,mini){
         cntStep = iterationParams.cntStep,
         duration = iterationParams.duration;
 
-    //console.log('width: <?php //echo $pixWidth;?>');
+    //console.log('width: <?php //echo jQuerypixWidth;?>');
     //console.group('%cimgOffset: '+imgOffset, 'color: violet');
     handleSlides=function(direction,gIndex,mini) {
         if(document.getElementById('pix-'+gIndex).childNodes.length==1){
@@ -157,9 +158,9 @@ function handleSlides(direction,gIndex,mini){
             sliderBox=Px.sliderBox,
             sliderBoxImgsStr=Px.sliderBoxImgsStr,
             indicators=getIndicator(gIndex),
-            indicator=$('.active', indicators);
+            indicator=jQuery('.active', indicators);
             if(!mini)
-                $('div.active',indicators).removeClass('active');
+                jQuery('div.active',indicators).removeClass('active');
             //console.log('active indicator: '+indicator);
         shift_offset = (mini)? imgBlockPrevWidth+prevMargin:imgBlockWidth;
         order = 'last'; //console.log('direction: '+direction);
@@ -168,22 +169,22 @@ function handleSlides(direction,gIndex,mini){
             // назначить увеличенный отступ слева для контейнера картинок:
             shift_offset*=-1;
             if(!mini){
-                if($(indicator).prev().size()) {
-                    $(indicator).prev().addClass('active');
-                    //console.log('prev: ');console.dir($(indicator).prev());
+                if(jQuery(indicator).prev().size()) {
+                    jQuery(indicator).prev().addClass('active');
+                    //console.log('prev: ');console.dir(jQuery(indicator).prev());
                 }else {
-                    $('>div',indicators).eq(-1).addClass('active');
-                    //console.log('next: ');console.dir($(indicators));
+                    jQuery('>div',indicators).eq(-1).addClass('active');
+                    //console.log('next: ');console.dir(jQuery(indicators));
                 }
             }
         }else{
             if(!mini){
-                if($(indicator).next().size()) {
-                    $(indicator).next().addClass('active');
-                    //console.log('next: ');console.dir($(indicator).next());
+                if(jQuery(indicator).next().size()) {
+                    jQuery(indicator).next().addClass('active');
+                    //console.log('next: ');console.dir(jQuery(indicator).next());
                 }else {
-                    $('>div',indicators).eq(0).addClass('active');
-                    //console.log('prev: ');console.dir($(indicators));
+                    jQuery('>div',indicators).eq(0).addClass('active');
+                    //console.log('prev: ');console.dir(jQuery(indicators));
                 }
             }
         }

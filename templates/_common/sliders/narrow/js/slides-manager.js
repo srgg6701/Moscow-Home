@@ -5,10 +5,10 @@
 function handleSlides(direction){
     // получить края и ширину картинки
     var getOffsets = (function(){
-        var imsCont =   $('#images-container'), // контейнер с картинками
-            imsImgWidth = $('img:first', imsCont).width(),   // одна картинка
+        var imsCont =   jQuery('#images-container'), // контейнер с картинками
+            imsImgWidth = jQuery('img:first', imsCont).width(),   // одна картинка
         //                  788   -   532   = 256
-            wDiff = $(imsCont).width()-imsImgWidth;
+            wDiff = jQuery(imsCont).width()-imsImgWidth;
         return {
             offs:       wDiff/2, // 128 - отступы от центральной картинки слайдера
             imgWidth:   imsImgWidth // 532 - ширина картинок слайдера
@@ -32,7 +32,7 @@ function handleSlides(direction){
         func = 'prependTo';
         order = 'last';
     } //console.groupEnd();
-    $(sliderBox).animate( // #pix
+    jQuery(sliderBox).animate( // #pix
         {
             left: imgOffset+'px' // сдвинуть контейнер с картинками
         },  300,
@@ -42,10 +42,10 @@ function handleSlides(direction){
             // append/prependTo
             /*  переместить первую или последнюю картинку соответственно
              в конец или начало контейнера с изображениями */
-            $(selName)[func]($(sliderBox));
+            jQuery(selName)[func](jQuery(sliderBox));
             // div#pix
             // вернуть исходный отступ для контейнера с изображениями
-            $(this).css({
+            jQuery(this).css({
                 left: boxOffsetLeft+'px'
             });
         });

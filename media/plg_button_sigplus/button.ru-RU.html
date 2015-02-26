@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-RU" lang="ru-RU"><head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="css/button.css" type="text/css" /><script type="text/javascript" src="/projects/moscow-home/media/system/js/mootools-core.js"></script><script type="text/javascript" src="js/button.min.js"></script></head><body><form id="sigplus-settings-form"><button id="sigplus-settings-submit" type="button">Отправить</button><h3>Basic settings</h3><fieldset class="panelform"><ul><li class="formelm"><label id="params_layout-lbl" for="params_layout" class="hasTooltip" title="&lt;strong&gt;Gallery layout&lt;/strong&gt;&lt;br /&gt;The way the image gallery is rendered. &lt;em&gt;Fixed layout&lt;/em&gt; is a table-like environment with a set number of rows and columns, and a fixed width and height, where preview images occupy cells of a table. Fixed layout is associated with a rotator and navigation controls, showing only part of the entire gallery at a time. &lt;em&gt;Flow layout&lt;/em&gt; renders preview images as if they were words of a text, allowing the series of images to span multiple lines if they would not fit into a single line, just as normal text breaks into lines if it is too long to fit into a single line. Flow layout is very flexible but does not permit an image rotator. &lt;em&gt;Packed layout&lt;/em&gt;, with its manual image slider, can be seen as a compromise between fixed layout and flow layout, and also comes with limited configurability. &lt;em&gt;Hidden layout&lt;/em&gt; (only available for the plug-in) makes sigplus render the gallery without any user interface directly on the page; images in a hidden gallery can only be accessed with a pop-up window that is linked to it.">
+	Gallery layout</label><select id="params_layout" name="params[layout]">
+	<option value="fixed" selected="selected">fixed (with rotator)</option>
+	<option value="flow">flow (without rotator)</option>
+	<option value="packed">packed (without rotator)</option>
+	<option value="hidden">hidden</option>
+</select>
+</li><li class="formelm"><label id="params_rows-lbl" for="params_rows" class="hasTooltip" title="&lt;strong&gt;Image row count&lt;/strong&gt;&lt;br /&gt;Number of rows used to display preview images. This setting has no effect when flow layout is used.">
+	Image row count</label><input type="text" name="params[rows]" id="params_rows" value="1" /></li><li class="formelm"><label id="params_cols-lbl" for="params_cols" class="hasTooltip" title="&lt;strong&gt;Image column count&lt;/strong&gt;&lt;br /&gt;Number of columns used to display preview images. This setting has no effect when flow layout is used.">
+	Image column count</label><input type="text" name="params[cols]" id="params_cols" value="3" /></li><li class="formelm"><label id="params_maxcount-lbl" for="params_maxcount" class="hasTooltip" title="&lt;strong&gt;Maximum image count&lt;/strong&gt;&lt;br /&gt;Maximum number of preview images to show. If set to zero, all images in the gallery will be shown as previews, possibly broken down into multiple pages. If set to a positive integer, only the specified number of preview images will be displayed, even though it is still possible to view all images when browsing the gallery inside the lightbox pop-up window.">
+	Maximum image count</label><input type="text" name="params[maxcount]" id="params_maxcount" value="0" /></li><li class="formelm"><label id="params_alignment-lbl" for="params_alignment" class="hasTooltip" title="&lt;strong&gt;Alignment on page&lt;/strong&gt;&lt;br /&gt;Horizontal alignment of the image gallery on the page. Values that end in &lt;code&gt;float&lt;/code&gt; allow text to wrap around the gallery, values that end in &lt;code&gt;clear&lt;/code&gt; do not. The options &lt;code&gt;before&lt;/code&gt; and &lt;code&gt;after&lt;/code&gt; use language-sensitive alignment, i.e. &lt;code&gt;before&lt;/code&gt; automatically takes a value of &lt;code&gt;left&lt;/code&gt; for left-to-right (LTR) and a value of &lt;code&gt;right&lt;/code&gt; for right-to-left (RTL) languages, while the option &lt;code&gt;after&lt;/code&gt; is the opposite of &lt;code&gt;before&lt;/code&gt;. The options &lt;code&gt;before&lt;/code&gt; and &lt;code&gt;after&lt;/code&gt; are intended for multilingual sites (e.g. English and Hebrew).">
+	Alignment on page</label><select id="params_alignment" name="params[alignment]">
+	<option value="before-clear">left</option>
+	<option value="before-float">left (with text wrapping around)</option>
+	<option value="center" selected="selected">center</option>
+	<option value="after-clear">right</option>
+	<option value="after-float">right (with text wrapping around)</option>
+</select>
+</li><li class="formelm"><label id="params_preview_width-lbl" for="params_preview_width" class="hasTooltip" title="&lt;strong&gt;Preview image width&lt;/strong&gt;&lt;br /&gt;Default width of preview images to generate [px]. Use the special value &lt;code&gt;0&lt;/code&gt; with cropping disabled to have the image width automatically computed (i.e. all images will have the same width).">
+	Preview image width</label><input type="text" name="params[preview_width]" id="params_preview_width" value="200" /></li><li class="formelm"><label id="params_preview_height-lbl" for="params_preview_height" class="hasTooltip" title="&lt;strong&gt;Preview image height&lt;/strong&gt;&lt;br /&gt;Default height of preview images to generate [px]. Use the special value &lt;code&gt;0&lt;/code&gt; with cropping disabled to have the image height automatically computed (i.e. all images will have the same height).">
+	Preview image height</label><input type="text" name="params[preview_height]" id="params_preview_height" value="200" /></li><li class="formelm"><label id="params_preview_crop-lbl" for="params_preview_crop" class="hasTooltip" title="&lt;strong&gt;Crop when rescaling&lt;/strong&gt;&lt;br /&gt;Crop overflowing dimensions when scaling images to preview image size. If set to &lt;em&gt;yes&lt;/em&gt; and the ratio of preview image width and height differs from that of the original image, excess parts of the original image are cropped from top and bottom or left and right when rescaling to preview image dimensions. If set to &lt;em&gt;no&lt;/em&gt;, the preview image always shows the entire image and the appropriate dimension is reduced. As an example, suppose preview image width and height is set to 100&amp;nbsp;px. With cropping on, the left and right part of an image with width 400&amp;nbsp;px and height 200&amp;nbsp;px will be cut off, and the resulting center 200&amp;nbsp;px-by-200&amp;nbsp;px part will be shrunk to preview image size. With cropping off, the entire image will be used to generate the preview image such that the preview image will have dimensions 100&amp;nbsp;px and 50&amp;nbsp;px.">
+	Crop when rescaling</label><fieldset id="params_preview_crop" class="radio" ><input type="radio" id="params_preview_crop0" name="params[preview_crop]" value="1" /><label for="params_preview_crop0" >Да</label><input type="radio" id="params_preview_crop1" name="params[preview_crop]" value="0" checked="checked" /><label for="params_preview_crop1" >Нет</label></fieldset></li><li class="formelm"><label id="params_lightbox-lbl" for="params_lightbox" class="hasTooltip" title="&lt;strong&gt;Lightbox pop-up type&lt;/strong&gt;&lt;br /&gt;Lightweight pop-up window engine to display images when a user clicks or moves the mouse over a preview image. Most pop-up windows are activated on mouse click but some on mouse-over. Engines that use MooTools use the version integrated into Joomla, whereas engines that use jQuery either use a local copy of the script library or import jQuery from a Content Delivery Network (CDN).">
+	Lightbox pop-up type</label><select id="params_lightbox" name="params[lightbox]">
+		<option value="none">none</option>
+	<optgroup label="boxplus (with MooTools)">
+		<option value="boxplus/lightsquare" selected="selected">boxplus light square theme</option>
+		<option value="boxplus/darksquare">boxplus dark square theme</option>
+		<option value="boxplus/lightrounded">boxplus light rounded theme</option>
+		<option value="boxplus/darkrounded">boxplus dark rounded theme</option>
+		<option value="boxplus/prettyphoto">boxplus prettyPhoto-inspired theme</option>
+	</optgroup>
+		<option value="fancybox">Fancybox (with jQuery)</option>
+		<option value="hoverplus">hoverplus (with MooTools)</option>
+		<option value="milkbox">Milkbox (with MooTools)</option>
+		<option value="slimbox2">Slimbox2 (with jQuery)</option>
+		<option value="bootstrap">Bootstrap (with jQuery, ships with Joomla)</option>
+</select>
+</li><li class="formelm"><label id="params_lightbox_autocenter-lbl" for="params_lightbox_autocenter" class="hasTooltip" title="&lt;strong&gt;Center on scroll&lt;/strong&gt;&lt;br /&gt;Whether to center the pop-up window when its size is less than browser window size and the user scrolls down or across the page. Pop-up windows that exceed browser window size are never auto-centered.">
+	Center on scroll</label><fieldset id="params_lightbox_autocenter" class="radio" ><input type="radio" id="params_lightbox_autocenter0" name="params[lightbox_autocenter]" value="1" checked="checked" /><label for="params_lightbox_autocenter0" >Да</label><input type="radio" id="params_lightbox_autocenter1" name="params[lightbox_autocenter]" value="0" /><label for="params_lightbox_autocenter1" >Нет</label></fieldset></li><li class="formelm"><label id="params_lightbox_autofit-lbl" for="params_lightbox_autofit" class="hasTooltip" title="&lt;strong&gt;Fit to window&lt;/strong&gt;&lt;br /&gt;Whether to automatically reduce oversized images to fit the browser window when they are displayed. Flash and video are always shown in their predefined size, even if they would not fit the screen. When autofit is enabled, an expand/contract control will be shown (typically in the top right corner of the image) to let the user view the image in its original size. Not all pop-up window engines support fit to window.">
+	Fit to window</label><fieldset id="params_lightbox_autofit" class="radio" ><input type="radio" id="params_lightbox_autofit0" name="params[lightbox_autofit]" value="1" checked="checked" /><label for="params_lightbox_autofit0" >Да</label><input type="radio" id="params_lightbox_autofit1" name="params[lightbox_autofit]" value="0" /><label for="params_lightbox_autofit1" >Нет</label></fieldset></li><li class="formelm"><label id="params_lightbox_thumbs-lbl" for="params_lightbox_thumbs" class="hasTooltip" title="&lt;strong&gt;Lightbox navigation bar&lt;/strong&gt;&lt;br /&gt;Placement of thumbnail navgiation bar relative to the image shown inside lightbox. When the navigation bar is superimposed over the image, it is only shown while the mouse pointer is within the hotspot area of the navigation container. In contrast, a navigation bar outside the image container is permanently visible. The navigation bar is not shown when the gallery compises of a single image, and no space is reserved in this case even with the outside placement option. Not all pop-up window engines support thumbnail navigation.">
+	Lightbox navigation bar</label><select id="params_lightbox_thumbs" name="params[lightbox_thumbs]">
+	<option value="inside" selected="selected">Overlaying image</option>
+	<option value="outside">In caption area</option>
+	<option value="none">Скрыть</option>
+</select>
+</li><li class="formelm"><label id="params_lightbox_slideshow-lbl" for="params_lightbox_slideshow" class="hasTooltip" title="&lt;strong&gt;Slideshow delay [ms]&lt;/strong&gt;&lt;br /&gt;Time each image is shown [ms] when slideshow mode is activated inside the lightbox pop-up window, or 0 to disable slideshow mode. When slideshow mode is disabled, no &lt;em&gt;Play&lt;/em&gt; control button is not shown in the pop-up window. Not all pop-up window engines support slideshow mode.">
+	Slideshow delay [ms]</label><input type="text" name="params[lightbox_slideshow]" id="params_lightbox_slideshow" value="0" /></li><li class="formelm"><label id="params_lightbox_autostart-lbl" for="params_lightbox_autostart" class="hasTooltip" title="&lt;strong&gt;Autostart slideshow&lt;/strong&gt;&lt;br /&gt;Whether to automatically activate slideshow mode when the pop-up window opens. Not all pop-up window engines support auto-starting slideshows. With autostart disabled, the user has to click the &lt;em&gt;Play&lt;/em&gt; control button to start a slideshow. Autostart has no effect when the slideshow mode is disabled.">
+	Autostart slideshow</label><fieldset id="params_lightbox_autostart" class="radio" ><input type="radio" id="params_lightbox_autostart0" name="params[lightbox_autostart]" value="1" /><label for="params_lightbox_autostart0" >Да</label><input type="radio" id="params_lightbox_autostart1" name="params[lightbox_autostart]" value="0" checked="checked" /><label for="params_lightbox_autostart1" >Нет</label></fieldset></li><li class="formelm"><label id="params_rotator_orientation-lbl" for="params_rotator_orientation" class="hasTooltip" title="&lt;strong&gt;Image rotator orientation&lt;/strong&gt;&lt;br /&gt;Orientation of the image rotator viewport. Horizontally oriented rotators move from the right to the left, vertically oriented rotators move from downwards to upwards. Setting the number of rows and columns for the gallery does not affect rotator orientation, which determines the direction the image rotator moves, i.e. it is possible to have a 1-by-3 fixed layout gallery rotating either horizontally or vertically. Images are automatically ordered in the grid to take into account orientation, independently of the number of rows and columns.">
+	Image rotator orientation</label><select id="params_rotator_orientation" name="params[rotator_orientation]">
+	<option value="horizontal" selected="selected">horizontal</option>
+	<option value="vertical">vertical</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_buttons-lbl" for="params_rotator_buttons" class="hasTooltip" title="&lt;strong&gt;Hotspot navigation&lt;/strong&gt;&lt;br /&gt;Show navigation control buttons &lt;code&gt;&amp;lt;&lt;/code&gt; and &lt;code&gt;&amp;gt;&lt;/code&gt; on mouse-over in the image rotator. These buttons do not take up additional space and are shown only when the mouse moves over the image gallery (either at the left and right side for horizontally oriented sliders or at the top and bottom for vertically oriented sliders).">
+	Hotspot navigation</label><fieldset id="params_rotator_buttons" class="radio" ><input type="radio" id="params_rotator_buttons0" name="params[rotator_buttons]" value="1" checked="checked" /><label for="params_rotator_buttons0" >Показать</label><input type="radio" id="params_rotator_buttons1" name="params[rotator_buttons]" value="0" /><label for="params_rotator_buttons1" >Скрыть</label></fieldset></li><li class="formelm"><label id="params_rotator_navigation-lbl" for="params_rotator_navigation" class="hasTooltip" title="&lt;strong&gt;Navigation bar&lt;/strong&gt;&lt;br /&gt;Placement of permanently visible navigation bar for the image rotator. The navigation bar shows control links such as &lt;em&gt;Previous&lt;/em&gt; (&lt;code&gt;&amp;lt;&lt;/code&gt;) or &lt;em&gt;Next&lt;/em&gt; (&lt;code&gt;&amp;gt;&lt;/code&gt;).">
+	Navigation bar</label><select id="params_rotator_navigation" name="params[rotator_navigation]">
+	<option value="bottom" selected="selected">bottom</option>
+	<option value="top">top</option>
+	<option value="none">none</option>
+	<option value="both">both</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_links-lbl" for="params_rotator_links" class="hasTooltip" title="&lt;strong&gt;Paging buttons&lt;/strong&gt;&lt;br /&gt;Whether to show buttons that immediately take to a specific rotator image or page. This allows speedy navigation when the gallery comprises of many images. The semantics of the buttons reflect how much the rotator advances in a navigation step.">
+	Paging buttons</label><fieldset id="params_rotator_links" class="radio" ><input type="radio" id="params_rotator_links0" name="params[rotator_links]" value="1" checked="checked" /><label for="params_rotator_links0" >Показать</label><input type="radio" id="params_rotator_links1" name="params[rotator_links]" value="0" /><label for="params_rotator_links1" >Скрыть</label></fieldset></li><li class="formelm"><label id="params_rotator_trigger-lbl" for="params_rotator_trigger" class="hasTooltip" title="&lt;strong&gt;Navigation trigger&lt;/strong&gt;&lt;br /&gt;User action that causes the rotator to start advancing.">
+	Navigation trigger</label><select id="params_rotator_trigger" name="params[rotator_trigger]">
+	<option value="click" selected="selected">click</option>
+	<option value="mouseover">mouse-over</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_step-lbl" for="params_rotator_step" class="hasTooltip" title="&lt;strong&gt;Trigger action step&lt;/strong&gt;&lt;br /&gt;Unit to advance the rotator upon clicking navigation controls &lt;em&gt;Previous&lt;/em&gt; and &lt;em&gt;Next&lt;/em&gt;. The value &lt;em&gt;page&lt;/em&gt; navigates the user to the next set of images, i.e. each of the images currently shown is replaced with another image or empty space, whereas the value &lt;em&gt;single&lt;/em&gt; advances the rotator by a single image, a single row or a single column, depending on context.">
+	Trigger action step</label><select id="params_rotator_step" name="params[rotator_step]">
+	<option value="single" selected="selected">single</option>
+	<option value="page">page</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_duration-lbl" for="params_rotator_duration" class="hasTooltip" title="&lt;strong&gt;Slide duration [ms]&lt;/strong&gt;&lt;br /&gt;Time taken for the rotator to move from one page to another [ms].">
+	Slide duration [ms]</label><input type="text" name="params[rotator_duration]" id="params_rotator_duration" value="800" /></li><li class="formelm"><label id="params_rotator_delay-lbl" for="params_rotator_delay" class="hasTooltip" title="&lt;strong&gt;Animation delay [ms]&lt;/strong&gt;&lt;br /&gt;Time taken between successive automatic slide steps when the mouse moves away from over the rotator [ms]. Use a value of zero to disable automatic &amp;ldquo;idle&amp;rdquo; animation.">
+	Animation delay [ms]</label><input type="text" name="params[rotator_delay]" id="params_rotator_delay" value="0" /></li><li class="formelm"><label id="params_loop-lbl" for="params_loop" class="hasTooltip" title="&lt;strong&gt;Wrap around at end&lt;/strong&gt;&lt;br /&gt;Whether the image sequence wraps around (loops) such that the first item follows the last and the last precedes the first when clicking navigation buttons.">
+	Wrap around at end</label><fieldset id="params_loop" class="radio" ><input type="radio" id="params_loop0" name="params[loop]" value="1" checked="checked" /><label for="params_loop0" >Вкл</label><input type="radio" id="params_loop1" name="params[loop]" value="0" /><label for="params_loop1" >Выкл</label></fieldset></li><li class="formelm"><label id="params_caption_visibility-lbl" for="params_caption_visibility" class="hasTooltip" title="&lt;strong&gt;Image caption visibility&lt;/strong&gt;&lt;br /&gt;Visibility of image captions; determines whether captions should always be shown, or only when the mouse pointer is moved over the image. The caption is never visible if an image does not have caption text.">
+	Image caption visibility</label><select id="params_caption_visibility" name="params[caption_visibility]">
+	<option value="none">none</option>
+	<option value="mouseover" selected="selected">on mouse over only</option>
+	<option value="always">always</option>
+</select>
+</li><li class="formelm"><label id="params_caption_position-lbl" for="params_caption_position" class="hasTooltip" title="&lt;strong&gt;Image caption position&lt;/strong&gt;&lt;br /&gt;Place to show the image caption relative to the image. Overlay captions display the image title in a translucent box that shows up in the top or bottom part of the preview image. Other settings for position reserve additional space for the caption text.">
+	Image caption position</label><select id="params_caption_position" name="params[caption_position]">
+	<option value="overlay-bottom">overlay bottom</option>
+	<option value="overlay-top">overlay top</option>
+	<option value="below">below</option>
+	<option value="above">above</option>
+</select>
+</li></ul></fieldset><h3>Advanced settings</h3><fieldset class="panelform"><ul><li class="formelm"><label id="params_download-lbl" for="params_download" class="hasTooltip" title="&lt;strong&gt;Download access level&lt;/strong&gt;&lt;br /&gt;Access level required to show the download icon in pop-up window and in captions. When the user with the appropriate access level (e.g. Registered) clicks the icon, the browser prompts the user to save the original image to their local computer. If a high-resolution image is available in a separate folder, the user will be prompted to download that image, otherwise the same image will be downloaded as displayed in the pop-up window.">
+	Download access level</label><select id="params_download" name="params[download]">
+	<option value="5">Guest</option>
+	<option value="1">Public</option>
+	<option value="6">Super Users</option>
+	<option value="2">Registered</option>
+	<option value="3">Special</option>
+</select>
+</li><li class="formelm"><label id="params_metadata-lbl" for="params_metadata" class="hasTooltip" title="&lt;strong&gt;Metadata access level&lt;/strong&gt;&lt;br /&gt;Access level required to show the metadata icon in pop-up window and in captions. When the user with the appropriate access level (e.g. Registered) clicks the icon, metadata and other digital camera information and other image metadata like caption, summary, creator and copyright are displayed in a separate scrollable pop-up window. Some pop-up window implementations do not permit displaying metadata.">
+	Metadata access level</label><select id="params_metadata" name="params[metadata]">
+	<option value="5">Guest</option>
+	<option value="1">Public</option>
+	<option value="6">Super Users</option>
+	<option value="2">Registered</option>
+	<option value="3">Special</option>
+</select>
+</li><li class="formelm"><label id="params_protection-lbl" for="params_protection" class="hasTooltip" title="&lt;strong&gt;Image protection&lt;/strong&gt;&lt;br /&gt;Whether to employ client-side image protection measures. Client-side image protection captures and suppresses mouse right-click (&lt;em&gt;contextmenu&lt;/em&gt;) and drag-and-drop actions (&lt;em&gt;dragstart&lt;/em&gt;), thereby preventing visitors from easily saving images to their own computer. While useful against a large group of users, client-side prevention mechanisms are completely ineffective against power users who can easily extract images by saving a page snapshot or inspecting the temporary internet files folder, which cannot be prevented with any scripting measure. For a safer alternative, consider watermarking (on the server) instead, which will irreversibly embed a watermark in the image. Not all pop-up window engines support client-side protection.">
+	Image protection</label><fieldset id="params_protection" class="radio" ><input type="radio" id="params_protection0" name="params[protection]" value="1" /><label for="params_protection0" >Да</label><input type="radio" id="params_protection1" name="params[protection]" value="0" checked="checked" /><label for="params_protection1" >Нет</label></fieldset></li><li class="formelm"><label id="params_preview_margin-lbl" for="params_preview_margin" class="hasTooltip" title="&lt;strong&gt;Preview margin&lt;/strong&gt;&lt;br /&gt;Margin around preview images [px]; use a number with or without a unit, numbers without a unit default to pixels (&lt;code&gt;px&lt;/code&gt;). The margin clears a completely transparent area around the border. If omitted, the margin specified in the style sheet file (&lt;code&gt;sigplus.css&lt;/code&gt;) applies.">
+	Preview margin</label><input type="text" name="params[preview_margin]" id="params_preview_margin" value="" size="6" placeholder="По умолчанию"/></li><li class="formelm"><label id="params_preview_border_style-lbl" for="params_preview_border_style" class="hasTooltip" title="&lt;strong&gt;Preview border style&lt;/strong&gt;&lt;br /&gt;Style of border to display around preview images. The border lies around the padding and the preview image. If set to &lt;em&gt;default&lt;/em&gt;, the border style specified in the style sheet file (&lt;code&gt;sigplus.css&lt;/code&gt;) applies.">
+	Preview border style</label><select id="params_preview_border_style" name="params[preview_border_style]">
+	<option value="" selected="selected">default</option>
+	<option value="none">none</option>
+	<option value="dotted">dotted</option>
+	<option value="dashed">dashed</option>
+	<option value="solid">solid</option>
+	<option value="double">double</option>
+	<option value="groove">3D grooved</option>
+	<option value="ridge">3D ridged</option>
+	<option value="inset">3D inset</option>
+	<option value="outset">3D outset</option>
+</select>
+</li><li class="formelm"><label id="params_preview_border_width-lbl" for="params_preview_border_width" class="hasTooltip" title="&lt;strong&gt;Preview border width&lt;/strong&gt;&lt;br /&gt;Width of border to display around preview images [px]; use a number with or without a unit, numbers without a unit default to pixels (&lt;code&gt;px&lt;/code&gt;). If omitted, the border width specified in the style sheet file (&lt;code&gt;sigplus.css&lt;/code&gt;) applies.">
+	Preview border width</label><input type="text" name="params[preview_border_width]" id="params_preview_border_width" value="" size="6" placeholder="По умолчанию"/></li><li class="formelm"><label id="params_preview_border_color-lbl" for="params_preview_border_color" class="hasTooltip" title="&lt;strong&gt;Preview border color&lt;/strong&gt;&lt;br /&gt;Color of border to display around preview images.  If omitted, the border color specified in the style sheet file (&lt;code&gt;sigplus.css&lt;/code&gt;) applies. Specify a hexadecimal value between #000000 and #FFFFFF inclusive in the RGB system (red: #FF0000, green: #00FF00, blue: #0000FF), or use the color picker. If border style is &lt;em&gt;none&lt;/em&gt;, this setting has no effect.">
+	Preview border color</label><input type="text" class="inputbox" name="params[preview_border_color]" id="params_preview_border_color" value="" /><button type="button" id="params_preview_border_color-button">Choose</button></li><li class="formelm"><label id="params_preview_padding-lbl" for="params_preview_padding" class="hasTooltip" title="&lt;strong&gt;Preview padding&lt;/strong&gt;&lt;br /&gt;Padding around preview images [px]; use a number with or without a unit, numbers without a unit default to pixels (&lt;code&gt;px&lt;/code&gt;). The padding clears an area directly around the preview image within border bounds. If omitted, the padding specified in the style sheet file (&lt;code&gt;sigplus.css&lt;/code&gt;) applies.">
+	Preview padding</label><input type="text" name="params[preview_padding]" id="params_preview_padding" value="" size="6" placeholder="По умолчанию"/></li><li class="formelm"><label id="params_sort_criterion-lbl" for="params_sort_criterion" class="hasTooltip" title="&lt;strong&gt;Image sort criterion&lt;/strong&gt;&lt;br /&gt;Criterion to use to arrange images within a gallery: images are sorted according to the specified criterion in the specified order. Criteria that are based on a labels file have a fallback option (in parentheses): when no labels file is found (or there are images not listed in the labels file), the fallback criterion is used to sort (the remaining) images. Criteria that are not based on a labels file sort irrespective of the order of entries in a possible labels file, even if it exists.">
+	Image sort criterion</label><select id="params_sort_criterion" name="params[sort_criterion]">
+	<option value="labels-filename" selected="selected">labels file (file name)</option>
+	<option value="labels-mtime">labels file (last modification time)</option>
+	<option value="labels-filesize">labels file (file size)</option>
+	<option value="labels-random">labels file (random order)</option>
+	<option value="filename">file name</option>
+	<option value="mtime">last modification time</option>
+	<option value="filesize">file size</option>
+	<option value="random">random</option>
+</select>
+</li><li class="formelm"><label id="params_sort_order-lbl" for="params_sort_order" class="hasTooltip" title="&lt;strong&gt;Image sort order&lt;/strong&gt;&lt;br /&gt;Order to use within the specified sort criterion: images are sorted according to the specified criterion in the specified order.">
+	Image sort order</label><select id="params_sort_order" name="params[sort_order]">
+	<option value="0" selected="selected">ascending</option>
+	<option value="1">descending</option>
+</select>
+</li><li class="formelm"><label id="params_depth-lbl" for="params_depth" class="hasTooltip" title="&lt;strong&gt;Recursion depth&lt;/strong&gt;&lt;br /&gt;Recursion limit for scanning directory hierarchies in the file system. The value of 0 restricts images to be included in a gallery to those in the source folder. The value -1 performs a recursive traversal of the directory hierarchy and includes any images that are found in the source folder or any of its descendant folders. A positive value (recommended) sets a depth limit on the recursion.">
+	Recursion depth</label><input type="text" name="params[depth]" id="params_depth" value="0" /></li><li class="formelm"><label id="params_watermark_position-lbl" for="params_watermark_position" class="hasTooltip" title="&lt;strong&gt;Watermark position&lt;/strong&gt;&lt;br /&gt;The position within the image where the watermark is superimposed. For values other than &lt;em&gt;none&lt;/em&gt;, the image to use as a watermark should be an image file with alpha channel transparency and placed in either the image source folder (where the images that are shown in the gallery are), the watermark folder or the base folder. When the watermark is superimposed, the original image is not altered but a new watermarked image is created instead.">
+	Watermark position</label><select id="params_watermark_position" name="params[watermark_position]">
+	<option value="" selected="selected">none</option>
+	<option value="n">north</option>
+	<option value="ne">northeast</option>
+	<option value="e">east</option>
+	<option value="se">southeast</option>
+	<option value="s">south</option>
+	<option value="sw">southwest</option>
+	<option value="w">west</option>
+	<option value="nw">northwest</option>
+	<option value="c">center</option>
+</select>
+</li><li class="formelm"><label id="params_watermark_x-lbl" for="params_watermark_x" class="hasTooltip" title="&lt;strong&gt;Distance from horizontal&lt;/strong&gt;&lt;br /&gt;The distance to keep from the left or right edge [px], as appropriate. The distance from the vertical edge is not meaningful for placements center, north and south for which the watermark is automatically centered horizontally.">
+	Distance from horizontal</label><input type="text" name="params[watermark_x]" id="params_watermark_x" value="" /></li><li class="formelm"><label id="params_watermark_y-lbl" for="params_watermark_y" class="hasTooltip" title="&lt;strong&gt;Distance from vertical&lt;/strong&gt;&lt;br /&gt;The distance to keep from the top or bottom edge [px], as appropriate. The distance from the horizontal edge is not meaningful for placements center, east and west for which the watermark is automatically centered vertically.">
+	Distance from vertical</label><input type="text" name="params[watermark_y]" id="params_watermark_y" value="" /></li><li class="formelm"><label id="params_watermark_source-lbl" for="params_watermark_source" class="hasTooltip" title="&lt;strong&gt;Filename for watermark&lt;/strong&gt;&lt;br /&gt;Name to use for the image file (with extension) that serves as a watermark. The image should be a file with alpha channel transparency and placed in either the image gallery folder (where the images that are shown in the gallery are), the subfolder for watermarked images, or the image base folder.">
+	Filename for watermark</label><input type="text" name="params[watermark_source]" id="params_watermark_source" value="watermark.png" /></li><li class="formelm"><label id="params_thumb_width-lbl" for="params_thumb_width" class="hasTooltip" title="&lt;strong&gt;Thumbnail width&lt;/strong&gt;&lt;br /&gt;Default width of thumbnail images to generate [px].">
+	Thumbnail width</label><input type="text" name="params[thumb_width]" id="params_thumb_width" value="60" /></li><li class="formelm"><label id="params_thumb_height-lbl" for="params_thumb_height" class="hasTooltip" title="&lt;strong&gt;Thumbnail height&lt;/strong&gt;&lt;br /&gt;Default height of thumbnail images to generate [px].">
+	Thumbnail height</label><input type="text" name="params[thumb_height]" id="params_thumb_height" value="60" /></li><li class="formelm"><label id="params_thumb_crop-lbl" for="params_thumb_crop" class="hasTooltip" title="&lt;strong&gt;Crop when resizing&lt;/strong&gt;&lt;br /&gt;Crop overflowing dimensions when resizing to thumbnail image size. If yes and the ratio of thumbnail image width and height differs from that of the original image, excess parts of the original image are cropped from top and bottom or left and right when resizing to thumbnail image dimensions. If no, the thumbnail image always shows the entire image and the appropriate dimension is reduced.">
+	Crop when resizing</label><fieldset id="params_thumb_crop" class="radio" ><input type="radio" id="params_thumb_crop0" name="params[thumb_crop]" value="1" /><label for="params_thumb_crop0" >Да</label><input type="radio" id="params_thumb_crop1" name="params[thumb_crop]" value="0" checked="checked" /><label for="params_thumb_crop1" >Нет</label></fieldset></li><li class="formelm"><label id="params_lightbox_transition-lbl" for="params_lightbox_transition" class="hasTooltip" title="&lt;strong&gt;Lightbox transition effect&lt;/strong&gt;&lt;br /&gt;Easing equation to use for the lightbox warp transition effect, i.e. speed at which the sizing animation progresses at different stages of a lightbox opens or changes animation sequence.">
+	Lightbox transition effect</label><select id="params_lightbox_transition" name="params[lightbox_transition]">
+	<option value="linear">linear</option>
+	<option value="quad">quadratic</option>
+	<option value="cubic">cubicular</option>
+	<option value="quart">quartetic</option>
+	<option value="quint">quintic</option>
+	<option value="expo">exponential</option>
+	<option value="circ">circular</option>
+	<option value="sine" selected="selected">sinusoidal</option>
+	<option value="back">back and forth</option>
+	<option value="bounce">bouncy</option>
+	<option value="elastic">elastic curve</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_alignment-lbl" for="params_rotator_alignment" class="hasTooltip" title="&lt;strong&gt;Rotator item alignment&lt;/strong&gt;&lt;br /&gt;Positioning of items within their container.">
+	Rotator item alignment</label><select id="params_rotator_alignment" name="params[rotator_alignment]">
+	<option value="c">center</option>
+	<option value="n">north</option>
+	<option value="ne">northeast</option>
+	<option value="e">east</option>
+	<option value="se">southeast</option>
+	<option value="s">south</option>
+	<option value="sw">southwest</option>
+	<option value="w">west</option>
+	<option value="nw">northwest</option>
+</select>
+</li><li class="formelm"><label id="params_rotator_transition-lbl" for="params_rotator_transition" class="hasTooltip" title="&lt;strong&gt;Rotator transition effect&lt;/strong&gt;&lt;br /&gt;Easing equation to use for the rotator transition effect, i.e. speed at which the rotate animation progresses at different stages of a slide animation sequence.">
+	Rotator transition effect</label><select id="params_rotator_transition" name="params[rotator_transition]">
+	<option value="linear">linear</option>
+	<option value="quad">quadratic</option>
+	<option value="cubic">cubicular</option>
+	<option value="quart">quartetic</option>
+	<option value="quint">quintic</option>
+	<option value="expo">exponential</option>
+	<option value="circ">circular</option>
+	<option value="sine" selected="selected">sinusoidal</option>
+	<option value="back">back and forth</option>
+	<option value="bounce">bouncy</option>
+	<option value="elastic">elastic curve</option>
+</select>
+</li><li class="formelm"><label id="params_quality-lbl" for="params_quality" class="hasTooltip" title="&lt;strong&gt;Generated image quality&lt;/strong&gt;&lt;br /&gt;Image quality parameter for generating preview images and thumbnails with the lossy JPEG compression. Ranges from 0 (worst quality, smaller file) to 100 (best quality, biggest file) inclusive. Other image types with lossless compression (e.g. PNG or GIF) are not affected.">
+	Generated image quality</label><input type="text" name="params[quality]" id="params_quality" value="85" /></li><li class="formelm"><label id="params_caption_source-lbl" for="params_caption_source" class="hasTooltip" title="&lt;strong&gt;Filename for labels&lt;/strong&gt;&lt;br /&gt;Name to use for the text file (with extension) that contains image labels and descriptions.">
+	Filename for labels</label><input type="text" name="params[caption_source]" id="params_caption_source" value="labels.txt" /></li></ul></fieldset></form><p><a target='_blank' href='http://code.google.com/p/sigplus/wiki/BackendConfigurationSettings'>More information on configuration settings</a></p></body></html>

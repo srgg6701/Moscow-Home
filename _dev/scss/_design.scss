@@ -6,6 +6,7 @@ a{
   }
   #our-works ul.table &{
     color: $color-carrot-light;
+    cursor:text;
     font-family: PlumbMedium;
     font-size: 21px;
     text-align: center;
@@ -13,9 +14,6 @@ a{
     text-transform: uppercase;
     top:140px;
     @include centered-horizontal(absolute);
-    &:hover{
-      text-decoration: underline;
-    }
   }
 }
 aside{
@@ -310,7 +308,7 @@ section{
     $i:1;
     @each $height in 407,444,381,340,381{
       &:nth-child(#{$i}){
-        height: #{$height}px;
+        min-height: #{$height}px;
       }
       $i:$i+1;
     }

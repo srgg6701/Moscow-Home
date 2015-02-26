@@ -1,0 +1,468 @@
+/**
+* @file
+* @brief    slideplus image slider
+* @author   Levente Hunyadi
+* @version  1.5.0
+* @remarks  Copyright (C) 2011 Levente Hunyadi
+* @see      http://hunyadi.info.hu/projects/slideplus
+*/
+
+/**
+* Custom styling.
+*/
+
+/* rotator styling
+.slideplus {
+border:1px solid black !important;
+}
+*/
+
+/* image styling
+.slideplus > ul > li img {
+margin:2px !important;
+border:1px solid gray !important;
+padding:2px !important;
+}
+
+/* active image styling
+.slideplus > ul > li.slideplus-active img {
+border:1px solid red !important;
+}
+*/
+
+div.slideplus > ul > li {
+text-align:center !important;
+}
+
+/* mouse-over animation */
+.slideplus-active {  /* style when mouse pointer is over image */
+/*opacity:1;*/
+}
+
+.slideplus-inactive {  /* style when mouse pointer is not over image */
+/*opacity:0.5;*/
+}
+
+/**
+* Standard styling.
+* Changing this section may negatively impact slider functionality.
+*/
+
+/* Scripts disabled mode */
+
+.slideplus {
+display:block !important;
+width:100% !important;
+white-space:nowrap !important;
+overflow:auto !important;
+}
+
+.slideplus > ul,
+.slideplus > ul > li {
+display:block !important;
+margin:0 !important;
+border:0 none transparent !important;
+padding:0 !important;
+}
+
+.slideplus > ul {
+position:relative !important;
+list-style-type:none !important;
+list-style-image:none !important;
+}
+
+/* items on slider ribbon */
+.slideplus > ul > li {
+background:transparent none no-repeat scroll 0 0 !important;
+}
+
+/* Scripts enabled mode */
+
+div.slideplus {
+position:relative !important;
+display:inline-block !important;
+width:auto !important;
+overflow:hidden !important;
+}
+
+/* list items */
+div.slideplus > ul > li {
+position:absolute !important;
+}
+
+/* horizontal and vertical item alignment */
+.slideplus-align {
+display:-webkit-flex !important;
+display:flex !important;
+-webkit-flex-direction:row !important;
+flex-direction:row !important;
+width:100% !important;
+height:100% !important;
+}
+
+.slideplus-align > * {
+display:block !important;
+}
+
+.slideplus-horizontal-center {
+justify-content:center !important;
+}
+
+.slideplus-horizontal-start {
+justify-content:flex-start !important;
+}
+
+.slideplus-horizontal-end {
+justify-content:flex-end !important;
+}
+
+.slideplus-vertical-center {
+align-items:center !important;
+}
+
+.slideplus-vertical-start {
+align-items:flex-start !important;
+}
+
+.slideplus-vertical-end {
+align-items:flex-end !important;
+}
+
+/* overlay navigation buttons */
+div.slideplus-prev,
+div.slideplus-next {
+position:absolute !important;
+cursor:pointer !important;
+background:transparent url(transparent.gif) no-repeat scroll center center !important;
+}
+
+.slideplus-horizontal {
+top:0 !important;
+height:100% !important;
+}
+
+.slideplus-vertical {
+left:0 !important;
+width:100% !important;
+}
+
+.slideplus-prev.slideplus-horizontal {
+left:0 !important;
+background-position:left center !important;
+}
+
+.slideplus-prev.slideplus-horizontal.slideplus-large {
+width:57px !important;
+}
+
+.slideplus-prev.slideplus-horizontal.slideplus-large:hover {
+background-image:url(button-left-large.png) !important;
+}
+
+.slideplus-prev.slideplus-horizontal.slideplus-small {
+width:29px !important;
+}
+
+.slideplus-prev.slideplus-horizontal.slideplus-small:hover {
+background-image:url(button-left-small.png) !important;
+}
+
+.slideplus-next.slideplus-horizontal {
+right:0 !important;
+background-position:right center !important;
+}
+
+.slideplus-next.slideplus-horizontal.slideplus-large {
+width:57px !important;
+}
+
+.slideplus-next.slideplus-horizontal.slideplus-large:hover {
+background-image:url(button-right-large.png) !important;
+}
+
+.slideplus-next.slideplus-horizontal.slideplus-small {
+width:29px !important;
+}
+
+.slideplus-next.slideplus-horizontal.slideplus-small:hover {
+background-image:url(button-right-small.png) !important;
+}
+
+.slideplus-prev.slideplus-vertical {
+top:0 !important;
+background-position:center top !important;
+}
+
+.slideplus-prev.slideplus-vertical.slideplus-large {
+height:57px !important;
+}
+
+.slideplus-prev.slideplus-vertical.slideplus-large:hover {
+background-image:url(button-up-large.png) !important;
+}
+
+.slideplus-prev.slideplus-vertical.slideplus-small {
+height:29px !important;
+}
+
+.slideplus-prev.slideplus-vertical.slideplus-small:hover {
+background-image:url(button-up-small.png) !important;
+}
+
+.slideplus-next.slideplus-vertical {
+bottom:0 !important;
+background-position:center bottom !important;
+}
+
+.slideplus-next.slideplus-vertical.slideplus-large {
+height:57px !important;
+}
+
+.slideplus-next.slideplus-vertical.slideplus-large:hover {
+background-image:url(button-down-large.png) !important;
+}
+
+.slideplus-next.slideplus-vertical.slideplus-small {
+height:29px !important;
+}
+
+.slideplus-next.slideplus-vertical.slideplus-small:hover {
+background-image:url(button-down-small.png) !important;
+}
+
+/* navigation bar */
+.slideplus-navbar {
+padding:0 !important;
+line-height:normal !important;
+}
+
+span.slideplus-navbutton,
+.slideplus-paging > span {
+border:1px solid gray !important;
+background-color:transparent !important;
+cursor:pointer !important;
+text-decoration:none !important;
+}
+
+span.slideplus-navbutton:hover,
+.slideplus-paging > span.slideplus-active,
+.slideplus-paging > span:hover {
+background-color:rgba(0,0,0,0.25) !important;
+}
+
+/* top and bottom navigation controls */
+span.slideplus-navbutton {
+display:block !important;
+margin:7px 1px !important;
+padding:2px 6px !important;
+}
+
+span.slideplus-first,
+span.slideplus-prev {
+float:left !important;
+text-align:left !important;
+border-top-left-radius:10px !important;
+border-bottom-left-radius:10px !important;
+}
+
+span.slideplus-next,
+span.slideplus-last {
+float:right !important;
+text-align:right !important;
+border-top-right-radius:10px !important;
+border-bottom-right-radius:10px !important;
+}
+
+/* paging */
+.slideplus-paging {
+text-align:center !important;
+overflow:auto !important;
+margin:0 !important;
+padding:10px 0 !important;
+}
+
+.slideplus-paging > span {
+margin:2px !important;
+border-radius:5px;
+padding:2px 8px !important;
+}
+
+.slideplus-paging > span.slideplus-active {
+padding:4px 10px !important;
+}
+
+span.slideplus-navbutton,
+.slideplus-paging > span {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+/* hidden */
+div.slideplus-hidden, a.slideplus-hidden {
+display:none !important;
+}
+
+/* fading edges */
+.slideplus-edge {
+position:absolute;
+background:transparent none no-repeat scroll 0 0;
+}
+
+.slideplus-edge.slideplus-horizontal {
+width:57px;
+}
+
+.slideplus-edge.slideplus-vertical {
+height:57px;
+}
+
+.slideplus-edge-start.slideplus-horizontal {
+left:-1px !important;  /* IE fix */
+
+/* color values updated in script, do not change */
+filter:DXImageTransform.Microsoft.gradient(gradientType=1,startColorstr=#fffefefe,endColorstr=#00fefefe);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(gradientType=1,startColorstr=#fffefefe,endColorstr=#00fefefe)";
+background-image:-moz-linear-gradient(left,#fefefe,transparent);
+background-image:-webkit-gradient(linear,left top,right top,from(#fefefe),to(transparent));
+}
+
+.slideplus-edge-end.slideplus-horizontal {
+right:-1px !important;  /* IE fix */
+
+/* color values updated in script, do not change */
+filter:DXImageTransform.Microsoft.gradient(gradientType=1,startColorstr=#00fefefe,endColorstr=#fffefefe);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(gradientType=1,startColorstr=#00fefefe,endColorstr=#fffefefe)";
+background-image:-moz-linear-gradient(left,transparent,#fefefe);
+background-image:-webkit-gradient(linear,left top,right top,from(transparent),to(#fefefe));
+}
+
+.slideplus-edge-start.slideplus-vertical {
+top:-1px !important;  /* IE fix */
+
+/* color values updated in script, do not change */
+filter:DXImageTransform.Microsoft.gradient(startColorstr=#fffefefe,endColorstr=#00fefefe);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#fffefefe,endColorstr=#00fefefe)";
+background-image:-moz-linear-gradient(top,#fefefe,transparent);
+background-image:-webkit-gradient(linear,left top,left bottom,from(#fefefe),to(transparent));
+}
+
+.slideplus-edge-end.slideplus-vertical {
+bottom:-1px !important;  /* IE fix */
+
+/* color values updated in script, do not change */
+filter:DXImageTransform.Microsoft.gradient(startColorstr=#00fefefe,endColorstr=#fffefefe);
+-ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorstr=#00fefefe,endColorstr=#fffefefe)";
+background-image:-moz-linear-gradient(top,transparent,#fefefe);
+background-image:-webkit-gradient(linear,left top,left bottom,from(transparent),to(#fefefe));
+}
+
+/**
+* @file
+* @brief    loadplus image pre-loader icon
+* @author   Levente Hunyadi
+* @version  1.5.0
+* @remarks  Copyright (C) 2011 Levente Hunyadi
+* @see      http://hunyadi.info.hu/projects/sigplus
+*/
+
+/* balls */
+.loadplus > * {
+width:10px;
+height:10px;
+background:#000;
+position:absolute;
+left:20px;
+top:20px;
+
+-moz-border-radius:20px;
+-webkit-border-radius:20px;
+border-radius:20px;
+}
+
+.loadplus-bar0 {
+-moz-transform:rotate(0deg) translate(0, -20px) scale(0.1);
+-webkit-transform:rotate(0deg) translate(0, -20px) scale(0.1);
+-ms-transform:rotate(0deg) translate(0, -20px) scale(0.1);
+opacity:0.12;
+}
+.loadplus-bar1 {
+-moz-transform:rotate(45deg) translate(0, -20px) scale(0.2);
+-webkit-transform:rotate(45deg) translate(0, -20px) scale(0.2);
+-ms-transform:rotate(45deg) translate(0, -20px) scale(0.2);
+opacity:0.25;
+}
+.loadplus-bar2 {
+-moz-transform:rotate(90deg) translate(0, -20px) scale(0.4);
+-webkit-transform:rotate(90deg) translate(0, -20px) scale(0.4);
+-ms-transform:rotate(90deg) translate(0, -20px) scale(0.4);
+opacity:0.37;
+}
+.loadplus-bar3 {
+-moz-transform:rotate(135deg) translate(0, -20px) scale(0.6);
+-webkit-transform:rotate(135deg) translate(0, -20px) scale(0.6);
+-ms-transform:rotate(135deg) translate(0, -20px) scale(0.6);
+opacity:0.50;
+}
+.loadplus-bar4 {
+-moz-transform:rotate(180deg) translate(0, -20px) scale(0.8);
+-webkit-transform:rotate(180deg) translate(0, -20px) scale(0.8);
+-ms-transform:rotate(180deg) translate(0, -20px) scale(0.8);
+opacity:0.62;
+}
+.loadplus-bar5 {
+-moz-transform:rotate(225deg) translate(0, -20px) /*scale(1)*/;
+-webkit-transform:rotate(225deg) translate(0, -20px) /*scale(1)*/;
+-ms-transform:rotate(225deg) translate(0, -20px) /*scale(1)*/;
+opacity:0.75;
+}
+.loadplus-bar6 {
+-moz-transform:rotate(270deg) translate(0, -20px) scale(1.2);
+-webkit-transform:rotate(270deg) translate(0, -20px) scale(1.2);
+-ms-transform:rotate(270deg) translate(0, -20px) scale(1.2);
+opacity:0.87;
+}
+.loadplus-bar7 {
+-moz-transform:rotate(315deg) translate(0, -20px) scale(1.4);
+-webkit-transform:rotate(315deg) translate(0, -20px) scale(1.4);
+-ms-transform:rotate(315deg) translate(0, -20px) scale(1.4);
+/*opacity:1;*/
+}
+
+/* rotator icon */
+.loadplus {
+position:absolute;
+width:50px;
+height:50px;
+top:50%;
+left:50%;
+margin:-25px;
+
+-webkit-border-radius:50px;
+-moz-border-radius:50px;
+border-radius:50px;
+
+-webkit-animation-name:loadplus-transform;
+-webkit-animation-duration:0.9s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-timing-function:steps(8, start);
+
+-moz-animation-name:loadplus-transform;
+-moz-animation-duration:0.9s;
+-moz-animation-iteration-count:infinite;
+-moz-animation-timing-function:steps(8, start);
+}
+
+/* animation */
+@-webkit-keyframes loadplus-transform {
+from { -webkit-transform:rotate(0deg); }
+to { -webkit-transform:rotate(360deg); }
+}
+
+@-moz-keyframes loadplus-transform {
+from { -moz-transform:rotate(0deg); }
+to { -moz-transform:rotate(360deg); }
+}

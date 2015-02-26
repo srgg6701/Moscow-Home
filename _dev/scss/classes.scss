@@ -29,6 +29,25 @@
 .color-dark-middle{
   color: $color-dark-middle !important;
 }
+.close{
+  background-color: #555;
+  border:solid white;
+  @include border-radius(50%);
+  color: #FFF;
+  font-family: $font-second;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  height: 40px !important;
+  line-height: 31px;
+  padding: 0;
+  position: absolute !important;
+  right: -14px;
+  text-align: center;
+  text-decoration: none;
+  top: -14px;
+  width: 40px;
+}
 .do-it{
   background-color: $background-brown-dark;
   color: white !important;
@@ -49,6 +68,15 @@
 }
 .email2::after{
   content: "info@moscowhome.ru";
+}
+.fixed{
+  position: fixed;
+  &.fit{
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 .float-left{
   float: left;
@@ -96,6 +124,32 @@
     content:'+ 7 (985) 762-99-66';
     white-space: nowrap;
   }
+}
+.print{
+  #print-contacts &{
+    float: right;
+  }
+}
+a.print{
+  color: #A64726;
+  display: table;
+  float: right;
+  font-size: 13px;
+  font-family: $font-second;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  padding-right: 12px;
+  text-decoration: none;
+  header .menu.wide &{
+    margin-top: -27px;
+  }
+}
+a.print, button.print{
+  background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
+  border: $border-btn;
+  border-radius: 5px;
+  padding-left: 41px;
+  width: 175px;
 }
 .relative{
   position: relative !important;

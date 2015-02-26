@@ -40,8 +40,27 @@
 //------------------------------------
 @import "slider/slider";
 //------------------------------------
+@import "extensions/sigplus";
+//------------------------------------
 #achievements{
   margin: auto;
+}
+#content-box{
+  background-color: #B3B3B3;
+  display: table;
+  min-height: 80px;
+  min-width: 80px;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  @include transform(translate(-50%));
+  top: 45%;
+}
+#curtain{
+  background-color: #000000;
+  display: none;
+  @include opacity(0.7);
+  z-index: 10;
 }
 #design{
   background-image: url($images_dir + 'backgrounds/tile-design-top-visual.png');
@@ -60,6 +79,9 @@
 }
 #pointers-aside{
   @include centred-margins;
+}
+#shell{
+  z-index: 11;
 }
 #showcase{
   bottom: 17px;

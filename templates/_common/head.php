@@ -1,7 +1,7 @@
 <?php $common_path=$this->baseurl . "/templates/" . $common_dir;?>
-<title><?php echo JFactory::getDocument()->title;?></title>
+<!--<title><?php /*//echo JFactory::getDocument()->title;*/?></title>-->
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
-<script src="<?php echo $common_path;?>js/min/jquery.min.js"></script>
+<!--<script src="<?php /*echo $common_path;*/?>js/min/jquery.min.js"></script>-->
 <script src="<?php echo $common_path;?>js/common.js"></script>
 <?php   $app = JFactory::getApplication();
         $menu=$app->getMenu();
@@ -10,7 +10,7 @@
         $main_page = $menu_active == $menu->getDefault();
         echo "<!--main_page: ".$main_page."-->";
 if (!$main_page): // НЕ страница по умолчанию
-    if($pageclass!="gallery"):?>
+    if($pageclass!="gallery"&&$pageclass!="print-contacts"):?>
 <script src="<?php echo $common_path;?>js/parallax.js"></script>
 <?php
     endif;
@@ -36,10 +36,21 @@ ymaps.ready(init);
           balloonContent: 'Столица России'
       });
       myMap.geoObjects.add(myPlacemark);
+<?php   if($pageclass=="print-contacts"):?>
+      var intv=setTimeout(function(){
+          document.getElementById('wait-printing').style.display='none';
+          window.print();
+      },1000);
+<?php   endif;?>
   }
 </script>
 <?php
-if($main_page):
-    require_once $tmpl_common . $common_dir . 'slider-home.php';
+if($pageclass!="print-contacts"):
+    $site_dir='images/slides/gallery/';
+    $dir = dirname(__FILE__).'/../../' . $site_dir;
+
+    if($main_page):
+        require_once $tmpl_common . $common_dir . 'slider-home-js.php';
+    endif;
+    require_once $tmpl_common . $common_dir . 'gallery-js.php';
 endif;
-require_once $tmpl_common . $common_dir . 'gallery.php';

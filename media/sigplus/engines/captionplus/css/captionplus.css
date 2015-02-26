@@ -1,0 +1,123 @@
+/**
+* @file
+* @brief    captionplus mouse-over image caption engine stylesheet
+* @author   Levente Hunyadi
+* @version  1.5.0
+* @remarks  Copyright (C) 2009-2014 Levente Hunyadi
+* @see      http://hunyadi.info.hu/projects/
+*/
+
+/* Custom styling */
+.captionplus-outside,
+.captionplus-overlay {
+padding:4px !important;
+text-align:center !important;
+}
+
+.captionplus-overlay {
+left:2px !important;
+right:2px !important;
+height:30% !important;
+}
+
+.captionplus-bottom {
+bottom:2px !important;
+}
+
+.captionplus-top {
+top:2px !important;
+}
+
+/* Generic styling */
+.captionplus {
+display:inline-block !important;
+position:relative !important;
+line-height:normal !important;
+}
+
+.captionplus > a.sigplus-image {
+line-height:0 !important;
+}
+
+.captionplus-outside,
+.captionplus-overlay {
+display:block !important;
+padding:0 !important;
+overflow:hidden !important;
+}
+
+/* caption that displays over image */
+.captionplus-overlay {
+position:absolute !important;
+background-color:black !important;  /* fall-back setting, overridden for IE */
+background-color:rgba(0,0,0,0.6) !important;  /* overridden for IE */
+color:white !important;
+}
+
+.captionplus > .captionplus-overlay.captionplus-mouseover {
+visibility:hidden !important;
+}
+
+.captionplus:hover > .captionplus-overlay.captionplus-mouseover {
+visibility:inherit !important;
+}
+
+/* horizontal and vertical caption alignment */
+.captionplus-align {
+display: -ms-flexbox !important;
+display: flex !important;
+-moz-box-orient:horizontal !important;
+-webkit-box-orient:horizontal !important;
+box-orient:horizontal !important;
+width:100% !important;
+height:100% !important;
+white-space: normal !important;
+}
+
+.captionplus-horizontal-center {
+-ms-flex-pack:center !important;
+justify-content:center !important;
+}
+
+.captionplus-horizontal-start {
+-ms-flex-pack:start !important;
+justify-content:flex-start !important;
+}
+
+.captionplus-horizontal-end {
+-ms-flex-pack:end !important;
+justify-content:flex-end !important;
+}
+
+.captionplus-vertical-center {
+-ms-flex-align: center !important;
+align-items: center !important;
+}
+
+.captionplus-vertical-start {
+-ms-flex-align: start !important;
+align-items: flex-start !important;
+}
+
+.captionplus-vertical-end {
+-ms-flex-align: end !important;
+align-items: flex-end !important;
+}
+
+/* buttons inside image caption */
+.captionplus-button {
+background:transparent none no-repeat center center !important;
+display:inline-block !important;
+height:16px !important;
+width:16px !important;
+margin:2px !important;
+cursor:pointer !important;
+}
+
+.captionplus-button.captionplus-metadata {
+background-image:url(camera.png) !important;
+}
+
+.captionplus-button.captionplus-download {
+background-image:url(disk.png) !important;
+}

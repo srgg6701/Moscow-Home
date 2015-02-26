@@ -15,7 +15,7 @@ aside{
 div{
   #after-stone >&{
     border-bottom: solid 1px white;
-    overflow: auto;
+    overflow: hidden !important;
     padding-top: 51px;
     position: relative;
     $imgs-facade:$images_dir + 'backgrounds/';

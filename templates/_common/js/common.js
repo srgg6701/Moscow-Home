@@ -1,5 +1,6 @@
-$(function(){
-    var selector='[id^="diigo"], script[src*="metabar"]',
+jQuery(function(){
+    var $=jQuery,
+        selector='[id^="diigo"], script[src*="metabar"]',
         i=0,        // счётчик итераций
         r=0,        // счётчик удалений
         m=0,        // счётчик пост-удалений
@@ -87,6 +88,15 @@ $(function(){
         $('#btn-consult').trigger('mouseenter');
         handleInputs('hide');
     });
+    // показать/скрыть текст под кнопкой
+    $('.btn-more').on('click', function(){
+        $(this).next('div.hidden').slideToggle(200);
+    });
+    // распечататься
+    $('button.print').on('click', function(){
+        console.log('clicked!');
+        $('#goprint').trigger('click');
+    });
 });
 /**
  * Управлять видимостью контейнера с меню
@@ -121,10 +131,10 @@ function setVisibilityState(event,menu_to_show_index){
             //console.log('%cactive_link: '+active_link,'color:blue');
         }
         var visibility_stat=(active_link || visibility_container);
-        $(getInnerMenus()).hide();
+        jQuery(getInnerMenus()).hide();
         if(visibility_stat){
-            $(getMenusContainer()).show(); // отобразить контейнер с меню
-            $(getInnerMenus()).eq(menu_index).show();
+            jQuery(getMenusContainer()).show(); // отобразить контейнер с меню
+            jQuery(getInnerMenus()).eq(menu_index).show();
         }else{
             hideAll();
         }
@@ -135,8 +145,8 @@ function setVisibilityState(event,menu_to_show_index){
  * Скрыть все меню
  */
 function hideAll(){
-    $(getInnerMenus()).hide();
-    $(getMenusContainer()).hide(); // скрыть контейнер с меню
+    jQuery(getInnerMenus()).hide();
+    jQuery(getMenusContainer()).hide(); // скрыть контейнер с меню
     handleInputs('show');
 }
 /**
@@ -144,14 +154,14 @@ function hideAll(){
  * @returns {*|jQuery|HTMLElement}
  */
 function getMenusContainer(){
-    return $('header >section');
+    return jQuery('header >section');
 }
 /**
  * Получить внутренние блоки контейнера (все вып. меню)
  * @returns {*|jQuery|HTMLElement}
  */
 function getInnerMenus(){
-    return $('>section',getMenusContainer()); // блоки с меню
+    return jQuery('>section',getMenusContainer()); // блоки с меню
 }
 /**
  *
@@ -167,16 +177,16 @@ function handleInputs(state){
         telephone.style.width='50%';
         email_input.disabled=false;
     }
-    $(email_input.parentNode)[state]();
+    jQuery(email_input.parentNode)[state]();
 }
 
 function closeParent(event,layers){
-    console.log(layers);
-    console.dir(event.currentTarget);
-    $(event.currentTarget).parent().fadeOut(200, function(){
+    //console.log(layers);
+    //console.dir(event.currentTarget);
+    jQuery(event.currentTarget).parent().fadeOut(200, function(){
         if(layers){
             for(var i= 0, j=layers.length; i<j; i++){
-               $('#'+layers[i]).fadeOut(200);
+                jQuery('#'+layers[i]).fadeOut(200);
             }
         }else return;
     });
