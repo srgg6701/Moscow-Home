@@ -139,13 +139,6 @@ button{
     text-transform: uppercase;
     width: 180px;
   }
-  &.print{
-    background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
-    border: $border-btn;
-    border-radius: 5px;
-    padding-left: 41px;
-    width: 175px;
-  }
 }
 div{
   .do-it &{
@@ -236,6 +229,10 @@ h3{
   }
 }
 h4{
+  #contacts-map &{
+    font-family: $font-second;
+    font-size: 24px;
+  }
 }
 header{
   background-color: white;
@@ -359,7 +356,7 @@ section{
   }
 }
 span{
-  button.print &{
+  .print &{
     border-bottom:dotted 1px $color-carrot;
     display: table;
   }
