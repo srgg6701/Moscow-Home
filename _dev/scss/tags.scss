@@ -107,18 +107,8 @@ body{
   color: $color-dark-common;
 }
 button{
-  &.attach-file, &.print{
-    height: 31px;
-    color: $color-carrot;
-    font-size: 13px;
-  }
-  &.attach-file{
-    background: url($images_dir + 'attach-file.png') #FFF no-repeat 10px 4px;
-    border:none;
-    border-radius: 10px;
-    padding-left: 26px;
-    text-transform: uppercase;
-    width: 175px;
+  &.print{
+    @include button-slim;
   }
   &.bg-recall{ // связан со следующим
     background-position: 14px 11px;

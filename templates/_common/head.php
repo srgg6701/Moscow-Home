@@ -1,10 +1,15 @@
-<?php $common_path=$this->baseurl . "/templates/" . $common_dir;?>
-<!--<title><?php /*//echo JFactory::getDocument()->title;*/?></title>-->
+<?php
+$app = JFactory::getApplication();
+if(isset($_POST['jform'])){
+    $form=$_POST['jform'];
+    var_dump("<pre>",$form,"</pre>");
+}
+
+$common_path=$this->baseurl . "/templates/" . $common_dir;?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
 <!--<script src="<?php /*echo $common_path;*/?>js/min/jquery.min.js"></script>-->
 <script src="<?php echo $common_path;?>js/common.js"></script>
-<?php   $app = JFactory::getApplication();
-        $menu=$app->getMenu();
+<?php   $menu=$app->getMenu();
         $menu_active = $menu->getActive();
         $pageclass = (is_object($menu_active))? $menu_active->params->get('pageclass_sfx'):'';
         $main_page = $menu_active == $menu->getDefault();
@@ -40,7 +45,7 @@ ymaps.ready(init);
       var intv=setTimeout(function(){
           document.getElementById('wait-printing').style.display='none';
           window.print();
-      },1000);
+      },2000);
 <?php   endif;?>
   }
 </script>

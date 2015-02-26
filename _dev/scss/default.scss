@@ -45,6 +45,9 @@
 #achievements{
   margin: auto;
 }
+#ask-us{
+  position: relative;
+}
 #content-box{
   background-color: #B3B3B3;
   display: table;
@@ -70,6 +73,16 @@
   height: $h;
   line-height: $h;
   text-align: center;
+}
+input[name="attach-file"]{
+  position: absolute;
+  //background: yellow;
+  height: 31px;
+  width: 174px;
+  bottom: 64px;
+  left: 0px;
+  border-radius: 6px;
+  z-index: -1;
 }
 #pointers-box{
   bottom:175px;

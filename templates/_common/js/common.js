@@ -93,9 +93,13 @@ jQuery(function(){
         $(this).next('div.hidden').slideToggle(200);
     });
     // распечататься
-    $('button.print').on('click', function(){
+    /*$('button.print').on('click', function(){
         console.log('clicked!');
         $('#goprint').trigger('click');
+    });*/
+    // Запустить выбор файла
+    $('.attach-file').on('click',function(){
+        $('input[name="attach-file"]').trigger('click');
     });
 });
 /**

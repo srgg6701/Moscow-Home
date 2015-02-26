@@ -175,29 +175,20 @@ body {
 }
 
 /* line 110, ../../../_dev/scss/tags.scss */
-button.attach-file, button.print {
+button.print {
   height: 31px;
   color: #a64726;
   font-size: 13px;
 }
-/* line 115, ../../../_dev/scss/tags.scss */
-button.attach-file {
-  background: url("../images/attach-file.png") white no-repeat 10px 4px;
-  border: none;
-  border-radius: 10px;
-  padding-left: 26px;
-  text-transform: uppercase;
-  width: 175px;
-}
-/* line 123, ../../../_dev/scss/tags.scss */
+/* line 113, ../../../_dev/scss/tags.scss */
 button.bg-recall {
   background-position: 14px 11px;
 }
-/* line 126, ../../../_dev/scss/tags.scss */
+/* line 116, ../../../_dev/scss/tags.scss */
 button.btn-more::before {
   content: "Подробнее";
 }
-/* line 129, ../../../_dev/scss/tags.scss */
+/* line 119, ../../../_dev/scss/tags.scss */
 .do-it button {
   border: none;
   -webkit-border-radius: 20px;
@@ -216,7 +207,7 @@ button.btn-more::before {
   width: 180px;
 }
 
-/* line 145, ../../../_dev/scss/tags.scss */
+/* line 135, ../../../_dev/scss/tags.scss */
 .do-it div.phone-number {
   float: left;
   font-family: PlumbMedium;
@@ -224,22 +215,22 @@ button.btn-more::before {
   margin-right: 2px;
   margin-left: 32px;
 }
-/* line 154, ../../../_dev/scss/tags.scss */
+/* line 144, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:first-child {
   padding-right: 30px;
 }
-/* line 157, ../../../_dev/scss/tags.scss */
+/* line 147, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:last-child {
   padding-left: 59px;
 }
-/* line 161, ../../../_dev/scss/tags.scss */
+/* line 151, ../../../_dev/scss/tags.scss */
 .slider-bottom > div {
   background: url("../images/backgrounds/tile-gallery.png");
   height: 184px;
   margin: -13px auto -12px;
   padding: 20px 0;
 }
-/* line 167, ../../../_dev/scss/tags.scss */
+/* line 157, ../../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -254,7 +245,7 @@ button.btn-more::before {
   margin: auto;
   width: 948px;
 }
-/* line 176, ../../../_dev/scss/tags.scss */
+/* line 166, ../../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images/slider-main.jpg");
   background-position: center;
@@ -263,7 +254,7 @@ button.btn-more::before {
   width: 100%;
   margin: auto;
 }
-/* line 185, ../../../_dev/scss/tags.scss */
+/* line 175, ../../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -281,11 +272,11 @@ button.btn-more::before {
   opacity: 0.65;
   z-index: 1;
 }
-/* line 193, ../../../_dev/scss/tags.scss */
+/* line 183, ../../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 196, ../../../_dev/scss/tags.scss */
+/* line 186, ../../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
@@ -296,27 +287,27 @@ button.btn-more::before {
   transform: translateY(-50%);
 }
 
-/* line 201, ../../../_dev/scss/tags.scss */
+/* line 191, ../../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 208, ../../../_dev/scss/tags.scss */
+/* line 198, ../../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-weight: normal;
   margin-bottom: 36px;
 }
 
-/* line 216, ../../../_dev/scss/tags.scss */
+/* line 206, ../../../_dev/scss/tags.scss */
 body.gallery h2.header-slim-big {
   margin: 17px auto 36px;
   text-align: center;
 }
 
-/* line 223, ../../../_dev/scss/tags.scss */
+/* line 213, ../../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -325,37 +316,37 @@ body.gallery h2.header-slim-big {
   margin-top: 0;
 }
 
-/* line 232, ../../../_dev/scss/tags.scss */
+/* line 222, ../../../_dev/scss/tags.scss */
 #contacts-map h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 
-/* line 237, ../../../_dev/scss/tags.scss */
+/* line 227, ../../../_dev/scss/tags.scss */
 header {
   background-color: white;
   display: table;
 }
 
-/* line 242, ../../../_dev/scss/tags.scss */
+/* line 232, ../../../_dev/scss/tags.scss */
 .slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 247, ../../../_dev/scss/tags.scss */
+/* line 237, ../../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 250, ../../../_dev/scss/tags.scss */
+/* line 240, ../../../_dev/scss/tags.scss */
 ul.block li {
   display: block;
 }
-/* line 253, ../../../_dev/scss/tags.scss */
+/* line 243, ../../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 257, ../../../_dev/scss/tags.scss */
+/* line 247, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -367,27 +358,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 268, ../../../_dev/scss/tags.scss */
+/* line 258, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(1) {
   background-image: url("../images/footer1.png");
 }
-/* line 268, ../../../_dev/scss/tags.scss */
+/* line 258, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(2) {
   background-image: url("../images/footer2.png");
 }
-/* line 268, ../../../_dev/scss/tags.scss */
+/* line 258, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(3) {
   background-image: url("../images/footer3.png");
 }
-/* line 268, ../../../_dev/scss/tags.scss */
+/* line 258, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(4) {
   background-image: url("../images/footer4.png");
 }
-/* line 268, ../../../_dev/scss/tags.scss */
+/* line 258, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(5) {
   background-image: url("../images/footer5.png");
 }
-/* line 274, ../../../_dev/scss/tags.scss */
+/* line 264, ../../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -399,63 +390,63 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 285, ../../../_dev/scss/tags.scss */
+/* line 275, ../../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 294, ../../../_dev/scss/tags.scss */
+/* line 284, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 298, ../../../_dev/scss/tags.scss */
+/* line 288, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 302, ../../../_dev/scss/tags.scss */
+/* line 292, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 306, ../../../_dev/scss/tags.scss */
+/* line 296, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 313, ../../../_dev/scss/tags.scss */
+/* line 303, ../../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-/* line 316, ../../../_dev/scss/tags.scss */
+/* line 306, ../../../_dev/scss/tags.scss */
 .do-it p {
   display: table;
   margin: 27px auto 6px;
 }
-/* line 320, ../../../_dev/scss/tags.scss */
+/* line 310, ../../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   margin-bottom: 32px;
 }
-/* line 327, ../../../_dev/scss/tags.scss */
+/* line 317, ../../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
-/* line 331, ../../../_dev/scss/tags.scss */
+/* line 321, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #3f3f3f;
 }
-/* line 333, ../../../_dev/scss/tags.scss */
+/* line 323, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p.header-big {
   color: #404040;
   display: table;
@@ -464,31 +455,31 @@ p {
   text-align: center;
   width: 500px;
 }
-/* line 342, ../../../_dev/scss/tags.scss */
+/* line 332, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home div.float-left:first-child p {
   margin-bottom: 6px;
 }
 
-/* line 347, ../../../_dev/scss/tags.scss */
+/* line 337, ../../../_dev/scss/tags.scss */
 .menu-container section {
   display: none;
 }
-/* line 349, ../../../_dev/scss/tags.scss */
+/* line 339, ../../../_dev/scss/tags.scss */
 .menu-container section.visible {
   display: block;
 }
-/* line 353, ../../../_dev/scss/tags.scss */
+/* line 343, ../../../_dev/scss/tags.scss */
 .do-it section {
   display: table;
   margin: auto;
 }
 
-/* line 359, ../../../_dev/scss/tags.scss */
+/* line 349, ../../../_dev/scss/tags.scss */
 .print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
-/* line 363, ../../../_dev/scss/tags.scss */
+/* line 353, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul span {
   background-color: #7d2b12;
   color: white;
@@ -496,24 +487,24 @@ p {
   margin: auto;
   padding: 0 4px;
 }
-/* line 370, ../../../_dev/scss/tags.scss */
+/* line 360, ../../../_dev/scss/tags.scss */
 .arrows span {
   color: #FF6447;
   display: inline-block;
   padding: 0 4px;
 }
-/* line 376, ../../../_dev/scss/tags.scss */
+/* line 366, ../../../_dev/scss/tags.scss */
 #style-classic span, #style-modern span {
   color: #a64726;
 }
 
-/* line 380, ../../../_dev/scss/tags.scss */
+/* line 370, ../../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 384, ../../../_dev/scss/tags.scss */
+/* line 374, ../../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -524,70 +515,83 @@ ul.social {
   margin-top: 9px;
   z-index: 3;
 }
-/* line 390, ../../../_dev/scss/tags.scss */
+/* line 380, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > ul {
   display: table;
   margin: auto;
 }
-/* line 394, ../../../_dev/scss/tags.scss */
+/* line 384, ../../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
-/* line 398, ../../../_dev/scss/tags.scss */
+/* line 388, ../../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 403, ../../../_dev/scss/tags.scss */
+/* line 393, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 407, ../../../_dev/scss/tags.scss */
+/* line 397, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 411, ../../../_dev/scss/tags.scss */
+/* line 401, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
 }
 
 /* line 1, ../../../_dev/scss/classes.scss */
+.attach-file {
+  height: 31px;
+  color: #a64726;
+  font-size: 13px;
+  background: url("../images/attach-file.png") white no-repeat 10px 4px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 26px;
+  text-transform: uppercase;
+  width: 175px;
+}
+
+/* line 10, ../../../_dev/scss/classes.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 7, ../../../_dev/scss/classes.scss */
+/* line 16, ../../../_dev/scss/classes.scss */
 .bg-chess {
   background-image: url("../images/backgrounds/tile-chess.png") !important;
 }
 
-/* line 10, ../../../_dev/scss/classes.scss */
+/* line 19, ../../../_dev/scss/classes.scss */
 .bg-orange {
   background-color: #ffa31f;
 }
 
-/* line 13, ../../../_dev/scss/classes.scss */
+/* line 22, ../../../_dev/scss/classes.scss */
 .bg-recall {
   background-image: url("../images/recall-me.png");
   background-repeat: no-repeat;
 }
 
-/* line 17, ../../../_dev/scss/classes.scss */
+/* line 26, ../../../_dev/scss/classes.scss */
 .bg-white {
   background-color: white;
 }
 
-/* line 20, ../../../_dev/scss/classes.scss */
+/* line 29, ../../../_dev/scss/classes.scss */
 .block {
   display: block;
 }
 
-/* line 23, ../../../_dev/scss/classes.scss */
+/* line 32, ../../../_dev/scss/classes.scss */
 .centered-vertical {
   position: relative;
   top: 50%;
@@ -598,17 +602,17 @@ ul.social {
   transform: translateY(-50%);
 }
 
-/* line 26, ../../../_dev/scss/classes.scss */
+/* line 35, ../../../_dev/scss/classes.scss */
 .color-dark-deep {
   color: #404040 !important;
 }
 
-/* line 29, ../../../_dev/scss/classes.scss */
+/* line 38, ../../../_dev/scss/classes.scss */
 .color-dark-middle {
   color: #655e59 !important;
 }
 
-/* line 32, ../../../_dev/scss/classes.scss */
+/* line 41, ../../../_dev/scss/classes.scss */
 .close {
   background-color: #555;
   border: solid white;
@@ -633,7 +637,7 @@ ul.social {
   width: 40px;
 }
 
-/* line 51, ../../../_dev/scss/classes.scss */
+/* line 60, ../../../_dev/scss/classes.scss */
 .do-it {
   background-color: #832305;
   color: white !important;
@@ -641,31 +645,31 @@ ul.social {
   overflow: hidden;
   position: relative;
 }
-/* line 58, ../../../_dev/scss/classes.scss */
+/* line 67, ../../../_dev/scss/classes.scss */
 #decoration .do-it, #design .do-it {
   background-image: url("../images/backgrounds/tile-100.png");
 }
-/* line 61, ../../../_dev/scss/classes.scss */
+/* line 70, ../../../_dev/scss/classes.scss */
 #engineering-systems .do-it {
   background-image: url("../images/backgrounds/tile-top-bottom.png");
 }
 
-/* line 65, ../../../_dev/scss/classes.scss */
+/* line 74, ../../../_dev/scss/classes.scss */
 .email::after {
   color: #a64726;
   content: " doma@domalux.ru";
 }
 
-/* line 69, ../../../_dev/scss/classes.scss */
+/* line 78, ../../../_dev/scss/classes.scss */
 .email2::after {
   content: "info@moscowhome.ru";
 }
 
-/* line 72, ../../../_dev/scss/classes.scss */
+/* line 81, ../../../_dev/scss/classes.scss */
 .fixed {
   position: fixed;
 }
-/* line 74, ../../../_dev/scss/classes.scss */
+/* line 83, ../../../_dev/scss/classes.scss */
 .fixed.fit {
   top: 0;
   right: 0;
@@ -673,80 +677,80 @@ ul.social {
   left: 0;
 }
 
-/* line 81, ../../../_dev/scss/classes.scss */
+/* line 90, ../../../_dev/scss/classes.scss */
 .float-left {
   float: left;
 }
 
-/* line 84, ../../../_dev/scss/classes.scss */
+/* line 93, ../../../_dev/scss/classes.scss */
 .footer {
   background-color: #feda62;
 }
 
-/* line 87, ../../../_dev/scss/classes.scss */
+/* line 96, ../../../_dev/scss/classes.scss */
 .half-wide {
   width: 50%;
 }
 
-/* line 90, ../../../_dev/scss/classes.scss */
+/* line 99, ../../../_dev/scss/classes.scss */
 .header-big {
   font-family: PlumbMedium !important;
   font-size: 48px !important;
   text-transform: uppercase;
 }
 
-/* line 95, ../../../_dev/scss/classes.scss */
+/* line 104, ../../../_dev/scss/classes.scss */
 .header-slim-big {
   font-family: PlumbLight;
   font-size: 36px;
   text-transform: uppercase;
 }
-/* line 99, ../../../_dev/scss/classes.scss */
+/* line 108, ../../../_dev/scss/classes.scss */
 .do-it .header-slim-big {
   color: white;
 }
-/* line 102, ../../../_dev/scss/classes.scss */
+/* line 111, ../../../_dev/scss/classes.scss */
 .container .header-slim-big {
   text-align: center;
 }
 
-/* line 106, ../../../_dev/scss/classes.scss */
+/* line 115, ../../../_dev/scss/classes.scss */
 .header-slim-middle {
   font: 25px PlumbLight;
   text-transform: uppercase;
 }
-/* line 109, ../../../_dev/scss/classes.scss */
+/* line 118, ../../../_dev/scss/classes.scss */
 #after-stone .header-slim-middle {
   line-height: 33px;
 }
 
-/* line 113, ../../../_dev/scss/classes.scss */
+/* line 122, ../../../_dev/scss/classes.scss */
 .hidden {
   display: none;
 }
 
-/* line 116, ../../../_dev/scss/classes.scss */
+/* line 125, ../../../_dev/scss/classes.scss */
 .no-overflow {
   overflow: hidden;
 }
 
-/* line 119, ../../../_dev/scss/classes.scss */
+/* line 128, ../../../_dev/scss/classes.scss */
 .no-scroll {
   overflow: hidden;
 }
 
-/* line 123, ../../../_dev/scss/classes.scss */
+/* line 132, ../../../_dev/scss/classes.scss */
 .phone:after {
   content: '+ 7 (985) 762-99-66';
   white-space: nowrap;
 }
 
-/* line 129, ../../../_dev/scss/classes.scss */
+/* line 138, ../../../_dev/scss/classes.scss */
 #print-contacts .print {
   float: right;
 }
 
-/* line 133, ../../../_dev/scss/classes.scss */
+/* line 142, ../../../_dev/scss/classes.scss */
 a.print {
   color: #A64726;
   display: table;
@@ -758,12 +762,12 @@ a.print {
   padding-right: 12px;
   text-decoration: none;
 }
-/* line 143, ../../../_dev/scss/classes.scss */
+/* line 152, ../../../_dev/scss/classes.scss */
 header .menu.wide a.print {
   margin-top: -27px;
 }
 
-/* line 147, ../../../_dev/scss/classes.scss */
+/* line 156, ../../../_dev/scss/classes.scss */
 a.print, button.print {
   background: url("../images/print.png") white no-repeat 13px 9px;
   border: solid 1px #c9c9c9;
@@ -772,17 +776,17 @@ a.print, button.print {
   width: 175px;
 }
 
-/* line 154, ../../../_dev/scss/classes.scss */
+/* line 163, ../../../_dev/scss/classes.scss */
 .relative {
   position: relative !important;
 }
 
-/* line 157, ../../../_dev/scss/classes.scss */
+/* line 166, ../../../_dev/scss/classes.scss */
 .slider-bottom {
   overflow: hidden;
 }
 
-/* line 160, ../../../_dev/scss/classes.scss */
+/* line 169, ../../../_dev/scss/classes.scss */
 .slides {
   height: 100%;
   margin: auto;
@@ -790,30 +794,30 @@ a.print, button.print {
   width: 963px;
 }
 
-/* line 166, ../../../_dev/scss/classes.scss */
+/* line 175, ../../../_dev/scss/classes.scss */
 .table {
   display: table;
 }
 
-/* line 171, ../../../_dev/scss/classes.scss */
+/* line 180, ../../../_dev/scss/classes.scss */
 #decoration .top, #engineering-systems .top {
   background-color: #832305;
 }
-/* line 174, ../../../_dev/scss/classes.scss */
+/* line 183, ../../../_dev/scss/classes.scss */
 #decoration .top {
   background-image: url("../images/backgrounds/tile-top-ultra-blood.png");
 }
-/* line 177, ../../../_dev/scss/classes.scss */
+/* line 186, ../../../_dev/scss/classes.scss */
 #engineering-systems .top {
   background-image: url("../images/backgrounds/tile-top.png");
 }
-/* line 180, ../../../_dev/scss/classes.scss */
+/* line 189, ../../../_dev/scss/classes.scss */
 #facade .top {
   background-image: url("../images/facade/roof.jpg");
   background-size: cover;
 }
 
-/* line 185, ../../../_dev/scss/classes.scss */
+/* line 194, ../../../_dev/scss/classes.scss */
 .works-examples {
   background: url("../images/gallery/works-examples.jpg") no-repeat;
   height: 81px;
@@ -1249,16 +1253,16 @@ nav > div:nth-child(3) aside {
 nav > div {
   height: 100%;
 }
-/* line 44, ../../../_dev/scss/mixins.scss */
+/* line 49, ../../../_dev/scss/mixins.scss */
 nav > div:nth-child(1) {
   position: absolute;
 }
-/* line 47, ../../../_dev/scss/mixins.scss */
+/* line 52, ../../../_dev/scss/mixins.scss */
 nav > div:nth-child(2) {
   display: table;
   margin: auto;
 }
-/* line 51, ../../../_dev/scss/mixins.scss */
+/* line 56, ../../../_dev/scss/mixins.scss */
 nav > div:nth-child(3) {
   position: absolute;
   right: 0;
@@ -1322,16 +1326,16 @@ nav {
 footer .section > div {
   height: 100%;
 }
-/* line 44, ../../../_dev/scss/mixins.scss */
+/* line 49, ../../../_dev/scss/mixins.scss */
 footer .section > div:nth-child(1) {
   position: absolute;
 }
-/* line 47, ../../../_dev/scss/mixins.scss */
+/* line 52, ../../../_dev/scss/mixins.scss */
 footer .section > div:nth-child(2) {
   display: table;
   margin: auto;
 }
-/* line 51, ../../../_dev/scss/mixins.scss */
+/* line 56, ../../../_dev/scss/mixins.scss */
 footer .section > div:nth-child(3) {
   position: absolute;
   right: 0;
@@ -3045,6 +3049,11 @@ body.gallery [id^="slider-mini-"] {
 }
 
 /* line 48, ../../../_dev/scss/default.scss */
+#ask-us {
+  position: relative;
+}
+
+/* line 51, ../../../_dev/scss/default.scss */
 #content-box {
   background-color: #B3B3B3;
   display: table;
@@ -3061,7 +3070,7 @@ body.gallery [id^="slider-mini-"] {
   top: 45%;
 }
 
-/* line 59, ../../../_dev/scss/default.scss */
+/* line 62, ../../../_dev/scss/default.scss */
 #curtain {
   background-color: #000000;
   display: none;
@@ -3070,19 +3079,30 @@ body.gallery [id^="slider-mini-"] {
   z-index: 10;
 }
 
-/* line 65, ../../../_dev/scss/default.scss */
+/* line 68, ../../../_dev/scss/default.scss */
 #design {
   background-image: url("../images/backgrounds/tile-design-top-visual.png");
 }
 
-/* line 68, ../../../_dev/scss/default.scss */
+/* line 71, ../../../_dev/scss/default.scss */
 #gallery {
   height: 94px;
   line-height: 94px;
   text-align: center;
 }
 
-/* line 74, ../../../_dev/scss/default.scss */
+/* line 77, ../../../_dev/scss/default.scss */
+input[name="attach-file"] {
+  position: absolute;
+  height: 31px;
+  width: 174px;
+  bottom: 64px;
+  left: 0px;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+/* line 87, ../../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
@@ -3090,18 +3110,18 @@ body.gallery [id^="slider-mini-"] {
   z-index: 2;
 }
 
-/* line 80, ../../../_dev/scss/default.scss */
+/* line 93, ../../../_dev/scss/default.scss */
 #pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 83, ../../../_dev/scss/default.scss */
+/* line 96, ../../../_dev/scss/default.scss */
 #shell {
   z-index: 11;
 }
 
-/* line 86, ../../../_dev/scss/default.scss */
+/* line 99, ../../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -3109,7 +3129,7 @@ body.gallery [id^="slider-mini-"] {
   width: 100%;
 }
 
-/* line 92, ../../../_dev/scss/default.scss */
+/* line 105, ../../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -3118,7 +3138,7 @@ body.gallery [id^="slider-mini-"] {
   width: 100%;
 }
 
-/* line 99, ../../../_dev/scss/default.scss */
+/* line 112, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;
