@@ -172,8 +172,8 @@ function getInnerMenus(){
  * @param state
  */
 function handleInputs(state){
-    var email_input = document.querySelector('input[name^="email"]'),
-        telephone=document.querySelector('input[name^="telephone"]').parentNode;
+    var email_input = document.querySelector('input[name*="email"]'),
+        telephone=document.querySelector('input[name*="telephone"]').parentNode;
     if(state=='hide'){
         telephone.style.width='100%';
         email_input.disabled=true;

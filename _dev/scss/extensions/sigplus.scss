@@ -9,6 +9,23 @@ img {
   .gallery-middle &{
     height: 280px !important;
   }
+  #decoration .gallery-middle &{
+    height: 143px !important;
+  }
+  @mixin pointer-opacity{
+    @include opacity(0.65);
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .slideplus-prev.slideplus-horizontal.slideplus-large{
+    background: url($images_dir + 'backgrounds/gallery-pointer-left.png');
+    @include pointer-opacity;
+  }
+  .slideplus-next.slideplus-horizontal.slideplus-large{
+    background: url($images_dir + 'backgrounds/gallery-pointer-right.png');
+    @include pointer-opacity;
+  }
 }
 .slideplus-navbar {
   .gallery-middle &{
@@ -19,6 +36,7 @@ img {
   @include box-shadow(-4px 0px 0px 6px #FFF);
 }
 .sigplus-gallery{
+  @include no-select;
   &.sigplus-center{
     display: table;
     margin: auto;
@@ -40,5 +58,10 @@ span.slideplus-navbutton{
     &.slideplus-next{
       right: 7px;
     }
+  }
+}
+#decoration {
+  .slideplus-next.slideplus-horizontal.slideplus-large{
+    left: 444px;
   }
 }

@@ -7,7 +7,7 @@ a{
     height: 100%;
     width: 476px;
   }
-  #decoration .slides >div.float-left:last-child &{
+  #decoration .slides >div.float-left:last-child >&{
     background: url($images_dir + "decoration/exmpls-right.jpg");
     float: left;
     height: 134px;
@@ -110,11 +110,11 @@ div{
     height: $dHeight;
     width: 50%;
     &:nth-child(1){
-      background-image: url($images_dir + 'decoration/exmpl-big.jpg');
+      //background-image: url($images_dir + 'decoration/exmpl-big.jpg');
       background-size: 476px $dHeight;
     }
     &:nth-child(2){
-      background-image: url($images_dir + 'decoration/exmpls-right.jpg');
+      //background-image: url($images_dir + 'decoration/exmpls-right.jpg');
       // переопределить стили для .slider-bottom div и #decoration .slides div.float-left
       height: auto;
       margin-left: 4px;

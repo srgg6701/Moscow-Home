@@ -154,6 +154,9 @@ div{
     margin: -13px auto -12px;
     padding: 20px 0;
   }
+  #decoration .slider-bottom .slides >&{
+    background-image: none;
+  }
   #showcase >&{
     background: url($images_dir + 'backgrounds/tile-100.png') #811d00;
     @include border-radius(8px);

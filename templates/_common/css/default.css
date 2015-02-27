@@ -231,6 +231,10 @@ button.btn-more::before {
   padding: 20px 0;
 }
 /* line 157, ../../../_dev/scss/tags.scss */
+#decoration .slider-bottom .slides > div {
+  background-image: none;
+}
+/* line 160, ../../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -245,7 +249,7 @@ button.btn-more::before {
   margin: auto;
   width: 948px;
 }
-/* line 166, ../../../_dev/scss/tags.scss */
+/* line 169, ../../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images/slider-main.jpg");
   background-position: center;
@@ -254,7 +258,7 @@ button.btn-more::before {
   width: 100%;
   margin: auto;
 }
-/* line 175, ../../../_dev/scss/tags.scss */
+/* line 178, ../../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -272,11 +276,11 @@ button.btn-more::before {
   opacity: 0.65;
   z-index: 1;
 }
-/* line 183, ../../../_dev/scss/tags.scss */
+/* line 186, ../../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 186, ../../../_dev/scss/tags.scss */
+/* line 189, ../../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
@@ -287,27 +291,27 @@ button.btn-more::before {
   transform: translateY(-50%);
 }
 
-/* line 191, ../../../_dev/scss/tags.scss */
+/* line 194, ../../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 198, ../../../_dev/scss/tags.scss */
+/* line 201, ../../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-weight: normal;
   margin-bottom: 36px;
 }
 
-/* line 206, ../../../_dev/scss/tags.scss */
+/* line 209, ../../../_dev/scss/tags.scss */
 body.gallery h2.header-slim-big {
   margin: 17px auto 36px;
   text-align: center;
 }
 
-/* line 213, ../../../_dev/scss/tags.scss */
+/* line 216, ../../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -316,37 +320,37 @@ body.gallery h2.header-slim-big {
   margin-top: 0;
 }
 
-/* line 222, ../../../_dev/scss/tags.scss */
+/* line 225, ../../../_dev/scss/tags.scss */
 #contacts-map h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 
-/* line 227, ../../../_dev/scss/tags.scss */
+/* line 230, ../../../_dev/scss/tags.scss */
 header {
   background-color: white;
   display: table;
 }
 
-/* line 232, ../../../_dev/scss/tags.scss */
+/* line 235, ../../../_dev/scss/tags.scss */
 .slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 237, ../../../_dev/scss/tags.scss */
+/* line 240, ../../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 240, ../../../_dev/scss/tags.scss */
+/* line 243, ../../../_dev/scss/tags.scss */
 ul.block li {
   display: block;
 }
-/* line 243, ../../../_dev/scss/tags.scss */
+/* line 246, ../../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 247, ../../../_dev/scss/tags.scss */
+/* line 250, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -358,27 +362,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 261, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(1) {
   background-image: url("../images/footer1.png");
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 261, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(2) {
   background-image: url("../images/footer2.png");
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 261, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(3) {
   background-image: url("../images/footer3.png");
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 261, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(4) {
   background-image: url("../images/footer4.png");
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 261, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(5) {
   background-image: url("../images/footer5.png");
 }
-/* line 264, ../../../_dev/scss/tags.scss */
+/* line 267, ../../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -390,63 +394,63 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 275, ../../../_dev/scss/tags.scss */
+/* line 278, ../../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 284, ../../../_dev/scss/tags.scss */
+/* line 287, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 288, ../../../_dev/scss/tags.scss */
+/* line 291, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 292, ../../../_dev/scss/tags.scss */
+/* line 295, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 296, ../../../_dev/scss/tags.scss */
+/* line 299, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 303, ../../../_dev/scss/tags.scss */
+/* line 306, ../../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-/* line 306, ../../../_dev/scss/tags.scss */
+/* line 309, ../../../_dev/scss/tags.scss */
 .do-it p {
   display: table;
   margin: 27px auto 6px;
 }
-/* line 310, ../../../_dev/scss/tags.scss */
+/* line 313, ../../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   margin-bottom: 32px;
 }
-/* line 317, ../../../_dev/scss/tags.scss */
+/* line 320, ../../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
-/* line 321, ../../../_dev/scss/tags.scss */
+/* line 324, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #3f3f3f;
 }
-/* line 323, ../../../_dev/scss/tags.scss */
+/* line 326, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p.header-big {
   color: #404040;
   display: table;
@@ -455,31 +459,31 @@ p {
   text-align: center;
   width: 500px;
 }
-/* line 332, ../../../_dev/scss/tags.scss */
+/* line 335, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home div.float-left:first-child p {
   margin-bottom: 6px;
 }
 
-/* line 337, ../../../_dev/scss/tags.scss */
+/* line 340, ../../../_dev/scss/tags.scss */
 .menu-container section {
   display: none;
 }
-/* line 339, ../../../_dev/scss/tags.scss */
+/* line 342, ../../../_dev/scss/tags.scss */
 .menu-container section.visible {
   display: block;
 }
-/* line 343, ../../../_dev/scss/tags.scss */
+/* line 346, ../../../_dev/scss/tags.scss */
 .do-it section {
   display: table;
   margin: auto;
 }
 
-/* line 349, ../../../_dev/scss/tags.scss */
+/* line 352, ../../../_dev/scss/tags.scss */
 .print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
-/* line 353, ../../../_dev/scss/tags.scss */
+/* line 356, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul span {
   background-color: #7d2b12;
   color: white;
@@ -487,24 +491,24 @@ p {
   margin: auto;
   padding: 0 4px;
 }
-/* line 360, ../../../_dev/scss/tags.scss */
+/* line 363, ../../../_dev/scss/tags.scss */
 .arrows span {
   color: #FF6447;
   display: inline-block;
   padding: 0 4px;
 }
-/* line 366, ../../../_dev/scss/tags.scss */
+/* line 369, ../../../_dev/scss/tags.scss */
 #style-classic span, #style-modern span {
   color: #a64726;
 }
 
-/* line 370, ../../../_dev/scss/tags.scss */
+/* line 373, ../../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 374, ../../../_dev/scss/tags.scss */
+/* line 377, ../../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -515,33 +519,33 @@ ul.social {
   margin-top: 9px;
   z-index: 3;
 }
-/* line 380, ../../../_dev/scss/tags.scss */
+/* line 383, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > ul {
   display: table;
   margin: auto;
 }
-/* line 384, ../../../_dev/scss/tags.scss */
+/* line 387, ../../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
-/* line 388, ../../../_dev/scss/tags.scss */
+/* line 391, ../../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 393, ../../../_dev/scss/tags.scss */
+/* line 396, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 397, ../../../_dev/scss/tags.scss */
+/* line 400, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 401, ../../../_dev/scss/tags.scss */
+/* line 404, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -1810,7 +1814,7 @@ footer div.section {
   width: 476px;
 }
 /* line 10, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a {
+#decoration .slides > div.float-left:last-child > a {
   background: url("../images/decoration/exmpls-right.jpg");
   float: left;
   height: 134px;
@@ -1819,27 +1823,27 @@ footer div.section {
   width: 153px;
 }
 /* line 18, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-last-child(2) {
+#decoration .slides > div.float-left:last-child > a:nth-last-child(2) {
   background-position: -161px 0;
 }
 /* line 21, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-last-child(3) {
+#decoration .slides > div.float-left:last-child > a:nth-last-child(3) {
   background-position: -323px 0;
 }
 /* line 25, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-last-child(4) {
+#decoration .slides > div.float-left:last-child > a:nth-last-child(4) {
   background-position: -476px -143px;
 }
 /* line 28, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-last-child(5) {
+#decoration .slides > div.float-left:last-child > a:nth-last-child(5) {
   background-position: -638px -143px;
 }
 /* line 31, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-last-child(6) {
+#decoration .slides > div.float-left:last-child > a:nth-last-child(6) {
   background-position: -799px -143px;
 }
 /* line 35, ../../../_dev/scss/_decoration.scss */
-#decoration .slides > div.float-left:last-child a:nth-child(3), #decoration .slides > div.float-left:last-child a:nth-child(6) {
+#decoration .slides > div.float-left:last-child > a:nth-child(3), #decoration .slides > div.float-left:last-child > a:nth-child(6) {
   margin-right: 0;
 }
 
@@ -1974,12 +1978,10 @@ footer div.section {
 }
 /* line 112, ../../../_dev/scss/_decoration.scss */
 #decoration .slides div.float-left:nth-child(1) {
-  background-image: url("../images/decoration/exmpl-big.jpg");
   background-size: 476px 280px;
 }
 /* line 116, ../../../_dev/scss/_decoration.scss */
 #decoration .slides div.float-left:nth-child(2) {
-  background-image: url("../images/decoration/exmpls-right.jpg");
   height: auto;
   margin-left: 4px;
   margin-right: -4px;
@@ -2245,7 +2247,7 @@ footer div.section {
 }
 /* line 63, ../../../_dev/scss/_facade.scss */
 #facades section:nth-child(3) > div {
-  background-position: 0 -681px;
+  background-position: 0 -5979px;
   height: 270px;
 }
 /* line 67, ../../../_dev/scss/_facade.scss */
@@ -2996,25 +2998,58 @@ body.gallery [id^="slider-mini-"] {
 .gallery-middle .slideplus {
   height: 280px !important;
 }
+/* line 12, ../../../_dev/scss/extensions/sigplus.scss */
+#decoration .gallery-middle .slideplus {
+  height: 143px !important;
+}
+/* line 21, ../../../_dev/scss/extensions/sigplus.scss */
+.slideplus .slideplus-prev.slideplus-horizontal.slideplus-large {
+  background: url("../images/backgrounds/gallery-pointer-left.png");
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+}
+/* line 17, ../../../_dev/scss/extensions/sigplus.scss */
+.slideplus .slideplus-prev.slideplus-horizontal.slideplus-large:hover {
+  opacity: 1;
+}
+/* line 25, ../../../_dev/scss/extensions/sigplus.scss */
+.slideplus .slideplus-next.slideplus-horizontal.slideplus-large {
+  background: url("../images/backgrounds/gallery-pointer-right.png");
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+  opacity: 0.65;
+}
+/* line 17, ../../../_dev/scss/extensions/sigplus.scss */
+.slideplus .slideplus-next.slideplus-horizontal.slideplus-large:hover {
+  opacity: 1;
+}
 
-/* line 14, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 31, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-middle .slideplus-navbar {
   display: none !important;
 }
 
-/* line 18, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 35, ../../../_dev/scss/extensions/sigplus.scss */
 .sigplus-gallery ul > li > div > .captionplus > a > img {
   -webkit-box-shadow: -4px 0px 0px 6px white;
   -moz-box-shadow: -4px 0px 0px 6px white;
   box-shadow: -4px 0px 0px 6px white;
 }
 
-/* line 22, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 38, ../../../_dev/scss/extensions/sigplus.scss */
+.sigplus-gallery {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 40, ../../../_dev/scss/extensions/sigplus.scss */
 .sigplus-gallery.sigplus-center {
   display: table;
   margin: auto;
 }
-/* line 26, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 44, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small .sigplus-gallery {
   -webkit-transform: scale(0.61) translateX(-306px) translateY(-30px);
   -moz-transform: scale(0.61) translateX(-306px) translateY(-30px);
@@ -3023,12 +3058,12 @@ body.gallery [id^="slider-mini-"] {
   transform: scale(0.61) translateX(-306px) translateY(-30px);
 }
 
-/* line 31, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 49, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small .slideplus-paging {
   display: none;
 }
 
-/* line 36, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 54, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small span.slideplus-navbutton {
   background-color: #FFF !important;
   position: absolute;
@@ -3038,9 +3073,14 @@ body.gallery [id^="slider-mini-"] {
   -o-transform: translateY(-91px);
   transform: translateY(-91px);
 }
-/* line 40, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 58, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small span.slideplus-navbutton.slideplus-next {
   right: 7px;
+}
+
+/* line 64, ../../../_dev/scss/extensions/sigplus.scss */
+#decoration .slideplus-next.slideplus-horizontal.slideplus-large {
+  left: 444px;
 }
 
 /* line 45, ../../../_dev/scss/default.scss */
