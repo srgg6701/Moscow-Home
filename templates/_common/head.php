@@ -46,6 +46,12 @@ ymaps.ready(init);
           document.getElementById('wait-printing').style.display='none';
           window.print();
       },2000);
+<?php   endif;
+        if($main_page):
+        ?>
+      document.querySelector('.slider-bottom .slides').onclick= function(){
+          location.href=location.pathname+'gallery';
+      };
 <?php   endif;?>
   }
 </script>
@@ -53,9 +59,7 @@ ymaps.ready(init);
 if($pageclass!="print-contacts"):
     $site_dir='images/slides/gallery/';
     $dir = dirname(__FILE__).'/../../' . $site_dir;
-
     if($main_page):
         require_once $tmpl_common . $common_dir . 'slider-home-js.php';
     endif;
-    require_once $tmpl_common . $common_dir . 'gallery-js.php';
 endif;

@@ -172,8 +172,8 @@ function getInnerMenus(){
  * @param state
  */
 function handleInputs(state){
-    var email_input = document.querySelector('input[name="email"]'),
-        telephone=document.querySelector('input[name="telephone"]').parentNode;
+    var email_input = document.querySelector('input[name^="email"]'),
+        telephone=document.querySelector('input[name^="telephone"]').parentNode;
     if(state=='hide'){
         telephone.style.width='100%';
         email_input.disabled=true;
@@ -183,7 +183,11 @@ function handleInputs(state){
     }
     jQuery(email_input.parentNode)[state]();
 }
-
+/**
+ *
+ * @param event
+ * @param layers
+ */
 function closeParent(event,layers){
     //console.log(layers);
     //console.dir(event.currentTarget);
