@@ -31,7 +31,6 @@ jQuery(function(){
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
-
     // управление меню при событии его контейнера
     $(menus_container).on('mouseenter mouseleave',/**/ function(event){
         setVisibilityState(event);
@@ -48,8 +47,7 @@ jQuery(function(){
     // Скрыть все выпадающие меню
     $('nav a:not([href="#"])').on('mouseenter',hideAll);
     // Управлять выпадающими меню
-    // todo: добавить mouseleave
-    $(dd_menus).on('mouseenter mouseleave'/**/, function(event){
+    $(dd_menus).on('mouseenter mouseleave', function(event){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
@@ -59,7 +57,7 @@ jQuery(function(){
         setVisibilityState(event,menu_to_show_index);
     });
     // Обработать блоки выпадающего меню
-    $(submenu_items).on('click mouseenter mouseleave', function(event){
+    $(submenu_items).on('mouseenter mouseleave', function(event){
         var container=$(this).parent().next('.menu-container'),
             sections=$('section',container),
             index=$(this).index(),
@@ -68,13 +66,13 @@ jQuery(function(){
             setVisible=function(){
                 //console.group('element index '+index);
                     //console.dir(sections);
-                $(sections).removeClass(visibleClass)
+                $(sections).removeClass(visibleClass) // visible
                     .eq(index).addClass(visibleClass);
                     //console.dir($(sections).eq(index));
                 //console.groupEnd();
             };
         setVisible();
-        if(event.type=='click'){
+        if(event.type=='mouseenter'){//click
             $(submenu_items).removeClass(bgClass);
             $(this).addClass(bgClass);
         }
@@ -125,8 +123,8 @@ function setVisibilityState(event,menu_to_show_index){
                 active_link=true;
                 visibility_container=active;
             }
-            //console.log('%cvisibility_container: '+visibility_container,'color:violet');
-            //console.log('%cactive_link: '+active_link,'color:blue');
+            console.log('%cvisibility_container: '+visibility_container,'color:violet');
+            console.log('%cactive_link: '+active_link,'color:blue');
         }else
           if(action=='mouseleave' && (visibility_container!=active||active_link!=active)){ // уходим с объекта
               visibility_container=false;

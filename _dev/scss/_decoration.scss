@@ -4,6 +4,7 @@ a{
     font-size: 0;
   }
   #decoration .slides >div.float-left:first-child &{
+    background-image: url($images_dir + 'decoration/exmpl-big.jpg');
     height: 100%;
     width: 476px;
   }
