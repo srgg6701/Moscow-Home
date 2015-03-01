@@ -107,6 +107,16 @@ body{
   color: $color-dark-common;
 }
 button{
+  .content &{
+    &.btn-more{
+      background-color: $background-smoke-white;
+      border: $border-btn;
+      border-radius: 5px;
+      display: table;
+      height: 28px;
+      width: 90px;
+    }
+  }
   &.print{
     @include button-slim;
   }

@@ -11,17 +11,17 @@ aside{
   }
 }
 div{
-  #engineering-systems .content >section >&{
+  /*#engineering-systems .content >section >&{
     position: absolute;
-  }
+  }*/
   #engineering-systems .content >section:nth-child(1) >&{
-    top: 84px;
+    margin-top: 84px;
   }
   #engineering-systems .content >section:nth-child(2) >&{
-    top: 84px;
+    margin-top: 84px;
   }
   #engineering-systems .content >section:nth-child(3) >&{
-    top: 55px;
+    margin-top: 55px;
   }
   #engineering-systems .top >&{
     background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
@@ -64,20 +64,21 @@ section{
     padding-right: 60px;
     position: relative;
     $img-subdir: $images_dir + 'engineering/';
+    height:auto;
     &:nth-child(1){
       background-image: url($img-subdir + 'section1.jpg');
       background-position: 23px;
-      height: 352px;
+      min-height: 352px;
     }
     &:nth-child(2){
       background-image: url($img-subdir + 'section2-leaf.jpg');
       background-position: 25px 54px;
-      height: 266px;
+      min-height: 266px;
     }
     &:nth-child(3){
       background-image: url($img-subdir + 'section3.gif');
       background-position: 46px;
-      height: 301px;
+      min-height: 301px;
     }
   }
 }
