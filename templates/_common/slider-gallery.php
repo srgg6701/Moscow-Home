@@ -3,7 +3,9 @@
         imgBlockPrevWidth = 107,
         prevMargin =21;
     window.onload=function(){
-        var gIndex= 0, /*loader, */ pixContainer, pixContainerMini, indicators;
+        var gIndex= 0,
+            pixContainer,
+            pixContainerMini/*, indicators*/; // генерация индикаторов закомментирована в templates/_common/gallery_main.php
         for(var section_name in Pix){   //console.log(section_name); // Шульгино, Молоденово ...
             gIndex++; //console.dir(gIndex,Pix[section_name]);
             <?php /*
@@ -16,7 +18,7 @@
                                         3: "IMG_6804.jpg"   */ ?>
             //loader=document.getElementById('loader-wait-'+gIndex);
             pixContainer=document.getElementById('pix-'+gIndex);
-            indicators=getIndicator(gIndex);
+            // indicators=getIndicator(gIndex); // генерация индикаторов закомментирована в templates/_common/gallery_main.php
             pixContainerMini=document.getElementById('pix-mini-'+gIndex);
             // установить ширину контейнера изображений
             pixContainer.style.width=imgBlockWidth*Pix[section_name]['images'].length+'px';
@@ -157,10 +159,9 @@ function handleSlides(direction,gIndex,mini){
         var Px=getPixBlock(gIndex,mini),
             sliderBox=Px.sliderBox,
             sliderBoxImgsStr=Px.sliderBoxImgsStr,
-            indicators=getIndicator(gIndex),
-            indicator=jQuery('.active', indicators);
-            if(!mini)
-                jQuery('div.active',indicators).removeClass('active');
+            /*  indicators=getIndicator(gIndex),
+                indicator=jQuery('.active', indicators);
+                if(!mini) jQuery('div.active',indicators).removeClass('active'); */ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
             //console.log('active indicator: '+indicator);
         shift_offset = (mini)? imgBlockPrevWidth+prevMargin:imgBlockWidth;
         order = 'last'; //console.log('direction: '+direction);
@@ -168,7 +169,7 @@ function handleSlides(direction,gIndex,mini){
             order = 'first'; // будем выбирать первую картинку
             // назначить увеличенный отступ слева для контейнера картинок:
             shift_offset*=-1;
-            if(!mini){
+            /*if(!mini){ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
                 if(jQuery(indicator).prev().size()) {
                     jQuery(indicator).prev().addClass('active');
                     //console.log('prev: ');console.dir(jQuery(indicator).prev());
@@ -176,8 +177,8 @@ function handleSlides(direction,gIndex,mini){
                     jQuery('>div',indicators).eq(-1).addClass('active');
                     //console.log('next: ');console.dir(jQuery(indicators));
                 }
-            }
-        }else{
+            }*/
+        }/*else{
             if(!mini){
                 if(jQuery(indicator).next().size()) {
                     jQuery(indicator).next().addClass('active');
@@ -187,7 +188,7 @@ function handleSlides(direction,gIndex,mini){
                     //console.log('prev: ');console.dir(jQuery(indicators));
                 }
             }
-        }
+        }*/ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
         var currLeft=0,
             cnt = 0,
             intval = setInterval(function () {

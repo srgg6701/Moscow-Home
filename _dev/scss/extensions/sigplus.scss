@@ -1,3 +1,14 @@
+#boxplus{
+    .boxplus-viewer:not(.boxplus-hidden){
+    position:inherit;
+    img{
+      position:inherit;
+    }
+    .boxplus-prev, .boxplus-next{
+      top:0;
+    }
+  }
+}
 img {
   .gallery-small .sigplus-image &{
     box-shadow: none !important;

@@ -51,11 +51,11 @@ if (is_dir($dir)) {
                     <div id="images-container-<?php echo $gIndex; ?>">
                         <div id="pix-<?php echo $gIndex; ?>"></div>
                         <div id="loader-wait-<?php echo $gIndex; ?>"></div>
-                        <div class="indicators" id="indicator-<?php echo $gIndex; ?>">
+                        <?php /*<div class="indicators" id="indicator-<?php echo $gIndex; ?>">
                         <?php for($k=0;$k<$j;$k++):?>
                             <div<?php if(!$k):?> class="active"<?php endif;?>></div>
                         <?php endfor;?>
-                        </div>
+                        </div><? */?>
                     </div>
                 </div>
             </div>

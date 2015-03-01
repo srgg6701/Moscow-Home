@@ -2668,26 +2668,21 @@ footer div.section {
   zoom: 0.45;
 }
 
-/* line 26, ../../../_dev/scss/slider/slider.scss */
-.indicators div {
-  background-color: #ddd;
-  border: solid 4px white;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 3px 6px 1px;
-  -moz-box-shadow: 2px 3px 6px 1px;
-  box-shadow: 2px 3px 6px 1px;
-  display: inline-block;
-  height: 15px;
-  margin: auto 6px;
-  width: 15px;
-}
-/* line 35, ../../../_dev/scss/slider/slider.scss */
-.indicators div.active {
-  background-color: #a24a24;
+/* line 25, ../../../_dev/scss/slider/slider.scss */
+div {
+  /*.indicators &{
+    background-color: #ddd;
+    border: solid 4px white;
+    @include border-radius(50%);
+    @include box-shadow(2px 3px 6px 1px);
+    display: inline-block;
+    height: 15px;
+    margin: auto 6px;
+    width: 15px;
+    &.active{
+      background-color: #a24a24;
+    }
+  }*/
 }
 
 /* line 42, ../../../_dev/scss/slider/slider.scss */
@@ -2721,14 +2716,15 @@ body.gallery .gallery-pointers-aside {
   margin: auto;
 }
 
-/* line 67, ../../../_dev/scss/slider/slider.scss */
-body.gallery .indicators {
-  height: 30px;
-  position: relative;
-  top: 90%;
-  text-align: center;
-}
-
+/*.indicators{
+  body.gallery &{
+    //background: #FFA500;
+    height: 30px;
+    position: relative;
+    top: 90%;
+    text-align: center;
+  }
+}*/
 /* line 76, ../../../_dev/scss/slider/slider.scss */
 body.gallery .img, body.gallery .img-mini {
   background-repeat: no-repeat;
@@ -2989,54 +2985,67 @@ body.gallery [id^="slider-mini-"] {
 }
 
 /* line 2, ../../../_dev/scss/extensions/sigplus.scss */
+#boxplus .boxplus-viewer:not(.boxplus-hidden) {
+  position: inherit;
+}
+/* line 4, ../../../_dev/scss/extensions/sigplus.scss */
+#boxplus .boxplus-viewer:not(.boxplus-hidden) img {
+  position: inherit;
+}
+/* line 7, ../../../_dev/scss/extensions/sigplus.scss */
+#boxplus .boxplus-viewer:not(.boxplus-hidden) .boxplus-prev, #boxplus .boxplus-viewer:not(.boxplus-hidden) .boxplus-next {
+  top: 0;
+}
+
+/* line 13, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small .sigplus-image img {
   box-shadow: none !important;
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
 }
 
-/* line 9, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 20, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-middle .slideplus {
   height: 280px !important;
 }
-/* line 12, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 23, ../../../_dev/scss/extensions/sigplus.scss */
 #decoration .gallery-middle .slideplus {
   height: 143px !important;
 }
-/* line 21, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 32, ../../../_dev/scss/extensions/sigplus.scss */
 .slideplus .slideplus-prev.slideplus-horizontal.slideplus-large {
   background: url("../images/backgrounds/gallery-pointer-left.png");
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 17, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 28, ../../../_dev/scss/extensions/sigplus.scss */
 .slideplus .slideplus-prev.slideplus-horizontal.slideplus-large:hover {
   opacity: 1;
 }
-/* line 25, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 36, ../../../_dev/scss/extensions/sigplus.scss */
 .slideplus .slideplus-next.slideplus-horizontal.slideplus-large {
   background: url("../images/backgrounds/gallery-pointer-right.png");
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
   opacity: 0.65;
 }
-/* line 17, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 28, ../../../_dev/scss/extensions/sigplus.scss */
 .slideplus .slideplus-next.slideplus-horizontal.slideplus-large:hover {
   opacity: 1;
 }
 
-/* line 31, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 42, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-middle .slideplus-navbar {
   display: none !important;
 }
 
-/* line 35, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 46, ../../../_dev/scss/extensions/sigplus.scss */
 .sigplus-gallery ul > li > div > .captionplus > a > img {
   -webkit-box-shadow: -4px 0px 0px 6px white;
   -moz-box-shadow: -4px 0px 0px 6px white;
   box-shadow: -4px 0px 0px 6px white;
 }
 
-/* line 38, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 49, ../../../_dev/scss/extensions/sigplus.scss */
 .sigplus-gallery {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -3045,12 +3054,12 @@ body.gallery [id^="slider-mini-"] {
   -ms-user-select: none;
   user-select: none;
 }
-/* line 40, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 51, ../../../_dev/scss/extensions/sigplus.scss */
 .sigplus-gallery.sigplus-center {
   display: table;
   margin: auto;
 }
-/* line 44, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 55, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small .sigplus-gallery {
   -webkit-transform: scale(0.61) translateX(-306px) translateY(-30px);
   -moz-transform: scale(0.61) translateX(-306px) translateY(-30px);
@@ -3059,12 +3068,12 @@ body.gallery [id^="slider-mini-"] {
   transform: scale(0.61) translateX(-306px) translateY(-30px);
 }
 
-/* line 49, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 60, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small .slideplus-paging {
   display: none;
 }
 
-/* line 54, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 65, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small span.slideplus-navbutton {
   background-color: #FFF !important;
   position: absolute;
@@ -3074,12 +3083,12 @@ body.gallery [id^="slider-mini-"] {
   -o-transform: translateY(-91px);
   transform: translateY(-91px);
 }
-/* line 58, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 69, ../../../_dev/scss/extensions/sigplus.scss */
 .gallery-small span.slideplus-navbutton.slideplus-next {
   right: 7px;
 }
 
-/* line 64, ../../../_dev/scss/extensions/sigplus.scss */
+/* line 75, ../../../_dev/scss/extensions/sigplus.scss */
 #decoration .slideplus-next.slideplus-horizontal.slideplus-large {
   left: 444px;
 }
