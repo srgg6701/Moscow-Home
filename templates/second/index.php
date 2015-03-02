@@ -13,6 +13,7 @@ $common_dir = '_common/';
     <?php require_once $tmpl_common . $common_dir . 'head.php'; ?>
 </head>
 <body>
+<?php   require_once $tmpl_common . $common_dir . 'mail_informer.php';?>
 <div id="<?php   // @pageclass ─ извлекается в подключаемом файле (head.php)
     echo $pageclass;?>" class="container">
     <?php

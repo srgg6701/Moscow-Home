@@ -85,6 +85,17 @@ input[name="attach-file"]{
   width: 174px;
   z-index: -1;
 }
+#mail-informer{
+  background-color: #CBEBFF;
+  @include box-shadow(0 0 0 6px rgba(100, 100, 255, 0.6));
+  border-radius: 1px;
+  color: #000000;
+  font-family: $font-second;
+  left: 12px;
+  padding: 10px 20px;
+  top: 13px;
+  z-index: 1;
+}
 #pointers-box{
   bottom:175px;
   position: absolute;

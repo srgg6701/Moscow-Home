@@ -1,13 +1,12 @@
 <?php
 $app = JFactory::getApplication();
 if(isset($_POST['jform'])){
-    $form=$_POST['jform'];
-    var_dump("<pre>",$form,"</pre>");
+    require_once 'mail.php';
+    $mail_sent=true;
 }
 
 $common_path=$this->baseurl . "/templates/" . $common_dir;?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
-<!--<script src="<?php /*echo $common_path;*/?>js/min/jquery.min.js"></script>-->
 <script src="<?php echo $common_path;?>js/common.js"></script>
 <?php   $menu=$app->getMenu();
         $menu_active = $menu->getActive();

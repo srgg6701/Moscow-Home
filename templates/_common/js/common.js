@@ -111,20 +111,20 @@ jQuery(function(){
  * @returns {*}
  */
 function handleAskFormSection(set_data){
-    //console.log('%cset_data value: ['+set_data+']','color:blue; font-style:italic');
+    console.log('%cset_data value: ['+set_data+']','color:blue; font-style:italic');
     var $=jQuery,
         dataStat ='data-state',
         inp=$('header>section>section:last-child');
     if (set_data===false) {
         $(inp).removeAttr(dataStat);
-        //console.log('%c'+dataStat+' (removed): '+$(inp).attr(dataStat),'color: brown');
+        console.log('%c'+dataStat+' (removed): '+$(inp).attr(dataStat),'color: brown');
     }else if(set_data){
         if(set_data=='check'){
-            //console.log('%c'+dataStat+' checking: '+$(inp).attr(dataStat),'color: green');
+            console.log('%c'+dataStat+' checking: '+$(inp).attr(dataStat),'color: green');
             return $(inp).attr(dataStat);
         }else {
             $(inp).attr(dataStat,1);
-            //console.log('%c'+dataStat+' (set): '+$(inp).attr(dataStat),'color: goldenrod');
+            console.log('%c'+dataStat+' (set): '+$(inp).attr(dataStat),'color: goldenrod');
         }
     }
     return inp;
@@ -230,7 +230,7 @@ function handleInputs(state){
 function closeParent(event,layers){
     //console.log(layers);
     //console.dir(event.currentTarget);
-    jQuery(event.currentTarget).parent().fadeOut(200, function(){
+    jQuery(event.currentTarget).parent().fadeOut(400, function(){
         if(layers){
             for(var i= 0, j=layers.length; i<j; i++){
                 jQuery('#'+layers[i]).fadeOut(200);

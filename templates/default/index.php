@@ -15,6 +15,7 @@ $common_dir = '_common/';
 if($pageclass):
     echo $pageclass;
 else:?>no-overflow<?php endif;?>">
+<?php   require_once $tmpl_common . $common_dir . 'mail_informer.php';?>
 <div id="index">
 <?php
 $header_class='absolute';
