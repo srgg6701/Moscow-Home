@@ -75,13 +75,14 @@
   text-align: center;
 }
 input[name="attach-file"]{
-  position: absolute;
   //background: yellow;
-  height: 31px;
-  width: 174px;
-  bottom: 64px;
-  left: 0px;
   border-radius: 6px;
+  bottom: 60px;
+  color:wheat;
+  height: 31px;
+  left: 88px;
+  position: absolute;
+  width: 174px;
   z-index: -1;
 }
 #pointers-box{

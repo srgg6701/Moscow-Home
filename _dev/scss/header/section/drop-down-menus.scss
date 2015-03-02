@@ -24,6 +24,8 @@ button{
     &.attach-file{
       margin-top: -6px;
       margin-bottom: -3px;
+      position: relative;
+      z-index: 1;
     }
   }
 }
