@@ -964,9 +964,11 @@ header > section > section:nth-child(3) button.print {
 header > section > section:nth-child(4) button.attach-file {
   margin-top: -6px;
   margin-bottom: -3px;
+  position: relative;
+  z-index: 1;
 }
 
-/* line 31, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 33, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header aside > div {
   color: #933;
   cursor: pointer;
@@ -975,36 +977,36 @@ header aside > div {
   padding: 14px 18px 13px 18px;
   text-decoration: underline;
 }
-/* line 39, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 41, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header aside > div:hover, header aside > div.bgActiveCarrot {
   background-color: #bf451e;
   color: white;
 }
-/* line 45, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 47, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div {
   margin: auto;
   width: 948px;
   overflow: auto;
 }
-/* line 48, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 50, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div:not(.custom-centered) {
   width: 899px;
 }
-/* line 52, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 54, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(1) > div {
   padding-left: 264px;
 }
-/* line 58, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 60, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) > div > div {
   margin-bottom: 31px;
   margin-top: 21px;
 }
-/* line 62, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 64, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div {
   margin-bottom: -9px;
   width: 370px;
 }
-/* line 65, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 67, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div.bottom-bg {
   background: url("../images/backgrounds/tile-contacts-dark.png");
   bottom: 0px;
@@ -1016,19 +1018,19 @@ header > section > section:nth-child(4) > div.bottom-bg {
   z-index: 0;
 }
 
-/* line 78, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 80, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form {
   overflow: hidden;
   margin: 0 6px 0;
 }
 
-/* line 84, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 86, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header div.menu-container h3 {
   color: #bf451e;
   font-family: PlumbMedium;
 }
 
-/* line 90, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 92, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section h4 {
   font-family: PlumbLight;
   font-size: 36px;
@@ -1036,17 +1038,17 @@ header > section > section h4 {
   margin-top: -2px;
   text-transform: uppercase;
 }
-/* line 97, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 99, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) h4 {
   color: white;
   text-align: center;
 }
 
-/* line 103, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 105, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input {
   color: #5d534e;
 }
-/* line 107, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 109, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type="tel"], header > section input[type="email"], header > section input[type="text"] {
   display: block;
   height: 36px;
@@ -1062,7 +1064,7 @@ header > section input[type="tel"], header > section input[type="email"], header
   border: solid 1px #CCC;
   width: 100%;
 }
-/* line 115, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 117, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type=""] {
   border-radius: 20px;
   display: block;
@@ -1075,7 +1077,7 @@ header > section input[type=""] {
   transform: translateX(-50%);
   width: 150px;
 }
-/* line 129, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 131, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) input[type="submit"] {
   background-color: #FFF;
   border: none;
@@ -1090,86 +1092,86 @@ header > section > section:nth-child(4) input[type="submit"] {
   width: 150px;
   z-index: 2;
 }
-/* line 145, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 147, ../../../_dev/scss/header/section/drop-down-menus.scss */
 form p:nth-child(2) input, form p:nth-child(3) input {
   margin-top: 6px;
 }
 
-/* line 150, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 152, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li {
   float: left;
   padding-left: 50px;
   padding-right: 20px;
 }
-/* line 156, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 158, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   background: url("../images/service-design.png") no-repeat 0 7px;
 }
-/* line 156, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 158, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   background: url("../images/service-building.png") no-repeat 0 7px;
 }
-/* line 156, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 158, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   background: url("../images/service-facade.png") no-repeat 0 7px;
 }
-/* line 156, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 158, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   background: url("../images/service-engineering.png") no-repeat 0 7px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 165, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   width: 201px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 165, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   width: 241px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 165, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   width: 215px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 165, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   width: 154px;
 }
 
-/* line 171, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 173, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p {
   color: white;
   text-transform: uppercase;
 }
-/* line 175, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 177, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2), header > section form p:nth-child(3) {
   float: left;
   margin-top: 14px;
   width: 50%;
 }
-/* line 180, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 182, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2) {
   padding-right: 11px;
 }
-/* line 183, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 185, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(3) {
   padding-left: 10px;
 }
-/* line 186, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 188, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(4) {
   float: left;
   margin-top: 15px;
   width: 100%;
 }
-/* line 192, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 194, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div > p {
   width: 450px;
 }
-/* line 195, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 197, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) p {
   font-size: 14px;
   line-height: 13px;
 }
 
-/* line 201, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 203, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section {
   -webkit-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
@@ -1182,7 +1184,7 @@ header > section {
   top: 40px;
   z-index: 1;
 }
-/* line 211, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 213, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section {
   background-color: white;
   border-top: solid 1px #CACACA;
@@ -1190,12 +1192,12 @@ header > section > section {
   margin-top: 23px;
   padding: 22px 24px 26px;
 }
-/* line 217, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 219, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) {
   background: url("../images/backgrounds/tile-contacts.png");
 }
 
-/* line 223, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 225, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section textarea {
   display: block;
   height: 85px;
@@ -1212,14 +1214,14 @@ header > section textarea {
   border: solid 1px #CCC;
 }
 
-/* line 232, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 234, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) ul {
   margin-bottom: 4px;
   margin-top: 6px;
   width: 100%;
 }
 
-/* line 238, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 240, ../../../_dev/scss/header/section/drop-down-menus.scss */
 #waiting-map {
   background-color: #999;
   border-radius: 20px;
@@ -3172,16 +3174,17 @@ body.gallery [id^="slider-mini-"] {
 
 /* line 77, ../../../_dev/scss/default.scss */
 input[name="attach-file"] {
-  position: absolute;
-  height: 31px;
-  width: 174px;
-  bottom: 64px;
-  left: 0px;
   border-radius: 6px;
+  bottom: 60px;
+  color: wheat;
+  height: 31px;
+  left: 88px;
+  position: absolute;
+  width: 174px;
   z-index: -1;
 }
 
-/* line 87, ../../../_dev/scss/default.scss */
+/* line 88, ../../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
@@ -3189,18 +3192,18 @@ input[name="attach-file"] {
   z-index: 2;
 }
 
-/* line 93, ../../../_dev/scss/default.scss */
+/* line 94, ../../../_dev/scss/default.scss */
 #pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 96, ../../../_dev/scss/default.scss */
+/* line 97, ../../../_dev/scss/default.scss */
 #shell {
   z-index: 11;
 }
 
-/* line 99, ../../../_dev/scss/default.scss */
+/* line 100, ../../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -3208,7 +3211,7 @@ input[name="attach-file"] {
   width: 100%;
 }
 
-/* line 105, ../../../_dev/scss/default.scss */
+/* line 106, ../../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -3217,7 +3220,7 @@ input[name="attach-file"] {
   width: 100%;
 }
 
-/* line 112, ../../../_dev/scss/default.scss */
+/* line 113, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;

@@ -63,7 +63,7 @@ jQuery(function(){
             index=$(this).index(),
             bgClass='bgActiveCarrot',
             visibleClass ='visible',
-            setVisible=function(){
+            setVisible=function(){ console.log('setVisible called');
                 //console.group('element index '+index);
                     //console.dir(sections);
                 $(sections).removeClass(visibleClass) // visible
@@ -76,10 +76,15 @@ jQuery(function(){
             $(submenu_items).removeClass(bgClass);
             $(this).addClass(bgClass);
         }
-        if(event.type=='mouseleave'){
+        if(event.type=='mouseleave'){ console.log('mouseleave');
             index=$(this).parent().find('div.'+bgClass).index();
             setVisible();
         }
+    });
+    // Обработать поле загрузки файла
+    $('input[name="attach-file"]').on('change', function(){
+        this.style.zIndex=0;
+        handleAskFormSection(true); // set attr data-state to 1
     });
     // Открыть подменю "Консультация" кликом по кнопке "Перезвоните мне"
     $('.bg-recall').on('click', function(){
@@ -101,20 +106,46 @@ jQuery(function(){
     });
 });
 /**
+ * Получить/обработать данне секции с формой отправки, чтобы знать, прятать её или нет
+ * @param set_data
+ * @returns {*}
+ */
+function handleAskFormSection(set_data){
+    //console.log('%cset_data value: ['+set_data+']','color:blue; font-style:italic');
+    var $=jQuery,
+        dataStat ='data-state',
+        inp=$('header>section>section:last-child');
+    if (set_data===false) {
+        $(inp).removeAttr(dataStat);
+        //console.log('%c'+dataStat+' (removed): '+$(inp).attr(dataStat),'color: brown');
+    }else if(set_data){
+        if(set_data=='check'){
+            //console.log('%c'+dataStat+' checking: '+$(inp).attr(dataStat),'color: green');
+            return $(inp).attr(dataStat);
+        }else {
+            $(inp).attr(dataStat,1);
+            //console.log('%c'+dataStat+' (set): '+$(inp).attr(dataStat),'color: goldenrod');
+        }
+    }
+    return inp;
+}
+/**
  * Управлять видимостью контейнера с меню
  */
 function setVisibilityState(event,menu_to_show_index){
     var active_link,            // Состояние видимости "ссылок"
         visibility_container,   // Состояние видимсти "контейнера меню"
-        menu_index;             // Индекс таргет-меню
+        menu_index,             // Индекс таргет-меню
+        $=jQuery;
     // перегрузить функцию:
     setVisibilityState=function (event,menu_to_show_index) {
         if(!isNaN(parseInt(menu_to_show_index)))
             menu_index=menu_to_show_index;
         var target_obj=event.currentTarget.tagName.toLowerCase(),
             action=event.type,
-            active='active';
-        //console.log('%caction: '+action,'color:red');console.log('%ctarget: '+target_obj,'color:green');
+            active='active',
+            visible,
+            askBlock=handleAskFormSection(); //console.log('%caction: '+action,'color:navy'); //console.log('%ctarget: '+target_obj,'color:green');
         if(action=='mouseenter'){
             if(target_obj=='a') {
                 active_link=active;
@@ -122,21 +153,31 @@ function setVisibilityState(event,menu_to_show_index){
             }else{
                 active_link=true;
                 visibility_container=active;
+                if($(askBlock).index()==menu_index){
+                    handleAskFormSection(false); // remove data-state
+                }
             }
-            console.log('%cvisibility_container: '+visibility_container,'color:violet');
-            console.log('%cactive_link: '+active_link,'color:blue');
+            //console.log('%cvisibility_container: '+visibility_container,'color:violet');
+            //console.log('%cactive_link: '+active_link,'color:blue');
         }else
           if(action=='mouseleave' && (visibility_container!=active||active_link!=active)){ // уходим с объекта
-              visibility_container=false;
-              active_link=false;
+              if($(askBlock).index()==menu_index){ // если блок с формой обратной связи
+                  if(handleAskFormSection('check')){ // проверить data-state
+                      visible=true;
+                  }
+              }
+              if(!visible){
+                  visibility_container=false;
+                  active_link=false;
+              }
             //console.log('%cvisibility_container: '+visibility_container,'color:violet');
             //console.log('%cactive_link: '+active_link,'color:blue');
         }
         var visibility_stat=(active_link || visibility_container);
-        jQuery(getInnerMenus()).hide();
+        $(getInnerMenus()).hide();
         if(visibility_stat){
-            jQuery(getMenusContainer()).show(); // отобразить контейнер с меню
-            jQuery(getInnerMenus()).eq(menu_index).show();
+            $(getMenusContainer()).show(); // отобразить контейнер с меню
+            $(getInnerMenus()).eq(menu_index).show();
         }else{
             hideAll();
         }
