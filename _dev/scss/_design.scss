@@ -152,30 +152,6 @@ div{
       top: $height - $offset;
     }
   }
-  #design &#frame{
-    background: url($images_dir + 'design/frame.png') no-repeat;
-    height: 282px;
-    position: absolute;
-    top: 35px;
-    right: 1.2%;
-    width: 272px;
-  }
-  #design &#lamp{
-    background: url($images_dir + 'design/lamp.png') no-repeat;
-    height: 219px;
-    position: absolute;
-    right: 23%;
-    top: -14px;
-    width: 118px;
-  }
-  #design &#sofa{
-    background: url($images_dir + 'design/sofa.png') no-repeat;
-    height: 156px;
-    position: absolute;
-    right: 7%;
-    top: 333px;
-    width: 282px;
-  }
 }
 h1{
   #design .top &{//.relative

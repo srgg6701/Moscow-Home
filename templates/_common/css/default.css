@@ -1585,35 +1585,8 @@ footer div.section {
   bottom: 8px;
   top: 107px;
 }
-/* line 155, ../../../_dev/scss/_design.scss */
-#design div#frame {
-  background: url("../images/design/frame.png") no-repeat;
-  height: 282px;
-  position: absolute;
-  top: 35px;
-  right: 1.2%;
-  width: 272px;
-}
-/* line 163, ../../../_dev/scss/_design.scss */
-#design div#lamp {
-  background: url("../images/design/lamp.png") no-repeat;
-  height: 219px;
-  position: absolute;
-  right: 23%;
-  top: -14px;
-  width: 118px;
-}
-/* line 171, ../../../_dev/scss/_design.scss */
-#design div#sofa {
-  background: url("../images/design/sofa.png") no-repeat;
-  height: 156px;
-  position: absolute;
-  right: 7%;
-  top: 333px;
-  width: 282px;
-}
 
-/* line 181, ../../../_dev/scss/_design.scss */
+/* line 157, ../../../_dev/scss/_design.scss */
 #design .top h1 {
   line-height: 61px;
   margin: 44px auto auto;
@@ -1621,44 +1594,44 @@ footer div.section {
   width: 650px;
 }
 
-/* line 189, ../../../_dev/scss/_design.scss */
+/* line 165, ../../../_dev/scss/_design.scss */
 #design .content h2 {
   color: #5d534e;
   font: 48px/50px PlumbLight;
   font-weight: 100;
   margin: 63px auto 37px;
 }
-/* line 195, ../../../_dev/scss/_design.scss */
+/* line 171, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(1) h2 {
   margin-top: 0;
 }
-/* line 198, ../../../_dev/scss/_design.scss */
+/* line 174, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(2) h2 {
   margin-bottom: 26px;
   margin-top: 51px;
   padding-right: 100px;
 }
-/* line 203, ../../../_dev/scss/_design.scss */
+/* line 179, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(3) h2 {
   margin-bottom: 26px;
   margin-top: 53px;
   padding-right: 80px;
 }
-/* line 208, ../../../_dev/scss/_design.scss */
+/* line 184, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(4) h2 {
   margin-top: 52px;
 }
-/* line 211, ../../../_dev/scss/_design.scss */
+/* line 187, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(5) h2 {
   margin-top: 52px;
   padding-right: 50px;
 }
-/* line 215, ../../../_dev/scss/_design.scss */
+/* line 191, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(6) h2 {
   padding-bottom: 41px;
   padding-top: 73px;
 }
-/* line 219, ../../../_dev/scss/_design.scss */
+/* line 195, ../../../_dev/scss/_design.scss */
 #design #visual-bottom h2.header-big {
   color: #a64726;
   font-weight: 100;
@@ -1674,55 +1647,55 @@ footer div.section {
   transform: translateX(40px);
 }
 
-/* line 233, ../../../_dev/scss/_design.scss */
+/* line 209, ../../../_dev/scss/_design.scss */
 #our-works ul.table li {
   background: url("../images/design/40specs.jpg") no-repeat;
   position: relative;
 }
-/* line 238, ../../../_dev/scss/_design.scss */
+/* line 214, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(1) {
   background-position: 22px 0;
 }
-/* line 238, ../../../_dev/scss/_design.scss */
+/* line 214, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(2) {
   background-position: -168px 0;
 }
-/* line 238, ../../../_dev/scss/_design.scss */
+/* line 214, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(3) {
   background-position: -354px 0;
 }
-/* line 238, ../../../_dev/scss/_design.scss */
+/* line 214, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(4) {
   background-position: -538px 0;
 }
-/* line 238, ../../../_dev/scss/_design.scss */
+/* line 214, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(5) {
   background-position: -728px 0;
 }
 
-/* line 246, ../../../_dev/scss/_design.scss */
+/* line 222, ../../../_dev/scss/_design.scss */
 #design main {
   background: url("../images/backgrounds/tile-design-main.png") white;
   padding-top: 63px;
 }
 
-/* line 252, ../../../_dev/scss/_design.scss */
+/* line 228, ../../../_dev/scss/_design.scss */
 #our-works p {
   color: #5d534e;
   text-align: center;
 }
-/* line 256, ../../../_dev/scss/_design.scss */
+/* line 232, ../../../_dev/scss/_design.scss */
 #our-works p.header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
-/* line 260, ../../../_dev/scss/_design.scss */
+/* line 236, ../../../_dev/scss/_design.scss */
 #our-works p.header + p {
   color: #5d534e;
   font-size: 17px;
   margin-top: -21px;
 }
-/* line 266, ../../../_dev/scss/_design.scss */
+/* line 242, ../../../_dev/scss/_design.scss */
 #design .top-container p {
   font-size: 18px;
   color: #3f3f3f;
@@ -1732,24 +1705,24 @@ footer div.section {
   top: 23px;
   width: 710px;
 }
-/* line 275, ../../../_dev/scss/_design.scss */
+/* line 251, ../../../_dev/scss/_design.scss */
 #design .content p {
   font: 18px/20px Arial, Helvetica, sans-serif;
   margin-bottom: 32px;
 }
-/* line 279, ../../../_dev/scss/_design.scss */
+/* line 255, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(4) p {
   padding-right: 120px;
 }
-/* line 282, ../../../_dev/scss/_design.scss */
+/* line 258, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(5) p {
   padding-right: 20px;
 }
-/* line 285, ../../../_dev/scss/_design.scss */
+/* line 261, ../../../_dev/scss/_design.scss */
 #design .top-container h1 + p {
   top: 27px;
 }
-/* line 288, ../../../_dev/scss/_design.scss */
+/* line 264, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > div p {
   color: white;
   font-size: 17px;
@@ -1758,35 +1731,35 @@ footer div.section {
   margin-right: -60px;
 }
 
-/* line 297, ../../../_dev/scss/_design.scss */
+/* line 273, ../../../_dev/scss/_design.scss */
 #design .content > section {
   overflow: hidden;
 }
-/* line 299, ../../../_dev/scss/_design.scss */
+/* line 275, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(odd):not(:first-child) {
   background-color: #f6f6f6;
 }
-/* line 304, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(1) {
   min-height: 407px;
 }
-/* line 304, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(2) {
   min-height: 444px;
 }
-/* line 304, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(3) {
   min-height: 381px;
 }
-/* line 304, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(4) {
   min-height: 340px;
 }
-/* line 304, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(5) {
   min-height: 381px;
 }
-/* line 310, ../../../_dev/scss/_design.scss */
+/* line 286, ../../../_dev/scss/_design.scss */
 #design section#visual-bottom {
   background: url("../images/design/visual-bottom.jpg");
   background-size: cover;
@@ -1795,13 +1768,13 @@ footer div.section {
   height: 454px;
 }
 
-/* line 319, ../../../_dev/scss/_design.scss */
+/* line 295, ../../../_dev/scss/_design.scss */
 #our-works ul.table a span {
   display: block;
   white-space: nowrap;
 }
 
-/* line 326, ../../../_dev/scss/_design.scss */
+/* line 302, ../../../_dev/scss/_design.scss */
 #our-works ul.table {
   height: 190px;
   margin: 42px auto;
@@ -2542,8 +2515,8 @@ div {
   background: url("../images/parallax/facade/tile.png");
   height: 236px;
   width: 185px;
-  left: 14%;
-  top: 3891px;
+  left: 4%;
+  top: 195px;
 }
 /* line 63, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para1 {
@@ -2576,7 +2549,7 @@ div {
   height: 152px;
   width: 152px;
   right: 22%;
-  top: 3864px;
+  top: 3500px;
   z-index: 1;
 }
 /* line 97, ../../../_dev/scss/parallax.scss */
@@ -2611,7 +2584,7 @@ div {
   height: 286px;
   width: 174px;
   right: 7%;
-  top: 3759px;
+  top: 650px;
 }
 /* line 131, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para3 {
@@ -2624,6 +2597,15 @@ div {
 }
 
 /* line 141, ../../../_dev/scss/parallax.scss */
+#design #para4 {
+  background: url("../images/design/frame.png") no-repeat;
+  height: 282px;
+  position: absolute;
+  top: -120px;
+  right: 1.2%;
+  width: 272px;
+}
+/* line 149, ../../../_dev/scss/parallax.scss */
 #decoration #para4 {
   background: url("../images/parallax/decoration/trowel.png");
   height: 293px;
@@ -2631,7 +2613,7 @@ div {
   right: 124px;
   top: 568px;
 }
-/* line 149, ../../../_dev/scss/parallax.scss */
+/* line 157, ../../../_dev/scss/parallax.scss */
 #facade #para4 {
   background: url("../images/parallax/facade/stone.png");
   height: 177px;
@@ -2639,7 +2621,7 @@ div {
   left: 10%;
   top: 4170px;
 }
-/* line 157, ../../../_dev/scss/parallax.scss */
+/* line 165, ../../../_dev/scss/parallax.scss */
 #engineering-systems #para4 {
   background: url("../images/parallax/engineering/wrench.png");
   height: 116px;
@@ -2648,14 +2630,33 @@ div {
   top: 356px;
 }
 
-/* line 166, ../../../_dev/scss/parallax.scss */
+/* line 174, ../../../_dev/scss/parallax.scss */
+#design #para5 {
+  background: url("../images/design/lamp.png") no-repeat;
+  height: 219px;
+  position: absolute;
+  right: 23%;
+  top: 800px;
+  width: 118px;
+}
+/* line 182, ../../../_dev/scss/parallax.scss */
 #facade #para5 {
   background: url("../images/parallax/facade/roll-brush.png");
   height: 319px;
   width: 275px;
   right: 11%;
-  top: 3500px;
+  top: -280px;
   z-index: 1;
+}
+
+/* line 193, ../../../_dev/scss/parallax.scss */
+#design #para6 {
+  background: url("../images/design/sofa.png") no-repeat;
+  height: 156px;
+  position: absolute;
+  right: 7%;
+  top: -900px;
+  width: 282px;
 }
 
 /* line 8, ../../../_dev/scss/slider/slider.scss */
@@ -3196,7 +3197,7 @@ input[name="attach-file"] {
   left: 12px;
   padding: 10px 20px;
   top: 13px;
-  z-index: 1;
+  z-index: 11;
 }
 
 /* line 99, ../../../_dev/scss/default.scss */

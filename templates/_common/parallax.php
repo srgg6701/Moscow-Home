@@ -2,11 +2,21 @@
 $div_count=4;
 switch($pageclass):
     case 'design':
-        $div_count=3;
-        $coeffx=array(1.3,0.7,1);
+        $div_count=6;
+        $coeffx=array(  1.3,
+                        0.7,
+                        1,
+                        0.87,      // frame
+                        0.9,    // lamp
+                        0.905     // sofa
+                    );
         break;
     case 'decoration':
-        $coeffx=array(1,0.7,1,1.2);
+        $coeffx=array(  1,
+                        0.7,
+                        1,
+                        1.2
+                    );
         break;
     case 'engineering-systems':
         $coeffx=array(  1,      // карандаш
@@ -17,11 +27,11 @@ switch($pageclass):
         break;
     case 'facade':
         $div_count=5;
-        $coeffx=array(  0.66,   // черепица
+        $coeffx=array(  1.2,    // черепица
                         0.66,   // плитка
-                        0.66,   // краска
+                        0.905,  // краска
                         0.68,   // камень
-                        0.75//67    // валик
+                        1.0     //  67    // валик
                     );
         break;
 endswitch;

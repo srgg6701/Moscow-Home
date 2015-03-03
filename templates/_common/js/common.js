@@ -228,9 +228,10 @@ function handleInputs(state){
  * @param layers
  */
 function closeParent(event,layers){
-    //console.log(layers);
-    //console.dir(event.currentTarget);
+    console.log('closeParent');
+    console.dir(jQuery(event.currentTarget).parent());
     jQuery(event.currentTarget).parent().fadeOut(400, function(){
+        console.log('closing...');
         if(layers){
             for(var i= 0, j=layers.length; i<j; i++){
                 jQuery('#'+layers[i]).fadeOut(200);
