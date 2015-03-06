@@ -53,7 +53,7 @@
 
         image.onload = function () {
             console.info("%cImage "+pix[0]+" is loaded!",'color:blue');
-            loader.remove();
+            jQuery(loader).remove();
             pixContainer.innerHTML='<div class="img" style="background: url(images\/slides\/<?php echo $img_dir;?>' + pix[0] + ') no-repeat center; background-size: cover; width:<?php echo $pixBlockWidth;?>;">';
             for(var i=1, j=pix.length; i<j; i++) {
                 pixContainer.innerHTML+='<div class="img" style="background: url(images\/slides\/<?php echo $img_dir;?>' + pix[i] + ') no-repeat center; background-size: cover; width:<?php echo $pixBlockWidth;?>;">';
@@ -119,7 +119,7 @@
                         clearInterval(intval);
                         var tImage = document.querySelector(sliderBoxImgsStr + ':' + order + '-child'),
                             newImage = tImage.cloneNode(true); // склонировать крайнюю картинку для последующего перемещения в начало или конец блока
-                        tImage.remove(); //удалить крайнюю картинку
+                        jQuery(tImage).remove(); //удалить крайнюю картинку
                         // append/prependTo
                         /*  переместить первую или последнюю картинку соответственно
                          в конец или начало контейнера с изображениями */

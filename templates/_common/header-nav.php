@@ -3,7 +3,7 @@
         Выбор и последовательность размещения/вложения элементов
         header > section > section и nav a
         должна быть соблюдена для правильной работы обработчика выпадающего меню!*/
-?><header<?php if(isset($header_class)):?> class="absolute"<?php endif;?>>
+?><header>
     <nav>
 <?php if ($this->countModules('header-nav')) : ?>
     <jdoc:include type="modules" name="header-nav" style="none" />

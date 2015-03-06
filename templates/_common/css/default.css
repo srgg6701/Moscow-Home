@@ -121,7 +121,7 @@ ul.social a {
   width: 94%;
 }
 /* line 68, ../../../_dev/scss/tags.scss */
-#pointers-aside > aside, .gallery-pointers-aside > aside {
+.pointers-aside > aside, .gallery-pointers-aside > aside {
   background-color: black;
   background-position: center;
   background-position-y: 16px;
@@ -138,18 +138,18 @@ ul.social a {
   transition: opacity 0.3s ease;
 }
 /* line 81, ../../../_dev/scss/tags.scss */
-#pointers-aside > aside:hover, .gallery-pointers-aside > aside:hover {
+.pointers-aside > aside:hover, .gallery-pointers-aside > aside:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 /* line 84, ../../../_dev/scss/tags.scss */
-#pointers-aside > aside:nth-child(1), .gallery-pointers-aside > aside:nth-child(1) {
+.pointers-aside > aside:nth-child(1), .gallery-pointers-aside > aside:nth-child(1) {
   background-image: url("../images/pointer.png");
   float: left;
   margin-left: 18px;
 }
 /* line 89, ../../../_dev/scss/tags.scss */
-#pointers-aside > aside:nth-child(2), .gallery-pointers-aside > aside:nth-child(2) {
+.pointers-aside > aside:nth-child(2), .gallery-pointers-aside > aside:nth-child(2) {
   background-image: url("../images/pointer.png");
   float: right;
   margin-right: 18px;
@@ -3209,7 +3209,7 @@ input[name="attach-file"] {
 }
 
 /* line 105, ../../../_dev/scss/default.scss */
-#pointers-aside {
+.pointers-aside {
   margin: auto;
   width: 948px;
 }

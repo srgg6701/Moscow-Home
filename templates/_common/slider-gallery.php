@@ -28,6 +28,7 @@
                 pixContainer.setAttribute('data-value',Pix[section_name]['images'].length);
             pixContainer.innerHTML=pixContainerMini.innerHTML=''; //indicators.innerHTML=
             //var i=0;
+            console.log('images.length: '+Pix[section_name]['images'].length);
             for(var index in Pix[section_name]['images']){
                 /*if(i){
                     indicators.innerHTML+='<div></div>';
@@ -39,7 +40,7 @@
                 var ldr;
                 if(ldr=document.getElementById('loader-wait-'+gIndex)){
                     //console.log('удалить id: '+'loader-wait-'+gIndex);
-                    ldr.remove();
+                    jQuery(ldr).remove();
                 }
                 pixContainerMini.innerHTML+='<div class="img-mini" style="background: url(\'images/slides/gallery/'+Pix[section_name]['directory']+'/'+Pix[section_name]['images'][index] + '\');" data-index="'+index+'">';
                 //i++;
@@ -206,7 +207,7 @@ function handleSlides(direction,gIndex,mini){
                     var tImage, newImage;
                     if(tImage=document.querySelector(sliderBoxImgsStr + ':' + order + '-child')) {
                         newImage = tImage.cloneNode(true); // склонировать крайнюю картинку для последующего перемещения в начало или конец блока
-                        tImage.remove(); //удалить крайнюю картинку
+                        jQuery(tImage).remove(); //удалить крайнюю картинку
                         // append/prependTo
                         /*  переместить первую или последнюю картинку соответственно
                          в конец или начало контейнера с изображениями */

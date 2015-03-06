@@ -31,7 +31,7 @@ endif; ?>
 ymaps.ready(init);
   var myMap;
   function init(){
-      document.getElementById('waiting-map').remove();
+      jQuery('#waiting-map').remove();
       myMap = new ymaps.Map ("map", {
           center: [55.7128,37.0681], zoom: 11
       });

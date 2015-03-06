@@ -15,7 +15,7 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	public $db = 'moscowho';//'moscowhome-copy';
+	public $db = 'moscowho';
 	public $dbprefix = 'cwm_';
 	public $live_site = '';
 	public $secret = 'cfm23pgfNQUc9fpy';
@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailonline = '1';
 	public $mailer = 'mail';
-	public $mailfrom = 'srgg67@gmail.com';
+	public $mailfrom = 'srgg.next@gmail.com';
 	public $fromname = 'MoscowHome';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';

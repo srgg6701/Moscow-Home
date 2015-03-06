@@ -5,27 +5,30 @@ jQuery(function(){
         r=0,        // счётчик удалений
         m=0,        // счётчик пост-удалений
         limit=1000, // лимит итераций
-        intv=setInterval(function(){ // процедура удаления
-            var objects=document.querySelectorAll(selector);
-            if(objects.length){
-                for(var d in objects){
-                    if(typeof(objects[d])=='object'){
-                        objects[d].remove();
-                        //console.log('Удаление: '+objects[d].id);
-                        r++; // инкременировать счётчик удалений
+        objects=document.querySelectorAll(selector);
+        if(objects.length){
+            var intv=setInterval(function(){ // процедура удаления
+                objects=document.querySelectorAll(selector);
+                if(objects.length){
+                    for(var d in objects){
+                        if(typeof(objects[d])=='object'){
+                            $(objects[d]).remove();
+                            //console.log('Удаление: '+objects[d].id);
+                            r++; // инкременировать счётчик удалений
+                        }
                     }
                 }
-            }
-            // инкременировать счётчик пост-удалений
-            if(r) m++;
-            // если пост-удалений БОЛЬШЕ, чем реальных удалений, пора заканчивать
-            if(m>r) clearInterval(intv);
-            i++;
-            if(i>limit) {
-                clearInterval(intv);
-                console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
-            }
-        },100);
+                // инкременировать счётчик пост-удалений
+                if(r) m++;
+                // если пост-удалений БОЛЬШЕ, чем реальных удалений, пора заканчивать
+                if(m>r) clearInterval(intv);
+                i++;
+                if(i>limit) {
+                    clearInterval(intv);
+                    console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
+                }
+            },100);
+        }
     // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
     //---------------------------------
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
@@ -229,9 +232,12 @@ function handleInputs(state){
  */
 function closeParent(event,layers){
     console.log('closeParent');
-    console.dir(jQuery(event.currentTarget).parent());
-    jQuery(event.currentTarget).parent().fadeOut(400, function(){
+    //console.dir(jQuery(event.currentTarget).parent());
+    var $=jQuery,parent=$(event.currentTarget).parent();
+    $(parent).fadeOut(400, function(){
         console.log('closing...');
+        if($(parent).is(':visible')) console.log('%cis visible!','color: red');
+        else console.dir($(parent));
         if(layers){
             for(var i= 0, j=layers.length; i<j; i++){
                 jQuery('#'+layers[i]).fadeOut(200);
