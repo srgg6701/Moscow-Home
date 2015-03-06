@@ -28,7 +28,7 @@
                 pixContainer.setAttribute('data-value',Pix[section_name]['images'].length);
             pixContainer.innerHTML=pixContainerMini.innerHTML=''; //indicators.innerHTML=
             //var i=0;
-            console.log('images.length: '+Pix[section_name]['images'].length);
+            //console.log('images.length: '+Pix[section_name]['images'].length);
             for(var index in Pix[section_name]['images']){
                 /*if(i){
                     indicators.innerHTML+='<div></div>';

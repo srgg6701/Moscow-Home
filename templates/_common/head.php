@@ -7,6 +7,12 @@ if(isset($_POST['jform'])){
 
 $common_path=$this->baseurl . "/templates/" . $common_dir;?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
+<!--[if IE]>
+<link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
+<![endif]-->
+<![if IE]>
+<link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
+<![endif]>
 <script src="<?php echo $common_path;?>js/common.js"></script>
 <?php   $menu=$app->getMenu();
         $menu_active = $menu->getActive();

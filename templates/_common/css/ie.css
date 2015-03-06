@@ -1,0 +1,15 @@
+[id^='gallery-pointers-box-mini-'] aside{
+    margin-top: 60px;
+}
+.gallery-pointers-aside > aside{
+    margin-top: 150px;
+}
+.pointers-aside > aside:nth-child(2), .gallery-pointers-aside > aside:nth-child(2){
+    margin-right: inherit;
+}
+.slider-container .gallery-pointers-aside >aside{
+    margin-top: 60px;
+}
+.slider-container .gallery-pointers-aside >aside:last-child{
+    margin-right:-18px;
+}
