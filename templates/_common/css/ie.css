@@ -1,6 +1,19 @@
 [id^='gallery-pointers-box-mini-'] aside{
     margin-top: 60px;
 }
+[id^='gallery-pointers-box-mini-'] div > aside:last-child{
+    right: -27px;
+}
+[id^='images-container-mini-']{
+    /*transform: translateX(-10.5px);*/
+}
+.big aside{
+    bottom: -21px;
+    width: 81px;
+}
+.big .gallery-pointers-aside > aside:nth-child(2){
+    right: -20px;
+}
 .gallery-pointers-aside > aside{
     margin-top: 150px;
 }

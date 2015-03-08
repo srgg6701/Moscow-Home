@@ -4,7 +4,7 @@ jQuery(function ($) {
         var ids = {},
         // вызывается только при инициализации и при изменении размеров окна
         setValues=function(resize){
-            var el, paras = document.querySelectorAll('.parallax');
+            var el, paras = $('.parallax');
             //console.dir(paras);
             // сохранить значения отступов сверху для плавающих слоёв
             for (var index in paras) {

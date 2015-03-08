@@ -6,9 +6,10 @@ $prev-width: 107px;
 
 aside {
   .gallery-pointers-aside >&{
-    margin-top: 210px;
+    //margin-top: 210px;
+    position: absolute;
     zoom: 0.75;
-    $offset:130px;
+    //$offset:130px;
     /*&:nth-child(1){
       margin-left: $offset;
     }
@@ -16,29 +17,46 @@ aside {
       margin-right: $offset;
     }*/
   }
+  .big &{
+    bottom: 0;
+  }
   [id^="gallery-pointers-box-mini-"] &{
     margin-top: 126px;
-    margin-left: 413px;
+    //margin-left: 413px;
     zoom: 0.45;
   }
-}
-div{
-  /*.indicators &{
-    background-color: #ddd;
-    border: solid 4px white;
+  .pointers-aside >&,
+  .gallery-pointers-aside >&{
+    $space:80px;
+    background-color: black;
+    background-position: center;
+    background-position-y: 16px;
+    background-repeat: no-repeat;
     @include border-radius(50%);
-    @include box-shadow(2px 3px 6px 1px);
-    display: inline-block;
-    height: 15px;
-    margin: auto 6px;
-    width: 15px;
-    &.active{
-      background-color: #a24a24;
+    height: $space;
+    width: $space;
+    @include opacity(0.5);
+    $url:$images_dir + "pointer.png";
+    $offset:18px;
+    transition: opacity 0.3s ease;
+    &:hover{
+      @include opacity(1);
     }
-  }*/
-}
-
-.content-wrapper-mini{
+    &:nth-child(1){
+      background-image: url($url);
+      //float: left;
+      //margin-left: $offset;
+      left: 0;
+    }
+    &:nth-child(2){
+      background-image: url($url);
+      //float: right;
+      //margin-right: $offset;
+      right: 0;
+      @include transform(scaleX(-1));
+    }
+  }
+}.content-wrapper-mini{
   body.gallery &{
     height: 100%;
   }
@@ -46,16 +64,22 @@ div{
 [id^="gallery-pointers-box-"]{
   margin: auto;
   position: relative;
-  width: 790px;
+  &.big{
+    max-width: 790px;
+  }
 }
 [id^="gallery-pointers-box-mini-"]{
   width: 900px;
 }
 .gallery-pointers-aside{
   body.gallery &{
+    //overflow: hidden;
     position: absolute;
-    overflow: hidden;
     width: 100%;
+    z-index: 1;
+  }
+  body.gallery .big &{
+    height: 211px;
   }
 }
 [id^="gallery-pointer-box"]{

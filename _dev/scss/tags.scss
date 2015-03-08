@@ -64,36 +64,6 @@ aside{
     overflow: hidden;
     width: 94%;
   }
-  .pointers-aside >&,
-  .gallery-pointers-aside >&{
-    $space:80px;
-    background-color: black;
-    background-position: center;
-    background-position-y: 16px;
-    background-repeat: no-repeat;
-    @include border-radius(50%);
-    height: $space;
-    width: $space;
-    @include opacity(0.5);
-    $url:$images_dir + "pointer.png";
-    $offset:18px;
-    transition: opacity 0.3s ease;
-    &:hover{
-      @include opacity(1);
-    }
-    &:nth-child(1){
-      background-image: url($url);
-      float: left;
-      margin-left: $offset;
-    }
-    &:nth-child(2){
-      background-image: url($url);
-      float: right;
-      margin-right: $offset;
-      @include transform(scaleX(-1));
-    }
-  }
-
   .slides &{
     background:url($images_dir + 'backgrounds/tile-microsquare.png');
     height: 135px;

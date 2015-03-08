@@ -173,6 +173,7 @@ p{
   header >section form &{
     color:white;
     text-transform: uppercase;
+    white-space: nowrap;
     &:nth-child(2),
     &:nth-child(3){
       float: left;

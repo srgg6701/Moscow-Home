@@ -4,15 +4,17 @@ if(isset($_POST['jform'])){
     require_once 'mail.php';
     $mail_sent=true;
 }
-
-$common_path=$this->baseurl . "/templates/" . $common_dir;?>
+$common_path=$this->baseurl . "/templates/" . $common_dir;
+$browser=JBrowser::getInstance();
+//echo "<div>".__LINE__.": ".$browser->getBrowser()."</div>";
+//echo "<div>".__LINE__.": ".$browser->getVersion()."</div>";
+//die();?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
-<!--[if IE]>
+<?php
+if($browser->getBrowser()=='msie'):?>
 <link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
-<![endif]-->
-<![if IE]>
-<link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
-<![endif]>
+<?php
+endif;?>
 <script src="<?php echo $common_path;?>js/common.js"></script>
 <?php   $menu=$app->getMenu();
         $menu_active = $menu->getActive();

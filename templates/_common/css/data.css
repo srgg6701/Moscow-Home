@@ -1,0 +1,10 @@
+.email {
+    color: #a64726;
+}
+.email:before, .email2:before {
+    content: " info@";
+}
+/* line 6, ../../../_dev/scss/data.scss */
+.email::after, .email2::after {
+    content: "moscowhome.ru";
+}

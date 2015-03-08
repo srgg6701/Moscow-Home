@@ -38,7 +38,7 @@ if (is_dir($dir)) {
 <section>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
     <div id="slider-<?php echo $gIndex; ?>" class="fit">
-        <div id="gallery-pointers-box-<?php echo $gIndex; ?>">
+        <div id="gallery-pointers-box-<?php echo $gIndex; ?>" class="big">
             <div class="gallery-pointers-aside" data-pointers="<?php echo $gIndex; ?>">
                 <aside class="pointer-left" onclick="handleSlides('left',<?php echo $gIndex; ?>);"></aside>
                 <aside class="pointer-right" onclick="handleSlides('right',<?php echo $gIndex; ?>);"></aside>

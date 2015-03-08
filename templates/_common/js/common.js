@@ -5,10 +5,10 @@ jQuery(function(){
         r=0,        // счётчик удалений
         m=0,        // счётчик пост-удалений
         limit=1000, // лимит итераций
-        objects=document.querySelectorAll(selector);
+        objects=$(selector);
         if(objects.length){
             var intv=setInterval(function(){ // процедура удаления
-                objects=document.querySelectorAll(selector);
+                objects=$(selector);
                 if(objects.length){
                     for(var d in objects){
                         if(typeof(objects[d])=='object'){

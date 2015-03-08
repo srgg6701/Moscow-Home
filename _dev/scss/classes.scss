@@ -71,13 +71,6 @@
     background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
   }
 }
-.email::after{
-  color: $color-carrot;
-  content:" doma@domalux.ru";
-}
-.email2::after{
-  content: "info@moscowhome.ru";
-}
 .fixed{
   position: fixed;
   &.fit{
