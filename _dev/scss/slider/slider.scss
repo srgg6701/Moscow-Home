@@ -3,7 +3,7 @@ $img-gallery-main-width:590px;
 $img-gallery-main-height:375px;
 $prev-height:148px;
 $prev-width: 107px;
-
+$offset-transform:21px;
 aside {
   .gallery-pointers-aside >&{
     //margin-top: 210px;
@@ -184,6 +184,9 @@ aside {
 #loaded-content {
   position: relative;
 }
+[id^="loaded-content-mini-"]{
+  @include transform(translateX($offset-transform));
+}
 /*ширина блока с видео, отступ слева для сокрытия объектов с левого края */
 #pix {
   //left: -545px; /* - ширина 1 объекта * 2 +5(?) */
@@ -210,11 +213,12 @@ aside {
   body.gallery &{
     &:not(.tiny){
       position: relative;
-      @include transform(translateX(-($prev-width + 21)));
+      @include transform(translateX(-150px));
     }
     &.tiny{
       display: table;
       margin: auto;
+      @include transform(translateX(-$offset-transform / 2));
     }
   }
 }
@@ -232,6 +236,8 @@ aside {
   body.gallery & {
     background-color: transparent !important;
     height: 100%;
+    //@include transform(translateX(10.5px));
+    //-o-transform: translateX(0) !important;
     width: 745px;
   }
 }

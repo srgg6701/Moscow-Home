@@ -59,6 +59,24 @@ a{
   }
 }
 aside{
+  body.no-overflow .pointers-aside &{
+    bottom: 17vh;
+    position: absolute;
+  }
+  @mixin bgColor($bgcolor){
+    background-color: $bgcolor;
+    @include transition(background-color 0.3s ease);
+    opacity: 1;
+    &:hover{
+      background-color: #000;
+    }
+  }
+  body.gallery .gallery-pointers-aside &{
+    @include bgColor(#461F12);
+  }
+  body.gallery .big .gallery-pointers-aside &{
+    @include bgColor(#79797A);
+  }
   .footer.why-moscow-home >section >&{
     margin: 21px auto auto;
     overflow: hidden;
@@ -111,6 +129,12 @@ button{
   }
 }
 div{
+  body.no-overflow &.pointers-aside{
+    height: 100%;
+    max-width: 910px;
+    position: relative;
+    width: inherit;
+  }
   .do-it &{
     &.phone-number{
       float: left;

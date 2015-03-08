@@ -1,0 +1,7 @@
+/*
+body.gallery [id^="preview-container-mini-"] {
+    background-color: transparent !important;
+    height: 100%;
+    -o-transform: translateX(10.5px);
+    width: 745px;
+}*/

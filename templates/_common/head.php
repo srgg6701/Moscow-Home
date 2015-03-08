@@ -6,13 +6,17 @@ if(isset($_POST['jform'])){
 }
 $common_path=$this->baseurl . "/templates/" . $common_dir;
 $browser=JBrowser::getInstance();
+$agent=$browser->getBrowser();
 //echo "<div>".__LINE__.": ".$browser->getBrowser()."</div>";
 //echo "<div>".__LINE__.": ".$browser->getVersion()."</div>";
 //die();?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
 <?php
-if($browser->getBrowser()=='msie'):?>
+if($agent=='msie'):?>
 <link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
+<?php
+elseif($agent=='opera'):?>
+<link href="<?php echo $common_path;?>css/opera.css" rel="stylesheet">
 <?php
 endif;?>
 <script src="<?php echo $common_path;?>js/common.js"></script>

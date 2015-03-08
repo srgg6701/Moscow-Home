@@ -103,6 +103,10 @@ input[name="attach-file"]{
   position: absolute;
   width: 100%;
   z-index: 2;
+  body.no-overflow &{
+    height: 100%;
+    top: 0;
+  }
 }
 .pointers-aside{
   @include centred-margins;

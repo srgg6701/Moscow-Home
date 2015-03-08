@@ -1,4 +1,5 @@
-jQuery(function ($) {
+jQuery(function () {
+    var $=jQuery;
     var bodyHeight = $('body').height();
     function getTop(resize) {
         var ids = {},
@@ -17,7 +18,7 @@ jQuery(function ($) {
                         // начальная позиция отступа сверху
                         ids[el].top = paras[index].offsetTop;
                         // коэффициент перемещения слоя по вертикали
-                        ids[el].coeff = paras[index].getAttribute('data-coeff');
+                        ids[el].coeff = $(paras[index]).attr('data-coeff');
                     }
                     // при инициализации и изменении размеров окна
                     ids[el].distance = window.innerHeight-ids[el].top;
