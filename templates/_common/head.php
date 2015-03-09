@@ -6,16 +6,24 @@ if(isset($_POST['jform'])){
 }
 $common_path=$this->baseurl . "/templates/" . $common_dir;
 $browser=JBrowser::getInstance();
-$agent=$browser->getBrowser();
-//echo "<div>".__LINE__.": ".$browser->getBrowser()."</div>";
-//echo "<div>".__LINE__.": ".$browser->getVersion()."</div>";
-//die();?>
+$bagent=$browser->getBrowser();
+$agent=strtolower($browser->getAgentString());
+?>
 <link href="<?php echo $common_path;?>css/default.css" rel="stylesheet">
-<?php
-if($agent=='msie'):?>
+<!--Если ie / firefox / opera, подключим специальную таблицу <?php
+echo "\nagent: [$agent]\nbagent: [$bagent]";?>-->
+<?php 
+if($bagent=='msie'||$bagent=='mozilla'): // ie / firefox
+    if(strstr($agent,'firefox')): // firefox?>
+<link href="<?php echo $common_path;?>css/ff.css" rel="stylesheet">
+    <?php
+    else: // ie
+    ?>
 <link href="<?php echo $common_path;?>css/ie.css" rel="stylesheet">
-<?php
-elseif($agent=='opera'):?>
+    <?php
+    endif;
+// opera
+elseif($bagent=='opera'||($bagent=='chrome'&&strstr($agent,' opr'))):?>
 <link href="<?php echo $common_path;?>css/opera.css" rel="stylesheet">
 <?php
 endif;?>

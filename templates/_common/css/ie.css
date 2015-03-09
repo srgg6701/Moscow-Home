@@ -1,28 +1,28 @@
+#design >.content >section.wide >div:first-child{
+    margin-top: 63px;
+}
 [id^='gallery-pointers-box-mini-'] aside{
     margin-top: 60px;
 }
-[id^='gallery-pointers-box-mini-'] div > aside:last-child{
-    right: -27px;
-}
-[id^='images-container-mini-']{
-    /*transform: translateX(-10.5px);*/
-}
-.big aside{
-    bottom: -21px;
-    width: 81px;
-}
-.big .gallery-pointers-aside > aside:nth-child(2){
-    right: -20px;
+.content button.btn-more{
+    padding-top: 5px;
 }
 .gallery-pointers-aside > aside{
     margin-top: 150px;
 }
+input[name="attach-file"]{
+    bottom: 69px !important;
+    height: 21px;
+    left: 176px;
+    opacity: 0.6;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+}
 .pointers-aside > aside:nth-child(2), .gallery-pointers-aside > aside:nth-child(2){
     margin-right: inherit;
 }
-.slider-container .gallery-pointers-aside >aside{
-    margin-top: 60px;
+.slider-container .gallery-pointers-aside{
+    top:0 !important;
 }
-.slider-container .gallery-pointers-aside >aside:last-child{
-    margin-right:-18px;
-}
+    .slider-container .gallery-pointers-aside >aside{
+        margin-top: 60px;
+    }

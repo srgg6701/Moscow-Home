@@ -1,65 +1,77 @@
 @charset "UTF-8";
 $img-gallery-main-width:590px;
 $img-gallery-main-height:375px;
+$pointer-size:60px;
 $prev-height:148px;
 $prev-width: 107px;
 $offset-transform:21px;
-aside {
-  .gallery-pointers-aside >&{
-    //margin-top: 210px;
-    position: absolute;
-    zoom: 0.75;
-    //$offset:130px;
-    /*&:nth-child(1){
-      margin-left: $offset;
+
+aside{
+  @mixin pointer($bgcolor,$space,$pointer-size){
+    background-color: $bgcolor;
+    @include transition(background-color 0.3s ease);
+    height: $space;
+    opacity: 1;
+    width: $space;
+    &:first-child{
+      background-image: url($images_dir + "pointer-" + $pointer-size + "-left.png");
     }
-    &:nth-child(2){
-      margin-right: $offset;
-    }*/
+    &:last-child{
+      background-image: url($images_dir + "pointer-" + $pointer-size + "-right.png");
+    }
+    &:hover{
+      background-color: #000;
+    }
   }
-  .big &{
-    bottom: 0;
-  }
-  [id^="gallery-pointers-box-mini-"] &{
-    margin-top: 126px;
-    //margin-left: 413px;
-    zoom: 0.45;
-  }
-  .pointers-aside >&,
-  .gallery-pointers-aside >&{
-    $space:80px;
+  .gallery-pointers-aside >&{ // все указатели в галерее, как средние, так и маленькие
     background-color: black;
     background-position: center;
-    background-position-y: 16px;
     background-repeat: no-repeat;
     @include border-radius(50%);
-    height: $space;
-    width: $space;
     @include opacity(0.5);
-    $url:$images_dir + "pointer.png";
-    $offset:18px;
+    position: absolute;
     transition: opacity 0.3s ease;
     &:hover{
       @include opacity(1);
     }
     &:nth-child(1){
-      background-image: url($url);
-      //float: left;
-      //margin-left: $offset;
       left: 0;
     }
     &:nth-child(2){
-      background-image: url($url);
-      //float: right;
-      //margin-right: $offset;
       right: 0;
-      @include transform(scaleX(-1));
     }
   }
-}.content-wrapper-mini{
+  .big &{ // средние указатели
+    bottom: 0;
+    @include pointer(#79797A,$pointer-size,medium);
+  }
+  .slider-container &{  // маленькие указатели
+    margin-top: 126px;
+    @include pointer(#461F12,36px,mini);
+  }
+}
+body.gallery{
+  .gallery-pointers-aside{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+  .big .gallery-pointers-aside{
+    height: $img-gallery-main-height / 2 + $pointer-size / 2;
+  }
+  .slider-container .gallery-pointers-aside{
+    top:-70px;
+  }
+}
+.content-wrapper-mini{
   body.gallery &{
     height: 100%;
   }
+}
+[id^="gallery-pointer-box"]{
+  position: relative;
+  width: 790px;
+  margin: auto;
 }
 [id^="gallery-pointers-box-"]{
   margin: auto;
@@ -71,31 +83,6 @@ aside {
 [id^="gallery-pointers-box-mini-"]{
   width: 900px;
 }
-.gallery-pointers-aside{
-  body.gallery &{
-    //overflow: hidden;
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-  }
-  body.gallery .big &{
-    height: 211px;
-  }
-}
-[id^="gallery-pointer-box"]{
-  position: relative;
-  width: 790px;
-  margin: auto;
-}
-/*.indicators{
-  body.gallery &{
-    //background: #FFA500;
-    height: 30px;
-    position: relative;
-    top: 90%;
-    text-align: center;
-  }
-}*/
 .img, .img-mini{
   body.gallery &{
     background-repeat: no-repeat;
@@ -119,15 +106,6 @@ aside {
   }
 }
 /*ширина слайдера (видимой части)*/
-#slider{
-  .content-wrapper,
-    #preview-container,
-      #loaded-content,
-        #images-container,
-          #pix{
-    height: 100% !important;
-  }
-}
 #images-container,
 #preview-container{
   width: 100%;
@@ -187,6 +165,10 @@ aside {
 [id^="loaded-content-mini-"]{
   @include transform(translateX($offset-transform));
 }
+.outer_container {
+  background-color: white;
+  display: none;
+}
 /*ширина блока с видео, отступ слева для сокрытия объектов с левого края */
 #pix {
   //left: -545px; /* - ширина 1 объекта * 2 +5(?) */
@@ -245,10 +227,6 @@ aside {
   display: inherit;
   position: relative;
 }
-.outer_container {
-  background-color: white;
-  display: none;
-}
 .pointer {
   background-color: white !important;
   cursor: pointer;
@@ -287,6 +265,15 @@ aside {
 section{
   body.gallery main >&{
     max-width: inherit !important;
+  }
+}
+#slider{
+  .content-wrapper,
+  #preview-container,
+  #loaded-content,
+  #images-container,
+  #pix{
+    height: 100% !important;
   }
 }
 .slider-container{
