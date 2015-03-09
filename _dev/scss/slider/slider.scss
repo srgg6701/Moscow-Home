@@ -23,17 +23,37 @@ aside{
       background-color: #000;
     }
   }
-  .gallery-pointers-aside >&{ // все указатели в галерее, как средние, так и маленькие
+  #slider .pointers-aside > &,
+  .gallery-pointers-aside >&{
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     @include border-radius(50%);
+  }
+  #slider .pointers-aside > &{
+    background-position-y: 16px;
     @include opacity(0.5);
-    position: absolute;
     transition: opacity 0.3s ease;
     &:hover{
       @include opacity(1);
     }
+    $space:80px;
+    height: $space;
+    width: $space;
+    $url:$images_dir + "pointer.png";
+    $offset:18px;
+    &:nth-child(1){
+      background-image: url($url);
+      left: 0;
+    }
+    &:nth-child(2){
+      background-image: url($url);
+      right: 0;
+      @include transform(scaleX(-1));
+    }
+  }
+  .gallery-pointers-aside >&{ // все указатели в галерее, как средние, так и маленькие
+    position: absolute;
     &:nth-child(1){
       left: 0;
     }

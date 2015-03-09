@@ -68,9 +68,9 @@ ymaps.ready(init);
 <?php   endif;
         if($main_page):
         ?>
-      document.querySelector('.slider-bottom .slides').onclick= function(){
+      jQuery('.slider-bottom .slides').on('click', function(){
           location.href=location.pathname+'gallery';
-      };
+      });
 <?php   endif;?>
   }
 </script>
