@@ -1,0 +1,27 @@
+﻿Номер анкеты: 	2280549/NIC-D
+Тех. пароль: 	MH22805492015
+Админ. пароль:	moscowhome2015
+-------------------------------------------------
+FTP:		ftp.moscowhome.nichost.ru
+login: 		moscowhome_srgg
+pass: 		tG7o1WbA
+-------------------------------------------------------------
+Доступ к базам данных
+сервер:		moscowhome.mysql
+пользователь:	moscowhome_mysql
+база данных:	moscowhome_db
+пароль:		W8WBx9wn
+
+06.03
+Ваш сервер не видит PDO класс. Вот что он сообщает:
+Fatal error: Class 'PDO' not found in /home/moscowhome/moscowhome.pro/docs/libraries/joomla/database/driver/pdomysql.php on line 102
+Вот этот фрагмент:
+public static function isSupported()
+	{
+		return in_array('mysql', PDO::getAvailableDrivers()); // стр. 102
+	}
+Что это может быть и как такое вообще возможно?
+Обращаю ваше внимание, что ошибка возникает только при загрузке одного из разделов админки (установлена Joomla 3.6), а именно - раздела "Общие настройки": 
+http://moscowhome.pro/administrator/index.php?option=com_config
+В остальном всё ОК.
+Ждём ваших пояснений. 

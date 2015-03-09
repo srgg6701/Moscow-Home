@@ -1,11 +1,15 @@
 jQuery(function(){
     var $=jQuery,
+        imageBg = new Image(),
         selector='[id^="diigo"], script[src*="metabar"]',
         i=0,        // счётчик итераций
         r=0,        // счётчик удалений
         m=0,        // счётчик пост-удалений
         limit=1000, // лимит итераций
         objects=$(selector);
+
+        imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
+
         if(objects.length){
             var intv=setInterval(function(){ // процедура удаления
                 objects=$(selector);
