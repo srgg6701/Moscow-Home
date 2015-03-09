@@ -1,5 +1,7 @@
 #you-need ul a{
-    transform: translateY(-50%);
+    margin-top: 15px;
+    position: static;
+    transform: none;/*translateY(-50%);*/
 }
 #design >.content >section.wide >div:first-child{
     margin-top: 63px;
