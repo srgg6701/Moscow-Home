@@ -90,7 +90,10 @@ jQuery(function(){
     });
     // Обработать поле загрузки файла
     $('input[name="attach-file"]').on('change', function(){
-        this.style.zIndex=0;
+        //this.style.zIndex=0;
+        var filepath=$(this).val(),
+            sep=(filepath.indexOf('\\')!=-1)? '\\':'\/';
+        $('#attachment-name').html(filepath.split(sep).pop());
         handleAskFormSection(true); // set attr data-state to 1
     });
     // Открыть подменю "Консультация" кликом по кнопке "Перезвоните мне"
