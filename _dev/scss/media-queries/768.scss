@@ -1,11 +1,60 @@
 // desktop, широкоформатный монитор
 @media (max-height: $resolution-tablet) and (min-width: $resolution-small-desktop){
-  footer{
-    display: none;
-  }
-  #index{
-    main{
-      bottom: 0;
+  body{
+    &.no-overflow{
+      $img-height:94px;
+      footer{
+        display: none;
+      }
+      #index{
+        main{
+          bottom: 0;
+        }
+      }
+      #level1{
+        height: inherit;
+        #gallery{
+          display: none;
+        }
+        .slider-bottom{
+          height: inherit;
+        }
+        .slides{
+          height: inherit;
+          display: table;
+          margin: 15px auto;
+          overflow: hidden;
+          padding: inherit;
+          width: 947px;
+          a{
+            &.hidden{
+              background: url($images_dir + 'backgrounds/tile-90.png') #a04323;
+              color: #ffffff;
+              display: inherit;
+              font-family: PlumbLight;
+              font-size: 28px;
+              height: $img-height;
+              float: left;
+              line-height: $img-height;
+              text-align: center;
+              text-decoration: none;
+              text-transform: uppercase;
+              width: 268px;
+            }
+          }
+          aside{
+            display: none;
+          }
+          img{
+            height: $img-height;
+            margin-left: 6px;
+            width: 107px;
+          }
+        }
+      }
+      #slider{
+        height: 71.5%;
+      }
     }
   }
 }

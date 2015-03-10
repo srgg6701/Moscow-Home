@@ -3180,14 +3180,63 @@ body.gallery [id^="slider-mini-"] {
 
 /*статическая таблица, не ищи её среди SCSS!*/
 @media (max-height: 768px) and (min-width: 1024px) {
-  /* line 3, ../../../_dev/scss/media-queries/768.scss */
-  footer {
+  /* line 6, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow footer {
     display: none;
   }
-
-  /* line 7, ../../../_dev/scss/media-queries/768.scss */
-  #index main {
+  /* line 10, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #index main {
     bottom: 0;
+  }
+  /* line 14, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 {
+    height: inherit;
+  }
+  /* line 16, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 #gallery {
+    display: none;
+  }
+  /* line 19, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 .slider-bottom {
+    height: inherit;
+  }
+  /* line 22, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 .slides {
+    height: inherit;
+    display: table;
+    margin: 15px auto;
+    overflow: hidden;
+    padding: inherit;
+    width: 947px;
+  }
+  /* line 30, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 .slides a.hidden {
+    background: url("../images/backgrounds/tile-90.png") #a04323;
+    color: #ffffff;
+    display: inherit;
+    font-family: PlumbLight;
+    font-size: 28px;
+    height: 94px;
+    float: left;
+    line-height: 94px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 268px;
+  }
+  /* line 45, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 .slides aside {
+    display: none;
+  }
+  /* line 48, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #level1 .slides img {
+    height: 94px;
+    margin-left: 6px;
+    width: 107px;
+  }
+  /* line 55, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #slider {
+    height: 71.5%;
   }
 }
 /* line 50, ../../../_dev/scss/default.scss */
