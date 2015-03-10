@@ -3179,12 +3179,23 @@ body.gallery [id^="slider-mini-"] {
 }
 
 /*статическая таблица, не ищи её среди SCSS!*/
-/* line 47, ../../../_dev/scss/default.scss */
+@media (max-height: 768px) and (min-width: 1024px) {
+  /* line 3, ../../../_dev/scss/media-queries/768.scss */
+  footer {
+    display: none;
+  }
+
+  /* line 7, ../../../_dev/scss/media-queries/768.scss */
+  #index main {
+    bottom: 0;
+  }
+}
+/* line 50, ../../../_dev/scss/default.scss */
 #achievements {
   margin: auto;
 }
 
-/* line 50, ../../../_dev/scss/default.scss */
+/* line 53, ../../../_dev/scss/default.scss */
 #attachment-name {
   bottom: 65px;
   color: wheat;
@@ -3201,12 +3212,12 @@ body.gallery [id^="slider-mini-"] {
   z-index: 1;
 }
 
-/* line 65, ../../../_dev/scss/default.scss */
+/* line 68, ../../../_dev/scss/default.scss */
 #ask-us {
   position: relative;
 }
 
-/* line 68, ../../../_dev/scss/default.scss */
+/* line 71, ../../../_dev/scss/default.scss */
 #content-box {
   background-color: #B3B3B3;
   display: table;
@@ -3223,7 +3234,7 @@ body.gallery [id^="slider-mini-"] {
   top: 45%;
 }
 
-/* line 79, ../../../_dev/scss/default.scss */
+/* line 82, ../../../_dev/scss/default.scss */
 #curtain {
   background-color: #000000;
   display: none;
@@ -3232,19 +3243,19 @@ body.gallery [id^="slider-mini-"] {
   z-index: 10;
 }
 
-/* line 85, ../../../_dev/scss/default.scss */
+/* line 88, ../../../_dev/scss/default.scss */
 #design {
   background-image: url("../images/backgrounds/tile-design-top-visual.png");
 }
 
-/* line 88, ../../../_dev/scss/default.scss */
+/* line 91, ../../../_dev/scss/default.scss */
 #gallery {
   height: 94px;
   line-height: 94px;
   text-align: center;
 }
 
-/* line 94, ../../../_dev/scss/default.scss */
+/* line 97, ../../../_dev/scss/default.scss */
 input[name="attach-file"] {
   border-radius: 6px;
   bottom: 60px;
@@ -3257,7 +3268,7 @@ input[name="attach-file"] {
   z-index: -1;
 }
 
-/* line 105, ../../../_dev/scss/default.scss */
+/* line 108, ../../../_dev/scss/default.scss */
 #mail-informer {
   background-color: #CBEBFF;
   -webkit-box-shadow: 0 0 0 6px rgba(100, 100, 255, 0.6);
@@ -3272,31 +3283,31 @@ input[name="attach-file"] {
   z-index: 11;
 }
 
-/* line 116, ../../../_dev/scss/default.scss */
+/* line 119, ../../../_dev/scss/default.scss */
 #pointers-box {
   bottom: 175px;
   position: absolute;
   width: 100%;
   z-index: 2;
 }
-/* line 121, ../../../_dev/scss/default.scss */
+/* line 124, ../../../_dev/scss/default.scss */
 body.no-overflow #pointers-box {
   height: 100%;
   top: 0;
 }
 
-/* line 126, ../../../_dev/scss/default.scss */
+/* line 129, ../../../_dev/scss/default.scss */
 .pointers-aside {
   margin: auto;
   width: 948px;
 }
 
-/* line 129, ../../../_dev/scss/default.scss */
+/* line 132, ../../../_dev/scss/default.scss */
 #shell {
   z-index: 11;
 }
 
-/* line 132, ../../../_dev/scss/default.scss */
+/* line 135, ../../../_dev/scss/default.scss */
 #showcase {
   bottom: 17px;
   height: 112px;
@@ -3304,7 +3315,7 @@ body.no-overflow #pointers-box {
   width: 100%;
 }
 
-/* line 138, ../../../_dev/scss/default.scss */
+/* line 141, ../../../_dev/scss/default.scss */
 #slider {
   bottom: 423px;
   overflow: hidden;
@@ -3313,7 +3324,7 @@ body.no-overflow #pointers-box {
   width: 100%;
 }
 
-/* line 145, ../../../_dev/scss/default.scss */
+/* line 148, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
   width: 948px;

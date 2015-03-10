@@ -1,0 +1,11 @@
+// desktop, широкоформатный монитор
+@media (max-height: $resolution-tablet) and (min-width: $resolution-small-desktop){
+  footer{
+    display: none;
+  }
+  #index{
+    main{
+      bottom: 0;
+    }
+  }
+}
