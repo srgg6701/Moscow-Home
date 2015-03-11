@@ -74,7 +74,7 @@ aside{
     background:url($images_dir + 'backgrounds/tile-microsquare.png');
     height: 135px;
     position: absolute;
-    right: 3px;
+    right: 0;
     top: 20px;
     width: $img-slide-single-width;
   }
@@ -141,7 +141,6 @@ div{
     }
   }
   .slider-bottom >&{
-    background: url($images_dir + "backgrounds/tile-gallery.png");
     height: 184px;
     margin: -13px auto -12px;
     padding: 20px 0;

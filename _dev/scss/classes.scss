@@ -157,13 +157,16 @@ a.print, button.print{
   position: relative !important;
 }
 .slider-bottom{
+  background: url($images_dir + "backgrounds/tile-gallery.png");
+  margin: auto;
   overflow: hidden;
 }
 .slides{
+  display:table;
   height: 100%;
-  margin: auto;
+  //margin: auto;
   position: relative;
-  width: $img-slide-single-width*6 + $img-slide-offset*5;
+  //width: $img-slide-single-width*6 + $img-slide-offset*5;
 }
 .table{
   display: table;
