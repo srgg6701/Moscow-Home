@@ -23,7 +23,6 @@ div{
 }
 ul{
   nav &{
-    @include centered-vertical;
     margin-left: -7px;
     margin-top: -2px;
   }

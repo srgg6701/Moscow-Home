@@ -121,3 +121,39 @@
     }
   }
 }
+@media (max-width: $resolution-small-desktop - 1){
+  nav > div{
+    &:nth-child(1){ // menu
+      top: 0;
+      height: $nav-height;
+      width: 100%;
+      ul{
+        display: table;
+        margin: auto;
+      }
+    }
+    &:nth-child(2){ // logo
+      left: 16px;
+      margin: 0;
+      position: absolute;
+    }
+    &:nth-child(3){ // Консультация
+      right: 16px;
+      width: 42px;
+    }
+    #consulting{
+      position: absolute;
+      top:33px;
+      a{
+        background-position: 12px;
+        border-radius: 10px;
+        font-size: 0;
+        height: 100%;
+        width: 42px;
+      }
+    }
+    #phone-number{
+      display: none;
+    }
+  }
+}

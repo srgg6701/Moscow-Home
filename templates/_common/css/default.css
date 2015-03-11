@@ -236,7 +236,7 @@ body.no-overflow div.pointers-aside {
   opacity: 0.9;
   position: relative;
   margin: auto;
-  width: 948px;
+  max-width: 948px;
 }
 /* line 160, ../../../_dev/scss/tags.scss */
 #slider div.img-box {
@@ -880,7 +880,7 @@ header {
 /* line 60, ../../../_dev/scss/layout.scss */
 nav {
   margin: auto;
-  width: 948px;
+  max-width: 948px;
 }
 
 /* line 64, ../../../_dev/scss/layout.scss */
@@ -960,7 +960,7 @@ header aside > div:hover, header aside > div.bgActiveCarrot {
 /* line 47, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div {
   margin: auto;
-  width: 948px;
+  max-width: 948px;
   overflow: auto;
 }
 /* line 50, ../../../_dev/scss/header/section/drop-down-menus.scss */
@@ -1209,11 +1209,10 @@ header > section > section:nth-child(2) ul {
 
 /* line 2, ../../../_dev/scss/header/nav/menus.scss */
 header ul li a {
-  display: block;
   color: #5d534e;
   font-family: PlumbMedium;
-  padding: 6px;
-  vertical-align: middle;
+  line-height: 68px;
+  padding: 0 6px;
 }
 
 /* line 3, ../../../_dev/scss/header/nav/nav.scss */
@@ -1262,23 +1261,16 @@ nav > div:nth-child(3) {
 
 /* line 25, ../../../_dev/scss/header/nav/nav.scss */
 nav ul {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
   margin-left: -7px;
   margin-top: -2px;
 }
 
-/* line 31, ../../../_dev/scss/header/nav/nav.scss */
+/* line 30, ../../../_dev/scss/header/nav/nav.scss */
 #consulting {
   text-transform: uppercase;
 }
 
-/* line 34, ../../../_dev/scss/header/nav/nav.scss */
+/* line 33, ../../../_dev/scss/header/nav/nav.scss */
 #logo {
   background: url("../images/logo.png");
   display: block;
@@ -1286,7 +1278,7 @@ nav ul {
   width: 114px;
 }
 
-/* line 40, ../../../_dev/scss/header/nav/nav.scss */
+/* line 39, ../../../_dev/scss/header/nav/nav.scss */
 #phone-number {
   font-family: PlumbLight;
   font-size: 1.3rem;
@@ -1294,18 +1286,17 @@ nav ul {
   padding: 0 12px;
 }
 
-/* line 45, ../../../_dev/scss/header/nav/nav.scss */
+/* line 44, ../../../_dev/scss/header/nav/nav.scss */
 #top-menu {
   text-transform: uppercase;
 }
 
 /* line 2, ../../../_dev/scss/header/nav/menus.scss */
 header ul li a {
-  display: block;
   color: #5d534e;
   font-family: PlumbMedium;
-  padding: 6px;
-  vertical-align: middle;
+  line-height: 68px;
+  padding: 0 6px;
 }
 
 /* line 4, ../../../_dev/scss/header/header.scss */
@@ -3322,6 +3313,47 @@ body.gallery [id^="slider-mini-"] {
     bottom: 34.5vh;
   }
 }
+@media (max-width: 1023px) {
+  /* line 126, ../../../_dev/scss/media-queries/768.scss */
+  nav > div:nth-child(1) {
+    top: 0;
+    height: 68px;
+    width: 100%;
+  }
+  /* line 130, ../../../_dev/scss/media-queries/768.scss */
+  nav > div:nth-child(1) ul {
+    display: table;
+    margin: auto;
+  }
+  /* line 135, ../../../_dev/scss/media-queries/768.scss */
+  nav > div:nth-child(2) {
+    left: 16px;
+    margin: 0;
+    position: absolute;
+  }
+  /* line 140, ../../../_dev/scss/media-queries/768.scss */
+  nav > div:nth-child(3) {
+    right: 16px;
+    width: 42px;
+  }
+  /* line 144, ../../../_dev/scss/media-queries/768.scss */
+  nav > div #consulting {
+    position: absolute;
+    top: 33px;
+  }
+  /* line 147, ../../../_dev/scss/media-queries/768.scss */
+  nav > div #consulting a {
+    background-position: 12px;
+    border-radius: 10px;
+    font-size: 0;
+    height: 100%;
+    width: 42px;
+  }
+  /* line 155, ../../../_dev/scss/media-queries/768.scss */
+  nav > div #phone-number {
+    display: none;
+  }
+}
 /* line 50, ../../../_dev/scss/default.scss */
 #achievements {
   margin: auto;
@@ -3431,7 +3463,7 @@ body.no-overflow #pointers-box {
 /* line 129, ../../../_dev/scss/default.scss */
 .pointers-aside {
   margin: auto;
-  width: 948px;
+  max-width: 948px;
 }
 
 /* line 132, ../../../_dev/scss/default.scss */
@@ -3459,7 +3491,7 @@ body.no-overflow #pointers-box {
 /* line 148, ../../../_dev/scss/default.scss */
 #you-need {
   margin: auto;
-  width: 948px;
+  max-width: 948px;
   margin-top: -4px;
   text-align: center;
 }
