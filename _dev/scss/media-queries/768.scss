@@ -1,6 +1,7 @@
 // desktop, широкоформатный монитор
 @media (max-height: $resolution-tablet) and (min-width: $resolution-small-desktop){
   body{
+    $common-background:url($images_dir + 'backgrounds/tile-90.png') #a04323;
     &.no-overflow{
       $img-height:94px;
       footer{
@@ -28,7 +29,7 @@
           width: 947px;
           a{
             &.hidden{
-              background: url($images_dir + 'backgrounds/tile-90.png') #a04323;
+              background: $common-background;
               color: #ffffff;
               display: inherit;
               font-family: PlumbLight;
@@ -52,8 +53,70 @@
           }
         }
       }
+      #showcase{
+        bottom: 93px;
+        height: 93px;
+        >div{
+          background-color: transparent;
+          @include box-shadow(0 0 0px 100px rgba(0,0,0,0.6) inset);
+          @include opacity(0.85);
+        }
+        li{
+          font-family: PlumbLight;
+          font-size: 11px;
+          min-height: 23px;
+        }
+      }
       #slider{
-        bottom: 16.75vh;
+        bottom: 128px;
+      }
+      #you-need{
+        position: relative;
+        width: 100%;
+        .header-slim-big{
+          display: none;
+        }
+        li{
+          background: url($images_dir + "need-768.png") no-repeat;
+          height: 100%;
+          &:nth-child(1){
+            background-position: 0 10px;
+          }
+          &:nth-child(2){
+            background-position: -373px 10px;
+          }
+          &:nth-child(3){
+            background-position: -787px 10px;
+          }
+          &:nth-child(4){
+            background-position: -1215px 10px;
+          }
+        }
+        ul{
+          height: 78px;
+          margin: auto;
+          position: relative;
+          z-index: 2;
+          a{
+            color: #ffffff;
+            top:23px;
+          }
+        }
+        .substrate{
+          background:$common-background;
+          display: block;
+          height: 100%;
+          @include opacity(0.85);
+          position: absolute;
+          top:0;
+          width: 100%;
+          z-index: 0;
+        }
+      }
+      .pointers-aside {
+        aside {
+          bottom: 34.5vh;
+        }
       }
     }
   }

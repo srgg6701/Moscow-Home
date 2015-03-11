@@ -777,30 +777,35 @@ a.print, button.print {
   position: relative;
 }
 
-/* line 171, ../../../_dev/scss/classes.scss */
+/* line 172, ../../../_dev/scss/classes.scss */
+.substrate #you-need {
+  display: none;
+}
+
+/* line 176, ../../../_dev/scss/classes.scss */
 .table {
   display: table;
 }
 
-/* line 176, ../../../_dev/scss/classes.scss */
+/* line 181, ../../../_dev/scss/classes.scss */
 #decoration .top, #engineering-systems .top {
   background-color: #832305;
 }
-/* line 179, ../../../_dev/scss/classes.scss */
+/* line 184, ../../../_dev/scss/classes.scss */
 #decoration .top {
   background-image: url("../images/backgrounds/tile-top-ultra-blood.png");
 }
-/* line 182, ../../../_dev/scss/classes.scss */
+/* line 187, ../../../_dev/scss/classes.scss */
 #engineering-systems .top {
   background-image: url("../images/backgrounds/tile-top.png");
 }
-/* line 185, ../../../_dev/scss/classes.scss */
+/* line 190, ../../../_dev/scss/classes.scss */
 #facade .top {
   background-image: url("../images/facade/roof.jpg");
   background-size: cover;
 }
 
-/* line 190, ../../../_dev/scss/classes.scss */
+/* line 195, ../../../_dev/scss/classes.scss */
 .works-examples {
   background: url("../images/gallery/works-examples.jpg") no-repeat;
   height: 81px;
@@ -3180,27 +3185,27 @@ body.gallery [id^="slider-mini-"] {
 
 /*статическая таблица, не ищи её среди SCSS!*/
 @media (max-height: 768px) and (min-width: 1024px) {
-  /* line 6, ../../../_dev/scss/media-queries/768.scss */
+  /* line 7, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow footer {
     display: none;
   }
-  /* line 10, ../../../_dev/scss/media-queries/768.scss */
+  /* line 11, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #index main {
     bottom: 0;
   }
-  /* line 14, ../../../_dev/scss/media-queries/768.scss */
+  /* line 15, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 {
     height: inherit;
   }
-  /* line 16, ../../../_dev/scss/media-queries/768.scss */
+  /* line 17, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 #gallery {
     display: none;
   }
-  /* line 19, ../../../_dev/scss/media-queries/768.scss */
+  /* line 20, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 .slider-bottom {
     height: inherit;
   }
-  /* line 22, ../../../_dev/scss/media-queries/768.scss */
+  /* line 23, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 .slides {
     height: inherit;
     display: table;
@@ -3209,7 +3214,7 @@ body.gallery [id^="slider-mini-"] {
     padding: inherit;
     width: 947px;
   }
-  /* line 30, ../../../_dev/scss/media-queries/768.scss */
+  /* line 31, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 .slides a.hidden {
     background: url("../images/backgrounds/tile-90.png") #a04323;
     color: #ffffff;
@@ -3224,19 +3229,97 @@ body.gallery [id^="slider-mini-"] {
     text-transform: uppercase;
     width: 268px;
   }
-  /* line 45, ../../../_dev/scss/media-queries/768.scss */
+  /* line 46, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 .slides aside {
     display: none;
   }
-  /* line 48, ../../../_dev/scss/media-queries/768.scss */
+  /* line 49, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #level1 .slides img {
     height: 94px;
     margin-left: 6px;
     width: 107px;
   }
-  /* line 55, ../../../_dev/scss/media-queries/768.scss */
+  /* line 56, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #showcase {
+    bottom: 93px;
+    height: 93px;
+  }
+  /* line 59, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #showcase > div {
+    background-color: transparent;
+    -webkit-box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.6) inset;
+    -moz-box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.6) inset;
+    box-shadow: 0 0 0px 100px rgba(0, 0, 0, 0.6) inset;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+    opacity: 0.85;
+  }
+  /* line 64, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #showcase li {
+    font-family: PlumbLight;
+    font-size: 11px;
+    min-height: 23px;
+  }
+  /* line 70, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #slider {
-    bottom: 16.75vh;
+    bottom: 128px;
+  }
+  /* line 73, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need {
+    position: relative;
+    width: 100%;
+  }
+  /* line 76, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need .header-slim-big {
+    display: none;
+  }
+  /* line 79, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need li {
+    background: url("../images/need-768.png") no-repeat;
+    height: 100%;
+  }
+  /* line 82, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need li:nth-child(1) {
+    background-position: 0 10px;
+  }
+  /* line 85, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need li:nth-child(2) {
+    background-position: -373px 10px;
+  }
+  /* line 88, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need li:nth-child(3) {
+    background-position: -787px 10px;
+  }
+  /* line 91, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need li:nth-child(4) {
+    background-position: -1215px 10px;
+  }
+  /* line 95, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need ul {
+    height: 78px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+  }
+  /* line 100, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need ul a {
+    color: #ffffff;
+    top: 23px;
+  }
+  /* line 105, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow #you-need .substrate {
+    background: url("../images/backgrounds/tile-90.png") #a04323;
+    display: block;
+    height: 100%;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+    opacity: 0.85;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  /* line 117, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow .pointers-aside aside {
+    bottom: 34.5vh;
   }
 }
 /* line 50, ../../../_dev/scss/default.scss */

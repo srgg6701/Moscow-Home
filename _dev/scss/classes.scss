@@ -168,6 +168,11 @@ a.print, button.print{
   position: relative;
   //width: $img-slide-single-width*6 + $img-slide-offset*5;
 }
+.substrate{
+  #you-need{
+    display: none;
+  }
+}
 .table{
   display: table;
 }
