@@ -83,7 +83,8 @@ form{
   }
 }
 h3{
-  header div.menu-container &{
+  header div.menu-container &,
+  .menu aside >section >&{
     color: $background-carrot-dark;
     font-family: PlumbMedium;
   }

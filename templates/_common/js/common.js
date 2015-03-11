@@ -6,10 +6,38 @@ jQuery(function(){
         r=0,        // счётчик удалений
         m=0,        // счётчик пост-удалений
         limit=1000, // лимит итераций
-        objects=$(selector);
+        objects=$(selector),
+        /**
+         * Перегруппировать меню при мобильных разрешениях
+         */
+        rearrangeMenu=function(){
+            var menuBlock=$('header > section.menu >section:first-child'),
+                pseudolinks=$('aside',menuBlock),
+                menu_container_class= '.menu-container',
+                texts=$(menu_container_class + ' > section',menuBlock),
+                mobileSectionsLength=$('section',pseudolinks).size();
+            //console.log('rearrangeMenu, width: '+$('body').width()+', mobileSectionsLength: '+mobileSectionsLength);
+            if(checkResolutionMobile()){
+                //console.log('checkResolutionMobile OK');
+                if(!mobileSectionsLength){ // меню не модифицировано
+                    //console.log('start menu rearranging...');
+                    $('>div',pseudolinks).each(function(index,element){
+                        //console.dir(element);
+                        $(element).after(texts[index]);
+                    });
+                }
+            }else{
+                if(mobileSectionsLength){ // меню модифицировано
+                    $('>div',pseudolinks).each(function(index,element){
+                        //console.dir(element);
+                        $(menu_container_class).append($(element).next());
+                    });
+                }
+            }
+        };
 
-    // перестроить меню при мобильном разрешении
     rearrangeMenu();
+
     $(window).on('resize',rearrangeMenu);
 
         imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
@@ -43,7 +71,7 @@ jQuery(function(){
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
     // управление меню при событии его контейнера
-    $(menus_container).on('mouseenter mouseleave',/**/ function(event){
+    $(menus_container).on('mouseenter mouseleave', function(event){
         setVisibilityState(event);
     });
 
@@ -62,34 +90,26 @@ jQuery(function(){
         var menu_to_show_index;
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
+            // подставить текст заголовка
+            if(checkResolutionMobile())
+                $('#menus-subheader-mobile').show().text($(this).text());
             menu_to_show_index=$(dd_menus).index(this);
         }
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
     });
-    // Обработать блоки выпадающего меню
+    // Обработать блоки выпадающего меню // aside >div
     $(submenu_items).on('mouseenter mouseleave', function(event){
-        var container=$(this).parent().next('.menu-container'),
-            sections=$('section',container),
-            index=$(this).index(),
-            bgClass='bgActiveCarrot',
-            visibleClass ='visible',
-            setVisible=function(){ console.log('setVisible called');
-                //console.group('element index '+index);
-                    //console.dir(sections);
-                $(sections).removeClass(visibleClass) // visible
-                    .eq(index).addClass(visibleClass);
-                    //console.dir($(sections).eq(index));
-                //console.groupEnd();
-            };
-        setVisible();
+        var bgClass='bgActiveCarrot';
+        //
+        setVisible(this);
         if(event.type=='mouseenter'){//click
             $(submenu_items).removeClass(bgClass);
             $(this).addClass(bgClass);
         }
-        if(event.type=='mouseleave'){ console.log('mouseleave');
+        if(event.type=='mouseleave'){ //console.log('mouseleave');
             index=$(this).parent().find('div.'+bgClass).index();
-            setVisible();
+            setVisible(this);
         }
     });
     // Обработать поле загрузки файла
@@ -119,6 +139,13 @@ jQuery(function(){
         $('input[name="attach-file"]').trigger('click');
     });
 });
+/**
+ * Проверить порог разрешения
+ * @returns {boolean}
+ */
+function checkResolutionMobile(){
+    return jQuery('body').width()<=1024;
+}
 /**
  * Получить/обработать данне секции с формой отправки, чтобы знать, прятать её или нет
  * @param set_data
@@ -163,6 +190,7 @@ function getMenusContainer(){
  * @returns {*|jQuery|HTMLElement}
  */
 function getInnerMenus(){
+    // header >section >section
     return jQuery('>section',getMenusContainer()); // блоки с меню
 }
 /**
@@ -202,31 +230,32 @@ function closeParent(event,layers){
     });
 }
 /**
- * Перегруппировать меню при мобильных разрешениях
+ * Управлять видимостью блоков текста
+ * @param div
  */
-function rearrangeMenu(){
+function setVisible(div){ //console.log('setVisible called');
     var $=jQuery,
-        menuBlock=$('header > section.menu >section:first-child'),
-        pseudolinks=$('aside',menuBlock),
-        menu_container_class= '.menu-container',
-        texts=$(menu_container_class + ' > section',menuBlock),
-        mobileSectionsLength=$('section',pseudolinks).size();
-    console.log('rearrangeMenu, width: '+$('body').width()+', mobileSectionsLength: '+mobileSectionsLength);
-    if($('body').width()<=768){
-        if(!mobileSectionsLength){ // меню не модифицировано
-            $('>div',pseudolinks).each(function(index,element){
-                console.dir(element);
-                $(element).after(texts[index]);
-            });
-        }
+        container,
+        sections,
+        index,
+        nextSection,
+        visibleClass ='visible';
+    if(checkResolutionMobile()){
+        container=$(div).parent();
+        nextSection=$(div).next();
     }else{
-        if(mobileSectionsLength){ // меню модифицировано
-            $('>div',pseudolinks).each(function(index,element){
-                console.dir(element);
-                $(menu_container_class).append($(element).next());
-            });
-        }
+        container=$(div).parent().next('.menu-container');
+        index=$(div).index();
     }
+    sections=$('section',container);
+    //console.group('element index '+index); console.dir(sections);
+    $(sections).removeClass(visibleClass); // visible
+    if(index)
+        $(sections).eq(index).addClass(visibleClass);
+    else{
+        console.dir(nextSection);
+        $(nextSection).addClass(visibleClass);
+    } //console.dir($(sections).eq(index)); console.groupEnd();
 }
 /**
  * Управлять видимостью контейнера с меню
@@ -273,10 +302,11 @@ function setVisibilityState(event,menu_to_show_index){
             //console.log('%cactive_link: '+active_link,'color:blue');
         }
         var visibility_stat=(active_link || visibility_container);
-        $(getInnerMenus()).hide();
+        $(getInnerMenus()).hide(); // header >section >section
         if(visibility_stat){
             $(getMenusContainer()).show(); // отобразить контейнер с меню
-            $(getInnerMenus()).eq(menu_index).show();
+            $(getInnerMenus()) // header >section >section
+                .eq(menu_index).show();
         }else{
             hideAll();
         }

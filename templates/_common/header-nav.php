@@ -40,5 +40,6 @@
             <?php endif; ?>
             <div class="bottom-bg"></div>
         </section>
+        <div id="menus-subheader-mobile">Заголовок меню</div>
     </section>
 </header>

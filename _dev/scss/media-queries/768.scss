@@ -122,38 +122,131 @@
   }
 }
 @media (max-width: $resolution-small-desktop - 1){
-  nav > div{
-    &:nth-child(1){ // menu
-      top: 0;
-      height: $nav-height;
-      width: 100%;
-      ul{
-        display: table;
-        margin: auto;
+  header{
+    nav {
+      > div { // внутренние псевдоменю
+        &:nth-child(1) {
+          // menu
+          top: 0;
+          height: $nav-height;
+          width: 100%;
+          ul {
+            display: table;
+            margin: auto;
+          }
+        }
+        &:nth-child(2) {
+          // logo
+          left: 16px;
+          margin: 0;
+          position: absolute;
+        }
+        &:nth-child(3) {
+          // Консультация
+          right: 16px;
+          width: 42px;
+        }
+        #consulting {
+          position: absolute;
+          top: 33px;
+          a {
+            background-position: 12px;
+            border-radius: 10px;
+            font-size: 0;
+            height: 100%;
+            width: 42px;
+          }
+        }
+        #phone-number {
+          display: none;
+        }
       }
     }
-    &:nth-child(2){ // logo
-      left: 16px;
-      margin: 0;
-      position: absolute;
+    > section { // внутренние тексты для псевдоменю
+      > section{
+        margin-top: 83px;
+        > div{
+          max-width: 100%;
+        }
+        &:nth-child(1) > div {
+          padding-left: 0;
+          width: inherit;
+          > aside {
+            margin-left: 0;
+            width: 100%;
+            >section{
+              &:not(.visible){
+                display: none;
+              }
+            }
+          }
+        }
+      }
     }
-    &:nth-child(3){ // Консультация
-      right: 16px;
-      width: 42px;
-    }
-    #consulting{
-      position: absolute;
-      top:33px;
-      a{
-        background-position: 12px;
-        border-radius: 10px;
-        font-size: 0;
-        height: 100%;
+  }
+  nav {
+    > div {
+      &:nth-child(1) {
+        // menu
+        top: 0;
+        height: $nav-height;
+        width: 100%;
+        ul {
+          display: table;
+          margin: auto;
+        }
+      }
+      &:nth-child(2) {
+        // logo
+        left: 16px;
+        margin: 0;
+        position: absolute;
+      }
+      &:nth-child(3) {
+        // Консультация
+        right: 16px;
         width: 42px;
       }
+      #consulting {
+        position: absolute;
+        top: 33px;
+        a {
+          background-position: 12px;
+          border-radius: 10px;
+          font-size: 0;
+          height: 100%;
+          width: 42px;
+        }
+      }
+      #phone-number {
+        display: none;
+      }
     }
-    #phone-number{
-      display: none;
+    > section {
+      > section{
+        > div{
+          max-width: 100%;
+        }
+      }
     }
+  }
+  // Заголовок активного меню; текст добавляется динамически
+  #menus-subheader-mobile{ // header .menu >h2
+    background-color: #ffffff;
+    @include box-shadow(0px 7px 18px -8px rgba(0,0,0,0.2) inset);
+    display: block;
+    font-family: PlumbLight;
+    font-size: 36px;
+    $h:86px;
+    height: $h;
+    line-height: $h;
+    //margin-bottom: -22px;
+    //margin-top: 23px;
+    position: absolute;
+    //position: relative;
+    padding: 0;
+    text-align: center;
+    top: 28px;
+    width: 100%;
   }
 }
