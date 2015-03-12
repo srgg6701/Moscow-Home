@@ -1,151 +1,149 @@
-// desktop, широкоформатный монитор
-@media (max-height: $resolution-tablet) and (min-width: $resolution-small-desktop){
+// НИЗКИЙ экран <=768
+@media (max-height: $resolution-tablet){
   body{
     $common-background:url($images_dir + 'backgrounds/tile-90.png') #a04323;
     &.no-overflow{
-      $img-height:94px;
-      footer{
-        display: none;
-      }
-      #index{
-        main{
-          bottom: 0;
-        }
-      }
-      #level1{
-        height: inherit;
-        #gallery{
-          display: none;
-        }
-        .slider-bottom{
-          height: inherit;
-        }
-        .slides{
-          height: inherit;
-          display: table;
-          margin: 15px auto;
-          overflow: hidden;
-          padding: inherit;
-          width: 947px;
-          a{
-            &.hidden{
-              background: $common-background;
-              color: #ffffff;
-              display: inherit;
-              font-family: PlumbLight;
-              font-size: 28px;
-              height: $img-height;
-              float: left;
-              line-height: $img-height;
-              text-align: center;
-              text-decoration: none;
-              text-transform: uppercase;
-              width: 268px;
-            }
-          }
-          aside{
-            display: none;
-          }
-          img{
-            height: $img-height;
-            margin-left: 6px;
-            width: 107px;
-          }
-        }
-      }
-      #showcase{
-        bottom: 93px;
-        height: 93px;
-        >div{
-          background-color: transparent;
-          @include box-shadow(0 0 0px 100px rgba(0,0,0,0.6) inset);
-          @include opacity(0.85);
-        }
-        li{
-          font-family: PlumbLight;
-          font-size: 11px;
-          min-height: 23px;
-        }
-      }
-      #slider{
-        bottom: 128px;
-      }
-      #you-need{
-        max-width: inherit;
-        position: relative;
-        width: 100%;
-        .header-slim-big{
-          display: none;
-        }
-        li{
-          background: url($images_dir + "need-768.png") no-repeat;
-          height: 100%;
-          &:nth-child(1){
-            background-position: 0 10px;
-          }
-          &:nth-child(2){
-            background-position: -373px 10px;
-          }
-          &:nth-child(3){
-            background-position: -787px 10px;
-          }
-          &:nth-child(4){
-            background-position: -1215px 10px;
-          }
-        }
-        ul{
-          height: 78px;
-          margin: auto;
-          position: relative;
-          z-index: 2;
-          a{
-            color: #ffffff;
-            top:23px;
-          }
-        }
-        .substrate{
-          background:$common-background;
-          display: block;
-          height: 100%;
-          @include opacity(0.85);
-          position: absolute;
-          top:0;
-          width: 100%;
-          z-index: 0;
-        }
-      }
+
       .pointers-aside {
+        @media (max-height: 600px) {
+          width: 55vw;
+        }
         aside {
           bottom: 34.5vh;
+          @media (max-height: 600px) {
+            bottom: 40vh;
+            background-size: 33%;
+            height: 70px !important;
+            width: 70px !important;
+          }
+          @media (max-height: 480px) {
+            bottom: 44vh;
+            background-position: center !important;
+            background-size: 33%;
+            height: 10vh !important;
+            width: 10vh !important;
+          }
+        }
+      }
+      // широкоформатный монитор >=1024
+      @media (min-width: $resolution-small-desktop) {
+        $img-height:94px;
+        footer{
+          display: none;
+        }
+        #index{
+          main{
+            bottom: 0;
+          }
+        }
+        #level1{
+          height: inherit;
+          #gallery{
+            display: none;
+          }
+          .slider-bottom{
+            height: inherit;
+          }
+          .slides{
+            height: inherit;
+            display: table;
+            margin: 15px auto;
+            overflow: hidden;
+            padding: inherit;
+            width: 947px;
+            a{
+              &.hidden{
+                background: $common-background;
+                color: #ffffff;
+                display: inherit;
+                font-family: PlumbLight;
+                font-size: 28px;
+                height: $img-height;
+                float: left;
+                line-height: $img-height;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 268px;
+              }
+            }
+            aside{
+              display: none;
+            }
+            img{
+              height: $img-height;
+              margin-left: 6px;
+              width: 107px;
+            }
+          }
+        }
+        #showcase{
+          bottom: 93px;
+          height: 93px;
+          >div{
+            background-color: transparent;
+            @include box-shadow(0 0 0px 100px rgba(0,0,0,0.6) inset);
+            @include opacity(0.85);
+          }
+          li{
+            font-family: PlumbLight;
+            font-size: 11px;
+            min-height: 23px;
+          }
+        }
+        #slider{
+          bottom: 128px;
+        }
+        #you-need{
+          max-width: inherit;
+          position: relative;
+          width: 100%;
+          .header-slim-big{
+            display: none;
+          }
+          li{
+            background: url($images_dir + "need-768.png") no-repeat;
+            height: 100%;
+            &:nth-child(1){
+              background-position: 0 10px;
+            }
+            &:nth-child(2){
+              background-position: -373px 10px;
+            }
+            &:nth-child(3){
+              background-position: -787px 10px;
+            }
+            &:nth-child(4){
+              background-position: -1215px 10px;
+            }
+          }
+          ul{
+            height: 78px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            a{
+              color: #ffffff;
+              top:23px;
+            }
+          }
+          .substrate{
+            background:$common-background;
+            display: block;
+            height: 100%;
+            @include opacity(0.85);
+            position: absolute;
+            top:0;
+            width: 100%;
+            z-index: 0;
+          }
         }
       }
     }
   }
 }
-@media (min-width: $resolution-small-desktop){
-  body.no-overflow{
-    .pointers-aside {
-      @media (max-height: 600px) {
-        width: 55vw;
-      }
-      aside {
-        @media (max-height: 600px) {
-          bottom: 40vh;
-          background-size: 33%;
-          height: 70px !important;
-          width: 70px !important;
-        }
-        @media (max-height: 480px) {
-          bottom: 44vh;
-          background-position: center !important;
-          background-size: 33%;
-          height: 10vh !important;
-          width: 10vh !important;
-        }
-      }
-    }
-  }
-}
+// любая ВЫСОТА экрана
+// ширина для мобильных устройств <=768
 @media (max-width: $resolution-small-desktop - 1){
   header{
     nav {
@@ -190,8 +188,14 @@
     > section { // внутренние тексты для псевдоменю
       > section{
         margin-top: 83px;
+        h4{
+          display: none;
+        }
         &:nth-child(4){
           margin-top: 23px;
+          h4{
+            display: inherit;
+          }
         }
         > div{
           max-width: 100%;
@@ -258,6 +262,11 @@
       }
     }
   }
+  .menu.wide a.print{ // кнопка "Распечатать адрес"
+    float: none;
+    margin-bottom: 14px;
+    margin-top: inherit !important;
+  }
   // Заголовок активного меню; текст добавляется динамически
   #menus-subheader-mobile{ // header .menu >h2
     background-color: #ffffff;
@@ -268,11 +277,8 @@
     $h:86px;
     height: $h;
     line-height: $h;
-    //margin-bottom: -22px;
-    //margin-top: 23px;
-    position: absolute;
-    //position: relative;
     padding: 0;
+    position: absolute;
     text-align: center;
     top: 28px;
     width: 100%;

@@ -10,35 +10,31 @@ jQuery(function(){
         /**
          * Перегруппировать меню при мобильных разрешениях
          */
-        rearrangeMenu=function(){
+        rearrangeMobileElements=function(){
             var menuBlock=$('header > section.menu >section:first-child'),
                 pseudolinks=$('aside',menuBlock),
                 menu_container_class= '.menu-container',
                 texts=$(menu_container_class + ' > section',menuBlock),
-                mobileSectionsLength=$('section',pseudolinks).size();
-            //console.log('rearrangeMenu, width: '+$('body').width()+', mobileSectionsLength: '+mobileSectionsLength);
+                mobileSectionsLength=$('section',pseudolinks).size(),
+                aPrint = $('#goprint');
+            //console.log('rearrangeMobileElements, width: '+$('body').width()+', mobileSectionsLength: '+mobileSectionsLength);
             if(checkResolutionMobile()){
                 //console.log('checkResolutionMobile OK');
                 if(!mobileSectionsLength){ // меню не модифицировано
-                    //console.log('start menu rearranging...');
-                    $('>div',pseudolinks).each(function(index,element){
-                        //console.dir(element);
-                        $(element).after(texts[index]);
-                    });
+                    moveSubmenusTexts(pseudolinks,texts,true);
+                    // Переместить кнопку "Распечатать адрес"
+                    //movePrintButton(aPrint,true);
                 }
-            }else{
-                if(mobileSectionsLength){ // меню модифицировано
-                    $('>div',pseudolinks).each(function(index,element){
-                        //console.dir(element);
-                        $(menu_container_class).append($(element).next());
-                    });
-                }
+            }else if(mobileSectionsLength){ // меню модифицировано
+                    moveSubmenusTexts(pseudolinks,menu_container_class);
+                    // Переместить кнопку "Распечатать адрес"
+                    //movePrintButton(aPrint);
             }
         };
 
-    rearrangeMenu();
+    rearrangeMobileElements();
 
-    $(window).on('resize',rearrangeMenu);
+    $(window).on('resize',rearrangeMobileElements);
 
         imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
 
@@ -318,4 +314,29 @@ function setVisible(div){ //console.log('setVisible called');
         console.dir(nextSection);
         $(nextSection).addClass(visibleClass);
     } //console.dir($(sections).eq(index)); console.groupEnd();
+}
+/**
+ * ПЕРЕМЕСТИТЬ ЭЛЕМЕНТЫ ПРИ ИЗМЕНЕНИИ МАКЕТА
+ */
+/**
+ * Переместить блоки текста для подменю (первое выпадающее меню)
+ * @pseudolinks ─ псевдоссылки в первом выпадающем меню
+ * @obj ─ texts или menu_container_class
+ */
+function moveSubmenusTexts(pseudolinks,obj,mobile){
+//console.log('start menu rearranging...');
+    var $=jQuery;
+    $('>div',pseudolinks).each(function(index,element){
+        //console.dir(element);
+        if(mobile) $(element).after(obj[index]);
+        else $(obj).append($(element).next());
+    });
+}
+/**
+ * Переместить кнопку "Распечатать адрес"
+ */
+function movePrintButton(aPrint, mobile){
+    var div=aPrint.parent('div').eq(0);
+    if(mobile) div.append(aPrint);
+    else div.find('p').eq(0).next(aPrint);
 }

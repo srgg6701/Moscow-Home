@@ -121,7 +121,8 @@ div{
     height: 100%;
     max-width: 910px;
     position: relative;
-    width: inherit;
+    //width: inherit;
+    width: 72vw;
     z-index: 4;
   }
   .do-it &{
