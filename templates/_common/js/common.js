@@ -44,8 +44,7 @@ jQuery(function(){
         //---------------------------------
         dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
-        menus_container=getMenusContainer(),        // контейнер с блоками меню
-        mapInit=false;
+        menus_container=getMenusContainer();        // контейнер с блоками меню
         // управление меню при событии его контейнера
         menus_container.on('mouseenter mouseleave', function(event){
             setVisibilityState(event);
@@ -53,13 +52,13 @@ jQuery(function(){
 
     //-----------------------------------------
     rearrangeMobileElements();
-    $(window).on('resize',rearrangeMobileElements, function(){
-        //console.log('resized, mapInit: '+mapInit);
+    $(window).on('resize',function(){
+        rearrangeMobileElements();
         /**
          * todo: по-хорошему нужно сохранять координаты последней карты
          * и передавать их создаваемой  */
         createYMap();
-        if(mapInit) $('.ymaps-map:not(:last)').hide();
+        $('.ymaps-map:not(:last)').hide();
     });
 
     imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
@@ -87,7 +86,6 @@ jQuery(function(){
                 else // подставить текст заголовка
                     menus_subheader_mobile.show().text(this.innerText);
             }
-            if(this.id=='link_contacts') mapInit=true;
             menu_to_show_index=dd_menus.index(this);
         }
         // установить состояние видимости
@@ -302,7 +300,7 @@ function setVisible(div){ //console.log('setVisible called');
     if(index)
         $(sections).eq(index).addClass(visibleClass);
     else{
-        console.dir(nextSection);
+        //console.dir(nextSection);
         $(nextSection).addClass(visibleClass);
     } //console.dir($(sections).eq(index)); console.groupEnd();
 }
@@ -329,5 +327,5 @@ function moveSubmenusTexts(pseudolinks,obj,mobile){
 function movePrintButton(aPrint, mobile){
     var div=aPrint.parent('div').eq(0);
     if(mobile) div.append(aPrint);
-    else div.find('p').eq(0).next(aPrint);
+    else div.find('p').eq(0).after(aPrint);
 }

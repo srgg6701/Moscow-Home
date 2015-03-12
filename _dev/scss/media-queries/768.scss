@@ -156,6 +156,7 @@
           ul {
             display: table;
             margin: auto;
+
           }
         }
         &:nth-child(2) {
@@ -216,6 +217,7 @@
       }
     }
   }
+  /*
   nav {
     > div {
       &:nth-child(1) {
@@ -261,11 +263,30 @@
         }
       }
     }
-  }
-  .menu.wide a.print{ // кнопка "Распечатать адрес"
-    float: none;
-    margin-bottom: 14px;
-    margin-top: inherit !important;
+  }*/
+  .menu.wide {
+    >section{
+      &:nth-child(2){ // услуги
+        ul{
+          &.you-need{
+            display: block;
+            max-width: 640px;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            @include transform(translateX(40px));
+            li{
+              width: 320px;
+            }
+          }
+        }
+      }
+    }
+    a.print{ // кнопка "Распечатать адрес"
+      float: none;
+      margin-bottom: 14px;
+      margin-top: inherit !important;
+    }
   }
   // Заголовок активного меню; текст добавляется динамически
   #menus-subheader-mobile{ // header .menu >h2

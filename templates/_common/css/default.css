@@ -3359,23 +3359,23 @@ body.gallery [id^="slider-mini-"] {
     display: table;
     margin: auto;
   }
-  /* line 161, ../../../_dev/scss/media-queries/768.scss */
+  /* line 162, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(2) {
     left: 16px;
     margin: 0;
     position: absolute;
   }
-  /* line 167, ../../../_dev/scss/media-queries/768.scss */
+  /* line 168, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(3) {
     right: 16px;
     width: 42px;
   }
-  /* line 172, ../../../_dev/scss/media-queries/768.scss */
+  /* line 173, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting {
     position: absolute;
     top: 33px;
   }
-  /* line 175, ../../../_dev/scss/media-queries/768.scss */
+  /* line 176, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting a {
     background-position: 12px;
     border-radius: 10px;
@@ -3383,97 +3383,117 @@ body.gallery [id^="slider-mini-"] {
     height: 100%;
     width: 42px;
   }
-  /* line 183, ../../../_dev/scss/media-queries/768.scss */
+  /* line 184, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #phone-number {
     display: none;
   }
-  /* line 189, ../../../_dev/scss/media-queries/768.scss */
+  /* line 190, ../../../_dev/scss/media-queries/768.scss */
   header > section > section {
     margin-top: 83px;
   }
-  /* line 191, ../../../_dev/scss/media-queries/768.scss */
+  /* line 192, ../../../_dev/scss/media-queries/768.scss */
   header > section > section h4 {
     display: none;
   }
-  /* line 194, ../../../_dev/scss/media-queries/768.scss */
+  /* line 195, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(4) {
     margin-top: 23px;
   }
-  /* line 196, ../../../_dev/scss/media-queries/768.scss */
+  /* line 197, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(4) h4 {
     display: inherit;
   }
-  /* line 200, ../../../_dev/scss/media-queries/768.scss */
+  /* line 201, ../../../_dev/scss/media-queries/768.scss */
   header > section > section > div {
     max-width: 100%;
   }
-  /* line 203, ../../../_dev/scss/media-queries/768.scss */
+  /* line 204, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div {
     padding-left: 0;
     width: inherit;
   }
-  /* line 206, ../../../_dev/scss/media-queries/768.scss */
+  /* line 207, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside {
     margin-left: 0;
     width: 100%;
   }
-  /* line 210, ../../../_dev/scss/media-queries/768.scss */
+  /* line 211, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside > section:not(.visible) {
     display: none;
   }
 
-  /* line 221, ../../../_dev/scss/media-queries/768.scss */
-  nav > div:nth-child(1) {
-    top: 0;
-    height: 68px;
-    width: 100%;
+  /*
+  nav {
+    > div {
+      &:nth-child(1) {
+        // menu
+        top: 0;
+        height: $nav-height;
+        width: 100%;
+        ul {
+          display: table;
+          margin: auto;
+        }
+      }
+      &:nth-child(2) {
+        // logo
+        left: 16px;
+        margin: 0;
+        position: absolute;
+      }
+      &:nth-child(3) {
+        // ╨Ъ╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤П
+        right: 16px;
+        width: 42px;
+      }
+      #consulting {
+        position: absolute;
+        top: 33px;
+        a {
+          background-position: 12px;
+          border-radius: 10px;
+          font-size: 0;
+          height: 100%;
+          width: 42px;
+        }
+      }
+      #phone-number {
+        display: none;
+      }
+    }
+    > section {
+      > section{
+        > div{
+          max-width: 100%;
+        }
+      }
+    }
+  }*/
+  /* line 271, ../../../_dev/scss/media-queries/768.scss */
+  .menu.wide > section:nth-child(2) ul.you-need {
+    display: block;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    -webkit-transform: translateX(40px);
+    -moz-transform: translateX(40px);
+    -ms-transform: translateX(40px);
+    -o-transform: translateX(40px);
+    transform: translateX(40px);
   }
-  /* line 226, ../../../_dev/scss/media-queries/768.scss */
-  nav > div:nth-child(1) ul {
-    display: table;
-    margin: auto;
+  /* line 278, ../../../_dev/scss/media-queries/768.scss */
+  .menu.wide > section:nth-child(2) ul.you-need li {
+    width: 320px;
   }
-  /* line 231, ../../../_dev/scss/media-queries/768.scss */
-  nav > div:nth-child(2) {
-    left: 16px;
-    margin: 0;
-    position: absolute;
-  }
-  /* line 237, ../../../_dev/scss/media-queries/768.scss */
-  nav > div:nth-child(3) {
-    right: 16px;
-    width: 42px;
-  }
-  /* line 242, ../../../_dev/scss/media-queries/768.scss */
-  nav > div #consulting {
-    position: absolute;
-    top: 33px;
-  }
-  /* line 245, ../../../_dev/scss/media-queries/768.scss */
-  nav > div #consulting a {
-    background-position: 12px;
-    border-radius: 10px;
-    font-size: 0;
-    height: 100%;
-    width: 42px;
-  }
-  /* line 253, ../../../_dev/scss/media-queries/768.scss */
-  nav > div #phone-number {
-    display: none;
-  }
-  /* line 259, ../../../_dev/scss/media-queries/768.scss */
-  nav > section > section > div {
-    max-width: 100%;
-  }
-
-  /* line 265, ../../../_dev/scss/media-queries/768.scss */
+  /* line 285, ../../../_dev/scss/media-queries/768.scss */
   .menu.wide a.print {
     float: none;
     margin-bottom: 14px;
     margin-top: inherit !important;
   }
 
-  /* line 271, ../../../_dev/scss/media-queries/768.scss */
+  /* line 292, ../../../_dev/scss/media-queries/768.scss */
   #menus-subheader-mobile {
     background-color: #ffffff;
     -webkit-box-shadow: 0px 7px 18px -8px rgba(0, 0, 0, 0.2) inset;
