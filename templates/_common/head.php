@@ -46,12 +46,15 @@ else:?>
 </style>
 <?php
 endif; ?>
-<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;amp;lang=ru-RU"></script>
+<script id="jsmap" src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;amp;lang=ru-RU"></script>
 <script>
 ymaps.ready(init);
   var myMap;
   function init(){
       jQuery('#waiting-map').remove();
+      createYMap();
+  }
+  function createYMap(){
       myMap = new ymaps.Map ("map", {
           center: [55.7128,37.0681], zoom: 11
       });
@@ -60,19 +63,19 @@ ymaps.ready(init);
           balloonContent: 'Столица России'
       });
       myMap.geoObjects.add(myPlacemark);
+  }
 <?php   if($pageclass=="print-contacts"):?>
-      var intv=setTimeout(function(){
-          document.getElementById('wait-printing').style.display='none';
-          window.print();
-      },2000);
+var intv=setTimeout(function(){
+    document.getElementById('wait-printing').style.display='none';
+    window.print();
+},2000);
 <?php   endif;
         if($main_page):
         ?>
-      jQuery('.slider-bottom .slides').on('click', function(){
-          location.href=location.pathname+'gallery';
-      });
+jQuery('.slider-bottom .slides').on('click', function(){
+    location.href=location.pathname+'gallery';
+});
 <?php   endif;?>
-  }
 </script>
 <?php
 if($pageclass!="print-contacts"):
