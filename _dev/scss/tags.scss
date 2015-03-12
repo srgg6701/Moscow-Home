@@ -122,6 +122,7 @@ div{
     max-width: 910px;
     position: relative;
     width: inherit;
+    z-index: 4;
   }
   .do-it &{
     &.phone-number{

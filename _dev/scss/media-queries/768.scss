@@ -71,6 +71,7 @@
         bottom: 128px;
       }
       #you-need{
+        max-width: inherit;
         position: relative;
         width: 100%;
         .header-slim-big{
@@ -121,6 +122,30 @@
     }
   }
 }
+@media (min-width: $resolution-small-desktop){
+  body.no-overflow{
+    .pointers-aside {
+      @media (max-height: 600px) {
+        width: 55vw;
+      }
+      aside {
+        @media (max-height: 600px) {
+          bottom: 40vh;
+          background-size: 33%;
+          height: 70px !important;
+          width: 70px !important;
+        }
+        @media (max-height: 480px) {
+          bottom: 44vh;
+          background-position: center !important;
+          background-size: 33%;
+          height: 10vh !important;
+          width: 10vh !important;
+        }
+      }
+    }
+  }
+}
 @media (max-width: $resolution-small-desktop - 1){
   header{
     nav {
@@ -165,6 +190,9 @@
     > section { // внутренние тексты для псевдоменю
       > section{
         margin-top: 83px;
+        &:nth-child(4){
+          margin-top: 23px;
+        }
         > div{
           max-width: 100%;
         }

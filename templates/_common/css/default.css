@@ -196,8 +196,9 @@ body.no-overflow div.pointers-aside {
   max-width: 910px;
   position: relative;
   width: inherit;
+  z-index: 4;
 }
-/* line 127, ../../../_dev/scss/tags.scss */
+/* line 128, ../../../_dev/scss/tags.scss */
 .do-it div.phone-number {
   float: left;
   font-family: PlumbMedium;
@@ -205,25 +206,25 @@ body.no-overflow div.pointers-aside {
   margin-right: 2px;
   margin-left: 32px;
 }
-/* line 136, ../../../_dev/scss/tags.scss */
+/* line 137, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:first-child {
   padding-right: 30px;
 }
-/* line 139, ../../../_dev/scss/tags.scss */
+/* line 140, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > aside > div:last-child {
   padding-left: 59px;
 }
-/* line 143, ../../../_dev/scss/tags.scss */
+/* line 144, ../../../_dev/scss/tags.scss */
 .slider-bottom > div {
   height: 184px;
   margin: -13px auto -12px;
   padding: 20px 0;
 }
-/* line 148, ../../../_dev/scss/tags.scss */
+/* line 149, ../../../_dev/scss/tags.scss */
 #decoration .slider-bottom .slides > div {
   background-image: none;
 }
-/* line 151, ../../../_dev/scss/tags.scss */
+/* line 152, ../../../_dev/scss/tags.scss */
 #showcase > div {
   background: url("../images/backgrounds/tile-100.png") #811d00;
   -webkit-border-radius: 8px;
@@ -238,7 +239,7 @@ body.no-overflow div.pointers-aside {
   margin: auto;
   max-width: 948px;
 }
-/* line 160, ../../../_dev/scss/tags.scss */
+/* line 161, ../../../_dev/scss/tags.scss */
 #slider div.img-box {
   background-image: url("../images/slider-main.jpg");
   background-position: center;
@@ -247,7 +248,7 @@ body.no-overflow div.pointers-aside {
   width: 100%;
   margin: auto;
 }
-/* line 169, ../../../_dev/scss/tags.scss */
+/* line 170, ../../../_dev/scss/tags.scss */
 #slider ul.social + div {
   background-color: white;
   -moz-border-radius-topright: 11px;
@@ -265,11 +266,11 @@ body.no-overflow div.pointers-aside {
   opacity: 0.65;
   z-index: 1;
 }
-/* line 177, ../../../_dev/scss/tags.scss */
+/* line 178, ../../../_dev/scss/tags.scss */
 #you-need ul li > div {
   height: 100%;
 }
-/* line 180, ../../../_dev/scss/tags.scss */
+/* line 181, ../../../_dev/scss/tags.scss */
 #you-need ul li > div > div {
   position: relative;
   top: 50%;
@@ -280,27 +281,27 @@ body.no-overflow div.pointers-aside {
   transform: translateY(-50%);
 }
 
-/* line 185, ../../../_dev/scss/tags.scss */
+/* line 186, ../../../_dev/scss/tags.scss */
 footer.index {
   margin-top: 12px !important;
   overflow: hidden;
   position: absolute;
 }
 
-/* line 192, ../../../_dev/scss/tags.scss */
+/* line 193, ../../../_dev/scss/tags.scss */
 .top h1 {
   color: white;
   font-weight: normal;
   margin-bottom: 36px;
 }
 
-/* line 200, ../../../_dev/scss/tags.scss */
+/* line 201, ../../../_dev/scss/tags.scss */
 body.gallery h2.header-slim-big {
   margin: 17px auto 36px;
   text-align: center;
 }
 
-/* line 207, ../../../_dev/scss/tags.scss */
+/* line 208, ../../../_dev/scss/tags.scss */
 .footer h3 {
   color: #3f3f3f;
   font-family: PlumbMedium;
@@ -309,37 +310,37 @@ body.gallery h2.header-slim-big {
   margin-top: 0;
 }
 
-/* line 216, ../../../_dev/scss/tags.scss */
+/* line 217, ../../../_dev/scss/tags.scss */
 #contacts-map h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 
-/* line 221, ../../../_dev/scss/tags.scss */
+/* line 222, ../../../_dev/scss/tags.scss */
 header {
   background-color: white;
   display: table;
 }
 
-/* line 226, ../../../_dev/scss/tags.scss */
+/* line 227, ../../../_dev/scss/tags.scss */
 .slides a:not(:first-child) img {
   margin-left: 9px;
 }
 
-/* line 231, ../../../_dev/scss/tags.scss */
+/* line 232, ../../../_dev/scss/tags.scss */
 ul li {
   display: table-cell;
 }
-/* line 234, ../../../_dev/scss/tags.scss */
+/* line 235, ../../../_dev/scss/tags.scss */
 ul.block li {
   display: block;
 }
-/* line 237, ../../../_dev/scss/tags.scss */
+/* line 238, ../../../_dev/scss/tags.scss */
 ul.social li {
   display: block;
   padding: 4px;
 }
-/* line 241, ../../../_dev/scss/tags.scss */
+/* line 242, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li {
   background-repeat: no-repeat;
   background-position: center 0;
@@ -351,27 +352,27 @@ ul.social li {
   text-align: center;
   width: 20%;
 }
-/* line 252, ../../../_dev/scss/tags.scss */
+/* line 253, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(1) {
   background-image: url("../images/footer1.png");
 }
-/* line 252, ../../../_dev/scss/tags.scss */
+/* line 253, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(2) {
   background-image: url("../images/footer2.png");
 }
-/* line 252, ../../../_dev/scss/tags.scss */
+/* line 253, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(3) {
   background-image: url("../images/footer3.png");
 }
-/* line 252, ../../../_dev/scss/tags.scss */
+/* line 253, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(4) {
   background-image: url("../images/footer4.png");
 }
-/* line 252, ../../../_dev/scss/tags.scss */
+/* line 253, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul li:nth-child(5) {
   background-image: url("../images/footer5.png");
 }
-/* line 258, ../../../_dev/scss/tags.scss */
+/* line 259, ../../../_dev/scss/tags.scss */
 #showcase li {
   color: white;
   display: list-item;
@@ -383,63 +384,63 @@ ul.social li {
   padding-left: 3px;
   text-transform: uppercase;
 }
-/* line 269, ../../../_dev/scss/tags.scss */
+/* line 270, ../../../_dev/scss/tags.scss */
 #you-need li {
   display: table-cell;
   height: 66px;
   max-width: 250px;
   text-align: left;
 }
-/* line 278, ../../../_dev/scss/tags.scss */
+/* line 279, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(1) {
   background: url("../images/need-design.png") no-repeat;
   background-position: 0 9px;
 }
-/* line 282, ../../../_dev/scss/tags.scss */
+/* line 283, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(2) {
   background: url("../images/need-facade.png") no-repeat;
   padding-left: 13px;
 }
-/* line 286, ../../../_dev/scss/tags.scss */
+/* line 287, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(3) {
   background: url("../images/need-building.png") no-repeat;
   padding-left: 13px;
 }
-/* line 290, ../../../_dev/scss/tags.scss */
+/* line 291, ../../../_dev/scss/tags.scss */
 #you-need ul > li:nth-child(4) {
   background: url("../images/need-engineering.png") no-repeat;
   background-position: 0 9px;
   width: 167px;
 }
 
-/* line 297, ../../../_dev/scss/tags.scss */
+/* line 298, ../../../_dev/scss/tags.scss */
 p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-/* line 300, ../../../_dev/scss/tags.scss */
+/* line 301, ../../../_dev/scss/tags.scss */
 .do-it p {
   display: table;
   margin: 27px auto 6px;
 }
-/* line 304, ../../../_dev/scss/tags.scss */
+/* line 305, ../../../_dev/scss/tags.scss */
 .top p {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
   margin-bottom: 32px;
 }
-/* line 311, ../../../_dev/scss/tags.scss */
+/* line 312, ../../../_dev/scss/tags.scss */
 #you-need p.header-slim-big {
   margin-bottom: 32px;
 }
-/* line 315, ../../../_dev/scss/tags.scss */
+/* line 316, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   color: #3f3f3f;
 }
-/* line 317, ../../../_dev/scss/tags.scss */
+/* line 318, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home p.header-big {
   color: #404040;
   display: table;
@@ -448,31 +449,31 @@ p {
   text-align: center;
   width: 500px;
 }
-/* line 326, ../../../_dev/scss/tags.scss */
+/* line 327, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home div.float-left:first-child p {
   margin-bottom: 6px;
 }
 
-/* line 331, ../../../_dev/scss/tags.scss */
+/* line 332, ../../../_dev/scss/tags.scss */
 .menu-container section {
   display: none;
 }
-/* line 333, ../../../_dev/scss/tags.scss */
+/* line 334, ../../../_dev/scss/tags.scss */
 .menu-container section.visible {
   display: block;
 }
-/* line 337, ../../../_dev/scss/tags.scss */
+/* line 338, ../../../_dev/scss/tags.scss */
 .do-it section {
   display: table;
   margin: auto;
 }
 
-/* line 343, ../../../_dev/scss/tags.scss */
+/* line 344, ../../../_dev/scss/tags.scss */
 .print span {
   border-bottom: dotted 1px #a64726;
   display: table;
 }
-/* line 347, ../../../_dev/scss/tags.scss */
+/* line 348, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home ul span {
   background-color: #7d2b12;
   color: white;
@@ -480,24 +481,24 @@ p {
   margin: auto;
   padding: 0 4px;
 }
-/* line 354, ../../../_dev/scss/tags.scss */
+/* line 355, ../../../_dev/scss/tags.scss */
 .arrows span {
   color: #FF6447;
   display: inline-block;
   padding: 0 4px;
 }
-/* line 360, ../../../_dev/scss/tags.scss */
+/* line 361, ../../../_dev/scss/tags.scss */
 #style-classic span, #style-modern span {
   color: #a64726;
 }
 
-/* line 364, ../../../_dev/scss/tags.scss */
+/* line 365, ../../../_dev/scss/tags.scss */
 ul {
   display: inline-block;
   margin: 0;
   padding: 0;
 }
-/* line 368, ../../../_dev/scss/tags.scss */
+/* line 369, ../../../_dev/scss/tags.scss */
 ul.social {
   background: url("../images/social-left-vertical.png") no-repeat;
   height: 162px;
@@ -508,33 +509,33 @@ ul.social {
   margin-top: 9px;
   z-index: 3;
 }
-/* line 374, ../../../_dev/scss/tags.scss */
+/* line 375, ../../../_dev/scss/tags.scss */
 .footer.why-moscow-home > section > ul {
   display: table;
   margin: auto;
 }
-/* line 378, ../../../_dev/scss/tags.scss */
+/* line 379, ../../../_dev/scss/tags.scss */
 #you-need ul {
   display: table;
   margin: -12px auto 9px auto;
 }
-/* line 382, ../../../_dev/scss/tags.scss */
+/* line 383, ../../../_dev/scss/tags.scss */
 #showcase ul {
   margin: 1em auto;
   padding: 0;
   position: absolute;
 }
-/* line 387, ../../../_dev/scss/tags.scss */
+/* line 388, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(1) {
   left: 4%;
   width: 260px;
 }
-/* line 391, ../../../_dev/scss/tags.scss */
+/* line 392, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(2) {
   left: 35.2%;
   width: 350px;
 }
-/* line 395, ../../../_dev/scss/tags.scss */
+/* line 396, ../../../_dev/scss/tags.scss */
 #showcase ul:nth-child(3) {
   left: 77.7%;
   width: 200px;
@@ -3256,47 +3257,48 @@ body.gallery [id^="slider-mini-"] {
   }
   /* line 73, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need {
+    max-width: inherit;
     position: relative;
     width: 100%;
   }
-  /* line 76, ../../../_dev/scss/media-queries/768.scss */
+  /* line 77, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need .header-slim-big {
     display: none;
   }
-  /* line 79, ../../../_dev/scss/media-queries/768.scss */
+  /* line 80, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need li {
     background: url("../images/need-768.png") no-repeat;
     height: 100%;
   }
-  /* line 82, ../../../_dev/scss/media-queries/768.scss */
+  /* line 83, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need li:nth-child(1) {
     background-position: 0 10px;
   }
-  /* line 85, ../../../_dev/scss/media-queries/768.scss */
+  /* line 86, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need li:nth-child(2) {
     background-position: -373px 10px;
   }
-  /* line 88, ../../../_dev/scss/media-queries/768.scss */
+  /* line 89, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need li:nth-child(3) {
     background-position: -787px 10px;
   }
-  /* line 91, ../../../_dev/scss/media-queries/768.scss */
+  /* line 92, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need li:nth-child(4) {
     background-position: -1215px 10px;
   }
-  /* line 95, ../../../_dev/scss/media-queries/768.scss */
+  /* line 96, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need ul {
     height: 78px;
     margin: auto;
     position: relative;
     z-index: 2;
   }
-  /* line 100, ../../../_dev/scss/media-queries/768.scss */
+  /* line 101, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need ul a {
     color: #ffffff;
     top: 23px;
   }
-  /* line 105, ../../../_dev/scss/media-queries/768.scss */
+  /* line 106, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow #you-need .substrate {
     background: url("../images/backgrounds/tile-90.png") #a04323;
     display: block;
@@ -3308,40 +3310,66 @@ body.gallery [id^="slider-mini-"] {
     width: 100%;
     z-index: 0;
   }
-  /* line 117, ../../../_dev/scss/media-queries/768.scss */
+  /* line 118, ../../../_dev/scss/media-queries/768.scss */
   body.no-overflow .pointers-aside aside {
     bottom: 34.5vh;
   }
 }
+@media (min-width: 1024px) and (max-height: 600px) {
+  /* line 127, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow .pointers-aside {
+    width: 55vw;
+  }
+}
+@media (min-width: 1024px) and (max-height: 600px) {
+  /* line 131, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow .pointers-aside aside {
+    bottom: 40vh;
+    background-size: 33%;
+    height: 70px !important;
+    width: 70px !important;
+  }
+}
+@media (min-width: 1024px) and (max-height: 480px) {
+  /* line 131, ../../../_dev/scss/media-queries/768.scss */
+  body.no-overflow .pointers-aside aside {
+    bottom: 44vh;
+    background-position: center !important;
+    background-size: 33%;
+    height: 10vh !important;
+    width: 10vh !important;
+  }
+}
+
 @media (max-width: 1023px) {
-  /* line 128, ../../../_dev/scss/media-queries/768.scss */
+  /* line 153, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(1) {
     top: 0;
     height: 68px;
     width: 100%;
   }
-  /* line 133, ../../../_dev/scss/media-queries/768.scss */
+  /* line 158, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(1) ul {
     display: table;
     margin: auto;
   }
-  /* line 138, ../../../_dev/scss/media-queries/768.scss */
+  /* line 163, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(2) {
     left: 16px;
     margin: 0;
     position: absolute;
   }
-  /* line 144, ../../../_dev/scss/media-queries/768.scss */
+  /* line 169, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(3) {
     right: 16px;
     width: 42px;
   }
-  /* line 149, ../../../_dev/scss/media-queries/768.scss */
+  /* line 174, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting {
     position: absolute;
     top: 33px;
   }
-  /* line 152, ../../../_dev/scss/media-queries/768.scss */
+  /* line 177, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting a {
     background-position: 12px;
     border-radius: 10px;
@@ -3349,61 +3377,65 @@ body.gallery [id^="slider-mini-"] {
     height: 100%;
     width: 42px;
   }
-  /* line 160, ../../../_dev/scss/media-queries/768.scss */
+  /* line 185, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #phone-number {
     display: none;
   }
-  /* line 166, ../../../_dev/scss/media-queries/768.scss */
+  /* line 191, ../../../_dev/scss/media-queries/768.scss */
   header > section > section {
     margin-top: 83px;
   }
-  /* line 168, ../../../_dev/scss/media-queries/768.scss */
+  /* line 193, ../../../_dev/scss/media-queries/768.scss */
+  header > section > section:nth-child(4) {
+    margin-top: 23px;
+  }
+  /* line 196, ../../../_dev/scss/media-queries/768.scss */
   header > section > section > div {
     max-width: 100%;
   }
-  /* line 171, ../../../_dev/scss/media-queries/768.scss */
+  /* line 199, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div {
     padding-left: 0;
     width: inherit;
   }
-  /* line 174, ../../../_dev/scss/media-queries/768.scss */
+  /* line 202, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside {
     margin-left: 0;
     width: 100%;
   }
-  /* line 178, ../../../_dev/scss/media-queries/768.scss */
+  /* line 206, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside > section:not(.visible) {
     display: none;
   }
 
-  /* line 189, ../../../_dev/scss/media-queries/768.scss */
+  /* line 217, ../../../_dev/scss/media-queries/768.scss */
   nav > div:nth-child(1) {
     top: 0;
     height: 68px;
     width: 100%;
   }
-  /* line 194, ../../../_dev/scss/media-queries/768.scss */
+  /* line 222, ../../../_dev/scss/media-queries/768.scss */
   nav > div:nth-child(1) ul {
     display: table;
     margin: auto;
   }
-  /* line 199, ../../../_dev/scss/media-queries/768.scss */
+  /* line 227, ../../../_dev/scss/media-queries/768.scss */
   nav > div:nth-child(2) {
     left: 16px;
     margin: 0;
     position: absolute;
   }
-  /* line 205, ../../../_dev/scss/media-queries/768.scss */
+  /* line 233, ../../../_dev/scss/media-queries/768.scss */
   nav > div:nth-child(3) {
     right: 16px;
     width: 42px;
   }
-  /* line 210, ../../../_dev/scss/media-queries/768.scss */
+  /* line 238, ../../../_dev/scss/media-queries/768.scss */
   nav > div #consulting {
     position: absolute;
     top: 33px;
   }
-  /* line 213, ../../../_dev/scss/media-queries/768.scss */
+  /* line 241, ../../../_dev/scss/media-queries/768.scss */
   nav > div #consulting a {
     background-position: 12px;
     border-radius: 10px;
@@ -3411,16 +3443,16 @@ body.gallery [id^="slider-mini-"] {
     height: 100%;
     width: 42px;
   }
-  /* line 221, ../../../_dev/scss/media-queries/768.scss */
+  /* line 249, ../../../_dev/scss/media-queries/768.scss */
   nav > div #phone-number {
     display: none;
   }
-  /* line 227, ../../../_dev/scss/media-queries/768.scss */
+  /* line 255, ../../../_dev/scss/media-queries/768.scss */
   nav > section > section > div {
     max-width: 100%;
   }
 
-  /* line 234, ../../../_dev/scss/media-queries/768.scss */
+  /* line 262, ../../../_dev/scss/media-queries/768.scss */
   #menus-subheader-mobile {
     background-color: #ffffff;
     -webkit-box-shadow: 0px 7px 18px -8px rgba(0, 0, 0, 0.2) inset;

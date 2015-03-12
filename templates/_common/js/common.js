@@ -71,7 +71,7 @@ jQuery(function(){
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
     // управление меню при событии его контейнера
-    $(menus_container).on('mouseenter mouseleave', function(event){
+    menus_container.on('mouseenter mouseleave', function(event){
         setVisibilityState(event);
     });
 
@@ -82,24 +82,31 @@ jQuery(function(){
         $(getMenusContainer()).hide();
     });
 
-    //-----------------------------------------
-    // Скрыть все выпадающие меню
+    /**
+     * Скрыть все выпадающие меню
+     */
     $('nav a:not([href="#"])').on('mouseenter',hideAll);
     // Управлять выпадающими меню
-    $(dd_menus).on('mouseenter mouseleave', function(event){
-        var menu_to_show_index;
+    dd_menus.on('mouseenter mouseleave', function(event){
+        var menu_to_show_index,
+            menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
             // подставить текст заголовка
-            if(checkResolutionMobile())
-                $('#menus-subheader-mobile').show().text($(this).text());
-            menu_to_show_index=$(dd_menus).index(this);
+            //console.log('is: '+(dd_menus.last().is(this)));
+            //console.dir(dd_menus.last()[0]);console.dir(this);
+            //if($(dd_menus).last()==this) console.log('last element');
+            if(checkResolutionMobile()){
+                if(dd_menus.last().is(this)) menus_subheader_mobile.hide();
+                else menus_subheader_mobile.show().text(this.innerText);
+            }
+            menu_to_show_index=dd_menus.index(this);
         }
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
     });
     // Обработать блоки выпадающего меню // aside >div
-    $(submenu_items).on('mouseenter mouseleave', function(event){
+    submenu_items.on('mouseenter mouseleave', function(event){
         var bgClass='bgActiveCarrot';
         //
         setVisible(this);
@@ -147,36 +154,24 @@ function checkResolutionMobile(){
     return jQuery('body').width()<=1024;
 }
 /**
- * Получить/обработать данне секции с формой отправки, чтобы знать, прятать её или нет
- * @param set_data
- * @returns {*}
+ * Спрятать родительский блок кликом по кнопке/ссылке "закрыть"
+ * @param event
+ * @param layers
  */
-function handleAskFormSection(set_data){
-    //console.log('%cset_data value: ['+set_data+']','color:blue; font-style:italic');
-    var $=jQuery,
-        dataStat ='data-state',
-        inp=$('header>section>section:last-child');
-    if (set_data===false) {
-        $(inp).removeAttr(dataStat);
-        //console.log('%c'+dataStat+' (removed): '+$(inp).attr(dataStat),'color: brown');
-    }else if(set_data){
-        if(set_data=='check'){
-            console.log('%c'+dataStat+' checking: '+$(inp).attr(dataStat),'color: green');
-            return $(inp).attr(dataStat);
-        }else {
-            $(inp).attr(dataStat,1);
-            console.log('%c'+dataStat+' (set): '+$(inp).attr(dataStat),'color: goldenrod');
-        }
-    }
-    return inp;
-}
-/**
- * Скрыть все меню
- */
-function hideAll(){
-    jQuery(getInnerMenus()).hide();
-    jQuery(getMenusContainer()).hide(); // скрыть контейнер с меню
-    handleInputs('show');
+function closeParent(event,layers){
+    console.log('closeParent');
+    //console.dir(jQuery(event.currentTarget).parent());
+    var $=jQuery,parent=$(event.currentTarget).parent();
+    $(parent).fadeOut(400, function(){
+        //console.log('closing...');
+        //if($(parent).is(':visible')) console.log('%cis visible!','color: red');
+        //else console.dir($(parent));
+        if(layers){
+            for(var i= 0, j=layers.length; i<j; i++){
+                jQuery('#'+layers[i]).fadeOut(200);
+            }
+        }else return;
+    });
 }
 /**
  * Получить контейнер с меню
@@ -194,6 +189,38 @@ function getInnerMenus(){
     return jQuery('>section',getMenusContainer()); // блоки с меню
 }
 /**
+ * Скрыть все меню
+ */
+function hideAll(){
+    jQuery(getInnerMenus()).hide();
+    jQuery(getMenusContainer()).hide(); // скрыть контейнер с меню
+    handleInputs('show');
+}
+/**
+ * Получить/обработать данные секции с формой отправки, чтобы знать, прятать её или нет
+ * @param set_data
+ * @returns {*}
+ */
+function handleAskFormSection(set_data){
+    //console.log('%cset_data value: ['+set_data+']','color:blue; font-style:italic');
+    var $=jQuery,
+        dataStat ='data-state',
+        inp=$('header>section>section:last-child');
+    if (set_data===false) {
+        $(inp).removeAttr(dataStat);
+        //console.log('%c'+dataStat+' (removed): '+$(inp).attr(dataStat),'color: brown');
+    }else if(set_data){
+        if(set_data=='check'){
+            //console.log('%c'+dataStat+' checking: '+$(inp).attr(dataStat),'color: green');
+            return $(inp).attr(dataStat);
+        }else {
+            $(inp).attr(dataStat,1);
+            console.log('%c'+dataStat+' (set): '+$(inp).attr(dataStat),'color: goldenrod');
+        }
+    }
+    return inp;
+}
+/**
  *
  * @param state
  */
@@ -208,54 +235,6 @@ function handleInputs(state){
         email_input.disabled=false;
     }
     jQuery(email_input.parentNode)[state]();
-}
-/**
- *
- * @param event
- * @param layers
- */
-function closeParent(event,layers){
-    console.log('closeParent');
-    //console.dir(jQuery(event.currentTarget).parent());
-    var $=jQuery,parent=$(event.currentTarget).parent();
-    $(parent).fadeOut(400, function(){
-        console.log('closing...');
-        if($(parent).is(':visible')) console.log('%cis visible!','color: red');
-        else console.dir($(parent));
-        if(layers){
-            for(var i= 0, j=layers.length; i<j; i++){
-                jQuery('#'+layers[i]).fadeOut(200);
-            }
-        }else return;
-    });
-}
-/**
- * Управлять видимостью блоков текста
- * @param div
- */
-function setVisible(div){ //console.log('setVisible called');
-    var $=jQuery,
-        container,
-        sections,
-        index,
-        nextSection,
-        visibleClass ='visible';
-    if(checkResolutionMobile()){
-        container=$(div).parent();
-        nextSection=$(div).next();
-    }else{
-        container=$(div).parent().next('.menu-container');
-        index=$(div).index();
-    }
-    sections=$('section',container);
-    //console.group('element index '+index); console.dir(sections);
-    $(sections).removeClass(visibleClass); // visible
-    if(index)
-        $(sections).eq(index).addClass(visibleClass);
-    else{
-        console.dir(nextSection);
-        $(nextSection).addClass(visibleClass);
-    } //console.dir($(sections).eq(index)); console.groupEnd();
 }
 /**
  * Управлять видимостью контейнера с меню
@@ -312,4 +291,31 @@ function setVisibilityState(event,menu_to_show_index){
         }
     };
     setVisibilityState(event,menu_to_show_index);
+}/**
+ * Управлять видимостью блоков текста
+ * @param div
+ */
+function setVisible(div){ //console.log('setVisible called');
+    var $=jQuery,
+        container,
+        sections,
+        index,
+        nextSection,
+        visibleClass ='visible';
+    if(checkResolutionMobile()){
+        container=$(div).parent();
+        nextSection=$(div).next();
+    }else{
+        container=$(div).parent().next('.menu-container');
+        index=$(div).index();
+    }
+    sections=$('section',container);
+    //console.group('element index '+index); console.dir(sections);
+    $(sections).removeClass(visibleClass); // visible
+    if(index)
+        $(sections).eq(index).addClass(visibleClass);
+    else{
+        console.dir(nextSection);
+        $(nextSection).addClass(visibleClass);
+    } //console.dir($(sections).eq(index)); console.groupEnd();
 }
