@@ -3,7 +3,7 @@ jQuery(function(){
         imageBg = new Image(),
         selectors='[id^="diigo"], script[src*="metabar"]',
         i=0,        // счётчик итераций
-        limit=25; //, // лимит итераций
+        limit=25, //, // лимит итераций
         /**
          * Перегруппировать меню при мобильных разрешениях
          */
@@ -20,50 +20,55 @@ jQuery(function(){
                 if(!mobileSectionsLength){ // меню не модифицировано
                     moveSubmenusTexts(pseudolinks,texts,true);
                     // Переместить кнопку "Распечатать адрес"
-                    //movePrintButton(aPrint,true);
+                    movePrintButton(aPrint,true);
                 }
             }else if(mobileSectionsLength){ // меню модифицировано
                     moveSubmenusTexts(pseudolinks,menu_container_class);
                     // Переместить кнопку "Распечатать адрес"
-                    //movePrintButton(aPrint);
+                    movePrintButton(aPrint);
             }
-        };
-
-    //rearrangeMobileElements();
-
-    //$(window).on('resize',rearrangeMobileElements);
-
-        imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
-        //var ii=0;
-        var intv=setInterval(function(){ // процедура удаления
-            console.log('diigos: '+$(selectors).size());
+        },
+        intv=setInterval(function(){ // процедура удаления
+            //console.log('diigos: '+$(selectors).size());
             if($(selectors).size()){
                 $(selectors).remove();
-                console.log('removing...');
+                //console.log('removing...');
             }
             i++;
             if(i>limit) {
                 clearInterval(intv);
                 console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
             }
-        },200);
-    // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
-    //---------------------------------
-    var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
+        },200),
+        // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
+        //---------------------------------
+        dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
-        menus_container=getMenusContainer();        // контейнер с блоками меню
-    // управление меню при событии его контейнера
-    menus_container.on('mouseenter mouseleave', function(event){
-        setVisibilityState(event);
+        menus_container=getMenusContainer(),        // контейнер с блоками меню
+        mapInit=false;
+        // управление меню при событии его контейнера
+        menus_container.on('mouseenter mouseleave', function(event){
+            setVisibilityState(event);
+        });
+
+    //-----------------------------------------
+    rearrangeMobileElements();
+    $(window).on('resize',rearrangeMobileElements, function(){
+        //console.log('resized, mapInit: '+mapInit);
+        /**
+         * todo: по-хорошему нужно сохранять координаты последней карты
+         * и передавать их создаваемой  */
+        createYMap();
+        if(mapInit) $('.ymaps-map:not(:last)').hide();
     });
 
+    imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
     //-----------------------------------------
     // todo: удалить после тестирования
     $(dd_menus).on('click', function(){
         $(getInnerMenus()).hide();
         $(getMenusContainer()).hide();
     });
-
     /**
      * Скрыть все выпадающие меню
      */
@@ -74,15 +79,15 @@ jQuery(function(){
             menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
-            // rearrangeMobileElements();
-            // подставить текст заголовка
             //console.log('is: '+(dd_menus.last().is(this)));
             //console.dir(dd_menus.last()[0]);console.dir(this);
-            //if($(dd_menus).last()==this) console.log('last element');
             if(checkResolutionMobile()){
-                if(dd_menus.last().is(this)) menus_subheader_mobile.hide();
-                else menus_subheader_mobile.show().text(this.innerText);
+                if(dd_menus.last().is(this))
+                    menus_subheader_mobile.hide();
+                else // подставить текст заголовка
+                    menus_subheader_mobile.show().text(this.innerText);
             }
+            if(this.id=='link_contacts') mapInit=true;
             menu_to_show_index=dd_menus.index(this);
         }
         // установить состояние видимости
@@ -98,7 +103,7 @@ jQuery(function(){
             $(this).addClass(bgClass);
         }
         if(event.type=='mouseleave'){ //console.log('mouseleave');
-            index=$(this).parent().find('div.'+bgClass).index();
+            //index=$(this).parent().find('div.'+bgClass).index();
             setVisible(this);
         }
     });
