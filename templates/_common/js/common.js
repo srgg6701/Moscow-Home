@@ -1,12 +1,9 @@
 jQuery(function(){
     var $=jQuery,
         imageBg = new Image(),
-        selector='[id^="diigo"], script[src*="metabar"]',
+        selectors='[id^="diigo"], script[src*="metabar"]',
         i=0,        // счётчик итераций
-        r=0,        // счётчик удалений
-        m=0,        // счётчик пост-удалений
-        limit=1000, // лимит итераций
-        objects=$(selector),
+        limit=25; //, // лимит итераций
         /**
          * Перегруппировать меню при мобильных разрешениях
          */
@@ -32,35 +29,24 @@ jQuery(function(){
             }
         };
 
-    rearrangeMobileElements();
+    //rearrangeMobileElements();
 
-    $(window).on('resize',rearrangeMobileElements);
+    //$(window).on('resize',rearrangeMobileElements);
 
         imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
-
-        if(objects.length){
-            var intv=setInterval(function(){ // процедура удаления
-                objects=$(selector);
-                if(objects.length){
-                    for(var d in objects){
-                        if(typeof(objects[d])=='object'){
-                            $(objects[d]).remove();
-                            //console.log('Удаление: '+objects[d].id);
-                            r++; // инкременировать счётчик удалений
-                        }
-                    }
-                }
-                // инкременировать счётчик пост-удалений
-                if(r) m++;
-                // если пост-удалений БОЛЬШЕ, чем реальных удалений, пора заканчивать
-                if(m>r) clearInterval(intv);
-                i++;
-                if(i>limit) {
-                    clearInterval(intv);
-                    console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
-                }
-            },100);
-        }
+        //var ii=0;
+        var intv=setInterval(function(){ // процедура удаления
+            console.log('diigos: '+$(selectors).size());
+            if($(selectors).size()){
+                $(selectors).remove();
+                console.log('removing...');
+            }
+            i++;
+            if(i>limit) {
+                clearInterval(intv);
+                console.log('%cвыполнено максимальное ('+limit+') количество итераций...','color: orange');
+            }
+        },200);
     // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
     //---------------------------------
     var dd_menus=$('nav a[href="#"]'),              // псевдоссылки
@@ -88,6 +74,7 @@ jQuery(function(){
             menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'){
+            // rearrangeMobileElements();
             // подставить текст заголовка
             //console.log('is: '+(dd_menus.last().is(this)));
             //console.dir(dd_menus.last()[0]);console.dir(this);
