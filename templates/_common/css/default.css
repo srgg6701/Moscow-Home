@@ -969,23 +969,24 @@ header > section > section > div {
 }
 /* line 53, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div:not(.custom-centered) {
-  width: 899px;
+  max-width: 899px;
+  overflow: hidden;
 }
-/* line 57, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 58, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(1) > div {
   padding-left: 264px;
 }
-/* line 63, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 64, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) > div > div {
   margin-bottom: 31px;
   margin-top: 21px;
 }
-/* line 67, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 68, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div {
   margin-bottom: -9px;
   width: 370px;
 }
-/* line 70, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 71, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) > div.bottom-bg {
   background: url("../images/backgrounds/tile-contacts-dark.png");
   bottom: 0px;
@@ -997,19 +998,19 @@ header > section > section:nth-child(4) > div.bottom-bg {
   z-index: 0;
 }
 
-/* line 83, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 84, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form {
   overflow: hidden;
   margin: 0 6px 0;
 }
 
-/* line 90, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 91, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header div.menu-container h3, .menu aside > section > h3 {
   color: #bf451e;
   font-family: PlumbMedium;
 }
 
-/* line 96, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 97, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section h4 {
   font-family: PlumbLight;
   font-size: 36px;
@@ -1017,17 +1018,17 @@ header > section > section h4 {
   margin-top: -2px;
   text-transform: uppercase;
 }
-/* line 103, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 104, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) h4 {
   color: white;
   text-align: center;
 }
 
-/* line 109, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 110, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input {
   color: #5d534e;
 }
-/* line 113, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 114, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type="tel"], header > section input[type="email"], header > section input[type="text"] {
   display: block;
   height: 36px;
@@ -1043,7 +1044,7 @@ header > section input[type="tel"], header > section input[type="email"], header
   border: solid 1px #CCC;
   width: 100%;
 }
-/* line 121, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 122, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section input[type=""] {
   border-radius: 20px;
   display: block;
@@ -1056,7 +1057,7 @@ header > section input[type=""] {
   transform: translateX(-50%);
   width: 150px;
 }
-/* line 135, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 136, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) input[type="submit"] {
   background-color: #FFF;
   border: none;
@@ -1071,88 +1072,88 @@ header > section > section:nth-child(4) input[type="submit"] {
   width: 150px;
   z-index: 2;
 }
-/* line 151, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 152, ../../../_dev/scss/header/section/drop-down-menus.scss */
 form p:nth-child(2) input, form p:nth-child(3) input {
   margin-top: 6px;
 }
 
-/* line 156, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 157, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li {
   float: left;
   height: 86px;
   padding-left: 50px;
   padding-right: 20px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 164, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   background: url("../images/service-design.png") no-repeat 0 7px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 164, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   background: url("../images/service-building.png") no-repeat 0 7px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 164, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   background: url("../images/service-facade.png") no-repeat 0 7px;
 }
-/* line 163, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 164, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   background: url("../images/service-engineering.png") no-repeat 0 7px;
 }
-/* line 170, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 171, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(1) {
   width: 201px;
 }
-/* line 170, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 171, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(2) {
   width: 241px;
 }
-/* line 170, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 171, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(3) {
   width: 215px;
 }
-/* line 170, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 171, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) li:nth-child(4) {
   width: 154px;
 }
 
-/* line 178, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 179, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p {
   color: white;
   text-transform: uppercase;
   white-space: nowrap;
 }
-/* line 183, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 184, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2), header > section form p:nth-child(3) {
   float: left;
   margin-top: 14px;
   width: 50%;
 }
-/* line 188, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 189, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(2) {
   padding-right: 11px;
 }
-/* line 191, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 192, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(3) {
   padding-left: 10px;
 }
-/* line 194, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 195, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section form p:nth-child(4) {
   float: left;
   margin-top: 15px;
   width: 100%;
 }
-/* line 200, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 201, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section > div > p {
   width: 450px;
 }
-/* line 203, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 204, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(3) p {
   font-size: 14px;
   line-height: 13px;
 }
 
-/* line 209, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 210, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section {
   -webkit-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 7px 11px 0 rgba(0, 0, 0, 0.35);
@@ -1165,7 +1166,7 @@ header > section {
   top: 40px;
   z-index: 1;
 }
-/* line 219, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 220, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section {
   background-color: white;
   border-top: solid 1px #CACACA;
@@ -1173,12 +1174,12 @@ header > section > section {
   margin-top: 23px;
   padding: 22px 24px 26px;
 }
-/* line 225, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 226, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(4) {
   background: url("../images/backgrounds/tile-contacts.png");
 }
 
-/* line 231, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 232, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section textarea {
   display: block;
   height: 85px;
@@ -1195,14 +1196,14 @@ header > section textarea {
   border: solid 1px #CCC;
 }
 
-/* line 240, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 241, ../../../_dev/scss/header/section/drop-down-menus.scss */
 header > section > section:nth-child(2) ul {
   margin-bottom: 4px;
   margin-top: 6px;
   width: 100%;
 }
 
-/* line 246, ../../../_dev/scss/header/section/drop-down-menus.scss */
+/* line 247, ../../../_dev/scss/header/section/drop-down-menus.scss */
 #waiting-map {
   background-color: #999;
   border-radius: 20px;
@@ -3347,35 +3348,69 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 
+@media (max-width: 966px) {
+  /* line 149, ../../../_dev/scss/media-queries/768.scss */
+  header aside div {
+    background-color: #efefef;
+    border-bottom: solid 1px white;
+  }
+  /* line 158, ../../../_dev/scss/media-queries/768.scss */
+  header .menu.wide > section:nth-child(2) ul.you-need {
+    display: block;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    -webkit-transform: translateX(5vw);
+    -moz-transform: translateX(5vw);
+    -ms-transform: translateX(5vw);
+    -o-transform: translateX(5vw);
+    transform: translateX(5vw);
+  }
+  /* line 165, ../../../_dev/scss/media-queries/768.scss */
+  header .menu.wide > section:nth-child(2) ul.you-need li {
+    width: 50%;
+  }
+  /* line 167, ../../../_dev/scss/media-queries/768.scss */
+  header .menu.wide > section:nth-child(2) ul.you-need li a {
+    max-width: 174px;
+  }
+  /* line 175, ../../../_dev/scss/media-queries/768.scss */
+  header .menu.wide a.print {
+    float: none;
+    margin-bottom: 14px;
+    margin-top: inherit !important;
+  }
+}
 @media (max-width: 1023px) {
-  /* line 151, ../../../_dev/scss/media-queries/768.scss */
+  /* line 189, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(1) {
     top: 0;
     height: 68px;
     width: 100%;
   }
-  /* line 156, ../../../_dev/scss/media-queries/768.scss */
+  /* line 194, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(1) ul {
     display: table;
     margin: auto;
   }
-  /* line 162, ../../../_dev/scss/media-queries/768.scss */
+  /* line 200, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(2) {
     left: 16px;
     margin: 0;
     position: absolute;
   }
-  /* line 168, ../../../_dev/scss/media-queries/768.scss */
+  /* line 206, ../../../_dev/scss/media-queries/768.scss */
   header nav > div:nth-child(3) {
     right: 16px;
     width: 42px;
   }
-  /* line 173, ../../../_dev/scss/media-queries/768.scss */
+  /* line 211, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting {
     position: absolute;
     top: 33px;
   }
-  /* line 176, ../../../_dev/scss/media-queries/768.scss */
+  /* line 214, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #consulting a {
     background-position: 12px;
     border-radius: 10px;
@@ -3383,117 +3418,46 @@ body.gallery [id^="slider-mini-"] {
     height: 100%;
     width: 42px;
   }
-  /* line 184, ../../../_dev/scss/media-queries/768.scss */
+  /* line 222, ../../../_dev/scss/media-queries/768.scss */
   header nav > div #phone-number {
     display: none;
   }
-  /* line 190, ../../../_dev/scss/media-queries/768.scss */
+  /* line 228, ../../../_dev/scss/media-queries/768.scss */
   header > section > section {
     margin-top: 83px;
   }
-  /* line 192, ../../../_dev/scss/media-queries/768.scss */
+  /* line 230, ../../../_dev/scss/media-queries/768.scss */
   header > section > section h4 {
     display: none;
   }
-  /* line 195, ../../../_dev/scss/media-queries/768.scss */
+  /* line 233, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(4) {
     margin-top: 23px;
   }
-  /* line 197, ../../../_dev/scss/media-queries/768.scss */
+  /* line 235, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(4) h4 {
     display: inherit;
   }
-  /* line 201, ../../../_dev/scss/media-queries/768.scss */
+  /* line 239, ../../../_dev/scss/media-queries/768.scss */
   header > section > section > div {
     max-width: 100%;
   }
-  /* line 204, ../../../_dev/scss/media-queries/768.scss */
+  /* line 242, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div {
     padding-left: 0;
     width: inherit;
   }
-  /* line 207, ../../../_dev/scss/media-queries/768.scss */
+  /* line 245, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside {
     margin-left: 0;
     width: 100%;
   }
-  /* line 211, ../../../_dev/scss/media-queries/768.scss */
+  /* line 249, ../../../_dev/scss/media-queries/768.scss */
   header > section > section:nth-child(1) > div > aside > section:not(.visible) {
     display: none;
   }
 
-  /*
-  nav {
-    > div {
-      &:nth-child(1) {
-        // menu
-        top: 0;
-        height: $nav-height;
-        width: 100%;
-        ul {
-          display: table;
-          margin: auto;
-        }
-      }
-      &:nth-child(2) {
-        // logo
-        left: 16px;
-        margin: 0;
-        position: absolute;
-      }
-      &:nth-child(3) {
-        // ╨Ъ╨╛╨╜╤Б╤Г╨╗╤М╤В╨░╤Ж╨╕╤П
-        right: 16px;
-        width: 42px;
-      }
-      #consulting {
-        position: absolute;
-        top: 33px;
-        a {
-          background-position: 12px;
-          border-radius: 10px;
-          font-size: 0;
-          height: 100%;
-          width: 42px;
-        }
-      }
-      #phone-number {
-        display: none;
-      }
-    }
-    > section {
-      > section{
-        > div{
-          max-width: 100%;
-        }
-      }
-    }
-  }*/
-  /* line 271, ../../../_dev/scss/media-queries/768.scss */
-  .menu.wide > section:nth-child(2) ul.you-need {
-    display: block;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    -webkit-transform: translateX(40px);
-    -moz-transform: translateX(40px);
-    -ms-transform: translateX(40px);
-    -o-transform: translateX(40px);
-    transform: translateX(40px);
-  }
-  /* line 278, ../../../_dev/scss/media-queries/768.scss */
-  .menu.wide > section:nth-child(2) ul.you-need li {
-    width: 320px;
-  }
-  /* line 285, ../../../_dev/scss/media-queries/768.scss */
-  .menu.wide a.print {
-    float: none;
-    margin-bottom: 14px;
-    margin-top: inherit !important;
-  }
-
-  /* line 292, ../../../_dev/scss/media-queries/768.scss */
+  /* line 259, ../../../_dev/scss/media-queries/768.scss */
   #menus-subheader-mobile {
     background-color: #ffffff;
     -webkit-box-shadow: 0px 7px 18px -8px rgba(0, 0, 0, 0.2) inset;

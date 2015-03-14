@@ -5,11 +5,23 @@ jQuery(function () {
         var ids = {},
         // вызывается только при инициализации и при изменении размеров окна
         setValues=function(resize){
-            var el, paras = $('.parallax');
-            //console.dir(paras);
+            var el, paras = $('.parallax'); // console.dir(paras);
             // сохранить значения отступов сверху для плавающих слоёв
-            for (var index in paras) {
+            paras.each(function(index,element){
+                el = 'para'+(parseInt(index)+1);
+                ids[el]={};
+                if(!resize){ // только при инициализации
+                    // начальная позиция отступа сверху
+                    ids[el].top = $(element).offset().top;
+                    // коэффициент перемещения слоя по вертикали
+                    ids[el].coeff = $(element).attr('data-coeff');
+                }
+                // при инициализации и изменении размеров окна
+                ids[el].distance = window.innerHeight-ids[el].top;
+            });
+            /*for (var index in paras) {
                 if(typeof(paras[index])=='object'){
+                    console.log('%cparas['+index+']:','color:navy');console.dir(paras[index]);
                     el = 'para'+(parseInt(index)+1);
                     ids[el]={};
                     //console.log('el: '+el);
@@ -23,7 +35,7 @@ jQuery(function () {
                     // при инициализации и изменении размеров окна
                     ids[el].distance = window.innerHeight-ids[el].top;
                 }
-            } //console.dir(paras);//console.dir(ids);
+            }*/ //console.dir(paras);//console.dir(ids);
         };
         setValues();
         // перегрузить функцию. Далее будем только получать инициализированные значения.
@@ -48,11 +60,11 @@ jQuery(function () {
         sumTop,
         makeParallax = function (event,calcMax) {
             // Если calcMax передаётся, инициализированные параметры объекта переопределяются
-            prlx = getTop(calcMax);
-            //console.dir(prlx);
+            prlx = getTop(calcMax); // console.dir(prlx);
             var test=false;
             for (var layer_id in prlx) {
                 PLayer =  document.getElementById(layer_id);
+                if(!PLayer) { console.log('No PLayer(id='+layer_id+'), prlx: '); console.dir(prlx); break; }
                 sumTop=$(PLayer).offset().top+$(window).scrollTop();
                 if(test){
                     if(sumTop-maxScrollTop<=0){

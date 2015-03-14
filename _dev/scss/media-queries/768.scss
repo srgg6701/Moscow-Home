@@ -1,5 +1,5 @@
 // НИЗКИЙ экран <=768
-@media (max-height: $resolution-tablet){
+@media (max-height: $resolution-tablet768){
   body{
     $common-background:url($images_dir + 'backgrounds/tile-90.png') #a04323;
     &.no-overflow{
@@ -143,6 +143,44 @@
   }
 }
 // любая ВЫСОТА экрана
+// перестройка макета под мобильную версию
+@media (max-width: $resolution-go-mobile966){
+  header {
+    aside div{
+      background-color: #efefef;
+      border-bottom: solid 1px white;
+    }
+    .menu.wide {
+      > section {
+        &:nth-child(2) {
+          // услуги
+          ul {
+            &.you-need {
+              display: block;
+              max-width: 640px;
+              margin-left: auto;
+              margin-right: auto;
+              overflow: hidden;
+              @include transform(translateX(5vw));
+              li {
+                width: 50%;
+                a {
+                  max-width: 174px;
+                }
+              }
+            }
+          }
+        }
+      }
+      a.print {
+        // кнопка "Распечатать адрес"
+        float: none;
+        margin-bottom: 14px;
+        margin-top: inherit !important;
+      }
+    }
+  }
+}
 // ширина для мобильных устройств <=768
 @media (max-width: $resolution-small-desktop - 1){
   header{
@@ -217,77 +255,6 @@
       }
     }
   }
-  /*
-  nav {
-    > div {
-      &:nth-child(1) {
-        // menu
-        top: 0;
-        height: $nav-height;
-        width: 100%;
-        ul {
-          display: table;
-          margin: auto;
-        }
-      }
-      &:nth-child(2) {
-        // logo
-        left: 16px;
-        margin: 0;
-        position: absolute;
-      }
-      &:nth-child(3) {
-        // Консультация
-        right: 16px;
-        width: 42px;
-      }
-      #consulting {
-        position: absolute;
-        top: 33px;
-        a {
-          background-position: 12px;
-          border-radius: 10px;
-          font-size: 0;
-          height: 100%;
-          width: 42px;
-        }
-      }
-      #phone-number {
-        display: none;
-      }
-    }
-    > section {
-      > section{
-        > div{
-          max-width: 100%;
-        }
-      }
-    }
-  }*/
-  .menu.wide {
-    >section{
-      &:nth-child(2){ // услуги
-        ul{
-          &.you-need{
-            display: block;
-            max-width: 640px;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-            @include transform(translateX(40px));
-            li{
-              width: 320px;
-            }
-          }
-        }
-      }
-    }
-    a.print{ // кнопка "Распечатать адрес"
-      float: none;
-      margin-bottom: 14px;
-      margin-top: inherit !important;
-    }
-  }
   // Заголовок активного меню; текст добавляется динамически
   #menus-subheader-mobile{ // header .menu >h2
     background-color: #ffffff;
@@ -304,4 +271,7 @@
     top: 28px;
     width: 100%;
   }
+}
+@media (max-width: $resolution-phone - 1){
+
 }

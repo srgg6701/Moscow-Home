@@ -51,7 +51,8 @@ div{
     @include centred-margins;
     overflow: auto;
     &:not(.custom-centered){
-      width: 899px;
+      max-width: 899px;
+      overflow: hidden;
     }
   }
   header >section >section:nth-child(1) >&{ // О компании

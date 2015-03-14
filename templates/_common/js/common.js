@@ -46,7 +46,7 @@ jQuery(function(){
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
         // управление меню при событии его контейнера
-        menus_container.on('mouseenter mouseleave', function(event){
+        menus_container.on('mouseenter click mouseleave', function(event){
             setVisibilityState(event);
         });
 
@@ -68,16 +68,29 @@ jQuery(function(){
         $(getInnerMenus()).hide();
         $(getMenusContainer()).hide();
     });
+
+    $('.gallery #content .header-slim-big').on('click mouseenter mouseleave', function(event){
+        console.log('event type: '+event.type);
+        var bg=(//event.type=='touchstart' ||
+                event.type=='mouseenter'||
+                event.type=='click' //||event.type=='vmouseover'
+            )? 'yellow':'transparent';
+        $(this).css('background-color',bg);
+    });
+
     /**
      * Скрыть все выпадающие меню
      */
-    $('nav a:not([href="#"])').on('mouseenter',hideAll);
+    $('nav a:not([href="#"])').on('mouseenter click',hideAll);
     // Управлять выпадающими меню
-    dd_menus.on('mouseenter mouseleave', function(event){
+    dd_menus.on('mouseenter click mouseleave', function(event){
+        if(event.type=='click') {
+            event.preventDefault(); //console.log('event: '+event.type+', checkResolutionMobile: '+checkResolutionMobile());
+        }
         var menu_to_show_index,
             menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
-        if(event.type=='mouseenter'){
+        if(event.type=='mouseenter'||event.type=='click'){
             //console.log('is: '+(dd_menus.last().is(this)));
             //console.dir(dd_menus.last()[0]);console.dir(this);
             if(checkResolutionMobile()){
@@ -92,12 +105,12 @@ jQuery(function(){
         setVisibilityState(event,menu_to_show_index);
     });
     // Обработать блоки выпадающего меню // aside >div
-    submenu_items.on('mouseenter mouseleave', function(event){
+    submenu_items.on('mouseenter click mouseleave', function(event){
         var bgClass='bgActiveCarrot';
         //
         setVisible(this);
-        if(event.type=='mouseenter'){//click
-            $(submenu_items).removeClass(bgClass);
+        if(event.type=='mouseenter'||event.type=='click'){//click
+            $(submenu_items).removeClass(bgClass); //alert('got it!');
             $(this).addClass(bgClass);
         }
         if(event.type=='mouseleave'){ //console.log('mouseleave');
@@ -121,11 +134,6 @@ jQuery(function(){
     $('.btn-more').on('click', function(){
         $(this).next('div.hidden').slideToggle(200);
     });
-    // распечататься
-    /*$('button.print').on('click', function(){
-        console.log('clicked!');
-        $('#goprint').trigger('click');
-    });*/
     // Запустить выбор файла
     $('.attach-file').on('click',function(){
         $('input[name="attach-file"]').trigger('click');
@@ -238,7 +246,8 @@ function setVisibilityState(event,menu_to_show_index){
             active='active',
             visible,
             askBlock=handleAskFormSection(); //console.log('%caction: '+action,'color:navy'); //console.log('%ctarget: '+target_obj,'color:green');
-        if(action=='mouseenter'){
+        //
+        if(action=='mouseenter'||action=='click'){
             if(target_obj=='a') {
                 active_link=active;
                 visibility_container=true;
@@ -252,7 +261,7 @@ function setVisibilityState(event,menu_to_show_index){
             //console.log('%cvisibility_container: '+visibility_container,'color:violet');
             //console.log('%cactive_link: '+active_link,'color:blue');
         }else
-        if(action=='mouseleave' && (visibility_container!=active||active_link!=active)){ // уходим с объекта
+        if((action=='mouseleave') && (visibility_container!=active||active_link!=active)){ // уходим с объекта
             if($(askBlock).index()==menu_index){ // если блок с формой обратной связи
                 if(handleAskFormSection('check')){ // проверить data-state
                     visible=true;

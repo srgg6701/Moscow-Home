@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
 $app = JFactory::getApplication();
 if(isset($_POST['jform'])){
