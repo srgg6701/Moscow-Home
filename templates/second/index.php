@@ -30,7 +30,9 @@ endif;?>
 if($pageclass=="design"):?>
     <div id="partners-iframe" style="display: none;">
         <div id="gallery" class="header-slim-big">Проекты партнеров</div>
-        <iframe style="height: 2800px;" src="http://frame.plans24.ru/s1171/" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
+        <div id="iframe-box">
+            <iframe style="height: 2800px;" src="http://frame.plans24.ru/s1171/" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
+        </div>
     </div>
 <script>
     jQuery(function(){
