@@ -1,0 +1,35 @@
+#gallery{
+  $h:94px;
+  min-height: $h;
+  text-align: center;
+  @media (min-width:$resolution-tablet-small + 1){
+    line-height: $h;
+  }
+}
+/*#iframe-box { // iframe
+  iframe{
+    height: 2800px;
+    @media (max-width:$resolution-go-mobile940){
+      height: 3900px;
+    }
+    @media (max-width:$resolution-tablet-small){
+      height: 6240px;
+    }
+  }
+}*/
+#partners-iframe{
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: auto;
+  @media (max-width:1024px){ // ограничить высоту для мобильных устройств
+    //height: 671px;
+    margin-bottom: 20px;
+  }
+  // ограничить ширину
+  @media (max-width:$resolution-go-mobile940 - 1){
+    width: 638px;
+  }
+  @media (max-width:$resolution-tablet-small - 1){
+    width: 330px;
+  }
+}

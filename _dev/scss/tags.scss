@@ -224,6 +224,8 @@ header{
   background-color: white;
   display: table;
 }
+iframe{
+}
 img{
   .slides a:not(:first-child) &{
     margin-left:$img-slide-offset;

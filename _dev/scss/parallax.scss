@@ -33,6 +33,9 @@ $pix-dir-facade:$pix-dir + 'facade/';
   min-width: 40px;
   position: absolute;
   z-index: inherit;
+  @media (max-width:$resolution-small-desktop - 1){
+      display: none;
+  }
 }
 #para1{
   #design &{

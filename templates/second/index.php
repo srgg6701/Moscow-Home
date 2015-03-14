@@ -31,7 +31,7 @@ if($pageclass=="design"):?>
     <div id="partners-iframe" style="display: none;">
         <div id="gallery" class="header-slim-big">Проекты партнеров</div>
         <div id="iframe-box">
-            <iframe style="height: 2800px;" src="http://frame.plans24.ru/s1171/" height="400" width="100%" frameborder="0" scrolling="no"></iframe>
+            <iframe id="partner-iframe" src="http://frame.plans24.ru/s1171/" width="100%" frameborder="0" scrolling="no"></iframe>
         </div>
     </div>
 <script>
@@ -42,7 +42,8 @@ if($pageclass=="design"):?>
         $('#work-examples').after(iframe);
     });
 </script>
-<?php /* <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><script type="text/javascript" src="iframe.js"></script> */
+<script type="text/javascript" src="<?php echo $common_path;?>js/iframe.js"></script>
+<?php /* <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> */
 endif;?>
 </body>
 </html>

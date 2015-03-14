@@ -41,6 +41,7 @@
 @import "slider/slider";
 //------------------------------------
 @import "extensions/sigplus";
+@import "extensions/partners-iframe";
 //------------------------------------
 @import "data.css"; /*статическая таблица, не ищи её среди SCSS!*/
 //------------------------------------
@@ -87,12 +88,6 @@
 }
 #design{
   background-image: url($images_dir + 'backgrounds/tile-design-top-visual.png');
-}
-#gallery{
-  $h:94px;
-  height: $h;
-  line-height: $h;
-  text-align: center;
 }
 input[name="attach-file"]{
   border-radius: 6px;

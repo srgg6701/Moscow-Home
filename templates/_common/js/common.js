@@ -62,6 +62,21 @@ jQuery(function(){
     });
 
     imageBg.src=location.origin+'/templates/_common/images/backgrounds/tile-contacts.png';
+
+    var frameClick=false, ifr;
+    var intrv=setInterval(function(){
+        if(ifr=document.getElementById('partner-iframe')){
+            //
+            $(ifr).on('load', function(){
+                console.log('%ciFrame is loaded','color:brown'); console.log('%cframeClick: '+frameClick,'font-weight:bold');
+                if(frameClick) console.log('%ciFrame is reloaded!','color:violet');
+            }).on('click', function(){
+                console.log('%cframeClick is: '+frameClick,'color:red');
+                frameClick=true;
+            });
+            clearInterval(intrv);
+        }
+    }, 100);
     //-----------------------------------------
     // todo: удалить после тестирования
     $(dd_menus).on('click', function(){
