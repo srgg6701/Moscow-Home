@@ -39,7 +39,6 @@ div{
     font-family: PlumbMedium;
     font-size: 1.1rem;
     padding: 14px 18px 13px 18px;
-    text-decoration: underline;
     &:hover,
     &.bgActiveCarrot{
       background-color: $background-carrot-dark;
@@ -226,6 +225,11 @@ section{
     &:nth-child(4){
       background: url($images_dir + "backgrounds/tile-contacts.png");
     }
+  }
+}
+span{
+  #header-menu-about &{
+    text-decoration: underline;
   }
 }
 textarea{

@@ -24,6 +24,7 @@
         <position>menu-services</position>
         <position>menu-ask-question</position>
         <position>footer</position>
+        <position>footer-mobile-menu</position>
         <position>hidden</position>
 	</positions>
 	<languages folder="language">

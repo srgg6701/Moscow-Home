@@ -17,24 +17,24 @@
         <?php endif; ?>
     </nav>
     <section class="menu wide">
-        <section>
+        <section id="header-menu-about">
             <?php if ($this->countModules('menu-about')) : ?>
                 <jdoc:include type="modules" name="menu-about" style="none" />
             <?php endif; ?>
         </section>
-        <section>
+        <section id="header-menu-services">
 <?php if ($this->countModules('menu-services')) : ?>
     <jdoc:include type="modules" name="menu-services" style="none" />
 <?php endif; ?>
         </section>
-        <section>
+        <section id="header-menu-contacts">
             <div>
                 <?php if ($this->countModules('menu-contacts')) : ?>
                     <jdoc:include type="modules" name="menu-contacts" style="none" />
                 <?php endif; ?>
             </div>
         </section>
-        <section>
+        <section id="header-menu-ask-question">
             <?php if ($this->countModules('menu-ask-question')) : ?>
                 <jdoc:include type="modules" name="menu-ask-question" style="none" />
             <?php endif; ?>

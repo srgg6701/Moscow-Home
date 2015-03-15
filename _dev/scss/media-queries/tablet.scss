@@ -184,6 +184,12 @@
       }
     }
   }
+  span{
+    #header-menu-about &{
+      text-decoration: none;
+      border-bottom: dotted 1px;
+    }
+  }
 }
 // ширина для мобильных устройств <=768
 @media (max-width: $resolution-small-desktop - 1){
@@ -275,7 +281,4 @@
     top: 28px;
     width: 100%;
   }
-}
-@media (max-width: $resolution-phone - 1){
-
 }
