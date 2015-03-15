@@ -3,7 +3,6 @@
   body{
     $common-background:url($images_dir + 'backgrounds/tile-90.png') #a04323;
     &.no-overflow{
-
       .pointers-aside {
         @media (max-height: 600px) {
           width: 55vw;
@@ -209,9 +208,11 @@
         }
         &:nth-child(2) {
           // logo
+          height: $headerHeight;
           left: 16px;
           margin: 0;
           position: absolute;
+          width: 100%;
         }
         &:nth-child(3) {
           // Консультация
@@ -223,10 +224,10 @@
           top: 33px;
           a {
             background-position: 12px;
-            border-radius: 10px;
+            border-radius: $menu-spot-border-radius;
             font-size: 0;
             height: 100%;
-            width: 42px;
+            width: $menu-spot-width;
           }
         }
         #phone-number {
@@ -280,5 +281,35 @@
     text-align: center;
     top: 28px;
     width: 100%;
+  }
+  #top-menu{
+    @include transform(translateX(4vw));
+    @media (max-width:$resolution-tablet-small - 1){
+      display: none;
+    }
+  }
+}
+// resolution <=620px
+@media (max-width:$resolution-tablet-small - 1){
+  #sandwich-menu{
+    border-radius: $menu-spot-border-radius;
+    @include centered-vertical;
+    display: block !important;
+    height: $menu-spot-height;
+    left: 0;
+    overflow: hidden;
+    padding: 5px 7px;
+    position: absolute;
+    hr{
+      border: solid 2px white;
+      @include border-radius(4px);
+      margin: 3.99px auto;
+    }
+  }
+  #logo{
+    left: 50%;
+    margin-left: -10px;
+    position: absolute;
+    transform: translateX(-50%);
   }
 }

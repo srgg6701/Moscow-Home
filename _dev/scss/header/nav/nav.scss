@@ -38,7 +38,7 @@ ul{
 }
 #phone-number{
   @include phone-number;
-  margin-right: 10px;
+  margin-right: $mobile-right-offset;
   padding: 0 12px;
 }
 #top-menu{

@@ -10,6 +10,11 @@
 <?php endif; ?>
         <div>
             <?php if($pageclass!="print-contacts"):?>
+                <div id="sandwich-menu">
+                    <hr/>
+                    <hr/>
+                    <hr/>
+                </div>
                 <a id="logo" href="<?php echo $this->baseurl;?>"></a>
             <?php endif;?></div>
         <?php if ($this->countModules('header-contacts')) : ?>

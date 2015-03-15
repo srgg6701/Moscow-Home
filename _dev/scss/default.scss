@@ -127,6 +127,11 @@ input[name="attach-file"]{
 .pointers-aside{
   @include centred-margins;
 }
+#sandwich-menu{
+  background-color: $background-carrot-dark;
+  display: none;
+  width: $menu-spot-width;
+}
 #shell{
   z-index: 11;
 }

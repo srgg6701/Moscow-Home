@@ -119,6 +119,10 @@ jQuery(function(){
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
     });
+    // ... мобильная версия, сэндвич, показать/скрыть меню
+    $('#sandwich-menu').on('click', function(){
+        $('#top-menu').slideToggle(200);
+    });
     // Обработать блоки выпадающего меню // aside >div
     submenu_items.on('mouseenter click mouseleave', function(event){
         var bgClass='bgActiveCarrot';
