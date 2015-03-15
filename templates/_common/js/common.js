@@ -84,14 +84,14 @@ jQuery(function(){
         $(getMenusContainer()).hide();
     });
 
-    $('.gallery #content .header-slim-big').on('click mouseenter mouseleave', function(event){
+    /*$('.gallery #content .header-slim-big').on('click mouseenter mouseleave', function(event){
         console.log('event type: '+event.type);
         var bg=(//event.type=='touchstart' ||
                 event.type=='mouseenter'||
                 event.type=='click' //||event.type=='vmouseover'
             )? 'yellow':'transparent';
         $(this).css('background-color',bg);
-    });
+    });*/
 
     /**
      * Скрыть все выпадающие меню

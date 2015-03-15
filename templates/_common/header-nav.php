@@ -40,6 +40,9 @@
             <?php endif; ?>
             <div class="bottom-bg"></div>
         </section>
+        <?php if ($this->countModules('footer-mobile-menu')) : ?>
+            <jdoc:include type="modules" name="footer-mobile-menu" style="none" />
+        <?php endif; ?>
         <div id="menus-subheader-mobile">Заголовок меню</div>
     </section>
 </header>

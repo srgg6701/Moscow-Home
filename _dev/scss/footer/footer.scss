@@ -1,14 +1,26 @@
 div{
+  &.footer-mobile-menu{
+    background-color: white;
+    padding: 10px;
+    position: relative;
+  }
   footer .section >&{
     @include nav-footer;
     &:first-child{
-      //color: $color-dark-common;
-      font-family: PlumbLight;
-      font-size: 16px;
-      line-height: 18px;
-      margin-top: 6px;
-      text-align: center;
-      width: 193px;
+      @include nav-footer-common;
+    }
+  }
+  header .section.footer-mobile-menu &{
+    @include nav-footer;
+    &:nth-child(1) {
+      @include nav-footer-common;
+    }
+    &:nth-child(2){
+      display: table;
+      margin: auto;
+    }
+    &:nth-child(3){
+
     }
   }
   footer &.section{
@@ -16,17 +28,18 @@ div{
     width: 698px;
   }
 }
-#logo-bottom{
-  background: url($images_dir + "logo-bottom.png");
-  display: block;
-  height: 47px;
-  width: 109px;
+section {
+  .footer-mobile-menu >&{
+    margin: auto;
+    max-width: 698px;
+  }
 }
-#phone-number_bottom {
+#logo-bottom,
+#logo-bottom-mobile-menu{
+  @include logo-bottom;
+}
+#phone-number_bottom,
+#phone-number_bottom-mobile-menu{
   @include phone-number;
-  float: right;
-  font-size: 1.5rem;
-  margin-top: -37px;
-  margin-right: 7px;
-  position: static;
+  @include phone-number-bottom;
 }
