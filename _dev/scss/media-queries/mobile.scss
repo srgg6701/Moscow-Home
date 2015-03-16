@@ -119,7 +119,16 @@
     }
   }
 }
-
-@media (max-width: $resolution-phone){
-
+@media (max-width:$resolution-phone540){
+  header .menu.wide {
+    ul{
+      &.you-need{
+        max-width: 244px !important;
+        li{
+          width: 100% !important;
+        }
+      }
+    }
+  }
 }
+//@media (max-width: $resolution-phone){}

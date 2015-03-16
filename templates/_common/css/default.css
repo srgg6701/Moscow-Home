@@ -3723,6 +3723,16 @@ body.gallery [id^="slider-mini-"] {
     text-align: center;
   }
 }
+@media (max-width: 540px) {
+  /* line 125, ../../../_dev/scss/media-queries/mobile.scss */
+  header .menu.wide ul.you-need {
+    max-width: 244px !important;
+  }
+  /* line 127, ../../../_dev/scss/media-queries/mobile.scss */
+  header .menu.wide ul.you-need li {
+    width: 100% !important;
+  }
+}
 /* line 51, ../../../_dev/scss/default.scss */
 #achievements {
   margin: auto;
