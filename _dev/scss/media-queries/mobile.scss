@@ -1,6 +1,15 @@
 @media (max-width: $resolution-phone){
-  header >section{
-    top: 147px;
+  header {
+    >nav{
+      >div{
+        &:nth-child(2){
+          width: 100%;
+        }
+      }
+    }
+    >section{
+      top: 147px;
+    }
   }
   #top-menu{
     background-color: #ffffff;

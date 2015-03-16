@@ -3510,7 +3510,6 @@ body.gallery [id^="slider-mini-"] {
     left: 16px;
     margin: 0;
     position: absolute;
-    width: 100%;
   }
   /* line 217, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div:nth-child(3) {
@@ -3641,12 +3640,16 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 320px) {
-  /* line 2, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 5, ../../../_dev/scss/media-queries/mobile.scss */
+  header > nav > div:nth-child(2) {
+    width: 100%;
+  }
+  /* line 10, ../../../_dev/scss/media-queries/mobile.scss */
   header > section {
     top: 147px;
   }
 
-  /* line 5, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 14, ../../../_dev/scss/media-queries/mobile.scss */
   #top-menu {
     background-color: #ffffff;
     left: -12px;
@@ -3656,14 +3659,14 @@ body.gallery [id^="slider-mini-"] {
     width: 100%;
     z-index: 2;
   }
-  /* line 13, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 22, ../../../_dev/scss/media-queries/mobile.scss */
   #top-menu li {
     display: block;
     float: left;
     height: 44px;
     width: 50%;
   }
-  /* line 19, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 28, ../../../_dev/scss/media-queries/mobile.scss */
   #top-menu li a {
     line-height: 44px;
   }
