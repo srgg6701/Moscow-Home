@@ -1,5 +1,5 @@
 // resolution <=>620px
-@media (min-width:$resolution-tablet-small+1){
+@media (min-width:$resolution-tablet-small){
   #menus-subheader-mobile{
     top:0;
   }
@@ -118,17 +118,23 @@
       }
     }
   }
-}
-@media (max-width:$resolution-phone540){
   header .menu.wide {
     ul{
       &.you-need{
         max-width: 244px !important;
         li{
-          width: 100% !important;
+          @media (max-width:$resolution-phone540){
+            width: 100% !important;
+          }
         }
       }
     }
   }
+  li {
+    #you-need .you-need &{
+        display: block;
+    }
+  }
 }
+
 //@media (max-width: $resolution-phone){}
