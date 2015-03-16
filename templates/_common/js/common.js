@@ -42,6 +42,7 @@ jQuery(function(){
         },200),
         // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
         //---------------------------------
+        top_menu=$('#top-menu'),
         dd_menus=$('nav a[href="#"]'),              // псевдоссылки
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
@@ -68,10 +69,10 @@ jQuery(function(){
         if(ifr=document.getElementById('partner-iframe')){
             //
             $(ifr).on('load', function(){
-                console.log('%ciFrame is loaded','color:brown'); console.log('%cframeClick: '+frameClick,'font-weight:bold');
-                if(frameClick) console.log('%ciFrame is reloaded!','color:violet');
+                //console.log('%ciFrame is loaded','color:brown'); console.log('%cframeClick: '+frameClick,'font-weight:bold');
+                //if(frameClick) console.log('%ciFrame is reloaded!','color:violet');
             }).on('click', function(){
-                console.log('%cframeClick is: '+frameClick,'color:red');
+                //console.log('%cframeClick is: '+frameClick,'color:red');
                 frameClick=true;
             });
             clearInterval(intrv);
@@ -103,12 +104,14 @@ jQuery(function(){
             event.preventDefault(); //console.log('event: '+event.type+', checkResolutionMobile: '+checkResolutionMobile());
         }
         var menu_to_show_index,
+            // Динамический заголовок анктивного меню
             menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'||event.type=='click'){
             //console.log('is: '+(dd_menus.last().is(this)));
             //console.dir(dd_menus.last()[0]);console.dir(this);
             if(checkResolutionMobile()){
+                top_menu.slideUp(200);
                 if(dd_menus.last().is(this))
                     menus_subheader_mobile.hide();
                 else // подставить текст заголовка
@@ -121,7 +124,7 @@ jQuery(function(){
     });
     // ... мобильная версия, сэндвич, показать/скрыть меню
     $('#sandwich-menu').on('click', function(){
-        $('#top-menu').slideToggle(200);
+        top_menu.slideToggle(200);
     });
     // Обработать блоки выпадающего меню // aside >div
     submenu_items.on('mouseenter click mouseleave', function(event){

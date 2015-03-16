@@ -222,11 +222,12 @@
           position: absolute;
           top: 33px;
           a {
-            background-position: 12px;
+            background-position: 10.5px;
             border-radius: $menu-spot-border-radius;
             font-size: 0;
             height: 100%;
-            width: $menu-spot-width;
+            padding-left: 42px;
+            width: inherit;
           }
         }
         #phone-number {
@@ -278,73 +279,7 @@
     padding: 0;
     position: absolute;
     text-align: center;
-    top: 28px;
+    top: 0;//28px;
     width: 100%;
-  }
-  #top-menu{
-    @media (min-width:$resolution-tablet-small+1){
-      @include transform(translateX(4vw));
-    }
-    @media (max-width:$resolution-tablet-small - 1){
-      display: none;
-    }
-  }
-}
-// resolution <=620px
-@media (max-width:$resolution-tablet-small - 1){
-  header{
-    >section{
-      top: 134px;
-    }
-    >nav{
-      >div{
-        &:nth-child(2){
-          width: 100%;
-        }
-      }
-    }
-  }
-  #logo{
-    left: 50%;
-    margin-left: -16px;
-    position: absolute;
-    transform: translateX(-50%);
-  }
-  #sandwich-menu{
-    border-radius: $menu-spot-border-radius;
-    @include centered-vertical;
-    display: block !important;
-    height: $menu-spot-height;
-    left: 0;
-    overflow: hidden;
-    padding: 5px 7px;
-    position: absolute;
-    hr{
-      border: solid 2px white;
-      @include border-radius(4px);
-      margin: 3.99px auto;
-    }
-  }
-  #top-menu{
-    background-color: $background-carrot-dark;
-    border-bottom: solid 6px $background-carrot-dark;
-    position: absolute;
-    top: 68px;
-    width: 100%;
-    z-index: 2;
-    li{
-      $h:44px;
-      display: block;
-      float: left;
-      height: $h;
-      width: 50%;
-      a{
-        color: white;
-        display: block;
-        height: $h;
-        line-height: $h;
-        padding: 0 24px;
-      }
-    }
   }
 }
