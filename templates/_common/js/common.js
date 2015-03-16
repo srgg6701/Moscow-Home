@@ -44,6 +44,7 @@ jQuery(function(){
         //---------------------------------
         top_menu=$('#top-menu'),
         dd_menus=$('nav a[href="#"]'),              // псевдоссылки
+        sandwich_menu=$('#sandwich-menu'),
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
         // управление меню при событии его контейнера
@@ -123,8 +124,10 @@ jQuery(function(){
         setVisibilityState(event,menu_to_show_index);
     });
     // ... мобильная версия, сэндвич, показать/скрыть меню
-    $('#sandwich-menu').on('click', function(){
-        top_menu.slideToggle(200);
+    sandwich_menu.on('click', function(){
+        top_menu.slideToggle(200, function(){
+            sandwich_menu[$(top_menu).is(':visible')? 'addClass':'removeClass']('active');
+        });
     });
     // Обработать блоки выпадающего меню // aside >div
     submenu_items.on('mouseenter click mouseleave', function(event){

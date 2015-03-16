@@ -209,7 +209,7 @@
         &:nth-child(2) {
           // logo
           height: $headerHeight;
-          left: 16px;
+          left: 15px;
           margin: 0;
           position: absolute;
         }
@@ -237,7 +237,7 @@
     }
     > section { // внутренние тексты для псевдоменю
       > section{
-        margin-top: 83px;
+        margin-top: 55px;//83px;
         h4{
           display: none;
         }

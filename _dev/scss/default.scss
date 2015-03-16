@@ -131,6 +131,13 @@ input[name="attach-file"]{
   background-color: $background-carrot-dark;
   display: none;
   width: $menu-spot-width;
+  &.active{
+    background-color: white;
+    @include box-shadow(0 0px 0 3px $background-carrot-dark inset);
+    hr{
+      border: solid 2px #bf451e;
+    }
+  }
 }
 #shell{
   z-index: 11;
