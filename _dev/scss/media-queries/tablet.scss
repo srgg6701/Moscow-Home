@@ -189,8 +189,29 @@
       border-bottom: dotted 1px;
     }
   }
+  #you-need {
+    ul{ // блок с заголовками основных услуг
+      max-width: 500px;
+      @include transform(translateX(30px));
+      li{
+        float: left;
+        padding-right: 40px;
+        width: 50%;
+        &:nth-child(1) {
+          background-image: url($images_dir + "need-building.png")
+        }
+        &:nth-child(3) {
+          background-image: url($images_dir + "need-design.png")
+        }
+        a{
+          margin-right: -26px;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+  }
 }
-// ширина для мобильных устройств <=768
+// ширина для мобильных устройств <1024
 @media (max-width: $resolution-small-desktop - 1){
   header{
     nav {
@@ -283,3 +304,7 @@
     width: 100%;
   }
 }
+// <=768
+/*@media (max-width:$resolution-tablet768){
+
+}*/

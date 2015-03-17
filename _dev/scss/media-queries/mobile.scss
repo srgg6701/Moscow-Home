@@ -136,5 +136,38 @@
     }
   }
 }
-
-//@media (max-width: $resolution-phone){}
+@media (max-width: $resolution-phone540){
+  #you-need {
+    ul {
+      li {
+        background-position: 0 0 !important;
+        float: none;
+        margin-bottom: 18px;
+        padding-left: 13px;
+        width: 100%;
+        margin-bottom: 17px;
+        /*&:nth-child(1){
+          margin-bottom: 15px;
+        }*/
+        &:nth-child(3),
+        &:nth-child(4){
+          background-position: 6px 0 !important;
+          margin-bottom: 5px;
+          a{
+            top:34%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width:$resolution-phone424){
+  #you-need{
+    .header-slim-big{
+      font-size: 24px;
+    }
+    .you-need{ // ul
+      @include transform(translateX(0));
+    }
+  }
+}

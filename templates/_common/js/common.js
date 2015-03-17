@@ -28,6 +28,34 @@ jQuery(function(){
                     movePrintButton(aPrint);
             }
         },
+        /**
+         * Перегруппировать блок с услугами
+         */
+        rearrangeServices=function(){
+            var UL =$('div#you-need .you-need'),
+                LIs=$('li',UL),
+                data_name = 'data-rearranged',
+                resolution_tablet=966, // свериться с scss/variables.scss
+                // извлечь последнее сохранённое разрешение:
+                lastResolution = $(UL).attr(data_name);
+                // установить текущее разрешение
+                $(UL).attr(data_name,$('body').width());
+            // <=768
+            if(checkResolutionMobile(resolution_tablet)){
+                console.log('%cresolution mobile','color: brown');
+                // предыдущее разрешение было бОльшим, чем текущее (768)
+                if(!lastResolution||lastResolution>resolution_tablet){
+                    // сделать первый блок предпоследним
+                    LIs.eq(2).after(LIs.eq(0));
+                }
+            }else{ // >768
+                console.log('resolution extra mobile');
+                if(lastResolution<=resolution_tablet){
+                    // переместить предпоследний блок на первую позицию, т.е., вернуть всё как было
+                    LIs.eq(0).before(LIs.eq(2));
+                }
+            }
+        },
         intv=setInterval(function(){ // процедура удаления
             //console.log('diigos: '+$(selectors).size());
             if($(selectors).size()){
@@ -54,8 +82,10 @@ jQuery(function(){
 
     //-----------------------------------------
     rearrangeMobileElements();
+    rearrangeServices();
     $(window).on('resize',function(){
         rearrangeMobileElements();
+        rearrangeServices();
         /**
          * todo: по-хорошему нужно сохранять координаты последней карты
          * и передавать их создаваемой  */
@@ -168,8 +198,9 @@ jQuery(function(){
  * Проверить порог разрешения
  * @returns {boolean}
  */
-function checkResolutionMobile(){
-    return jQuery('body').width()<=1024;
+function checkResolutionMobile(resolution){
+    if(!resolution) resolution=1024;
+    return jQuery('body').width()<=resolution;
 }
 /**
  * Спрятать родительский блок кликом по кнопке/ссылке "закрыть"

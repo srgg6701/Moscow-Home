@@ -3491,37 +3491,70 @@ body.gallery [id^="slider-mini-"] {
     text-decoration: none;
     border-bottom: dotted 1px;
   }
+
+  /* line 193, ../../../_dev/scss/media-queries/tablet.scss */
+  #you-need ul {
+    max-width: 500px;
+    -webkit-transform: translateX(30px);
+    -moz-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    -o-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  /* line 196, ../../../_dev/scss/media-queries/tablet.scss */
+  #you-need ul li {
+    float: left;
+    padding-right: 40px;
+    width: 50%;
+  }
+  /* line 200, ../../../_dev/scss/media-queries/tablet.scss */
+  #you-need ul li:nth-child(1) {
+    background-image: url("../images/need-building.png");
+  }
+  /* line 203, ../../../_dev/scss/media-queries/tablet.scss */
+  #you-need ul li:nth-child(3) {
+    background-image: url("../images/need-design.png");
+  }
+  /* line 206, ../../../_dev/scss/media-queries/tablet.scss */
+  #you-need ul li a {
+    margin-right: -26px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
 }
 @media (max-width: 1023px) {
-  /* line 198, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 219, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div:nth-child(1) {
     top: 0;
     height: 68px;
     width: 100%;
   }
-  /* line 203, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 224, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div:nth-child(1) ul {
     display: table;
     margin: auto;
   }
-  /* line 209, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 230, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div:nth-child(2) {
     height: 68px;
     left: 15px;
     margin: 0;
     position: absolute;
   }
-  /* line 216, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 237, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div:nth-child(3) {
     right: 16px;
     width: 42px;
   }
-  /* line 221, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 242, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div #consulting {
     position: absolute;
     top: 33px;
   }
-  /* line 224, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 245, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div #consulting a {
     background-position: 10.5px;
     border-radius: 10px;
@@ -3530,46 +3563,46 @@ body.gallery [id^="slider-mini-"] {
     padding-left: 42px;
     width: inherit;
   }
-  /* line 233, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 254, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div #phone-number {
     display: none;
   }
-  /* line 239, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 260, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section {
     margin-top: 55px;
   }
-  /* line 241, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 262, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section h4 {
     display: none;
   }
-  /* line 244, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 265, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section:nth-child(4) {
     margin-top: 23px;
   }
-  /* line 246, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 267, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section:nth-child(4) h4 {
     display: inherit;
   }
-  /* line 250, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 271, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section > div {
     max-width: 100%;
   }
-  /* line 253, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 274, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section:nth-child(1) > div {
     padding-left: 0;
     width: inherit;
   }
-  /* line 256, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 277, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section:nth-child(1) > div > aside {
     margin-left: 0;
     width: 100%;
   }
-  /* line 260, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 281, ../../../_dev/scss/media-queries/tablet.scss */
   header > section > section:nth-child(1) > div > aside > section:not(.visible) {
     display: none;
   }
 
-  /* line 270, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 291, ../../../_dev/scss/media-queries/tablet.scss */
   #menus-subheader-mobile {
     background-color: #ffffff;
     -webkit-box-shadow: 0px 7px 18px -8px rgba(0, 0, 0, 0.2) inset;
@@ -3587,6 +3620,9 @@ body.gallery [id^="slider-mini-"] {
     width: 100%;
   }
 }
+/*@media (max-width:$resolution-tablet768){
+
+}*/
 @media (min-width: 620px) {
   /* line 3, ../../../_dev/scss/media-queries/mobile.scss */
   #menus-subheader-mobile {
@@ -3739,6 +3775,43 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 
+@media (max-width: 540px) {
+  /* line 142, ../../../_dev/scss/media-queries/mobile.scss */
+  #you-need ul li {
+    background-position: 0 0 !important;
+    float: none;
+    margin-bottom: 18px;
+    padding-left: 13px;
+    width: 100%;
+    margin-bottom: 17px;
+    /*&:nth-child(1){
+      margin-bottom: 15px;
+    }*/
+  }
+  /* line 153, ../../../_dev/scss/media-queries/mobile.scss */
+  #you-need ul li:nth-child(3), #you-need ul li:nth-child(4) {
+    background-position: 6px 0 !important;
+    margin-bottom: 5px;
+  }
+  /* line 156, ../../../_dev/scss/media-queries/mobile.scss */
+  #you-need ul li:nth-child(3) a, #you-need ul li:nth-child(4) a {
+    top: 34%;
+  }
+}
+@media (max-width: 424px) {
+  /* line 166, ../../../_dev/scss/media-queries/mobile.scss */
+  #you-need .header-slim-big {
+    font-size: 24px;
+  }
+  /* line 169, ../../../_dev/scss/media-queries/mobile.scss */
+  #you-need .you-need {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 /* line 51, ../../../_dev/scss/default.scss */
 #achievements {
   margin: auto;
