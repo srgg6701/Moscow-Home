@@ -2,6 +2,8 @@ jQuery(function(){
     var $=jQuery,
         imageBg = new Image(),
         selectors='[id^="diigo"], script[src*="metabar"]',
+        resolution_tablet=966, // свериться с scss/variables.scss
+        resolution_tablet_small=620,
         i=0,        // счётчик итераций
         limit=25, //, // лимит итераций
         /**
@@ -35,24 +37,54 @@ jQuery(function(){
             var UL =$('div#you-need .you-need'),
                 LIs=$('li',UL),
                 data_name = 'data-rearranged',
-                resolution_tablet=966, // свериться с scss/variables.scss
                 // извлечь последнее сохранённое разрешение:
-                lastResolution = $(UL).attr(data_name);
+                lastResolution = UL.attr(data_name);
                 // установить текущее разрешение
-                $(UL).attr(data_name,$('body').width());
-            // <=768
+                UL.attr(data_name,$('body').width());
+            // <=966
             if(checkResolutionMobile(resolution_tablet)){
-                console.log('%cresolution mobile','color: brown');
-                // предыдущее разрешение было бОльшим, чем текущее (768)
+                //console.log('%cresolution mobile','color: brown');
+                // предыдущее разрешение было бОльшим, чем текущее (966)
                 if(!lastResolution||lastResolution>resolution_tablet){
                     // сделать первый блок предпоследним
                     LIs.eq(2).after(LIs.eq(0));
                 }
-            }else{ // >768
-                console.log('resolution extra mobile');
+            }else{ // >966
+                //console.log('resolution extra mobile');
                 if(lastResolution<=resolution_tablet){
                     // переместить предпоследний блок на первую позицию, т.е., вернуть всё как было
                     LIs.eq(0).before(LIs.eq(2));
+                }
+            }
+        },
+        /**
+         * Перегруппировать "витрину"
+         */
+        rearrangeShowcase=function(){
+            var showcase =$('#showcase'),
+                ULs=$('ul',showcase),
+                data_name = 'data-rearranged',
+                lastResolution = showcase.attr(data_name);
+            // извлечь последнее сохранённое разрешение:
+            // установить текущее разрешение
+            showcase.attr(data_name,$('body').width());
+            // <=966
+            if(checkResolutionMobile(resolution_tablet)){
+                console.log('%cresolution mobile','color: brown');
+                // предыдущее разрешение было бОльшим, чем текущее (966)
+                if(!lastResolution||lastResolution>resolution_tablet){
+                    // сделать первый блок предпоследним
+                    ULs.eq(0).append($('li:eq(0)',ULs.eq(1)));
+                    ULs.eq(1).append($('li:eq(0)',ULs.eq(2)));
+                    ULs.eq(2).hide();
+                }
+            }else{ // >966
+                console.log('resolution extra mobile');
+                if(lastResolution<=resolution_tablet){
+                    // переместить предпоследний блок на первую позицию, т.е., вернуть всё как было
+                    ULs.eq(2).show();
+                    ULs.eq(1).prepend($('li:last-child',ULs.eq(0)));
+                    ULs.eq(2).append($('li:last-child',ULs.eq(1)));
                 }
             }
         },
@@ -71,7 +103,7 @@ jQuery(function(){
         // ОБРАБОТАТЬ ВЫПАДАЮЩЕЕ МЕНЮ
         //---------------------------------
         top_menu=$('#top-menu'),
-        dd_menus=$('nav a[href="#"]'),              // псевдоссылки
+        dd_menus_links=$('nav a[href="#"]'),              // псевдоссылки
         sandwich_menu=$('#sandwich-menu'),
         submenu_items=$('header aside >div'),       // внутренние "пункты меню"
         menus_container=getMenusContainer();        // контейнер с блоками меню
@@ -83,9 +115,11 @@ jQuery(function(){
     //-----------------------------------------
     rearrangeMobileElements();
     rearrangeServices();
+    rearrangeShowcase();
     $(window).on('resize',function(){
         rearrangeMobileElements();
         rearrangeServices();
+        rearrangeShowcase();
         /**
          * todo: по-хорошему нужно сохранять координаты последней карты
          * и передавать их создаваемой  */
@@ -110,8 +144,8 @@ jQuery(function(){
         }
     }, 100);
     //-----------------------------------------
-    // todo: удалить после тестирования
-    $(dd_menus).on('click', function(){
+    // todo: удалить(?) после тестирования
+    $(dd_menus_links).on('click', function(){
         $(getInnerMenus()).hide();
         $(getMenusContainer()).hide();
     });
@@ -130,7 +164,7 @@ jQuery(function(){
      */
     $('nav a:not([href="#"])').on('mouseenter click',hideAll);
     // Управлять выпадающими меню
-    dd_menus.on('mouseenter click mouseleave', function(event){
+    dd_menus_links.on('mouseenter click mouseleave', function(event){
         if(event.type=='click') {
             event.preventDefault(); //console.log('event: '+event.type+', checkResolutionMobile: '+checkResolutionMobile());
         }
@@ -139,16 +173,16 @@ jQuery(function(){
             menus_subheader_mobile = $('#menus-subheader-mobile');
         // Отобразить вып. меню и его родительский блок
         if(event.type=='mouseenter'||event.type=='click'){
-            //console.log('is: '+(dd_menus.last().is(this)));
-            //console.dir(dd_menus.last()[0]);console.dir(this);
-            if(checkResolutionMobile()){
+            //console.log('is: '+(dd_menus_links.last().is(this)));
+            //console.dir(dd_menus_links.last()[0]);console.dir(this);
+            if(checkResolutionMobile(resolution_tablet_small)){
                 top_menu.slideUp(200);
-                if(dd_menus.last().is(this))
+                if(dd_menus_links.last().is(this))
                     menus_subheader_mobile.hide();
                 else // подставить текст заголовка
                     menus_subheader_mobile.show().text(this.innerText);
             }
-            menu_to_show_index=dd_menus.index(this);
+            menu_to_show_index=dd_menus_links.index(this);
         }
         // установить состояние видимости
         setVisibilityState(event,menu_to_show_index);
@@ -199,7 +233,7 @@ jQuery(function(){
  * @returns {boolean}
  */
 function checkResolutionMobile(resolution){
-    if(!resolution) resolution=1024;
+    if(!resolution) resolution=966;
     return jQuery('body').width()<=resolution;
 }
 /**

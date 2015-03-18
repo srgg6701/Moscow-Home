@@ -7,6 +7,16 @@
   }
 }
 @media (max-width:$resolution-tablet-small){
+  header {
+    .menu.wide {
+      >section{
+        margin-top: 55px;
+      }
+      h4 {
+        display: none;
+      }
+    }
+  }
   #top-menu {
     @include transform(translateX(4vw));
   }
