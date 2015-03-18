@@ -268,6 +268,8 @@ $hSlider:430px;
   #achievements{
     margin-top: -($sh + 10) !important;
     padding: 0 17px;
+    position: relative;
+    z-index: 2;
   }
     #showcase{
       height: $sh !important;
@@ -275,12 +277,12 @@ $hSlider:430px;
       ul{
         &:nth-child(1){
           @include transform(translateX(10px));
-          width: 40% !important;
+          width: 34% !important;
         }
         &:nth-child(2){
           left: 40%;
           @include transform(translateX(20px));
-          width: 60%;
+          width: 57%;
         }
       }
     }
@@ -324,26 +326,37 @@ $hSlider:430px;
     }
   }
   #you-need {
-  ul{ // блок с заголовками основных услуг
-    max-width: 500px;
-    @include transform(translateX(30px));
-    li{
-      float: left;
-      padding-right: 40px;
-      width: 50%;
-      &:nth-child(1) {
-        background-image: url($images_dir + "need-building.png")
-      }
-      &:nth-child(3) {
-        background-image: url($images_dir + "need-design.png")
-      }
-      a{
-        margin-right: -26px;
-        @include transform(translateY(-50%));
+    ul{ // блок с заголовками основных услуг
+      max-width: 500px;
+      @include transform(translateX(30px));
+      li{
+        float: left;
+        padding-left: 13px;
+        padding-right: 40px;
+        width: 50%;
+        &:nth-child(1) {
+          background-image: url($images_dir + "need-building.png");
+          background-position: 0 0;
+        }
+        &:nth-child(3) {
+          background-image: url($images_dir + "need-design.png");
+        }
+        &:nth-child(3),
+        &:nth-child(4){
+          background-position: 8px 0 !important;
+          margin-top: 29px;
+          a{
+            top:36%;
+          }
+        }
+        a{
+          margin-right: -26px;
+          padding-left: 66px;
+          @include transform(translateY(-50%));
+        }
       }
     }
   }
-}
   header {
     aside div{
       background-color: #efefef;
