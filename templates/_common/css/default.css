@@ -1276,7 +1276,6 @@ nav > div:nth-child(3) {
 
 /* line 25, ../../../_dev/scss/header/nav/nav.scss */
 nav ul {
-  margin-left: -7px;
   margin-top: -2px;
 }
 
@@ -3620,16 +3619,24 @@ body.gallery [id^="slider-mini-"] {
     width: 100%;
   }
 }
-/*@media (max-width:$resolution-tablet768){
-
-}*/
+@media (max-width: 768px) {
+  /* line 309, ../../../_dev/scss/media-queries/tablet.scss */
+  #top-menu {
+    -webkit-transform: translateX(2vw);
+    -moz-transform: translateX(2vw);
+    -ms-transform: translateX(2vw);
+    -o-transform: translateX(2vw);
+    transform: translateX(2vw);
+  }
+}
 @media (min-width: 620px) {
   /* line 3, ../../../_dev/scss/media-queries/mobile.scss */
   #menus-subheader-mobile {
     top: 0;
   }
-
-  /* line 6, ../../../_dev/scss/media-queries/mobile.scss */
+}
+@media (max-width: 620px) {
+  /* line 10, ../../../_dev/scss/media-queries/mobile.scss */
   #top-menu {
     -webkit-transform: translateX(4vw);
     -moz-transform: translateX(4vw);
@@ -3639,7 +3646,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 619px) {
-  /* line 12, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 16, ../../../_dev/scss/media-queries/mobile.scss */
   header > section {
     bottom: 0;
     overflow: auto;
@@ -3647,23 +3654,23 @@ body.gallery [id^="slider-mini-"] {
     position: fixed;
     top: 68px;
   }
-  /* line 21, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 25, ../../../_dev/scss/media-queries/mobile.scss */
   header > nav > div:nth-child(2) {
     width: 100%;
   }
 
-  /* line 31, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 35, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(1) > div:not(:nth-child(2)) {
     display: none;
   }
-  /* line 36, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 40, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) {
     display: table;
     margin-bottom: -10px;
     margin-top: 20px;
     overflow: hidden;
   }
-  /* line 41, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 45, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) > div {
     background: url("../images/social-left-vertical.png") no-repeat;
     background-size: 26px;
@@ -3675,26 +3682,26 @@ body.gallery [id^="slider-mini-"] {
     position: static !important;
     width: 27px !important;
   }
-  /* line 47, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 51, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) > div:nth-child(1) {
     background-position: 0 0;
   }
-  /* line 50, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 54, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) > div:nth-child(2) {
     background-position: 0 -29px;
   }
-  /* line 53, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 57, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) > div:nth-child(3) {
     background-position: 0 -59px;
   }
-  /* line 61, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 65, ../../../_dev/scss/media-queries/mobile.scss */
   .footer-mobile-menu > section:nth-child(2) > div a {
     display: block;
     height: 100%;
     width: 100%;
   }
 
-  /* line 70, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 74, ../../../_dev/scss/media-queries/mobile.scss */
   #logo {
     left: 50%;
     margin-left: -16px;
@@ -3702,7 +3709,7 @@ body.gallery [id^="slider-mini-"] {
     transform: translateX(-50%);
   }
 
-  /* line 76, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 80, ../../../_dev/scss/media-queries/mobile.scss */
   #sandwich-menu {
     border-radius: 10px;
     position: relative;
@@ -3719,7 +3726,7 @@ body.gallery [id^="slider-mini-"] {
     padding: 5px 7px;
     position: absolute;
   }
-  /* line 85, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 89, ../../../_dev/scss/media-queries/mobile.scss */
   #sandwich-menu hr {
     border: solid 2px white;
     -webkit-border-radius: 4px;
@@ -3730,7 +3737,7 @@ body.gallery [id^="slider-mini-"] {
     margin: 3.99px auto;
   }
 
-  /* line 91, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 95, ../../../_dev/scss/media-queries/mobile.scss */
   #top-menu {
     background-color: white;
     -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);

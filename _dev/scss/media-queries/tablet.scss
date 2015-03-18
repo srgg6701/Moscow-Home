@@ -142,7 +142,7 @@
   }
 }
 // любая ВЫСОТА экрана
-// перестройка макета под мобильную версию
+// 966 перестройка макета под мобильную версию
 @media (max-width: $resolution-go-mobile966){
   header {
     aside div{
@@ -305,6 +305,8 @@
   }
 }
 // <=768
-/*@media (max-width:$resolution-tablet768){
-
-}*/
+@media (max-width:$resolution-tablet768){
+  #top-menu {
+    @include transform(translateX(2vw));
+  }
+}

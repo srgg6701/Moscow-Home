@@ -4,6 +4,10 @@
     top:0;
   }
   #top-menu{
+  }
+}
+@media (max-width:$resolution-tablet-small){
+  #top-menu {
     @include transform(translateX(4vw));
   }
 }
@@ -89,12 +93,8 @@
     }
   }
   #top-menu{
-    //background-color: $background-carrot-dark;
-    //border-bottom: solid 6px $background-carrot-dark;
     background-color: white;
     @include box-shadow(0 4px 6px rgba(0,0,0,0.5));
-    //display: inline-block;
-    //border-bottom: none;
     display: none;
     position: absolute;
     top: 68px;
