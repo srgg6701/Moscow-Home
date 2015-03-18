@@ -264,86 +264,86 @@ $hSlider:430px;
   body.no-overflow{
     overflow: auto;
   }
-    $sh:137px;
-    #achievements{
-      margin-top: -($sh + 10) !important;
-      padding: 0 17px;
-    }
-      #showcase{
-        height: $sh !important;
-        position: static !important;
-        ul{
-          &:nth-child(1){
-            @include transform(translateX(10px));
-            width: 40% !important;
-          }
-          &:nth-child(2){
-            left: 40%;
-            @include transform(translateX(20px));
-            width: 60%;
-          }
-        }
-      }
-
-    #level1{
-      position: static;
-    }
-    #slider {
-      height: $hSlider;
-      margin-top: $headerHeight;
+  $sh:137px;
+  #achievements{
+    margin-top: -($sh + 10) !important;
+    padding: 0 17px;
+  }
+    #showcase{
+      height: $sh !important;
       position: static !important;
-      ul.social {
-        background: transparent;
-        height: initial;
-        left: 13px;
-        top: 18.35px;
-        width: initial;
-        li{
-          background-size: 100% !important;
-          border-radius: 35%;
-          background: url($images_dir + "social-left-vertical.png") no-repeat;
-          height: 26px;
-          margin-bottom: 4px;
-          width: 26px;
-          &:nth-child(1){
-            background-position: 0 0;
-          }
-          &:nth-child(2){
-            background-position: 0 -29px;
-          }
-          &:nth-child(3){
-            background-position: 0 -59px;
-          }
+      ul{
+        &:nth-child(1){
+          @include transform(translateX(10px));
+          width: 40% !important;
         }
-        & + div{
-          top:22px;
-          height: 97px;
-          width: 46px;
+        &:nth-child(2){
+          left: 40%;
+          @include transform(translateX(20px));
+          width: 60%;
         }
       }
     }
-    #you-need {
-    ul{ // блок с заголовками основных услуг
-      max-width: 500px;
-      @include transform(translateX(30px));
+
+  #level1{
+    height: auto;
+    position: static;
+  }
+  #slider {
+    height: $hSlider;
+    margin-top: $headerHeight;
+    position: static !important;
+    ul.social {
+      background: transparent;
+      height: initial;
+      left: 13px;
+      top: 18.35px;
+      width: initial;
       li{
-        float: left;
-        padding-right: 40px;
-        width: 50%;
-        &:nth-child(1) {
-          background-image: url($images_dir + "need-building.png")
+        background-size: 100% !important;
+        border-radius: 35%;
+        background: url($images_dir + "social-left-vertical.png") no-repeat;
+        height: 26px;
+        margin-bottom: 4px;
+        width: 26px;
+        &:nth-child(1){
+          background-position: 0 0;
         }
-        &:nth-child(3) {
-          background-image: url($images_dir + "need-design.png")
+        &:nth-child(2){
+          background-position: 0 -29px;
         }
-        a{
-          margin-right: -26px;
-          @include transform(translateY(-50%));
+        &:nth-child(3){
+          background-position: 0 -59px;
         }
+      }
+      & + div{
+        top:22px;
+        height: 97px;
+        width: 46px;
       }
     }
   }
-
+  #you-need {
+  ul{ // блок с заголовками основных услуг
+    max-width: 500px;
+    @include transform(translateX(30px));
+    li{
+      float: left;
+      padding-right: 40px;
+      width: 50%;
+      &:nth-child(1) {
+        background-image: url($images_dir + "need-building.png")
+      }
+      &:nth-child(3) {
+        background-image: url($images_dir + "need-design.png")
+      }
+      a{
+        margin-right: -26px;
+        @include transform(translateY(-50%));
+      }
+    }
+  }
+}
   header {
     aside div{
       background-color: #efefef;
@@ -359,6 +359,7 @@ $hSlider:430px;
               max-width: 640px;
               margin-left: auto;
               margin-right: auto;
+              margin-top: 16px;
               overflow: hidden;
               @include transform(translateX(5vw));
               li {
@@ -369,6 +370,9 @@ $hSlider:430px;
               }
             }
           }
+        }
+        h4{
+          text-align: center;
         }
       }
       .footer-mobile-menu{
@@ -382,6 +386,9 @@ $hSlider:430px;
         margin-top: inherit !important;
       }
     }
+  }
+  footer{
+    position: static !important;
   }
   span{
     #header-menu-about &{

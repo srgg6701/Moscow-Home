@@ -7,28 +7,24 @@
   }
 }
 @media (max-width:$resolution-tablet-small){
-  header {
-    .menu.wide {
-      >section{
-        margin-top: 55px;
-      }
-      h4 {
-        display: none;
-      }
-    }
-  }
   #top-menu {
     @include transform(translateX(4vw));
   }
 }
 @media (max-width:$resolution-tablet-small - 1){
   header{
-    >section{ // .menu.wide
+    .menu.wide{ // .menu.wide
       bottom:0;
       overflow: auto;
       padding-top: 0;
       position: fixed;
       top: 68px;//134px;
+      >section{
+        margin-top: 55px;
+      }
+      h4 {
+        display: none;
+      }
     }
     >nav{
       >div{
@@ -108,6 +104,7 @@
     display: none;
     position: absolute;
     top: 68px;
+    @include transform(translateX(0));
     width: 100%;
     z-index: 2;
     li{

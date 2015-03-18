@@ -175,7 +175,8 @@ jQuery(function(){
         if(event.type=='mouseenter'||event.type=='click'){
             //console.log('is: '+(dd_menus_links.last().is(this)));
             //console.dir(dd_menus_links.last()[0]);console.dir(this);
-            if(checkResolutionMobile(resolution_tablet_small)){
+            if(checkResolutionMobile(resolution_tablet_small - 1)){
+                console.log('resolution_tablet_small -1: '+(resolution_tablet_small - 1));
                 top_menu.slideUp(200);
                 if(dd_menus_links.last().is(this))
                     menus_subheader_mobile.hide();
