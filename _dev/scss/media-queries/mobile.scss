@@ -117,6 +117,35 @@
       margin: 3.99px auto;
     }
   }
+  #showcase{
+    >div{
+      ul{
+        @media (min-width:$resolution-phone424){
+          &:nth-child(1){
+            li:last-child{
+              display: none;
+            }
+          }
+          &:nth-child(2){
+            width: 55%;
+          }
+          li{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  #slider{
+    .pointers-aside{
+      >aside{
+        background-size: 32%;
+        background-position: center;
+        height: 13vw;
+        width: 13vw;
+      }
+    }
+  }
   #top-menu{
     background-color: white;
     @include box-shadow(0 4px 6px rgba(0,0,0,0.5));
@@ -205,7 +234,8 @@
           img{
             // картинки в 3 столбца по умолчанию
             @include dynamic-img-params;
-            margin-left: 1.6vw;
+            margin-left: 1.5vw;
+            margin-bottom: 0.75vw;
           }
         }
         aside{
@@ -254,7 +284,8 @@
           a{
             img{
               // перестройка отображения картинок в 2 столбца
-              @include dynamic-img-params(40.85,46.8);
+              @include dynamic-img-params(40.85,45.5);
+              //margin-right: -0.45vw;
             }
           }
         }

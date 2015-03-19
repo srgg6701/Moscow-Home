@@ -240,16 +240,19 @@ $hSlider:430px;
     top: 0;//28px;
     width: 100%;
   }
-  #pointers-box{
+  #pointers-box {
     height: $hSlider !important;
-    .pointers-aside{
+    .pointers-aside {
       height: $hSlider;
-      aside{
+      aside {
         top: 50%;
-        &:nth-child(1){
+        @media (min-width: $resolution-phone424 + 1) {
+          top: 40%;
+        }
+        &:nth-child(1) {
           @include transform(translateY(-50%));
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           @include transform(scaleX(-1) translateY(-50%));
         }
       }
