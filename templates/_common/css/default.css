@@ -3937,7 +3937,7 @@ body.gallery [id^="slider-mini-"] {
 }
 
 @media (max-width: 540px) {
-  /* line 148, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 154, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need ul li {
     background-position: 0 0 !important;
     float: none;
@@ -3946,51 +3946,56 @@ body.gallery [id^="slider-mini-"] {
     width: 100%;
     margin-bottom: 15px;
   }
-  /* line 155, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 161, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need ul li:nth-child(3) {
     margin-bottom: 3px;
     margin-top: 10px;
   }
-  /* line 159, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 165, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need ul li:nth-child(4) {
     margin-bottom: 25px;
     margin-top: 0;
   }
-  /* line 162, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 168, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need ul li:nth-child(4) a {
     top: 34%;
   }
 
-  /* line 169, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 175, ../../../_dev/scss/media-queries/mobile.scss */
   #gallery {
     font-size: 24px;
     min-height: inherit;
   }
 
-  /* line 173, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 179, ../../../_dev/scss/media-queries/mobile.scss */
   #level1 {
     position: static !important;
   }
-  /* line 175, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 181, ../../../_dev/scss/media-queries/mobile.scss */
   #level1 .slider-bottom {
     margin-top: 34px;
   }
-  /* line 178, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 184, ../../../_dev/scss/media-queries/mobile.scss */
   #level1 .slider-bottom .slides a {
     float: left;
-    width: 50%;
   }
-  /* line 182, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 186, ../../../_dev/scss/media-queries/mobile.scss */
+  #level1 .slider-bottom .slides a img {
+    height: 27.23vw;
+    width: 31.25vw;
+    margin-left: 1.6vw;
+  }
+  /* line 192, ../../../_dev/scss/media-queries/mobile.scss */
   #level1 .slider-bottom .slides aside {
     display: none;
   }
 }
 @media (max-width: 424px) {
-  /* line 191, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 201, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need .header-slim-big {
     font-size: 24px;
   }
-  /* line 194, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 204, ../../../_dev/scss/media-queries/mobile.scss */
   #you-need .you-need {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -3999,62 +4004,67 @@ body.gallery [id^="slider-mini-"] {
     transform: translateX(0);
   }
 
-  /* line 199, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 209, ../../../_dev/scss/media-queries/mobile.scss */
   #index main {
     bottom: 0;
     position: relative !important;
     top: 0;
   }
-  /* line 208, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 218, ../../../_dev/scss/media-queries/mobile.scss */
   #index #pointers-box {
     height: 213px !important;
     position: static !important;
   }
-  /* line 211, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 221, ../../../_dev/scss/media-queries/mobile.scss */
   #index #pointers-box .pointers-aside {
     height: 100%;
   }
-  /* line 215, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 225, ../../../_dev/scss/media-queries/mobile.scss */
   #index .img-box {
     position: absolute;
     top: 0;
   }
-  /* line 220, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 230, ../../../_dev/scss/media-queries/mobile.scss */
   #index #level1 {
     position: absolute;
     top: 400px;
   }
-  /* line 224, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 236, ../../../_dev/scss/media-queries/mobile.scss */
+  #index #level1 .slider-bottom .slides a img {
+    height: 40.85vw;
+    width: 46.8vw;
+  }
+  /* line 244, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider {
     height: 336px;
     margin-top: 68px;
     overflow: visible !important;
     position: static !important;
   }
-  /* line 229, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 249, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider .content-wrapper {
     height: 213px !important;
     position: absolute;
     top: 0;
     width: 100%;
   }
-  /* line 236, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 255, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider ul.social {
     display: none;
   }
-  /* line 238, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 257, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider ul.social + div {
     display: none;
   }
-  /* line 245, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 264, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #achievements {
     margin-top: 17px !important;
   }
-  /* line 248, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 267, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase {
     height: 106px !important;
   }
-  /* line 250, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 269, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase > div {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
@@ -4062,11 +4072,11 @@ body.gallery [id^="slider-mini-"] {
     -o-border-radius: 6px;
     border-radius: 6px;
   }
-  /* line 252, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 271, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase > div ul {
     display: none;
   }
-  /* line 254, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 273, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase > div ul:nth-child(1) {
     display: block;
     -webkit-transform: translateX(20px);
@@ -4076,83 +4086,10 @@ body.gallery [id^="slider-mini-"] {
     transform: translateX(20px);
     width: 86% !important;
   }
-  /* line 259, ../../../_dev/scss/media-queries/mobile.scss */
+  /* line 278, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase > div ul:nth-child(1) li:last-child {
     display: none;
   }
-}
-@media (max-width: 320px) {
-  /*#index{
-    main{
-      //background: yellow;
-      bottom: 0;
-      height: 100%;
-      overflow: auto;
-      position: relative !important;
-      top: 0;
-    }
-    $h:213px;
-    #pointers-box{
-      height: $h !important;
-      position: static !important;
-      .pointers-aside{
-        height: 100%;
-      }
-    }
-    .img-box{
-      position: absolute;
-      top: 0;
-      //height: $h;
-    }
-    #level1{
-      position: absolute;
-      top: 400px
-    }
-    #slider{
-      height: 336px;
-      margin-top: $headerHeight;
-      overflow: visible !important;
-      position: static !important;
-      .content-wrapper{
-        //height: 100% !important;
-        height: $h !important;
-        position: absolute;
-        top: $headerHeight;//0;
-        width:100%;
-      }
-      ul.social{
-        display: none;
-        & +div{
-          display: none;
-        }
-      }
-      // ╨Т╨Э╨Ш╨Ь╨Р╨Э╨Ш╨Х!
-      // ╨Ю╤Б╤В╨░╨▓╨╕╤В╤М, ╨║╨░╨║ ╨▓╨╗╨╛╨╢╨╡╨╜╨╜╤Л╨╡ ╤Н╨╗╨╡╨╝╨╡╨╜╤В╤Л,
-      // ╨╕╨╜╨░╤З╨╡ ╨┐╨╛╤А╤П╨┤╨╛╨║ ╨┐╤А╨╕╨╝╨╡╨╜╨╡╨╜╨╕╤П ╤Б╤В╨╕╨╗╨╡╨╣ ╨╜╨░╤А╤Г╤И╨╕╤В╤Б╤П:
-      #achievements{
-        margin-top: 17px !important;
-      }
-      #showcase{
-        height: 106px !important;
-        >div{
-          @include border-radius(6px);
-          ul{
-            display: none;
-            &:nth-child(1) {
-              display: block;
-              @include transform(translateX(20px));
-              width: 86% !important;
-              li{
-                &:last-child{
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }*/
 }
 /* line 51, ../../../_dev/scss/default.scss */
 #achievements {
