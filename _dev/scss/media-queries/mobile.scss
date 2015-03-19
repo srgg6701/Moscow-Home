@@ -195,10 +195,81 @@
       @include transform(translateX(0));
     }
   }
+  #index{
+    main{
+      //background: yellow;
+      bottom: 0;
+      //height: 100%;
+      //overflow: auto;
+      position: relative !important;
+      top: 0;
+    }
+    $h:213px;
+    #pointers-box{
+      height: $h !important;
+      position: static !important;
+      .pointers-aside{
+        height: 100%;
+      }
+    }
+    .img-box{
+      position: absolute;
+      top: 0;
+      //height: $h;
+    }
+    #level1{
+      position: absolute;
+      top: 400px
+    }
+    #slider{
+      height: 336px;
+      margin-top: $headerHeight;
+      overflow: visible !important;
+      position: static !important;
+      .content-wrapper{
+        //height: 100% !important;
+        height: $h !important;
+        position: absolute;
+        top: 0;//$headerHeight;//0;
+        width:100%;
+      }
+      ul.social{
+        display: none;
+        & +div{
+          display: none;
+        }
+      }
+      // ВНИМАНИЕ!
+      // Оставить, как вложенные элементы,
+      // иначе порядок применения стилей нарушится:
+      #achievements{
+        margin-top: 17px !important;
+      }
+      #showcase{
+        height: 106px !important;
+        >div{
+          @include border-radius(6px);
+          ul{
+            display: none;
+            &:nth-child(1) {
+              display: block;
+              @include transform(translateX(20px));
+              width: 86% !important;
+              li{
+                &:last-child{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 // самый маленький, 320 ☻
 @media (max-width:$resolution-phone){
-  #index{
+  /*#index{
     main{
       //background: yellow;
       bottom: 0;
@@ -268,5 +339,5 @@
         }
       }
     }
-  }
+  }*/
 }
