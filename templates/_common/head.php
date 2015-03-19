@@ -73,8 +73,13 @@ var intv=setTimeout(function(){
 <?php   endif;
         if($main_page):
         ?>
-jQuery('.slider-bottom .slides').on('click', function(){
-    location.href=location.pathname+'gallery';
+jQuery(function(){
+    jQuery('.slider-bottom .slides').on('click', function(event){
+        event.preventDefault();
+        var goto=location.pathname+'gallery';
+        console.log('goto: '+goto);
+        location.href=goto;
+    });
 });
 <?php   endif;?>
 </script>
