@@ -11,43 +11,48 @@
     @include transform(translateX(4vw));
   }
 }
+// 619 перестройка макета под ◄мобильную► версию
 @media (max-width:$resolution-tablet-small - 1){
-  header{
-    .menu.wide{ // .menu.wide
-      bottom:0;
-      overflow: auto;
-      padding-top: 0;
-      position: fixed;
-      top: $headerHeight;//134px;
-      >section{
-        margin-top: 55px;
+  body{ // в body чиста для приоритета, не более
+    header{
+
+      .menu.wide{ // .menu.wide
+        bottom:0;
+        overflow: auto;
+        padding-top: 0;
+        position: fixed;
+        top: $headerHeight;//134px;
+        >section{
+          margin-top: 55px;
+        }
+        h4 {
+          display: none;
+        }
+        // последнее внутреннее меню
+        #header-menu-ask-question{
+          margin-top: 0;
+        }
       }
-      h4 {
-        display: none;
-      }
-    }
-    >nav{
-      >div{
-        &:nth-child(2){
-          width: 100%;
+      >nav{
+        >div{
+          &:nth-child(2){
+            width: 100%;
+          }
         }
       }
     }
-  }
-  .footer-mobile-menu{
-    >section{
-      &:nth-child(1){
+    footer,
+    .footer-mobile-menu{
+      >div.section,
+      >section:nth-child(1){
         >div{
           &:not(:nth-child(2)){
             display: none;
           }
         }
       }
-      &:nth-child(2){
-        display: table;
-        margin-bottom: -10px;
-        margin-top: 20px;
-        overflow: hidden;
+      .footer-social{
+        display: table !important;
         >div{
           $size:27px;
           background:url($images_dir + 'social-left-vertical.png') no-repeat;
@@ -75,6 +80,20 @@
           }
         }
       }
+    }
+    footer{
+      >div{
+        width: 100% !important;
+      }
+    }
+  }
+  .footer-social{
+    body footer &{
+      margin: 20px auto 10px;
+    }
+    body .footer-mobile-menu &{
+      margin-top: 20px !important;
+      margin-bottom: -10px !important;
     }
   }
   #logo{
