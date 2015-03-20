@@ -307,7 +307,7 @@ p{
   font-size: 14px;
   .do-it &{
     display: table;
-    margin: 27px auto 6px;
+    margin: $do-it-offset auto 6px;
     @media (max-width:$resolution-phone540){
       margin-top: 21px;
     }

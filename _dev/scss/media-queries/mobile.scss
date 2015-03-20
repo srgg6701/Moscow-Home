@@ -10,6 +10,9 @@
   #top-menu {
     @include transform(translateX(4vw));
   }
+  #partners-iframe{
+    padding-left: 15px;
+  }
 }
 // 619 перестройка макета под ◄мобильную► версию
 @media (max-width: $resolution-tablet-small620 - 1){
@@ -220,18 +223,13 @@
       }
     }
   }
-  #work-examples #gallery{
+  /*#work-examples #gallery{
     font-size: 24px;
     min-height: inherit;
     & +div{
-      //background-color: red;
       left: -15px;
-      //padding-right: 40px;
       position: relative;
-      //width: 100vw;
-      width: 316px;
       @include centered-horizontal;
-
       .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
         //background-color: yellow;
         display: block;
@@ -241,7 +239,7 @@
         }
       }
     }
-  }
+  }*/
   #level1{
     position: static !important;
     .slider-bottom{

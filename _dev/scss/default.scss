@@ -21,7 +21,6 @@
 }
 // END FONTS ------------------------
 @import "compass";
-@import "common-elements";
 @import "variables";
 @import "mixins";
 @import "tags";
@@ -31,6 +30,7 @@
 @import "main/main";
 @import "footer/footer";
 //------------------------------------
+@import "common-elements";
 @import "_design";
 @import "_decoration";
 @import "_engineering";

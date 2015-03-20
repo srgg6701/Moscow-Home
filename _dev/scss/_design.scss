@@ -127,7 +127,7 @@ div{
       }
     }
   }
-  @mixin section-params($iheight,$bg-image,$bg-position){
+  @mixin section-params($iheight,$bg-image,$bg-position,$margin-top:null){
     &:first-child{
       @media (max-width:$resolution-tablet-small620){
         margin-top:$iheight + 5;
@@ -137,12 +137,16 @@ div{
       background-image: url($images_dir + 'design/' + $bg-image);
       background-position: $bg-position;
       @media (max-width:$resolution-tablet-small620){
+        background-position: 0;
         height: $iheight;
+        @if $margin-top{
+          margin-top:$margin-top;
+        }
       }
     }
   }
   #design .content .wide:nth-child(1) >div >&{
-    @include section-params(61.81vw,'architectural-design.png',2px 70px);
+    @include section-params(61.81vw,'architectural-design.png',2px 70px,40px);
   }
   #design .content .wide:nth-child(2) >div >&{
     @include section-params(45.3vw,'projecting-outer.png',113px 28px);
@@ -150,10 +154,10 @@ div{
   #design .content .wide:nth-child(3) >div >&{
     @include section-params(56.47vw,'projecting-inner.png',50px 0);
   }
-  #design .content .wide:nth-child(4) >div >&:last-child{
+  #design .content .wide:nth-child(4) >div >&{
     @include section-params(47.45vw,'electrical-systems.png',74px 53px);
   }
-  #design .content .wide:nth-child(5) >div >&:last-child{
+  #design .content .wide:nth-child(5) >div >&{
     @include section-params(54.1vw,'projecting-bassein.png',29px 7px);
   }
   // контейнер для заголовка и текста
@@ -238,14 +242,17 @@ h2{
     padding-bottom: 41px;
     padding-top: 73px;
   }
+  @media (max-width:$resolution-tablet-small620){
+    #design .content section.wide &{
+      margin-top: 0;
+    }
+  }
   #design #visual-bottom &.header-big{
     color:$color-carrot;
     font-weight: 100;
     height: 107px;
     line-height: 49px;
     margin-bottom: 0;
-    //margin-left: 40px;
-    //margin-right: -40px;
     margin-top: 8px;
     text-align: center;
     @include transform(translateX(40px));

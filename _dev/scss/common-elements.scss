@@ -24,16 +24,43 @@ img{
   border:none;
 }
 
-/*
-body:not(.no-overflow) {
-  main{
-    @media (max-width:$resolution-tablet768){
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    @media (max-width:$resolution-phone){
-      padding-left: 25px;
-      padding-right: 25px;
+#work-examples #gallery{
+  & +div{
+    $imgBoxWidth:158px;
+    @media (max-width: $resolution-go-mobile966){
+
+      left: -15px;
+      position: relative;
+
+      @include centered-horizontal;
+      .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
+        display: block;
+        .slideplus{
+          width: 100% !important;
+        }
+      }
+
+      @media (max-width:$resolution-phone540){
+        font-size: 24px;
+        min-height: inherit;
+      }
+
+      // gallery-rotator settings
+      @media (min-width: 208px){
+        width: $imgBoxWidth;
+      }
+      @media (min-width: 366px){
+        width: $imgBoxWidth * 2;
+      }
+      @media (min-width: 524px){
+        width: $imgBoxWidth * 3;
+      }
+      @media (min-width: 682px){
+        width: $imgBoxWidth * 4;
+      }
+      @media (min-width: 840px){
+        width: $imgBoxWidth * 5;
+      }
     }
   }
-}*/
+}
