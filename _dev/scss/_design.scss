@@ -87,7 +87,7 @@ div{
     position: relative;
     max-width: $max-width-container;
     padding-right: 410px;
-    @media (max-width:$resolution-phone540){
+    @media (max-width: $resolution-tablet-small620){
       padding-right: 0 !important;
     }
   }
@@ -102,35 +102,59 @@ div{
     padding-right: 350px;
   }
   #design .content .wide >div >&{
+    // контейнеры с текстом
+    &:first-child{
+      @media (max-width:$resolution-tablet-small620){
+        float: right;
+        padding-bottom: 34px;
+      }
+    }
+    // контейнеры с изображениями
     &:last-child{
-      //background-color: lavender;
       background-repeat: no-repeat;
       height: 425px;
       position: absolute;
       left: 545px;
       top:0;
       width: 475px;
+      @media (max-width:$resolution-tablet-small620){
+        background-position: 0;
+        background-size: contain;
+        display: block;
+        margin: auto;
+        position: static;
+        width: 80vw;
+      }
     }
   }
-  #design .content .wide:nth-child(1) >div >&:last-child{
-    background-image: url($images_dir + 'design/architectural-design.png');
-    background-position: 2px 70px;
+  @mixin section-params($iheight,$bg-image,$bg-position){
+    &:first-child{
+      @media (max-width:$resolution-tablet-small620){
+        margin-top:$iheight + 5;
+      }
+    }
+    &:last-child{
+      background-image: url($images_dir + 'design/' + $bg-image);
+      background-position: $bg-position;
+      @media (max-width:$resolution-tablet-small620){
+        height: $iheight;
+      }
+    }
   }
-  #design .content .wide:nth-child(2) >div >&:last-child{
-    background-image: url($images_dir + 'design/projecting-outer.png');
-    background-position: 113px 28px;
+  #design .content .wide:nth-child(1) >div >&{
+    @include section-params(61.81vw,'architectural-design.png',2px 70px);
   }
-  #design .content .wide:nth-child(3) >div >&:last-child{
-    background-image: url($images_dir + 'design/projecting-inner.png');
-    background-position: 50px 0;
+  #design .content .wide:nth-child(2) >div >&{
+    @include section-params(45.3vw,'projecting-outer.png',113px 28px);
+  }
+  #design .content .wide:nth-child(3) >div >&{
+    @include section-params(56.47vw,'projecting-inner.png',50px 0);
   }
   #design .content .wide:nth-child(4) >div >&:last-child{
-    background-image: url($images_dir + 'design/electrical-systems.png');
-    background-position: 74px 53px;
+    @include section-params(47.45vw,'electrical-systems.png',74px 53px);
   }
   #design .content .wide:nth-child(5) >div >&:last-child{
-    background-image: url($images_dir + 'design/projecting-bassein.png');
-    background-position: 29px 7px;
+    @include section-params(54.1vw,'projecting-bassein.png',29px 7px);
   }
   // контейнер для заголовка и текста
   #design #visual-bottom >.relative >&.relative{
@@ -184,6 +208,10 @@ h2{
     @media (max-width:$resolution-phone540){
       font-size: 24px;
       line-height: 20pt;
+    }
+    @media (max-width:$resolution-phone540){
+      font-size: 36px;
+      line-height: 30pt;
     }
   }
   #design .content section:nth-child(1) &{
@@ -239,7 +267,9 @@ li{
 main{
   #design &{
     background: url($images_dir + 'backgrounds/tile-design-main.png') #FFF;
-    padding-top: 63px;
+    @media (min-width:$resolution-tablet-small620 + 1){
+      padding-top: 63px;
+    }
   }
 }
 p{

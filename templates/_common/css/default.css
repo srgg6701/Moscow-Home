@@ -871,7 +871,7 @@ a.print, button.print {
   background-size: cover;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 620px) {
   /* line 214, ../../../_dev/scss/classes.scss */
   .wide {
     padding-left: 25px;
@@ -1601,7 +1601,7 @@ footer div.section {
   max-width: 960px;
   padding-right: 410px;
 }
-@media (max-width: 540px) {
+@media (max-width: 620px) {
   /* line 85, ../../../_dev/scss/_design.scss */
   #design .content .wide > div {
     padding-right: 0 !important;
@@ -1619,7 +1619,14 @@ footer div.section {
 #design .content .wide:nth-child(5) > div {
   padding-right: 350px;
 }
-/* line 105, ../../../_dev/scss/_design.scss */
+@media (max-width: 620px) {
+  /* line 106, ../../../_dev/scss/_design.scss */
+  #design .content .wide > div > div:first-child {
+    float: right;
+    padding-bottom: 34px;
+  }
+}
+/* line 113, ../../../_dev/scss/_design.scss */
 #design .content .wide > div > div:last-child {
   background-repeat: no-repeat;
   height: 425px;
@@ -1628,32 +1635,103 @@ footer div.section {
   top: 0;
   width: 475px;
 }
-/* line 115, ../../../_dev/scss/_design.scss */
+@media (max-width: 620px) {
+  /* line 113, ../../../_dev/scss/_design.scss */
+  #design .content .wide > div > div:last-child {
+    background-position: 0;
+    background-size: contain;
+    display: block;
+    margin: auto;
+    position: static;
+    width: 80vw;
+  }
+}
+@media (max-width: 620px) {
+  /* line 131, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(1) > div > div:first-child {
+    margin-top: 66.81vw;
+  }
+}
+/* line 136, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(1) > div > div:last-child {
   background-image: url("../images/design/architectural-design.png");
   background-position: 2px 70px;
 }
-/* line 119, ../../../_dev/scss/_design.scss */
+@media (max-width: 620px) {
+  /* line 136, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(1) > div > div:last-child {
+    height: 61.81vw;
+  }
+}
+@media (max-width: 620px) {
+  /* line 131, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(2) > div > div:first-child {
+    margin-top: 50.3vw;
+  }
+}
+/* line 136, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(2) > div > div:last-child {
   background-image: url("../images/design/projecting-outer.png");
   background-position: 113px 28px;
 }
-/* line 123, ../../../_dev/scss/_design.scss */
+@media (max-width: 620px) {
+  /* line 136, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(2) > div > div:last-child {
+    height: 45.3vw;
+  }
+}
+@media (max-width: 620px) {
+  /* line 131, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(3) > div > div:first-child {
+    margin-top: 61.47vw;
+  }
+}
+/* line 136, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(3) > div > div:last-child {
   background-image: url("../images/design/projecting-inner.png");
   background-position: 50px 0;
 }
-/* line 127, ../../../_dev/scss/_design.scss */
-#design .content .wide:nth-child(4) > div > div:last-child {
+@media (max-width: 620px) {
+  /* line 136, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(3) > div > div:last-child {
+    height: 56.47vw;
+  }
+}
+@media (max-width: 620px) {
+  /* line 131, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(4) > div > div:last-child:first-child {
+    margin-top: 52.45vw;
+  }
+}
+/* line 136, ../../../_dev/scss/_design.scss */
+#design .content .wide:nth-child(4) > div > div:last-child:last-child {
   background-image: url("../images/design/electrical-systems.png");
   background-position: 74px 53px;
 }
-/* line 131, ../../../_dev/scss/_design.scss */
-#design .content .wide:nth-child(5) > div > div:last-child {
+@media (max-width: 620px) {
+  /* line 136, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(4) > div > div:last-child:last-child {
+    height: 47.45vw;
+  }
+}
+@media (max-width: 620px) {
+  /* line 131, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(5) > div > div:last-child:first-child {
+    margin-top: 59.1vw;
+  }
+}
+/* line 136, ../../../_dev/scss/_design.scss */
+#design .content .wide:nth-child(5) > div > div:last-child:last-child {
   background-image: url("../images/design/projecting-bassein.png");
   background-position: 29px 7px;
 }
-/* line 136, ../../../_dev/scss/_design.scss */
+@media (max-width: 620px) {
+  /* line 136, ../../../_dev/scss/_design.scss */
+  #design .content .wide:nth-child(5) > div > div:last-child:last-child {
+    height: 54.1vw;
+  }
+}
+/* line 160, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > .relative > div.relative {
   height: 290px;
   padding-left: 40px;
@@ -1665,12 +1743,12 @@ footer div.section {
   transform: translateY(83px);
   width: 845px;
 }
-/* line 145, ../../../_dev/scss/_design.scss */
+/* line 169, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > .relative > .relative > div.absolute {
   width: 100%;
   z-index: -1;
 }
-/* line 150, ../../../_dev/scss/_design.scss */
+/* line 174, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > .relative > .relative > div.absolute:nth-child(3) {
   background-color: white;
   -webkit-border-radius: 6px 6px 0 0;
@@ -1683,7 +1761,7 @@ footer div.section {
   opacity: 0.91;
   top: -8px;
 }
-/* line 157, ../../../_dev/scss/_design.scss */
+/* line 181, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > .relative > .relative > div.absolute:nth-child(4) {
   background-color: #a64726;
   -webkit-border-radius: 0 0 6px 6px;
@@ -1697,7 +1775,7 @@ footer div.section {
   top: 107px;
 }
 
-/* line 167, ../../../_dev/scss/_design.scss */
+/* line 191, ../../../_dev/scss/_design.scss */
 #design .top h1 {
   line-height: 61px;
   margin: 44px auto auto;
@@ -1705,14 +1783,14 @@ footer div.section {
   max-width: 650px;
 }
 @media (max-width: 540px) {
-  /* line 167, ../../../_dev/scss/_design.scss */
+  /* line 191, ../../../_dev/scss/_design.scss */
   #design .top h1 {
     margin-top: 26px;
     max-width: 300px;
   }
 }
 
-/* line 179, ../../../_dev/scss/_design.scss */
+/* line 203, ../../../_dev/scss/_design.scss */
 #design .content h2 {
   color: #5d534e;
   font: 48px/50px PlumbLight;
@@ -1720,43 +1798,50 @@ footer div.section {
   margin: 63px auto 37px;
 }
 @media (max-width: 540px) {
-  /* line 179, ../../../_dev/scss/_design.scss */
+  /* line 203, ../../../_dev/scss/_design.scss */
   #design .content h2 {
     font-size: 24px;
     line-height: 20pt;
   }
 }
-/* line 189, ../../../_dev/scss/_design.scss */
+@media (max-width: 540px) {
+  /* line 203, ../../../_dev/scss/_design.scss */
+  #design .content h2 {
+    font-size: 36px;
+    line-height: 30pt;
+  }
+}
+/* line 217, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(1) h2 {
   margin-top: 0;
 }
-/* line 192, ../../../_dev/scss/_design.scss */
+/* line 220, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(2) h2 {
   margin-bottom: 26px;
   margin-top: 51px;
   padding-right: 100px;
 }
-/* line 197, ../../../_dev/scss/_design.scss */
+/* line 225, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(3) h2 {
   margin-bottom: 26px;
   margin-top: 53px;
   padding-right: 80px;
 }
-/* line 202, ../../../_dev/scss/_design.scss */
+/* line 230, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(4) h2 {
   margin-top: 52px;
 }
-/* line 205, ../../../_dev/scss/_design.scss */
+/* line 233, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(5) h2 {
   margin-top: 52px;
   padding-right: 50px;
 }
-/* line 209, ../../../_dev/scss/_design.scss */
+/* line 237, ../../../_dev/scss/_design.scss */
 #design .content section:nth-child(6) h2 {
   padding-bottom: 41px;
   padding-top: 73px;
 }
-/* line 213, ../../../_dev/scss/_design.scss */
+/* line 241, ../../../_dev/scss/_design.scss */
 #design #visual-bottom h2.header-big {
   color: #a64726;
   font-weight: 100;
@@ -1772,55 +1857,60 @@ footer div.section {
   transform: translateX(40px);
 }
 
-/* line 227, ../../../_dev/scss/_design.scss */
+/* line 255, ../../../_dev/scss/_design.scss */
 #our-works ul.table li {
   background: url("../images/design/40specs.jpg") no-repeat;
   position: relative;
 }
-/* line 232, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(1) {
   background-position: 22px 0;
 }
-/* line 232, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(2) {
   background-position: -168px 0;
 }
-/* line 232, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(3) {
   background-position: -354px 0;
 }
-/* line 232, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(4) {
   background-position: -538px 0;
 }
-/* line 232, ../../../_dev/scss/_design.scss */
+/* line 260, ../../../_dev/scss/_design.scss */
 #our-works ul.table li:nth-child(5) {
   background-position: -728px 0;
 }
 
-/* line 240, ../../../_dev/scss/_design.scss */
+/* line 268, ../../../_dev/scss/_design.scss */
 #design main {
   background: url("../images/backgrounds/tile-design-main.png") white;
-  padding-top: 63px;
+}
+@media (min-width: 621px) {
+  /* line 268, ../../../_dev/scss/_design.scss */
+  #design main {
+    padding-top: 63px;
+  }
 }
 
-/* line 246, ../../../_dev/scss/_design.scss */
+/* line 276, ../../../_dev/scss/_design.scss */
 #our-works p {
   color: #5d534e;
   text-align: center;
 }
-/* line 250, ../../../_dev/scss/_design.scss */
+/* line 280, ../../../_dev/scss/_design.scss */
 #our-works p.header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
 }
-/* line 254, ../../../_dev/scss/_design.scss */
+/* line 284, ../../../_dev/scss/_design.scss */
 #our-works p.header + p {
   color: #5d534e;
   font-size: 17px;
   margin-top: -21px;
 }
-/* line 260, ../../../_dev/scss/_design.scss */
+/* line 290, ../../../_dev/scss/_design.scss */
 #design .top-container p {
   font-size: 18px;
   color: #3f3f3f;
@@ -1829,37 +1919,37 @@ footer div.section {
   top: 23px;
 }
 @media (min-width: 966px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     padding-right: 370px;
   }
 }
 @media (min-width: 768px) and (max-width: 965px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     padding-right: 15vw;
   }
 }
 @media (min-width: 768px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     margin-left: 118px;
   }
 }
 @media (max-width: 1023px) and (min-width: 768px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     margin-right: 118px;
   }
 }
 @media (max-width: 966px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     padding-left: 54px;
   }
 }
 @media (max-width: 768px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     font-size: 14px;
     max-width: 370px;
@@ -1867,7 +1957,7 @@ footer div.section {
   }
 }
 @media (max-width: 540px) {
-  /* line 260, ../../../_dev/scss/_design.scss */
+  /* line 290, ../../../_dev/scss/_design.scss */
   #design .top-container p {
     margin: 25px;
     max-width: inherit;
@@ -1875,37 +1965,37 @@ footer div.section {
     position: static;
     width: inherit;
   }
-  /* line 294, ../../../_dev/scss/_design.scss */
+  /* line 324, ../../../_dev/scss/_design.scss */
   #design .top-container p:nth-child(2) {
     margin-top: 195px;
   }
 }
-/* line 299, ../../../_dev/scss/_design.scss */
+/* line 329, ../../../_dev/scss/_design.scss */
 #design .content p {
   font: 18px/20px Arial, Helvetica, sans-serif;
   margin-bottom: 32px;
 }
 @media (max-width: 540px) {
-  /* line 299, ../../../_dev/scss/_design.scss */
+  /* line 329, ../../../_dev/scss/_design.scss */
   #design .content p {
     font-size: 14px;
   }
 }
 @media (min-width: 541px) {
-  /* line 306, ../../../_dev/scss/_design.scss */
+  /* line 336, ../../../_dev/scss/_design.scss */
   #design .content .wide:nth-child(4) p {
     padding-right: 120px;
   }
 }
-/* line 311, ../../../_dev/scss/_design.scss */
+/* line 341, ../../../_dev/scss/_design.scss */
 #design .content .wide:nth-child(5) p {
   padding-right: 20px;
 }
-/* line 314, ../../../_dev/scss/_design.scss */
+/* line 344, ../../../_dev/scss/_design.scss */
 #design .top-container h1 + p {
   top: 27px;
 }
-/* line 317, ../../../_dev/scss/_design.scss */
+/* line 347, ../../../_dev/scss/_design.scss */
 #design #visual-bottom > div p {
   color: white;
   font-size: 17px;
@@ -1914,35 +2004,35 @@ footer div.section {
   margin-right: -60px;
 }
 
-/* line 326, ../../../_dev/scss/_design.scss */
+/* line 356, ../../../_dev/scss/_design.scss */
 #design .content > section {
   overflow: hidden;
 }
-/* line 328, ../../../_dev/scss/_design.scss */
+/* line 358, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(odd):not(:first-child) {
   background-color: #f6f6f6;
 }
-/* line 333, ../../../_dev/scss/_design.scss */
+/* line 363, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(1) {
   min-height: 407px;
 }
-/* line 333, ../../../_dev/scss/_design.scss */
+/* line 363, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(2) {
   min-height: 444px;
 }
-/* line 333, ../../../_dev/scss/_design.scss */
+/* line 363, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(3) {
   min-height: 381px;
 }
-/* line 333, ../../../_dev/scss/_design.scss */
+/* line 363, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(4) {
   min-height: 340px;
 }
-/* line 333, ../../../_dev/scss/_design.scss */
+/* line 363, ../../../_dev/scss/_design.scss */
 #design .content > section:nth-child(5) {
   min-height: 381px;
 }
-/* line 339, ../../../_dev/scss/_design.scss */
+/* line 369, ../../../_dev/scss/_design.scss */
 #design section#visual-bottom {
   background: url("../images/design/visual-bottom.jpg");
   background-size: cover;
@@ -1951,13 +2041,13 @@ footer div.section {
   height: 454px;
 }
 
-/* line 348, ../../../_dev/scss/_design.scss */
+/* line 378, ../../../_dev/scss/_design.scss */
 #our-works ul.table a span {
   display: block;
   white-space: nowrap;
 }
 
-/* line 355, ../../../_dev/scss/_design.scss */
+/* line 385, ../../../_dev/scss/_design.scss */
 #our-works ul.table {
   height: 190px;
   margin: 42px auto;
@@ -4274,7 +4364,6 @@ body.gallery [id^="slider-mini-"] {
   /* line 226, ../../../_dev/scss/media-queries/mobile.scss */
   #work-examples #gallery + div {
     left: -15px;
-    padding-right: 40px;
     position: relative;
     width: 316px;
     position: relative;

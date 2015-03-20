@@ -2,7 +2,7 @@
   $h:94px;
   min-height: $h;
   text-align: center;
-  @media (min-width:$resolution-tablet-small + 1){
+  @media (min-width: $resolution-tablet-small620 + 1){
     line-height: $h;
   }
 }
@@ -18,7 +18,7 @@
   @media (max-width:$resolution-go-mobile940 - 1){
     width: 638px;
   }
-  @media (max-width:$resolution-tablet-small - 1){
+  @media (max-width: $resolution-tablet-small620 - 1){
     width: 330px;
   }
 }

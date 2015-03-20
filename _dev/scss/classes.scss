@@ -103,7 +103,7 @@
     font-size: 36px !important;
     line-height: 150% !important;
   }
-  @media (max-width:$resolution-tablet-small){
+  @media (max-width: $resolution-tablet-small620){
     font-size: 24px !important;
   }
 }
@@ -212,7 +212,7 @@ a.print, button.print{
   }
 }
 .wide{
-  @media (max-width:$resolution-phone540){
+  @media (max-width: $resolution-tablet-small620){
     padding-left: $edge-mobile;
     padding-right: $edge-mobile;
   }
