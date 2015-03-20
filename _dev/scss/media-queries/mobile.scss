@@ -220,9 +220,27 @@
       }
     }
   }
-  #gallery{
+  #work-examples #gallery{
     font-size: 24px;
     min-height: inherit;
+    & +div{
+      //background-color: red;
+      left: -15px;
+      //padding-right: 40px;
+      position: relative;
+      //width: 100vw;
+      width: 316px;
+      @include centered-horizontal;
+
+      .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
+        //background-color: yellow;
+        display: block;
+        .slideplus{
+          //box-shadow: 4px -4px 0 4px violet;
+          width: 100% !important;
+        }
+      }
+    }
   }
   #level1{
     position: static !important;

@@ -102,6 +102,7 @@ body.gallery{
 }
 [id^="gallery-pointers-box-mini-"]{
   width: 900px;
+  max-width: 100%;
 }
 .img, .img-mini{
   body.gallery &{
@@ -119,8 +120,8 @@ body.gallery{
 }
 .img-mini{
   body.gallery &{
-    height: 94px;
     display: inline-block;
+    height: 94px;
     margin-right: 21px;
     width: $prev-width;
   }
@@ -183,7 +184,9 @@ body.gallery{
   position: relative;
 }
 [id^="loaded-content-mini-"]{
-  @include transform(translateX($offset-transform));
+  @media (min-width:$resolution-tablet768 + 1){
+    @include transform(translateX($offset-transform));
+  }
 }
 .outer_container {
   background-color: white;
@@ -220,7 +223,9 @@ body.gallery{
     &.tiny{
       display: table;
       margin: auto;
-      @include transform(translateX(-$offset-transform / 2));
+      @media (min-width:$resolution-tablet768 + 1){
+        @include transform(translateX(-$offset-transform / 2));
+      }
     }
   }
 }
@@ -238,8 +243,7 @@ body.gallery{
   body.gallery & {
     background-color: transparent !important;
     height: 100%;
-    //@include transform(translateX(10.5px));
-    //-o-transform: translateX(0) !important;
+    max-width: 100%;
     width: 745px;
   }
 }

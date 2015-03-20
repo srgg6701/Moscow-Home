@@ -63,6 +63,13 @@ div{
   #design &{
     &.top{//.relative
       background-image: url($images_dir + 'design/top-visual-bg.jpg');
+      @media (max-width:$resolution-phone540){
+        background-image: url($images_dir + 'design/top-visual-mobile.png');
+        background-position: center 109px;
+        height: 110vw;
+        min-height: 580px;
+        max-height: 800px;
+      }
       background-repeat: no-repeat;
       background-position: center 0;
       @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
@@ -77,9 +84,12 @@ div{
   }
   #design .content .wide >&{
     margin: auto;
-    padding-right: 410px;
     position: relative;
-    width: $max-width-container;
+    max-width: $max-width-container;
+    padding-right: 410px;
+    @media (max-width:$resolution-phone540){
+      padding-right: 0 !important;
+    }
   }
 
   #design .content .wide:nth-child(2) >&{
@@ -158,7 +168,11 @@ h1{
     line-height: 61px;
     margin: 44px auto auto;
     text-align: center;
-    width: 650px;
+    max-width: 650px;
+    @media (max-width:$resolution-phone540){
+      margin-top: 26px;
+      max-width: 300px;
+    }
   }
 }
 h2{
@@ -167,6 +181,10 @@ h2{
     font: 48px/50px PlumbLight;
     font-weight: 100;
     margin: 63px auto 37px;
+    @media (max-width:$resolution-phone540){
+      font-size: 24px;
+      line-height: 20pt;
+    }
   }
   #design .content section:nth-child(1) &{
     margin-top: 0;
@@ -240,20 +258,55 @@ p{
   }
 
   #design .top-container &{
+    $margin:118px;
     font-size: 18px;
     color: $color-dark-deep2;
-    margin-left: 118px;
-    padding-right: 370px;
+    max-width: 710px;
     position: relative;
     top: 23px;
-    width: 710px;
+    @media (min-width:$resolution-go-mobile966){
+      padding-right: 370px;
+    }
+    @media (min-width:$resolution-tablet768) and (max-width:$resolution-go-mobile966 - 1){
+      padding-right: 15vw;
+    }
+    @media (min-width:$resolution-tablet768){
+      margin-left: $margin;
+    }
+
+    @media (max-width:$resolution-small-desktop - 1) and (min-width:$resolution-tablet768){
+      margin-right: $margin;
+    }
+    @media (max-width:$resolution-go-mobile966){
+      padding-left: 54px;
+    }
+    @media (max-width:$resolution-tablet768){
+      font-size: 14px;
+      max-width: 370px;
+      width: 47%;
+    }
+    @media (max-width:$resolution-phone540){
+      margin: $edge-mobile;
+      max-width: inherit;
+      padding: 0;
+      position: static;
+      width: inherit;
+      &:nth-child(2) {
+        margin-top: 195px;
+      }
+    }
   }
   #design .content &{
     font: 18px/20px $font-second;
     margin-bottom: 32px;
+    @media (max-width:$resolution-phone540){
+      font-size: 14px;
+    }
   }
   #design .content .wide:nth-child(4) &{
-    padding-right: 120px;
+    @media (min-width:$resolution-phone540 + 1){
+      padding-right: 120px;
+    }
   }
   #design .content .wide:nth-child(5) &{
     padding-right: 20px;

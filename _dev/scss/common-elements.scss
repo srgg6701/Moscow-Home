@@ -23,3 +23,17 @@ body,html{
 img{
   border:none;
 }
+
+/*
+body:not(.no-overflow) {
+  main{
+    @media (max-width:$resolution-tablet768){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @media (max-width:$resolution-phone){
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}*/

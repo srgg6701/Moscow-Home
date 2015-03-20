@@ -70,6 +70,12 @@
   #engineering-systems &{
     background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
   }
+  @media (max-width:540px){
+    text-align: center;
+    *{
+      float: none !important;
+    }
+  }
 }
 .fixed{
   position: fixed;
@@ -93,10 +99,20 @@
   font-family: PlumbMedium !important;
   font-size: 48px !important;
   text-transform: uppercase;
+  @media (max-width:$resolution-small-desktop - 1){
+    font-size: 36px !important;
+    line-height: 150% !important;
+  }
+  @media (max-width:$resolution-tablet-small){
+    font-size: 24px !important;
+  }
 }
 .header-slim-big{
   font-family: PlumbLight;
   font-size: 36px;
+  @media (max-width:540px){
+    font-size: 18px;
+  }
   text-transform: uppercase;
   .do-it &{
     color: white;
@@ -193,6 +209,12 @@ a.print, button.print{
   #facade &{
     background-image: url($images_dir + 'facade/roof.jpg');
     background-size: cover;
+  }
+}
+.wide{
+  @media (max-width:$resolution-phone540){
+    padding-left: $edge-mobile;
+    padding-right: $edge-mobile;
   }
 }
 .works-examples{

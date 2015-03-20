@@ -114,6 +114,9 @@ button{
     padding-left: 29px;
     text-transform: uppercase;
     width: 180px;
+    @media (max-width:$resolution-phone540){
+      margin-top: 10px;
+    }
   }
 }
 div{
@@ -132,6 +135,9 @@ div{
       font-size: 36px;
       margin-right: 2px;
       margin-left: 32px;
+      @media (max-width:540px){
+        font-size: 24px;
+      }
     }
   }
   .footer.why-moscow-home >section >aside >&{
@@ -302,6 +308,9 @@ p{
   .do-it &{
     display: table;
     margin: 27px auto 6px;
+    @media (max-width:$resolution-phone540){
+      margin-top: 21px;
+    }
   }
   .top &{
     color: white;
