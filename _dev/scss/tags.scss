@@ -182,6 +182,21 @@ div{
     @include opacity(.65);
     z-index: 1;
   }
+  #design #visual-bottom >&:first-child{
+    &.relative{
+      @media (max-width:$resolution-small-desktop){
+        //background-color: rebeccapurple;
+        //@include centered-vertical;
+        //padding: 0 15px;
+
+        position: static !important;
+        //transform: translateY(0);
+        padding: 0;
+
+
+      }
+    }
+  }
   #you-need ul li >&{
     height: 100%;
   }
