@@ -59,7 +59,7 @@ foreach ($this->plugins as $plugin) :
 
                     $extensions = $this->model->getExtensions($plugin->name);
 
-                    // Get components supported by this plugin
+                    // Get extensions supported by this plugin
                     foreach ($extensions as $type => $items) :
                         $html = '';
 

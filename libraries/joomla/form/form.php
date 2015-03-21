@@ -76,7 +76,7 @@ class JForm
 	protected static $forms = array();
 
 	/**
-	 * Alows components to implement repeating elements
+	 * Alows extensions to implement repeating elements
 	 *
 	 * @var    mixed
 	 * @since  3.2

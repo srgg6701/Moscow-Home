@@ -43,7 +43,7 @@ class JCacheStorageXcacheTest extends PHPUnit_Framework_TestCase
 			// XCache Admin must be disabled for Joomla to use XCache
 			$xcache_admin_enable_auth = ini_get('xcache.admin.enable_auth');
 
-			// Some components ini variables are reported as strings
+			// Some extensions ini variables are reported as strings
 			if ($xcache_admin_enable_auth == 'Off')
 			{
 				$xcachetest = true;

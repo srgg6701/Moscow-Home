@@ -416,7 +416,7 @@ class JInstallerAdapterModule extends JInstallerAdapter
 	/**
 	 * Custom discover method
 	 *
-	 * @return  array  JExtension list of components available
+	 * @return  array  JExtension list of extensions available
 	 *
 	 * @since   3.1
 	 */
@@ -543,7 +543,7 @@ class JInstallerAdapterModule extends JInstallerAdapter
 		$this->parent->setPath('source', $this->parent->getPath('extension_root'));
 
 		// Get the module's manifest objecct
-		// We do findManifest to avoid problem when uninstalling a list of components: getManifest cache its manifest file.
+		// We do findManifest to avoid problem when uninstalling a list of extensions: getManifest cache its manifest file.
 		$this->parent->findManifest();
 		$this->setManifest($this->parent->getManifest());
 

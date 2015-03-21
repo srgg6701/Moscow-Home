@@ -24,8 +24,8 @@ abstract class WFPluginsHelper {
         
         // get all plugin folders
         $plugins    = JFolder::folders($path . '/tiny_mce/plugins', '.', false, true);
-        // get all components
-        $extensions = JFolder::files($path . '/components', '\.xml$', true, true);
+        // get all extensions
+        $extensions = JFolder::files($path . '/extensions', '\.xml$', true, true);
         
         $language   = JFactory::getLanguage();
         $language->load('com_jce', JPATH_ADMINISTRATOR);
@@ -85,7 +85,7 @@ abstract class WFPluginsHelper {
                     'version'       => (string) $xml->version, 
                     'title'         => JText::_((string) $xml->name), 
                     'description'   => JText::_((string) $xml->description),
-                    'path'          => 'components/com_jce/editor/components/' . $folder
+                    'path'          => 'components/com_jce/editor/extensions/' . $folder
                 );
             }
         }

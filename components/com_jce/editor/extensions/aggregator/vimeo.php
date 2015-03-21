@@ -29,7 +29,7 @@ class WFAggregatorExtension_Vimeo extends WFAggregatorExtension
 	function display()
 	{
 		$document = WFDocument::getInstance();
-		$document->addScript('vimeo', 'components/aggregator/vimeo/js');
+		$document->addScript('vimeo', 'extensions/aggregator/vimeo/js');
 	}
 	
 	function isEnabled()

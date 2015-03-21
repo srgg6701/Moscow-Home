@@ -20,7 +20,7 @@ class WFViewProfiles extends WFView {
         
         $options = array(
             'editableselects' => array('label' => WFText::_('WF_TOOLS_EDITABLESELECT_LABEL')),
-            'components' => array(
+            'extensions' => array(
                 'labels' => array(
                     'type_new' => WFText::_('WF_EXTENSION_MAPPER_TYPE_NEW'),
                     'group_new' => WFText::_('WF_EXTENSION_MAPPER_GROUP_NEW'),
@@ -212,7 +212,7 @@ class WFViewProfiles extends WFView {
                 // Load media   
                 $scripts = array(
                     'profiles.js',
-                    'components.js',
+                    'extensions.js',
                     'checklist.js',
                     'styleformat.js',
                     'fonts.js',

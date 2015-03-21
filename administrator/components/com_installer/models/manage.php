@@ -170,7 +170,7 @@ class InstallerModelManage extends InstallerModel
 		$installer = JInstaller::getInstance();
 		$result = 0;
 
-		// Uninstall the chosen components
+		// Uninstall the chosen extensions
 		foreach ($eid as $id)
 		{
 			$result |= $installer->refreshManifestCache($id);
@@ -209,7 +209,7 @@ class InstallerModelManage extends InstallerModel
 			$installer = JInstaller::getInstance();
 			$row = JTable::getInstance('extension');
 
-			// Uninstall the chosen components
+			// Uninstall the chosen extensions
 			$msgs = array();
 			$result = false;
 
@@ -230,7 +230,7 @@ class InstallerModelManage extends InstallerModel
 				{
 					$result = $installer->uninstall($row->type, $id);
 
-					// Build an array of components that failed to uninstall
+					// Build an array of extensions that failed to uninstall
 					if ($result === false)
 					{
 						// There was an error in uninstalling the package

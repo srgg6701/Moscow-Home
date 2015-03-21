@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.components');
+wfimport('editor.libraries.classes.extensions');
 
 class WFSearchExtension extends WFExtension {
 
@@ -42,7 +42,7 @@ class WFSearchExtension extends WFExtension {
         }
 
         if (empty(self::$instances[$type])) {
-            require_once(WF_EDITOR . '/components/search/' . $type . '.php');
+            require_once(WF_EDITOR . '/extensions/search/' . $type . '.php');
 
             $classname = 'WF' . ucfirst($type) . 'SearchExtension';
 

@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.components.filesystem');
+wfimport('editor.libraries.classes.extensions.filesystem');
 
 class WFFileBrowser extends JObject {
     /*
@@ -200,7 +200,7 @@ class WFFileBrowser extends JObject {
     }
 
     /**
-     * Return a list of allowed file components in selected format
+     * Return a list of allowed file extensions in selected format
      *
      * @access public
      * @return extension list
@@ -240,8 +240,8 @@ class WFFileBrowser extends JObject {
     }
 
     /**
-     * Converts the components map to a list
-     * @param string $map The components map eg: images=jpg,jpeg,gif,png
+     * Converts the extensions map to a list
+     * @param string $map The extensions map eg: images=jpg,jpeg,gif,png
      * @return string jpg,jpeg,gif,png
      */
     private function listFileTypes($map) {
@@ -987,7 +987,7 @@ class WFFileBrowser extends JObject {
         // check file name
         WFUtility::checkPath($name);
 
-        // check for invalid components
+        // check for invalid extensions
         if (preg_match('#\.(php|phtml|pl|py|jsp|asp|shtml|sh|cgi)$#i', $name)) {
             throw new InvalidArgumentException('INVALID FILE NAME');
         }

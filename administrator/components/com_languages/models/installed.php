@@ -259,7 +259,7 @@ class LanguagesModelInstalled extends JModelList
 		$client = $this->getState('filter.client_id');
 		$type = "language";
 
-		// Select field element from the components table.
+		// Select field element from the extensions table.
 		$query->select($this->getState('list.select', 'a.element'))
 			->from('#__extensions AS a');
 

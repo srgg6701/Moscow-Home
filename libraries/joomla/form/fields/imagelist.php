@@ -28,7 +28,7 @@ class JFormFieldImageList extends JFormFieldFileList
 
 	/**
 	 * Method to get the list of images field options.
-	 * Use the filter attribute to specify allowable file components.
+	 * Use the filter attribute to specify allowable file extensions.
 	 *
 	 * @return  array  The field option objects.
 	 *

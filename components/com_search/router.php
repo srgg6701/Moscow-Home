@@ -81,7 +81,7 @@ class SearchRouter extends JComponentRouterBase
  * searchBuildRoute
  *
  * These functions are proxies for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$query  An array of URL arguments
  *
@@ -100,7 +100,7 @@ function searchBuildRoute(&$query)
  * searchParseRoute
  *
  * These functions are proxies for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  $segments  The segments of the URL to parse.
  *

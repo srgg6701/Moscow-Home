@@ -61,7 +61,7 @@ class plgSystemModulesAnywhere extends JPlugin
 	}
 
 	/*
-	 * Below methods are general functions used in most of the NoNumber components
+	 * Below methods are general functions used in most of the NoNumber extensions
 	 * The reason these are not placed in the NoNumber Framework files is that they also
 	 * need to be used when the NoNumber Framework is not installed
 	 */

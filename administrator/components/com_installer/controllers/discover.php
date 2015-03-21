@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
 class InstallerControllerDiscover extends JControllerLegacy
 {
 	/**
-	 * Refreshes the cache of discovered components.
+	 * Refreshes the cache of discovered extensions.
 	 *
 	 * @return  void
 	 *

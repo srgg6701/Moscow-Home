@@ -10,7 +10,7 @@
 defined('FOF_INCLUDED') or die;
 
 /**
- * A helper Model to interact with Joomla!'s components update feature
+ * A helper Model to interact with Joomla!'s extensions update feature
  */
 class FOFUtilsUpdate extends FOFModel
 {

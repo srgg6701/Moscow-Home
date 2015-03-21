@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.components');
+wfimport('editor.libraries.classes.extensions');
 
 class WFPopupsExtension extends WFExtension {
     
@@ -57,9 +57,9 @@ class WFPopupsExtension extends WFExtension {
         // Load javascript        
         $document->addScript(array(
             'popups'
-        ), 'libraries.components');
+        ), 'libraries.extensions');
 
-        // get all popups components
+        // get all popups extensions
         $popups = parent::loadExtensions('popups');
 
         $config = $this->getProperties();

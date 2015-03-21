@@ -17,7 +17,7 @@ defined('_JEXEC') or die;
 class InstallerControllerUpdate extends JControllerLegacy
 {
 	/**
-	 * Update a set of components.
+	 * Update a set of extensions.
 	 *
 	 * @return  void
 	 *

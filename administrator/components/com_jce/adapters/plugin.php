@@ -83,7 +83,7 @@ class WFInstallerPlugin extends JObject {
             }
             // its an "extension"
             if ($extension) {
-                $this->parent->setPath('extension_root', JPATH_COMPONENT_SITE . '/editor/components/' . $folder);
+                $this->parent->setPath('extension_root', JPATH_COMPONENT_SITE . '/editor/extensions/' . $folder);
             } else {
                 $this->parent->setPath('extension_root', JPATH_COMPONENT_SITE . '/editor/tiny_mce/plugins/' . $plugin);
             }
@@ -197,7 +197,7 @@ class WFInstallerPlugin extends JObject {
                 break;
             case 'extension':
                 $parts[] = $name;
-                $path = dirname(JPATH_COMPONENT_SITE . '/editor/components/' . implode('/', $parts));
+                $path = dirname(JPATH_COMPONENT_SITE . '/editor/extensions/' . implode('/', $parts));
                 // load language file
                 $language->load('com_jce_' . trim(implode('_', $parts)), JPATH_SITE);
                 break;

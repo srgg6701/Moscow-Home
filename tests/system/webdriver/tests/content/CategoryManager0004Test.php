@@ -238,7 +238,7 @@ class CategoryManager0004Test extends JoomlaWebdriverTestCase
 	public function frontEndCategoryState_ChangeCategoryState_FrontEndCategoryChanged()
 	{
 		$cfg = new SeleniumConfig;
-		$categoryUrl = 'index.php/using-joomla/components/components/content-component/article-categories';
+		$categoryUrl = 'index.php/using-joomla/extensions/components/content-component/article-categories';
 		$this->driver->get($cfg->host . $cfg->path . $categoryUrl);
 		$this->siteCategoryPage = $this->getPageObject('SiteContentCategoriesPage');
 		$arrayTitles = $this->siteCategoryPage->getCategoryTitles();
@@ -289,7 +289,7 @@ class CategoryManager0004Test extends JoomlaWebdriverTestCase
 	public function frontEndCategoryStateChange_ChangeCategoryToArchive_StateChanged()
 	{
 		$cfg = new SeleniumConfig;
-		$categoryUrl = 'index.php/using-joomla/components/components/content-component/article-categories';
+		$categoryUrl = 'index.php/using-joomla/extensions/components/content-component/article-categories';
 		$this->driver->get($cfg->host . $cfg->path . $categoryUrl);
 		$this->siteCategoryPage = $this->getPageObject('SiteContentCategoriesPage');
 		$arrayTitles = $this->siteCategoryPage->getCategoryTitles();

@@ -120,7 +120,7 @@ class WFMediaManager extends WFEditorPlugin {
     private function getConfig() {
         $filesystem = $this->getFileSystem();
 
-        $filetypes = $this->getParam('components', $this->get('_filetypes', 'images=jpg,jpeg,png,gif'));
+        $filetypes = $this->getParam('extensions', $this->get('_filetypes', 'images=jpg,jpeg,png,gif'));
 
         $textcase = $this->getParam('editor.websafe_textcase');
 

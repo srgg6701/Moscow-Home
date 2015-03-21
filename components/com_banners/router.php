@@ -106,7 +106,7 @@ class BannersRouter extends JComponentRouterBase
  * Build the route for the com_banners component
  *
  * This function is a proxy for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$query  An array of URL arguments
  *
@@ -126,7 +126,7 @@ function bannersBuildRoute(&$query)
  * Parse the segments of a URL.
  *
  * This function is a proxy for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  $segments  The segments of the URL to parse.
  *

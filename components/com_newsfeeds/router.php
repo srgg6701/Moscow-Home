@@ -249,7 +249,7 @@ class NewsfeedsRouter extends JComponentRouterBase
  * newsfeedsBuildRoute
  *
  * These functions are proxys for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$query  The segments of the URL to parse.
  *

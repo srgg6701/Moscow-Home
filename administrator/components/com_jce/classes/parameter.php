@@ -425,7 +425,7 @@ class WFParameter {
             if ($parameters) {
                 jimport('joomla.filesystem.folder');
 
-                // load manifest files for components
+                // load manifest files for extensions
                 $files = JFolder::files(JPATH_SITE . '/' . $parameters, '\.xml$', false, true);
 
                 // get the base key for the parameter

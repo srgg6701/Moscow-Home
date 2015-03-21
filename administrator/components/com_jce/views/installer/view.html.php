@@ -45,7 +45,7 @@ class WFViewInstaller extends WFView {
         WFToolbarHelper::help('installer.about');
 
         $options = array(
-            'components' => array('zip', 'tar', 'gz', 'gzip', 'tgz', 'tbz2', 'bz2', 'bzip2'),
+            'extensions' => array('zip', 'tar', 'gz', 'gzip', 'tgz', 'tbz2', 'bz2', 'bzip2'),
             'width' => 300,
             'button' => 'install_button',
             'task' => 'install',
@@ -71,7 +71,7 @@ class WFViewInstaller extends WFView {
         $related = $model->getRelated();
 
         $this->assign('plugins', $plugins);
-        $this->assign('components', $extensions);
+        $this->assign('extensions', $extensions);
         $this->assign('languages', $languages);
         $this->assign('related', $related);
 

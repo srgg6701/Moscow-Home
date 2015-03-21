@@ -56,7 +56,7 @@ class WFModelUpdates extends WFModel {
 
         // get all plugins
         $plugins = $model->getPlugins();
-        // get all components
+        // get all extensions
         $extensions = $model->getExtensions();
 
         foreach ($plugins as $plugin) {
@@ -89,7 +89,7 @@ class WFModelUpdates extends WFModel {
     public function check() {
         $result = false;
 
-        // Get all components and version numbers
+        // Get all extensions and version numbers
         $data = array('task' => 'check', 'jversion' => WF_JOOMLA15 ? '1.5' : '2.5');
 
         wfimport('admin.helpers.extension');

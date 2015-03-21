@@ -57,7 +57,7 @@ class nnFrameworkFunctions
 
 		// only allow url calls to certain files
 		if (
-			strpos($url, 'download.nonumber.nl/components.php') === false
+			strpos($url, 'download.nonumber.nl/extensions.php') === false
 		)
 		{
 			die;

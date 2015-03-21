@@ -137,7 +137,7 @@ abstract class AdminPage
 		'Official Support Forum'	=> 'http://forum.joomla.org/',
 			'Documentation Wiki'	=> 'https://docs.joomla.org/',
 			'Useful Joomla Links'	=> 'administrator/index.php#',
-			'Joomla Extensions'		=> 'http://components.joomla.org/',
+			'Joomla Extensions'		=> 'http://extensions.joomla.org/',
 			'Joomla Translations'	=> 'http://community.joomla.org/translations.html',
 			'Joomla Resources'		=> 'http://resources.joomla.org/',
 			'Community Portal'		=> 'http://community.joomla.org/',

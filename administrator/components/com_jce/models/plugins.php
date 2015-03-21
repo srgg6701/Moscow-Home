@@ -133,7 +133,7 @@ class WFModelPlugins extends WFModel {
     }
 
     /**
-     * Get a plugin's components
+     * Get a plugin's extensions
      * @param object $plugin
      * @return
      */

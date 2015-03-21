@@ -127,7 +127,7 @@ class FinderRouter extends JComponentRouterBase
  * Finder router functions
  *
  * These functions are proxys for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$query  An array of URL arguments
  *
@@ -146,7 +146,7 @@ function FinderBuildRoute(&$query)
  * Finder router functions
  *
  * These functions are proxys for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$segments  The segments of the URL to parse.
  *

@@ -400,7 +400,7 @@ class JInstallerAdapterPlugin extends JInstallerAdapter
 		}
 		else
 		{
-			// Store in the components table (1.6)
+			// Store in the extensions table (1.6)
 			$this->extension->name = $this->name;
 			$this->extension->type = 'plugin';
 			$this->extension->ordering = 0;
@@ -609,7 +609,7 @@ class JInstallerAdapterPlugin extends JInstallerAdapter
 	/**
 	 * Custom discover method
 	 *
-	 * @return  array  JExtension) list of components available
+	 * @return  array  JExtension) list of extensions available
 	 *
 	 * @since   3.1
 	 */
@@ -695,9 +695,9 @@ class JInstallerAdapterPlugin extends JInstallerAdapter
 	public function refreshManifestCache()
 	{
 		/*
-		 * Plugins use the components table as their primary store
+		 * Plugins use the extensions table as their primary store
 		 * Similar to modules and templates, rather easy
-		 * If it's not in the components table we just add it
+		 * If it's not in the extensions table we just add it
 		 */
 		$client = JApplicationHelper::getClientInfo($this->parent->extension->client_id);
 		$manifestPath = $client->path . '/plugins/' . $this->parent->extension->folder . '/' . $this->parent->extension->element . '/'

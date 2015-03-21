@@ -100,9 +100,9 @@ class InstallerModelDiscover extends InstallerModel
 	}
 
 	/**
-	 * Discover components.
+	 * Discover extensions.
 	 *
-	 * Finds uninstalled components
+	 * Finds uninstalled extensions
 	 *
 	 * @return  void
 	 *
@@ -110,7 +110,7 @@ class InstallerModelDiscover extends InstallerModel
 	 */
 	public function discover()
 	{
-		// Purge the list of discovered components
+		// Purge the list of discovered extensions
 		$this->purge();
 
 		$installer	= JInstaller::getInstance();
@@ -201,7 +201,7 @@ class InstallerModelDiscover extends InstallerModel
 	}
 
 	/**
-	 * Cleans out the list of discovered components.
+	 * Cleans out the list of discovered extensions.
 	 *
 	 * @return  bool True on success
 	 *

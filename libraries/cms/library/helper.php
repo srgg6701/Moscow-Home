@@ -29,7 +29,7 @@ class JLibraryHelper
 	/**
 	 * Get the library information.
 	 *
-	 * @param   string   $element  Element of the library in the components table.
+	 * @param   string   $element  Element of the library in the extensions table.
 	 * @param   boolean  $strict   If set and the library does not exist, the enabled attribute will be set to false.
 	 *
 	 * @return  object   An object with the library's information.
@@ -61,7 +61,7 @@ class JLibraryHelper
 	/**
 	 * Checks if a library is enabled
 	 *
-	 * @param   string  $element  Element of the library in the components table.
+	 * @param   string  $element  Element of the library in the extensions table.
 	 *
 	 * @return  boolean
 	 *
@@ -77,7 +77,7 @@ class JLibraryHelper
 	/**
 	 * Gets the parameter object for the library
 	 *
-	 * @param   string   $element  Element of the library in the components table.
+	 * @param   string   $element  Element of the library in the extensions table.
 	 * @param   boolean  $strict   If set and the library does not exist, false will be returned
 	 *
 	 * @return  Registry  A Registry object.
@@ -95,7 +95,7 @@ class JLibraryHelper
 	/**
 	 * Save the parameters object for the library
 	 *
-	 * @param   string    $element  Element of the library in the components table.
+	 * @param   string    $element  Element of the library in the extensions table.
 	 * @param   Registry  $params   Params to save
 	 *
 	 * @return  Registry  A Registry object.

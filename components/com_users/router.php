@@ -272,7 +272,7 @@ class UsersRouter extends JComponentRouterBase
  * Users router functions
  *
  * These functions are proxys for the new router interface
- * for old SEF components.
+ * for old SEF extensions.
  *
  * @param   array  &$query  REQUEST query
  *

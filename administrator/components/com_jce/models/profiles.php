@@ -39,7 +39,7 @@ class WFModelProfiles extends WFModel {
     }
 
     /**
-     * Get a plugin's components
+     * Get a plugin's extensions
      * @param object $plugin
      * @return 
      */
@@ -60,7 +60,7 @@ class WFModelProfiles extends WFModel {
 
             // get the plugin xml file    
             if ($xml) {
-                // get components supported by the plugin
+                // get extensions supported by the plugin
                 if ((string) $xml->extensions) {
                     $supported = explode(',', (string) $xml->extensions);
                 }
@@ -70,7 +70,7 @@ class WFModelProfiles extends WFModel {
         foreach ($model->getExtensions() as $extension) {
             $type = $extension->folder;
 
-            // the plugin only supports some components, move along
+            // the plugin only supports some extensions, move along
             if (!in_array($type, $supported)) {
                 continue;
             }

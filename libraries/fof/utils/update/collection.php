@@ -16,7 +16,7 @@ class FOFUtilsUpdateCollection
 {
 	/**
 	 * Reads a "collection" XML update source and returns the complete tree of categories
-	 * and components applicable for platform version $jVersion
+	 * and extensions applicable for platform version $jVersion
 	 *
 	 * @param   string  $url       The collection XML update source URL to read from
 	 * @param   string  $jVersion  Joomla! version to fetch updates for, or null to use JVERSION
@@ -38,7 +38,7 @@ class FOFUtilsUpdateCollection
 				'description'	=> '',
 			),
 			'categories'	=> array(),
-			'components'	=> array(),
+			'extensions'	=> array(),
 		);
 
 		// Download and parse the XML file
@@ -72,7 +72,7 @@ class FOFUtilsUpdateCollection
 		// Initialise the raw list of updates
 		$rawUpdates = array(
 			'categories'	=> array(),
-			'components'	=> array(),
+			'extensions'	=> array(),
 		);
 
 		// Segregate the raw list to a hierarchy of extension and category entries
@@ -169,17 +169,17 @@ class FOFUtilsUpdateCollection
 						$params['name'] = $params['element'] . ' ' . $params['version'];
 					}
 
-					if (!array_key_exists($params['type'], $rawUpdates['components']))
+					if (!array_key_exists($params['type'], $rawUpdates['extensions']))
 					{
-						$rawUpdates['components'][$params['type']] = array();
+						$rawUpdates['extensions'][$params['type']] = array();
 					}
 
-					if (!array_key_exists($params['element'], $rawUpdates['components'][$params['type']]))
+					if (!array_key_exists($params['element'], $rawUpdates['extensions'][$params['type']]))
 					{
-						$rawUpdates['components'][$params['type']][$params['element']] = array();
+						$rawUpdates['extensions'][$params['type']][$params['element']] = array();
 					}
 
-					$rawUpdates['components'][$params['type']][$params['element']][] = $params;
+					$rawUpdates['extensions'][$params['type']][$params['element']][] = $params;
 					break;
 
 				default:
@@ -198,18 +198,18 @@ class FOFUtilsUpdateCollection
 			}
 		}
 
-		if (!empty($rawUpdates['components']))
+		if (!empty($rawUpdates['extensions']))
 		{
-			foreach ($rawUpdates['components'] as $type => $extensions)
+			foreach ($rawUpdates['extensions'] as $type => $extensions)
 			{
-				$updates['components'][$type] = array();
+				$updates['extensions'][$type] = array();
 
 				if (!empty($extensions))
 				{
 					foreach ($extensions as $element => $entries)
 					{
 						$update = $this->filterListByPlatform($entries, $jVersion);
-						$updates['components'][$type][$element] = $update;
+						$updates['extensions'][$type][$element] = $update;
 					}
 				}
 			}
@@ -222,7 +222,7 @@ class FOFUtilsUpdateCollection
 	 * Filters a list of updates, returning only those available for the
 	 * specified platform version $jVersion
 	 *
-	 * @param   array   $updates   An array containing update definitions (categories or components)
+	 * @param   array   $updates   An array containing update definitions (categories or extensions)
 	 * @param   string  $jVersion  Joomla! version to fetch updates for, or null to use JVERSION
 	 *
 	 * @return  array|null  The update definition that is compatible, or null if none is compatible
@@ -313,7 +313,7 @@ class FOFUtilsUpdateCollection
 	}
 
 	/**
-	 * Get a list of updates for components only, optionally of a specific type
+	 * Get a list of updates for extensions only, optionally of a specific type
 	 *
 	 * @param   string  $url       The URL of the collection update source
 	 * @param   string  $type      The extension type you want to get the update source URL of, empty to get all
@@ -328,11 +328,11 @@ class FOFUtilsUpdateCollection
 
 		if (empty($type))
 		{
-			return $allUpdates['components'];
+			return $allUpdates['extensions'];
 		}
-		elseif (array_key_exists($type, $allUpdates['components']))
+		elseif (array_key_exists($type, $allUpdates['extensions']))
 		{
-			return $allUpdates['components'][$type];
+			return $allUpdates['extensions'][$type];
 		}
 		else
 		{

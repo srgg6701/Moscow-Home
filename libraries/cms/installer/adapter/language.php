@@ -140,7 +140,7 @@ class JInstallerAdapterLanguage extends JInstallerAdapter
 		$this->setManifest($this->parent->getManifest());
 
 		// Get the language name
-		// Set the components name
+		// Set the extensions name
 		$name = JFilterInput::getInstance()->clean((string) $this->getManifest()->name, 'cmd');
 		$this->set('name', $name);
 
@@ -341,7 +341,7 @@ class JInstallerAdapterLanguage extends JInstallerAdapter
 		$clientId = $client->id;
 
 		// Get the language name
-		// Set the components name
+		// Set the extensions name
 		$name = (string) $this->getManifest()->name;
 		$name = JFilterInput::getInstance()->clean($name, 'cmd');
 		$this->set('name', $name);

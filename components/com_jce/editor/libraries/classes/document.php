@@ -264,8 +264,8 @@ class WFDocument extends JObject {
                     $pre = $base . 'tiny_mce/plugins/' . $plugin . '/' . $type;
                     break;
                 // Extensions folder
-                case 'components':
-                    $pre = $base . 'components';
+                case 'extensions':
+                    $pre = $base . 'extensions';
                     break;
                 case 'joomla':
                     return JURI::root(true);

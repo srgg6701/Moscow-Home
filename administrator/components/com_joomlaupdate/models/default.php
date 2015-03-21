@@ -603,7 +603,7 @@ ENDDATA;
 		 * Check to see if a file extension by the same name is already installed.
 		 * If it is, then update the table because if the files aren't there
 		 * we can assume that it was (badly) uninstalled.
-		 * If it isn't, add an entry to components.
+		 * If it isn't, add an entry to extensions.
 		 */
 		$query = $db->getQuery(true)
 			->select($db->quoteName('extension_id'))

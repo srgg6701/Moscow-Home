@@ -169,7 +169,7 @@ class PlgExtensionJoomla extends JPlugin
 					$updatesite_delete->where('update_site_id NOT IN (' . implode(',', $results) . ')');
 				}
 
-				// So let's find what update sites we're about to nuke and remove their associated components
+				// So let's find what update sites we're about to nuke and remove their associated extensions
 				$db->setQuery($updatesite_query);
 				$update_sites_pending_delete = $db->loadColumn();
 
@@ -184,7 +184,7 @@ class PlgExtensionJoomla extends JPlugin
 					$db->execute();
 				}
 
-				// Note: this might wipe out the entire table if there are no components linked
+				// Note: this might wipe out the entire table if there are no extensions linked
 				$db->setQuery($updatesite_delete);
 				$db->execute();
 			}

@@ -53,7 +53,7 @@ abstract class TemplateHelper
 			return false;
 		}
 
-		// Media file names should never have executable components buried in them.
+		// Media file names should never have executable extensions buried in them.
 		$executable = array(
 			'exe', 'phtml','java', 'perl', 'py', 'asp','dll', 'go', 'jar',
 			'ade', 'adp', 'bat', 'chm', 'cmd', 'com', 'cpl', 'hta', 'ins', 'isp',

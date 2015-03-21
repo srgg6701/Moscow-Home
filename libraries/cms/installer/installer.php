@@ -603,7 +603,7 @@ class JInstaller extends JAdapter
 	/**
 	 * Extension discover method
 	 *
-	 * Asks each adapter to find components
+	 * Asks each adapter to find extensions
 	 *
 	 * @return  JInstallerExtension[]
 	 *
@@ -1973,7 +1973,7 @@ class JInstaller extends JAdapter
 	}
 
 	/**
-	 * Cleans up discovered components if they're being installed some other way
+	 * Cleans up discovered extensions if they're being installed some other way
 	 *
 	 * @param   string   $type     The type of extension (component, etc)
 	 * @param   string   $element  Unique element identifier (e.g. com_content)

@@ -17,7 +17,7 @@ defined('JPATH_PLATFORM') or die;
 class JInstallerAdapterPackage extends JInstallerAdapter
 {
 	/**
-	 * The results of each installed components
+	 * The results of each installed extensions
 	 *
 	 * @var    array
 	 * @since  3.1

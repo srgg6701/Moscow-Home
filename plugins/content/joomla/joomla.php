@@ -133,7 +133,7 @@ class PlgContentJoomla extends JPlugin
 		// Now check to see if this is a known core extension
 		if (isset($tableInfo[$extension]))
 		{
-			// Get table name for known core components
+			// Get table name for known core extensions
 			$table = $tableInfo[$extension]['table_name'];
 
 			// See if this category has any content items

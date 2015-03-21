@@ -28,7 +28,7 @@ class WFElementMediaplayer extends WFElement {
         jimport('joomla.filesystem.folder');
 
         // path to images directory
-        $path = WF_EDITOR . '/components/mediaplayer';
+        $path = WF_EDITOR . '/extensions/mediaplayer';
         $files = JFolder::files($path, '\.xml', false, true, array('build.xml'));
         
         $attribs = array('class="parameter-nested-parent"');

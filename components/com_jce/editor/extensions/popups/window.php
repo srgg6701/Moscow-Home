@@ -24,8 +24,8 @@ class WFPopupsExtension_Window {
 
             $document = WFDocument::getInstance();
 
-            $document->addScript('window', 'components/popups/window/js');
-            $document->addStyleSheet('window', 'components/popups/window/css');
+            $document->addScript('window', 'extensions/popups/window/js');
+            $document->addStyleSheet('window', 'extensions/popups/window/css');
         }
     }
 

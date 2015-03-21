@@ -147,7 +147,7 @@ class TagsRouter extends JComponentRouterBase
 }
 
 /**
- * Tags router functions. These functions are proxys for the new router interface or old SEF components.
+ * Tags router functions. These functions are proxys for the new router interface or old SEF extensions.
  *
  * @param   array  &$query  An array of URL arguments.
  *
@@ -163,7 +163,7 @@ function TagsBuildRoute(&$query)
 }
 
 /**
- * Parse the segments of a URL. These functions are proxys for the new router interface or old SEF components.
+ * Parse the segments of a URL. These functions are proxys for the new router interface or old SEF extensions.
  *
  * @param   array  $segments  The segments of the URL to parse.
  *

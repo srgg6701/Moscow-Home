@@ -29,7 +29,7 @@ defined('_JEXEC') or die('RESTRICTED');
         </div>
         <div id="tabs-extensions" class="tab-pane">
             <?php if (count($this->extensions)) : ?>
-                <?php echo $this->loadTemplate('components'); ?>
+                <?php echo $this->loadTemplate('extensions'); ?>
             <?php else : ?>
                 <?php echo WFText::_('WF_INSTALLER_EXTENSIONS'); ?>
             <?php endif; ?>

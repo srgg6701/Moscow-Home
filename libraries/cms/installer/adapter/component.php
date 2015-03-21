@@ -716,7 +716,7 @@ class JInstallerAdapterComponent extends JInstallerAdapter
 			return false;
 		}
 
-		// Set the components name
+		// Set the extensions name
 		$this->set('name', $this->getName());
 		$this->set('element', $this->getElement());
 
@@ -1112,9 +1112,9 @@ class JInstallerAdapterComponent extends JInstallerAdapter
 	}
 
 	/**
-	 * Discover unregistered components.
+	 * Discover unregistered extensions.
 	 *
-	 * @return  array  A list of components.
+	 * @return  array  A list of extensions.
 	 *
 	 * @since   3.1
 	 */
