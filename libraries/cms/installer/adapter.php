@@ -57,7 +57,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	/**
 	 * Copy of the XML manifest file.
 	 *
-	 * Making this object public allows extensions to customize the manifest in custom scripts.
+	 * Making this object public allows components to customize the manifest in custom scripts.
 	 *
 	 * @var    string
 	 * @since  3.4
@@ -266,7 +266,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	}
 
 	/**
-	 * Generic discover_install method for extensions
+	 * Generic discover_install method for components
 	 *
 	 * @return  boolean  True on success
 	 *
@@ -529,7 +529,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	}
 
 	/**
-	 * Generic install method for extensions
+	 * Generic install method for components
 	 *
 	 * @return  boolean  True on success
 	 *
@@ -776,7 +776,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	 */
 	protected function parseOptionalTags()
 	{
-		// Some extensions may not have optional tags
+		// Some components may not have optional tags
 	}
 
 	/**
@@ -876,7 +876,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	 */
 	protected function setupUpdates()
 	{
-		// Some extensions may not have custom setup routines for updates
+		// Some components may not have custom setup routines for updates
 	}
 
 	/**
@@ -950,7 +950,7 @@ abstract class JInstallerAdapter extends JAdapterInstance
 	}
 
 	/**
-	 * Generic update method for extensions
+	 * Generic update method for components
 	 *
 	 * @return  boolean  True on success
 	 *

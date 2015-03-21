@@ -71,7 +71,7 @@ abstract class JHtmlBehavior
 	/**
 	 * Method to load core.js into the document head.
 	 *
-	 * Core.js defines the 'Joomla' namespace and contains functions which are used across extensions
+	 * Core.js defines the 'Joomla' namespace and contains functions which are used across components
 	 *
 	 * @return  void
 	 *

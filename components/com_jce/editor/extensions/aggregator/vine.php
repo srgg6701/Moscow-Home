@@ -29,7 +29,7 @@ class WFAggregatorExtension_Vine extends WFAggregatorExtension
 	function display()
 	{
 		$document = WFDocument::getInstance();
-		$document->addScript('vine', 'extensions/aggregator/vine/js');
+		$document->addScript('vine', 'components/aggregator/vine/js');
 	}
 	
 	function isEnabled()

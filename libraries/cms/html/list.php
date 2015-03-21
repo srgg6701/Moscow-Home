@@ -23,7 +23,7 @@ abstract class JHtmlList
 	 * @param   string  $active      The selected item
 	 * @param   string  $javascript  Alternative javascript
 	 * @param   string  $directory   Directory the images are stored in
-	 * @param   string  $extensions  Allowed extensions
+	 * @param   string  $extensions  Allowed components
 	 *
 	 * @return  array  Image names
 	 *

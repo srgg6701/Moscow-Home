@@ -29,7 +29,7 @@ class WFAggregatorExtension_Youtube extends WFAggregatorExtension
 	function display()
 	{
 		$document = WFDocument::getInstance();
-		$document->addScript('youtube', 'extensions/aggregator/youtube/js');
+		$document->addScript('youtube', 'components/aggregator/youtube/js');
 	}
 	
 	function isEnabled()

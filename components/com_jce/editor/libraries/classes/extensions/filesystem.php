@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.extensions');
+wfimport('editor.libraries.classes.components');
 
 class WFFileSystem extends WFExtension {
 

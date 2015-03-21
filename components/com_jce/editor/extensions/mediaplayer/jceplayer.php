@@ -32,7 +32,7 @@ class WFMediaPlayerExtension_Jceplayer extends WFMediaPlayerExtension {
         $plugin = WFEditorPlugin::getInstance();
 
         return array(
-            'extensions' => $plugin->getParam('mediaplayer.jceplayer.extensions', 'flv,f4v,mp3,mp4'),
+            'components' => $plugin->getParam('mediaplayer.jceplayer.components', 'flv,f4v,mp3,mp4'),
             'dimensions' => array(
                 'audio' => array('width' => 300, 'height' => 35)
             ),

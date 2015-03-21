@@ -26,7 +26,7 @@ class NewsfeedsModelCategories extends JModelList
 	public $_context = 'com_newsfeeds.categories';
 
 	/**
-	 * The category context (allows other extensions to derived from this model).
+	 * The category context (allows other components to derived from this model).
 	 *
 	 * @var		string
 	 */

@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.extensions');
+wfimport('editor.libraries.classes.components');
 
 class WFLinkSearchExtension extends WFSearchExtension {
 
@@ -47,8 +47,8 @@ class WFLinkSearchExtension extends WFSearchExtension {
         parent::display();
 
         $document = WFDocument::getInstance();
-        $document->addScript(array('link'), 'extensions.search.js');
-        $document->addStylesheet(array('link'), 'extensions.search.css');
+        $document->addScript(array('link'), 'components.search.js');
+        $document->addStylesheet(array('link'), 'components.search.css');
     }
 
     public function isEnabled() {

@@ -24,7 +24,7 @@ class nnProtect
 	static $sourcerer_tag = null;
 
 	/**
-	 * check if page should be protected for certain extensions
+	 * check if page should be protected for certain components
 	 */
 	public static function isProtectedPage($extension_alias = '', $hastags = 0, $exclude_formats = array('pdf'))
 	{

@@ -45,7 +45,7 @@ class SiteArchivedArticlesPage extends SitePage
 	 * @var    string
 	 * @since  3.2
 	 */
-	protected $url = '/index.php/using-joomla/extensions/components/content-component/archived-articles';
+	protected $url = '/index.php/using-joomla/components/components/content-component/archived-articles';
 
 	/**
 	 * Function which returns Title array of Articles on the Home page of Front End

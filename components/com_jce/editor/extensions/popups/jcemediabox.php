@@ -24,8 +24,8 @@ class WFPopupsExtension_Jcemediabox {
 
             $document = WFDocument::getInstance();
 
-            $document->addScript('jcemediabox', 'extensions/popups/jcemediabox/js');
-            $document->addStyleSheet('jcemediabox', 'extensions/popups/jcemediabox/css');
+            $document->addScript('jcemediabox', 'components/popups/jcemediabox/js');
+            $document->addStyleSheet('jcemediabox', 'components/popups/jcemediabox/css');
 
             jimport('joomla.filesystem.folder');
             jimport('joomla.filesystem.file');

@@ -439,7 +439,7 @@ COMMENT ON TABLE "jos_update_sites" IS 'Update Sites';
 --
 
 -- Comments: 
--- Links extensions to update sites
+-- Links components to update sites
 --
 DROP TABLE IF EXISTS "jos_update_sites_extensions" CASCADE;
 CREATE TABLE "jos_update_sites_extensions" (

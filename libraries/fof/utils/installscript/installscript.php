@@ -186,7 +186,7 @@ abstract class FOFUtilsInstallscript
 	protected $maximumJoomlaVersion = '3.9.99';
 
 	/**
-	 * Is this the paid version of the extension? This only determines which files / extensions will be removed.
+	 * Is this the paid version of the extension? This only determines which files / components will be removed.
 	 *
 	 * @var   boolean
 	 */

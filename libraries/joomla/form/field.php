@@ -148,7 +148,7 @@ abstract class JFormField
 	protected $multiple = false;
 
 	/**
-	 * Allows extensions to create repeat elements
+	 * Allows components to create repeat elements
 	 *
 	 * @var    mixed
 	 * @since  3.2
@@ -744,7 +744,7 @@ abstract class JFormField
 	 */
 	protected function getName($fieldName)
 	{
-		// To support repeated element, extensions can set this in plugin->onRenderSettings
+		// To support repeated element, components can set this in plugin->onRenderSettings
 		$repeatCounter = empty($this->form->repeatCounter) ? 0 : $this->form->repeatCounter;
 
 		$name = '';

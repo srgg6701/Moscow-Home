@@ -80,7 +80,7 @@ class WFModelInstaller extends WFModel {
     public function remove($id, $type) {
         $app = JFactory::getApplication();
 
-        // Use Joomla! Installer class for related extensions
+        // Use Joomla! Installer class for related components
         if ($type == 'related') {
             jimport('joomla.installer.installer');
             $installer = JInstaller::getInstance();

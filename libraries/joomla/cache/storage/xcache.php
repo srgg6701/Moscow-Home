@@ -238,7 +238,7 @@ class JCacheStorageXcache extends JCacheStorage
 			// XCache Admin must be disabled for Joomla to use XCache
 			$xcache_admin_enable_auth = ini_get('xcache.admin.enable_auth');
 
-			// Some extensions ini variables are reported as strings
+			// Some components ini variables are reported as strings
 			if ($xcache_admin_enable_auth == 'Off')
 			{
 				return true;

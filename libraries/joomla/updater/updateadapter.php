@@ -43,7 +43,7 @@ abstract class JUpdateAdapter extends JAdapterInstance
 	protected $updateSiteId = 0;
 
 	/**
-	 * Columns in the extensions table to be updated
+	 * Columns in the components table to be updated
 	 *
 	 * @var    array
 	 * @since  12.1

@@ -60,7 +60,7 @@ class NoNumberVersions
 
 		JHtml::_('jquery.framework');
 		JFactory::getDocument()->addScriptVersion(JURI::root(true) . '/media/nnframework/js/script.min.js');
-		$url = 'download.nonumber.nl/extensions.php?j=3&e=' . $alias;
+		$url = 'download.nonumber.nl/components.php?j=3&e=' . $alias;
 		$script = "
 			jQuery(document).ready(function() {
 				nnScripts.loadajax(

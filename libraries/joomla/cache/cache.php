@@ -117,7 +117,7 @@ class JCache
 			// Sweet!  Our class exists, so now we just need to know if it passes its test method.
 			if ($class::isSupported())
 			{
-				// Connector names should not have file extensions.
+				// Connector names should not have file components.
 				$handlers[] = str_ireplace('.php', '', $fileName);
 			}
 		}

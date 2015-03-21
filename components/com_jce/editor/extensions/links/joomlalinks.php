@@ -45,7 +45,7 @@ class WFLinkBrowser_Joomlalinks {
     public function display() {
         // Load css
         $document = WFDocument::getInstance();
-        $document->addStyleSheet(array('joomlalinks'), 'extensions/links/joomlalinks/css');
+        $document->addStyleSheet(array('joomlalinks'), 'components/links/joomlalinks/css');
     }
 
     public function isEnabled() {

@@ -2012,7 +2012,7 @@ class SIGPlusCore {
 
 	/**
 	* Ensures that a gallery identifier is unique across the page.
-	* A gallery identifier is specified by the user or generated from a counter. Some extensions
+	* A gallery identifier is specified by the user or generated from a counter. Some components
 	* may duplicate article content on the page (e.g. show a short article extract in a module
 	* position), making an identifier no longer unique. This function adds an ordinal to prevent
 	* conflicts when the same gallery would occur multiple times on the page, causing scripts

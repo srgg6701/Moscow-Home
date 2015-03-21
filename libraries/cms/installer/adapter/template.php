@@ -456,7 +456,7 @@ class JInstallerAdapterTemplate extends JInstallerAdapter
 		$this->parent->setPath('extension_root', $client->path . '/templates/' . strtolower($name));
 		$this->parent->setPath('source', $this->parent->getPath('extension_root'));
 
-		// We do findManifest to avoid problem when uninstalling a list of extensions: getManifest cache its manifest file
+		// We do findManifest to avoid problem when uninstalling a list of components: getManifest cache its manifest file
 		$this->parent->findManifest();
 		$manifest = $this->parent->getManifest();
 

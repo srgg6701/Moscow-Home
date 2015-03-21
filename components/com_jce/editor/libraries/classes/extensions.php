@@ -56,7 +56,7 @@ class WFExtension extends JObject {
         $document = WFDocument::getInstance();
         // Load Extensions Object
         $document->addScript(array(
-            'extensions'
+            'components'
         ));
     }
 
@@ -76,15 +76,15 @@ class WFExtension extends JObject {
             $config['base_path'] = WF_EDITOR;
         }
 
-        // core extensions path
-        $path = $config['base_path'] . '/extensions';
+        // core components path
+        $path = $config['base_path'] . '/components';
 
         // cast as array
         $types = (array) $types;
 
         // get all types from core
         if (empty($types)) {
-            $types = JFolder::folders(WF_EDITOR . '/extensions');
+            $types = JFolder::folders(WF_EDITOR . '/components');
         }
 
         if (JFolder::exists($path)) {
@@ -150,10 +150,10 @@ class WFExtension extends JObject {
             $extension = preg_replace('#[^A-Z0-9\._-]#i', '', $extension);
         }
 
-        // Create extensions path
-        $base = $config['base_path'] . '/extensions';
+        // Create components path
+        $base = $config['base_path'] . '/components';
 
-        // Get all extensions
+        // Get all components
         $extensions = self::_load((array) $type, $extension, $config);
 
         $result = array();

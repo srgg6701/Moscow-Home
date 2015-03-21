@@ -56,7 +56,7 @@ class WFAggregatorExtension extends WFExtension {
         $document = WFDocument::getInstance();
 
         // Load javascript
-        $document->addScript(array('extensions/aggregator'), 'libraries');
+        $document->addScript(array('components/aggregator'), 'libraries');
 
         $aggregators = $this->getAggregators();
 

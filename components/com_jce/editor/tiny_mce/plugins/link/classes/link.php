@@ -13,9 +13,9 @@ defined('_JEXEC') or die('RESTRICTED');
 
 // Load class dependencies
 wfimport('editor.libraries.classes.plugin');
-wfimport('editor.libraries.classes.extensions.search');
-wfimport('editor.libraries.classes.extensions.link');
-wfimport('editor.libraries.classes.extensions.popups');
+wfimport('editor.libraries.classes.components.search');
+wfimport('editor.libraries.classes.components.link');
+wfimport('editor.libraries.classes.components.popups');
 
 // Link Plugin Controller
 class WFLinkPlugin extends WFEditorPlugin {

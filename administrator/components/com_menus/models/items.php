@@ -246,7 +246,7 @@ class MenusModelItems extends JModelList
 				->group('a.id, e.enabled, l.title, l.image, u.name, c.element, ag.title, e.name');
 		}
 
-		// Join over the extensions
+		// Join over the components
 		$query->select('e.name AS name')
 			->join('LEFT', '#__extensions AS e ON e.extension_id = a.component_id');
 

@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.extensions');
+wfimport('editor.libraries.classes.components');
 
 class WFLinkExtension extends WFExtension {
     /*
@@ -32,7 +32,7 @@ class WFLinkExtension extends WFExtension {
 
         $extensions = self::loadExtensions('links');
 
-        // Load all link extensions		
+        // Load all link components
         foreach ($extensions as $link) {
             $this->extensions[] = $this->getLinkExtension($link);
         }
@@ -123,7 +123,7 @@ class WFLinkExtension extends WFExtension {
     }
 
     /**
-     * Category function used by many extensions
+     * Category function used by many components
      *
      * @access	public
      * @return	Category list object.

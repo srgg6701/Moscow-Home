@@ -82,7 +82,7 @@ abstract class ModMenuHelper
 		// Component list
 		$components = $db->loadObjectList();
 
-		// Parse the list of extensions.
+		// Parse the list of components.
 		foreach ($components as &$component)
 		{
 			// Trim the menu link.

@@ -298,7 +298,7 @@ class JInstallerAdapterLibrary extends JInstallerAdapter
 		 * ---------------------------------------------------------------------------------------------
 		 */
 
-		// Set the extensions name
+		// Set the components name
 		$name = (string) $this->getManifest()->name;
 		$name = JFilterInput::getInstance()->clean($name, 'string');
 		$element = str_replace('.xml', '', basename($this->parent->getPath('manifest')));
@@ -426,7 +426,7 @@ class JInstallerAdapterLibrary extends JInstallerAdapter
 	/**
 	 * Custom discover method
 	 *
-	 * @return  array  JExtension  list of extensions available
+	 * @return  array  JExtension  list of components available
 	 *
 	 * @since   3.1
 	 */

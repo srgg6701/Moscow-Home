@@ -10,7 +10,7 @@
 defined('JPATH_PLATFORM') or die;
 
 /**
- * Helper for standard content style extensions.
+ * Helper for standard content style components.
  * This class mainly simplifies static helper methods often repeated in individual components
  *
  * @since  3.1

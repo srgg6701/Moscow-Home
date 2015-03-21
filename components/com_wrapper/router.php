@@ -54,7 +54,7 @@ class WrapperRouter extends JComponentRouterBase
  * Wrapper router functions
  *
  * These functions are proxys for the new router interface
- * for old SEF extensions.
+ * for old SEF components.
  *
  * @param   array  &$query  An array of URL arguments
  *
@@ -73,7 +73,7 @@ function wrapperBuildRoute(&$query)
  * Wrapper router functions
  *
  * These functions are proxys for the new router interface
- * for old SEF extensions.
+ * for old SEF components.
  *
  * @param   array  $segments  The segments of the URL to parse.
  *

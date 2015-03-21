@@ -90,7 +90,7 @@ class JClientFtp
 	protected $_type = null;
 
 	/**
-	 * @var    array  Array to hold ascii format file extensions
+	 * @var    array  Array to hold ascii format file components
 	 * @since   12.1
 	 */
 	protected $_autoAscii = array(

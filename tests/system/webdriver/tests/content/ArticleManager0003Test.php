@@ -69,7 +69,7 @@ class ArticleManager0003Test extends JoomlaWebdriverTestCase
 		$salt = rand();
 		$newArticle = 'Test Article ' . $salt;
 		$cfg = new SeleniumConfig;
-		$archivedArticlePath = 'index.php/using-joomla/extensions/components/content-component/archived-articles';
+		$archivedArticlePath = 'index.php/using-joomla/components/components/content-component/archived-articles';
 		$url = $cfg->host . $cfg->path . $archivedArticlePath;
 		$articleManager = 'administrator/index.php?option=com_content';
 		$this->doAdminLogin();

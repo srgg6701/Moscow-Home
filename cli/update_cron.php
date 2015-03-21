@@ -37,7 +37,7 @@ require_once JPATH_LIBRARIES . '/cms.php';
 require_once JPATH_CONFIGURATION . '/configuration.php';
 
 /**
- * This script will fetch the update information for all extensions and store
+ * This script will fetch the update information for all components and store
  * them in the database, speeding up your administrator.
  *
  * @since  2.5

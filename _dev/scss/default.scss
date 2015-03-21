@@ -26,9 +26,8 @@
 @import "tags";
 @import "classes";
 @import "layout";
-@import "header/header";
-@import "main/main";
-@import "footer/footer";
+@import "components/header";
+@import "components/footer";
 //------------------------------------
 @import "common-elements";
 @import "_design";
@@ -36,14 +35,14 @@
 @import "_engineering";
 @import "_facade";
 //------------------------------------
-@import "parallax";
+@import "components/parallax";
+@import "components/partners-iframe";
+@import "components/slider";
+@import "components/sigplus";
+@import "components/visual-bottom";
 //------------------------------------
-@import "slider/slider";
-//------------------------------------
-@import "extensions/sigplus";
-@import "extensions/partners-iframe";
-//------------------------------------
-@import "data.css"; /*статическая таблица, не ищи её среди SCSS!*/
+/* ►► статическая таблица, не ищи её среди SCSS! */
+@import "data.css";
 //------------------------------------
 @import "media-queries/tablet";
 @import "media-queries/mobile";

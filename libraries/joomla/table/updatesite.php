@@ -11,7 +11,7 @@ defined('JPATH_PLATFORM') or die;
 
 /**
  * Update site table
- * Stores the update sites for extensions
+ * Stores the update sites for components
  *
  * @package     Joomla.Platform
  * @subpackage  Table

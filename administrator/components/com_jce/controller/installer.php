@@ -75,7 +75,7 @@ class WFControllerInstaller extends WFController {
             'related'   => JRequest::getVar('rid', array(), '', 'array')
         );
 
-        // Uninstall the chosen extensions
+        // Uninstall the chosen components
         foreach ($items as $type => $ids) {
             if (count($ids)) {
                 foreach ($ids as $id) {

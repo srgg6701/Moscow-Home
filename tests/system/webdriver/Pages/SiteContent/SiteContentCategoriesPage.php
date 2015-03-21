@@ -45,7 +45,7 @@ class SiteContentCategoriesPage extends SitePage
      * @var    string
      * @since  3.2
      */
-	protected $url = 'index.php/using-joomla/extensions/components/content-component/article-categories';
+	protected $url = 'index.php/using-joomla/components/components/content-component/article-categories';
 
     /**
      * Function which returns Title array of Categories present on the Page

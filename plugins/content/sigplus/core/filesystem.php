@@ -449,7 +449,7 @@ class fsx_unix implements fsx_functions {
 }
 
 /**
-* File system extensions.
+* File system components.
 * File system portability layer for Windows and UNIX-based systems.
 */
 class fsx {

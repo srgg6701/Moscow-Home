@@ -11,7 +11,7 @@
  */
 defined('_JEXEC') or die('RESTRICTED');
 
-wfimport('editor.libraries.classes.extensions');
+wfimport('editor.libraries.classes.components');
 
 class WFMediaPlayerExtension extends WFExtension {
 
@@ -68,17 +68,17 @@ class WFMediaPlayerExtension extends WFExtension {
 
         // Load javascript    
         $document->addScript(array(
-            'extensions/mediaplayer'
+            'components/mediaplayer'
                 ), 'libraries');
 
         if ($this->isEnabled() && $this->get('name')) {
             $document->addScript(array(
                 'mediaplayer/' . $this->get('name') . '/js/' . $this->get('name')
-                    ), 'extensions');
+                    ), 'components');
 
             $document->addStyleSheet(array(
                 'mediaplayer/' . $this->get('name') . '/css/' . $this->get('name')
-                    ), 'extensions');
+                    ), 'components');
 
             $document->addScriptDeclaration('WFExtensions.MediaPlayer.init(' . json_encode($this->getProperties()) . ')');
         }

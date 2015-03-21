@@ -622,7 +622,7 @@ abstract class WFInstall {
             // remove jquery
             $site . '/editor/libraries/js/jquery',
             // remove browser extension
-            $site . '/editor/extensions/browser',
+            $site . '/editor/components/browser',
             // remove browser langs
             $site . '/editor/tiny_mce/plugins/browser/langs',
             // remove packages
@@ -632,7 +632,7 @@ abstract class WFInstall {
             // remove dragupload folder (ranamed to upload)
             $site . '/editor/tiny_mce/plugins/dragupload',
             // remove googlemaps
-            $site . '/editor/extensions/aggregator/googlemaps'
+            $site . '/editor/components/aggregator/googlemaps'
         );
 
         foreach ($folders as $folder) {
@@ -670,9 +670,9 @@ abstract class WFInstall {
             // remove redundant file
             $site . '/editor/tiny_mce/themes/advanced/css/skins/default/img/items.gif',
             // remove search files from file browser (renamed to filter)
-            $site . '/editor/extensions/browser/css/search.css',
-            $site . '/editor/extensions/browser/js/search.js',
-            $site . '/editor/extensions/browser/search.php',
+            $site . '/editor/components/browser/css/search.css',
+            $site . '/editor/components/browser/js/search.js',
+            $site . '/editor/components/browser/search.php',
             // remove dilg language file from theme (incorporated into main dlg file)
             $site . '/editor/tiny_mce/themes/advanced/langs/en_dlg.js',
             // remove old jquery UI
@@ -694,14 +694,14 @@ abstract class WFInstall {
             // remove redundant parameter.js
             $admin . '/media/js/parameter.js',
             // remove build.xml files
-            $site . '/editor/extensions/filesystem/build.xml',
-            $site . '/editor/extensions/links/build.xml',
-            $site . '/editor/extensions/popups/build.xml',
+            $site . '/editor/components/filesystem/build.xml',
+            $site . '/editor/components/links/build.xml',
+            $site . '/editor/components/popups/build.xml',
             // remove legend.css
             $admin . '/media/css/legend.css',
             // remove googlemaps
-            $site . '/editor/extensions/aggregator/googlemaps.php',
-            $site . '/editor/extensions/aggregator/googlemaps.xml'
+            $site . '/editor/components/aggregator/googlemaps.php',
+            $site . '/editor/components/aggregator/googlemaps.xml'
         );
 
         foreach ($files as $file) {
@@ -757,7 +757,7 @@ abstract class WFInstall {
 
         // 2.2.1 to 2.2.5 - Remove K2Links partial install
         if (version_compare($version, '2.2.1', '>') && version_compare($version, '2.2.5', '<')) {
-            $path = $site . '/editor/extensions/links';
+            $path = $site . '/editor/components/links';
 
             if (is_file($path . '/k2links.php') && is_file($path . '/k2links.xml') && !is_dir($path . '/k2links')) {
                 @JFile::delete($path . '/k2links.php');

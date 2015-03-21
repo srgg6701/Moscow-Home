@@ -25,7 +25,7 @@ class PlgQuickiconExtensionupdate extends JPlugin
 	protected $autoloadLanguage = true;
 
 	/**
-	 * Returns an icon definition for an icon which looks for extensions updates
+	 * Returns an icon definition for an icon which looks for components updates
 	 * via AJAX and displays a notification when such updates are found.
 	 *
 	 * @param   string  $context  The calling context

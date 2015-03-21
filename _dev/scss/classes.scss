@@ -80,18 +80,21 @@
 }
 .fixed{
   position: fixed;
-  &.fit{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
 }
+.fit{
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
 .float-left{
   float: left;
 }
 .footer{
   background-color: $background-sand;
+}
+.footer-mobile-menu{
+  display: none;
 }
 .half-wide{
   width: 50%;
@@ -176,9 +179,6 @@ a.print, button.print{
   border-radius: 5px;
   padding-left: 41px;
   width: 175px;
-}
-.footer-mobile-menu{
-  display: none;
 }
 .relative{
   position: relative !important;
