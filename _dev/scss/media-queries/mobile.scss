@@ -190,11 +190,6 @@
     }
   }
 }
-@mixin dynamic-img-params($height:27.23, $width:31.25){
-  // соотношение ~ 135/152
-  height: #{$height}vw;
-  width: #{$width}vw;
-}
 //
 @media (max-width: $resolution-phone540){
   #you-need {
@@ -220,7 +215,7 @@
       }
     }
   }
-  #level1{
+  /*#level1{
     position: static !important;
     .slider-bottom{
       margin-top: 34px;
@@ -239,7 +234,7 @@
         }
       }
     }
-  }
+  }*/
 }
 @media (max-width:$resolution-phone424){
   #you-need{
