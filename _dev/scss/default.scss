@@ -30,10 +30,10 @@
 @import "components/footer";
 //------------------------------------
 @import "common-elements";
-@import "_design";
-@import "_decoration";
-@import "_engineering";
-@import "_facade";
+@import "pages/design";
+@import "pages/decoration";
+@import "pages/engineering";
+@import "pages/facade";
 //------------------------------------
 @import "components/parallax";
 @import "components/partners-iframe";
