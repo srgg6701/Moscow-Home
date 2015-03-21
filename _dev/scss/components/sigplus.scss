@@ -98,3 +98,42 @@ span.slideplus-navbutton{
     left: 444px;
   }
 }
+#work-examples #gallery.header-slim-big,
+.gallery-next.header-slim-big{
+  & +div{
+    max-width: 948px;
+    $imgBoxWidth:158px;
+    @media (max-width: $resolution-go-mobile966){
+
+      left: -15px;
+      position: relative;
+
+      @include centered-horizontal;
+      @media (max-width:$resolution-tablet768){
+        font-size: 24px;
+        min-height: inherit;
+      }
+
+      // gallery-rotator settings
+      @media (min-width: 208px){
+        width: $imgBoxWidth;
+      }
+      @media (min-width: 366px){
+        width: $imgBoxWidth * 2;
+      }
+      @media (min-width: 524px){
+        width: $imgBoxWidth * 3;
+      }
+      @media (min-width: 682px){
+        width: $imgBoxWidth * 4;
+      }
+      @media (min-width: 840px){
+        width: $imgBoxWidth * 5;
+      }
+    }
+    @media (min-width: $resolution-go-mobile966 + 1){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

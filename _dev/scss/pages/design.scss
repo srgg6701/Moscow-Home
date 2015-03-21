@@ -7,13 +7,15 @@ a{
   #our-works ul.table &{
     color: $color-carrot-light;
     cursor:text;
+    display: block;
     font-family: PlumbMedium;
     font-size: 21px;
+    position: absolute;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
     top:140px;
-    @include centered-horizontal(absolute);
+    width: 100%;
   }
 }
 aside{
@@ -34,7 +36,7 @@ button{
 }
 div{
   #our-works &.gallery-next.header-slim-big{
-    height: 52px;
+    min-height: 52px;
   }
   #our-works >&{
     &:nth-child(1){
@@ -65,10 +67,11 @@ div{
       background-image: url($images_dir + 'design/top-visual-bg.jpg');
       @media (max-width:$resolution-phone540){
         background-image: url($images_dir + 'design/top-visual-mobile.png');
-        background-position: center 109px;
+        background-position: center 176px;
         height: 110vw;
         min-height: 580px;
         max-height: 800px;
+        position: static;
       }
       background-repeat: no-repeat;
       background-position: center 0;
@@ -163,76 +166,6 @@ div{
   #design .content .wide:nth-child(5) >div >&{
     @include section-params(54.1vw,'projecting-bassein.png',29px 7px);
   }
-  // контейнер для заголовка и текста
-  #design #visual-bottom >&.relative{
-    @media (max-width:$resolution-small-desktop){
-      height: auto;
-      padding: 20px;
-    }
-  }
-  #design #visual-bottom >.relative >&.relative{
-    min-height: 290px;
-    padding-left: 40px;
-    padding-right: 40px;
-    @include transform(translateY(83px));
-    max-width: 845px;
-    @media (max-width:$resolution-small-desktop){
-      max-width: inherit;
-      overflow: hidden;
-      padding-left: 16px;
-      padding-right: 16px;
-      @include transform(translateY(0));
-    }
-  }
-  // подложики под заголовок и текст
-  #design #visual-bottom >.relative >.relative >&.absolute{
-    width: 100%;
-    z-index: -1;
-    $height-small:107px;
-    $height:115px;
-    $offset:8px;
-    $offset-top:90px;
-    &:nth-child(3){
-      background-color: white;
-      @include border-radius(6px 6px 0 0);
-      height: $height-small;//$height;
-      @include opacity(.91);
-      top:-($offset);
-      @media (max-width:$resolution-small-desktop){
-        left: 0;
-        position: absolute;
-        right: 0;
-        top: 0px;
-      }
-      @media (max-width:$resolution-tablet-small620){
-        height:$offset-top;
-      }
-      @media (max-width:383px){
-        height: $height;
-      }
-    }
-    &:nth-child(4){
-      background-color: #a64726;
-      @include border-radius(0 0 6px 6px);
-      @include opacity(.8);
-      bottom: $offset;
-      top: $height - $offset;
-      @media (max-width:$resolution-small-desktop){
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: $height-small;//$offset-top;
-        width: inherit;
-      }
-      @media (max-width:$resolution-tablet-small620){
-        top:$offset-top;
-      }
-      @media (max-width:383px){
-        //height: $height;
-        top: $height;
-      }
-    }
-  }
 }
 h1{
   #design .top &{//.relative
@@ -241,7 +174,8 @@ h1{
     text-align: center;
     max-width: 650px;
     @media (max-width:$resolution-phone540){
-      margin-top: 26px;
+      font-size: 24px !important;
+      margin-top: 93px;
       max-width: 300px;
     }
   }
@@ -295,46 +229,6 @@ h2{
       margin-top: 0;
     }
   }
-  #design #visual-bottom &.header-big{
-    color:$color-carrot;
-    font-weight: 100;
-    line-height: 49px;
-    margin-bottom: 0;
-    margin-top: 8px;
-    text-align: center;
-    @media (min-width:$resolution-small-desktop + 1){
-      @include transform(translateX(20px));
-    }
-    @media (min-width:$resolution-small-desktop){
-      //background-color: paleturquoise;
-      margin: auto;
-      margin-top: 40px;
-    }
-    @media (max-width:$resolution-small-desktop){
-      @media (min-width:$resolution-tablet-small620 + 1){
-        line-height: 43px !important;
-      }
-      max-width: 500px;
-    }
-    @media (max-width:$resolution-tablet-small620){
-      height: 107px;
-      margin-top: 16px;
-      max-width: 400px;
-    }
-  }
-}
-li{
-  #our-works ul.table &{
-    background: url($images_dir + 'design/40specs.jpg') no-repeat;
-    position: relative;
-    $i:1;
-    @each $posX in 22,-168,-354,-538,-728{
-      &:nth-child(#{$i}){
-        background-position: #{$posX}px 0;
-      }
-      $i:$i+1;
-    }
-  }
 }
 main{
   #design &{
@@ -348,6 +242,15 @@ p{
   #our-works &{
     color: $color-dark-common;
     text-align: center;
+    @media (max-width:$resolution-phone424){
+      font-size: 14px !important;
+      line-height: 16px !important;
+      margin-top: inherit !important;
+      margin-bottom: 6px;
+      margin-left: -8px;
+      margin-right: -8px;
+      text-align: center;
+    }
   }
   #our-works &.header{
     font-family: $font-second;
@@ -417,19 +320,6 @@ p{
   #design .top-container h1 +&{
     top:27px;
   }
-  #design #visual-bottom >div &{
-    color: white;
-    font-size: 17px;
-    line-height: 20px;
-    margin: 26px;
-    @media (max-width:$resolution-small-desktop){
-      margin-left: 0;
-      margin-right: 0;
-    }
-    @media (min-width:$resolution-small-desktop + 1){
-      margin-right: -60px;
-    }
-  }
 }
 section{
   #design .content >&{
@@ -467,14 +357,5 @@ span{
   #our-works ul.table a &{
     display: block;
     white-space: nowrap;
-  }
-}
-ul{
-  #our-works &{
-    &.table{
-      height: 190px;
-      margin: 42px auto;
-      width: 940px;
-    }
   }
 }

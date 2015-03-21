@@ -110,13 +110,6 @@
     max-width: 600px;
     margin: auto;
   }
-  @media (max-width: $resolution-tablet-small620){
-    #design #visual-bottom &{
-      font-size: 24px !important;
-      line-height: 22pt !important;
-      margin-top: 16px;
-    }
-  }
 }
 .header-slim-big{
   font-family: PlumbLight;
@@ -182,6 +175,12 @@ a.print, button.print{
 }
 .relative{
   position: relative !important;
+}
+.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
+  display: block;
+  .slideplus{
+    width: 100% !important;
+  }
 }
 .slider-bottom{
   background: url($images_dir + "backgrounds/tile-gallery.png");
