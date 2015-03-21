@@ -275,7 +275,7 @@
           a{
             img{
               // перестройка отображения картинок в 2 столбца
-              @include dynamic-img-params(40.85,45.5);
+              @include dynamic-img-params(45.5,40.85);
               //margin-right: -0.45vw;
             }
           }

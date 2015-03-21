@@ -317,17 +317,9 @@ $hSlider:430px;
     height: auto;
     position: static !important;
     .slider-bottom{
-      //margin-top: 34px;
       .slides{
         a{
           float:left;
-          img{
-            // картинки в 3 столбца по умолчанию
-            @include dynamic-img-params(19.54,22);
-            margin-left: 1.5vw;
-            margin-bottom: 0.75vw;
-          }
-          &+
         }
         aside{
           display: none;
@@ -452,6 +444,48 @@ $hSlider:430px;
     }
   }
 }
+
+
+
+#level1 .slider-bottom .slides {
+  // от 541 до 966
+  @media (min-width: $resolution-tablet-small620 + 1) and (max-width: $resolution-go-mobile966) {
+    //background-color: orange;
+    width: 66vw;
+    a img {
+      height: 17.76vw;
+      width: 20vw;
+    }
+  }
+  // от 541 до 620
+  @media (min-width: $resolution-phone540 + 1) and (max-width: $resolution-tablet-small620) {
+    width: 84vw;
+    //background-color: brown;
+    a img {
+      height: 22.94vw;
+      width: 26vw;
+    }
+  }
+  // от 425 до 540
+  @media (min-width: $resolution-phone424 + 1) and (max-width: $resolution-phone540) {
+    width: 99.5vw;
+    //background-color: #0088ff;
+    a img {
+      height: 26.9vw;
+      width: 30.5vw;
+    }
+  }
+  // от самого маленького до 424
+  @media (min-width:$resolution-phone360 + 1) and (max-width: $resolution-phone424){
+    width: 98.2vw;
+    //background-color: lightgreen;
+    a img {
+      height: 40.85vw;
+      width: 45.5vw;
+    }
+  }
+}
+
 // <=768
 @media (max-width:$resolution-tablet768){
   @mixin img-params-limited{
