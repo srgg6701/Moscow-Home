@@ -317,16 +317,17 @@ $hSlider:430px;
     height: auto;
     position: static !important;
     .slider-bottom{
-      margin-top: 34px;
+      //margin-top: 34px;
       .slides{
         a{
           float:left;
           img{
             // картинки в 3 столбца по умолчанию
-            @include dynamic-img-params;
+            @include dynamic-img-params(19.54,22);
             margin-left: 1.5vw;
             margin-bottom: 0.75vw;
           }
+          &+
         }
         aside{
           display: none;

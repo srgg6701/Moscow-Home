@@ -86,6 +86,10 @@
   @include opacity(0.7);
   z-index: 10;
 }
+#level1 #gallery{
+  line-height: 94px;
+  text-align: center;
+}
 #design{
   background-image: url($images_dir + 'backgrounds/tile-design-top-visual.png');
 }

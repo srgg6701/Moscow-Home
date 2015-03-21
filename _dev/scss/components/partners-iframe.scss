@@ -1,9 +1,11 @@
-#gallery{
-  $h:94px;
-  min-height: $h;
-  text-align: center;
-  @media (min-width: $resolution-tablet-small620 + 1){
-    line-height: $h;
+body:not(.no-overflow) {
+  #gallery {
+    $h: 94px;
+    min-height: $h;
+    text-align: center;
+    @media (min-width: $resolution-tablet-small620 + 1) {
+      line-height: $h;
+    }
   }
 }
 #partners-iframe{
