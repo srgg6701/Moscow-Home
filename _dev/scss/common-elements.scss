@@ -23,3 +23,13 @@ body,html{
 img{
   border:none;
 }
+
+#logo-bottom,
+#logo-bottom-mobile-menu{
+  @include logo-bottom;
+}
+#phone-number_bottom,
+#phone-number_bottom-mobile-menu{
+  @include phone-number;
+  @include phone-number-bottom;
+}

@@ -140,14 +140,6 @@ div{
       }
     }
   }
-  .footer.why-moscow-home >section >aside >&{
-    &:first-child{
-      padding-right: 30px;
-    }
-    &:last-child{
-      padding-left: 59px;
-    }
-  }
   .slider-bottom >&{
     height: 184px;
     margin: -13px auto -12px;
@@ -185,15 +177,8 @@ div{
   #design #visual-bottom >&:first-child{
     &.relative{
       @media (max-width:$resolution-small-desktop){
-        //background-color: rebeccapurple;
-        //@include centered-vertical;
-        //padding: 0 15px;
-
         position: static !important;
-        //transform: translateY(0);
         padding: 0;
-
-
       }
     }
   }
@@ -202,13 +187,6 @@ div{
   }
   #you-need ul li >div >&{
     @include centered-vertical;
-  }
-}
-footer{
-  &.index{
-    margin-top: 12px !important;
-    overflow: hidden;
-    position: absolute;
   }
 }
 h1{
@@ -224,15 +202,6 @@ h2{
       margin: 17px auto 36px;
       text-align: center;
     }
-  }
-}
-h3{
-  .footer &{
-    color: $color-dark-deep2;
-    font-family: PlumbMedium;
-    font-size: 36px;
-    margin-bottom: 15px;
-    margin-top: 0;
   }
 }
 h4{
@@ -260,23 +229,6 @@ li{
   ul.social &{
     display: block;
     padding:4px;
-  }
-  .footer.why-moscow-home ul &{
-    background-repeat: no-repeat;
-    background-position: center 0;
-    display: table-cell;
-    @include paragraph-dark(18px);
-    padding-top: 72px;
-    text-align: center;
-    width: 20%;
-    $i:1;
-    $img-subdir: $images_dir + 'engineering/';
-    @each $img in 1,2,3,4,5{
-      &:nth-child(#{$i}){
-        background-image: url($images_dir + 'footer' + $img + '.png');
-      }
-      $i:$i+1;
-    }
   }
   #showcase &{
     color: white;

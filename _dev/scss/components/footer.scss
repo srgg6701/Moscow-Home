@@ -1,45 +1,51 @@
-div{
-  &.footer-mobile-menu{
-    background-color: white;
-    padding: 10px;
-    position: relative;
-  }
-  footer .section >&{
-    @include nav-footer;
+.footer.why-moscow-home {
+  >section >aside >div{
     &:first-child{
-      @include nav-footer-common;
+      padding-right: 30px;
+    }
+    &:last-child{
+      padding-left: 59px;
+    }
+    h3{
+      color: $color-dark-deep2;
+      font-family: PlumbMedium;
+      font-size: 36px;
+      margin-bottom: 15px;
+      margin-top: 0;
     }
   }
-  header .section.footer-mobile-menu &{
-    @include nav-footer;
-    &:nth-child(1) {
-      @include nav-footer-common;
-    }
-    &:nth-child(2){
-      display: table;
-      margin: auto;
-    }
-    &:nth-child(3){
-
-    }
+  ul li{
+     background-repeat: no-repeat;
+     background-position: center 0;
+     display: table-cell;
+     @include paragraph-dark(18px);
+     padding-top: 72px;
+     text-align: center;
+     width: 20%;
+     $i:1;
+     $img-subdir: $images_dir + 'engineering/';
+     @each $img in 1,2,3,4,5{
+       &:nth-child(#{$i}){
+         background-image: url($images_dir + 'footer' + $img + '.png');
+       }
+       $i:$i+1;
+     }
+   }
+}
+footer{
+  &.index{
+    margin-top: 12px !important;
+    overflow: hidden;
+    position: absolute;
   }
-  footer &.section{
+  .section{
     margin: auto;
     width: 698px;
+      >div{
+      @include nav-footer;
+      &:first-child{
+        @include nav-footer-common;
+      }
+    }
   }
-}
-section {
-  .footer-mobile-menu >&{
-    margin: auto;
-    max-width: 698px;
-  }
-}
-#logo-bottom,
-#logo-bottom-mobile-menu{
-  @include logo-bottom;
-}
-#phone-number_bottom,
-#phone-number_bottom-mobile-menu{
-  @include phone-number;
-  @include phone-number-bottom;
 }

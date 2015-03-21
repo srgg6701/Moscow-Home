@@ -18,15 +18,24 @@
 @media (max-width: $resolution-tablet-small620 - 1){
   body{ // в body чиста для приоритета, не более
     header{
-
       .menu.wide{ // .menu.wide
         bottom:0;
         overflow: auto;
-        padding-top: 0;
+        padding: 0;
         position: fixed;
         top: $headerHeight;//134px;
         >section{
           margin-top: 55px;
+        }
+        ul{
+          &.you-need{
+            max-width: 244px !important;
+            li{
+              @media (max-width:$resolution-tablet-small620){
+                width: 100% !important;
+              }
+            }
+          }
         }
         h4 {
           display: none;
@@ -175,21 +184,9 @@
       }
     }
   }
-  header .menu.wide {
-    ul{
-      &.you-need{
-        max-width: 244px !important;
-        li{
-          @media (max-width:$resolution-phone540){
-            width: 100% !important;
-          }
-        }
-      }
-    }
-  }
   li {
     #you-need .you-need &{
-        display: block;
+      display: block;
     }
   }
 }
@@ -223,23 +220,6 @@
       }
     }
   }
-  /*#work-examples #gallery{
-    font-size: 24px;
-    min-height: inherit;
-    & +div{
-      left: -15px;
-      position: relative;
-      @include centered-horizontal;
-      .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
-        //background-color: yellow;
-        display: block;
-        .slideplus{
-          //box-shadow: 4px -4px 0 4px violet;
-          width: 100% !important;
-        }
-      }
-    }
-  }*/
   #level1{
     position: static !important;
     .slider-bottom{
