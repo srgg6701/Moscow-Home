@@ -135,7 +135,7 @@ h1{
   }
   #facade-work &.header-big{
     color: white;
-    font: 48px PlumbMedium;
+    font: $font-header-big-default PlumbMedium;
     margin: 0;
     text-align: center;
   }

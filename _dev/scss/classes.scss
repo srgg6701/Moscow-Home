@@ -114,7 +114,7 @@
 }
 .header-big{
   font-family: PlumbMedium !important;
-  font-size: 48px !important;
+  font-size: $font-header-big-default !important;
   text-transform: uppercase;
 
   @media (max-width:$resolution-small-desktop - 1){
@@ -133,6 +133,9 @@
   text-transform: uppercase;
   .do-it &{
     color: white;
+    @media (max-width:$resolution-tablet-small620){
+      max-width: 76vw;
+    }
   }
   .container &{
     text-align: center;

@@ -2,6 +2,10 @@
   $breakpoint1:$resolution-go-mobile966;
   $breakpoint2:$resolution-tablet-small620;
   $breakpoint3:560px;
+  @media (max-width:$breakpoint1){
+    min-height: inherit;
+    padding-bottom: 44px;
+  }
   @media (max-width:$breakpoint3 + 1){
     a{
       border:none;
@@ -103,7 +107,7 @@
         margin-top: $offest-vertical;
         width: 100%;
         &:last-child{
-          margin-bottom: $offest-vertical;
+          //margin-bottom: $offest-vertical;
           padding-left: inherit;
         }
         .arrows{
