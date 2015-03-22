@@ -512,13 +512,16 @@ $hSlider:430px;
     }
   }
   // от самого маленького до 424
-  @media (min-width:$resolution-phone360 + 1) and (max-width: $resolution-phone424){
-    width: 98.2vw;
+  @media (max-width: $resolution-phone424){
+    width: 98.75vw;
     //background-color: lightgreen;
     a img {
       height: 40.85vw;
       width: 45.5vw;
     }
+  }
+  @media (max-width:248px){
+    width: 100vw;
   }
 }
 
