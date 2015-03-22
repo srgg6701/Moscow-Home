@@ -53,7 +53,7 @@
         }
       }
     }
-    footer,
+    //footer,
     .footer-mobile-menu{
       >div.section,
       >section:nth-child(1){
@@ -63,7 +63,7 @@
           }
         }
       }
-      .footer-social{
+      /*.footer-social{
         display: table !important;
         >div{
           $size:27px;
@@ -91,18 +91,10 @@
             width: 100%;
           }
         }
-      }
-    }
-    footer{
-      >div{
-        width: 100% !important;
-      }
+      }*/
     }
   }
   .footer-social{
-    body footer &{
-      margin: 20px auto 10px;
-    }
     body .footer-mobile-menu &{
       margin-top: 20px !important;
       margin-bottom: -10px !important;
@@ -215,26 +207,6 @@
       }
     }
   }
-  /*#level1{
-    position: static !important;
-    .slider-bottom{
-      margin-top: 34px;
-      .slides{
-        a{
-          float:left;
-          img{
-            // картинки в 3 столбца по умолчанию
-            @include dynamic-img-params;
-            margin-left: 1.5vw;
-            margin-bottom: 0.75vw;
-          }
-        }
-        aside{
-          display: none;
-        }
-      }
-    }
-  }*/
 }
 @media (max-width:$resolution-phone424){
   #you-need{
