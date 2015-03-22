@@ -1,36 +1,122 @@
 .footer.why-moscow-home {
-  >section >aside >div{
-    &:first-child{
+  $breakpoint1:$resolution-go-mobile966;
+  $breakpoint2:$resolution-tablet-small620;
+  $breakpoint3:560px;
+  @media (max-width:$breakpoint3 + 1){
+    a{
+      border:none;
+      padding-left:0;
+      &:not(:last-child){
+        &:after {
+          content:",";
+        }
+      }
+    }
+    p{
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+  > section > aside > div {
+    &:first-child {
       padding-right: 30px;
     }
-    &:last-child{
+    &:last-child {
       padding-left: 59px;
     }
-    h3{
+    h3 {
       color: $color-dark-deep2;
       font-family: PlumbMedium;
       font-size: 36px;
       margin-bottom: 15px;
       margin-top: 0;
+      white-space: nowrap;
     }
   }
-  ul li{
-     background-repeat: no-repeat;
-     background-position: center 0;
-     display: table-cell;
-     @include paragraph-dark(18px);
-     padding-top: 72px;
-     text-align: center;
-     width: 20%;
-     $i:1;
-     $img-subdir: $images_dir + 'engineering/';
-     @each $img in 1,2,3,4,5{
-       &:nth-child(#{$i}){
-         background-image: url($images_dir + 'footer' + $img + '.png');
-       }
-       $i:$i+1;
-     }
-   }
+  ul {
+    @media (max-width: $breakpoint1){ // 966
+      margin: auto 25px;
+    }
+    @media (max-width:$breakpoint2){
+      width: 90%;
+    }
+    li {
+      background-repeat: no-repeat;
+      background-position: center 0;
+      display: table-cell;
+      @include paragraph-dark(18px);
+      padding-top: 72px;
+      text-align: center;
+      width: 20%;
+      @media (max-width: $breakpoint1) { //
+        font-size: 16.5px;
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 16vw;
+      }
+      @media (max-width: $resolution-tablet768) {
+        font-size: 15.5px;
+      }
+      // перестроить блоки (более одного ряда, "плавающий вид")
+      @media (max-width: 740px) {
+        display: inherit;
+        float: left;
+      }
+      $offset-vertical: 23px;
+      @media (max-width:$breakpoint2){
+        $cell-width:33.33%;
+        width: $cell-width;
+        @media (min-width:$breakpoint3 + 1){
+          &:nth-child(4){
+            clear: both;
+            margin-left: $cell-width / 2;
+          }
+        }
+        &:nth-child(4),
+        &:nth-child(5){
+          margin-top: $offset-vertical;
+        }
+      }
+      @media (max-width:$breakpoint3){
+        width: 100% !important;
+        margin-top: $offset-vertical;
+      }
+      $i: 1;
+      $img-subdir: $images_dir + 'engineering/';
+      @each $img in 1, 2, 3, 4, 5 {
+        &:nth-child(#{$i}) {
+          background-image: url($images_dir + 'footer' + $img + '.png');
+        }
+        $i: $i+1;
+      }
+    }
+  }
+  aside{
+    .half-wide{
+      $offest-vertical: 36px;
+      @media (max-width:$breakpoint1){
+        &:last-child{
+          padding-left: 6vw;
+        }
+      }
+      @media (max-width:$breakpoint3){
+        margin-top: $offest-vertical;
+        width: 100%;
+        &:last-child{
+          margin-bottom: $offest-vertical;
+          padding-left: inherit;
+        }
+        .arrows{
+          div{
+            display: block;
+            &:first-child span {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 footer{
   &.index{
@@ -47,5 +133,52 @@ footer{
         @include nav-footer-common;
       }
     }
+  }
+  @media (max-width: $resolution-go-mobile966) {
+    body &{
+      //margin-bottom: 20px;
+      position: static !important;
+      > div {
+        width: 100% !important;
+        > div {
+          &:not(:nth-child(2)) {
+            display: none;
+          }
+        }
+      }
+      .footer-social {
+        display: table !important;
+        > div {
+          $size: 27px;
+          background: url($images_dir + 'social-left-vertical.png') no-repeat;
+          background-size: $size - 1;
+          cursor: pointer;
+          margin: 0 3px !important;
+          &:nth-child(1) {
+            background-position: 0 0;
+          }
+          &:nth-child(2) {
+            background-position: 0 -29px;
+          }
+          &:nth-child(3) {
+            background-position: 0 -59px;
+          }
+          display: inline-block !important;
+          float: left;
+          height: $size;
+          position: static !important;
+          width: $size !important;
+          a {
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        margin: 20px auto 10px;
+      }
+    }
+  }
+  @media (max-width:$resolution-tablet768){
+    margin-bottom: 10px;
   }
 }

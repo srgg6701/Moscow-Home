@@ -10,6 +10,16 @@
 .absolute{
   position: absolute;
 }
+.arrows {
+  div{
+    display: inline;
+    &:first-child {
+      span{
+        display:none;
+      }
+    }
+  }
+}
 .bgActiveCarrot{
   //background-color: $background-carrot-dark;
 }

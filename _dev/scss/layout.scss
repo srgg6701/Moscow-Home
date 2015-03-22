@@ -78,7 +78,7 @@ header,main,footer{
 }
 // inner layouts
 .footer{
-  height: 600px;
+  min-height: 600px;
 }
 body:not(.no-overflow) >div >* >*:not(.wide):not(nav){
   height: 100%;

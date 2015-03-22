@@ -271,48 +271,6 @@ $hSlider:430px;
     main {
       position: static !important;
     }
-    footer {
-      //margin-bottom: 20px;
-      position: static !important;
-      > div {
-        width: 100% !important;
-        > div {
-          &:not(:nth-child(2)) {
-            display: none;
-          }
-        }
-      }
-      .footer-social {
-        display: table !important;
-        > div {
-          $size: 27px;
-          background: url($images_dir + 'social-left-vertical.png') no-repeat;
-          background-size: $size - 1;
-          cursor: pointer;
-          margin: 0 3px !important;
-          &:nth-child(1) {
-            background-position: 0 0;
-          }
-          &:nth-child(2) {
-            background-position: 0 -29px;
-          }
-          &:nth-child(3) {
-            background-position: 0 -59px;
-          }
-          display: inline-block !important;
-          float: left;
-          height: $size;
-          position: static !important;
-          width: $size !important;
-          a {
-            display: block;
-            height: 100%;
-            width: 100%;
-          }
-        }
-        margin: 20px auto 10px;
-      }
-    }
   }
   #pointers-box {
     height: $hSlider !important;
@@ -596,9 +554,9 @@ $hSlider:430px;
       }
     }
   }
-  footer{
+  /*footer{ // см. в footer.scss
     margin-bottom: 10px;
-  }
+  }*/
   #top-menu {
     @include transform(translateX(2vw));
   }
