@@ -42,7 +42,9 @@ body.no-overflow footer{
     height: 652px;
   }
   #decoration &{
-    height: 792px;
+    @media (min-width:$resolution-small-desktop + 1){
+      height: 792px;
+    }
   }
 }
 main{

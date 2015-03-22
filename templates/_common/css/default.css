@@ -858,17 +858,19 @@ body > .container {
 #engineering-systems .top {
   height: 652px;
 }
-/* line 44, ../../../_dev/scss/layout.scss */
-#decoration .top {
-  height: 792px;
+@media (min-width: 1025px) {
+  /* line 44, ../../../_dev/scss/layout.scss */
+  #decoration .top {
+    height: 792px;
+  }
 }
 
-/* line 49, ../../../_dev/scss/layout.scss */
+/* line 51, ../../../_dev/scss/layout.scss */
 .gallery main {
   position: relative;
 }
 
-/* line 54, ../../../_dev/scss/layout.scss */
+/* line 56, ../../../_dev/scss/layout.scss */
 header {
   height: 68px;
   position: fixed;
@@ -876,13 +878,13 @@ header {
   z-index: 10;
 }
 
-/* line 60, ../../../_dev/scss/layout.scss */
+/* line 62, ../../../_dev/scss/layout.scss */
 nav {
   margin: auto;
   max-width: 948px;
 }
 
-/* line 64, ../../../_dev/scss/layout.scss */
+/* line 66, ../../../_dev/scss/layout.scss */
 #level1 {
   bottom: 0;
   height: 423px;
@@ -890,22 +892,22 @@ nav {
   width: 100%;
 }
 
-/* line 71, ../../../_dev/scss/layout.scss */
+/* line 73, ../../../_dev/scss/layout.scss */
 footer {
   bottom: 14px;
 }
 
-/* line 76, ../../../_dev/scss/layout.scss */
+/* line 78, ../../../_dev/scss/layout.scss */
 header, main, footer {
   width: 100%;
 }
 
-/* line 80, ../../../_dev/scss/layout.scss */
+/* line 82, ../../../_dev/scss/layout.scss */
 .footer {
   min-height: 600px;
 }
 
-/* line 83, ../../../_dev/scss/layout.scss */
+/* line 85, ../../../_dev/scss/layout.scss */
 body:not(.no-overflow) > div > * > *:not(.wide):not(nav) {
   height: 100%;
   margin: auto;
@@ -2439,6 +2441,91 @@ img {
 /* line 179, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(8) span {
   background-position: 12px -1527px;
+}
+
+@media (max-width: 1024px) {
+  /* line 189, ../../../_dev/scss/pages/decoration.scss */
+  #decoration .top {
+    background: transparent;
+    height: inherit;
+    margin-top: 68px;
+    overflow: hidden;
+    position: static;
+  }
+  /* line 196, ../../../_dev/scss/pages/decoration.scss */
+  #decoration .top h1:first-child {
+    margin-top: 2px;
+  }
+  /* line 200, ../../../_dev/scss/pages/decoration.scss */
+  #decoration .top > div {
+    background-image: none;
+    position: static !important;
+    background-color: brown;
+    height: auto;
+    margin: auto;
+    display: block;
+    padding-bottom: 40px;
+  }
+  /* line 209, ../../../_dev/scss/pages/decoration.scss */
+  #decoration .top section {
+    position: relative;
+    top: inherit;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 32px;
+    width: 92.5vw;
+  }
+}
+
+/* line 221, ../../../_dev/scss/pages/decoration.scss */
+#top-alt-bg {
+  background-image: none !important;
+  display: none;
+  height: 240px;
+  margin: 18px auto 56px;
+  max-width: 740px;
+  position: relative;
+  width: 92.5vw;
+}
+@media (max-width: 1024px) {
+  /* line 221, ../../../_dev/scss/pages/decoration.scss */
+  #top-alt-bg {
+    display: block;
+  }
+}
+/* line 233, ../../../_dev/scss/pages/decoration.scss */
+#top-alt-bg > div {
+  height: 240px;
+  display: inline-block;
+  background-position: 0 !important;
+  background-repeat: no-repeat;
+  background-size: 240px;
+  position: absolute;
+  top: 0;
+  width: 240px;
+  /*@media (max-width:$resolution-phone540){
+    //background-size: ;
+  }*/
+}
+/* line 245, ../../../_dev/scss/pages/decoration.scss */
+#top-alt-bg > div:nth-child(1) {
+  background-image: url("../images/decoration/top-visual-1.png");
+}
+/* line 248, ../../../_dev/scss/pages/decoration.scss */
+#top-alt-bg > div:nth-child(2) {
+  background-image: url("../images/decoration/top-visual-2.png");
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 252, ../../../_dev/scss/pages/decoration.scss */
+#top-alt-bg > div:nth-child(3) {
+  background-image: url("../images/decoration/top-visual-3.png");
+  right: 0;
 }
 
 /* line 3, ../../../_dev/scss/pages/engineering.scss */
