@@ -1,3 +1,26 @@
+@mixin gallery-small-inner-params($index){
+  @media (max-width:$resolution-go-mobile966){
+    #facade-beauty .gallery-small & {
+      $p1:padding-right;
+      $p2:padding-left;
+      $o1:342px;
+      $o2:304px;
+      @if($index>0){
+        $p1:padding-left;
+        $p2:padding-right;
+        $o3:$o1;
+        $o1:$o2;
+        $o2:$o3;
+      }
+      #{$p1}: $o1;
+      &:nth-child(4n + #{$index}) {
+        #{$p2}: $o2;
+        #{$p1}: 0;
+      }
+    }
+  }
+}
+
 aside{
   #after-stone &{
     position: absolute;
@@ -66,7 +89,6 @@ div{
     }
     $i:$i+1;
   }
-
   @media (max-width:680px){
     $i:1;
     @each $offset in 96,681,5979,1269,1937,2673,3375{
@@ -79,7 +101,8 @@ div{
 
   #facade .top >&{
     min-height: 530px;
-    margin: auto 25px;
+    //margin: auto 25px;
+    padding: 0 25px;
     @media (max-width:$resolution-go-mobile966){
       min-height: inherit;
     }
@@ -101,13 +124,10 @@ div{
       margin-bottom: 46px;
     }
   }
-  /*#facade &.do-it{
-    &.first{
-      margin-top: $nav-height;
-    }
-  }*/
   #facade-beauty >div >&{
-    background: url($images_dir + 'facade/big-stone.jpg') no-repeat;
+    @media (min-width:$resolution-go-mobile966 + 1){
+      background: url($images_dir + 'facade/big-stone.jpg') no-repeat;
+    }
     padding-left: 383px;
   }
   #facade-work >&.relative{
@@ -167,6 +187,7 @@ h4{
     font-weight: 100;
     margin: 0;
   }
+  @include gallery-small-inner-params(1);
 }
 li{
   #facade main ul.block &{
@@ -183,6 +204,7 @@ p{
   #facade-beauty &{
     margin-bottom: 30px;
   }
+  @include gallery-small-inner-params(0);
   #facade .top &{
     color: #1b1b1b;
     margin: 0;

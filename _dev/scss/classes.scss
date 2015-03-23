@@ -199,6 +199,9 @@ a.print, button.print{
     #facade.container &{
       width: inherit !important;
     }
+    #facade.container #work-examples &{
+      width: 100% !important;
+    }
   }
 }
 

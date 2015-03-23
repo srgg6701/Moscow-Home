@@ -466,6 +466,13 @@ $hSlider:430px;
       }
     }
   }
+
+  #facade-beauty{
+    .gallery-small{
+      padding-left: $edge-mobile;
+      padding-right: $edge-mobile;
+    }
+  }
 }
 
 #level1 .slider-bottom .slides {

@@ -763,44 +763,48 @@ a.print, button.print {
 #facade.container .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
   width: inherit !important;
 }
+/* line 202, ../../../_dev/scss/classes.scss */
+#facade.container #work-examples .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
+  width: 100% !important;
+}
 
-/* line 205, ../../../_dev/scss/classes.scss */
+/* line 208, ../../../_dev/scss/classes.scss */
 .slider-bottom {
   background: url("../images/backgrounds/tile-gallery.png");
   margin: auto;
   overflow: hidden;
 }
 
-/* line 210, ../../../_dev/scss/classes.scss */
+/* line 213, ../../../_dev/scss/classes.scss */
 .slides {
   display: table;
   height: 100%;
   position: relative;
 }
 
-/* line 218, ../../../_dev/scss/classes.scss */
+/* line 221, ../../../_dev/scss/classes.scss */
 .substrate #you-need {
   display: none;
 }
 
-/* line 222, ../../../_dev/scss/classes.scss */
+/* line 225, ../../../_dev/scss/classes.scss */
 .table {
   display: table;
 }
 
-/* line 227, ../../../_dev/scss/classes.scss */
+/* line 230, ../../../_dev/scss/classes.scss */
 #decoration .top, #engineering-systems .top {
   background-color: #832305;
 }
-/* line 230, ../../../_dev/scss/classes.scss */
+/* line 233, ../../../_dev/scss/classes.scss */
 #decoration .top {
   background-image: url("../images/backgrounds/tile-top-ultra-blood.png");
 }
-/* line 233, ../../../_dev/scss/classes.scss */
+/* line 236, ../../../_dev/scss/classes.scss */
 #engineering-systems .top {
   background-image: url("../images/backgrounds/tile-top.png");
 }
-/* line 236, ../../../_dev/scss/classes.scss */
+/* line 239, ../../../_dev/scss/classes.scss */
 #facade .top {
   background-image: url("../images/facade/roof.jpg");
   background-size: cover;
@@ -810,14 +814,14 @@ a.print, button.print {
 }
 
 @media (max-width: 620px) {
-  /* line 244, ../../../_dev/scss/classes.scss */
+  /* line 247, ../../../_dev/scss/classes.scss */
   .wide {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
 
-/* line 250, ../../../_dev/scss/classes.scss */
+/* line 253, ../../../_dev/scss/classes.scss */
 .works-examples {
   background: url("../images/gallery/works-examples.jpg") no-repeat;
   height: 81px;
@@ -2831,90 +2835,51 @@ div {
   min-height: 301px;
 }
 
-/* line 2, ../../../_dev/scss/pages/facade.scss */
+/* line 25, ../../../_dev/scss/pages/facade.scss */
 #after-stone aside {
   position: absolute;
 }
-/* line 5, ../../../_dev/scss/pages/facade.scss */
+/* line 28, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(1) aside {
   top: 168px;
 }
-/* line 8, ../../../_dev/scss/pages/facade.scss */
+/* line 31, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(2) aside {
   top: 211px;
 }
-/* line 11, ../../../_dev/scss/pages/facade.scss */
+/* line 34, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(3) aside {
   top: 214px;
 }
 
-/* line 15, ../../../_dev/scss/pages/facade.scss */
-div {
-  /*  $bg-pos-left:0;
-    #facades section:nth-child(1) >&{
-      background-position: $bg-pos-left -96px;
-      height: 380px;
-    }
-    #facades section:nth-child(2) >&{
-      background-position: $bg-pos-left -681px;
-      height: 268px;
-    }
-    #facades section:nth-child(3) >&{
-      background-position: $bg-pos-left -5979px;
-      height: 270px;
-    }
-    #facades section:nth-child(4) >&{
-      background-position: $bg-pos-left -1269px;
-      height: 288px;
-    }
-    #facades section:nth-child(5) >&{
-      background-position: $bg-pos-left -1937px;
-      height: 266px;
-    }
-    #facades section:nth-child(6) >&{
-      background-position: $bg-pos-left -2673px;
-      height: 262px;
-    }
-    #facades section:nth-child(7) >&{
-      background-position: $bg-pos-left -3375px;
-      border-bottom: none;
-      height: 287px;
-      margin: auto 25px;
-    }*/
-  /*#facade &.do-it{
-    &.first{
-      margin-top: $nav-height;
-    }
-  }*/
-}
-/* line 16, ../../../_dev/scss/pages/facade.scss */
+/* line 39, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div {
   border-bottom: solid 1px white;
   overflow: hidden !important;
   padding-top: 51px;
   position: relative;
 }
-/* line 22, ../../../_dev/scss/pages/facade.scss */
+/* line 45, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(1) {
   height: 396px;
 }
-/* line 25, ../../../_dev/scss/pages/facade.scss */
+/* line 48, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(2) {
   height: 436px;
 }
-/* line 28, ../../../_dev/scss/pages/facade.scss */
+/* line 51, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(3) {
   height: 447px;
 }
-/* line 31, ../../../_dev/scss/pages/facade.scss */
+/* line 54, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(even) {
   background: url("../images/backgrounds/tile-facade-light.png");
 }
-/* line 34, ../../../_dev/scss/pages/facade.scss */
+/* line 57, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div:nth-child(odd) {
   background: url("../images/backgrounds/tile-facade-darker.png");
 }
-/* line 38, ../../../_dev/scss/pages/facade.scss */
+/* line 61, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div > div {
   background: url("../images/facade/vertical1.jpg") no-repeat;
   height: 100%;
@@ -2923,7 +2888,7 @@ div {
   padding-left: 325px;
   width: 960px;
 }
-/* line 47, ../../../_dev/scss/pages/facade.scss */
+/* line 70, ../../../_dev/scss/pages/facade.scss */
 #facades section > div {
   background: url("../images/facade/vertical1.jpg") no-repeat;
   border-bottom: solid 1px #e3e3e3;
@@ -2931,104 +2896,104 @@ div {
   padding-left: 257px;
   padding-right: 120px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(1) > div {
   background-position: 0 -96px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(2) > div {
   background-position: 0 -681px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(3) > div {
   background-position: 0 -5979px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(4) > div {
   background-position: 0 -1269px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(5) > div {
   background-position: 0 -1937px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(6) > div {
   background-position: 0 -2673px;
 }
-/* line 57, ../../../_dev/scss/pages/facade.scss */
+/* line 80, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(7) > div {
   background-position: 0 -3375px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(1) > div {
   height: 380px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(2) > div {
   height: 268px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(3) > div {
   height: 270px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(4) > div {
   height: 288px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(5) > div {
   height: 266px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(6) > div {
   height: 262px;
 }
-/* line 64, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(7) > div {
   height: 287px;
 }
 @media (max-width: 680px) {
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(1) > div {
     background-position: center -96px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(2) > div {
     background-position: center -681px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(3) > div {
     background-position: center -5979px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(4) > div {
     background-position: center -1269px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(5) > div {
     background-position: center -1937px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(6) > div {
     background-position: center -2673px;
   }
-  /* line 73, ../../../_dev/scss/pages/facade.scss */
+  /* line 95, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(7) > div {
     background-position: center -3375px;
   }
 }
-/* line 112, ../../../_dev/scss/pages/facade.scss */
+/* line 102, ../../../_dev/scss/pages/facade.scss */
 #facade .top > div {
   min-height: 530px;
-  margin: auto 25px;
+  padding: 0 25px;
 }
 @media (max-width: 966px) {
-  /* line 112, ../../../_dev/scss/pages/facade.scss */
+  /* line 102, ../../../_dev/scss/pages/facade.scss */
   #facade .top > div {
     min-height: inherit;
   }
 }
-/* line 119, ../../../_dev/scss/pages/facade.scss */
+/* line 110, ../../../_dev/scss/pages/facade.scss */
 #facade .top > div > div {
   background-color: #FFF;
   -webkit-border-radius: 6px;
@@ -3051,7 +3016,7 @@ div {
   max-width: 720px;
 }
 @media (max-width: 966px) {
-  /* line 119, ../../../_dev/scss/pages/facade.scss */
+  /* line 110, ../../../_dev/scss/pages/facade.scss */
   #facade .top > div > div {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -3062,12 +3027,17 @@ div {
     margin-bottom: 46px;
   }
 }
-/* line 141, ../../../_dev/scss/pages/facade.scss */
+/* line 127, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty > div > div {
-  background: url("../images/facade/big-stone.jpg") no-repeat;
   padding-left: 383px;
 }
-/* line 145, ../../../_dev/scss/pages/facade.scss */
+@media (min-width: 967px) {
+  /* line 127, ../../../_dev/scss/pages/facade.scss */
+  #facade-beauty > div > div {
+    background: url("../images/facade/big-stone.jpg") no-repeat;
+  }
+}
+/* line 133, ../../../_dev/scss/pages/facade.scss */
 #facade-work > div.relative {
   height: 363px;
   margin: auto;
@@ -3076,7 +3046,7 @@ div {
   width: 512px;
   z-index: 1;
 }
-/* line 153, ../../../_dev/scss/pages/facade.scss */
+/* line 141, ../../../_dev/scss/pages/facade.scss */
 #facade-work div.substrate {
   background: #000;
   -webkit-border-radius: 6px;
@@ -3094,7 +3064,7 @@ div {
   z-index: -1;
 }
 
-/* line 163, ../../../_dev/scss/pages/facade.scss */
+/* line 151, ../../../_dev/scss/pages/facade.scss */
 #facade .top h1 {
   font: 72px/77px PlumbMedium !important;
   color: white;
@@ -3106,13 +3076,13 @@ div {
   width: 500px;
 }
 @media (max-width: 966px) {
-  /* line 163, ../../../_dev/scss/pages/facade.scss */
+  /* line 151, ../../../_dev/scss/pages/facade.scss */
   #facade .top h1 {
     margin-top: 36px;
     position: static;
   }
 }
-/* line 177, ../../../_dev/scss/pages/facade.scss */
+/* line 165, ../../../_dev/scss/pages/facade.scss */
 #facade-work h1.header-big {
   color: white;
   font: 48px PlumbMedium;
@@ -3120,7 +3090,7 @@ div {
   text-align: center;
 }
 
-/* line 185, ../../../_dev/scss/pages/facade.scss */
+/* line 173, ../../../_dev/scss/pages/facade.scss */
 #facade h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -3129,7 +3099,7 @@ div {
   margin-bottom: 4px;
 }
 
-/* line 195, ../../../_dev/scss/pages/facade.scss */
+/* line 183, ../../../_dev/scss/pages/facade.scss */
 #after-stone h4, #facade-beauty h4 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -3137,32 +3107,54 @@ div {
   font-weight: 100;
   margin: 0;
 }
+@media (max-width: 966px) {
+  /* line 3, ../../../_dev/scss/pages/facade.scss */
+  #facade-beauty .gallery-small h4 {
+    padding-left: 304px;
+  }
+  /* line 16, ../../../_dev/scss/pages/facade.scss */
+  #facade-beauty .gallery-small h4:nth-child(4n + 1) {
+    padding-right: 342px;
+    padding-left: 0;
+  }
+}
 
-/* line 204, ../../../_dev/scss/pages/facade.scss */
+/* line 193, ../../../_dev/scss/pages/facade.scss */
 #facade main ul.block li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
 }
 
-/* line 212, ../../../_dev/scss/pages/facade.scss */
+/* line 201, ../../../_dev/scss/pages/facade.scss */
 #after-stone p, #facade-beauty p {
   margin-top: 14px !important;
 }
-/* line 215, ../../../_dev/scss/pages/facade.scss */
+/* line 204, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty p {
   margin-bottom: 30px;
 }
-/* line 218, ../../../_dev/scss/pages/facade.scss */
+@media (max-width: 966px) {
+  /* line 3, ../../../_dev/scss/pages/facade.scss */
+  #facade-beauty .gallery-small p {
+    padding-right: 342px;
+  }
+  /* line 16, ../../../_dev/scss/pages/facade.scss */
+  #facade-beauty .gallery-small p:nth-child(4n + 0) {
+    padding-left: 304px;
+    padding-right: 0;
+  }
+}
+/* line 208, ../../../_dev/scss/pages/facade.scss */
 #facade .top p {
   color: #1b1b1b;
   margin: 0;
 }
-/* line 221, ../../../_dev/scss/pages/facade.scss */
+/* line 211, ../../../_dev/scss/pages/facade.scss */
 #facade .top p:last-child {
   margin-top: 30px;
 }
-/* line 226, ../../../_dev/scss/pages/facade.scss */
+/* line 216, ../../../_dev/scss/pages/facade.scss */
 #facade main p.pseudoheader {
   background: url("../images/facade/roofs.png") no-repeat 40px 93px;
   color: #5d534e;
@@ -3173,63 +3165,63 @@ div {
   text-align: center;
   width: 740px;
 }
-/* line 237, ../../../_dev/scss/pages/facade.scss */
+/* line 227, ../../../_dev/scss/pages/facade.scss */
 #facade main section p {
   margin-top: 0;
 }
-/* line 240, ../../../_dev/scss/pages/facade.scss */
+/* line 230, ../../../_dev/scss/pages/facade.scss */
 #facade-work p {
   color: white;
   font: 17px Arial, Helvetica, sans-serif;
   padding: 7px;
 }
-/* line 244, ../../../_dev/scss/pages/facade.scss */
+/* line 234, ../../../_dev/scss/pages/facade.scss */
 #facade-work p:nth-child(2) {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 248, ../../../_dev/scss/pages/facade.scss */
+/* line 238, ../../../_dev/scss/pages/facade.scss */
 #facade-work p:nth-child(3) {
   margin-top: 0;
 }
 
-/* line 254, ../../../_dev/scss/pages/facade.scss */
+/* line 244, ../../../_dev/scss/pages/facade.scss */
 #facade section#facade-work {
   background: url("../images/facade/facade-work.jpg") center;
   background-size: cover;
   height: 560px;
 }
 
-/* line 261, ../../../_dev/scss/pages/facade.scss */
+/* line 251, ../../../_dev/scss/pages/facade.scss */
 #after-stone aside span {
   display: block;
 }
 
-/* line 267, ../../../_dev/scss/pages/facade.scss */
+/* line 257, ../../../_dev/scss/pages/facade.scss */
 #facade #gallery {
   height: 88px;
 }
-/* line 271, ../../../_dev/scss/pages/facade.scss */
+/* line 261, ../../../_dev/scss/pages/facade.scss */
 #facade #work-examples aside {
   margin-bottom: 59px;
 }
 
-/* line 277, ../../../_dev/scss/pages/facade.scss */
+/* line 267, ../../../_dev/scss/pages/facade.scss */
 #facades .header-slim-big {
   font-size: 23px;
   margin-top: 28px;
   text-align: left;
 }
-/* line 282, ../../../_dev/scss/pages/facade.scss */
+/* line 272, ../../../_dev/scss/pages/facade.scss */
 #facades .works-examples {
   margin-top: 13px;
 }
 
-/* line 286, ../../../_dev/scss/pages/facade.scss */
+/* line 276, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty {
   padding-top: 45px;
 }
-/* line 288, ../../../_dev/scss/pages/facade.scss */
+/* line 278, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty aside {
   -webkit-transform: translateY(12px);
   -moz-transform: translateY(12px);
@@ -3237,11 +3229,11 @@ div {
   -o-transform: translateY(12px);
   transform: translateY(12px);
 }
-/* line 291, ../../../_dev/scss/pages/facade.scss */
+/* line 281, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty .header-slim-middle {
   line-height: 32px;
 }
-/* line 294, ../../../_dev/scss/pages/facade.scss */
+/* line 284, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty .works-examples {
   margin-top: 14px;
   margin-bottom: 49px;
@@ -4826,6 +4818,12 @@ body.gallery [id^="slider-mini-"] {
   #facades > section > div h2 {
     text-align: center;
   }
+
+  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  #facade-beauty .gallery-small {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 @media (max-width: 966px) and (max-width: 680px) {
   /* line 444, ../../../_dev/scss/media-queries/tablet.scss */
@@ -4838,74 +4836,74 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (min-width: 621px) and (max-width: 966px) {
-  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 478, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides {
     width: 66vw;
   }
-  /* line 476, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 483, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides a img {
     height: 17.76vw;
     width: 20vw;
   }
 }
 @media (min-width: 541px) and (max-width: 620px) {
-  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 478, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides {
     width: 84vw;
   }
-  /* line 485, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 492, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides a img {
     height: 22.94vw;
     width: 26vw;
   }
 }
 @media (min-width: 425px) and (max-width: 540px) {
-  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 478, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides {
     width: 99.5vw;
   }
-  /* line 494, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 501, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides a img {
     height: 26.9vw;
     width: 30.5vw;
   }
 }
 @media (max-width: 424px) {
-  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 478, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides {
     width: 98.75vw;
   }
-  /* line 503, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 510, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides a img {
     height: 40.85vw;
     width: 45.5vw;
   }
 }
 @media (max-width: 248px) {
-  /* line 471, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 478, ../../../_dev/scss/media-queries/tablet.scss */
   #level1 .slider-bottom .slides {
     width: 100vw;
   }
 }
 
 @media (max-width: 768px) {
-  /* line 524, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 531, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .img {
     height: 63.56vw;
     max-height: 375.004px;
     max-width: 590px;
     width: 100vw;
   }
-  /* line 527, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 534, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .slider-container {
     height: auto;
   }
-  /* line 529, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 536, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .slider-container .gallery-pointers-aside {
     height: 100%;
     top: 0;
   }
-  /* line 532, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 539, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .slider-container .gallery-pointers-aside aside {
     margin-top: 0;
     position: relative;
@@ -4917,39 +4915,39 @@ body.gallery [id^="slider-mini-"] {
     transform: translateY(-50%);
     position: absolute;
   }
-  /* line 538, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 545, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .slider-container .img-mini {
     height: 17.5vw;
     margin-right: 2.25vw;
     width: 19.5vw;
   }
-  /* line 544, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 551, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="gallery-pointers-box-mini-"] {
     height: 100%;
     position: absolute;
   }
-  /* line 549, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 556, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="images-container-mini-"] {
     height: auto;
     overflow: hidden;
     top: 0;
   }
-  /* line 554, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 561, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="loaded-content-mini-"] {
     margin: auto;
     overflow: hidden;
     width: 84.85vw;
   }
-  /* line 559, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 566, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="pix-mini-"] {
     margin-top: 2vw !important;
     margin-bottom: 2vw !important;
   }
-  /* line 569, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 576, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="pix-mini-"]:not(.tiny) {
     transform: translateX(-19.5vw);
   }
-  /* line 572, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 579, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery .content-wrapper [id^="preview-container-"] {
     border-radius: 0;
     height: 63.56vw;
@@ -4957,11 +4955,11 @@ body.gallery [id^="slider-mini-"] {
     max-width: 590px;
     width: 100vw;
   }
-  /* line 576, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 583, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="preview-container-mini-"] {
     overflow: visible;
   }
-  /* line 579, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 586, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="slider-mini-"] {
     position: relative;
   }
@@ -4969,7 +4967,7 @@ body.gallery [id^="slider-mini-"] {
   /*footer{ // ╤Б╨╝. ╨▓ footer.scss
     margin-bottom: 10px;
   }*/
-  /* line 587, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 594, ../../../_dev/scss/media-queries/tablet.scss */
   #top-menu {
     -webkit-transform: translateX(2vw);
     -moz-transform: translateX(2vw);
@@ -4979,7 +4977,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 768px) and (max-width: 591px) {
-  /* line 563, ../../../_dev/scss/media-queries/tablet.scss */
+  /* line 570, ../../../_dev/scss/media-queries/tablet.scss */
   body.gallery [id^="pix-"]:not([id*='-mini-']):not([data-value]) {
     left: -100vw;
     -webkit-transform: translateX(-100vw);
