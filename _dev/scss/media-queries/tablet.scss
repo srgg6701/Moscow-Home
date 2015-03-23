@@ -390,6 +390,7 @@ $hSlider:430px;
       }
     }
   }
+
   header {
     aside div{
       background-color: #efefef;
@@ -437,6 +438,32 @@ $hSlider:430px;
     #header-menu-about &{
       text-decoration: none;
       border-bottom: dotted 1px;
+    }
+  }
+
+  #facades{
+    @include column-count(2);
+    @media (max-width:680px){
+      @include column-count(1);
+    }
+    margin: auto $edge-mobile;
+    .header-slim-big {
+      display: none;
+      &+div{
+        display: none;
+      }
+    }
+    >section{
+      @include column-break-inside(avoid);
+      >div{
+        height: inherit !important;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding:240px 0 0;
+        h2{
+          text-align: center;
+        }
+      }
     }
   }
 }

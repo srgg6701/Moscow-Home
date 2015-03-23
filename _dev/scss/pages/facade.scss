@@ -51,56 +51,61 @@ div{
     padding-left: 257px;
     padding-right: 120px;
   }
-  $bg-pos-left:0;
-  #facades section:nth-child(1) >&{
-    background-position: $bg-pos-left -96px;
-    height: 380px;
+
+  $i:1;
+  @each $offset in 96,681,5979,1269,1937,2673,3375{
+    #facades section:nth-child(#{$i}) >&{
+      background-position: 0 -#{$offset}px;
+    }
+    $i:$i+1;
   }
-  #facades section:nth-child(2) >&{
-    background-position: $bg-pos-left -681px;
-    height: 268px;
+  $i:1;
+  @each $height in 380,268,270,288,266,262,287{
+    #facades section:nth-child(#{$i}) >&{
+      height: #{$height}px;
+    }
+    $i:$i+1;
   }
-  #facades section:nth-child(3) >&{
-    background-position: $bg-pos-left -5979px;
-    height: 270px;
-  }
-  #facades section:nth-child(4) >&{
-    background-position: $bg-pos-left -1269px;
-    height: 288px;
-  }
-  #facades section:nth-child(5) >&{
-    background-position: $bg-pos-left -1937px;
-    height: 266px;
-  }
-  #facades section:nth-child(6) >&{
-    background-position: $bg-pos-left -2673px;
-    height: 262px;
-  }
-  #facades section:nth-child(7) >&{
-    background-position: $bg-pos-left -3375px;
-    border-bottom: none;
-    height: 287px;
+
+  @media (max-width:680px){
+    $i:1;
+    @each $offset in 96,681,5979,1269,1937,2673,3375{
+      #facades section:nth-child(#{$i}) >&{
+        background-position: center -#{$offset}px;
+      }
+      $i:$i+1;
+    }
   }
 
   #facade .top >&{
-    height: 530px;
+    min-height: 530px;
+    margin: auto 25px;
+    @media (max-width:$resolution-go-mobile966){
+      min-height: inherit;
+    }
   }
   #facade .top >div >&{
     background-color: #FFF;
     @include border-radius(6px);
     box-sizing: border-box;
-    height: 170px;
+    min-height: 170px;
     margin: auto;
+    overflow: auto;
     @include opacity(0.89);
     padding: 20px;
     @include transform(translateY(98px));
-    width: 720px;
+    max-width: 720px;
+    @media (max-width:$resolution-go-mobile966){
+      @include transform(translateY(0));
+      margin-top: 26px;
+      margin-bottom: 46px;
+    }
   }
-  #facade &.do-it{
+  /*#facade &.do-it{
     &.first{
       margin-top: $nav-height;
     }
-  }
+  }*/
   #facade-beauty >div >&{
     background: url($images_dir + 'facade/big-stone.jpg') no-repeat;
     padding-left: 383px;
@@ -132,6 +137,10 @@ h1{
     @include text-shadow(2px 2px 2px #999);
     top: 51px;
     width: 500px;
+    @media (max-width:$resolution-go-mobile966){
+      margin-top: 36px;
+      position: static;
+    }
   }
   #facade-work &.header-big{
     color: white;

@@ -196,8 +196,12 @@ a.print, button.print{
   display: block;
   .slideplus{
     width: 100% !important;
+    #facade.container &{
+      width: inherit !important;
+    }
   }
 }
+
 .slider-bottom{
   background: url($images_dir + "backgrounds/tile-gallery.png");
   margin: auto;
@@ -232,6 +236,9 @@ a.print, button.print{
   #facade &{
     background-image: url($images_dir + 'facade/roof.jpg');
     background-size: cover;
+    margin-top: $headerHeight;
+    overflow: hidden;
+    position: static;
   }
 }
 .wide{

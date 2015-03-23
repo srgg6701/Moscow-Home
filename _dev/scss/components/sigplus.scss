@@ -74,8 +74,14 @@ img {
     display: table;
     margin: auto;
   }
+  @mixin trnsf($x:-306px,$y:-30px,$s:0.61){
+    @include transform(translateX($x) translateY($y) scale($s));
+  }
   .gallery-small &{
-    @include transform(scale(0.61) translateX(-306px) translateY(-30px));
+    @include trnsf;    //@include transform(scale(0.61) translateX(-306px) translateY(-30px));
+  }
+  #facade.container .gallery-small &{
+    @include trnsf(-114px);//transform(scale(0.61) translateX(-306px) translateY(-30px));
   }
 }
 .slideplus-paging {
