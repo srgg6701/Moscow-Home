@@ -70,11 +70,16 @@ div{
     }
   }
   #after-stone >div >&{
-    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+    //background: url($images_dir + "facade/vertical1.jpg") no-repeat;
     height: 100%;
     max-width: $max-width-container;
     margin: auto;
     min-height: 232px;
+    transition: opacity 0.2s ease;
+    /*opacity: 0.5;
+    &:hover{
+      opacity: 1;
+    }*/
     overflow: auto;
     padding-left: 325px;
   }

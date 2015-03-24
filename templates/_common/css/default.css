@@ -2283,29 +2283,41 @@ img {
   margin-top: -58px;
 }
 
-/* line 61, ../../../_dev/scss/pages/decoration.scss */
+/* line 63, ../../../_dev/scss/pages/decoration.scss */
+#after-stone > div:nth-child(1) > div {
+  background-position: 28px -3903px !important;
+}
+/* line 63, ../../../_dev/scss/pages/decoration.scss */
+#after-stone > div:nth-child(2) > div {
+  background-position: 28px -4475px !important;
+}
+/* line 63, ../../../_dev/scss/pages/decoration.scss */
+#after-stone > div:nth-child(3) > div {
+  background-position: 28px -5064px !important;
+}
+/* line 68, ../../../_dev/scss/pages/decoration.scss */
 #decoration .top div {
   background-image: url("../images/decoration/decoration-top.png");
   background-repeat: no-repeat;
   background-position: 85px 232px;
 }
-/* line 66, ../../../_dev/scss/pages/decoration.scss */
+/* line 73, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div {
   height: 222px;
 }
-/* line 68, ../../../_dev/scss/pages/decoration.scss */
+/* line 75, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(1) {
   height: 193px;
 }
-/* line 71, ../../../_dev/scss/pages/decoration.scss */
+/* line 78, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(even) {
   background-image: url("../images/backgrounds/tile-contents-grey-light.png");
 }
-/* line 74, ../../../_dev/scss/pages/decoration.scss */
+/* line 81, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(odd):not(1) {
   background-image: url("../images/backgrounds/tile-contents-dark.png");
 }
-/* line 78, ../../../_dev/scss/pages/decoration.scss */
+/* line 85, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div > div {
   font: 17px/20px Arial, Helvetica, sans-serif;
   margin: auto;
@@ -2313,61 +2325,61 @@ img {
   padding-top: 60px;
   max-width: 960px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(2) > div {
   padding-top: 80px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(3) > div {
   padding-top: 102px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(4) > div {
   padding-top: 88px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(5) > div {
   padding-top: 92px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(6) > div {
   padding-top: 87px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(7) > div {
   padding-top: 102px;
 }
-/* line 87, ../../../_dev/scss/pages/decoration.scss */
+/* line 94, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content .contents > div:nth-child(8) > div {
   padding-top: 88px;
 }
-/* line 92, ../../../_dev/scss/pages/decoration.scss */
+/* line 99, ../../../_dev/scss/pages/decoration.scss */
 #decoration div.slider-bottom {
   height: 345px;
 }
-/* line 95, ../../../_dev/scss/pages/decoration.scss */
+/* line 102, ../../../_dev/scss/pages/decoration.scss */
 #decoration div.slides {
   height: 285px;
   margin: auto;
   padding: 0;
 }
-/* line 100, ../../../_dev/scss/pages/decoration.scss */
+/* line 107, ../../../_dev/scss/pages/decoration.scss */
 #decoration .slides div.float-left {
   background-repeat: no-repeat;
   height: 280px;
   width: 50%;
 }
-/* line 105, ../../../_dev/scss/pages/decoration.scss */
+/* line 112, ../../../_dev/scss/pages/decoration.scss */
 #decoration .slides div.float-left:nth-child(1) {
   background-size: 476px 280px;
 }
 @media (max-width: 966px) {
-  /* line 105, ../../../_dev/scss/pages/decoration.scss */
+  /* line 112, ../../../_dev/scss/pages/decoration.scss */
   #decoration .slides div.float-left:nth-child(1) {
     display: none;
   }
 }
-/* line 111, ../../../_dev/scss/pages/decoration.scss */
+/* line 118, ../../../_dev/scss/pages/decoration.scss */
 #decoration .slides div.float-left:nth-child(2) {
   height: auto;
   margin-left: 4px;
@@ -2375,36 +2387,36 @@ img {
   padding: 0;
 }
 @media (max-width: 966px) {
-  /* line 100, ../../../_dev/scss/pages/decoration.scss */
+  /* line 107, ../../../_dev/scss/pages/decoration.scss */
   #decoration .slides div.float-left {
     width: 474px;
   }
 }
 
-/* line 130, ../../../_dev/scss/pages/decoration.scss */
+/* line 137, ../../../_dev/scss/pages/decoration.scss */
 #decoration .top h1 {
   display: table;
   margin: auto;
   text-align: center;
 }
-/* line 134, ../../../_dev/scss/pages/decoration.scss */
+/* line 141, ../../../_dev/scss/pages/decoration.scss */
 #decoration .top h1:first-child {
   margin-bottom: 7px;
   margin-top: 71px;
 }
-/* line 139, ../../../_dev/scss/pages/decoration.scss */
+/* line 146, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content > section:first-child > h1:first-child {
   font-weight: 100;
   margin: 58px auto 22px;
   text-align: center;
 }
 
-/* line 146, ../../../_dev/scss/pages/decoration.scss */
+/* line 153, ../../../_dev/scss/pages/decoration.scss */
 #decoration main {
   background-image: url("../images/backgrounds/tile-contents.png");
 }
 
-/* line 151, ../../../_dev/scss/pages/decoration.scss */
+/* line 158, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content > section:first-child > p {
   font-size: 16px;
   line-height: 20px;
@@ -2412,13 +2424,13 @@ img {
   margin-bottom: 27px;
   width: 672px;
 }
-/* line 158, ../../../_dev/scss/pages/decoration.scss */
+/* line 165, ../../../_dev/scss/pages/decoration.scss */
 #decoration .content > aside > p:first-child {
   margin-top: 50px;
   margin-bottom: 30px;
 }
 
-/* line 164, ../../../_dev/scss/pages/decoration.scss */
+/* line 171, ../../../_dev/scss/pages/decoration.scss */
 #decoration .top section {
   left: 133px;
   position: absolute;
@@ -2426,7 +2438,7 @@ img {
   width: 75%;
 }
 
-/* line 172, ../../../_dev/scss/pages/decoration.scss */
+/* line 179, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents aside span {
   background-image: url("../images/decoration/pyctos.png");
   background-repeat: no-repeat;
@@ -2434,65 +2446,65 @@ img {
   height: 100%;
   width: 100%;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(1) span {
   background-position: 12px 28px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(2) span {
   background-position: 12px -197px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(3) span {
   background-position: 12px -419px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(4) span {
   background-position: 12px -641px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(5) span {
   background-position: 12px -862px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(6) span {
   background-position: 12px -1084px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(7) span {
   background-position: 12px -1306px;
 }
-/* line 181, ../../../_dev/scss/pages/decoration.scss */
+/* line 188, ../../../_dev/scss/pages/decoration.scss */
 #decoration .contents div:nth-child(8) span {
   background-position: 12px -1527px;
 }
 
 @media (max-width: 1024px) {
-  /* line 198, ../../../_dev/scss/pages/decoration.scss */
+  /* line 205, ../../../_dev/scss/pages/decoration.scss */
   #decoration main > section:first-child {
     margin: auto 25px;
   }
-  /* line 201, ../../../_dev/scss/pages/decoration.scss */
+  /* line 208, ../../../_dev/scss/pages/decoration.scss */
   #decoration main > section.contents.wide {
     padding: 0;
   }
-  /* line 205, ../../../_dev/scss/pages/decoration.scss */
+  /* line 212, ../../../_dev/scss/pages/decoration.scss */
   #decoration main > section:first-child .header-big {
     font-size: 48px !important;
     margin-top: 48px;
   }
-  /* line 272, ../../../_dev/scss/pages/decoration.scss */
+  /* line 279, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top {
     height: inherit;
     margin-top: 68px;
     overflow: hidden;
     position: static;
   }
-  /* line 279, ../../../_dev/scss/pages/decoration.scss */
+  /* line 286, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1:first-child {
     margin-bottom: -12px !important;
   }
-  /* line 300, ../../../_dev/scss/pages/decoration.scss */
+  /* line 307, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top > div {
     background-image: none;
     display: block;
@@ -2501,7 +2513,7 @@ img {
     margin-bottom: -7px;
     position: static !important;
   }
-  /* line 309, ../../../_dev/scss/pages/decoration.scss */
+  /* line 316, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top section {
     position: relative;
     top: inherit;
@@ -2512,44 +2524,44 @@ img {
   }
 }
 @media (max-width: 1024px) and (min-width: 768px) {
-  /* line 193, ../../../_dev/scss/pages/decoration.scss */
+  /* line 200, ../../../_dev/scss/pages/decoration.scss */
   #decoration main {
     padding-top: 40px;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
-  /* line 205, ../../../_dev/scss/pages/decoration.scss */
+  /* line 212, ../../../_dev/scss/pages/decoration.scss */
   #decoration main > section:first-child .header-big {
     font-size: 24px !important;
     margin-top: 27px !important;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
-  /* line 216, ../../../_dev/scss/pages/decoration.scss */
+  /* line 223, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div {
     position: relative !important;
   }
-  /* line 226, ../../../_dev/scss/pages/decoration.scss */
+  /* line 233, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div {
     padding-left: 185px !important;
     padding-right: 25px;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) and (min-width: 681px) {
-  /* line 216, ../../../_dev/scss/pages/decoration.scss */
+  /* line 223, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div {
     position: static;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) and (min-width: 681px) {
-  /* line 226, ../../../_dev/scss/pages/decoration.scss */
+  /* line 233, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div {
     padding-top: 0 !important;
     height: 100% !important;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) and (min-width: 681px) {
-  /* line 236, ../../../_dev/scss/pages/decoration.scss */
+  /* line 243, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div > div {
     position: relative;
     top: 50%;
@@ -2561,7 +2573,7 @@ img {
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) and (min-width: 681px) {
-  /* line 242, ../../../_dev/scss/pages/decoration.scss */
+  /* line 249, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div > aside {
     margin-top: 0 !important;
     position: absolute;
@@ -2574,20 +2586,20 @@ img {
   }
 }
 @media (max-width: 1024px) and (max-width: 540px) {
-  /* line 216, ../../../_dev/scss/pages/decoration.scss */
+  /* line 223, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div {
     background-image: none !important;
     height: inherit !important;
     padding: 0 22px;
   }
-  /* line 257, ../../../_dev/scss/pages/decoration.scss */
+  /* line 264, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div {
     font-size: 14px;
     padding-left: 0 !important;
     padding-top: 0 !important;
     text-align: center;
   }
-  /* line 262, ../../../_dev/scss/pages/decoration.scss */
+  /* line 269, ../../../_dev/scss/pages/decoration.scss */
   #decoration .content .contents > div > div aside {
     display: block;
     float: none;
@@ -2601,42 +2613,42 @@ img {
   }
 }
 @media (max-width: 1024px) and (min-width: 681px) {
-  /* line 278, ../../../_dev/scss/pages/decoration.scss */
+  /* line 285, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1 {
     font-size: 48px !important;
   }
-  /* line 285, ../../../_dev/scss/pages/decoration.scss */
+  /* line 292, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1:first-child {
     margin-top: 2px;
   }
-  /* line 288, ../../../_dev/scss/pages/decoration.scss */
+  /* line 295, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1:last-child {
     margin-top: -20px;
     margin-bottom: 37px;
   }
 }
 @media (max-width: 1024px) and (max-width: 680px) {
-  /* line 278, ../../../_dev/scss/pages/decoration.scss */
+  /* line 285, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1 {
     font-size: 24px !important;
   }
-  /* line 295, ../../../_dev/scss/pages/decoration.scss */
+  /* line 302, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top h1:first-child {
     margin-top: 27px;
   }
 }
 @media (max-width: 1024px) and (max-width: 620px) {
-  /* line 309, ../../../_dev/scss/pages/decoration.scss */
+  /* line 316, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top section {
     padding: 0;
   }
-  /* line 319, ../../../_dev/scss/pages/decoration.scss */
+  /* line 326, ../../../_dev/scss/pages/decoration.scss */
   #decoration .top section p {
     font-size: 14px;
   }
 }
 
-/* line 327, ../../../_dev/scss/pages/decoration.scss */
+/* line 334, ../../../_dev/scss/pages/decoration.scss */
 #top-alt-bg {
   background-image: none !important;
   display: none;
@@ -2647,20 +2659,20 @@ img {
   width: 92.5vw;
 }
 @media (max-width: 1024px) {
-  /* line 327, ../../../_dev/scss/pages/decoration.scss */
+  /* line 334, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg {
     display: block;
     margin-top: 36px;
   }
 }
 @media (max-width: 1024px) and (max-width: 768px) {
-  /* line 327, ../../../_dev/scss/pages/decoration.scss */
+  /* line 334, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg {
     height: 32vw;
   }
 }
 @media (max-width: 1024px) and (max-width: 620px) {
-  /* line 327, ../../../_dev/scss/pages/decoration.scss */
+  /* line 334, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg {
     margin-left: 15px;
     margin-top: 28px;
@@ -2668,12 +2680,12 @@ img {
   }
 }
 @media (max-width: 1024px) and (max-width: 360px) {
-  /* line 327, ../../../_dev/scss/pages/decoration.scss */
+  /* line 334, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg {
     height: 94px;
   }
 }
-/* line 354, ../../../_dev/scss/pages/decoration.scss */
+/* line 361, ../../../_dev/scss/pages/decoration.scss */
 #top-alt-bg > div {
   height: 240px;
   display: inline-block;
@@ -2685,7 +2697,7 @@ img {
   width: 240px;
 }
 @media (max-width: 768px) {
-  /* line 354, ../../../_dev/scss/pages/decoration.scss */
+  /* line 361, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg > div {
     background-size: 32vw;
     height: 33vw;
@@ -2693,18 +2705,18 @@ img {
   }
 }
 @media (max-width: 360px) {
-  /* line 354, ../../../_dev/scss/pages/decoration.scss */
+  /* line 361, ../../../_dev/scss/pages/decoration.scss */
   #top-alt-bg > div {
     height: 120px;
     width: 120px;
     background-size: 120px;
   }
 }
-/* line 374, ../../../_dev/scss/pages/decoration.scss */
+/* line 381, ../../../_dev/scss/pages/decoration.scss */
 #top-alt-bg > div:nth-child(1) {
   background-image: url("../images/decoration/top-visual-1.png");
 }
-/* line 377, ../../../_dev/scss/pages/decoration.scss */
+/* line 384, ../../../_dev/scss/pages/decoration.scss */
 #top-alt-bg > div:nth-child(2) {
   background-image: url("../images/decoration/top-visual-2.png");
   position: relative;
@@ -2715,7 +2727,7 @@ img {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 381, ../../../_dev/scss/pages/decoration.scss */
+/* line 388, ../../../_dev/scss/pages/decoration.scss */
 #top-alt-bg > div:nth-child(3) {
   background-image: url("../images/decoration/top-visual-3.png");
   right: 0;
@@ -2847,91 +2859,95 @@ div {
 }
 /* line 72, ../../../_dev/scss/pages/facade.scss */
 #after-stone > div > div {
-  background: url("../images/facade/vertical1.jpg") no-repeat;
   height: 100%;
   max-width: 960px;
   margin: auto;
   min-height: 232px;
+  transition: opacity 0.2s ease;
+  /*opacity: 0.5;
+  &:hover{
+    opacity: 1;
+  }*/
   overflow: auto;
   padding-left: 325px;
 }
-/* line 82, ../../../_dev/scss/pages/facade.scss */
+/* line 87, ../../../_dev/scss/pages/facade.scss */
 #facades section > div {
   background: url("../images/facade/vertical1.jpg") no-repeat;
   border-bottom: solid 1px #e3e3e3;
   margin-top: 40px;
   padding-left: 257px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(1) > div {
   background-position: 0 -96px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(2) > div {
   background-position: 0 -681px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(3) > div {
   background-position: 0 -5979px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(4) > div {
   background-position: 0 -1269px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(5) > div {
   background-position: 0 -1937px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(6) > div {
   background-position: 0 -2673px;
 }
-/* line 91, ../../../_dev/scss/pages/facade.scss */
+/* line 96, ../../../_dev/scss/pages/facade.scss */
 #facades section:nth-child(7) > div {
   background-position: 0 -3375px;
 }
 @media (max-width: 680px) {
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(1) > div {
     background-position: center -96px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(2) > div {
     background-position: center -681px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(3) > div {
     background-position: center -5979px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(4) > div {
     background-position: center -1269px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(5) > div {
     background-position: center -1937px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(6) > div {
     background-position: center -2673px;
   }
-  /* line 99, ../../../_dev/scss/pages/facade.scss */
+  /* line 104, ../../../_dev/scss/pages/facade.scss */
   #facades section:nth-child(7) > div {
     background-position: center -3375px;
   }
 }
-/* line 106, ../../../_dev/scss/pages/facade.scss */
+/* line 111, ../../../_dev/scss/pages/facade.scss */
 #facade .top > div {
   min-height: 530px;
   padding: 0 25px;
 }
 @media (max-width: 966px) {
-  /* line 106, ../../../_dev/scss/pages/facade.scss */
+  /* line 111, ../../../_dev/scss/pages/facade.scss */
   #facade .top > div {
     min-height: inherit;
   }
 }
-/* line 114, ../../../_dev/scss/pages/facade.scss */
+/* line 119, ../../../_dev/scss/pages/facade.scss */
 #facade .top > div > div {
   background-color: #FFF;
   -webkit-border-radius: 6px;
@@ -2954,7 +2970,7 @@ div {
   max-width: 720px;
 }
 @media (max-width: 966px) {
-  /* line 114, ../../../_dev/scss/pages/facade.scss */
+  /* line 119, ../../../_dev/scss/pages/facade.scss */
   #facade .top > div > div {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -2965,17 +2981,17 @@ div {
     margin-bottom: 46px;
   }
 }
-/* line 131, ../../../_dev/scss/pages/facade.scss */
+/* line 136, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty > div > div {
   padding-left: 383px;
 }
 @media (min-width: 967px) {
-  /* line 131, ../../../_dev/scss/pages/facade.scss */
+  /* line 136, ../../../_dev/scss/pages/facade.scss */
   #facade-beauty > div > div {
     background: url("../images/facade/big-stone.jpg") no-repeat;
   }
 }
-/* line 137, ../../../_dev/scss/pages/facade.scss */
+/* line 142, ../../../_dev/scss/pages/facade.scss */
 #facade-work > div.relative {
   height: 363px;
   margin: auto;
@@ -2984,7 +3000,7 @@ div {
   width: 512px;
   z-index: 1;
 }
-/* line 145, ../../../_dev/scss/pages/facade.scss */
+/* line 150, ../../../_dev/scss/pages/facade.scss */
 #facade-work div.substrate {
   background: #000;
   -webkit-border-radius: 6px;
@@ -3002,7 +3018,7 @@ div {
   z-index: -1;
 }
 
-/* line 155, ../../../_dev/scss/pages/facade.scss */
+/* line 160, ../../../_dev/scss/pages/facade.scss */
 #facade .top h1 {
   font: 72px/77px PlumbMedium !important;
   color: white;
@@ -3014,13 +3030,13 @@ div {
   width: 500px;
 }
 @media (max-width: 966px) {
-  /* line 155, ../../../_dev/scss/pages/facade.scss */
+  /* line 160, ../../../_dev/scss/pages/facade.scss */
   #facade .top h1 {
     margin-top: 36px;
     position: static;
   }
 }
-/* line 169, ../../../_dev/scss/pages/facade.scss */
+/* line 174, ../../../_dev/scss/pages/facade.scss */
 #facade-work h1.header-big {
   color: white;
   font: 48px PlumbMedium;
@@ -3028,7 +3044,7 @@ div {
   text-align: center;
 }
 
-/* line 177, ../../../_dev/scss/pages/facade.scss */
+/* line 182, ../../../_dev/scss/pages/facade.scss */
 #facade h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -3037,7 +3053,7 @@ div {
   margin-bottom: 4px;
 }
 
-/* line 187, ../../../_dev/scss/pages/facade.scss */
+/* line 192, ../../../_dev/scss/pages/facade.scss */
 #after-stone h4, #facade-beauty h4 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -3058,19 +3074,19 @@ div {
   }
 }
 
-/* line 197, ../../../_dev/scss/pages/facade.scss */
+/* line 202, ../../../_dev/scss/pages/facade.scss */
 #facade main ul.block li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   margin-bottom: 7px;
 }
 
-/* line 205, ../../../_dev/scss/pages/facade.scss */
+/* line 210, ../../../_dev/scss/pages/facade.scss */
 #after-stone p, #facade-beauty p {
   margin-top: 14px !important;
   padding-right: 25px;
 }
-/* line 209, ../../../_dev/scss/pages/facade.scss */
+/* line 214, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty p {
   margin-bottom: 30px;
 }
@@ -3110,16 +3126,16 @@ div {
     padding-left: 0;
   }
 }
-/* line 213, ../../../_dev/scss/pages/facade.scss */
+/* line 218, ../../../_dev/scss/pages/facade.scss */
 #facade .top p {
   color: #1b1b1b;
   margin: 0;
 }
-/* line 216, ../../../_dev/scss/pages/facade.scss */
+/* line 221, ../../../_dev/scss/pages/facade.scss */
 #facade .top p:last-child {
   margin-top: 30px;
 }
-/* line 221, ../../../_dev/scss/pages/facade.scss */
+/* line 226, ../../../_dev/scss/pages/facade.scss */
 #facade main p.pseudoheader {
   background: url("../images/facade/roofs.png") no-repeat 40px 93px;
   color: #5d534e;
@@ -3130,63 +3146,63 @@ div {
   text-align: center;
   width: 740px;
 }
-/* line 232, ../../../_dev/scss/pages/facade.scss */
+/* line 237, ../../../_dev/scss/pages/facade.scss */
 #facade main section p {
   margin-top: 0;
 }
-/* line 235, ../../../_dev/scss/pages/facade.scss */
+/* line 240, ../../../_dev/scss/pages/facade.scss */
 #facade-work p {
   color: white;
   font: 17px Arial, Helvetica, sans-serif;
   padding: 7px;
 }
-/* line 239, ../../../_dev/scss/pages/facade.scss */
+/* line 244, ../../../_dev/scss/pages/facade.scss */
 #facade-work p:nth-child(2) {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 243, ../../../_dev/scss/pages/facade.scss */
+/* line 248, ../../../_dev/scss/pages/facade.scss */
 #facade-work p:nth-child(3) {
   margin-top: 0;
 }
 
-/* line 249, ../../../_dev/scss/pages/facade.scss */
+/* line 254, ../../../_dev/scss/pages/facade.scss */
 #facade section#facade-work {
   background: url("../images/facade/facade-work.jpg") center;
   background-size: cover;
   height: 560px;
 }
 
-/* line 256, ../../../_dev/scss/pages/facade.scss */
+/* line 261, ../../../_dev/scss/pages/facade.scss */
 #after-stone aside span {
   display: block;
 }
 
-/* line 262, ../../../_dev/scss/pages/facade.scss */
+/* line 267, ../../../_dev/scss/pages/facade.scss */
 #facade #gallery {
   height: 88px;
 }
-/* line 266, ../../../_dev/scss/pages/facade.scss */
+/* line 271, ../../../_dev/scss/pages/facade.scss */
 #facade #work-examples aside {
   margin-bottom: 59px;
 }
 
-/* line 272, ../../../_dev/scss/pages/facade.scss */
+/* line 277, ../../../_dev/scss/pages/facade.scss */
 #facades .header-slim-big {
   font-size: 23px;
   margin-top: 28px;
   text-align: left;
 }
-/* line 277, ../../../_dev/scss/pages/facade.scss */
+/* line 282, ../../../_dev/scss/pages/facade.scss */
 #facades .works-examples {
   margin-top: 13px;
 }
 
-/* line 281, ../../../_dev/scss/pages/facade.scss */
+/* line 286, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty {
   padding-top: 45px;
 }
-/* line 283, ../../../_dev/scss/pages/facade.scss */
+/* line 288, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty aside {
   -webkit-transform: translateY(12px);
   -moz-transform: translateY(12px);
@@ -3194,11 +3210,11 @@ div {
   -o-transform: translateY(12px);
   transform: translateY(12px);
 }
-/* line 286, ../../../_dev/scss/pages/facade.scss */
+/* line 291, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty .header-slim-middle {
   line-height: 32px;
 }
-/* line 289, ../../../_dev/scss/pages/facade.scss */
+/* line 294, ../../../_dev/scss/pages/facade.scss */
 #facade-beauty .works-examples {
   margin-top: 14px;
   margin-bottom: 49px;
@@ -5218,24 +5234,27 @@ body.gallery [id^="slider-mini-"] {
         div.gallery-small
           span
 */
-/* line 10, ../../../_dev/scss/media-queries/subcomponents.scss */
-#after-stone > div:nth-child(1) > div {
-  background-position: 28px -3903px !important;
+/* line 7, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div > div > span {
+  background: url("../images/facade/vertical1.jpg") no-repeat;
+  background-size: 91% 2470%;
 }
-/* line 10, ../../../_dev/scss/media-queries/subcomponents.scss */
-#after-stone > div:nth-child(2) > div {
-  background-position: 28px -4475px !important;
+/* line 13, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div:nth-child(1) > div > span {
+  background-position: 1vw 65.5% !important;
 }
-/* line 10, ../../../_dev/scss/media-queries/subcomponents.scss */
-#after-stone > div:nth-child(3) > div {
-  background-position: 28px -5064px !important;
+/* line 13, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div:nth-child(2) > div > span {
+  background-position: 1vw 75.08% !important;
 }
-/* line 17, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 13, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div:nth-child(3) > div > span {
+  background-position: 1vw 85.04% !important;
+}
+/* line 20, ../../../_dev/scss/media-queries/subcomponents.scss */
 #after-stone .gallery-small > span {
-  background-color: #FF0;
   height: 20vw;
   left: 30vw;
-  opacity: 0.25;
   position: absolute;
   -webkit-transform: translateX(-217px);
   -moz-transform: translateX(-217px);
@@ -5244,88 +5263,87 @@ body.gallery [id^="slider-mini-"] {
   transform: translateX(-217px);
   top: 45px;
   width: 20vw;
-}
-/* line 27, ../../../_dev/scss/media-queries/subcomponents.scss */
-#after-stone .gallery-small > span:hover {
-  opacity: 1;
+  /*&:hover{
+    opacity: 1;
+  }*/
 }
 @media (max-width: 1023px) {
-  /* line 16, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .gallery-small {
     padding-left: 31.5vw;
   }
 }
 @media (max-width: 861px) {
-  /* line 16, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .gallery-small {
     padding-left: 25.5vw;
   }
 }
 @media (max-width: 1023px) {
-  /* line 39, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 42, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .gallery-small .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus {
     width: 788px;
   }
 }
 @media (max-width: 780px) {
-  /* line 39, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 42, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .gallery-small .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus {
     width: 630px;
   }
 }
 
 @media (min-width: 621px) and (max-width: 966px) {
-  /* line 50, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 53, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 66vw;
   }
-  /* line 55, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 58, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 17.76vw;
     width: 20vw;
   }
 }
 @media (min-width: 541px) and (max-width: 620px) {
-  /* line 50, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 53, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 84vw;
   }
-  /* line 64, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 67, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 22.94vw;
     width: 26vw;
   }
 }
 @media (min-width: 425px) and (max-width: 540px) {
-  /* line 50, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 53, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 99.5vw;
   }
-  /* line 72, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 26.9vw;
     width: 30.5vw;
   }
 }
 @media (max-width: 424px) {
-  /* line 50, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 53, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 98.75vw;
   }
-  /* line 80, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 83, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 40.85vw;
     width: 45.5vw;
   }
 }
 @media (max-width: 248px) {
-  /* line 50, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 53, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 100vw;
   }
 }
 
-/* line 94, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 97, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade.container #facade-beauty .gallery-small .sigplus-gallery {
   -webkit-transform: translateX(-114px) translateY(0) scale(0.61);
   -moz-transform: translateX(-114px) translateY(0) scale(0.61);
@@ -5334,7 +5352,7 @@ body.gallery [id^="slider-mini-"] {
   transform: translateX(-114px) translateY(0) scale(0.61);
 }
 @media (max-width: 966px) {
-  /* line 94, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 97, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade.container #facade-beauty .gallery-small .sigplus-gallery {
     -webkit-transform: translateX(-188px) translateY(0) scale(0.61);
     -moz-transform: translateX(-188px) translateY(0) scale(0.61);
@@ -5344,7 +5362,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 966px) {
-  /* line 94, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 97, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade.container #facade-beauty .gallery-small .sigplus-gallery {
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -5352,7 +5370,7 @@ body.gallery [id^="slider-mini-"] {
     -o-transform: scale(0.75);
     transform: scale(0.75);
   }
-  /* line 102, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 105, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade.container #facade-beauty .gallery-small .sigplus-gallery > div {
     position: relative;
     left: 50%;
@@ -5363,7 +5381,7 @@ body.gallery [id^="slider-mini-"] {
     transform: translateX(-50%);
   }
 }
-/* line 107, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 110, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade.container #after-stone .gallery-small .sigplus-gallery {
   float: left;
   -webkit-transform: translateX(-19.5%) translateY(0) scale(0.61);
@@ -5372,7 +5390,7 @@ body.gallery [id^="slider-mini-"] {
   -o-transform: translateX(-19.5%) translateY(0) scale(0.61);
   transform: translateX(-19.5%) translateY(0) scale(0.61);
 }
-/* line 111, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 114, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facades .gallery-small .sigplus-gallery {
   -webkit-transform: translateX(-134px) translateY(0) scale(0.61);
   -moz-transform: translateX(-134px) translateY(0) scale(0.61);
@@ -5382,35 +5400,35 @@ body.gallery [id^="slider-mini-"] {
 }
 
 @media (max-width: 966px) {
-  /* line 117, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 120, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .header-slim-middle {
     text-align: center;
   }
 }
-/* line 122, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 125, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade-beauty aside {
   margin-bottom: 16px;
 }
 @media (max-width: 768px) {
-  /* line 126, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 129, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 788px !important;
   }
 }
 @media (max-width: 640px) {
-  /* line 126, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 129, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 630px !important;
   }
 }
 @media (max-width: 540px) {
-  /* line 126, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 129, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 630px !important;
   }
 }
 @media (max-width: 424px) {
-  /* line 126, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 129, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     -webkit-transform: translateX(-50%) scale(0.85);
     -moz-transform: translateX(-50%) scale(0.85);
@@ -5420,7 +5438,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 424px) {
-  /* line 126, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 129, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     -webkit-transform: translateX(-50%) scale(1);
     -moz-transform: translateX(-50%) scale(1);

@@ -58,6 +58,13 @@ aside{
   }
 }
 div{
+  $i:1;
+  @each $top in 3903,4475,5064{ // 0,-5850,-1173,-1841,-2575,-3277,
+    #after-stone >div:nth-child(#{$i}) >&{
+      background-position: 28px #{-$top}px !important;
+    }
+    $i:$i+1;
+  }
   #decoration .top &{//.relative
     background-image: url($images_dir + 'decoration/decoration-top.png');
     background-repeat: no-repeat;
