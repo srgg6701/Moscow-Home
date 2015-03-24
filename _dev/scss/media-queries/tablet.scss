@@ -472,8 +472,8 @@ $hSlider:430px;
   #facade-beauty{
     .gallery-small{
       margin-top: 5px;
-      padding-left: $edge-mobile;
-      padding-right: $edge-mobile;
+      padding-left: 0;//$edge-mobile;
+      padding-right: 0;//$edge-mobile;
     }
   }
 }
