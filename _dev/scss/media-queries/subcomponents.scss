@@ -1,14 +1,29 @@
-
+/*  div#after-stone
+      div
+        div.gallery-small
+          span
+*/
 #after-stone {
+
+  $i:1;
+  @each $top in 3903,4475,5064{ // 232x6200 // 0,-5850,-1173,-1841,-2575,-3277,
+     >div:nth-child(#{$i}) >div{ // .gallery-small
+      background-position: 28px #{-$top}px !important;
+    }
+    $i:$i+1;
+  }
+
   .gallery-small {
     >span{
-      position: absolute;
-      left: 25px;
-      top: 54px;
-      width: 19vw;
-      height: 19vw;
+      $img-size: 20vw;//18.2vw; - без припуска
       background-color: #FF0;
+      height: $img-size;
+      left: 30vw;
       opacity: 0.25;
+      position: absolute;
+      @include transform(translateX(-217px)); //-204px
+      top: 45px;//52px;
+      width: $img-size;
       &:hover{
         opacity: 1;
       }
@@ -79,7 +94,7 @@
   #facade.container #facade-beauty .gallery-small &{
     // отступ и масштаб по умолчанию
     @include trnsf(-114px);
-    @media (min-width:$resolution-go-mobile966 + 1) {
+    @media /*(min-width:$resolution-go-mobile966 + 1) and*/ (max-width: $resolution-go-mobile966){//$resolution-small-desktop
       @include trnsf(-188px); //transform(scale(0.61));
     }
     @media (max-width:$resolution-go-mobile966) {
