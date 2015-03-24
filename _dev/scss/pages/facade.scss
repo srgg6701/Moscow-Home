@@ -4,13 +4,39 @@
       $p1:padding-right;
       $p2:padding-left;
       $o1:342px;
-      $o2:304px;
-      @if($index>0){
+      $o2:342px;
+      @if($index==0){ // p
+        border-bottom: $border-btn;
+        background:url($images_dir + 'facade/mob-second-section.jpg') no-repeat;
+        $vcorrect:26;
+        margin-bottom: 40px;
+        margin-top: -76px !important;
+        padding-top: 92px;
+        &:nth-child(2){
+          background-position: 0 35px;
+          min-height: 258px + $vcorrect;
+        }
+        &:nth-child(4){
+          background-position: 100% -390px;
+          min-height: 235px + $vcorrect;
+        }
+        &:nth-child(6){
+          background-position: 0 -627px;
+          min-height: 256px + $vcorrect;
+        }
+        &:nth-child(8){
+          background-position: 100% -1031px;
+          min-height: 288px + $vcorrect;
+        }
+
         $p1:padding-left;
         $p2:padding-right;
         $o3:$o1;
         $o1:$o2;
         $o2:$o3;
+      }
+      @else{
+        padding-top:12px;
       }
       #{$p1}: $o1;
       &:nth-child(4n + #{$index}) {
@@ -22,17 +48,8 @@
 }
 
 aside{
-  #after-stone &{
-    position: absolute;
-  }
-  #after-stone >div:nth-child(1) &{
-    top:168px;
-  }
-  #after-stone >div:nth-child(2) &{
-    top:211px;
-  }
-  #after-stone >div:nth-child(3) &{
-    top:214px;
+  #after-stone .gallery-small &{
+    position:relative;
   }
 }
 div{
@@ -40,17 +57,11 @@ div{
     border-bottom: solid 1px white;
     overflow: hidden !important;
     padding-top: 51px;
+    padding-bottom: 22px;
     position: relative;
+
     $imgs-facade:$images_dir + 'backgrounds/';
-    &:nth-child(1){
-      height: 396px;
-    }
-    &:nth-child(2){
-      height: 436px;
-    }
-    &:nth-child(3){
-      height: 447px;
-    }
+
     &:nth-child(even){
       background: url($imgs-facade + 'tile-facade-light.png');
     }
@@ -61,10 +72,11 @@ div{
   #after-stone >div >&{
     background: url($images_dir + "facade/vertical1.jpg") no-repeat;
     height: 100%;
+    max-width: $max-width-container;
     margin: auto;
-    min-height: 250px;
+    min-height: 232px;
+    overflow: auto;
     padding-left: 325px;
-    width: $max-width-container;
   }
 
   #facades section >&{
@@ -72,20 +84,12 @@ div{
     border-bottom: solid 1px #e3e3e3;
     margin-top: 40px;
     padding-left: 257px;
-    padding-right: 120px;
   }
 
   $i:1;
   @each $offset in 96,681,5979,1269,1937,2673,3375{
     #facades section:nth-child(#{$i}) >&{
       background-position: 0 -#{$offset}px;
-    }
-    $i:$i+1;
-  }
-  $i:1;
-  @each $height in 380,268,270,288,266,262,287{
-    #facades section:nth-child(#{$i}) >&{
-      height: #{$height}px;
     }
     $i:$i+1;
   }

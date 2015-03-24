@@ -395,11 +395,12 @@ function setVisible(div){ //console.log('setVisible called');
         index=$(div).index();
     }
     sections=$('section',container);
-    //console.group('element index '+index); console.dir(sections);
+    //console.groupCollapsed('element index '+index+', все секции:'); console.dir(sections);
     $(sections).removeClass(visibleClass); // visible
-    if(index)
+    // Не мобильная версия
+    if(index||index===0){ //console.log('Active submenu: '); console.dir($(sections).eq(index));
         $(sections).eq(index).addClass(visibleClass);
-    else{
+    }else{
         //console.dir(nextSection);
         $(nextSection).addClass(visibleClass);
     } //console.dir($(sections).eq(index)); console.groupEnd();

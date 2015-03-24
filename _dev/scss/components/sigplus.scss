@@ -65,23 +65,14 @@ img {
     display: none !important;
   }
 }
-.sigplus-gallery ul>li>div>.captionplus>a>img{
-  @include box-shadow(-4px 0px 0px 6px #FFF);
-}
 .sigplus-gallery{
   @include no-select;
   &.sigplus-center{
     display: table;
     margin: auto;
   }
-  @mixin trnsf($x:-306px,$y:-30px,$s:0.61){
-    @include transform(translateX($x) translateY($y) scale($s));
-  }
-  .gallery-small &{
-    @include trnsf;    //@include transform(scale(0.61) translateX(-306px) translateY(-30px));
-  }
-  #facade.container .gallery-small &{
-    @include trnsf(-114px);//transform(scale(0.61) translateX(-306px) translateY(-30px));
+  ul>li>div>.captionplus>a>img{
+    @include box-shadow(-4px 0px 0px 6px #FFF);
   }
 }
 .slideplus-paging {

@@ -1,0 +1,129 @@
+
+#after-stone {
+  .gallery-small {
+    >span{
+      position: absolute;
+      left: 25px;
+      top: 54px;
+      width: 19vw;
+      height: 19vw;
+      background-color: #FF0;
+      opacity: 0.25;
+      &:hover{
+        opacity: 1;
+      }
+    }
+    @media (max-width: $resolution-small-desktop - 1){
+      // см. @media (max-width:861px) ниже
+      padding-left: 31.5vw;
+    }
+    @media (max-width:861px){
+      padding-left: 25.5vw;
+    }
+    // mini-slider box. Ширина (через шаг) определяет количество картинок
+    .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus {
+      @media (max-width: $resolution-small-desktop - 1){
+        width: 788px; // 5
+      }
+      @media (max-width:$resolution-tablet780){
+        width: 630px; // 4
+      }
+    }
+  }
+}
+
+#level1 .slider-bottom .slides {
+  // от 541 до 966
+  @media (min-width: $resolution-tablet-small620 + 1) and (max-width: $resolution-go-mobile966) {
+    //background-color: orange;
+    width: 66vw;
+    a img {
+      height: 17.76vw;
+      width: 20vw;
+    }
+  }
+  // от 541 до 620
+  @media (min-width: $resolution-phone540 + 1) and (max-width: $resolution-tablet-small620) {
+    width: 84vw;
+    //background-color: brown;
+    a img {
+      height: 22.94vw;
+      width: 26vw;
+    }
+  }
+  // от 425 до 540
+  @media (min-width: $resolution-phone424 + 1) and (max-width: $resolution-phone540) {
+    width: 99.5vw;
+    a img {
+      height: 26.9vw;
+      width: 30.5vw;
+    }
+  }
+  // от самого маленького до 424
+  @media (max-width: $resolution-phone424){
+    width: 98.75vw;
+    a img {
+      height: 40.85vw;
+      width: 45.5vw;
+    }
+  }
+  @media (max-width:248px){
+    width: 100vw;
+  }
+}
+
+.sigplus-gallery{
+  @mixin trnsf($x:-306px,$y:0,$s:0.61){
+    @include transform(translateX($x) translateY($y) scale($s));
+  }
+  #facade.container #facade-beauty .gallery-small &{
+    // отступ и масштаб по умолчанию
+    @include trnsf(-114px);
+    @media (min-width:$resolution-go-mobile966 + 1) {
+      @include trnsf(-188px); //transform(scale(0.61));
+    }
+    @media (max-width:$resolution-go-mobile966) {
+      @include transform(scale(0.75));
+      >div{
+        @include centered-horizontal;
+      }
+    }
+  }
+  #facade.container #after-stone .gallery-small &{
+    float: left;
+    @include trnsf(-19.5%);//(-184px); // translateX
+  }
+  #facades .gallery-small &{
+    @include trnsf(-134px);
+  }
+}
+
+#facade-beauty{
+  .header-slim-middle{
+    @media (max-width:$resolution-go-mobile966) {
+      text-align: center;
+    }
+  }
+  aside{
+    margin-bottom: 16px;
+  }
+
+  .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus{
+    @media (max-width:$resolution-tablet768){
+      width: 788px !important;
+    }
+    @media (max-width:640px){
+      width: 630px !important;
+    }
+    @media (max-width:$resolution-phone540){
+      width: 630px !important;
+    }
+    @media (max-width:$resolution-phone424){
+      @include transform(translateX(-50%) scale(0.85));
+    }
+    @media (max-width:$resolution-phone424){
+      @include transform(translateX(-50%) scale(1));
+      width: 318px !important;
+    }
+  }
+}

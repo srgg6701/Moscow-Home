@@ -146,10 +146,11 @@
 // ВНИМАНИЕ! При ширине экрана <=966 (tablet)
 // с body.no-overflow снимается блокировка прокрутки (см. ниже)
 $hSlider:430px;
-@media (max-width: $resolution-small-desktop - 1){
-  header{
+@media (max-width: $resolution-small-desktop - 1) {
+  header {
     nav {
-      > div { // внутренние псевдоменю
+      > div {
+        // внутренние псевдоменю
         &:nth-child(1) {
           // menu
           top: 0;
@@ -190,19 +191,20 @@ $hSlider:430px;
         }
       }
     }
-    > .menu.wide { // внутренние тексты для псевдоменю
-      > section{
+    > .menu.wide {
+      // внутренние тексты для псевдоменю
+      > section {
         //margin-top: 55px;//83px;
         /*h4{
           display: none;
         }*/
-        &:nth-child(4){
+        &:nth-child(4) {
           margin-top: 23px;
-          h4{
+          h4 {
             display: inherit;
           }
         }
-        > div{
+        > div {
           max-width: 100%;
         }
         &:nth-child(1) > div {
@@ -211,8 +213,8 @@ $hSlider:430px;
           > aside {
             margin-left: 0;
             width: 100%;
-            >section{
-              &:not(.visible){
+            > section {
+              &:not(.visible) {
                 display: none;
               }
             }
@@ -222,15 +224,15 @@ $hSlider:430px;
     }
   }
   .slides {
-    aside{
-      .btn{
+    aside {
+      .btn {
         height: 3.5vw;
         font-size: 1.3vw;
         margin-left: 1.15vw !important;
         width: 11.8vw !important;
       }
     }
-    img,aside {
+    img, aside {
       height: 12.43vw;
       width: 14vw;
     }
@@ -469,54 +471,12 @@ $hSlider:430px;
 
   #facade-beauty{
     .gallery-small{
+      margin-top: 5px;
       padding-left: $edge-mobile;
       padding-right: $edge-mobile;
     }
   }
 }
-
-#level1 .slider-bottom .slides {
-  // от 541 до 966
-  @media (min-width: $resolution-tablet-small620 + 1) and (max-width: $resolution-go-mobile966) {
-    //background-color: orange;
-    width: 66vw;
-    a img {
-      height: 17.76vw;
-      width: 20vw;
-    }
-  }
-  // от 541 до 620
-  @media (min-width: $resolution-phone540 + 1) and (max-width: $resolution-tablet-small620) {
-    width: 84vw;
-    //background-color: brown;
-    a img {
-      height: 22.94vw;
-      width: 26vw;
-    }
-  }
-  // от 425 до 540
-  @media (min-width: $resolution-phone424 + 1) and (max-width: $resolution-phone540) {
-    width: 99.5vw;
-    //background-color: #0088ff;
-    a img {
-      height: 26.9vw;
-      width: 30.5vw;
-    }
-  }
-  // от самого маленького до 424
-  @media (max-width: $resolution-phone424){
-    width: 98.75vw;
-    //background-color: lightgreen;
-    a img {
-      height: 40.85vw;
-      width: 45.5vw;
-    }
-  }
-  @media (max-width:248px){
-    width: 100vw;
-  }
-}
-
 // <=768
 @media (max-width:$resolution-tablet768){
   @mixin img-params-limited{
