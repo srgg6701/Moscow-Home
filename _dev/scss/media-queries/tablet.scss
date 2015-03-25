@@ -444,27 +444,14 @@ $hSlider:430px;
   }
 
   #facades{
-    @include column-count(2);
-    @media (max-width:$resolution-tablet-medium680){
-      @include column-count(1);
+    @media (min-width:$resolution-tablet-medium680 + 1){
+      @include column-count(2);
     }
     margin: auto $edge-mobile;
     .header-slim-big {
       display: none;
       &+div{
         display: none;
-      }
-    }
-    >section{
-      @include column-break-inside(avoid);
-      >div{
-        height: inherit !important;
-        margin-bottom: 20px;
-        margin-top: 0;
-        padding:240px 0 0;
-        h2{
-          text-align: center;
-        }
       }
     }
   }

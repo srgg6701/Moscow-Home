@@ -89,13 +89,6 @@ div{
     padding-left: 325px;
   }
 
-  #facades section >&{
-    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-    border-bottom: solid 1px #e3e3e3;
-    margin-top: 40px;
-    padding-left: 257px;
-  }
-
   $i:1;
   @each $offset in 96,681,5979,1269,1937,2673,3375{
     #facades section:nth-child(#{$i}) >&{
@@ -144,26 +137,6 @@ div{
     }
     padding-left: 383px;
   }
-  #facade-work >&.relative{
-    min-height: 363px;
-    margin: auto;
-    padding: 16px;
-    top: 112px;
-    max-width: 512px;
-    z-index: 1;
-  }
-  #facade-work &.substrate{
-    background: #000;
-    @include border-radius(6px);
-    @include opacity(0.1);
-    position: absolute;
-    top:0; right:0; bottom: 0; left: 0;
-    z-index: -1;
-    @media (max-width:$resolution-phone360){
-      left: -30px;
-      right: -30px;
-    }
-  }
 }
 h1{
   #facade .top &.header-big{
@@ -188,13 +161,17 @@ h1{
       width: 180px;
     }
   }
-  #facade-work &.header-big{
+  #facade-work  &.header-big {
     color: white;
     font: $font-header-big-default PlumbMedium;
     margin: 0;
     text-align: center;
+    @media (max-width: $resolution-phone424) {
+      font-size: 24px !important;
+    }
   }
 }
+
 h2{
   #facade &{
     color: $color-dark-common;
@@ -251,35 +228,13 @@ p{
   #facade main section &{
     margin-top: 0;
   }
-  #facade-work &{
-    color: white;
-    font: 17px $font-second;
-    padding: 7px;
-    &:nth-child(2){
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-    &:nth-child(3){
-      margin-top: 0;
-    }
-  }
 }
-section{
-  #facade &#facade-work{
-    background: url($images_dir + 'facade/facade-work.jpg') center;
-    background-size: cover;
-    @media (max-width:$resolution-phone360){
-      background-position: -618px 0;
-    }
-    min-height: 560px;
-  }
-}
+
 span{
   #after-stone aside &{
     display: block;
   }
 }
-
 #facade{
   #gallery{
     height: 88px;
@@ -287,6 +242,68 @@ span{
   #work-examples{
     aside{
       margin-bottom: 59px;
+    }
+  }
+}
+#facade-work{
+   background: url($images_dir + 'facade/facade-work.jpg') center;
+   background-size: cover;
+   @media (max-width:$resolution-phone424){
+     background-size: 400vw 159.7vw;
+     background-position: -65% 0;
+     padding: 0;
+     position: relative;
+   }
+   @media (min-width:$resolution-phone424 + 1){
+     min-height: 560px;
+   }
+  >div.relative{
+    min-height: 363px;
+    margin: auto;
+    padding: 16px;
+    top: 9vw;
+    max-width: 512px;
+    z-index: 1;
+    @media (max-width:$resolution-phone424){
+      bottom: 30px;
+      padding-bottom: 52px;
+      padding-top: 52px;
+      position: static !important;
+      top: 30px;
+      .substrate{
+        z-index: 0;
+      }
+    }
+    p{
+      color: white;
+      font: 17px $font-second;
+      padding: 7px;
+      @media (max-width:$resolution-phone424){
+        font-size: 14px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      &:nth-child(2){
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      &:nth-child(3){
+        margin-top: 0;
+      }
+    }
+  }
+  .substrate{
+    background: #000;
+    @include border-radius(6px);
+    @include opacity(0.1);
+    position: absolute;
+    top:0; right:0; bottom: 0; left: 0;
+    z-index: -1;
+    @media (max-width:$resolution-phone424){
+      bottom: 30px;
+      left: -30px;
+      right: -30px;
+      top: 30px;
     }
   }
 }
@@ -298,6 +315,101 @@ span{
   }
   .works-examples{
     margin-top: 13px;
+  }
+  >section {
+    @media (max-width:$resolution-go-mobile966){
+      @include column-break-inside(avoid);
+      >div{
+        height: inherit !important;
+        margin-bottom: 20px;
+        margin-top: 0;
+        padding-bottom: 0;
+        //padding:240px;
+        padding-left: 0 !important;
+        padding-right: 0;
+        h2{
+          text-align: center;
+        }
+      }
+    }
+    >div.gallery-small{
+      //background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+      border-bottom: solid 1px #e3e3e3;
+      margin-top: 40px;
+      padding-left: 257px;
+      position: relative;
+      @media (max-width:$resolution-go-mobile966){
+        border-bottom: none;
+        height: auto;
+        margin-top: 0;
+        padding-top: 0;
+      }
+      @media (max-width:$resolution-tablet-medium680){
+        p,ul{
+          text-align: center;
+        }
+      }
+      span{
+        background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+        //background-position: center;
+        background-repeat: no-repeat;
+        background-size: 232px 2480%;
+        height:250px;
+        left:0;
+        position: absolute;
+        top:0;
+        width: 250px;
+        @media (max-width:$resolution-go-mobile966){
+          background-size: 25vw 2480%;
+          height: 27.5vw;
+          display: block;
+          margin: auto;
+          position: static;
+          width: 27.5vw;
+        }
+        //opacity: 0.5;
+        //background-color: yellow;
+        //border:dotted 1px;
+        /*&:hover{
+          opacity: 1;
+        }*/
+      }
+    }
+    &:nth-child(1){
+      span{
+        background-position: 13px 1.4% !important;
+      }
+    }
+    &:nth-child(2){
+      span{
+        background-position: 13px 11.15% !important;
+      }
+    }
+    &:nth-child(3){
+      span{
+        background-position: 13px 100.25% !important;
+      }
+    }
+    &:nth-child(4){
+      span{
+        background-position: 13px 21.16% !important;
+      }
+    }
+    &:nth-child(5){
+      span{
+        background-position: 13px 32.35% !important;
+      }
+    }
+    &:nth-child(6){
+      span{
+        background-position: 13px 44.7% !important;
+      }
+    }
+    &:nth-child(7){
+      span{
+        background-position: 13px 56.5% !important;
+      }
+    }
   }
 }
 #facade-beauty{
