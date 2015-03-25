@@ -127,16 +127,7 @@
 .header-slim-big{
   font-family: PlumbLight;
   font-size: 36px;
-  @media (max-width:540px){
-    font-size: 18px;
-  }
   text-transform: uppercase;
-  .do-it &{
-    color: white;
-    @media (max-width:$resolution-tablet-small620){
-      max-width: 76vw;
-    }
-  }
   .container &{
     text-align: center;
   }
@@ -195,15 +186,6 @@ a.print, button.print{
 }
 .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
   display: block;
-  /*.slideplus{
-    width: 100% !important;
-    #facade.container &{
-      width: inherit !important;
-    }
-    #facade.container #work-examples &{
-      width: 100% !important;
-    }
-  }*/
 }
 
 .slider-bottom{

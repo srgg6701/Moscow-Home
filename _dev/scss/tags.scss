@@ -128,16 +128,13 @@ div{
     width: 72vw;
     z-index: 4;
   }
-  .do-it &{
+  .do-it div{
     &.phone-number{
       float: left;
       font-family: PlumbMedium;
       font-size: 36px;
       margin-right: 2px;
       margin-left: 32px;
-      @media (max-width:540px){
-        font-size: 24px;
-      }
     }
   }
   .slider-bottom >&{

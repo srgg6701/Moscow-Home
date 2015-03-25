@@ -195,7 +195,7 @@ span{
 $inner-width:92.5vw;
 #decoration{
   $breakpoint1:$resolution-small-desktop;
-  $breakpoint2:680px;
+  $breakpoint2:$resolution-tablet-medium680;
   @media (max-width:$breakpoint1){
     main{
       @media (min-width:$resolution-tablet768){

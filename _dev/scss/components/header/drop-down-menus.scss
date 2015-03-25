@@ -73,6 +73,7 @@ div{
       height: 70px;
       left: 0;
       margin-bottom: 0;
+      max-width: 100%;
       position: absolute;
       width: 100%;
       z-index: 0;
@@ -224,6 +225,7 @@ section{
     padding: 22px 24px 26px;
     &:nth-child(4){
       background: url($images_dir + "backgrounds/tile-contacts.png");
+      position: relative;
     }
   }
 }

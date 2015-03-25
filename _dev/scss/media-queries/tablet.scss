@@ -445,7 +445,7 @@ $hSlider:430px;
 
   #facades{
     @include column-count(2);
-    @media (max-width:680px){
+    @media (max-width:$resolution-tablet-medium680){
       @include column-count(1);
     }
     margin: auto $edge-mobile;

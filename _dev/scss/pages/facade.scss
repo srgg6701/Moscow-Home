@@ -103,7 +103,7 @@ div{
     }
     $i:$i+1;
   }
-  @media (max-width:680px){
+  @media (max-width:$resolution-tablet-medium680){
     $i:1;
     @each $offset in 96,681,5979,1269,1937,2673,3375{
       #facades section:nth-child(#{$i}) >&{
@@ -145,11 +145,11 @@ div{
     padding-left: 383px;
   }
   #facade-work >&.relative{
-    height: 363px;
+    min-height: 363px;
     margin: auto;
     padding: 16px;
     top: 112px;
-    width: 512px;
+    max-width: 512px;
     z-index: 1;
   }
   #facade-work &.substrate{
@@ -159,21 +159,33 @@ div{
     position: absolute;
     top:0; right:0; bottom: 0; left: 0;
     z-index: -1;
+    @media (max-width:$resolution-phone360){
+      left: -30px;
+      right: -30px;
+    }
   }
 }
 h1{
-  #facade .top &{
-    font: 72px/77px PlumbMedium !important;
+  #facade .top &.header-big{
+    font-family: PlumbMedium;
+    font-size: 72px !important;
+    line-height: 77px;
     color: white;
     margin: auto;
     position: relative;
     text-align: center;
     @include text-shadow(2px 2px 2px #999);
     top: 51px;
-    width: 500px;
+    max-width: 500px;
     @media (max-width:$resolution-go-mobile966){
       margin-top: 36px;
       position: static;
+    }
+    @media (max-width:$resolution-tablet-small620){
+      font-size: 24px !important;
+      line-height: 28px !important;
+      margin-bottom: -14px;
+      width: 180px;
     }
   }
   #facade-work &.header-big{
@@ -256,7 +268,10 @@ section{
   #facade &#facade-work{
     background: url($images_dir + 'facade/facade-work.jpg') center;
     background-size: cover;
-    height: 560px;
+    @media (max-width:$resolution-phone360){
+      background-position: -618px 0;
+    }
+    min-height: 560px;
   }
 }
 span{
@@ -287,6 +302,9 @@ span{
 }
 #facade-beauty{
   padding-top: 45px;
+  @media (max-width:$resolution-tablet-small620){
+    padding-top: 20px;
+  }
   aside{
     @include transform(translateY(12px));
   }

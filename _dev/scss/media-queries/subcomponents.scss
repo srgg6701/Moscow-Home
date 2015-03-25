@@ -5,51 +5,68 @@
 */
 #after-stone {
   padding: 0;
-  >div >div >span{
-    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-    background-size: 91% 2470%;
-    @media (max-width:768px - 1){
-      margin-left: 15px;
-      @include transform(translateX(-175px));
+  >div{
+    $i:1;
+    @each $top in 65.5%,75.08%,85.04%{ // 232x6200 // 0,-5850,-1173,-1841,-2575,-3277,
+      &:nth-child(#{$i}) >.gallery-small >span { // .gallery-small
+        background-position: 1vw #{$top}  !important;
+      }
+      $i:$i+1;
     }
-  }
-  $i:1;
-  @each $top in 65.5%,75.08%,85.04%{ // 232x6200 // 0,-5850,-1173,-1841,-2575,-3277,
-     >div:nth-child(#{$i}) >div >span { // .gallery-small
-      background-position: 1vw #{$top}  !important;
+    @media (max-width:$resolution-tablet-medium680) {
+      padding: 20px 15px 0;
     }
-    $i:$i+1;
-  }
-
-  .gallery-small {
-    >span{
-      $img-size: 20vw;//18.2vw; - без припуска
-      height: $img-size;
-      position: absolute;
-      //@media (max-width:$resolution-small-desktop){
+    .gallery-small{
+      @media (max-width: $resolution-small-desktop - 1){
+        // см. @media (max-width:861px) ниже
+        padding-left: 31.5vw;
+      }
+      @media (max-width:861px){
+        padding-left: 25.5vw;
+      }
+      @media (max-width:$resolution-small-desktop){
+        padding-left: 30vw;
+      }
+      @media (max-width:$resolution-tablet-medium680){
+          padding-left: 0;
+          text-align: center;
+      }
+      >span:first-child{
+        background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+        background-size: 91% 2470%;
+        $img-size: 20vw;//18.2vw; - без припуска
+        height: $img-size;
+        position: absolute;
         left: 30vw;
         @include transform(translateX(-217px)); //-204px
-      //}
-      top: 45px;//52px;
-      width: $img-size;
-      /*&:hover{
-        opacity: 1;
-      }*/
-    }
-    @media (max-width: $resolution-small-desktop - 1){
-      // см. @media (max-width:861px) ниже
-      padding-left: 31.5vw;
-    }
-    @media (max-width:861px){
-      padding-left: 25.5vw;
-    }
-    // mini-slider box. Ширина (через шаг) определяет количество картинок
-    .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus {
-      @media (max-width: $resolution-small-desktop - 1){
-        width: 788px; // 5
+        top: 45px;//52px;
+        width: $img-size;
+        @media (max-width:768px - 1){
+          margin-left: 15px;
+          @include transform(translateX(-175px));
+        }
+        @media (max-width:$resolution-tablet-medium680){
+          $imgSize:126px;
+          display: block;
+          height: $imgSize;
+          left: 50%;
+          margin-bottom: 10px;
+          margin-left: 0;
+          position: relative;
+          top: 0;
+          @include transform(translateX(-50%));
+          width: $imgSize;
+        }
       }
-      @media (max-width:$resolution-tablet780){
-        width: 630px; // 4
+      @media (max-width:$resolution-tablet-medium680) {
+        h4 {
+          margin: auto;
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+        p {
+          padding-right: 0;
+        }
       }
     }
   }
@@ -132,26 +149,98 @@
   aside{
     margin-bottom: 16px;
   }
+  @media (max-width:$resolution-tablet-small620){
+    .gallery-small{
+      h4{
+        font-size: 19.5px;
+        line-height: 20.5px;
+        //margin-top: 240px;
+
+        margin-bottom: 15px;
+
+        padding-left: $edge-mobile !important;
+        padding-right: $edge-mobile !important;
+
+        text-align: center;
+        width:100% !important;
+
+        //color:red;
+        >span:first-child{
+          background-image: url($images_dir + 'facade/facade-beauty.jpg');
+          background-repeat: no-repeat;
+          display: block;
+        }
+        &:nth-child(1){
+          span{
+            &:first-child{
+              background-position: center 0px;
+              //background-color: aquamarine;
+              height: 125px;
+            }
+          }
+        }
+        &:nth-child(3){
+          span{
+            &:first-child{
+              background-position: center -181px;
+              //background-color: #b1c4db;
+              height: 118px;
+            }
+          }
+        }
+        &:nth-child(5){
+          span{
+            &:first-child{
+              background-position: center -349px;
+              //background-color: #c4de95;
+              height: 186px;
+            }
+          }
+        }
+        &:nth-child(7){
+          span{
+            &:first-child{
+              background-position: center -550px;
+              //background-color: #4d90fe;
+              height: 216px;
+            }
+          }
+        }
+      }
+    }
+    .gallery-small{
+      p{
+        background-image: none;
+        //background-position: center 140px !important;
+        line-height: 17px;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+        min-height: inherit !important;
+        padding-bottom: 18px !important;
+        padding-left: 25px !important;
+        padding-top: 0 !important;
+        padding-right: 25px !important;
+        text-align: center;
+      }
+    }
+  }
+
 }
 
 // Блоки с ротаторами картинок
-/*  #facades
-      7 блоков ─ скрываются, начиная с 966
-    #work-examples
-      1 блок ─ примеры работ кровли
-    #facade-beauty
-      1 блок ─ ПРИМЕРЫ РАБОТ: ОФОРМЛЕНИЕ ФАСАДА КАМНЕМ
-    #after-stone
-      3 блока
+/*  #facades:       7 блоков ─ скрываются, начиная с 966
+    #work-examples: 1 блок ─ примеры работ кровли
+    #facade-beauty: 1 блок (средний) ─ ПРИМЕРЫ РАБОТ: ОФОРМЛЕНИЕ ФАСАДА КАМНЕМ
+    #after-stone:   3 блока, маленькие
 */
 .slideplus{
-  width: 100% !important;
-  /*#facade.container &{
-    width: inherit !important;
-  }*/
-  #facade.container #work-examples &{
-    width: 100% !important;
-  }
+  $boxMax6:948px;
+  $boxBig5:788px;
+  $boxMiddle4:630px;
+  $boxSmall3:474px;
+  $boxMini:318px;
+  $boxSingle:158px;
+
   @mixin sigplus-settings{
     //border: solid 1px red;
     @media (max-width:$resolution-tablet768){
@@ -164,21 +253,72 @@
       width: 630px !important;
     }
   }
+  width: 100% !important;
+  #facade.container #work-examples &{
+    width: 100% !important;
+  }
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus &{
-    /*@media (min-width:$resolution-phone424){
-      @include transform(translateX(-50%) scale(0.85));
-    }*/
     @media (max-width:$resolution-go-mobile966) {
       @include centered-horizontal;
     }
-    @media (max-width:$resolution-phone424){
-      @include transform(translateX(-50%) scale(1));
-      width: 318px !important;
+    @media (max-width:$resolution-tablet768){
+      width: $boxBig5 !important;
     }
-    @include sigplus-settings;
+    @media (max-width:640px){
+      width: $boxMiddle4 !important;
+    }
+    @media (max-width:$resolution-phone540){
+      width: $boxSmall3 !important;
+    }
+    @media (max-width:$resolution-phone360){
+      @include transform(translateX(-50%) scale(1));
+      width: $boxMini !important;
+    }
   }
   #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus &{
     @include transform(scale(0.85) translateX(-84px));
     @include sigplus-settings;
   }
 }
+
+.header-slim-big{
+  @media (max-width:$resolution-phone540){
+    font-size: 18px;
+  }
+  .do-it &{
+    color: white;
+    @media (max-width:$resolution-tablet-small620){
+      max-width: 76vw;
+    }
+  }
+
+  #facade .do-it &{
+    @media (max-width:$resolution-tablet-small620){
+      font-size: 18px;
+    }
+  }
+}
+.do-it {
+
+  @media (max-width: $resolution-phone540) {
+    .phone-number {
+      font-size: 24px !important;
+    }
+    button{
+      margin-top: 10px;
+    }
+  }
+  #facade {
+    @media (max-width:$resolution-tablet-small620){
+      .phone-number {
+        font-size: 24px !important;
+      }
+      button{
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+
+
