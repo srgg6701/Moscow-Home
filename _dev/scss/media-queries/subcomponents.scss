@@ -22,7 +22,10 @@
       центрировании невозможно */
       aside {
         > div:nth-child(2) {
-        @include transform(scale(0.85) translateX(-8.75%));
+        margin: auto;
+        @media (max-width:$resolution-tablet-medium680){
+          @include transform(scale(0.75));
+        }
       }
     }
     .gallery-small{
@@ -135,14 +138,17 @@
     }
     @media (max-width:$resolution-go-mobile966) {
       @include transform(scale(0.75));
-      /*>div.sigplus{
-        @include centered-horizontal;
-      }*/
     }
   }
   #facade.container #after-stone .gallery-small &{
     float: left;
-    @include trnsf(-19.5%);//(-184px); // translateX
+    @media (min-width:$resolution-tablet-medium680 + 1){
+      @include trnsf(-19.5%);
+    }
+    @media (max-width:$resolution-tablet-medium680){
+      @include transform(none);
+      float: none;
+    }
   }
   #facades .gallery-small &{
     @include trnsf(-134px);
@@ -246,8 +252,8 @@
   $boxMax6: 948px;
   $boxBig5: 788px;
   $boxMiddle4: 630px;
-  $boxSmall3: 474px;
-  $boxMini: 318px;
+  $boxSmall3: 470px;
+  $boxMini: 315px;
   $boxSingle: 158px;
 
   width: 100% !important;
@@ -285,7 +291,13 @@
       /* отменить все трансформации ротаотора, установив только
       ширину (т.е., количество картинок в блоке)*/
       @include transform(none);
-      width: $boxMiddle4;
+      width: $boxSmall3 !important;
+    }
+    @media (max-width:460px) {
+      width: $boxMini !important;
+    }
+    @media (max-width:$resolution-phone360) {
+      width: $boxSingle !important;
     }
   }
 }
