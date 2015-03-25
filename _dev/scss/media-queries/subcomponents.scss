@@ -16,12 +16,21 @@
     @media (max-width:$resolution-tablet-medium680) {
       padding: 20px 15px 0;
     }
+      /* обработать масштаб родительского блока,
+      чтобы не делать это для самого ротатора, рассчитать
+      динамические параметры которого при горизонтальном
+      центрировании невозможно */
+      aside {
+        > div:nth-child(2) {
+        @include transform(scale(0.85) translateX(-8.75%));
+      }
+    }
     .gallery-small{
       @media (max-width: $resolution-small-desktop - 1){
         // см. @media (max-width:861px) ниже
         padding-left: 31.5vw;
       }
-      @media (max-width:861px){
+      @media (max-width:$resolution-go-mobile860 + 1){
         padding-left: 25.5vw;
       }
       @media (max-width:$resolution-small-desktop){
@@ -233,51 +242,51 @@
     #facade-beauty: 1 блок (средний) ─ ПРИМЕРЫ РАБОТ: ОФОРМЛЕНИЕ ФАСАДА КАМНЕМ
     #after-stone:   3 блока, маленькие
 */
-.slideplus{
-  $boxMax6:948px;
-  $boxBig5:788px;
-  $boxMiddle4:630px;
-  $boxSmall3:474px;
-  $boxMini:318px;
-  $boxSingle:158px;
+.slideplus {
+  $boxMax6: 948px;
+  $boxBig5: 788px;
+  $boxMiddle4: 630px;
+  $boxSmall3: 474px;
+  $boxMini: 318px;
+  $boxSingle: 158px;
 
-  @mixin sigplus-settings{
-    //border: solid 1px red;
-    @media (max-width:$resolution-tablet768){
-      width: 788px !important;
-    }
-    @media (max-width:640px){
-      width: 630px !important;
-    }
-    @media (max-width:$resolution-phone540){
-      width: 630px !important;
-    }
-  }
   width: 100% !important;
-  #facade.container #work-examples &{
+  #facade.container #work-examples & {
     width: 100% !important;
   }
-  #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus &{
-    @media (max-width:$resolution-go-mobile966) {
+  #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus & {
+    @media (max-width: $resolution-go-mobile966) {
       @include centered-horizontal;
     }
-    @media (max-width:$resolution-tablet768){
+    @media (max-width: $resolution-tablet768) {
       width: $boxBig5 !important;
     }
-    @media (max-width:640px){
+    @media (max-width: 640px) {
       width: $boxMiddle4 !important;
     }
-    @media (max-width:$resolution-phone540){
+    @media (max-width: $resolution-phone540) {
       width: $boxSmall3 !important;
     }
-    @media (max-width:$resolution-phone360){
+    @media (max-width: $resolution-phone360) {
       @include transform(translateX(-50%) scale(1));
       width: $boxMini !important;
     }
   }
-  #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus &{
-    @include transform(scale(0.85) translateX(-84px));
-    @include sigplus-settings;
+  // маленькие блоки
+  #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus & {
+    //@include transform(scale(0.85) translateX(-84px));
+    @media (max-width: $resolution-go-mobile860) {
+      width: $boxBig5 !important;
+    }
+    @media (max-width: $resolution-tablet768) {
+      width: $boxMiddle4 !important;
+    }
+    @media (max-width: $resolution-tablet-medium680) {
+      /* отменить все трансформации ротаотора, установив только
+      ширину (т.е., количество картинок в блоке)*/
+      @include transform(none);
+      width: $boxMiddle4;
+    }
   }
 }
 

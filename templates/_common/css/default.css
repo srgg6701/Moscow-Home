@@ -5239,6 +5239,13 @@ body.gallery [id^="slider-mini-"] {
 #after-stone {
   padding: 0;
 }
+/* line 8, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div {
+  /* ╨╛╨▒╤А╨░╨▒╨╛╤В╨░╤В╤М ╨╝╨░╤Б╤И╤В╨░╨▒ ╤А╨╛╨┤╨╕╤В╨╡╨╗╤М╤Б╨║╨╛╨│╨╛ ╨▒╨╗╨╛╨║╨░,
+  ╤З╤В╨╛╨▒╤Л ╨╜╨╡ ╨┤╨╡╨╗╨░╤В╤М ╤Н╤В╨╛ ╨┤╨╗╤П ╤Б╨░╨╝╨╛╨│╨╛ ╤А╨╛╤В╨░╤В╨╛╤А╨░, ╤А╨░╤Б╤Б╤З╨╕╤В╨░╤В╤М
+  ╨┤╨╕╨╜╨░╨╝╨╕╤З╨╡╤Б╨║╨╕╨╡ ╨┐╨░╤А╨░╨╝╨╡╤В╤А╤Л ╨║╨╛╤В╨╛╤А╨╛╨│╨╛ ╨┐╤А╨╕ ╨│╨╛╤А╨╕╨╖╨╛╨╜╤В╨░╨╗╤М╨╜╨╛╨╝
+  ╤Ж╨╡╨╜╤В╤А╨╕╤А╨╛╨▓╨░╨╜╨╕╨╕ ╨╜╨╡╨▓╨╛╨╖╨╝╨╛╨╢╨╜╨╛ */
+}
 /* line 11, ../../../_dev/scss/media-queries/subcomponents.scss */
 #after-stone > div:nth-child(1) > .gallery-small > span {
   background-position: 1vw 65.5% !important;
@@ -5257,32 +5264,40 @@ body.gallery [id^="slider-mini-"] {
     padding: 20px 15px 0;
   }
 }
+/* line 24, ../../../_dev/scss/media-queries/subcomponents.scss */
+#after-stone > div aside > div:nth-child(2) {
+  -webkit-transform: scale(0.85) translateX(-8.75%);
+  -moz-transform: scale(0.85) translateX(-8.75%);
+  -ms-transform: scale(0.85) translateX(-8.75%);
+  -o-transform: scale(0.85) translateX(-8.75%);
+  transform: scale(0.85) translateX(-8.75%);
+}
 @media (max-width: 1023px) {
-  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 28, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small {
     padding-left: 31.5vw;
   }
 }
 @media (max-width: 861px) {
-  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 28, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small {
     padding-left: 25.5vw;
   }
 }
 @media (max-width: 1024px) {
-  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 28, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small {
     padding-left: 30vw;
   }
 }
 @media (max-width: 680px) {
-  /* line 19, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 28, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small {
     padding-left: 0;
     text-align: center;
   }
 }
-/* line 34, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 43, ../../../_dev/scss/media-queries/subcomponents.scss */
 #after-stone > div .gallery-small > span:first-child {
   background: url("../images/facade/vertical1.jpg") no-repeat;
   background-size: 91% 2470%;
@@ -5298,7 +5313,7 @@ body.gallery [id^="slider-mini-"] {
   width: 20vw;
 }
 @media (max-width: 767px) {
-  /* line 34, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 43, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small > span:first-child {
     margin-left: 15px;
     -webkit-transform: translateX(-175px);
@@ -5309,7 +5324,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 680px) {
-  /* line 34, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 43, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small > span:first-child {
     display: block;
     height: 126px;
@@ -5327,75 +5342,75 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 680px) {
-  /* line 62, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 71, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small h4 {
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
   }
-  /* line 67, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 76, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone > div .gallery-small p {
     padding-right: 0;
   }
 }
 
 @media (min-width: 621px) and (max-width: 966px) {
-  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 84, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 66vw;
   }
-  /* line 80, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 89, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 17.76vw;
     width: 20vw;
   }
 }
 @media (min-width: 541px) and (max-width: 620px) {
-  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 84, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 84vw;
   }
-  /* line 89, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 98, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 22.94vw;
     width: 26vw;
   }
 }
 @media (min-width: 425px) and (max-width: 540px) {
-  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 84, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 99.5vw;
   }
-  /* line 97, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 106, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 26.9vw;
     width: 30.5vw;
   }
 }
 @media (max-width: 424px) {
-  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 84, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 98.75vw;
   }
-  /* line 105, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 114, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides a img {
     height: 40.85vw;
     width: 45.5vw;
   }
 }
 @media (max-width: 248px) {
-  /* line 75, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 84, ../../../_dev/scss/media-queries/subcomponents.scss */
   #level1 .slider-bottom .slides {
     width: 100vw;
   }
 }
 
-/* line 114, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 123, ../../../_dev/scss/media-queries/subcomponents.scss */
 .gallery-small {
   overflow: hidden !important;
 }
 
-/* line 121, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 130, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade.container #facade-beauty .gallery-small .sigplus-gallery {
   -webkit-transform: translateX(-114px) translateY(0) scale(0.61);
   -moz-transform: translateX(-114px) translateY(0) scale(0.61);
@@ -5404,7 +5419,7 @@ body.gallery [id^="slider-mini-"] {
   transform: translateX(-114px) translateY(0) scale(0.61);
 }
 @media (max-width: 966px) {
-  /* line 121, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 130, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade.container #facade-beauty .gallery-small .sigplus-gallery {
     -webkit-transform: translateX(-188px) translateY(0) scale(0.61);
     -moz-transform: translateX(-188px) translateY(0) scale(0.61);
@@ -5414,7 +5429,7 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 966px) {
-  /* line 121, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 130, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade.container #facade-beauty .gallery-small .sigplus-gallery {
     -webkit-transform: scale(0.75);
     -moz-transform: scale(0.75);
@@ -5426,7 +5441,7 @@ body.gallery [id^="slider-mini-"] {
     }*/
   }
 }
-/* line 134, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 143, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade.container #after-stone .gallery-small .sigplus-gallery {
   float: left;
   -webkit-transform: translateX(-19.5%) translateY(0) scale(0.61);
@@ -5435,7 +5450,7 @@ body.gallery [id^="slider-mini-"] {
   -o-transform: translateX(-19.5%) translateY(0) scale(0.61);
   transform: translateX(-19.5%) translateY(0) scale(0.61);
 }
-/* line 138, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 147, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facades .gallery-small .sigplus-gallery {
   -webkit-transform: translateX(-134px) translateY(0) scale(0.61);
   -moz-transform: translateX(-134px) translateY(0) scale(0.61);
@@ -5445,17 +5460,17 @@ body.gallery [id^="slider-mini-"] {
 }
 
 @media (max-width: 966px) {
-  /* line 144, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 153, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .header-slim-middle {
     text-align: center;
   }
 }
-/* line 149, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 158, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade-beauty aside {
   margin-bottom: 16px;
 }
 @media (max-width: 620px) {
-  /* line 154, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 163, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4 {
     font-size: 19.5px;
     line-height: 20.5px;
@@ -5465,33 +5480,33 @@ body.gallery [id^="slider-mini-"] {
     text-align: center;
     width: 100% !important;
   }
-  /* line 168, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 177, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4 > span:first-child {
     background-image: url("../images/facade/facade-beauty.jpg");
     background-repeat: no-repeat;
     display: block;
   }
-  /* line 175, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 184, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4:nth-child(1) span:first-child {
     background-position: center 0px;
     height: 125px;
   }
-  /* line 184, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 193, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4:nth-child(3) span:first-child {
     background-position: center -181px;
     height: 118px;
   }
-  /* line 193, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 202, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4:nth-child(5) span:first-child {
     background-position: center -349px;
     height: 186px;
   }
-  /* line 202, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 211, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small h4:nth-child(7) span:first-child {
     background-position: center -550px;
     height: 216px;
   }
-  /* line 212, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 221, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .gallery-small p {
     background-image: none;
     line-height: 17px;
@@ -5511,16 +5526,16 @@ body.gallery [id^="slider-mini-"] {
     #facade-beauty: 1 ╨▒╨╗╨╛╨║ (╤Б╤А╨╡╨┤╨╜╨╕╨╣) тФА ╨Я╨а╨Ш╨Ь╨Х╨а╨л ╨а╨Р╨С╨Ю╨в: ╨Ю╨д╨Ю╨а╨Ь╨Ы╨Х╨Э╨Ш╨Х ╨д╨Р╨б╨Р╨Ф╨Р ╨Ъ╨Р╨Ь╨Э╨Х╨Ь
     #after-stone:   3 ╨▒╨╗╨╛╨║╨░, ╨╝╨░╨╗╨╡╨╜╤М╨║╨╕╨╡
 */
-/* line 236, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 245, ../../../_dev/scss/media-queries/subcomponents.scss */
 .slideplus {
   width: 100% !important;
 }
-/* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 254, ../../../_dev/scss/media-queries/subcomponents.scss */
 #facade.container #work-examples .slideplus {
   width: 100% !important;
 }
 @media (max-width: 966px) {
-  /* line 260, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     position: relative;
     left: 50%;
@@ -5532,25 +5547,25 @@ body.gallery [id^="slider-mini-"] {
   }
 }
 @media (max-width: 768px) {
-  /* line 260, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 788px !important;
   }
 }
 @media (max-width: 640px) {
-  /* line 260, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 630px !important;
   }
 }
 @media (max-width: 540px) {
-  /* line 260, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 474px !important;
   }
 }
 @media (max-width: 360px) {
-  /* line 260, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 257, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade-beauty .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     -webkit-transform: translateX(-50%) scale(1);
     -moz-transform: translateX(-50%) scale(1);
@@ -5560,72 +5575,71 @@ body.gallery [id^="slider-mini-"] {
     width: 318px !important;
   }
 }
-/* line 278, ../../../_dev/scss/media-queries/subcomponents.scss */
-#after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
-  -webkit-transform: scale(0.85) translateX(-84px);
-  -moz-transform: scale(0.85) translateX(-84px);
-  -ms-transform: scale(0.85) translateX(-84px);
-  -o-transform: scale(0.85) translateX(-84px);
-  transform: scale(0.85) translateX(-84px);
-}
-@media (max-width: 768px) {
-  /* line 278, ../../../_dev/scss/media-queries/subcomponents.scss */
+@media (max-width: 860px) {
+  /* line 276, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 788px !important;
   }
 }
-@media (max-width: 640px) {
-  /* line 278, ../../../_dev/scss/media-queries/subcomponents.scss */
+@media (max-width: 768px) {
+  /* line 276, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 630px !important;
   }
 }
-@media (max-width: 540px) {
-  /* line 278, ../../../_dev/scss/media-queries/subcomponents.scss */
+@media (max-width: 680px) {
+  /* line 276, ../../../_dev/scss/media-queries/subcomponents.scss */
   #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
-    width: 630px !important;
+    /* ╨╛╤В╨╝╨╡╨╜╨╕╤В╤М ╨▓╤Б╨╡ ╤В╤А╨░╨╜╤Б╤Д╨╛╤А╨╝╨░╤Ж╨╕╨╕ ╤А╨╛╤В╨░╨╛╤В╨╛╤А╨░, ╤Г╤Б╤В╨░╨╜╨╛╨▓╨╕╨▓ ╤В╨╛╨╗╤М╨║╨╛
+    ╤И╨╕╤А╨╕╨╜╤Г (╤В.╨╡., ╨║╨╛╨╗╨╕╤З╨╡╤Б╤В╨▓╨╛ ╨║╨░╤А╤В╨╕╨╜╨╛╨║ ╨▓ ╨▒╨╗╨╛╨║╨╡)*/
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    width: 630px;
   }
 }
 
 @media (max-width: 540px) {
-  /* line 284, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 293, ../../../_dev/scss/media-queries/subcomponents.scss */
   .header-slim-big {
     font-size: 18px;
   }
 }
-/* line 288, ../../../_dev/scss/media-queries/subcomponents.scss */
+/* line 297, ../../../_dev/scss/media-queries/subcomponents.scss */
 .do-it .header-slim-big {
   color: white;
 }
 @media (max-width: 620px) {
-  /* line 288, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 297, ../../../_dev/scss/media-queries/subcomponents.scss */
   .do-it .header-slim-big {
     max-width: 76vw;
   }
 }
 @media (max-width: 620px) {
-  /* line 295, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 304, ../../../_dev/scss/media-queries/subcomponents.scss */
   #facade .do-it .header-slim-big {
     font-size: 18px;
   }
 }
 
 @media (max-width: 540px) {
-  /* line 304, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 313, ../../../_dev/scss/media-queries/subcomponents.scss */
   .do-it .phone-number {
     font-size: 24px !important;
   }
-  /* line 307, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 316, ../../../_dev/scss/media-queries/subcomponents.scss */
   .do-it button {
     margin-top: 10px;
   }
 }
 @media (max-width: 620px) {
-  /* line 313, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 322, ../../../_dev/scss/media-queries/subcomponents.scss */
   .do-it #facade .phone-number {
     font-size: 24px !important;
   }
-  /* line 316, ../../../_dev/scss/media-queries/subcomponents.scss */
+  /* line 325, ../../../_dev/scss/media-queries/subcomponents.scss */
   .do-it #facade button {
     margin-top: 10px;
   }
