@@ -14,21 +14,24 @@ div{
   /*#engineering-systems .content >section >&{
     position: absolute;
   }*/
-  #engineering-systems .content >section:nth-child(1) >&{
+  /*#engineering-systems .content >section:nth-child(1) >&{
     margin-top: 84px;
-  }
-  #engineering-systems .content >section:nth-child(2) >&{
+  }*/
+  /*#engineering-systems .content >section:nth-child(2) >&{
     margin-top: 84px;
-  }
-  #engineering-systems .content >section:nth-child(3) >&{
+  }*/
+  /*#engineering-systems .content >section:nth-child(3) >&{
     margin-top: 55px;
-  }
-  #engineering-systems .top >&{
+  }*/
+  /*#engineering-systems .top >&{
     background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
     padding-left: 50px;
     padding-right: 485px;
     padding-top: 84px;
-  }
+    @media (max-width:$resolution-small-desktop){
+      padding-top: 16px;
+    }
+  }*/
 }
 h2{
   #engineering-systems .content &{
@@ -56,29 +59,95 @@ p{
     }
   }
 }
-section{
-  #engineering-systems .content &{
-    background-repeat: no-repeat;
-    border-bottom: dotted 2px #e3e3e3;
-    padding-left: 465px;
-    padding-right: 60px;
-    position: relative;
-    $img-subdir: $images_dir + 'engineering/';
-    height:auto;
-    &:nth-child(1){
-      background-image: url($img-subdir + 'section1.jpg');
-      background-position: 23px;
-      min-height: 352px;
+//--on mobile
+#engineering-systems{
+  $breakpoint1:$resolution-go-mobile966;
+  .content{
+    >section{
+      background-repeat: no-repeat;
+      border-bottom: dotted 2px #e3e3e3;
+      height:auto;
+      padding-left: 465px;
+      padding-right: 60px;
+      position: relative;
+      $img-subdir: $images_dir + 'engineering/';
+      @media (max-width:$breakpoint1){
+        padding-left: 45.55vw;
+        padding-top: 38px;
+        padding-bottom: 38px;
+        >div{
+          margin-top: 0 !important;
+
+        }
+        &:nth-child(1){
+          background-position: 31px 47px;
+          background-size: 36.5%;
+        }
+        &:nth-child(2){
+          background-position: 19px 21px;
+          background-size: 37%;
+        }
+        &:nth-child(3){
+          background-position: 29px 38px;
+          background-size: 32.2%;
+        }
+      }
+      &:nth-child(1){
+        background-image: url($img-subdir + 'section1.jpg');
+        background-position: 23px;
+        min-height: 352px;
+        >div{
+          margin-top: 84px;
+        }
+      }
+      &:nth-child(2){
+        background-image: url($img-subdir + 'section2-leaf.jpg');
+        background-position: 25px 54px;
+        min-height: 266px;
+        >div{
+          margin-top: 84px;
+        }
+      }
+      &:nth-child(3){
+        background-image: url($img-subdir + 'section3.gif');
+        background-position: 46px;
+        min-height: 301px;
+        >div{
+          margin-top: 55px;
+        }
+      }
     }
-    &:nth-child(2){
-      background-image: url($img-subdir + 'section2-leaf.jpg');
-      background-position: 25px 54px;
-      min-height: 266px;
+  }
+  .top {
+    @media (max-width:$breakpoint1){
+      min-height: inherit;
+      padding-bottom: 110px;
     }
-    &:nth-child(3){
-      background-image: url($img-subdir + 'section3.gif');
-      background-position: 46px;
-      min-height: 301px;
+    h1{
+      &.header-big{
+        @media (max-width:$breakpoint1){
+          font-size: 48px !important;
+          line-height: 109% !important;
+        }
+      }
+    }
+    >div{
+      background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
+      padding-left: 50px;
+      padding-right: 485px;
+      padding-top: 84px;
+      @media (max-width:$breakpoint1){
+        background-position: 136% 31%;
+        padding-left: 3.5vw;
+        padding-right: 36vw;
+        padding-top: 16px;
+      }
+    }
+    p{
+      @media (max-width:$breakpoint1){
+        line-height: 129.5%;
+        margin-bottom: 29px;
+      }
     }
   }
 }

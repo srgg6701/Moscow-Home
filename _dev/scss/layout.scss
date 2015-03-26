@@ -35,7 +35,7 @@ body.no-overflow footer{
   position: relative;
   top:$nav-height;
   #engineering-systems &{
-    height: 652px;
+    min-height: 652px;
   }
   #decoration &{
     @media (min-width:$resolution-small-desktop + 1){
