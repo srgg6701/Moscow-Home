@@ -2,7 +2,16 @@
     var Pix={};
 </script>
 <?php // 590х376
-$sections=array('Шульгино','Никольское','Молоденово','Дом 1','Дом 2','Дом 3');
+/**
+ВНИМАНИЕ!
+ * Файлы для галереи (http://site_name.[]/gallery) должны размещаться в images/slides/gallery.
+ * Последовательность вывода наборов картинок определяется именем директории (по алфавиту)
+*/
+// получить заголовки секций
+$module = JModuleHelper::getModule('mod_gallery_big');
+$params = json_decode($module->params);
+$sections=explode("\n",$params->headers);
+//var_dump("<pre>",$sections,"</pre>"); die();
 if (is_dir($dir)) {
     $i=0;
     if ($dh = opendir($dir)) {

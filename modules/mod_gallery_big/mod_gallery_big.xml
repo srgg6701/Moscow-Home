@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module"
+		   version="2.5"
+		   client="site"
+		   method="upgrade">
+	<name>mod_name</name>
+	<author>srgg6701</author>
+	<creationDate>CREATION DATE</creationDate>
+	<copyright>Copyright (C) srgg6701</copyright>
+	<license>proprietary</license>
+	<authorEmail>srgg67@gmail.com</authorEmail>
+	<authorUrl>Somewhere in the Universe</authorUrl>
+	<version>2.5.0</version>
+	<description>MOD_gallery_big_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_gallery_big">mod_gallery_big.php</filename>
+		<folder>tmpl</folder>
+			<filename>index.html</filename>
+			<filename>helper.php</filename>		
+			<filename>mod_gallery_big.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_gallery_big" />
+	<config>
+		<fields name="params">
+			
+			<fieldset name="advanced">
+				<field name="headers" type="textarea" default="default" label="Заголовки секций, по одному на каждую строку" description="Размещаемые здесь заголовки секций отображаются на стр. /gallery" rows="10" cols="5" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
