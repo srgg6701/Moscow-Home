@@ -5,9 +5,11 @@ var imgBlockWidth = 590,// синхронизировать с $img-gallery-main
 window.onload=function(){
     var gIndex= 0,
         pixContainer,
-        pixContainerMini/*, indicators*/; // генерация индикаторов закомментирована в templates/_common/gallery_main.php
+        pixContainerMini; // генерация индикаторов закомментирована в templates/_common/gallery_main.php
+    //console.dir(Pix);
+    //console.groupCollapsed('Pix');
     for(var section_name in Pix){   //console.log(section_name); // Шульгино, Молоденово ...
-        gIndex++; //console.dir(gIndex,Pix[section_name]);
+        gIndex++; //console.dir(Pix[section_name]);
         <?php /*
         Дом 3:  Object
                     directory:  images/slides/gallery/6-home
@@ -16,9 +18,7 @@ window.onload=function(){
                                     1: "IMG_6787.jpg"
                                     2: "IMG_6799.jpg"
                                     3: "IMG_6804.jpg"   */ ?>
-        //loader=document.getElementById('loader-wait-'+gIndex);
         pixContainer=document.getElementById('pix-'+gIndex);
-        // indicators=getIndicator(gIndex); // генерация индикаторов закомментирована в templates/_common/gallery_main.php
         pixContainerMini=document.getElementById('pix-mini-'+gIndex);
         // установить ширину контейнера изображений
         pixContainer.style.width=imgBlockWidth*Pix[section_name]['images'].length+'px';
@@ -30,12 +30,7 @@ window.onload=function(){
         //var i=0;
         //console.log('images.length: '+Pix[section_name]['images'].length);
         for(var index in Pix[section_name]['images']){
-            /*if(i){
-             indicators.innerHTML+='<div></div>';
-             }else{
-             indicators.innerHTML += '<div class="active"></div>';
-             //console.log('has active: '+indicators);
-             }*/
+
             pixContainer.innerHTML+='<div class="img" style="background: url(\'images/slides/gallery/'+Pix[section_name]['directory']+'/'+Pix[section_name]['images'][index] + '\');" data-index="'+index+'">';
             var ldr;
             if(ldr=document.getElementById('loader-wait-'+gIndex)){
@@ -50,6 +45,7 @@ window.onload=function(){
         }
         getPixBlock(gIndex);
     }
+    //console.groupEnd();
     jQuery('.img-mini').on('click', function(){
         var element=this,
             dataIndex=jQuery(this).attr('data-index'),

@@ -62,6 +62,7 @@ p{
 //--on mobile
 #engineering-systems{
   $breakpoint1:$resolution-go-mobile966;
+  $breakpoint2:$resolution-tablet-medium680;
   .content{
     >section{
       background-repeat: no-repeat;
@@ -77,7 +78,6 @@ p{
         padding-bottom: 38px;
         >div{
           margin-top: 0 !important;
-
         }
         &:nth-child(1){
           background-position: 31px 47px;
@@ -92,12 +92,42 @@ p{
           background-size: 32.2%;
         }
       }
+      @media (max-width:$breakpoint2){
+        padding-bottom: 38px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 196px;
+        &:nth-child(1){
+          background-size: 260px;
+        }
+        &:nth-child(2){
+          background-size: 291px;
+        }
+        &:nth-child(3){
+          background-size: 288px;
+        }
+        >div{
+          text-align: center;
+          button.btn-more{
+            margin: auto;
+          }
+        }
+      }
+      @media (max-width:$resolution-phone424){
+        padding-top: 55vw;
+      }
       &:nth-child(1){
         background-image: url($img-subdir + 'section1.jpg');
         background-position: 23px;
         min-height: 352px;
         >div{
           margin-top: 84px;
+        }
+        @media (max-width:$breakpoint2){
+          background-position: center 31px !important;
+        }
+        @media (max-width:$resolution-phone424){
+          background-size: 71.25%;
         }
       }
       &:nth-child(2){
@@ -107,6 +137,12 @@ p{
         >div{
           margin-top: 84px;
         }
+        @media (max-width:$breakpoint2){
+          background-position: center 32px;
+        }
+        @media (max-width:$resolution-phone424){
+          background-size: 81%;
+        }
       }
       &:nth-child(3){
         background-image: url($img-subdir + 'section3.gif');
@@ -114,6 +150,39 @@ p{
         min-height: 301px;
         >div{
           margin-top: 55px;
+        }
+        @media (max-width:$breakpoint2){
+          background-position: center -16px;
+        }
+        @media (max-width:$resolution-phone424){
+          background-size: 80%;
+        }
+      }
+    }
+    >aside:last-child{
+      @media (max-width:$breakpoint1){
+        div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
+          display: table;
+          .slideplus{
+            width: $boxSingle !important;
+            @media (min-width:$resolution-phone360 + 1){
+              width: $boxMini !important;
+            }
+            @media (min-width:$resolution-phone540 + 1){
+              width: $boxSmall3 !important;
+            }
+            @media (min-width:$resolution-tablet-medium680 + 1){
+              width: $boxMiddle4 !important;
+            }
+            @media (min-width:$resolution-go-mobile860 + 1){
+              width: $boxBig5 !important;
+            }
+          }
+        }
+      }
+      @media (max-width:$breakpoint2){
+        p{
+          line-height: 140%;
         }
       }
     }
@@ -123,11 +192,20 @@ p{
       min-height: inherit;
       padding-bottom: 110px;
     }
+    @media (max-width:$breakpoint2){
+      padding-bottom: 58px;
+    }
     h1{
       &.header-big{
         @media (max-width:$breakpoint1){
           font-size: 48px !important;
           line-height: 109% !important;
+        }
+        @media (max-width:$breakpoint2){
+          font-size: 24px !important;
+          margin-bottom: 255px;
+          padding: 0 40px;
+          text-align: center;
         }
       }
     }
@@ -142,11 +220,21 @@ p{
         padding-right: 36vw;
         padding-top: 16px;
       }
+      @media (max-width:$breakpoint2){
+        background-position: center 126px;
+        background-size: 53%;
+        padding-top: 32px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
     }
     p{
       @media (max-width:$breakpoint1){
         line-height: 129.5%;
         margin-bottom: 29px;
+      }
+      @media (max-width:$breakpoint2){
+        font-size: 13px;
       }
     }
   }

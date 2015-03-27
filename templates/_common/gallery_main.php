@@ -11,10 +11,17 @@
 $module = JModuleHelper::getModule('mod_gallery_big');
 $params = json_decode($module->params);
 $sections=explode("\n",$params->headers);
-//var_dump("<pre>",$sections,"</pre>"); die();
+foreach($sections as &$val){
+    $val=trim($val);
+}
+/*echo "<pre>";
+var_dump(array($sections));
+echo "</pre>";
+die();*/
 if (is_dir($dir)) {
     $i=0;
     if ($dh = opendir($dir)) {
+        //echo "<script>console.log('dir: $dir')</script>";
         while (($file = readdir($dh)) !== false) {
             if ($file!='.'&&$file!='..'){
                 //echo "<div>file: ".$file.": </div>";
@@ -27,6 +34,7 @@ if (is_dir($dir)) {
                         ?>
 <script>
     Pix['<?php echo $sections[$i];?>']={};
+    //console.log('creage object Pix[<?php echo $sections[$i];?>]');
     Pix['<?php echo $sections[$i];?>']['directory']='<?php echo $file;?>';
     Pix['<?php echo $sections[$i];?>']['images']=[];
                     <?php
@@ -43,6 +51,7 @@ if (is_dir($dir)) {
                         }
                         closedir($dhr);
 ?>
+    //console.log('j: <?php echo $j;?>'); console.groupCollapsed('current, all');console.dir(Pix['<?php echo $sections[$i];?>']);console.dir(Pix);console.groupEnd();
 </script>
 <section>
     <h2 class="header-slim-big"><?php echo $sections[$i];?></h2>
@@ -60,11 +69,6 @@ if (is_dir($dir)) {
                     <div id="images-container-<?php echo $gIndex; ?>">
                         <div id="pix-<?php echo $gIndex; ?>"></div>
                         <div id="loader-wait-<?php echo $gIndex; ?>"></div>
-                        <?php /*<div class="indicators" id="indicator-<?php echo $gIndex; ?>">
-                        <?php for($k=0;$k<$j;$k++):?>
-                            <div<?php if(!$k):?> class="active"<?php endif;?>></div>
-                        <?php endfor;?>
-                        </div><? */?>
                     </div>
                 </div>
             </div>
