@@ -267,6 +267,9 @@ $hSlider:430px;
 // любая ВЫСОТА экрана
 // 966 перестройка макета под ◄ПЛАНШЕТНУЮ► версию
 @media (max-width: $resolution-go-mobile966) {
+  html{
+    overflow-x: hidden;
+  }
   // считаем, что перешли на моб. версию. отменяем блокировку прокрутки
   body.no-overflow {
     overflow: auto;
