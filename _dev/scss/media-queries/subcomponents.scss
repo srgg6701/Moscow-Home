@@ -49,13 +49,15 @@
         $img-size-static:256px;
         height: $img-size-static;
         position: absolute;
-        left: 30vw;
+        right: 50%;
         @include transform(translateX(-217px)); //-204px
         top: 45px;//52px;
         width: $img-size-static;
         @media (max-width:$resolution-desktop){
           $img-size-rel: 20vw;//18.2vw; - без припуска
           height: $img-size-rel;
+          //left: 30vw;
+          //right: inherit;
           width: $img-size-rel;
         }
         @media (max-width:768px - 1){
