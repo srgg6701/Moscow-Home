@@ -124,11 +124,10 @@ input{
       display: block;
       float: left;
       height: 39px;
-      left: 50%;
       margin: 27px auto auto;
       position: relative;
       text-transform: uppercase;
-      transform: translateX(-50%);
+      @include centered-horizontal;
       width: 150px;
     }
   }
@@ -140,10 +139,9 @@ input{
       color: $color-carrot;
       font-size: 17px;
       height: 40px;
-      left: 50%;
       margin-top: 27px;
       position: relative;
-      transform: translateX(-50%);
+      @include centered-horizontal;
       width: 150px;
       z-index: 2;
     }

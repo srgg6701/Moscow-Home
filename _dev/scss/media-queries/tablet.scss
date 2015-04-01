@@ -524,7 +524,7 @@ $hSlider:430px;
         }
       }
       [id^="pix-mini-"]:not(.tiny){
-        transform: translateX(-$imgVW);
+        @include transform(translateX(-$imgVW));
       }
       .content-wrapper [id^="preview-container-"]{
         border-radius: 0;

@@ -317,9 +317,8 @@ $inner-width:92.5vw;
         //background: darkblue;
         position: relative;
         top: inherit;
-        left: 50%;
-        transform: translateX(-50%);
         padding: 0 22px;
+        @include centered-horizontal;
         width: $inner-width;
         @media (max-width:$resolution-tablet-small620){
           padding: 0;

@@ -73,10 +73,8 @@
     }
   }
   #logo{
-    left: 50%;
     margin-left: -16px;
-    position: absolute;
-    transform: translateX(-50%);
+    @include centered-horizontal(absolute);
   }
   #sandwich-menu{
     border-radius: $menu-spot-border-radius;
