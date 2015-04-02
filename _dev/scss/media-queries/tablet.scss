@@ -476,6 +476,7 @@ $hSlider:430px;
     width: 100vw;
   }
   $imgVW:21.5vw;
+  $gallery-height:17.5vw;
   body{
     &.gallery {
       .img{
@@ -493,7 +494,7 @@ $hSlider:430px;
           }
         }
         .img-mini{
-          height: 17.5vw;
+          height: $gallery-height;
           margin-right: $gallery-img-margin;
           width: $imgVW;
         }
@@ -516,6 +517,7 @@ $hSlider:430px;
       [id^="pix-mini-"]{
         margin-top: 2vw !important;
         margin-bottom: 2vw !important;
+        height: $gallery-height;
       }
       [id^="pix-"]:not([id*='-mini-']):not([data-value]){
         @media (max-width:$img-gallery-main-width + 1){

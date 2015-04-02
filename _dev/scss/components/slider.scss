@@ -71,6 +71,10 @@ aside{
   .slider-container &{  // маленькие указатели
     margin-top: 126px;
     @include pointer(#461F12,36px,mini);
+    @media (max-width:$resolution-small-desktop){
+      height: 48px;
+      width: 48px;
+    }
   }
 }
 body.gallery{
