@@ -101,11 +101,14 @@ window.onload=function(){
         }
     });
 };
-
+/**
+ *
+ */
 function getPixBlock(gIndex,mini){
     var sliderBoxId,        // id блока с картинками
         sliderBox,          // блок с картинками
         sliderBoxImgsStr,   // селектор выбора блока с картинками
+        // получить параметры контейнера
         getParams=function(gIndex,mini){
             sliderBoxId =(mini)? 'pix-mini-'+gIndex:'pix-'+gIndex;
             sliderBox = document.getElementById(sliderBoxId);
@@ -124,7 +127,7 @@ function getPixBlock(gIndex,mini){
     getPixBlock(gIndex,mini);
 }
 /**
- *
+ * Параметры смещения
  */
 function getIterationParams(){
     return{
@@ -153,42 +156,20 @@ function handleSlides(direction,gIndex,mini){
             //console.dir(document.querySelectorAll('#images-container-'+gIndex+' [id^="pix-"]'));
             return false;
         }
-        var Px=getPixBlock(gIndex,mini),
+        var $=jQuery,
+            Px=getPixBlock(gIndex,mini),
             sliderBox=Px.sliderBox,
             sliderBoxImgsStr=Px.sliderBoxImgsStr,
-        /*  indicators=getIndicator(gIndex),
-         indicator=jQuery('.active', indicators);
-         if(!mini) jQuery('div.active',indicators).removeClass('active'); */ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
-        //console.log('active indicator: '+indicator);
-            shift_offset = (mini)? imgBlockPrevWidth+prevMargin:imgBlockWidth;
+            shift_offset = (mini)? imgBlockPrevWidth+prevMargin:imgBlockWidth,
+            currLeft=0,
+            cnt = 0;
         order = 'last'; //console.log('direction: '+direction);
         if (direction == 'left') {
             order = 'first'; // будем выбирать первую картинку
             // назначить увеличенный отступ слева для контейнера картинок:
             shift_offset*=-1;
-            /*if(!mini){ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
-             if(jQuery(indicator).prev().size()) {
-             jQuery(indicator).prev().addClass('active');
-             //console.log('prev: ');console.dir(jQuery(indicator).prev());
-             }else {
-             jQuery('>div',indicators).eq(-1).addClass('active');
-             //console.log('next: ');console.dir(jQuery(indicators));
-             }
-             }*/
-        }/*else{
-         if(!mini){
-         if(jQuery(indicator).next().size()) {
-         jQuery(indicator).next().addClass('active');
-         //console.log('next: ');console.dir(jQuery(indicator).next());
-         }else {
-         jQuery('>div',indicators).eq(0).addClass('active');
-         //console.log('prev: ');console.dir(jQuery(indicators));
-         }
-         }
-         }*/ // генерация индикаторов закомментирована в templates/_common/gallery_main.php
-        var currLeft=0,
-            cnt = 0,
-            intval = setInterval(function () {
+        }   // генерация индикаторов закомментирована в templates/_common/gallery_main.php
+        var intval = setInterval(function () {
                 currLeft+=shift_offset / iterations_count;
                 sliderBox.style.left = currLeft + 'px';
                 //console.log('sliderBox.id: '+sliderBox.id);
@@ -201,18 +182,21 @@ function handleSlides(direction,gIndex,mini){
                 if (cnt == cntStep * iterations_count) { // 10*20
                     clearInterval(intval);
                     var tImage, newImage;
-                    if(tImage=document.querySelector(sliderBoxImgsStr + ':' + order + '-child')) {
-                        newImage = tImage.cloneNode(true); // склонировать крайнюю картинку для последующего перемещения в начало или конец блока
-                        jQuery(tImage).remove(); //удалить крайнюю картинку
+                    if(mini) sliderBoxImgsStr+='-mini';
+                    //console.log('querySelector: '+sliderBoxImgsStr + ':' + order + '-child');
+                    if(tImage=$(sliderBoxImgsStr + ':' + order + '-child')) {
+                        newImage = tImage.clone(true); // склонировать крайнюю картинку для последующего перемещения в начало или конец блока
+                        $(tImage).remove(); //удалить крайнюю картинку
                         // append/prependTo
                         /*  переместить первую или последнюю картинку соответственно
                          в конец или начало контейнера с изображениями */
+                        console.log(sliderBox);
                         if (direction == 'left') {
                             // appendChild
-                            sliderBox.appendChild(newImage);
+                            $(sliderBox).append(newImage);
                         } else if (direction == 'right') {
                             // insertBefore
-                            sliderBox.insertBefore(newImage, document.querySelector(sliderBoxImgsStr));
+                            $(sliderBox).prepend(newImage);
                         }
                         // вернуть исходный отступ для контейнера с изображениями
                         sliderBox.style.left = 0;
