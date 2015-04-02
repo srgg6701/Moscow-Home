@@ -475,7 +475,7 @@ $hSlider:430px;
     max-width: $img-gallery-main-width;
     width: 100vw;
   }
-  $imgVW:19.5vw;
+  $imgVW:21.5vw;
   body{
     &.gallery {
       .img{
@@ -494,7 +494,7 @@ $hSlider:430px;
         }
         .img-mini{
           height: 17.5vw;
-          margin-right: 2.25vw;
+          margin-right: $gallery-img-margin;
           width: $imgVW;
         }
       }
@@ -511,7 +511,7 @@ $hSlider:430px;
       [id^="loaded-content-mini-"]{
         margin: auto;
         overflow: hidden;
-        width: 84.85vw;
+        width: 73.4vw;
       }
       [id^="pix-mini-"]{
         margin-top: 2vw !important;

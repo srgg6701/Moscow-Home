@@ -165,6 +165,7 @@ body.gallery{
     height: $prev-height;
     position: relative;
     top: 28px;
+    z-index: 1;
   }
 }
 #loader-wait{
@@ -221,8 +222,9 @@ body.gallery{
       min-height: 200px;
       min-width: $img-gallery-main-width * 3;
       position: absolute;
-        @include transform(translateX(-($img-gallery-main-width)));}
+      @include transform(translateX(-($img-gallery-main-width)));
     }
+  }
 }
 [id^="pix-mini-"]{
   body.gallery &{
@@ -233,8 +235,19 @@ body.gallery{
     &.tiny{
       display: table;
       margin: auto;
+      @include transform(translateX($gallery-img-margin));
       @media (min-width:$resolution-tablet768 + 1){
         @include transform(translateX(-$offset-transform / 2));
+      }
+      &.cols1,
+      &.cols2,
+      &.cols3{
+        width: inherit !important;
+        @include transform(translateX(0));
+        .img-mini{
+          display: inline-block;
+          margin: auto $gallery-img-margin / 2;
+        }
       }
     }
   }

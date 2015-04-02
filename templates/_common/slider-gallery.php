@@ -41,7 +41,8 @@ window.onload=function(){
             //i++;
         }
         if(Pix[section_name]['images'].length<7){
-            pixContainerMini.className='tiny';
+            pixContainerMini.className='tiny cols'+Pix[section_name]['images'].length;
+
         }
         getPixBlock(gIndex);
     }
@@ -190,7 +191,7 @@ function handleSlides(direction,gIndex,mini){
                         // append/prependTo
                         /*  переместить первую или последнюю картинку соответственно
                          в конец или начало контейнера с изображениями */
-                        console.log(sliderBox);
+                        //console.log(sliderBox);
                         if (direction == 'left') {
                             // appendChild
                             $(sliderBox).append(newImage);
