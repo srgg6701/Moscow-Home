@@ -154,6 +154,12 @@
 }
 //
 @media (max-width: $resolution-phone540){
+  /*#design{
+    .top{
+      margin-bottom: 25px;
+      min-height: inherit;
+    }
+  }*/
   #you-need {
     ul {
       li {
@@ -175,6 +181,15 @@
           }
         }
       }
+    }
+  }
+  .do-it{
+    .phone-number{
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    button{
+      margin-left: 0;
     }
   }
 }

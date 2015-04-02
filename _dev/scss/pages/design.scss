@@ -63,22 +63,23 @@ div{
     background: $background-smoke-white;
   }
   #design &{
+    &.top-container{
+      height: 659px;
+    }
     &.top{//.relative
       background-image: url($images_dir + 'design/top-visual-bg.jpg');
       @media (max-width:$resolution-phone540){
         background-image: url($images_dir + 'design/top-visual-mobile.png');
         background-position: center 176px;
-        height: 110vw;
-        min-height: 580px;
-        max-height: 800px;
         position: static;
+        .top-container{
+          height: auto;
+          margin-bottom: 25px;
+        }
       }
       background-repeat: no-repeat;
       background-position: center 0;
       @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
-    }
-    &.top-container{
-      height: 659px;
     }
   }
   // чиста для подстраховки

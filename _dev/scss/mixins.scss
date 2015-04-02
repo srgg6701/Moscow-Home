@@ -27,8 +27,8 @@
   margin: auto;
   max-width: $max-width-content;
 }
-@mixin centered-vertical{
-  position: relative;
+@mixin centered-vertical($position:relative){
+  position: $position;
   top: 50%;
   @include transform(translateY(-50%));
 }

@@ -29,6 +29,9 @@ aside{
     background-position: center;
     background-repeat: no-repeat;
     @include border-radius(50%);
+    &.pointer-left, &.pointer-right{
+      @include centered-vertical(absolute);
+    }
   }
   #slider .pointers-aside > &{
     background-position-y: 16px;
@@ -77,7 +80,8 @@ body.gallery{
     z-index: 1;
   }
   .big .gallery-pointers-aside{
-    height: $img-gallery-main-height / 2 + $pointer-size / 2;
+    //height: $img-gallery-main-height / 2 + $pointer-size / 2;
+    height: inherit;
   }
   .slider-container .gallery-pointers-aside{
     top:-70px;
@@ -97,7 +101,13 @@ body.gallery{
   margin: auto;
   position: relative;
   &.big{
+    bottom: 0;
+    height: 100%;
+    left: 0;
     max-width: 790px;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 [id^="gallery-pointers-box-mini-"]{
@@ -278,11 +288,11 @@ body.gallery{
     @include transform(translateY(-50%));
   }
   &.left {
-    background: url('../images/controls/pointer-left.png') no-repeat 12px;
+    background: url($images_dir + 'controls/pointer-left.png') no-repeat 12px;
     float: left;
   }
   &.right {
-    background: url('../images/controls/pointer-right.png') no-repeat 15px;
+    background: url($images_dir + 'controls/pointer-right.png') no-repeat 15px;
     float: right;
   }
 }
@@ -310,9 +320,10 @@ section{
   body.gallery &{
     background: url($images_dir + 'backgrounds/tile-gallery.png');
     margin-bottom: -$offset;
+    margin-top: -$offset;
     padding-bottom: $offset;
     padding-top: $offset;
-    margin-top: -$offset;
+    position: relative;
   }
 }
 [id^="slider-mini-"]{
