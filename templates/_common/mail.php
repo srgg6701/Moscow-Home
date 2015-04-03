@@ -48,7 +48,6 @@ $emails = $admins_mail;
 // Send mail to all superadministrators id
 $errors=array();
 $fromname = "MoscowHome";
-$local=(strstr($_SERVER['HTTP_HOST'],'localhost')||strstr($_SERVER['HTTP_HOST'],'127.0.0.1'))? true:false;
 if($local){
     echo "<br/><br/>
                 <div><b>Отправлено сообщение(я)</b> на тему <i style='color: darkviolet;'>$subject</i>.

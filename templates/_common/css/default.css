@@ -4851,7 +4851,7 @@ body.gallery [id^="slider-mini-"] {
     font-size: 0;
     height: 100%;
     padding-left: 42px;
-    width: inherit;
+    width: 42px;
   }
   /* line 189, ../../../_dev/scss/media-queries/tablet.scss */
   header nav > div #phone-number {

@@ -1,5 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <?php
+$local=(strstr($_SERVER['HTTP_HOST'],'localhost')||strstr($_SERVER['HTTP_HOST'],'127.0.0.1')||strstr($_SERVER['HTTP_HOST'],'192.168.'))? true:false;
+
 $app = JFactory::getApplication();
 if(isset($_POST['jform'])){
     require_once 'mail.php';
@@ -27,6 +29,13 @@ if($bagent=='msie'||$bagent=='mozilla'): // ie / firefox
 elseif($bagent=='opera'||($bagent=='chrome'&&strstr($agent,' opr'))):?>
 <link href="<?php echo $common_path;?>css/opera.css" rel="stylesheet">
 <?php
+endif;
+if($local):
+    $css_test=true;
+    if($css_test):?>
+<link href="<?php echo $common_path;?>css/test.css" rel="stylesheet">
+    <?php
+    endif;
 endif;?>
 <script src="<?php echo $common_path;?>js/common.js"></script>
 <?php   $menu=$app->getMenu();
