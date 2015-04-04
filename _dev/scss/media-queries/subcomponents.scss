@@ -305,6 +305,7 @@
 .header-slim-big{
   @media (max-width:$resolution-phone540){
     font-size: 18px;
+    line-height: 45px !important;
   }
   .do-it &{
     color: white;

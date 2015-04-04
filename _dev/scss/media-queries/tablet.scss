@@ -178,12 +178,13 @@ $hSlider:430px;
           position: absolute;
           top: 33px;
           a {
+            //background-color: orange;
             background-position: 10.5px;
             border-radius: $menu-spot-border-radius;
             font-size: 0;
             height: 100%;
             padding-left: 42px;
-            width: inherit;
+            width: 42px;
           }
         }
         #phone-number {
