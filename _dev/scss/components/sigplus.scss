@@ -92,14 +92,14 @@ span.slideplus-navbutton{
 }
 #decoration {
   .slideplus-next.slideplus-horizontal.slideplus-large{
-    left: 444px;
+    //left: 444px;
   }
 }
 #work-examples #gallery.header-slim-big,
+#design #our-works .header-slim-big,
 .gallery-next.header-slim-big{
   & +div{
     max-width: 948px;
-    $imgBoxWidth:158px;
     @media (max-width: $resolution-go-mobile966){
 
       left: -15px;

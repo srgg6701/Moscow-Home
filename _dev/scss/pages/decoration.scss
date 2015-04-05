@@ -119,12 +119,14 @@ div{
       //background-image: url($images_dir + 'decoration/exmpls-right.jpg');
       // переопределить стили для .slider-bottom div и #decoration .slides div.float-left
       height: auto;
-      margin-left: 4px;
-      margin-right: -4px;
+      @media (min-width:$resolution-go-mobile966 + 1){
+        margin-left: 4px;
+        margin-right: -4px;
+      }
       padding:0;
     }
     @media (max-width:$resolution-go-mobile966){
-      width:474px;
+      max-width:474px;
       .slideplus{
         ul{
 
@@ -324,6 +326,25 @@ $inner-width:92.5vw;
           padding: 0;
           p{
             font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .slider-bottom {
+    .slides {
+      .gallery-middle{
+        margin: auto;
+        >div{
+          @media (max-width:$resolution-go-mobile966){
+            //display: table;
+            width: $imgBoxWidth * 3;
+          }
+          @media (max-width:$resolution-phone540){
+            width: $imgBoxWidth * 2;
+          }
+          @media (max-width:$resolution-phone360){
+            width: $imgBoxWidth;
           }
         }
       }

@@ -257,6 +257,9 @@
 */
 .slideplus {
   width: 100% !important;
+  #decoration .gallery-middle &,
+  #design #our-works &,
+  #design.container #work-examples &,
   #facade.container #work-examples & {
     width: 100% !important;
   }
@@ -358,7 +361,7 @@
 #index #level1{
   .slider-bottom{
     @media (max-width:$resolution-go-mobile966) {
-      background-color: aqua;
+      //background-color: aqua;
       padding: 0 15px;
       .slides {
         /*ссылки, полностью заполняют вложенный контейнер*/
