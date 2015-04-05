@@ -21,11 +21,11 @@ else:?>no-overflow<?php endif;?>">
 $header_class='absolute';
 require_once $tmpl_common . $common_dir . 'header-nav.php'; ?>
     <main id="content" role="main">
-        <jdoc:include type="component" style="none" />
 <?php
     if($pageclass=="gallery"):
         require_once $tmpl_common . $common_dir . 'gallery_main.php';
     endif;?>
+        <jdoc:include type="component" style="none" />
     </main>
 <footer class="index">
 <?php if ($this->countModules('footer')) : ?>
