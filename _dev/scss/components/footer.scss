@@ -1,7 +1,25 @@
 .footer.why-moscow-home {
   $breakpoint1:$resolution-go-mobile966;
   $breakpoint2:$resolution-tablet-small620;
-  $breakpoint3:560px;
+  $breakpoint3:$resolution-phone560;
+  div.float-left:first-child a{
+    border-right: solid 1px;
+    display: inline-block;
+    margin-bottom: 6px;
+    @include paragraph-dark;
+    padding: 0 5px;
+    text-decoration: none;
+    &.start{
+      padding-left: 0;
+    }
+    &.finish{
+      border-right: none;
+    }
+    @media (max-width:$breakpoint3){
+      margin-bottom: 0;
+      padding: 0 2px 0 0;
+    }
+  }
   @media (max-width:$breakpoint1){
     min-height: inherit;
     padding-bottom: 44px;
@@ -140,8 +158,9 @@ footer{
   }
   @media (max-width: $resolution-go-mobile966) {
     body &{
-      //margin-bottom: 20px;
-      position: static !important;
+      @media (min-width: $resolution-phone560 + 1) {
+      	position: static !important;
+	  }
       > div {
         width: 100% !important;
         > div {

@@ -112,11 +112,16 @@
   }
   #slider{
     .pointers-aside{
+      width: inherit;
       >aside{
         background-size: 32%;
         background-position: center;
-        height: 13vw;
-        width: 13vw;
+        &:first-child{
+          left: $offset-common;
+        }
+        &:last-child{
+          right: $offset-common;
+        }
       }
     }
   }

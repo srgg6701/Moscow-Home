@@ -85,6 +85,7 @@ div{
   #decoration .content .contents >div >&{
     font: 17px/20px $font-second;
     margin: auto;
+    overflow: auto;
     padding-left: 160px;
     padding-top: 60px;
     max-width: $max-width-container;
@@ -167,6 +168,11 @@ p{
   #decoration .content >aside >&:first-child{
     margin-top: 50px;
     margin-bottom: 30px;
+    @media (max-width:$resolution-go-mobile966){
+      max-width: 474px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 section{

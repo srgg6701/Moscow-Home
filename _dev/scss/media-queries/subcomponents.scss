@@ -25,6 +25,7 @@
         margin: auto;
         @media (max-width:$resolution-tablet-medium680){
           @include transform(scale(0.75));
+          //width: 470px;
         }
       }
     }
@@ -140,11 +141,26 @@
   #facade.container #facade-beauty .gallery-small &{
     // отступ и масштаб по умолчанию
     @include trnsf(-114px);
-    @media /*(min-width:$resolution-go-mobile966 + 1) and*/ (max-width: $resolution-go-mobile966){//$resolution-small-desktop
+    /*@media (max-width: $resolution-go-mobile966){//$resolution-small-desktop
       @include trnsf(-188px); //transform(scale(0.61));
-    }
+    }*/
     @media (max-width:$resolution-go-mobile966) {
       @include transform(scale(0.75));
+    }
+    @media (max-width:$resolution-tablet-medium680){
+      width: $boxMiddle4;
+      .slideplus{
+        width: 100% !important;
+      }
+    }
+    @media (max-width:$resolution-tablet-small620){
+      width: $boxSmall3;
+    }
+    @media (max-width:480px){
+      width: $boxMini;
+    }
+    @media (max-width:$resolution-phone){
+      width: $boxSingle;
     }
   }
   #facade.container #after-stone .gallery-small &{
@@ -159,6 +175,7 @@
   }
   #facades .gallery-small &{
     @include trnsf(-134px);
+    overflow: inherit;
   }
 }
 
@@ -274,11 +291,11 @@
       width: $boxMiddle4 !important;
     }
     @media (max-width: $resolution-phone540) {
-      width: $boxSmall3 !important;
+      width: $boxMini !important;
     }
     @media (max-width: $resolution-phone360) {
       @include transform(translateX(-50%) scale(1));
-      width: $boxMini !important;
+      width: $boxSingle !important;
     }
   }
   // маленькие блоки
@@ -296,24 +313,27 @@
       @include transform(none);
       width: $boxSmall3 !important;
     }
-    @media (max-width:460px) {
+    @media (max-width:520px) {
       width: $boxMini !important;
     }
     @media (max-width:$resolution-phone360) {
       width: $boxSingle !important;
     }
+
   }
 }
 
 .header-slim-big{
   @media (max-width:$resolution-phone540){
     font-size: 18px;
-    line-height: 45px !important;
+    @media (min-width:$resolution-phone + 1){
+      line-height: 45px !important;
+    }
   }
   .do-it &{
     color: white;
     @media (max-width:$resolution-tablet-small620){
-      max-width: 76vw;
+      max-width: 90vw;
     }
   }
 

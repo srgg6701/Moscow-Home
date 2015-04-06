@@ -62,6 +62,11 @@ div{
   #design .slider-bottom &{
     background: $background-smoke-white;
   }
+  #design #visual-bottom >&{
+    &:first-child{ // .relative
+      display: table;
+    }
+  }
   #design &{
     &.top-container{
       height: 659px;
@@ -109,7 +114,7 @@ div{
     // контейнеры с текстом
     &:first-child{
       @media (max-width:$resolution-tablet-small620){
-        float: right;
+        float:left;
         padding-bottom: 34px;
       }
     }
@@ -228,6 +233,7 @@ h2{
   @media (max-width:$resolution-tablet-small620){
     #design .content section.wide &{
       margin-top: 0;
+      padding-right: inherit;
     }
   }
 }

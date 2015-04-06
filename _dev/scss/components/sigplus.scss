@@ -59,6 +59,16 @@ img {
     background: url($images_dir + 'backgrounds/gallery-pointer-right.png');
     @include pointer-opacity;
   }
+  #decoration .slides &{
+    @media (min-width:$resolution-go-mobile966 + 1){
+      .slideplus-prev.slideplus-horizontal.slideplus-large{
+        left: 2px !important;
+      }
+      .slideplus-next.slideplus-horizontal.slideplus-large{
+        right: 8px !important;
+      }
+    }
+  }
 }
 .slideplus-navbar {
   .gallery-middle &{
