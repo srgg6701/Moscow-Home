@@ -1548,11 +1548,15 @@ footer .section > div:first-child {
   width: 193px;
 }
 @media (max-width: 966px) {
-  /* line 164, ../../../_dev/scss/components/footer.scss */
+  /* line 143, ../../../_dev/scss/components/footer.scss */
+  footer {
+    position: static !important;
+  }
+  /* line 162, ../../../_dev/scss/components/footer.scss */
   body footer > div {
     width: 100% !important;
   }
-  /* line 167, ../../../_dev/scss/components/footer.scss */
+  /* line 165, ../../../_dev/scss/components/footer.scss */
   body footer > div > div:not(:nth-child(2)) {
     display: none;
   }
@@ -1590,12 +1594,6 @@ footer .section > div:first-child {
     display: block;
     height: 100%;
     width: 100%;
-  }
-}
-@media (max-width: 966px) and (min-width: 561px) {
-  /* line 160, ../../../_dev/scss/components/footer.scss */
-  body footer {
-    position: static !important;
   }
 }
 @media (max-width: 768px) {
@@ -2787,32 +2785,9 @@ img {
   margin-bottom: 67px;
 }
 
-/* line 13, ../../../_dev/scss/pages/engineering.scss */
-div {
-  /*#engineering-systems .content >section >&{
-    position: absolute;
-  }*/
-  /*#engineering-systems .content >section:nth-child(1) >&{
-    margin-top: 84px;
-  }*/
-  /*#engineering-systems .content >section:nth-child(2) >&{
-    margin-top: 84px;
-  }*/
-  /*#engineering-systems .content >section:nth-child(3) >&{
-    margin-top: 55px;
-  }*/
-  /*#engineering-systems .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
-    padding-left: 50px;
-    padding-right: 485px;
-    padding-top: 84px;
-    @media (max-width:$resolution-small-desktop){
-      padding-top: 16px;
-    }
-  }*/
-}
-
-/* line 37, ../../../_dev/scss/pages/engineering.scss */
+/*div{
+}*/
+/* line 16, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content h2 {
   color: #5d534e;
   font-family: Arial, Helvetica, sans-serif;
@@ -2823,7 +2798,7 @@ div {
   margin-top: 0;
 }
 
-/* line 48, ../../../_dev/scss/pages/engineering.scss */
+/* line 27, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content li {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
@@ -2832,13 +2807,13 @@ div {
   margin-bottom: 16px;
 }
 
-/* line 56, ../../../_dev/scss/pages/engineering.scss */
+/* line 35, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content p.header-slim-big {
   line-height: 46px;
   margin-bottom: 41px;
 }
 
-/* line 67, ../../../_dev/scss/pages/engineering.scss */
+/* line 46, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section {
   background-repeat: no-repeat;
   border-bottom: dotted 2px #e3e3e3;
@@ -2848,203 +2823,203 @@ div {
   position: relative;
 }
 @media (max-width: 966px) {
-  /* line 67, ../../../_dev/scss/pages/engineering.scss */
+  /* line 46, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section {
     padding-left: 45.55vw;
     padding-top: 38px;
     padding-bottom: 38px;
   }
-  /* line 79, ../../../_dev/scss/pages/engineering.scss */
+  /* line 58, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section > div {
     margin-top: 0 !important;
   }
-  /* line 82, ../../../_dev/scss/pages/engineering.scss */
+  /* line 61, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(1) {
     background-position: 31px 47px;
     background-size: 36.5%;
   }
-  /* line 86, ../../../_dev/scss/pages/engineering.scss */
+  /* line 65, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(2) {
     background-position: 19px 21px;
     background-size: 37%;
   }
-  /* line 90, ../../../_dev/scss/pages/engineering.scss */
+  /* line 69, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(3) {
     background-position: 29px 38px;
     background-size: 32.2%;
   }
 }
 @media (max-width: 680px) {
-  /* line 67, ../../../_dev/scss/pages/engineering.scss */
+  /* line 46, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section {
     padding-bottom: 38px;
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 196px;
   }
-  /* line 100, ../../../_dev/scss/pages/engineering.scss */
+  /* line 79, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(1) {
     background-size: 260px;
   }
-  /* line 103, ../../../_dev/scss/pages/engineering.scss */
+  /* line 82, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(2) {
     background-size: 291px;
   }
-  /* line 106, ../../../_dev/scss/pages/engineering.scss */
+  /* line 85, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(3) {
     background-size: 288px;
   }
-  /* line 109, ../../../_dev/scss/pages/engineering.scss */
+  /* line 88, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section > div {
     text-align: center;
   }
-  /* line 111, ../../../_dev/scss/pages/engineering.scss */
+  /* line 90, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section > div button.btn-more {
     margin: auto;
   }
 }
 @media (max-width: 424px) {
-  /* line 67, ../../../_dev/scss/pages/engineering.scss */
+  /* line 46, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section {
     padding-top: 55vw;
   }
 }
-/* line 119, ../../../_dev/scss/pages/engineering.scss */
+/* line 98, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(1) {
   background-image: url("../images/engineering/section1.jpg");
   background-position: 23px;
   min-height: 352px;
 }
-/* line 123, ../../../_dev/scss/pages/engineering.scss */
+/* line 102, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(1) > div {
   margin-top: 84px;
 }
 @media (max-width: 680px) {
-  /* line 119, ../../../_dev/scss/pages/engineering.scss */
+  /* line 98, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(1) {
     background-position: center 31px !important;
   }
 }
 @media (max-width: 424px) {
-  /* line 119, ../../../_dev/scss/pages/engineering.scss */
+  /* line 98, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(1) {
     background-size: 71.25%;
   }
 }
-/* line 133, ../../../_dev/scss/pages/engineering.scss */
+/* line 112, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(2) {
   background-image: url("../images/engineering/section2-leaf.jpg");
   background-position: 25px 54px;
   min-height: 266px;
 }
-/* line 137, ../../../_dev/scss/pages/engineering.scss */
+/* line 116, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(2) > div {
   margin-top: 84px;
 }
 @media (max-width: 680px) {
-  /* line 133, ../../../_dev/scss/pages/engineering.scss */
+  /* line 112, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(2) {
     background-position: center 32px;
   }
 }
 @media (max-width: 424px) {
-  /* line 133, ../../../_dev/scss/pages/engineering.scss */
+  /* line 112, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(2) {
     background-size: 81%;
   }
 }
-/* line 147, ../../../_dev/scss/pages/engineering.scss */
+/* line 126, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(3) {
   background-image: url("../images/engineering/section3.gif");
   background-position: 46px;
   min-height: 301px;
 }
-/* line 151, ../../../_dev/scss/pages/engineering.scss */
+/* line 130, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .content > section:nth-child(3) > div {
   margin-top: 55px;
 }
 @media (max-width: 680px) {
-  /* line 147, ../../../_dev/scss/pages/engineering.scss */
+  /* line 126, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(3) {
     background-position: center -16px;
   }
 }
 @media (max-width: 424px) {
-  /* line 147, ../../../_dev/scss/pages/engineering.scss */
+  /* line 126, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > section:nth-child(3) {
     background-size: 80%;
   }
 }
 @media (max-width: 966px) {
-  /* line 164, ../../../_dev/scss/pages/engineering.scss */
+  /* line 143, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus {
     display: table;
   }
-  /* line 166, ../../../_dev/scss/pages/engineering.scss */
+  /* line 145, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 158px !important;
   }
 }
 @media (max-width: 966px) and (min-width: 361px) {
-  /* line 166, ../../../_dev/scss/pages/engineering.scss */
+  /* line 145, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 315px !important;
   }
 }
 @media (max-width: 966px) and (min-width: 541px) {
-  /* line 166, ../../../_dev/scss/pages/engineering.scss */
+  /* line 145, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 470px !important;
   }
 }
 @media (max-width: 966px) and (min-width: 681px) {
-  /* line 166, ../../../_dev/scss/pages/engineering.scss */
+  /* line 145, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 630px !important;
   }
 }
 @media (max-width: 966px) and (min-width: 861px) {
-  /* line 166, ../../../_dev/scss/pages/engineering.scss */
+  /* line 145, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child div.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus .slideplus {
     width: 788px !important;
   }
 }
 @media (max-width: 680px) {
-  /* line 184, ../../../_dev/scss/pages/engineering.scss */
+  /* line 163, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .content > aside:last-child p {
     line-height: 140%;
   }
 }
 @media (max-width: 966px) {
-  /* line 190, ../../../_dev/scss/pages/engineering.scss */
+  /* line 169, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top {
     min-height: inherit;
     padding-bottom: 110px;
   }
 }
 @media (max-width: 680px) {
-  /* line 190, ../../../_dev/scss/pages/engineering.scss */
+  /* line 169, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top {
     padding-bottom: 58px;
   }
 }
 @media (max-width: 966px) {
-  /* line 199, ../../../_dev/scss/pages/engineering.scss */
+  /* line 178, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top h1.header-big {
     font-size: 48px !important;
     line-height: 109% !important;
   }
 }
 @media (max-width: 680px) {
-  /* line 199, ../../../_dev/scss/pages/engineering.scss */
+  /* line 178, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top h1.header-big {
     font-size: 24px !important;
-    margin-bottom: 255px;
+    margin-bottom: 80%;
     padding: 0 40px;
     text-align: center;
   }
 }
-/* line 212, ../../../_dev/scss/pages/engineering.scss */
+/* line 192, ../../../_dev/scss/pages/engineering.scss */
 #engineering-systems .top > div {
   background: url("../images/top-engineering.gif") no-repeat 97.1% 89px;
   padding-left: 50px;
@@ -3052,7 +3027,7 @@ div {
   padding-top: 84px;
 }
 @media (max-width: 966px) {
-  /* line 212, ../../../_dev/scss/pages/engineering.scss */
+  /* line 192, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top > div {
     background-position: 136% 31%;
     padding-left: 3.5vw;
@@ -3061,7 +3036,7 @@ div {
   }
 }
 @media (max-width: 680px) {
-  /* line 212, ../../../_dev/scss/pages/engineering.scss */
+  /* line 192, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top > div {
     background-position: center 126px;
     background-size: 53%;
@@ -3071,14 +3046,14 @@ div {
   }
 }
 @media (max-width: 966px) {
-  /* line 231, ../../../_dev/scss/pages/engineering.scss */
+  /* line 211, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top p {
     line-height: 129.5%;
     margin-bottom: 29px;
   }
 }
 @media (max-width: 680px) {
-  /* line 231, ../../../_dev/scss/pages/engineering.scss */
+  /* line 211, ../../../_dev/scss/pages/engineering.scss */
   #engineering-systems .top p {
     font-size: 13px;
   }
@@ -3682,14 +3657,18 @@ div {
 #our-works ul.table li:nth-child(5) {
   background-position: -723px 0;
 }
+/* line 35, ../../../_dev/scss/components/interior-styles.scss */
+#our-works ul.table li:nth-child(5) {
+  margin-right: -20px;
+}
 @media (min-width: 424px) and (max-width: 619px) {
-  /* line 36, ../../../_dev/scss/components/interior-styles.scss */
+  /* line 39, ../../../_dev/scss/components/interior-styles.scss */
   #our-works ul.table li:nth-child(5) {
     margin-left: 94px;
   }
 }
 @media (min-width: 620px) and (max-width: 965px) {
-  /* line 41, ../../../_dev/scss/components/interior-styles.scss */
+  /* line 44, ../../../_dev/scss/components/interior-styles.scss */
   #our-works ul.table li:nth-child(4) {
     margin-left: 94px;
   }

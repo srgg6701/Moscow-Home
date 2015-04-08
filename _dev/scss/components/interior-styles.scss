@@ -32,6 +32,9 @@ ul{
           }
           $i:$i+1;
         }
+        &:nth-child(5){
+          margin-right: -20px;
+        }
         @media (min-width:$resolution-phone424) and (max-width: $resolution-tablet-small620 - 1){ // 2+2+1
           &:nth-child(5){
             margin-left: $wdth / 2;

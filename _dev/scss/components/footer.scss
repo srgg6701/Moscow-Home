@@ -157,10 +157,8 @@ footer{
     }
   }
   @media (max-width: $resolution-go-mobile966) {
+    position: static !important;
     body &{
-      @media (min-width: $resolution-phone560 + 1) {
-      	position: static !important;
-	  }
       > div {
         width: 100% !important;
         > div {

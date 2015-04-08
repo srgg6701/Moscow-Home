@@ -1,6 +1,6 @@
 header{
   /*box-shadow: 0 0 10px 10px green;*/
-  background-color: rgb(223, 253, 223);
+  background-color: pink;
   left:0;
 }
 @media (min-width:1023px){
@@ -8,6 +8,11 @@ header{
     top: inherit;
     line-height: 68px;
     transform: none;
+  }
+}
+@media (max-width:620px){
+  .relative-size>div{
+    overflow:hidden;
   }
 }
 /*

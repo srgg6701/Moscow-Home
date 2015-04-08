@@ -10,29 +10,8 @@ aside{
     margin-bottom: 67px;
   }
 }
-div{
-  /*#engineering-systems .content >section >&{
-    position: absolute;
-  }*/
-  /*#engineering-systems .content >section:nth-child(1) >&{
-    margin-top: 84px;
-  }*/
-  /*#engineering-systems .content >section:nth-child(2) >&{
-    margin-top: 84px;
-  }*/
-  /*#engineering-systems .content >section:nth-child(3) >&{
-    margin-top: 55px;
-  }*/
-  /*#engineering-systems .top >&{
-    background: url($images_dir + 'top-engineering.gif') no-repeat 97.1% 89px;
-    padding-left: 50px;
-    padding-right: 485px;
-    padding-top: 84px;
-    @media (max-width:$resolution-small-desktop){
-      padding-top: 16px;
-    }
-  }*/
-}
+/*div{
+}*/
 h2{
   #engineering-systems .content &{
     color: $color-dark-common;
@@ -203,7 +182,8 @@ p{
         }
         @media (max-width:$breakpoint2){
           font-size: 24px !important;
-          margin-bottom: 255px;
+          //margin-bottom: 255px;
+          margin-bottom: 80%;
           padding: 0 40px;
           text-align: center;
         }

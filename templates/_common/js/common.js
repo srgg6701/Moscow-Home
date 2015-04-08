@@ -228,7 +228,33 @@ jQuery(function(){
     $('.attach-file').on('click',function(){
         $('input[name="attach-file"]').trigger('click');
     });
+    //-------------------------------------------
+    getPxls();
+    $(window).on('resize',function(){
+        console.log('resized...');
+        if(typeof (window.getPxls) == 'function') getPxls();
+        else console.log('not getPxls');
+    });
 });
+function getPxls() {
+    var $=jQuery, pxlsH=$('[data-h]'), pxlsMT=$('[data-mt]'), h, p;
+    if($(window).width()<=620){
+        if(pxlsH.size()){ console.log('getPxlsH is run, width: ' + $(window).width());
+            pxlsH.each(function (index, element) {
+                h=$(element).attr('data-h');
+                p=$(window).width()/100*h+'px';
+                $(element).css('height',p);
+            });
+        }
+        if(pxlsMT.size()){ console.log('getPxlsMT is run, width: ' + $(window).width());
+            pxlsMT.each(function (index, element) {
+                h=$(element).attr('data-mt');
+                p=$(window).width()/100*h+'px';
+                $(element).css('margin-top',p);
+            });
+        }
+    }
+}
 /**
  * Проверить порог разрешения
  * @returns {boolean}
