@@ -1,177 +1,21 @@
-  /*#index #level1 .slider-bottom .slides a:nth-child(3n+2) {
-    box-shadow: 0 0 0 4px green inset;      
-  }*/
-  /*вторая картинка в ряду*/
-  /*#index #level1 .slider-bottom .slides a:nth-child(3n+0) {
-    box-shadow: 0 0 0 4px violet inset;
-  }*/
-  /*третья картинка в ряду*/
-  /*#index #level1 .slider-bottom .slides a:nth-child(3n+1) {
-    box-shadow: 0 0 0 4px red inset;
-  }*/     
+header{
+  /*box-shadow: 0 0 10px 10px green;*/
+  background-color: rgb(223, 253, 223);
+  left:0;
+}
+@media (min-width:1023px){
+  header nav aside{
+    top: inherit;
+    line-height: 68px;
+    transform: none;
+  }
+}
 /*
-966/540 - 3
-424 - 2
-*/
-/*
-@media (max-width: 966px) {
-  
-  #index #level1 .slider-bottom {
-    background-color: aqua;
-    padding:0 15px;
+@media (max-width:1023px){
+  header nav aside{
+    background-color:violet;
+    line-height:inherit;
+    top:50%;
+    -webkit-transform:translateY(-50%);
   }
-  
-  .slides a img {
-    margin-left: 0 !important;
-  
-    opacity: 0.75;
-    display: table;
-    margin: auto;
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-}
-    
-      #index #level1 .slider-bottom .slides a{
-        float: none;
-        display: inline-block;
-        padding:2px;
-        width:50%;
-      
-}
-          
-      #index #level1 .slider-bottom .slides a:first-child{
-        display:none;
-      }
-  
-  @media (min-width:213px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: lightyellow;
-      width: 183px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:77.71px;
-      width: 85.5px;    
-      -webkit-box-shadow: 0 0 0 4px blue;
-    }
-  }
-  @media (min-width:320px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: lightgreen;
-      width: 290px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:125.23px;
-      width: 138px;
-    }
-  }
-  @media (min-width:360px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: pink;
-      width: 330px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:142.99px;
-      width: 160px;
-    }
-  }
-  @media (min-width:375px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: lime;
-      width: 345px;
-    }
-    #index #level1 .slider-bottom .slides a{
-      width:33%;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:98.58px;
-      width: 109px;
-    }
-  }
-  @media (min-width:384px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: brown;
-      width: 354px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:101.25px;
-      width: 112px;
-    }
-  }
-  @media (min-width:400px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: #666;
-      width: 370px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:105.98px;
-      width: 117px;
-    }
-  }
-  @media (min-width:414px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: goldenrod;
-      width: 384px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:110.13px;
-      width: 122px;
-    }
-  }
-  @media (min-width:424px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: orange;
-      width: 394px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:113.09px;
-      width: 124px;
-    }
-  }
-  @media (min-width:480px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: violet;
-      width: 450px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:129.67px;
-      width: 143px;
-    }
-  }      
-  @media (min-width:540px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: green;
-      width: 340px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:97.1px;
-      width: 106px;
-    }
-  }      
-  @media (min-width:720px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: blue;
-      width: 442px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:127.3px;
-      width: 140px;
-    }
-  }      
-  @media (min-width:960px){
-    #index #level1 .slider-bottom .slides{ 
-      background-color: yellow;
-      width: 468px;
-    }
-    #index #level1 .slider-bottom .slides a img{
-      height:135px;
-      width: 150px;
-    }
-  }      
-}
-
-@media (max-width: 320px){
-  #index #level1 .slider-bottom .slides a {
-    background-color: khaki;
-  }
-} */
+}*/

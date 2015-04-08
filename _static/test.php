@@ -6,106 +6,90 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<link   media="screen, projection" rel="stylesheet" type="text/css" href="/.css">-->
-        <!--<script src="/.js"></script>-->
-<!-- move styles to a separated file -->
-<!-- css->SASS converter: http://css2sass.heroku.com/ -->
-<!-- 
-PHPStorm settings:
-==compass support
-====compass executable file:
-C:\Ruby200-x64\lib\ruby\gems\2.0.0\gems\compass-0.12.2\bin\compass
-====config path:
-C:/PHPDevServer/data/localweb/projects/[project_name]/config.rb
-==file watchers
-====compass scss:
-Programm: C:\Ruby200-x64\bin\compass.bat
-====SCSS:
-Programm: C:\Ruby200-x64\bin\scss.bat -->
-<style>
-html, body{
-	height:100%;
-	margin:0;
-	padding:0;
-}
-body *{
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, Sans-serif;
-    overflow: hidden;
-}
-header{
-    height: 20%;
-    background: #FFA500;
-    min-height: 180px;
-}
-#nav, main, #footer{
-	margin:auto !important;
-}
-#page {
-    background: #0FF;
-	box-sizing:border-box;
-    height: 600px;
-    max-height: 100%;
-    position: relative;
-}
-#slider{
-    background: #FF0;
-    height: 100px;
-    position: absolute;
-    bottom: 60px;
-    margin-top: -100%;
-}
-#slider-controls{
-    background: lightsalmon;
-    bottom: 0;
-    height: 80px;
-    position: absolute;
-    width: 100%;
-}
-.offsetVertical10,
-section{
-	padding-top:10px;
-	padding-bottom:10px;
-}
-main{
-    height: 60%;
-    position: relative;
-}
-nav{
-	padding:10px;
-}
-footer{
-	background-color:lightpink;
-    position: absolute;
-    bottom: 0;
-    height: 110px;
-    width: 100%;
-}
-#footer{
-    background: blueviolet;
-	height:80px;
-	line-height:60px;
-	padding:0 10px;
-}
-nav{
-	background-color: #eaebec;
-}
-</style>
+        <script src="../media/jui/js/jquery.min.js"></script>
+        <link rel="stylesheet" href="test.css"/>
+    <script>
+        function getStyleRuleValue(style, selector, sheet) {
+            var sheets = typeof sheet !== 'undefined' ? [sheet] : document.styleSheets;
+            for (var i = 0, l = sheets.length; i < l; i++) {
+                var sheet = sheets[i];
+                if( !sheet.cssRules ) { continue; }
+                for (var j = 0, k = sheet.cssRules.length; j < k; j++) {
+                    var rule = sheet.cssRules[j];
+                    if (rule.selectorText && rule.selectorText.split(',').indexOf(selector) !== -1) {
+                        //console.log('selectorText styles: ');
+                        //console.dir(rule.style);
+                        document.getElementById('styles').innerHTML="width: "+rule.style['cssText'];
+                        return rule.style[style];
+                    }
+                }
+            }
+            return null;
+        }
+        jQuery(function($){
+            var intv=setTimeout(function(){
+                var div = $('#info');
+                if(div.size()) {
+                    getPxls=function() {
+                        var vp, p, htm, getP=function(v,func){
+                            p=$(window)[func]()/100*v+'px';
+                            htm=$(div).html() + p + '<br>';
+                            //console.log('htm: '+htm);
+                            $(div).html(htm);
+                        };
+                        $('.relative-size').each(function (index, element) {
+                            //console.dir(element);
+                            if(vp=$(element).attr('data-w')){ //console.log('w: '+element);
+                                getP(vp,'width');
+                            }
+                            if(vp=$(element).attr('data-h')){ //console.log('h: '+element);
+                                getP(vp,'height');
+                            }
+                        });
+                    };
+                        /*var width = getStyleRuleValue('width', '#page');
+                         getPxls=function(){
+                             console.log('run getPxls first time');
+                             //alert(width);
+                             var pxls,d=div,w=width;
+                             getPxls=function(){
+                             console.log('run getPxls again');
+                             w='80vw';
+                             pxls=$(window).width()/100*parseInt(w)+'px';
+                             $(d).html(pxls);
+                             };
+                             getPxls();
+                         };*/
+                        getPxls();
+                        clearInterval(intv);
+                }
+                else console.log('no div');
+            },100);
+            $(window).on('resize',function(){
+                console.log('resized...');
+                if(typeof (window.getPxls) == 'function') getPxls();
+                else console.log('not getPxls');
+            });
+        }(jQuery));
+    </script>
     </head>
     <body>
-    	<div id="page">
+        <div id="info" class="info"></div>
+        <div id="styles" class="info"></div>
+    	<div id="page" class="relative-size" data-w="80" data-h="70">
         	<header>
             	<nav>
                 	<div id="nav">Navigation</div>
                 </nav>
             </header>
             <main>
-                <div id="slider">
+                <h2>Main comes here...</h2>
+                <!--<div id="slider">
                     slider comes here
                 </div>
                 <div id="slider-controls">
                     <h1>controls</h1>controls
-                </div>
+                </div>-->
             </main>
             <footer>
             	<div id="footer">Footer</div>
