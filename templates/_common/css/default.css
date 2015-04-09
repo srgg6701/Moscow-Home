@@ -5033,7 +5033,7 @@ body.gallery [id^="slider-mini-"] {
   #achievements {
     margin-top: -147px !important;
     padding: 0 17px;
-    position: relative;
+    /* position: relative; */
     z-index: 2;
   }
 
@@ -5078,7 +5078,7 @@ body.gallery [id^="slider-mini-"] {
 
   /* line 344, ../../../_dev/scss/media-queries/tablet.scss */
   #slider {
-    height: 430px;
+    min-height: 430px;
     margin-top: 68px;
     position: static !important;
   }
@@ -5681,7 +5681,7 @@ body.gallery [id^="slider-mini-"] {
   }
   /* line 272, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase {
-    height: 106px !important;
+    /* height: 106px !important; */
   }
   /* line 274, ../../../_dev/scss/media-queries/mobile.scss */
   #index #slider #showcase > div {
