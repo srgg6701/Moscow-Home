@@ -146,6 +146,17 @@
 // ВНИМАНИЕ! При ширине экрана <=966 (tablet)
 // с body.no-overflow снимается блокировка прокрутки (см. ниже)
 $hSlider:430px;
+@media (min-width: $resolution-small-desktop){
+  header{
+    nav {
+      aside{
+        line-height: 68px;
+        top: inherit;
+        transform: none;
+      }
+    }
+  }
+}
 @media (max-width: $resolution-small-desktop - 1) {
   header {
     nav {

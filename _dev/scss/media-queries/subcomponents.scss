@@ -9,7 +9,7 @@
     $i:1;
     @each $top in 65.5%,75.08%,85.04%{ // 232x6200 // 0,-5850,-1173,-1841,-2575,-3277,
       &:nth-child(#{$i}) >.gallery-small >span { // .gallery-small
-        background-position: 1vw #{$top}  !important;
+        background-position: 13px #{$top}  !important;
       }
       $i:$i+1;
     }
@@ -45,15 +45,17 @@
         text-align: center;
       }
       >span:first-child{
-        background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-        background-size: 91% 2470%;
+
         $img-size-static:256px;
-        height: $img-size-static;
+        @include pix-params-facade(1,$img-size-static);
+
+        //height: $img-size-static;
+        //width: $img-size-static;
+
         position: absolute;
         right: 50%;
         @include transform(translateX(-217px)); //-204px
         top: 45px;//52px;
-        width: $img-size-static;
         @media (max-width:$resolution-desktop){
           $img-size-rel: 20vw;//18.2vw; - без припуска
           height: $img-size-rel;

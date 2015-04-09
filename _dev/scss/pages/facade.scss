@@ -350,65 +350,36 @@ span{
         }
       }
       span{
-        background: url($images_dir + "facade/vertical1.jpg") no-repeat;
-        //background-position: center;
+        @include pix-params-facade(1,250px);
+        //background: url($images_dir + "facade/vertical1.jpg") no-repeat;
         background-repeat: no-repeat;
         background-size: 232px 2480%;
-        height:250px;
+        //height:250px;
         left:0;
         position: absolute;
         top:0;
-        width: 250px;
+        //width: 250px;
+
         @media (max-width:$resolution-go-mobile966){
-          background-size: 25vw 2480%;
-          height: 27.5vw;
+
+          @include pix-params-facade(0,132px);
+
+          //height: 27.5vw;
           display: block;
           margin: auto;
           position: static;
-          width: 27.5vw;
+          //width: 27.5vw;
         }
-        //opacity: 0.5;
-        //background-color: yellow;
-        //border:dotted 1px;
-        /*&:hover{
-          opacity: 1;
-        }*/
       }
     }
-    &:nth-child(1){
-      span{
-        background-position: 13px 1.4% !important;
+    $cnt:1;
+    @each $percents in 1.4%, 11.5%, 100.25%, 21.16%, 32.35%, 44.7%, 56.5%{
+      &:nth-child(#{$cnt}){
+        span{
+          background-position: 13px $percents !important;
+        }
       }
-    }
-    &:nth-child(2){
-      span{
-        background-position: 13px 11.15% !important;
-      }
-    }
-    &:nth-child(3){
-      span{
-        background-position: 13px 100.25% !important;
-      }
-    }
-    &:nth-child(4){
-      span{
-        background-position: 13px 21.16% !important;
-      }
-    }
-    &:nth-child(5){
-      span{
-        background-position: 13px 32.35% !important;
-      }
-    }
-    &:nth-child(6){
-      span{
-        background-position: 13px 44.7% !important;
-      }
-    }
-    &:nth-child(7){
-      span{
-        background-position: 13px 56.5% !important;
-      }
+      $cnt: $cnt +1;
     }
   }
 }

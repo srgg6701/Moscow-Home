@@ -42,6 +42,14 @@
   }
   width: #{$width}vw;
 }
+@mixin pix-params-facade($bg,$img-size){
+  @if ($bg==1) {
+    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+  }
+  background-size: 91% 2470%;
+  height: $img-size;
+  width: $img-size;
+}
 @mixin footer-social{
   .footer-social {
     display: table !important;

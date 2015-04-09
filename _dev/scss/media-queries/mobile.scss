@@ -7,6 +7,9 @@
   }
 }
 @media (max-width: $resolution-tablet-small620){
+  .relative-size>div{
+    overflow:hidden;
+  }
   #top-menu {
     @include transform(translateX(4vw));
   }

@@ -1,8 +1,15 @@
-header{
-  /*box-shadow: 0 0 10px 10px green;*/
+/*header{
   background-color: pink;
   left:0;
 }
+*/
+/*
+.content button.btn-more{
+  width: 120px;
+  padding: 0;
+  text-align: center;
+}*/
+/*
 @media (min-width:1023px){
   header nav aside{
     top: inherit;
@@ -14,7 +21,7 @@ header{
   .relative-size>div{
     overflow:hidden;
   }
-}
+}*/
 /*
 @media (max-width:1023px){
   header nav aside{

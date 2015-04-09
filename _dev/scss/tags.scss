@@ -76,7 +76,12 @@ button{
       border-radius: 5px;
       display: table;
       height: 28px;
-      width: 90px;
+      padding: 0 10px;
+      @media (max-width:$resolution-small-desktop){
+        padding: 0;
+        text-align: center;
+        width: 120px;
+      }
     }
   }
   &.print{
@@ -193,6 +198,7 @@ h4{
 header{
   background-color: white;
   display: table;
+  left:0;
 }
 img{
   .slides a:not(:first-child) &{
