@@ -159,6 +159,15 @@
       display: block;
     }
   }
+  @media (min-width: $resolution-phone424 + 1){
+    #showcase > div ul li {
+      font-size: 12px;
+    }
+    #achievements{
+      bottom: 0;
+      position: absolute;
+    }
+  }
 }
 //
 @media (max-width: $resolution-phone540){
@@ -289,6 +298,13 @@
         }
       }
     }
+  }
+  #slider{
+    height: inherit !important;
+    min-height: inherit !important;
+  }
+  #showcase li{
+    line-height: 29px;
   }
 }
 // самый маленький, 320 ☻
