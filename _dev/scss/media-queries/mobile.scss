@@ -104,7 +104,7 @@
             }
           }
           &:nth-child(2){
-            width: 55%;
+            width: 52%;
           }
           li{
             font-size: 12px;
@@ -160,9 +160,6 @@
     }
   }
   @media (min-width: $resolution-phone424 + 1){
-    #showcase > div ul li {
-      font-size: 12px;
-    }
     #achievements{
       bottom: 0;
       position: absolute;
@@ -279,7 +276,7 @@
         margin-top: 17px !important;
       }
       #showcase{
-        height: 106px !important;
+        //height: 106px !important;
         >div{
           @include border-radius(6px);
           ul{

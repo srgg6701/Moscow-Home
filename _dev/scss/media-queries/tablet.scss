@@ -305,9 +305,10 @@ $hSlider:430px;
     }
   }
   $sh:137px;
+  $offset-bottom:17px;
   #achievements{
     margin-top: -($sh + 10) !important;
-    padding: 0 17px;
+    padding: 0 $offset-bottom;
     position: relative;
     z-index: 2;
     // test.css
@@ -316,19 +317,10 @@ $hSlider:430px;
     width: 100%;
   }
     #showcase{
-      //height: $sh !important;
       position: static !important;
       ul{
         float: left;
         position: static;
-        /*&:nth-child(1){
-          //@include transform(translateX(10px));
-        }
-        &:nth-child(2){
-          //left: 40%;
-          //@include transform(translateX(20px));
-          //width: 57%;
-        }*/
       }
       // test.css
       background-color: lawngreen;
@@ -337,7 +329,7 @@ $hSlider:430px;
         background-color: green;
         overflow: hidden;
         height: inherit;
-        margin-bottom: 10px;
+        margin-bottom: $offset-bottom;
         ul:nth-child(1){
           margin-left: 26px;
           width: 34% !important;
@@ -347,11 +339,6 @@ $hSlider:430px;
           width: 48%;
         }
       }
-      //ul{
-        //position: static;
-        //float: left;
-        //transform:translate(0) !important;
-      //}
     }
   #level1{
     height: auto;
@@ -369,7 +356,6 @@ $hSlider:430px;
   }
 
   #slider {
-    height: $hSlider;
     margin-top: $headerHeight;
     position: static !important;
     ul.social {
@@ -502,11 +488,6 @@ $hSlider:430px;
   #slider{
     background-color: yellow;
   }
-  /*#achievements {
-    background-color: rebeccapurple;
-    bottom: 0;
-    width: 100%;
-  }*/
   // --
 
   #facade-beauty{

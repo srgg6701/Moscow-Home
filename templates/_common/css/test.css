@@ -1,3 +1,8 @@
+@media (max-width: 620px){
+  #slider{
+    height:430px;
+  }
+}
 /*@media (max-width: 424px){      
     #slider{
       height: inherit !important;
