@@ -145,7 +145,7 @@
 // меньше минимального десктопного разрешения (<1024)
 // ВНИМАНИЕ! При ширине экрана <=966 (tablet)
 // с body.no-overflow снимается блокировка прокрутки (см. ниже)
-$hSlider:430px;
+$hSlider:$slider-home-height;
 @media (min-width: $resolution-small-desktop){
   header{
     nav {
@@ -294,7 +294,7 @@ $hSlider:430px;
     .pointers-aside {
       height: $hSlider;
       aside {
-        top: 50%;
+        top: 43%;
         &:nth-child(1) {
           @include transform(translateY(-50%));
         }
@@ -356,6 +356,7 @@ $hSlider:430px;
   }
 
   #slider {
+    //background-color: yellow;
     margin-top: $headerHeight;
     position: static !important;
     ul.social {
@@ -484,12 +485,6 @@ $hSlider:430px;
     }
   }
 
-  // --
-  #slider{
-    background-color: yellow;
-  }
-  // --
-
   #facade-beauty{
     .gallery-small{
       margin-top: 5px;
@@ -497,12 +492,20 @@ $hSlider:430px;
       padding-right: 0;//$edge-mobile;
     }
   }
+  @media (min-width:$resolution-tablet-small620){
+    #achievements{
+      position:absolute;
+    }
+    #slider {
+      padding-bottom: 17px;
+    }
+  }
   @media (min-width:$resolution-phone424){
     #slider{
       position:relative !important;
       .content-wrapper{
         width: 100%;
-        height: 430px !important;
+        height: $slider-home-height !important;
       }
     }
   }

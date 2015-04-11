@@ -16,6 +16,9 @@
   #partners-iframe{
     padding-left: 15px;
   }
+  #slider{
+    height:$slider-home-height;
+  }
 }
 // 619 перестройка макета под ◄мобильную► версию
 @media (max-width: $resolution-tablet-small620 - 1){
@@ -300,8 +303,14 @@
     height: inherit !important;
     min-height: inherit !important;
   }
-  #showcase li{
-    line-height: 29px;
+  #showcase{
+    @include transform(translateY(10px));
+    >div {
+      margin-bottom: 30px;
+    }
+    li{
+      line-height: 29px;
+    }
   }
 }
 // самый маленький, 320 ☻

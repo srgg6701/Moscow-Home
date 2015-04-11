@@ -143,9 +143,6 @@
   #facade.container #facade-beauty .gallery-small &{
     // отступ и масштаб по умолчанию
     @include trnsf(-114px);
-    /*@media (max-width: $resolution-go-mobile966){//$resolution-small-desktop
-      @include trnsf(-188px); //transform(scale(0.61));
-    }*/
     @media (max-width:$resolution-go-mobile966) {
       @include transform(scale(0.75));
     }
@@ -302,7 +299,6 @@
   }
   // маленькие блоки
   #after-stone .sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus & {
-    //@include transform(scale(0.85) translateX(-84px));
     @media (max-width: $resolution-go-mobile860) {
       width: $boxBig5 !important;
     }

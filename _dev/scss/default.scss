@@ -1,5 +1,7 @@
 @charset "UTF-8";
+@import "compass";
 /* default sass file */
+/*
 // FONTS ----------------------------
 @font-face {
   font-family: 'PlumbLight';
@@ -42,7 +44,7 @@
 @import "components/sigplus";
 @import "components/visual-bottom";
 //------------------------------------
-/* ►► статическая таблица, не ищи её среди SCSS! */
+// ►► статическая таблица, не ищи её среди SCSS!
 @import "data.css";
 //------------------------------------
 @import "media-queries/tablet";
@@ -165,3 +167,4 @@ input[name="attach-file"]{
   margin-top: -4px;
   text-align: center;
 }
+*/
