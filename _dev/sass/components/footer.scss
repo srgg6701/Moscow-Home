@@ -1,0 +1,176 @@
+.footer.why-moscow-home {
+  $breakpoint1:$resolution-go-mobile966;
+  $breakpoint2:$resolution-tablet-small620;
+  $breakpoint3:$resolution-phone560;
+  div.float-left:first-child a{
+    border-right: solid 1px;
+    display: inline-block;
+    margin-bottom: 6px;
+    @include paragraph-dark;
+    padding: 0 5px;
+    text-decoration: none;
+    &.start{
+      padding-left: 0;
+    }
+    &.finish{
+      border-right: none;
+    }
+    @media (max-width:$breakpoint3){
+      margin-bottom: 0;
+      padding: 0 2px 0 0;
+    }
+  }
+  @media (max-width:$breakpoint1){
+    min-height: inherit;
+    padding-bottom: 44px;
+  }
+  @media (max-width:$breakpoint3 + 1){
+    a{
+      border-right: none !important;
+      padding-left:0;
+      &:not(:last-child){
+        &:after {
+          content:",";
+        }
+      }
+    }
+    p{
+      display: inline;
+      margin-right: 10px;
+    }
+  }
+  > section > aside > div {
+    &:first-child {
+      padding-right: 30px;
+    }
+    &:last-child {
+      padding-left: 59px;
+    }
+    h3 {
+      color: $color-dark-deep2;
+      font-family: PlumbMedium;
+      font-size: 36px;
+      margin-bottom: 15px;
+      margin-top: 0;
+      white-space: nowrap;
+    }
+  }
+  ul {
+    @media (max-width: $breakpoint1){ // 966
+      margin: auto 25px;
+    }
+    @media (max-width:$breakpoint2){
+      width: 90%;
+    }
+    li {
+      background-repeat: no-repeat;
+      background-position: center 0;
+      display: table-cell;
+      @include paragraph-dark(18px);
+      padding-top: 72px;
+      text-align: center;
+      width: 20%;
+      @media (max-width: $breakpoint1) { //
+        font-size: 16.5px;
+        padding-left: 4px;
+        padding-right: 4px;
+        width: 16vw;
+      }
+      @media (max-width: $resolution-tablet768) {
+        font-size: 15.5px;
+      }
+      // перестроить блоки (более одного ряда, "плавающий вид")
+      @media (max-width: 740px) {
+        display: inherit;
+        float: left;
+      }
+      $offset-vertical: 23px;
+      @media (max-width:$breakpoint2){
+        $cell-width:33.33%;
+        width: $cell-width;
+        @media (min-width:$breakpoint3 + 1){
+          &:nth-child(4){
+            clear: both;
+            margin-left: $cell-width / 2;
+          }
+        }
+        &:nth-child(4),
+        &:nth-child(5){
+          margin-top: $offset-vertical;
+        }
+      }
+      @media (max-width:$breakpoint3){
+        width: 100% !important;
+        margin-top: $offset-vertical;
+      }
+      $i: 1;
+      $img-subdir: $images_dir + 'engineering/';
+      @each $img in 1, 2, 3, 4, 5 {
+        &:nth-child(#{$i}) {
+          background-image: url($images_dir + 'footer' + $img + '.png');
+        }
+        $i: $i+1;
+      }
+    }
+  }
+  aside{
+    .half-wide{
+      $offest-vertical: 36px;
+      @media (max-width:$breakpoint1){
+        &:last-child{
+          padding-left: 6vw;
+        }
+      }
+      @media (max-width:$breakpoint3){
+        margin-top: $offest-vertical;
+        width: 100%;
+        &:last-child{
+          //margin-bottom: $offest-vertical;
+          padding-left: inherit;
+        }
+        .arrows{
+          div{
+            display: block;
+            &:first-child span {
+              display: inline;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  &.index{
+    margin-top: 12px !important;
+    overflow: hidden;
+    position: absolute;
+  }
+  .section{
+    margin: auto;
+    width: 698px;
+      >div{
+      @include nav-footer;
+      &:first-child{
+        @include nav-footer-common;
+      }
+    }
+  }
+  @media (max-width: $resolution-go-mobile966) {
+    position: static !important;
+    body &{
+      > div {
+        width: 100% !important;
+        > div {
+          &:not(:nth-child(2)) {
+            display: none;
+          }
+        }
+      }
+      @include footer-social;
+    }
+  }
+  @media (max-width:$resolution-tablet768){
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,204 @@
+/** Проектирование зданий и помещений - 3
+  Design
+  -уровень
+  -чертеж
+  -линейка */
+/** Общестроительные работы -4
+  Decoration
+  -каска
+  -кирпич
+  -мастерок
+  -кисточка */
+/** Кровельные работы - 4
+  Facade
+  -банка краски
+  -ролик
+  -кусок шифера
+  -кусок плитки */
+/** Инженерные системы - 4
+  Engineering
+  -карандаш
+  -разводной ключ
+  -труба
+  -кабель */
+$pix-dir:$images_dir + 'parallax/';
+$pix-dir-design:$pix-dir + 'design/';
+$pix-dir-decoration:$pix-dir + 'decoration/';
+$pix-dir-engineering-systems:$pix-dir + 'engineering/';
+$pix-dir-facade:$pix-dir + 'facade/';
+.parallax {
+  background-color: orange;
+  background-repeat: no-repeat;
+  min-height: 40px;
+  min-width: 40px;
+  position: absolute;
+  z-index: inherit;
+  @media (max-width:$resolution-small-desktop - 1){
+      display: none;
+  }
+}
+#para1{
+  #design &{
+    background: url($pix-dir-design + 'sketch.png');
+    height: 313px;
+    width: 354px;
+    //
+    left: -63px;
+    top: 204px;
+  }
+  #decoration &{
+    background: url($pix-dir-decoration + 'helmet.png');
+    height: 339px;
+    width: 363px;
+    //
+    left: 19px;
+    top: 83px;
+    z-index: 1;
+  }
+  #facade &{
+    background: url($pix-dir-facade + 'tile.png');
+    height: 236px;
+    width: 185px;
+    //
+    left: 4%;
+    top: 195px;//3774px;
+  }
+  #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'pen.png');
+    height: 115px;
+    width: 185px;
+    left: 4%;
+    top: 214px;
+  }
+}
+#para2{
+  #design &{
+    background: url($pix-dir-design + 'shtangen.png');
+    height: 195px;
+    width: 230px;
+    //
+    right: 72px;
+    top: 210px;
+  }
+  #decoration &{
+    background: url($pix-dir-decoration + 'brick.png');
+    height: 155px;
+    width: 194px;
+    //
+    right: 194px;
+    top: 171px;
+  }
+  #facade &{
+    background: url($pix-dir-facade + 'bar.png');
+    height: 152px;
+    width: 152px;
+    //
+    right: 22%;
+    top: 3500px;
+    z-index: 1;
+  }
+  #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'pipe.png');
+    height: 177px;
+    width: 354px;
+    right: 0;
+    top: 115px;
+    z-index: 1;
+  }
+}
+#para3{
+  #design &{
+    background: url($pix-dir-design + 'level.png');
+    height: 182px;
+    width: 285px;
+    //
+    left: 25px;
+    top: 551px;
+  }
+  #decoration &{
+    background: url($pix-dir-decoration + 'brush.png');
+    height: 108px;
+    width: 96px;
+    //
+    left: 248px;
+    top: 529px;
+  }
+  #facade &{
+    background: url($pix-dir-facade + 'pot.png');
+    height: 286px;
+    width: 174px;
+    //
+    right: 7%;
+    top: 650px;//380px;
+  }
+  #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'cable.png');
+    height: 97px;
+    width: 250px;
+    left: 0px;
+    top:420px;
+    z-index: 1;
+  }
+}
+#para4{
+  #design &{
+    background: url($images_dir + 'design/frame.png') no-repeat;
+    height: 282px;
+    position: absolute;
+    top: -120px;//35px;
+    right: 1.2%;
+    width: 272px;
+  }
+  #decoration &{
+    background: url($pix-dir-decoration + 'trowel.png');
+    height: 293px;
+    width: 244px;
+    //
+    right: 124px;
+    top: 568px;
+  }
+  #facade &{
+    background: url($pix-dir-facade + 'stone.png');
+    height: 177px;
+    width: 190px;
+    //
+    left: 10%;
+    top: 4170px;
+  }
+  #engineering-systems &{
+    background: url($pix-dir-engineering-systems + 'wrench.png');
+    height: 116px;
+    width: 159px;
+    right: 0;
+    top: 356px;
+  }
+}
+#para5{
+  #design &{
+    background: url($images_dir + 'design/lamp.png') no-repeat;
+    height: 219px;
+    position: absolute;
+    right: 23%;
+    top: 800px;//-14px;
+    width: 118px;
+  }
+  #facade &{
+    background: url($pix-dir-facade + 'roll-brush.png');
+    height: 319px;
+    width: 275px;
+    //
+    right: 11%;
+    top: -280px;
+    z-index: 1;
+  }
+}
+#para6{
+  #design &{
+    background: url($images_dir + 'design/sofa.png') no-repeat;
+    height: 156px;
+    position: absolute;
+    right: 7%;
+    top: -900px;//333px;
+    width: 282px;
+  }
+}

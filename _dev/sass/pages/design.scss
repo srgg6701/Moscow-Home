@@ -1,0 +1,368 @@
+a{
+  #our-works &.btn{
+    &:not(#btn-consult){
+      @include btn-zoom;
+    }
+  }
+  #our-works ul.table &{
+    color: $color-carrot-light;
+    cursor:text;
+    display: block;
+    font-family: PlumbMedium;
+    font-size: 21px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    top:140px;
+    width: 100%;
+  }
+}
+aside{
+  #design .wide >&{
+    background: white;
+  }
+  #design #work-examples >&{
+    margin-bottom: 41px;
+    margin-top: 73px;
+  }
+}
+button{
+  #design .content &{
+    &.btn-more{
+      margin-top: -17px;
+    }
+  }
+}
+div{
+  #our-works &.gallery-next.header-slim-big{
+    min-height: 52px;
+  }
+  #our-works >&{
+    &:nth-child(1){
+      padding-top: 26px;
+    }
+    &:nth-child(2){
+      background: $background-smoke-white;
+      padding-top: 84px;
+    }
+    &:nth-child(3){
+      background: $background-smoke-white;
+      padding-bottom: 64px;
+      padding-top: 40px;
+    }
+  }
+
+  #design #style-classic +&{
+    padding-bottom: 28px;
+  }
+  #design #style-modern +&{
+    padding-bottom: 54px;
+  }
+  #design .slider-bottom &{
+    background: $background-smoke-white;
+  }
+  #design #visual-bottom >&{
+    &:first-child{ // .relative
+      display: table;
+    }
+  }
+  #design &{
+    &.top-container{
+      height: 659px;
+    }
+    &.top{//.relative
+      background-image: url($images_dir + 'design/top-visual-bg.jpg');
+      @media (max-width:$resolution-phone540){
+        background-image: url($images_dir + 'design/top-visual-mobile.png');
+        background-position: center 176px;
+        position: static;
+        .top-container{
+          height: auto;
+          margin-bottom: 25px;
+        }
+      }
+      background-repeat: no-repeat;
+      background-position: center 0;
+      @include box-shadow(0 5px 5px 0 rgba(0, 0, 0, 0.12) inset);
+    }
+  }
+  // чиста для подстраховки
+  #design .top +&.do-it{//.relative
+    position: relative;
+  }
+  #design .content .wide >&{
+    margin: auto;
+    position: relative;
+    max-width: $max-width-container;
+    padding-right: 410px;
+    @media (max-width: $resolution-tablet-small620){
+      padding-right: 0 !important;
+    }
+  }
+
+  #design .content .wide:nth-child(2) >&{
+    padding-right: 310px;
+  }
+  #design .content .wide:nth-child(4) >&{
+    padding-right: 260px;
+  }
+  #design .content .wide:nth-child(5) >&{
+    padding-right: 350px;
+  }
+  #design .content .wide >div >&{
+    // контейнеры с текстом
+    &:first-child{
+      @media (max-width:$resolution-tablet-small620){
+        float:left;
+        padding-bottom: 34px;
+      }
+    }
+    // контейнеры с изображениями
+    &:last-child{
+      background-repeat: no-repeat;
+      height: 425px;
+      position: absolute;
+      left: 545px;
+      top:0;
+      width: 475px;
+      @media (max-width:$resolution-small-desktop - 1){
+        left: 45vw;
+      }
+      @media (max-width:$resolution-tablet-small620){
+        background-position: 0;
+        background-size: contain;
+        display: block;
+        margin: auto;
+        position: static;
+        width: 80vw;
+      }
+    }
+  }
+  @mixin section-params($iheight,$bg-image,$bg-position,$margin-top:null){
+    &:first-child{
+      @media (max-width:$resolution-tablet-small620){
+        margin-top:$iheight + 5;
+      }
+    }
+    &:last-child{
+      background-image: url($images_dir + 'design/' + $bg-image);
+      background-position: $bg-position;
+      @media (max-width:$resolution-tablet-small620){
+        background-position: 0;
+        height: $iheight;
+        @if $margin-top{
+          margin-top:$margin-top;
+        }
+      }
+    }
+  }
+  #design .content .wide:nth-child(1) >div >&{
+    @include section-params(61.81vw,'architectural-design.png',2px 70px,40px);
+  }
+  #design .content .wide:nth-child(2) >div >&{
+    @include section-params(45.3vw,'projecting-outer.png',113px 28px);
+  }
+  #design .content .wide:nth-child(3) >div >&{
+    @include section-params(56.47vw,'projecting-inner.png',50px 0);
+  }
+  #design .content .wide:nth-child(4) >div >&{
+    @include section-params(47.45vw,'electrical-systems.png',74px 53px);
+  }
+  #design .content .wide:nth-child(5) >div >&{
+    @include section-params(54.1vw,'projecting-bassein.png',29px 7px);
+  }
+}
+h1{
+  #design .top &{//.relative
+    line-height: 61px;
+    margin: 44px auto auto;
+    text-align: center;
+    max-width: 650px;
+    @media (max-width:$resolution-phone540){
+      font-size: 24px !important;
+      margin-top: 93px;
+      max-width: 300px;
+    }
+  }
+}
+h2{
+  #design .content &{
+    color: $color-dark-common;
+    font: 48px/50px PlumbLight;
+    font-weight: 100;
+    margin: 63px auto 37px;
+    @media (max-width:$resolution-small-desktop){
+      font-size: 40px;
+      line-height: 32pt;
+    }
+    @media (max-width:$resolution-tablet-small620){
+      font-size: 36px;
+      line-height: 30pt;
+    }
+    @media (max-width:$resolution-phone540){
+      font-size: 24px;
+      line-height: 20pt;
+    }
+
+  }
+  #design .content section:nth-child(1) &{
+    margin-top: 0;
+  }
+  #design .content section:nth-child(2) &{
+    margin-bottom: 26px;
+    margin-top: 51px;
+    padding-right: 100px;
+  }
+  #design .content section:nth-child(3) &{
+    margin-bottom: 26px;
+    margin-top: 53px;
+    padding-right: 80px;
+  }
+  #design .content section:nth-child(4) &{
+    margin-top: 52px;
+  }
+  #design .content section:nth-child(5) &{
+    margin-top: 52px;
+    padding-right: 50px;
+  }
+  #design .content section:nth-child(6) &{
+    padding-bottom: 41px;
+    padding-top: 73px;
+  }
+  @media (max-width:$resolution-tablet-small620){
+    #design .content section.wide &{
+      margin-top: 0;
+      padding-right: inherit;
+    }
+  }
+}
+main{
+  #design &{
+    background: url($images_dir + 'backgrounds/tile-design-main.png') #FFF;
+    @media (min-width:$resolution-tablet-small620 + 1){
+      padding-top: 63px;
+    }
+  }
+}
+p{
+  #our-works &{
+    color: $color-dark-common;
+    text-align: center;
+    @media (max-width:$resolution-phone424){
+      font-size: 14px !important;
+      line-height: 16px !important;
+      margin-top: inherit !important;
+      margin-bottom: 6px;
+      margin-left: -8px;
+      margin-right: -8px;
+      text-align: center;
+    }
+  }
+  #our-works &.header{
+    font-family: $font-second;
+    font-size: 25px;
+  }
+  #our-works p.header +&{
+    color: $color-dark-common;
+    font-size: 17px;
+    margin-top: -21px;
+  }
+
+  #design .top-container &{
+    $margin:118px;
+    font-size: 18px;
+    color: $color-dark-deep2;
+    max-width: 710px;
+    position: relative;
+    top: 23px;
+    @media (min-width:$resolution-go-mobile966){
+      padding-right: 370px;
+    }
+
+    @media (min-width:$resolution-tablet768 +1){
+      margin-left: $margin;
+      @media  (max-width:$resolution-go-mobile966 - 1){
+        padding-right: 15vw;
+      }
+      @media (max-width:$resolution-small-desktop - 1){
+        margin-right: $margin;
+      }
+    }
+
+    @media (max-width:$resolution-go-mobile966){
+      padding-left: 54px;
+    }
+    @media (max-width:$resolution-tablet768){
+      font-size: 14px;
+      max-width: 370px;
+      width: 47%;
+    }
+    @media (max-width:$resolution-phone540){
+      margin: $edge-mobile;
+      max-width: inherit;
+      padding: 0;
+      position: static;
+      width: inherit;
+      &:nth-child(2) {
+        margin-top: 195px;
+      }
+    }
+  }
+  #design .content &{
+    font: 18px/20px $font-second;
+    margin-bottom: 32px;
+    @media (max-width:$resolution-small-desktop){
+      font-size: 14px;
+    }
+  }
+  #design .content .wide:nth-child(4) &{
+    @media (min-width:$resolution-phone540 + 1){
+      padding-right: 120px;
+    }
+  }
+  #design .content .wide:nth-child(5) &{
+    padding-right: 20px;
+  }
+  #design .top-container h1 +&{
+    top:27px;
+  }
+}
+section{
+  #design .content >&{
+    &.wide{
+      @media (max-width:$resolution-small-desktop - 1) and (min-width: $resolution-tablet-small620 + 1){
+        margin-left: 30px;
+      }
+    }
+    overflow: hidden;
+    &:nth-child(odd):not(:first-child){
+      background-color: #f6f6f6;
+    }
+    $i:1;
+    @each $height in 407,444,381,340,381{
+      &:nth-child(#{$i}){
+        min-height: #{$height}px;
+      }
+      $i:$i+1;
+    }
+  }
+  #design &#visual-bottom{
+    background: url($images_dir + 'design/visual-bottom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 454px;
+    @media (max-width:$resolution-small-desktop){
+      height: auto;
+      position: static !important;
+      padding: 22px 25px;
+    }
+  }
+}
+span{
+  #our-works ul.table a &{
+    display: block;
+    white-space: nowrap;
+  }
+}

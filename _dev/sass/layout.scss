@@ -1,0 +1,87 @@
+/** ОБЩАЯ СХЕМА:
+    body[#index]
+      // header-nav.jade
+      header
+        nav
+      [.top] за исключением index
+      main / [itemprop="articleBody"]
+      footer  */
+body, html{
+  // height: 100%; - устанавливается ТОЛЬКО для главной страницы в templates\_common\head.php
+  margin: 0;
+  padding: 0;
+}
+body.no-overflow main,
+body.no-overflow main >div,
+body.no-overflow footer{
+  position: absolute;
+}
+.container{
+  body>&{
+    overflow: hidden;
+    position: relative;
+  }
+}
+#index{ // body
+  height: 100%;
+  position: relative;
+  main{
+    bottom: $footerHeight + $bottom-footer;
+    top: $headerHeight;
+  }
+}
+//---------------------------------------------
+.top{
+  position: relative;
+  top:$nav-height;
+  #engineering-systems &{
+    min-height: 652px;
+  }
+  #decoration &{
+    @media (min-width:$resolution-small-desktop + 1){
+      height: 792px;
+    }
+  }
+}
+main{
+  .gallery &{
+    position: relative;
+  }
+}
+//---------------------------------------------
+  header{
+    height: $headerHeight;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+  }
+    nav{
+      @include centred-margins;
+    }
+  //--------------------------------
+    #level1{
+      bottom: 0;
+      height: $level1Height;
+      position: absolute;
+      width: 100%;
+    }
+
+footer{
+  bottom: $bottom-footer;
+}
+//---------------------------------------------
+// заполнить по ширине
+header,main,footer{
+  width: 100%;
+}
+// inner layouts
+.footer{
+  min-height: 600px;
+}
+body:not(.no-overflow) >div >* >*:not(.wide):not(nav){
+  height: 100%;
+  margin: auto;
+  max-width: $max-width-container;
+  overflow: hidden;
+  position: static;
+}

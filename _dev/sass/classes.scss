@@ -1,0 +1,241 @@
+.attach-file {
+  @include button-slim;
+  background: url($images_dir + 'attach-file.png') #FFF no-repeat 10px 4px;
+  border:none;
+  border-radius: 10px;
+  padding-left: 26px;
+  text-transform: uppercase;
+  width: 175px;
+}
+.absolute{
+  position: absolute;
+}
+.arrows {
+  div{
+    display: inline;
+    &:first-child {
+      span{
+        display:none;
+      }
+    }
+  }
+}
+.bgActiveCarrot{
+  //background-color: $background-carrot-dark;
+}
+.bg-chess{
+  background-image: url($images_dir + 'backgrounds/tile-chess.png') !important;
+}
+.bg-orange{
+  background-color: $background-orange;
+}
+.bg-recall{
+  background-image: url($images_dir + 'recall-me.png');
+  background-repeat:  no-repeat;
+}
+.bg-white{
+  background-color: white;
+}
+.block{
+  display: block;
+}
+.centered-vertical{
+  @include centered-vertical;
+}
+.color-dark-deep{
+  color: $color-dark-deep !important;
+}
+.color-dark-middle{
+  color: $color-dark-middle !important;
+}
+.close{
+  background-color: #555;
+  border:solid white;
+  @include border-radius(50%);
+  color: #FFF;
+  font-family: $font-second;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  height: 40px !important;
+  line-height: 31px;
+  padding: 0;
+  position: absolute !important;
+  right: -14px;
+  text-align: center;
+  text-decoration: none;
+  top: -14px;
+  width: 40px;
+}
+.do-it{
+  background-color: $background-brown-dark;
+  color: white !important;
+  min-height: 147px;
+  overflow: hidden;
+  padding-bottom: $do-it-offset;
+  position: relative;
+  #decoration &,
+  #design &{
+    background-image: url($images_dir + 'backgrounds/tile-100.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top-bottom.png');
+  }
+  @media (max-width:540px){
+    text-align: center;
+    *{
+      float: none !important;
+    }
+  }
+}
+.fixed{
+  position: fixed;
+}
+.fit{
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
+.float-left{
+  float: left;
+}
+.footer{
+  background-color: $background-sand;
+}
+.footer-mobile-menu{
+  background-color: white;
+  padding: 10px;
+  position: relative;
+  display: none;
+}
+.half-wide{
+  width: 50%;
+}
+.header-big{
+  font-family: PlumbMedium !important;
+  font-size: $font-header-big-default !important;
+  text-transform: uppercase;
+
+  @media (max-width:$resolution-small-desktop - 1){
+    font-size: 36px !important;
+    line-height: 150% !important;
+    max-width: 600px;
+    margin: auto;
+  }
+}
+.header-slim-big{
+  font-family: PlumbLight;
+  font-size: 36px;
+  text-transform: uppercase;
+  .container &{
+    text-align: center;
+  }
+}
+.header-slim-middle{
+  font: 25px PlumbLight;
+  text-transform: uppercase;
+  #after-stone &{
+    line-height: 33px;
+    margin-top: 28px;
+  }
+}
+.hidden{
+  display: none;
+}
+.no-overflow{
+  overflow: hidden;
+}
+.no-scroll{
+  overflow: hidden;
+}
+.phone{
+  &:after{
+    content:'+ 7 (985) 762-99-66';
+    white-space: nowrap;
+  }
+}
+.print{
+  #print-contacts &{
+    float: right;
+  }
+}
+a.print{
+  color: #A64726;
+  display: table;
+  float: right;
+  font-size: 13px;
+  font-family: $font-second;
+  padding-bottom: 8px;
+  padding-top: 5px;
+  padding-right: 12px;
+  text-decoration: none;
+  header .menu.wide &{
+    margin-top: -27px;
+  }
+}
+a.print, button.print{
+  background: url($images_dir + 'print.png') #FFF no-repeat 13px 9px;
+  border: $border-btn;
+  border-radius: 5px;
+  padding-left: 41px;
+  width: 175px;
+}
+.relative{
+  position: relative !important;
+}
+.sigplus-gallery.sigplus-center.sigplus-lightbox-boxplus{
+  display: block;
+  overflow: hidden;
+}
+
+.slider-bottom{
+  background: url($images_dir + "backgrounds/tile-gallery.png");
+  margin: auto;
+  overflow: hidden;
+}
+.slides{
+  display:table;
+  height: 100%;
+  //margin: auto;
+  position: relative;
+  //width: $img-slide-single-width*6 + $img-slide-offset*5;
+}
+.substrate{
+  #you-need{
+    display: none;
+  }
+}
+.table{
+  display: table;
+}
+.top{
+  #decoration &,
+  #engineering-systems &{
+    background-color: $background-brown-dark;
+  }
+  #decoration &{
+    background-image: url($images_dir + 'backgrounds/tile-top-ultra-blood.png');
+  }
+  #engineering-systems &{
+    background-image: url($images_dir + 'backgrounds/tile-top.png');
+  }
+  #facade &{
+    background-image: url($images_dir + 'facade/roof.jpg');
+    background-size: cover;
+    margin-top: $headerHeight;
+    overflow: hidden;
+    position: static;
+  }
+}
+.wide{
+  @media (max-width: $resolution-tablet-small620){
+    padding-left: $edge-mobile;
+    padding-right: $edge-mobile;
+  }
+}
+.works-examples{
+  background: url($images_dir + 'gallery/works-examples.jpg') no-repeat;
+  height: 81px;
+  margin-top: 25px;
+}

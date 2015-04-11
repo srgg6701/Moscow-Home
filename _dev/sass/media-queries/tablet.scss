@@ -1,0 +1,592 @@
+// широкоформатный монитор >=1024
+@media (min-width: $resolution-small-desktop){
+  // НИЗКИЙ экран <=768
+  @media (max-height: $resolution-tablet768) {
+    body {
+      $common-background: url($images_dir + 'backgrounds/tile-90.png') #a04323;
+      &.no-overflow {
+        //
+        .pointers-aside {
+          @media (max-height: 600px) {
+            width: 55vw;
+          }
+          aside {
+            bottom: 34.5vh;
+            @media (max-height: 600px) {
+              bottom: 40vh;
+              background-size: 33%;
+              height: 70px !important;
+              width: 70px !important;
+            }
+            @media (max-height: 480px) {
+              bottom: 44vh;
+              background-position: center !important;
+              background-size: 33%;
+              height: 10vh !important;
+              width: 10vh !important;
+            }
+          }
+        }
+        $img-height: 94px;
+        footer {
+          display: none;
+        }
+        #index {
+          main {
+            bottom: 0;
+          }
+        }
+        #level1 {
+          height: inherit;
+          #gallery {
+            display: none;
+          }
+          .slider-bottom {
+            height: inherit;
+          }
+          .slides {
+            height: inherit;
+            display: table;
+            margin: 15px auto;
+            overflow: hidden;
+            padding: inherit;
+            width: 947px;
+            a {
+              &.hidden {
+                background: $common-background;
+                color: #ffffff;
+                display: inherit;
+                font-family: PlumbLight;
+                font-size: 28px;
+                height: $img-height;
+                float: left;
+                line-height: $img-height;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: 268px;
+              }
+            }
+            aside {
+              display: none;
+            }
+            img {
+              height: $img-height;
+              margin-left: 6px;
+              width: 107px;
+            }
+          }
+        }
+        #showcase {
+          bottom: 93px;
+          height: 93px;
+          > div {
+            background-color: transparent;
+            @include box-shadow(0 0 0px 100px rgba(0, 0, 0, 0.6) inset);
+            @include opacity(0.85);
+          }
+          li {
+            font-family: PlumbLight;
+            font-size: 11px;
+            min-height: 23px;
+          }
+        }
+        #slider {
+          bottom: 128px;
+        }
+        #you-need {
+          max-width: inherit;
+          position: relative;
+          width: 100%;
+          .header-slim-big {
+            display: none;
+          }
+          li {
+            background: url($images_dir + "need-768.png") no-repeat;
+            height: 100%;
+            &:nth-child(1) {
+              background-position: 0 10px;
+            }
+            &:nth-child(2) {
+              background-position: -373px 10px;
+            }
+            &:nth-child(3) {
+              background-position: -787px 10px;
+            }
+            &:nth-child(4) {
+              background-position: -1215px 10px;
+            }
+          }
+          ul {
+            height: 78px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+            a {
+              color: #ffffff;
+              top: 23px;
+            }
+          }
+          .substrate {
+            background: $common-background;
+            display: block;
+            height: 100%;
+            @include opacity(0.85);
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// меньше минимального десктопного разрешения (<1024)
+// ВНИМАНИЕ! При ширине экрана <=966 (tablet)
+// с body.no-overflow снимается блокировка прокрутки (см. ниже)
+$hSlider:$slider-home-height;
+@media (min-width: $resolution-small-desktop){
+  header{
+    nav {
+      aside{
+        line-height: 68px;
+        top: inherit;
+        transform: none;
+      }
+    }
+  }
+}
+@media (max-width: $resolution-small-desktop - 1) {
+  header {
+    nav {
+      > div {
+        // внутренние псевдоменю
+        &:nth-child(1) {
+          // menu
+          top: 0;
+          height: $nav-height;
+          width: 100%;
+          ul {
+            display: table;
+            margin: auto;
+
+          }
+        }
+        &:nth-child(2) {
+          // logo
+          height: $headerHeight;
+          left: 15px;
+          margin: 0;
+          position: absolute;
+        }
+        &:nth-child(3) {
+          // Консультация
+          right: 16px;
+          width: 42px;
+        }
+        #consulting {
+          position: absolute;
+          top: 33px;
+          a {
+            //background-color: orange;
+            background-position: 10.5px;
+            border-radius: $menu-spot-border-radius;
+            font-size: 0;
+            height: 100%;
+            padding-left: 42px;
+            width: 42px;
+          }
+        }
+        #phone-number {
+          display: none;
+        }
+      }
+    }
+    > .menu.wide {
+      // внутренние тексты для псевдоменю
+      > section {
+        //margin-top: 55px;//83px;
+        /*h4{
+          display: none;
+        }*/
+        &:nth-child(4) {
+          margin-top: 23px;
+          h4 {
+            display: inherit;
+          }
+        }
+        > div {
+          max-width: 100%;
+        }
+        &:nth-child(1) > div {
+          padding-left: 0;
+          width: inherit;
+          > aside {
+            margin-left: 0;
+            width: 100%;
+            > section {
+              &:not(.visible) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .slides {
+    aside {
+      .btn {
+        height: 3.5vw;
+        font-size: 1.3vw;
+        margin-left: 1.15vw !important;
+        width: 11.8vw !important;
+      }
+    }
+    img, aside {
+      height: 12.43vw;
+      width: 14vw;
+    }
+  }
+  // Заголовок активного меню; текст добавляется динамически
+  #menus-subheader-mobile{ // header .menu >h2
+    background-color: #ffffff;
+    @include box-shadow(0px 7px 18px -8px rgba(0,0,0,0.2) inset);
+    display: block;
+    font-family: PlumbLight;
+    font-size: 36px;
+    $h:86px;
+    height: $h;
+    line-height: $h;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;//28px;
+    width: 100%;
+  }
+  footer{
+    // фиксим странное недоразумение с необъяснимым искажением высоты элемента:
+    &.index{
+      >div.section{
+        >div{
+          height: inherit;
+        }
+      }
+    }
+  }
+}
+// любая ВЫСОТА экрана
+// 966 перестройка макета под ◄ПЛАНШЕТНУЮ► версию
+@media (max-width: $resolution-go-mobile966) {
+  html{
+    overflow-x: hidden;
+  }
+  // считаем, что перешли на моб. версию. отменяем блокировку прокрутки
+  body.no-overflow {
+    overflow: auto;
+    main {
+      position: static !important;
+    }
+  }
+  #pointers-box {
+    height: $hSlider !important;
+    .pointers-aside {
+      height: $hSlider;
+      aside {
+        top: 43%;
+        &:nth-child(1) {
+          @include transform(translateY(-50%));
+        }
+        &:nth-child(2) {
+          @include transform(scaleX(-1) translateY(-50%));
+        }
+      }
+    }
+  }
+  $sh:137px;
+  $offset-bottom:17px;
+  #achievements{
+    margin-top: -($sh + 10) !important;
+    padding: 0 $offset-bottom;
+    position: relative;
+    z-index: 2;
+    // test.css
+    background-color: rebeccapurple;
+    bottom: 0;
+    width: 100%;
+  }
+    #showcase{
+      position: static !important;
+      ul{
+        float: left;
+        position: static;
+      }
+      // test.css
+      background-color: lawngreen;
+      height: inherit !important;
+      >div{
+        background-color: green;
+        overflow: hidden;
+        height: inherit;
+        margin-bottom: $offset-bottom;
+        ul:nth-child(1){
+          margin-left: 26px;
+          width: 34% !important;
+        }
+        ul:nth-child(2){
+          margin-left: 26px;
+          width: 48%;
+        }
+      }
+    }
+  #level1{
+    height: auto;
+    position: static !important;
+    .slider-bottom{
+      .slides{
+        a{
+          float:left;
+        }
+        aside{
+          display: none;
+        }
+      }
+    }
+  }
+
+  #slider {
+    //background-color: yellow;
+    margin-top: $headerHeight;
+    position: static !important;
+    ul.social {
+      background: transparent;
+      height: initial;
+      left: 13px;
+      top: 18.35px;
+      width: initial;
+      li{
+        background-size: 100% !important;
+        border-radius: 35%;
+        background: url($images_dir + "social-left-vertical.png") no-repeat;
+        height: 26px;
+        margin-bottom: 4px;
+        width: 26px;
+        &:nth-child(1){
+          background-position: 0 0;
+        }
+        &:nth-child(2){
+          background-position: 0 -29px;
+        }
+        &:nth-child(3){
+          background-position: 0 -59px;
+        }
+      }
+      & + div{
+        top:22px;
+        height: 97px;
+        width: 46px;
+      }
+    }
+  }
+  #you-need {
+    ul{ // блок с заголовками основных услуг
+      max-width: 500px;
+      @include transform(translateX(30px));
+      li{
+        float: left;
+        padding-left: 13px;
+        padding-right: 40px;
+        width: 50%;
+        &:nth-child(1) {
+          background-image: url($images_dir + "need-building.png");
+          background-position: 0 0;
+        }
+        &:nth-child(3) {
+          background-image: url($images_dir + "need-design.png");
+        }
+        &:nth-child(3),
+        &:nth-child(4){
+          background-position: 8px 0 !important;
+          margin-top: 29px;
+          a{
+            top:36%;
+          }
+        }
+        a{
+          margin-right: -26px;
+          padding-left: 66px;
+          @include transform(translateY(-50%));
+        }
+      }
+    }
+  }
+
+  header {
+    aside div{
+      background-color: #efefef;
+      border-bottom: solid 1px white;
+    }
+    .menu.wide {
+      > section {
+        &:nth-child(2) {
+          // услуги
+          ul {
+            &.you-need {
+              display: block;
+              max-width: 640px;
+              margin-left: auto;
+              margin-right: auto;
+              margin-top: 16px;
+              overflow: hidden;
+              @include transform(translateX(5vw));
+              li {
+                width: 50%;
+                a {
+                  max-width: 174px;
+                }
+              }
+            }
+          }
+        }
+        h4{
+          text-align: center;
+        }
+      }
+      .footer-mobile-menu{
+        display: inherit;
+        padding: 13px 24px 27px;
+      }
+      a.print {
+        // кнопка "Распечатать адрес"
+        float: none;
+        margin-bottom: 14px;
+        margin-top: inherit !important;
+      }
+    }
+  }
+  span{
+    #header-menu-about &{
+      text-decoration: none;
+      border-bottom: dotted 1px;
+    }
+  }
+
+  #facades{
+    @media (min-width:$resolution-tablet-medium680 + 1){
+      @include column-count(2);
+    }
+    margin: auto $edge-mobile;
+    .header-slim-big {
+      display: none;
+      &+div{
+        display: none;
+      }
+    }
+  }
+
+  #facade-beauty{
+    .gallery-small{
+      margin-top: 5px;
+      padding-left: 0;//$edge-mobile;
+      padding-right: 0;//$edge-mobile;
+    }
+  }
+  @media (min-width:$resolution-tablet-small620){
+    #achievements{
+      position:absolute;
+    }
+    #slider {
+      padding-bottom: 17px;
+    }
+  }
+  @media (min-width:$resolution-phone424){
+    #slider{
+      position:relative !important;
+      .content-wrapper{
+        width: 100%;
+        height: $slider-home-height !important;
+      }
+    }
+  }
+}
+// <=768
+@media (max-width:$resolution-tablet768){
+  @mixin img-params-limited{
+    height: 63.56vw;
+    max-height: $img-gallery-main-width * 0.6356;
+    max-width: $img-gallery-main-width;
+    width: 100vw;
+  }
+  $imgVW:21.5vw;
+  $gallery-height:17.5vw;
+  body{
+    &.gallery {
+      .img{
+        @include img-params-limited;
+      }
+      .slider-container{
+        height: auto;
+        .gallery-pointers-aside {
+          height: 100%;
+          top:0;
+          aside{
+            margin-top: 0;
+            @include centered-vertical;
+            position: absolute;
+          }
+        }
+        .img-mini{
+          height: $gallery-height;
+          margin-right: $gallery-img-margin;
+          width: $imgVW;
+        }
+      }
+      [id^="gallery-pointers-box-mini-"]{
+        //background: yellow;
+        height: 100%;
+        position: absolute;
+      }
+      [id^="images-container-mini-"]{
+        height: auto;
+        overflow:hidden;
+        top:0;
+      }
+      [id^="loaded-content-mini-"]{
+        margin: auto;
+        overflow: hidden;
+        width: 73.4vw;
+      }
+      [id^="pix-mini-"]{
+        margin-top: 2vw !important;
+        margin-bottom: 2vw !important;
+        height: $gallery-height;
+      }
+      [id^="pix-"]:not([id*='-mini-']):not([data-value]){
+        @media (max-width:$img-gallery-main-width + 1){
+          left: -100vw;
+          @include transform(translateX(-100vw));
+        }
+      }
+      [id^="pix-mini-"]:not(.tiny){
+        @include transform(translateX(-$imgVW));
+      }
+      .content-wrapper [id^="preview-container-"]{
+        border-radius: 0;
+        @include img-params-limited;
+      }
+      [id^="preview-container-mini-"]{
+        overflow: visible;
+      }
+      [id^="slider-mini-"]{
+        position: relative;
+      }
+    }
+  }
+  /*footer{ // см. в footer.scss
+    margin-bottom: 10px;
+  }*/
+  #top-menu {
+    @include transform(translateX(2vw));
+  }
+}

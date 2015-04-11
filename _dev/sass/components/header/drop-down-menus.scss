@@ -1,0 +1,258 @@
+$section1-padding-left:264px;
+a{
+  header >section >section:nth-child(2) li &{
+    color: $color-carrot;
+    display: block;
+    line-height: inherit;
+    margin-top: 8px;
+  }
+}
+aside{ // вертикальное "внутреннее меню" в первом выпадающем меню
+  header >section >section >div >&{
+    margin-top: 3px;
+  }
+  header >section >section:nth-child(1) >div >&{
+    margin-left: -($section1-padding-left);
+    width: 236px;
+  }
+}
+button{
+  header >section >section:nth-child(3) & { // контакты
+    &.print {
+      float: right;
+      margin-top: -27px;
+    }
+  }
+  header >section >section:nth-child(4) &{  // задать вопрос
+    &.attach-file{
+      margin-top: -6px;
+      margin-bottom: -3px;
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+div{
+  header aside >&{
+    color: #933;
+    cursor: pointer;
+    font-family: PlumbMedium;
+    font-size: 1.1rem;
+    padding: 14px 18px 13px 18px;
+    &:hover,
+    &.bgActiveCarrot{
+      background-color: $background-carrot-dark;
+      color: white;
+    }
+  }
+  // выпадающие меню
+  header >section >section >&{
+    @include centred-margins;
+    overflow: auto;
+    &:not(.custom-centered){
+      max-width: 899px;
+      overflow: hidden;
+    }
+  }
+  header >section >section:nth-child(1) >&{ // О компании
+    padding-left: $section1-padding-left;
+  }
+  header >section >section:nth-child(2) >&{ // Услуги
+
+  }
+  header >section >section:nth-child(3) >div >&{ // Контакты
+    margin-bottom: 31px;
+    //margin-top: 21px;
+  }
+  header >section >section:nth-child(4) >&{ // Консультация
+    margin-bottom: -9px;
+    width: 370px;
+    &.bottom-bg{
+      background: url($images_dir + "backgrounds/tile-contacts-dark.png");
+      bottom: 0px;
+      height: 70px;
+      left: 0;
+      margin-bottom: 0;
+      max-width: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+}
+form{
+  header >section &{
+    overflow: hidden;
+    margin: 0 6px 0;
+  }
+}
+h3{
+  header div.menu-container &,
+  .menu aside >section >&{
+    color: $background-carrot-dark;
+    font-family: PlumbMedium;
+  }
+}
+h4{
+  header >section >section &{
+    font-family: PlumbLight;
+    font-size: 36px;
+    margin-bottom: 7px;
+    margin-top: -2px;
+    text-transform: uppercase;
+  }
+  header >section >section:nth-child(4) &{ // Консультация
+    color: white;
+    text-align: center;
+  }
+}
+input{
+  header >section &{
+    color: $color-dark-common;
+    &[type="tel"],
+    &[type="email"],
+    &[type="text"]{
+      display: block;
+      height: 36px;
+      //margin-bottom: 27px;
+      margin-top: 4px;
+      @include inputs-shadow;
+      width: 100%;
+    }
+    &[type=""]{
+      border-radius: 20px;
+      display: block;
+      float: left;
+      height: 39px;
+      margin: 27px auto auto;
+      position: relative;
+      text-transform: uppercase;
+      @include centered-horizontal;
+      width: 150px;
+    }
+  }
+  header >section >section:nth-child(4) &{
+    &[type="submit"]{
+      background-color: #FFF;
+      border: none;
+      border-radius: 20px;
+      color: $color-carrot;
+      font-size: 17px;
+      height: 40px;
+      margin-top: 27px;
+      position: relative;
+      @include centered-horizontal;
+      width: 150px;
+      z-index: 2;
+    }
+  }
+  form p:nth-child(2) &,
+  form p:nth-child(3) &{
+    margin-top: 6px;
+  }
+}
+li{
+  header >section >section:nth-child(2) &{
+    float: left;
+    height: 86px;
+    padding-left: 50px;
+    padding-right: 20px;
+    $i:1;
+    @each $img in (design, building, facade, engineering) {
+      &:nth-child(#{$i}){
+        background: url($images_dir + 'service-' + $img + '.png') no-repeat 0 7px;
+      }
+      $i:$i+1;
+    }
+    $i:1;
+    @each $width in (201,241,215,154){
+      &:nth-child(#{$i}) {
+        width: #{$width}px;
+      }
+      $i:$i+1;
+    }
+  }
+}
+p{
+  header >section form &{
+    color:white;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &:nth-child(2),
+    &:nth-child(3){
+      float: left;
+      margin-top: 14px;
+      width: 50%;
+    }
+    &:nth-child(2){
+      padding-right: 11px;
+    }
+    &:nth-child(3){
+      padding-left: 10px;
+    }
+    &:nth-child(4){
+      float:left;
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+  header >section >section >div >&{
+    width: 450px;
+  }
+  header >section >section:nth-child(3) &{
+    font-size: 14px;
+    line-height: 13px;
+  }
+}
+section{
+  header >&{
+    @include box-shadow(0 7px 11px 0 rgba(0, 0, 0, 0.35));
+    display: none;
+    left: 0;
+    padding-top: 5px;
+    position: absolute;
+    right: 0;
+    top:40px;
+    z-index: 1;
+  }
+  header >section >&{
+    background-color: white;
+    border-top: solid 1px #CACACA;
+    margin: auto;
+    margin-top: 23px;//46px;
+    padding: 22px 24px 26px;
+    &:nth-child(4){
+      background: url($images_dir + "backgrounds/tile-contacts.png");
+      position: relative;
+    }
+  }
+}
+span{
+  #header-menu-about &{
+    text-decoration: underline;
+  }
+}
+textarea{
+  header >section &{
+    display: block;
+    height: 85px;
+    margin-top: 6px;
+    width: 100%;
+    @include inputs-shadow;
+  }
+}
+ul{
+  header >section >section:nth-child(2) &{
+    margin-bottom: 4px;
+    margin-top: 6px;
+    width:100%;
+  }
+}
+#waiting-map{
+  background-color: #999;
+  border-radius: 20px;
+  color: #FFF;
+  display: table;
+  font-family: Arial;
+  padding: 10px 20px;
+}

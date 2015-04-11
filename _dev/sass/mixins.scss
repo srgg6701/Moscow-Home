@@ -1,0 +1,149 @@
+@mixin btn-zoom{
+  background: url($images_dir + 'zoom.png') no-repeat $background-carrot-dark center;
+  font-size: 0;
+  height: 38px;
+  margin-left: 0;
+  margin-top: -19px;
+  @include centered;
+  width: 49px;
+}
+@mixin button-slim{
+  height: 31px;
+  color: $color-carrot;
+  font-size: 13px;
+}
+@mixin centered($top:50%){
+  left: 50%;
+  position: absolute;
+  top: $top;
+  @include transform(translate(-50%));
+}
+@mixin centered-horizontal($position:relative){
+  position: $position;
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+@mixin centred-margins{
+  margin: auto;
+  max-width: $max-width-content;
+}
+@mixin centered-vertical($position:relative){
+  position: $position;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+@mixin dynamic-img-params($width:31.25,$height:null){
+  // соотношение ~ 135/152
+  @if ($height){
+    height: #{$height}vw;
+  }
+  @else {
+    height: #{$width * 0.888}vw;
+  }
+  width: #{$width}vw;
+}
+@mixin pix-params-facade($bg,$img-size){
+  @if ($bg==1) {
+    background: url($images_dir + "facade/vertical1.jpg") no-repeat;
+  }
+  background-size: 91% 2470%;
+  height: $img-size;
+  width: $img-size;
+}
+@mixin footer-social{
+  .footer-social {
+    display: table !important;
+    > div {
+      $size: 27px;
+      background: url($images_dir + 'social-left-vertical.png') no-repeat;
+      background-size: $size - 1;
+      cursor: pointer;
+      margin: 0 3px !important;
+      &:nth-child(1) {
+        background-position: 0 0;
+      }
+      &:nth-child(2) {
+        background-position: 0 -29px;
+      }
+      &:nth-child(3) {
+        background-position: 0 -59px;
+      }
+      display: inline-block !important;
+      float: left;
+      height: $size;
+      position: static !important;
+      width: $size !important;
+      a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    margin: 20px auto 10px;
+  }
+}
+@mixin inputs-shadow {
+  @include border-radius(3px);
+  @include box-shadow(1px 1px 2px 0 rgba(0, 0, 0, 0.2) inset);
+  border: solid 1px #CCC;
+}
+@mixin logo-bottom{
+  background: url($images_dir + "logo-bottom.png");
+  display: block;
+  height: 47px;
+  width: 109px;
+}
+@mixin menu-social-right($width:60px, $left:0){
+  height: 162px;
+  left:$left;
+  position: absolute;
+  top:12%;
+  width: $width;
+}
+@mixin nav-footer{
+  height: 100%;
+  &:nth-child(1){
+    position: absolute;
+  }
+  &:nth-child(2){
+    display: table;
+    margin: auto;
+  }
+  &:nth-child(3){
+    position: absolute;
+    right: 0;
+    top:0;
+  }
+}
+@mixin nav-footer-common{
+  font-family: PlumbLight;
+  font-size: 16px;
+  line-height: 18px;
+  margin-top: 6px;
+  text-align: center;
+  width: 193px;
+}
+@mixin paragraph-dark($size:14px,$color:$color-dark-deep2){
+  font-family: $font-second;
+  font-size: $size;
+  color: $color-dark-deep2;
+}
+@mixin phone-number{
+  font-family: PlumbLight;
+  font-size: 1.3rem;
+}
+@mixin phone-number-bottom{
+  float: right;
+  font-size: 1.5rem;
+  margin-top: -37px;
+  margin-right: 7px;
+  position: static;
+}
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
